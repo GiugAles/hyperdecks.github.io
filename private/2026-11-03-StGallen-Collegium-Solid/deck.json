@@ -203,6 +203,41 @@
         "You decide who may read each item, and can change it at any time",
         "Solid can hand out confidential data in shares, so that no server sees all of it"
       ]
+    },
+    {
+      "layout": "text",
+      "title": "Resources",
+      "defs": [
+        [
+          "E-mail",
+          "simon.mayer@unisg.ch"
+        ],
+        [
+          "Solid Symposium 2027",
+          "[sosy2027.org](https://sosy2027.org)"
+        ],
+        [
+          "Team photos from pods",
+          "[futuresociety.ch/#team](https://futuresociety.ch/#team)"
+        ],
+        [
+          "My WebID",
+          "[smnmyr.solidcommunity.net/profile/card#me](https://smnmyr.solidcommunity.net/profile/card#me)"
+        ],
+        [
+          "My portrait in my pod",
+          "[smnmyr.solidcommunity.net/​public/assets/publicPortrait-square.jpg](https://smnmyr.solidcommunity.net/public/assets/publicPortrait-square.jpg)"
+        ],
+        [
+          "Solid and SMPC",
+          "[openreview.net/forum?id=eaLD4ioB02](https://openreview.net/forum?id=eaLD4ioB02)"
+        ],
+        [
+          "Shared vocabulary",
+          "[schema.org](https://schema.org): common terms for data on the Web, such as Person, Event and Photograph. When Solid apps use them, one app can read what another app wrote to your pod."
+        ]
+      ],
+      "notes": "All links from the slides. schema.org: a pod only stores the data; for apps to work with each other's data they need common terms. schema.org is the vocabulary that search engines and many websites use, and Solid apps can use it too."
     }
   ]
 }
