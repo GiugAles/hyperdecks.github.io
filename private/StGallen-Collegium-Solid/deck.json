@@ -1,0 +1,192 @@
+{
+  "title": "Solid and its Symposium",
+  "lang": "en",
+  "footer": "St.Gallen Collegium | Solid and its Symposium | University of St.Gallen",
+  "slides": [
+    {
+      "layout": "title",
+      "kicker": "St.Gallen Collegium",
+      "title": "Solid and its Symposium",
+      "meta": [
+        "Keeping your data under your control",
+        "",
+        "Simon Mayer",
+        "University of St.Gallen",
+        "Institute of Computer Science"
+      ],
+      "notes": "Focus topic of the Collegium this year: sovereignty. This talk is about sovereignty over personal and business data on the Web, and about one technology for it, Solid."
+    },
+    {
+      "layout": "text",
+      "title": "The Solid Community Meets in St.Gallen in May 2027",
+      "points": [
+        "**Solid Symposium 2027**, the 5th annual conference on Solid",
+        "11 and 12 May 2027, SQUARE, University of St.Gallen",
+        "Opens with a public Solid Open Day on digital sovereignty, 10 May"
+      ],
+      "aside": {
+        "image": "img/square-aerial.jpg",
+        "alt": "Aerial view of the SQUARE building on the University of St.Gallen campus above the city of St.Gallen, with mountains on the horizon"
+      },
+      "source": "Picture: [sosy2027.org](https://sosy2027.org)",
+      "notes": "Why this talk now: the Solid community comes to St.Gallen. SoSy 27 is organised at HSG (FuSo, ICS-HSG, ILE-HSG). Solid is developed in the W3C Solid Community Group. The Open Day on 10 May is for the public and needs no background in the specification; more at the end of the talk."
+    },
+    {
+      "layout": "image",
+      "title": "Today, Every Platform Keeps Its Own Copy of Your Data",
+      "image": "img/fig-silos.svg",
+      "alt": "A person on the left; arrows lead to three platforms: a social network, an online shop and a health app. Each platform holds its own copy of photos, calendar entries, documents or health data, drawn in red.",
+      "shadow": false,
+      "notes": "Each service stores its own copy of your data, under its own terms. You cannot see which copies exist, you cannot correct them in one place, and you cannot take them back."
+    },
+    {
+      "layout": "image",
+      "title": "With Solid, Your Data Stays in Your Pod",
+      "image": "img/fig-pod.svg",
+      "alt": "A person with a green box labelled Your pod that holds a photo, a calendar, health data and a document. Dashed green arrows connect the pod to three apps, which hold no data of their own.",
+      "shadow": false,
+      "notes": "Solid was started by Tim Berners-Lee. A pod is a personal data store on the Web. Apps no longer keep the data; they read from and write to the pod of the user, with the user's permission. Apps and data are separated."
+    },
+    {
+      "layout": "image",
+      "title": "Every Piece of Data Has a Web Address, and So Do You",
+      "image": "img/fig-url.svg",
+      "alt": "Two web addresses split into coloured parts. A photo icon with https://smnmyr.solidcommunity.net/public/assets/publicPortrait-square.jpg: your pod, folders, file. A person icon with https://smnmyr.solidcommunity.net/profile/card#me: your pod and your WebID.",
+      "shadow": false,
+      "notes": "Solid uses the ordinary Web: each item in the pod is a resource with its own URL. The person also has a URL, the WebID, which is used to log in to any Solid app. These are the real addresses of my pod on solidcommunity.net: open both in the browser."
+    },
+    {
+      "layout": "image",
+      "title": "You Decide Who May Read What",
+      "image": "img/fig-access.svg",
+      "alt": "A table. Rows: photo, calendar and health data in your pod. Columns: everyone, family, your doctor. Green ticks: the photo for everyone, family and doctor; the calendar for family; the health data for your doctor. The other cells are empty circles.",
+      "shadow": false,
+      "notes": "Access rules are set per file or folder, and refer to people by their WebID or to groups. The owner can change them at any time."
+    },
+    {
+      "layout": "image",
+      "title": "Your Pod Checks Every Request",
+      "image": "img/fig-request.svg",
+      "alt": "Anna's app on the left, your pod on the right. Step 1: the app sends I am Anna, portrait.jpg, please. Step 2: a green tick, Anna may read it? Step 3: the pod sends the photo back to the app.",
+      "shadow": false,
+      "notes": "1. The app says who is asking: Anna logs in with her WebID. 2. The pod looks up its access rules. 3. Only if the rules allow it, the pod sends the data; otherwise it refuses."
+    },
+    {
+      "layout": "image",
+      "title": "You Choose Who Hosts Your Pod",
+      "image": "img/fig-hosting.svg",
+      "alt": "Three hosts in a row: a pod provider (cloud), your own server (house) and your employer or city (building). Your pod sits with the provider; dashed arrows lead to empty pod outlines at the other two. Above them, the same three apps.",
+      "shadow": false,
+      "notes": "Solid is an open specification, so any provider, an organisation or you yourself can run a pod server, and every Solid app works with every pod. Moving a pod to another host changes its web addresses; links then need to be updated or redirected."
+    },
+    {
+      "layout": "section",
+      "kicker": "Example 1",
+      "title": "Your Photo on\nOther People's Websites"
+    },
+    {
+      "layout": "image",
+      "title": "The Usual Way: You Send a Copy",
+      "image": "img/fig-copy.svg",
+      "alt": "You send a photo by e-mail to a website. The website server and its backups hold copies of the photo, drawn in red, and show them to three visitors' browsers.",
+      "shadow": false,
+      "notes": "Once the photo is sent, the website owns the copy. To change or remove it you have to ask, and copies stay in backups and mailboxes."
+    },
+    {
+      "layout": "image",
+      "title": "futuresociety.ch: Four Team Photos Come from Pods",
+      "image": "img/fig-team.svg",
+      "alt": "The team section of futuresociety.ch with eight portraits. Four of them, Simon Mayer, Alice Palmieri, Dick Blankvoort and Haroon Khan, have a green ring and the label pod.",
+      "shadow": true,
+      "source": "Screenshot of [futuresociety.ch](https://futuresociety.ch/#team), 3 November 2026",
+      "notes": "The website of the Future Society Hub. The four marked photos are loaded from the pods of these people: smnmyr.solidcommunity.net, alicepal.solidcommunity.net and datapod.igrant.io (two). Open the site and show it live."
+    },
+    {
+      "layout": "image",
+      "title": "The Website Holds Only a Link",
+      "image": "img/fig-link.svg",
+      "alt": "Left: the futuresociety.ch page with Simon Mayer's portrait. Top right: the HTML line img src equals https://smnmyr.solidcommunity.net/public/assets/publicPortrait-square.jpg, labelled in the page: only a link. Bottom right: the pod smnmyr.solidcommunity.net with the portrait; a green arrow shows that each visitor's browser loads the photo from the pod.",
+      "shadow": false,
+      "notes": "The page contains the address of the photo in my pod. The web server of futuresociety.ch never stores the photo; each visitor's browser fetches it from the pod."
+    },
+    {
+      "layout": "image",
+      "title": "Change the Photo or Withdraw It: Every Website Follows",
+      "image": "img/fig-control.svg",
+      "alt": "Left, Change the photo: a new green portrait in your pod appears on futuresociety.ch, a conference site and a news site. Right, Withdraw it: the portrait in the pod is locked, and the three websites show an empty circle.",
+      "shadow": false,
+      "notes": "Demo: replace the photo in the pod, reload futuresociety.ch. Then make it private and reload. Limit: a visitor who already downloaded the photo keeps that copy, and browsers may cache it for a while."
+    },
+    {
+      "layout": "section",
+      "kicker": "Example 2",
+      "title": "Computing on\nConfidential Data"
+    },
+    {
+      "layout": "image",
+      "title": "A Product's Footprint Needs Data from Every Supplier",
+      "image": "img/fig-chain.svg",
+      "alt": "A supply chain: company A (raw material), company B (component) and company C (product), connected by arrows to a box. Under each company, a document with a red lock. Next to the box: CO2 footprint?",
+      "shadow": false,
+      "notes": "Scope 3: emissions in the supply chain. They exceed a company's own emissions by a factor of 26 on average (92:1 in retail), but in 2023 only 15% of CDP-disclosing companies had upstream Scope 3 targets (CDP and BCG, 2024). The data is in each company's ERP system, and companies do not share it, since it shows volumes, suppliers and processes."
+    },
+    {
+      "layout": "image",
+      "title": "Can Three People Learn Their Average Age without Telling It?",
+      "image": "img/fig-age-1.svg",
+      "alt": "Anna, Ben and Chiara, each with their age locked in a grey box. A dashed arrow leads to an empty box: Average age, question mark.",
+      "shadow": false,
+      "notes": "Secure multi-party computation (SMPC) in its classic example. Three people want to know their average age, and nobody wants to say their own age, not even to a trusted person in the middle. Ask the room: is this possible?"
+    },
+    {
+      "layout": "image",
+      "title": "Can Three People Learn Their Average Age without Telling It?",
+      "image": "img/fig-age-2.svg",
+      "alt": "The same three people with their ages still locked. The box now shows Average age 41 in green, and below it the question How could this be possible?",
+      "shadow": false,
+      "notes": "Next step of the build: the result appears, 41, and the ages stay locked (e.g. 34, 52 and 37; do not show them). Ask: How could this be possible? The next slide shows the trick with two numbers: split each value into random shares, let each server add its shares, and combine only the result. For the average, divide the sum by three."
+    },
+    {
+      "layout": "image",
+      "title": "Secret Sharing: Each Server Sees Only Random Numbers",
+      "image": "img/fig-shares.svg",
+      "alt": "Company A splits 42 into the shares 17, 93 and −68; company B splits 10 into 5, −20 and 25. Server 1 gets 17 and 5, server 2 gets 93 and −20, server 3 gets −68 and 25. Each server adds its shares: 22, 73 and −43. Together: 52, which is 42 plus 10.",
+      "shadow": false,
+      "notes": "Secure multi-party computation (SMPC). A single share looks like a random number. Each server computes on its own shares; only the result is put together. As long as the servers do not collude, none of them learns a company's value. Simplified here as a sum with additive shares; the system uses Shamir secret sharing and computes the full life cycle assessment (a matrix computation)."
+    },
+    {
+      "layout": "image",
+      "title": "Solid Gives Each Server Only Its Own Share",
+      "image": "img/fig-arch.svg",
+      "alt": "Three company pods, each with a document and the shares s1, s2 and s3. Green lines lead from every s1 to server 1 (platform), teal lines from every s2 to server 2 (university), red lines from every s3 to server 3 (NGO). The three servers together deliver the product footprint.",
+      "shadow": false,
+      "source": "J. Grau, A. Maftun, K. Garcia, S. Mayer: [Solid and Secure Multi-Party Computation for a Circular Economy](https://openreview.net/forum?id=eaLD4ioB02). Solid Symposium 2026",
+      "notes": "Jan Grau's work with Empa and Siemens. Each company runs a Solid server next to its ERP system; a sandboxed plugin (WebAssembly) reads the data from the ERP. The company splits its data into shares inside its own Solid environment, and Solid's access rules let server 1 read only share 1, server 2 only share 2, and so on. The servers can be run by different organisations, e.g. the LCA platform GDT, a university and an NGO. So the guarantee that no server sees the complete data is enforced at the data access layer, in addition to the computation protocol."
+    },
+    {
+      "layout": "text",
+      "title": "Solid Open Day on Digital Sovereignty, 10 May 2027",
+      "points": [
+        "Open to the public, no background needed",
+        "Onboarding: your first Solid pod",
+        "Evening event on digital sovereignty, in German",
+        "[sosy2027.org](https://sosy2027.org)"
+      ],
+      "aside": {
+        "image": "img/square-summer.jpg",
+        "alt": "The SQUARE building of the University of St.Gallen in summer"
+      },
+      "source": "Picture: [sosy2027.org](https://sosy2027.org)",
+      "notes": "The 5th Solid Symposium (SoSy 27) comes to St.Gallen. The Open Day on 10 May is the public day on digital sovereignty; members of the Collegium are welcome."
+    },
+    {
+      "layout": "questions",
+      "title": "Any Questions / Comments / Doubts / Concerns?",
+      "points": [
+        "Your data stays in your pod; websites and apps get a link",
+        "You decide who may read each item, and can change it at any time",
+        "Solid can hand out confidential data in shares, so that no server sees all of it"
+      ]
+    }
+  ]
+}
