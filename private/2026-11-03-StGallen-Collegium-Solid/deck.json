@@ -41,6 +41,14 @@
     },
     {
       "layout": "image",
+      "title": "Digital Sovereignty: Who Decides about Your Data?",
+      "image": "img/fig-sovereignty-1.svg",
+      "alt": "A table. Who decides where your data is stored, who may read it and which apps use it? Today: the platform, three times, in red. With Solid: three empty circles with a question mark.",
+      "shadow": false,
+      "notes": "The Collegium's focus topic, applied to personal data: sovereignty means that you decide. Today the platform decides all three: it stores the data, its terms say who may read it, and its own apps are the only ones that use it. The next slides show how Solid changes each row."
+    },
+    {
+      "layout": "image",
       "title": "With Solid, Your Data Stays in Your Pod",
       "image": "img/fig-pod.svg",
       "alt": "A person with a green box labelled Your pod that holds a photo, a calendar, health data and a document. Dashed green arrows connect the pod to three apps, which hold no data of their own.",
@@ -80,8 +88,16 @@
       "notes": "Solid is an open specification, so any provider, an organisation or you yourself can run a pod server, and every Solid app works with every pod. Moving a pod to another host changes its web addresses; links then need to be updated or redirected."
     },
     {
+      "layout": "image",
+      "title": "Digital Sovereignty: Who Decides about Your Data?",
+      "image": "img/fig-sovereignty-2.svg",
+      "alt": "The same table, now filled in. With Solid, you decide all three, each shown with a green person: where your data is stored (a pod host you choose), who may read it (your access rules), which apps use it (any Solid app you allow).",
+      "shadow": false,
+      "notes": "Back to the question from the start. Each row has a mechanism we have just seen: the pod and its host, the access rules, and apps that are separate from the data. This is what we mean by digital sovereignty for data."
+    },
+    {
       "layout": "section",
-      "kicker": "Example 1",
+      "kicker": "Example 1: Sovereignty for People",
       "title": "Your Photo on\nOther People's Websites"
     },
     {
@@ -119,7 +135,7 @@
     },
     {
       "layout": "section",
-      "kicker": "Example 2",
+      "kicker": "Example 2: Sovereignty for Companies",
       "title": "Computing on\nConfidential Data"
     },
     {

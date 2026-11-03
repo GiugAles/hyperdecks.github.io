@@ -459,6 +459,29 @@ def fig_chain():
     svg("fig-chain.svg", b, h=430, title="A supply chain of three companies; each keeps its data locked; the footprint of the product is unknown")
 
 
+def fig_sovereignty(step):
+    """Who decides about your data? Today the platform; with Solid you (filled in at step 2)."""
+    rows = [("where your data is stored", "a pod host you choose"), ("who may read it", "your access rules"),
+            ("which apps use it", "any Solid app you allow")]
+    b = text(40, 46, "Who decides …", 28, "start", GREY)
+    b += text(735, 46, "Today", 28, bold=True, fill=SALMON) + text(1000, 46, "With Solid", 28, bold=True, fill=GREEN)
+    for i, (q, how) in enumerate(rows):
+        y = 140 + i * 115
+        b += f'<line x1="40" y1="{y - 57}" x2="1160" y2="{y - 57}" stroke="{PALE}" stroke-width="2"/>'
+        b += text(40, y + 10, "… " + q, 30, "start")
+        b += building(650, y - 2, 64, SALMON) + text(690, y + 10, "the platform", 28, "start", SALMON)
+        if step == 1:
+            b += f'<circle cx="1000" cy="{y}" r="30" fill="none" stroke="{LINE}" stroke-width="3" stroke-dasharray="6 5"/>'
+            b += text(1000, y + 12, "?", 34, fill=LINE, bold=True)
+        else:
+            b += f'<circle cx="905" cy="{y - 8}" r="30" fill="{GREEN}"/>' + person(905, y - 4, 44, "#fff")
+            b += text(950, y + 2, "you", 30, "start", GREEN, True) + text(950, y + 32, how, 21, "start", GREY)
+    title = ("Who decides where your data is stored, who may read it and which apps use it: today the platform; with Solid: open" if step == 1 else
+             "Who decides where your data is stored, who may read it and which apps use it: today the platform; with Solid you, "
+             "through a pod host you choose, your access rules and any Solid app you allow")
+    svg(f"fig-sovereignty-{step}.svg", b, h=440, title=title)
+
+
 def fig_age(step):
     """Three people learn their average age; nobody tells their own. Step 1: the question; step 2: the result."""
     b = ""
@@ -528,6 +551,8 @@ def fig_arch():
 
 
 if __name__ == "__main__":
+    fig_sovereignty(1)
+    fig_sovereignty(2)
     fig_age(1)
     fig_age(2)
     for f in (fig_silos, fig_pod, fig_url, fig_access, fig_request, fig_hosting, fig_copy, fig_team, fig_link,
