@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="t">
+  <title id="t">Computersysteme: bits flow through a logic gate into a processor chip</title>
+  <defs>
+    <pattern id="dots" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="2" fill="#fff" fill-opacity=".10"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="#00802F"/>
+  <rect width="1600" height="900" fill="url(#dots)"/>
+  <!-- the wedge of the HSG title slides -->
+  <polygon points="760,900 1600,520 1600,900" fill="#0A5F2D"/>
+
+  <g fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <!-- bits: a column of ones and zeros -->
+    <g font-family="'Courier New',Courier,monospace" font-size="72" font-weight="700" fill="#fff" stroke="none" text-anchor="middle">
+      <text x="210" y="300">1</text>
+      <text x="210" y="400" fill-opacity=".55">0</text>
+      <text x="210" y="500">1</text>
+      <text x="210" y="600">1</text>
+      <text x="210" y="700" fill-opacity=".55">0</text>
+    </g>
+    <!-- wires from the bits into the gate -->
+    <path d="M260 375 H420 V410 H520"/>
+    <path d="M260 575 H420 V490 H520"/>
+    <circle cx="260" cy="375" r="10" fill="#fff"/>
+    <circle cx="260" cy="575" r="10" fill="#fff"/>
+
+    <!-- a NAND gate -->
+    <path d="M520 360 H600 A90 90 0 0 1 600 540 H520 Z" fill="#fff" fill-opacity=".12"/>
+    <circle cx="708" cy="450" r="16"/>
+
+    <!-- wire from the gate into the chip -->
+    <path d="M724 450 H930"/>
+    <circle cx="930" cy="450" r="10" fill="#fff"/>
+
+    <!-- the processor: package with pins -->
+    <rect x="980" y="230" width="440" height="440" rx="34" fill="#fff" fill-opacity=".12"/>
+    <rect x="1080" y="330" width="240" height="240" rx="14" stroke-width="8"/>
+    <g stroke-width="10">
+      <path d="M1050 230 V180 M1120 230 V180 M1190 230 V180 M1260 230 V180 M1330 230 V180 M1400 230 V180"/>
+      <path d="M1050 670 V720 M1120 670 V720 M1190 670 V720 M1260 670 V720 M1330 670 V720 M1400 670 V720"/>
+      <path d="M1420 300 H1470 M1420 370 H1470 M1420 440 H1470 M1420 510 H1470 M1420 580 H1470"/>
+      <path d="M980 300 H930 M980 370 H930 M980 510 H930 M980 580 H930"/>
+    </g>
+    <!-- the die: registers and an ALU -->
+    <g stroke-width="6">
+      <rect x="1110" y="360" width="80" height="50" rx="6" fill="#FFF04B" fill-opacity=".9" stroke="#FFF04B"/>
+      <rect x="1210" y="360" width="80" height="50" rx="6"/>
+      <path d="M1130 450 H1270 L1240 540 H1160 Z"/>
+      <path d="M1150 410 V450 M1250 410 V450"/>
+    </g>
+  </g>
+</svg>

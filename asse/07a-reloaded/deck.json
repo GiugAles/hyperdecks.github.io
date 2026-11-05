@@ -1,0 +1,505 @@
+{
+ "title": "ASSE Reloaded: Welcome and Introduction",
+ "lang": "en",
+ "footer": "Advanced Software and Systems Engineering | Institute of Computer Science | University of St.Gallen",
+ "slides": [
+  {
+   "layout": "title",
+   "kicker": "Welcome and Introduction",
+   "title": "ASSE Reloaded",
+   "presenters": [
+    "Simon Mayer",
+    "Alessandro Giugno",
+    "Luka Bekavac"
+   ],
+   "meta": [
+    "University of St.Gallen",
+    "Master in Computer Science",
+    "",
+    "Advanced Software and Systems Engineering (7,856)"
+   ]
+  },
+  {
+   "layout": "image",
+   "title": "Interactions: Our Team",
+   "image": "img/team.jpg",
+   "alt": "Group photo of the research group on a lawn; dashed lines connect each person to a label with their name and topic, such as Simon, Systems and People; Jan, Software; Kenan, Gaze; Luka, Systemic Risks in VLOPs; Alessandro, Bio-Inspired Agents",
+   "shadow": false
+  },
+  {
+   "layout": "text",
+   "title": "Interactions: Our Research",
+   "groups": [
+    {
+     "heading": "Systems and People in Ubiquitous Computing Environments",
+     "points": [
+      "[GEAR: Gaze-enabled Augmented Reality for Human Activity Recognition](https://www.alexandria.unisg.ch/entities/publication/c3abaaf5-45ad-4d10-800e-83f025e1c4ea/details). ETRA 2023",
+      "[Semantic Web Ontologies for Automated Engineering of Smart Buildings](https://ieeexplore.ieee.org/document/11163940). CASE 2025",
+      "[Real-Time Adaptive Industrial Robots](https://dl.acm.org/doi/full/10.1145/3706598.3713889). CHI 2025",
+      "[Towards Societally Beneficial Personalized Realities](https://dl.acm.org/doi/full/10.1145/3715336.3735709). DIS 2025"
+     ]
+    }
+   ],
+   "aside": {
+    "image": "img/research-people.jpg",
+    "alt": "A robot arm seen through a mixed reality headset, and a person wearing the headset",
+    "shadow": false
+   }
+  },
+  {
+   "layout": "text",
+   "title": "Interactions: Our Research",
+   "groups": [
+    {
+     "heading": "World-Wide Autonomous Systems",
+     "points": [
+      "[A Decade in Hindsight: The Missing Bridge Between Multi-Agent Systems and the World Wide Web](https://www.alexandria.unisg.ch/256718/). AAMAS 2019",
+      "[Increasing the Intelligence of Low-Power Sensors with Autonomous Agents](https://www.alexandria.unisg.ch/268007/). SenSys 2022",
+      "[Signifiers as a First-class Abstraction in Hypermedia Multi-Agent Systems](https://www.alexandria.unisg.ch/269015/). AAMAS 2023",
+      "[Enabling BDI Agents to Reason on a Dynamic Action Repertoire in Hypermedia Environments](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=SToKj14AAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=SToKj14AAAAJ:tzM49s52ZIMC). AAMAS 2024"
+     ]
+    }
+   ],
+   "aside": {
+    "image": "img/research-agents.jpg",
+    "alt": "A JSON listing of a thing description and a diagram of a signifier exposure mechanism between an agent profile and an artifact profile",
+    "shadow": false
+   }
+  },
+  {
+   "layout": "text",
+   "title": "Interactions: Our Research",
+   "groups": [
+    {
+     "heading": "Legal Context of Ubiquitous Computing",
+     "points": [
+      "[Machine Capacity of Judgment](https://www.alexandria.unisg.ch/entities/publication/ea5b9115-5970-4eef-b3be-d5fd6a6889e0/details). Technology in Society 2022",
+      "[Responsible Automatically Processable Regulation](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=SToKj14AAAAJ&sortby=pubdate&citation_for_view=SToKj14AAAAJ:t7zJ5fGR-2UC). AI & Society 2024",
+      "[Regulating for Trust: Can Law establish Trust in Artificial Intelligence?](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=SToKj14AAAAJ&sortby=pubdate&citation_for_view=SToKj14AAAAJ:tKAzc9rXhukC) Regulation & Governance 2024",
+      "[From Walls to Windows: Creating Transparency to Understand Filter Bubbles in Social Media](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=SToKj14AAAAJ&sortby=pubdate&citation_for_view=SToKj14AAAAJ:g3aElNc5_aQC). NORMADIC 2024"
+     ]
+    }
+   ],
+   "aside": {
+    "image": "img/research-law.jpg",
+    "alt": "A window with labels for motorized blinds, controllable lights and two sensors, and below it a robotic hand holding scales of justice",
+    "shadow": false
+   }
+  },
+  {
+   "layout": "image",
+   "title": "Excerpts from our Research",
+   "lead": "Reactive Executable Markers (REMs) expose code that changes based on the current ambient temperature.",
+   "image": "img/qruco-rem.jpg",
+   "alt": "A pink nail polish bottle next to a thermochromic bottle, the first pages of the papers QRUco and Supernatural Superserious, a green plus sign, a QRScript diagram, and a figure of a QR code with temperature-dependent code paths",
+   "shadow": false,
+   "source": "Jenss, Mayer. QRUco: Interactive QR Codes Through Thermoresponsive Embeddings. CHI 2023. [Paper & Video](https://dl.acm.org/doi/10.1145/3544549.3583923). Eichelberger, Mayer, Ramanathan. Supernatural Superserious: Reactive Executable Markers. UbiComp 2025"
+  },
+  {
+   "layout": "image",
+   "title": "Excerpts from our Research",
+   "callout": {
+    "text": "Reverse beamforming + visual object recognition = ?"
+   },
+   "image": "img/mr-ubicomp.jpg",
+   "alt": "Title card of the IMWUT paper at UbiComp/ISWC 2023 in Cancún, Mexico, with the YOLOv7 logo, four antenna directivity plots and a person wearing a headset with an antenna board",
+   "shadow": false,
+   "source": "Strecker, Akhunov, Carbone, Garcia, Bektas, Gomez, Mayer, Yildirim. *MR Object Identification and Interaction: Fusing Object Situation Information from Heterogeneous Sources*. IMWUT 2024",
+   "notes": "In the PowerPoint version, this slide plays the video \"MR Object Identification and Interaction\"; the picture is its title card."
+  },
+  {
+   "layout": "image",
+   "title": "Excerpts from our Research",
+   "callout": {
+    "text": "Reverse beamforming + visual object recognition = ?"
+   },
+   "image": "img/mr-robot.jpg",
+   "alt": "Mixed reality view of a robot arm with floating labels and a confidence value, the YOLOv7 logo, four antenna directivity plots and a person wearing a headset with an antenna board",
+   "shadow": false,
+   "source": "Strecker, Akhunov, Carbone, Garcia, Bektas, Gomez, Mayer, Yildirim. *MR Object Identification and Interaction: Fusing Object Situation Information from Heterogeneous Sources*. IMWUT 2024"
+  },
+  {
+   "layout": "text",
+   "title": "Simon: Systems and People",
+   "points": [
+    "PhD in **Computer Science**, ETH Zurich (2010-2014)",
+    "**Senior Key Expert for Smart and Interoperable Systems**, Siemens Corporate Technology, Berkeley (2014-2017)",
+    "**Research Group Leader** “Cognitive Products”, Pro²Future, and **Postdoctoral Researcher**, TU Graz (2017-2018)",
+    "Senior Researcher, ETH Zurich (2018-2020)",
+    {
+     "text": "University of St.Gallen",
+     "sub": [
+      "**Professor for Interaction- and Communication-based Systems** (2018 →)",
+      "**Director**, Institute of Computer Science (2019 →)",
+      "**Dean**, School of Computer Science (2024 →)"
+     ]
+    },
+    "Lecturer, ETH Zurich (2015-2020), MIT (2015), UC Berkeley (2015-2017), TU Graz (2017-2019), University of Zurich (2020-2022), University of Bologna (2023)"
+   ],
+   "aside": {
+    "image": "img/simon-collage.jpg",
+    "alt": "Collage of photos of ETH Zurich, MIT, Berkeley and Graz with the logos of Siemens, Berkeley, Pro²Future, TU Graz, University of Zurich, MIT, ETH Zurich and the University of St.Gallen, two children in judo suits and a snowboard track in the snow",
+    "shadow": false
+   },
+   "callout": {
+    "text": "3 children, backcountry snowboarding",
+    "style": "outline"
+   }
+  },
+  {
+   "layout": "text",
+   "title": "From Software to Systems",
+   "paragraphs": [
+    "After the focus on individual components in the first half of the semester, we now concentrate on **interactions between components**. Specifically, we will discuss the **trade-offs** that are involved in designing these interfaces and interactions.",
+    "Many of the concepts that you saw in the course up to now apply again!"
+   ],
+   "aside": {
+    "image": "img/fosa-book.jpg",
+    "alt": "Cover of the O'Reilly book Fundamentals of Software Architecture by Mark Richards and Neal Ford, with a drawing of a parrot"
+   }
+  },
+  {
+   "layout": "quote",
+   "title": "“Everything in software architecture is a trade-off.” … and systems!",
+   "attribution": "Mark Richards and Neal Ford, Fundamentals of Software Architecture",
+   "points": [
+    "“WHY is more important than HOW.”",
+    "Software architecture consists of the *structure* of the system, combined with *architecture characteristics* (“-ilities”) the system must support, *architecture decisions*, and finally *design principles*."
+   ],
+   "picture": {
+    "image": "img/user-architect.png",
+    "alt": "Line drawing: a user on the left hands a few dots across a dashed line to an architect on the right, who holds a tangled ball of connected nodes",
+    "shadow": false
+   }
+  },
+  {
+   "layout": "table",
+   "title": "(Selected) Architecture Characteristics",
+   "columns": [
+    "Architecture characteristic",
+    "Definition"
+   ],
+   "rows": [
+    [
+     "Reliability",
+     "Refers to the probability of a failure-free operation of the system for a specific period"
+    ],
+    [
+     "Responsiveness",
+     "The ability of a system to complete assigned tasks within a certain time"
+    ],
+    [
+     "Availability",
+     "Refers to the percentage of time a system is available for its user in a given period"
+    ],
+    [
+     "Fault tolerance",
+     "The ability of a system to continue operating in the event of a failure within some of its components"
+    ],
+    [
+     "Scalability",
+     "The ability to handle large numbers of concurrent users without serious performance degradation"
+    ],
+    [
+     "Elasticity",
+     "The ability to handle bursts of requests"
+    ]
+   ]
+  },
+  {
+   "layout": "table",
+   "title": "(Selected) Architecture Characteristics",
+   "columns": [
+    "Architecture characteristic",
+    "Definition"
+   ],
+   "rows": [
+    [
+     "Data integrity",
+     "Refers to the accuracy and consistency (validity) of data over its lifecycle"
+    ],
+    [
+     "Data consistency",
+     "Refers to whether the same data kept at different places do or do not match"
+    ],
+    [
+     "Adaptability",
+     "Refers to the ability to easily change the system according to the requirements"
+    ],
+    [
+     "Extensibility",
+     "Refers to the ability to extend a system and the effort needed to implement the extensions"
+    ],
+    [
+     "Testability",
+     "The degree to which a software artifact supports testing in a given test context"
+    ],
+    [
+     "Deployability",
+     "The extent to which something is deployable"
+    ]
+   ]
+  },
+  {
+   "layout": "image",
+   "title": "Overall Goal: Conscious Handling of Architectural Trade-Offs",
+   "lead": "As the architect of a (distributed) (information) system, you should be aware of the design trade-offs that are induced by specific choices in order to construct a system with your desired non-functional properties.",
+   "image": "img/tradeoffs.jpg",
+   "alt": "Left: line drawing of a user handing a few dots across a dashed line to an architect who holds a tangled ball of connected nodes. Right: a projected slide titled Key Take-aways: software architecture is the art of managing trade-offs; context and domain partitioning drive appropriate design; architecture must be validated continuously",
+   "shadow": false,
+   "caption": "This is relevant in a (technology) world with projects that exhibit a broad range of non-functional requirements."
+  },
+  {
+   "layout": "image",
+   "title": "Overall Goal: Multi-Level View on Interoperability",
+   "lead": "As the architect of a (distributed) (information) system, you should be aware of different ways of how to consciously manage the interoperability of system components.",
+   "callout": {
+    "text": "Heard of «AI Agents»?"
+   },
+   "image": "img/interop-levels.png",
+   "alt": "IoT devices on the left are coupled on four levels, each with an example request and what breaks when it changes: coupled bits (a binary string), coupled schemas (Accept: application/json), coupled types (Accept: application/miele+json) and coupled meanings (Accept: application/ld+json with a SAREF temperature sensor); a person on the right looks at a phone",
+   "shadow": false,
+   "caption": "This is relevant in a (technology) world with increasingly heterogeneous and autonomous components."
+  },
+  {
+   "layout": "text",
+   "title": "Overall Goal: Precision",
+   "callout": {
+    "text": "«Asynchronous», what is that?"
+   },
+   "paragraphs": [
+    "As the architect of a (distributed) (information) system, you should use terminology in a clear and well-founded way. Your definitions should be based on accepted expert sources.",
+    "This is relevant as our (technology) world needs to be based on clearly-communicated facts, not on obfuscated beliefs."
+   ],
+   "aside": {
+    "image": "img/grpc-benchmark.jpg",
+    "alt": "Three screenshots: a bar chart of response times for REST HTTP/1.1, REST with keep-alive and gRPC; a blog post titled Benchmarking performance gRPC vs REST on Node.js; and a quote that gRPC is 7 to 10 times faster than REST",
+    "caption": "This doesn't compare apples to oranges… it compares apples to yaks",
+    "shadow": false
+   }
+  },
+  {
+   "layout": "quiz",
+   "title": "Overall Goal: Precision",
+   "lead": "Terms that come up: “client-server”, “blocking”, “request-response”",
+   "items": [
+    "Is HTTP a “synchronous” or an “asynchronous” protocol?",
+    "Does this mean that we can only implement synchronous interactions with HTTP?",
+    "But then, aren't all protocols that work with TCP “synchronous” as well?"
+   ],
+   "aside": {
+    "image": "img/http-stack.png",
+    "alt": "Protocol stack: HTTP semantics on top of HTTP 1.1 over optional TLS over TCP, HTTP/2 over TLS 1.2+ over TCP, and HTTP/3 over QUIC with TLS 1.3 over UDP, all over IPv4 / IPv6",
+    "shadow": false
+   }
+  },
+  {
+   "layout": "text",
+   "title": "Overall Goal: Precision",
+   "callout": {
+    "text": "Maybe “synchronous by design” but “asynchronous in practice”?"
+   },
+   "points": [
+    "AJAX and the JS Fetch API",
+    "HTTP/2 multiplexing",
+    "WebSockets",
+    "WebHooks"
+   ],
+   "aside": {
+    "code": "fetch(file)\n  .then(x => x.text())\n  .then(y => myDisplay(y));"
+   },
+   "after": "Can the system not decide at run time whether it should communicate in a blocking or non-blocking way? ;-)"
+  },
+  {
+   "layout": "table",
+   "title": "Lecture Learning Goals",
+   "callout": {
+    "text": "Plugfest with Pitas (Dec 2, from 4:30pm)",
+    "style": "teal"
+   },
+   "columns": [
+    "Lecture",
+    "Understand…",
+    "Assignment"
+   ],
+   "rows": [
+    [
+     "1",
+     "how you may select fitting architectural constraints to achieve a desired non-functional profile",
+     "Uniform Interaction? Exploring the REST Architectural Style"
+    ],
+    [
+     "2",
+     "how you may select fitting interaction styles to achieve a desired non-functional profile",
+     "What Interaction Style? Event-based Interaction using MQTT and W3C WebSub"
+    ],
+    [
+     "3",
+     "ecological interaction between hosts beyond individual requests",
+     "Where to Couple? Decentralization and Informed Discovery"
+    ],
+    [
+     "4",
+     "that decoupling may happen on many levels beyond the immediate API",
+     "Multi-level Decoupling? Decoupling through Semantic Hypermedia"
+    ],
+    [
+     "5",
+     "what changes when higher autonomy potential and constrained devices enter the game",
+     "Autonomy and Interactions with Constrained Devices"
+    ]
+   ]
+  },
+  {
+   "layout": "text",
+   "title": "What's with that PlugFest?",
+   "callout": {
+    "text": "Plugfest with Pitas (Dec 2, from 4:30pm)",
+    "style": "teal"
+   },
+   "points": [
+    "Gloriously integrate all groups' implementations",
+    "Experience how interoperability testing is done in practice with your results from Assignment 7 and Assignment 8",
+    "Socialize and have Pizza (sponsored by Siemens, thank you!)"
+   ],
+   "aside": {
+    "image": "img/plugfest.jpg",
+    "alt": "Photos of students working at laptops in a seminar room during an earlier plugfest, and a screenshot of the IETF document RFC 8352, Energy-Efficient Features of Internet of Things Protocols",
+    "shadow": false
+   }
+  },
+  {
+   "layout": "syllabus",
+   "title": "Syllabus",
+   "items": [
+    {
+     "date": "14.09.2026",
+     "title": "Fundamentals of Software Architecture"
+    },
+    {
+     "date": "21.09.2026",
+     "title": "Software Architecture: Hard Parts I"
+    },
+    {
+     "date": "28.09.2026",
+     "title": "Service Design: Domain-driven Hexagon for a single microservice"
+    },
+    {
+     "date": "05.10.2026",
+     "title": "Software Architecture: Hard Parts II"
+    },
+    {
+     "date": "12.10.2026",
+     "title": "Software Architecture: Hard Parts III"
+    },
+    {
+     "date": "19.10.2026",
+     "title": "Intermediate Presentations"
+    },
+    {
+     "date": "09.11.2026",
+     "title": "Principled Architectural Design"
+    },
+    {
+     "date": "16.11.2026",
+     "title": "Interaction Styles"
+    },
+    {
+     "date": "23.11.2026",
+     "title": "Interactive Ecosystems"
+    },
+    {
+     "date": "30.11.2026",
+     "title": "Semantic Interoperability"
+    },
+    {
+     "date": "07.12.2026",
+     "title": "Interaction with AI Agents and Physical Devices"
+    },
+    {
+     "date": "14.12.2026",
+     "title": "Final Presentations"
+    }
+   ],
+   "current": 7,
+   "break_after": 6,
+   "assignments": [
+    {
+     "title": "Event Storming, Architecture Characteristics, ADRs, Service Granularity, Spring 101",
+     "from": 1,
+     "to": 2
+    },
+    {
+     "title": "Hexagonal Architecture, Persistence, Interactions, Testing",
+     "from": 3,
+     "to": 5
+    },
+    {
+     "title": "Uniform Interaction, Event-Driven Interaction, Hypermedia Ecosystems",
+     "from": 7,
+     "to": 9
+    },
+    {
+     "title": "Semantic Hypermedia, Agents and the Web of Things",
+     "from": 10,
+     "to": 11
+    }
+   ],
+   "notes": "Assignments per session in the original plan: 14.09 Event Storming & Architecture Characteristics; 21.09 ADRs, Service Granularity, Spring 101; 28.09 Hexagonal Architecture, Domain Entity Testing; 05.10 Persistence, Integration Testing; 12.10 Interactions, Communication, System Testing; 19.10 Cleanup and Group Split; 09.11 Uniform Interaction; 16.11 Event-Driven Interaction; 23.11 Hypermedia Ecosystems; 30.11 Decoupling through Semantic Hypermedia; 07.12 Agents and the Web of Things. PITAS PlugFest: 24.11, 5 to 8pm."
+  },
+  {
+   "layout": "text",
+   "title": "Style",
+   "groups": [
+    {
+     "heading": "In the lectures",
+     "points": [
+      "I'll be interactive and illustrative and try to avoid “slide shows”",
+      "I'm illustrating and highlighting concepts that I find particularly interesting/relevant, not “reading”",
+      "You'll need to make sure that you have read the literature we point you at",
+      "You'll need to make sure that you ask us if something isn't clear"
+     ]
+    },
+    {
+     "heading": "Grading Reminder",
+     "points": [
+      "Written Exam, Individual Grades (50%)",
+      {
+       "text": "Group Project, Individual Grades (50%)",
+       "sub": [
+        "Grades given end of semester; improve your projects until final submission",
+        "Typically the same grade; different grades if relevant divergences"
+       ]
+      }
+     ]
+    }
+   ],
+   "aside": {
+    "box": {
+     "text": "If you need support in your exercise, don't wait for the next Monday! Get in touch ;-)",
+     "style": "teal"
+    }
+   }
+  },
+  {
+   "layout": "quiz",
+   "title": "Exam Style",
+   "items": [
+    "Suggest a system that …",
+    "A colleague suggests this solution to a given (and explained) problem. Do you agree? Why?",
+    "In what sense can the performance of gRPC and HTTP be compared?",
+    "What is a drawback of caching?"
+   ],
+   "aside": {
+    "image": "img/bloom.jpg",
+    "alt": "Bloom's taxonomy as a stack of six discs, from bottom to top: Remember, Understand, Apply, Analyze, Evaluate, Create, each with a short description",
+    "caption": "© tips.uark.edu",
+    "shadow": false
+   }
+  },
+  {
+   "layout": "questions",
+   "title": "Any Questions / Comments / Doubts / Concerns?"
+  }
+ ]
+}
