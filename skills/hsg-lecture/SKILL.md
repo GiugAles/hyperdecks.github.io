@@ -32,6 +32,8 @@ One JSON file, `deck.json`. Image paths are relative to the folder of the deck.
 
 `footer` is optional: a quiet line at the foot of every content slide (hidden on slides with a `source`).
 
+`theme` is optional: a CSS file (path relative to the deck) set on top of the template, for an event with its own look, e.g. `legalhackathons/theme/legalhackathons.css`. It may use the unit `U` and link fonts with `url()`; those files are copied into `html/assets/`. A theme changes colours and fonts only, never sizes; only use one when the user asks for another look.
+
 Every slide has `layout` and `title`, and optionally:
 
 | Field | Meaning |

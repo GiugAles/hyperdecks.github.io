@@ -1,0 +1,280 @@
+{
+  "title": "Legal Hackathon @ UNISG: Opening Ceremony",
+  "lang": "en",
+  "theme": "../theme/legalhackathons.css",
+  "footer": "legal_hackathon @unisg | Nov 7-8, 2026 | University of St.Gallen",
+  "slides": [
+    {
+      "layout": "title",
+      "kicker": "Opening Ceremony",
+      "title": "Legal Hackathon\n**@ UNISG**",
+      "meta": [
+        "$ hackathon --date \"Nov 7-8, 2026\"",
+        "$ hackathon --venue \"Rosenbergstrasse 30\"",
+        "$ hackathon --duration 24h --teams \"up to 4\""
+      ],
+      "picture": {
+        "image": "img/mark.png",
+        "alt": "A large green paragraph sign, the mark of the Legal Hackathon @ UNISG"
+      }
+    },
+    {
+      "layout": "image",
+      "title": "Welcome to the **Legal Hackathon**",
+      "image": "img/website.jpg",
+      "alt": "Start page of legalhackathons.org: the headline hack the future in white and green on black, the line The first Legal Hackathon at the University of St. Gallen, a terminal box with date, venue, duration, stack and cost, and the buttons register and join discord",
+      "caption": "[legalhackathons.org](https://www.legalhackathons.org/)"
+    },
+    {
+      "layout": "text",
+      "title": "Why Are **You** Here Today?",
+      "lead": "A legal hackathon gives you a unique opportunity for",
+      "points": [
+        "**Learning by doing:** law is usually taught through books and cases. Here you apply what you know to real challenges, experiment, fail, iterate and build something tangible.",
+        "**Breaking down disciplinary silos:** law students work with computer scientists, designers and entrepreneurs, learn each other's language and solve problems together.",
+        "**Shaping the future of legal services:** AI is changing the legal profession. Help shape that change, so that legal services become more accessible, efficient and human-centred."
+      ]
+    },
+    {
+      "layout": "image",
+      "title": "Thank You to Our **Sponsors** and **Challenge Owners**",
+      "image": "img/sponsors-owners.png",
+      "alt": "Logos of Deloitte with a dashed placeholder box for a QR code, Omnilex, Kanton St.Gallen Staatskanzlei with the coat of arms, LexTec, OpenFisca, OpenJustice and Apertus",
+      "shadow": false
+    },
+    {
+      "layout": "people",
+      "title": "Our **Mentors**",
+      "items": [
+        {
+          "name": "Dick Blankvoort",
+          "role": "Tech support",
+          "photo": "img/people/dick-blankvoort.jpg",
+          "alt": "Placeholder with the initials of Dick Blankvoort"
+        },
+        {
+          "name": "Alice Palmieri",
+          "role": "Legal support",
+          "photo": "img/people/alice-palmieri.jpg",
+          "alt": "Placeholder with the initials of Alice Palmieri"
+        },
+        {
+          "name": "Haroon Khan",
+          "role": "Communications",
+          "photo": "img/people/haroon-khan.jpg",
+          "alt": "Placeholder with the initials of Haroon Khan"
+        },
+        {
+          "name": "Simon Mayer",
+          "role": "General support",
+          "photo": "img/people/simon-mayer.jpg",
+          "alt": "Placeholder with the initials of Simon Mayer"
+        }
+      ]
+    },
+    {
+      "layout": "people",
+      "title": "Our **Mentors**",
+      "items": [
+        {
+          "name": "Johannes David",
+          "role": "Tech support",
+          "photo": "img/people/johannes-david.jpg",
+          "alt": "Placeholder with the initials of Johannes David"
+        },
+        {
+          "name": "Ebru Metin",
+          "role": "Legal design support",
+          "photo": "img/people/ebru-metin.jpg",
+          "alt": "Placeholder with the initials of Ebru Metin"
+        },
+        {
+          "name": "Lukas Schrader",
+          "role": "Legal and tech support",
+          "photo": "img/people/lukas-schrader.jpg",
+          "alt": "Placeholder with the initials of Lukas Schrader"
+        }
+      ]
+    },
+    {
+      "layout": "people",
+      "title": "Our **Jury**: For the Challenges",
+      "items": [
+        {
+          "name": "Joy Rauchenstein",
+          "role": "LexTec",
+          "photo": "img/people/joy-rauchenstein.jpg",
+          "alt": "Placeholder with the initials of Joy Rauchenstein"
+        },
+        {
+          "name": "Marco Henri",
+          "role": "Omnilex",
+          "photo": "img/people/marco-henri.jpg",
+          "alt": "Placeholder with the initials of Marco Henri"
+        },
+        {
+          "name": "Matti Schneider",
+          "role": "OpenFisca and Canton SG",
+          "photo": "img/people/matti-schneider.jpg",
+          "alt": "Placeholder with the initials of Matti Schneider"
+        },
+        {
+          "name": "Johannes David",
+          "role": "OpenJustice and Apertus",
+          "photo": "img/people/johannes-david.jpg",
+          "alt": "Placeholder with the initials of Johannes David"
+        },
+        {
+          "name": "Oleg Lavrosky",
+          "role": "OpenJustice and Apertus",
+          "photo": "img/people/oleg-lavrosky.jpg",
+          "alt": "Placeholder with the initials of Oleg Lavrosky"
+        },
+        {
+          "name": "Ralph Wyss",
+          "role": "Deloitte",
+          "photo": "img/people/ralph-wyss.jpg",
+          "alt": "Placeholder with the initials of Ralph Wyss"
+        }
+      ]
+    },
+    {
+      "layout": "people",
+      "title": "Our **Jury**: Academic Members",
+      "items": [
+        {
+          "name": "Hannes Westermann",
+          "role": "Maastricht University",
+          "photo": "img/people/hannes-westermann.jpg",
+          "alt": "Placeholder with the initials of Hannes Westermann"
+        },
+        {
+          "name": "Aurelia Tamò",
+          "role": "University of St.Gallen",
+          "photo": "img/people/aurelia-tamo.jpg",
+          "alt": "Placeholder with the initials of Aurelia Tamò"
+        },
+        {
+          "name": "Daniel Brugger",
+          "role": "University of St.Gallen",
+          "photo": "img/people/daniel-brugger.jpg",
+          "alt": "Placeholder with the initials of Daniel Brugger"
+        },
+        {
+          "name": "Luka Nenadic",
+          "role": "ETH Zürich",
+          "photo": "img/people/luka-nenadic.jpg",
+          "alt": "Placeholder with the initials of Luka Nenadic"
+        }
+      ]
+    },
+    {
+      "layout": "text",
+      "title": "Some **Ground Rules**",
+      "points": [
+        "Be respectful of the environment",
+        "Work wherever you like: in the room on the second floor and in the rooms above. Leave the rooms as you found them.",
+        "All announcements are made in room ==XX==",
+        "Food only in room ==YY==",
+        "Take a break or go home to rest whenever you need to. You can also stay here as long as you need.",
+        "Be cooperative, ask questions and ask the mentors for help"
+      ]
+    },
+    {
+      "layout": "text",
+      "title": "Photos and **Filming**",
+      "points": [
+        "A film crew and photographers are here, for social media and for the University",
+        "Feel free to chat with them :-)",
+        "If you do not want to be filmed, let us know and wear an **orange sticker**. We will then not film you, or cut you out."
+      ],
+      "aside": {
+        "box": {
+          "heading": "Orange sticker",
+          "text": "Please do not film or photograph me.",
+          "style": "teal"
+        }
+      }
+    },
+    {
+      "layout": "text",
+      "title": "We Are Here to **Have Fun**",
+      "points": [
+        "We provide food and drinks to keep you fuelled up",
+        "Pizza at 18:00 in room ==YYY==",
+        "Some games later in the evening"
+      ]
+    },
+    {
+      "layout": "table",
+      "title": "The **Schedule**",
+      "columns": [
+        "When",
+        "What"
+      ],
+      "rows": [
+        [
+          "Sat 10:45",
+          "The challenge owners present their challenges"
+        ],
+        [
+          "After the talks",
+          "Ask the challenge owners your questions"
+        ],
+        [
+          "Sat 12:00",
+          "Hacking starts: find a workstation for your team, brainstorm and iterate"
+        ],
+        [
+          "Sat 18:00",
+          "Pizza in room ==YYY=="
+        ],
+        [
+          "Sun 09:00",
+          "Breakfast"
+        ],
+        [
+          "Sun 12:00",
+          "Code freeze: upload your project on the [hackathon website](https://www.legalhackathons.org/) and prepare your pitch"
+        ],
+        [
+          "Sun 12:00 to 14:00",
+          "Pitches to the jury panels, 3 minutes per team; the rooms are announced later"
+        ],
+        [
+          "Sun 14:00",
+          "Final presentations and closing"
+        ]
+      ],
+      "after": "We make all announcements on Discord: join at [discord.gg/7n4pPU8tX](https://discord.gg/7n4pPU8tX)"
+    },
+    {
+      "layout": "text",
+      "title": "Choosing a **Challenge**",
+      "points": [
+        "The challenge owners present their challenges next",
+        "At most 4 teams per challenge, so that every challenge gets addressed",
+        "Rate your preferences ==(where?)==; we assign 3 to 4 teams to each challenge"
+      ],
+      "aside": {
+        "box": {
+          "heading": "Challenge tracks",
+          "text": "Access to justice, efficient processes, legal research and benchmarking",
+          "style": "outline"
+        }
+      }
+    },
+    {
+      "layout": "image",
+      "title": "Thank You to Our **Sponsors**!",
+      "image": "img/sponsors-thanks.png",
+      "alt": "Logos in three sizes: large Deloitte, Omnilex and Kanton St.Gallen Staatskanzlei; medium LexTec, OpenJustice, Apertus and OpenFisca; small Maestrani",
+      "shadow": false
+    },
+    {
+      "layout": "section",
+      "kicker": "Save the date",
+      "title": "Next Legal Hackathon:\n**5 and 6 November 2027**"
+    }
+  ]
+}

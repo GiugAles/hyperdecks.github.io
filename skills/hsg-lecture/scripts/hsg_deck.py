@@ -98,8 +98,10 @@ def points_of(pts):
 def check(deck, base):
     """Return (errors, warnings). Errors stop the render; warnings are design and structure tells to fix or justify."""
     errors, warnings = [], []
-    if not _keys(deck, {"title", "slides"}, {"lang", "footer"}, "deck", errors):
+    if not _keys(deck, {"title", "slides"}, {"lang", "footer", "theme"}, "deck", errors):
         return errors, warnings
+    if "theme" in deck and not (isinstance(deck["theme"], str) and (base / deck["theme"]).is_file()):
+        errors.append(f"deck: theme file not found: {deck['theme']}")
     slides = deck.get("slides") or []
     if not isinstance(slides, list) or not slides:
         errors.append("deck: 'slides' must be a list with at least one slide")

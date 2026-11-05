@@ -1,0 +1,85 @@
+/* Legal Hackathon @ UNISG: the look of legalhackathons.org (dark, neon green, Sora and JetBrains Mono) on the HSG template.
+   Kept from HSG: the logo (in white), the green slide number tab, the green wedge with "From insight to impact.", all sizes.
+   Fonts: Sora and JetBrains Mono, SIL Open Font License 1.1 (fonts/*-OFL.txt). */
+@font-face{font-family:Sora;font-weight:100 800;font-style:normal;font-display:swap;src:url(fonts/Sora.woff2) format("woff2")}
+@font-face{font-family:JBMono;font-weight:100 800;font-style:normal;font-display:swap;src:url(fonts/JetBrainsMono.woff2) format("woff2")}
+
+:root{--lh-bg:#07070A;--lh-surface:#0E0E13;--lh-surface2:#151519;--lh-text:#E8E8EC;--lh-muted:#7A7A86;--lh-dim:#45454F;
+  --lh-green:#00FF88;--lh-green2:#00CC6A;--lh-purple:#A78BFA;--lh-cyan:#22D3EE;--lh-border:#1E1E26;
+  --lh-mono:JBMono,"JetBrains Mono",ui-monospace,monospace;
+  --fg:var(--lh-text);--body:var(--lh-text);--quiet:var(--lh-muted);--line:var(--lh-border);--k-stage:#000}
+body{font-family:Sora,sans-serif;font-weight:300}
+b,strong,th{font-weight:600}
+a{color:var(--lh-green)}
+code,pre{font-family:var(--lh-mono)}
+mark{background:#FFF04B;color:#000;border-radius:.2U;padding:0 .25U}
+
+/* the slide: dark, with the faint grid and the green glow of the website */
+.slide{background:var(--lh-bg);color:var(--lh-text)}
+.slide::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(60U 40U at 0 0,rgba(0,255,136,.08),transparent 70%),
+    linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px) 0 0/4U 4U,
+    linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px) 0 0/4U 4U}
+
+/* headlines in Sora bold with tight tracking; **words** in a headline are green, as on the website */
+h1,h2{font-family:Sora,sans-serif;font-weight:700;letter-spacing:-.03em;color:var(--lh-text)}
+h1 strong,h2 strong{font-weight:700;color:var(--lh-green)}
+h2{line-height:1.12}
+.lead{color:var(--lh-muted)}
+.copy p{color:var(--lh-text)}
+
+/* points marked with a green prompt instead of the dash */
+ul.dash>li::before,ul.dash ul li::before,.defs dt::before{content:">";font-family:var(--lh-mono);font-weight:700;color:var(--lh-green)}
+ul.dash ul li::before{content:"-"}
+ul.dash>li strong{color:var(--lh-green);font-weight:600}
+
+/* the foot line in the website's monospace */
+.dfoot,.source{font-family:var(--lh-mono);color:var(--lh-dim);letter-spacing:.02em}
+.dfoot::before{content:"$ ";color:var(--lh-green)}
+
+/* the HSG slide number tab stays HSG green */
+.pn{color:#fff;font-family:HSGSans,"Gill Sans MT Pro","Gill Sans",sans-serif}
+
+/* boxes as the cards of the website */
+.box.outline{background:var(--lh-surface);border:.1U solid var(--lh-border);border-top:.25U solid var(--lh-green);border-radius:.8U;color:var(--lh-text)}
+.box.teal{background:rgba(34,211,238,.08);border:.1U solid rgba(34,211,238,.45);border-radius:.8U;color:var(--lh-text)}
+.box.teal h3{color:var(--lh-cyan)}
+.box.outline h3{color:var(--lh-green)}
+.box h3{font-family:var(--lh-mono);text-transform:uppercase;letter-spacing:.12em;font-size:var(--s-small);font-weight:700}
+.box.green{background:var(--lh-green);border:0;color:var(--lh-bg);font-weight:600}
+pre.code.outline{background:var(--lh-surface);border:.1U solid var(--lh-border);color:var(--lh-text)}
+
+/* table as the schedule of the website */
+.t th{background:transparent;color:var(--lh-green);font-family:var(--lh-mono);text-transform:uppercase;letter-spacing:.12em;
+  font-size:var(--s-small);font-weight:700;border-bottom:.15U solid var(--lh-green)}
+.t tr:nth-child(odd) td{background:var(--lh-surface)}
+.t tr:nth-child(even) td{background:var(--lh-surface2)}
+.t th+th,.t td+td{border-left:.15U solid var(--lh-bg)}
+.t tr+tr td{border-top:.15U solid var(--lh-bg)}
+.t td:first-child{font-family:var(--lh-mono);font-weight:700;color:var(--lh-green);font-size:var(--s-sub);white-space:nowrap}
+
+/* pictures: a thin border instead of the drop shadow */
+.pic.shadow img{filter:none;border:.1U solid var(--lh-border);border-radius:.6U;box-shadow:0 0 3U rgba(0,255,136,.08)}
+.pic figcaption{font-family:var(--lh-mono)}
+.person img{filter:none;border:.1U solid var(--lh-border);border-radius:.6U}
+.person .name{font-weight:600}
+.person .role{color:var(--lh-muted)}
+
+/* title and section slides: HSG logo in white, the kicker as a section label of the website, the meta lines as its terminal */
+.logo{filter:brightness(0) invert(1)}
+.veil{background:linear-gradient(to top right,var(--lh-bg) 0%,rgba(7,7,10,.6) 50%,rgba(7,7,10,0) 100%)}
+.gear{filter:drop-shadow(0 0 4U rgba(0,255,136,.35))}
+.kicker{font-family:var(--lh-mono);font-size:var(--s-small);font-weight:700;text-transform:uppercase;letter-spacing:.16em;color:var(--lh-green);
+  display:flex;align-items:center;gap:1U}
+.kicker::before{content:"";width:2U;height:.12U;background:var(--lh-green)}
+h1{font-weight:800}
+.tbody{font-family:var(--lh-mono);font-size:var(--s-small);color:var(--lh-text);background:var(--lh-surface);border:.1U solid var(--lh-border);
+  border-radius:.8U;padding:1.6U 2U;width:auto;max-width:42U;line-height:1.8}
+
+/* the controls under the slide in the dark */
+.pill{background:var(--lh-surface);border-color:var(--lh-border);box-shadow:none}
+.controls{color:var(--lh-text)}
+.pill .sep{background:var(--lh-border)}
+.controls button:hover,body.show-notes #notesBtn,body:has(.overview.open) #ovBtn{background:var(--lh-surface2)}
+.progress{background:var(--lh-border)}
+.progress span{background:var(--lh-green)}

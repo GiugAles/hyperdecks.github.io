@@ -364,8 +364,13 @@ window.hsgDeck={go,count:slides.length};go(cur)})();
 TAB = '<svg viewBox="0 0 3106057 3403600" preserveAspectRatio="none" aria-hidden="true"><path d="M0 711200L3106057 0V3403600L449943 3222171Z"/></svg>'
 
 
+def units(text):
+    """Write the slide unit U as CSS: 1U is 1% of the slide width."""
+    return re.sub(r"(-?\d*\.?\d+)U\b", r"calc(\1*var(--u))", text)
+
+
 def css():
-    out = re.sub(r"(-?\d*\.?\d+)U\b", r"calc(\1*var(--u))", CSS)
+    out = units(CSS)
     faces = ""
     for fam, w, style, local, file in FONTS:
         src = ",".join(f'local("{n}")' for n in local) + f",url(assets/{file}) format('opentype')"
@@ -593,6 +598,21 @@ class Html:
         assign = f'<div class="assign" style="grid-template-rows:repeat({n},auto)">{boxes}</div>' if boxes else ""
         return self.main(s, f'<div class="plan">{legend}<div class="rows">{rows}</div>{assign}</div>')
 
+    def theme(self):
+        """An optional theme: a CSS file named in the deck, set on top of the template; files it links with url() are copied."""
+        if not self.deck.get("theme"):
+            return ""
+        path = (self.base / self.deck["theme"]).resolve()
+
+        def copy(m):
+            ref = m.group(1).strip("'\"")
+            if re.match(r"(data:|https?:|#)", ref):
+                return m.group(0)
+            src = (path.parent / ref).resolve()
+            shutil.copyfile(src, self.assets / src.name)
+            return f'url("assets/{src.name}")'
+        return "\n<style>" + units(re.sub(r"url\(([^)]+)\)", copy, path.read_text(encoding="utf-8"))) + "</style>"
+
     def page(self):
         d = self.deck
         n_all = len(d["slides"])
@@ -636,7 +656,7 @@ class Html:
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(plain(d['title']))} | University of St.Gallen</title>
-<style>{css()}</style>
+<style>{css()}</style>{self.theme()}
 </head>
 <body>
 <main aria-label="{esc(plain(d['title']))}">
