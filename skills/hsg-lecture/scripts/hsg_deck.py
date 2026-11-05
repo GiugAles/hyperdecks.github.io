@@ -54,7 +54,7 @@ ITEM_KEYS = {
     "people":   ({"name"}, {"photo", "alt", "role"}),
     "syllabus": ({"date", "title"}, {"kind"}),
 }
-ITEM_COUNT = {"gallery": (2, 4), "people": (1, 6), "quiz": (2, 5), "menu": (2, 8), "syllabus": (2, 14)}
+ITEM_COUNT = {"gallery": (2, 4), "people": (1, 9), "quiz": (2, 5), "menu": (2, 8), "syllabus": (2, 14)}
 PICTURE_KEYS = ({"image", "alt"}, {"caption", "shadow"})
 ASIDE_KEYS = {"image", "alt", "caption", "shadow", "box", "code"}
 BOX_KEYS = ({"text"}, {"style", "heading"})

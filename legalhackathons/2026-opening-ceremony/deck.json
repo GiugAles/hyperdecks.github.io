@@ -39,7 +39,7 @@
       "layout": "image",
       "title": "Thank You to Our **Sponsors** and **Challenge Owners**",
       "image": "img/sponsors-owners.png",
-      "alt": "Logos of Deloitte with a dashed placeholder box for a QR code, Omnilex, Kanton St.Gallen Staatskanzlei with the coat of arms, LexTec, OpenFisca, OpenJustice and Apertus",
+      "alt": "Logos of Deloitte, Omnilex, Kanton St.Gallen Staatskanzlei with the coat of arms, LexTec, OpenFisca, OpenJustice and Apertus",
       "shadow": false
     },
     {
@@ -50,43 +50,37 @@
           "name": "Dick Blankvoort",
           "role": "Tech support",
           "photo": "img/people/dick-blankvoort.jpg",
-          "alt": "Placeholder with the initials of Dick Blankvoort"
+          "alt": "Dick Blankvoort in a blue checked shirt"
         },
         {
           "name": "Alice Palmieri",
           "role": "Legal support",
           "photo": "img/people/alice-palmieri.jpg",
-          "alt": "Placeholder with the initials of Alice Palmieri"
+          "alt": "Alice Palmieri in a black coat in front of a stone column"
         },
         {
           "name": "Haroon Khan",
           "role": "Communications",
           "photo": "img/people/haroon-khan.jpg",
-          "alt": "Placeholder with the initials of Haroon Khan"
+          "alt": "Haroon Khan speaking into a microphone"
         },
         {
           "name": "Simon Mayer",
           "role": "General support",
           "photo": "img/people/simon-mayer.jpg",
-          "alt": "Placeholder with the initials of Simon Mayer"
-        }
-      ]
-    },
-    {
-      "layout": "people",
-      "title": "Our **Mentors**",
-      "items": [
+          "alt": "Simon Mayer smiling, in a purple polo shirt"
+        },
         {
           "name": "Johannes David",
           "role": "Tech support",
           "photo": "img/people/johannes-david.jpg",
-          "alt": "Placeholder with the initials of Johannes David"
+          "alt": "Johannes David in a dark shirt"
         },
         {
           "name": "Ebru Metin",
           "role": "Legal design support",
           "photo": "img/people/ebru-metin.jpg",
-          "alt": "Placeholder with the initials of Ebru Metin"
+          "alt": "Ebru Metin, smiling, writing on a glass board"
         },
         {
           "name": "Lukas Schrader",
@@ -98,73 +92,91 @@
     },
     {
       "layout": "people",
-      "title": "Our **Jury**: For the Challenges",
+      "title": "**Challenge Owners** and **Sponsors**",
       "items": [
         {
           "name": "Joy Rauchenstein",
           "role": "LexTec",
           "photo": "img/people/joy-rauchenstein.jpg",
-          "alt": "Placeholder with the initials of Joy Rauchenstein"
+          "alt": "Black-and-white portrait of Joy Rauchenstein"
         },
         {
           "name": "Marco Henri",
           "role": "Omnilex",
           "photo": "img/people/marco-henri.jpg",
-          "alt": "Placeholder with the initials of Marco Henri"
+          "alt": "Marco Henri in a grey sweater and glasses"
         },
         {
           "name": "Matti Schneider",
           "role": "OpenFisca and Canton SG",
           "photo": "img/people/matti-schneider.jpg",
-          "alt": "Placeholder with the initials of Matti Schneider"
-        },
-        {
-          "name": "Johannes David",
-          "role": "OpenJustice and Apertus",
-          "photo": "img/people/johannes-david.jpg",
-          "alt": "Placeholder with the initials of Johannes David"
+          "alt": "Matti Schneider smiling, in a blue shirt"
         },
         {
           "name": "Oleg Lavrosky",
           "role": "OpenJustice and Apertus",
           "photo": "img/people/oleg-lavrosky.jpg",
-          "alt": "Placeholder with the initials of Oleg Lavrosky"
-        },
-        {
-          "name": "Ralph Wyss",
-          "role": "Deloitte",
-          "photo": "img/people/ralph-wyss.jpg",
-          "alt": "Placeholder with the initials of Ralph Wyss"
+          "alt": "Oleg Lavrovsky in glasses and a patterned shirt"
         }
       ]
     },
     {
       "layout": "people",
-      "title": "Our **Jury**: Academic Members",
+      "title": "**Jury** Members",
       "items": [
+        {
+          "name": "Ralph Wyss",
+          "role": "Deloitte",
+          "photo": "img/people/ralph-wyss.jpg",
+          "alt": "Ralph Wyss in a dark suit and red tie"
+        },
+        {
+          "name": "Joy Rauchenstein",
+          "role": "LexTec",
+          "photo": "img/people/joy-rauchenstein.jpg",
+          "alt": "Black-and-white portrait of Joy Rauchenstein"
+        },
+        {
+          "name": "Marco Henri",
+          "role": "Omnilex",
+          "photo": "img/people/marco-henri.jpg",
+          "alt": "Marco Henri in a grey sweater and glasses"
+        },
+        {
+          "name": "Matti Schneider",
+          "role": "OpenFisca",
+          "photo": "img/people/matti-schneider.jpg",
+          "alt": "Matti Schneider smiling, in a blue shirt"
+        },
+        {
+          "name": "Oleg Lavrosky",
+          "role": "Apertus",
+          "photo": "img/people/oleg-lavrosky.jpg",
+          "alt": "Oleg Lavrovsky in glasses and a patterned shirt"
+        },
         {
           "name": "Hannes Westermann",
           "role": "Maastricht University",
           "photo": "img/people/hannes-westermann.jpg",
-          "alt": "Placeholder with the initials of Hannes Westermann"
+          "alt": "Hannes Westermann in a grey jacket"
         },
         {
           "name": "Aurelia Tamò",
           "role": "University of St.Gallen",
           "photo": "img/people/aurelia-tamo.jpg",
-          "alt": "Placeholder with the initials of Aurelia Tamò"
+          "alt": "Aurelia Tamò in front of green leaves"
         },
         {
           "name": "Daniel Brugger",
           "role": "University of St.Gallen",
           "photo": "img/people/daniel-brugger.jpg",
-          "alt": "Placeholder with the initials of Daniel Brugger"
+          "alt": "Daniel Brugger in glasses and a navy jacket"
         },
         {
           "name": "Luka Nenadic",
           "role": "ETH Zürich",
           "photo": "img/people/luka-nenadic.jpg",
-          "alt": "Placeholder with the initials of Luka Nenadic"
+          "alt": "Luka Nenadic in a dark suit and tie"
         }
       ]
     },
@@ -172,36 +184,29 @@
       "layout": "text",
       "title": "Some **Ground Rules**",
       "points": [
-        "Be respectful of the environment",
-        "Work wherever you like: in the room on the second floor and in the rooms above. Leave the rooms as you found them.",
-        "All announcements are made in room ==XX==",
-        "Food only in room ==YY==",
-        "Take a break or go home to rest whenever you need to. You can also stay here as long as you need.",
-        "Be cooperative, ask questions and ask the mentors for help"
+        "Be **respectful** of the environment",
+        "**Work wherever you like**: in the room on the second floor and in the rooms above. **Leave the rooms as you found them.**",
+        "All **announcements** are made in room ==XX==",
+        "**Food** only in room ==YY==",
+        "**Take a break** or go home to rest whenever you need to. You can also **stay here** as long as you need.",
+        "Be **cooperative**, **ask questions** and **ask the mentors** for help"
       ]
     },
     {
       "layout": "text",
       "title": "Photos and **Filming**",
       "points": [
-        "A film crew and photographers are here, for social media and for the University",
-        "Feel free to chat with them :-)",
+        "A film crew and photographers are here, for **social media** and for the **University**",
+        "Feel free to **chat with them** :-)",
         "If you do not want to be filmed, let us know and wear an **orange sticker**. We will then not film you, or cut you out."
-      ],
-      "aside": {
-        "box": {
-          "heading": "Orange sticker",
-          "text": "Please do not film or photograph me.",
-          "style": "teal"
-        }
-      }
+      ]
     },
     {
       "layout": "text",
       "title": "We Are Here to **Have Fun**",
       "points": [
-        "We provide food and drinks to keep you fuelled up",
-        "Pizza at 18:00 in room ==YYY==",
+        "We provide food and drinks to keep you fuelled up, mate tea included 🧉",
+        "Pizza at 18:00 in room ==YYY== 🍕",
         "Some games later in the evening"
       ]
     },
@@ -255,14 +260,7 @@
         "The challenge owners present their challenges next",
         "At most 4 teams per challenge, so that every challenge gets addressed",
         "Rate your preferences ==(where?)==; we assign 3 to 4 teams to each challenge"
-      ],
-      "aside": {
-        "box": {
-          "heading": "Challenge tracks",
-          "text": "Access to justice, efficient processes, legal research and benchmarking",
-          "style": "outline"
-        }
-      }
+      ]
     },
     {
       "layout": "image",
@@ -270,6 +268,21 @@
       "image": "img/sponsors-thanks.png",
       "alt": "Logos in three sizes: large Deloitte, Omnilex and Kanton St.Gallen Staatskanzlei; medium LexTec, OpenJustice, Apertus and OpenFisca; small Maestrani",
       "shadow": false
+    },
+    {
+      "layout": "gallery",
+      "title": "Our **Sponsors** Would Like to Talk to You",
+      "lead": "Share your CVs here",
+      "items": [
+        {
+          "image": "img/qr-placeholder.svg",
+          "alt": "Placeholder for the first QR code"
+        },
+        {
+          "image": "img/qr-placeholder.svg",
+          "alt": "Placeholder for the second QR code"
+        }
+      ]
     },
     {
       "layout": "section",

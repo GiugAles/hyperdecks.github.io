@@ -83,3 +83,42 @@ h1{font-weight:800}
 .controls button:hover,body.show-notes #notesBtn,body:has(.overview.open) #ovBtn{background:var(--lh-surface2)}
 .progress{background:var(--lh-border)}
 .progress span{background:var(--lh-green)}
+
+/* slide 3 (Why are you here today?): more air between the three topics */
+#s3 ul.dash{gap:2.6U}
+
+/* seven people in one row (mentors): smaller portraits */
+.people.n7{gap:2U;align-items:start}
+.people.n7 img{width:10.5U;height:13U}
+
+/* slide 3: the three points fill the slide */
+#s3 ul.dash>li{font-size:2.4U;line-height:1.3}
+/* slide 8 (ground rules): bigger text, more space between the rules */
+#s8 ul.dash{gap:2.4U}
+#s8 ul.dash>li{font-size:2.3U}
+/* slide 14: two QR code placeholders side by side */
+.gallery.qr{max-width:60U;margin:0 auto;align-items:start}
+.gallery.qr .pic img{width:24U;height:24U;max-height:none;margin:0 auto}
+
+/* small portrait tiles like the mentors slide, for the challenge owners (4) and the jury (9) */
+.people.n4 img{width:10.5U;height:13U}
+.people.n4{align-items:start}
+.people.n9{gap:1.2U;align-items:start}
+.people.n9 img{width:8.6U;height:10.6U}
+/* slide 9: three tiles, orange sticker dots */
+.tiles3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2.4U;margin-top:2U}
+.tile{background:var(--lh-surface);border:.1U solid var(--lh-border);border-radius:1U;padding:2.6U 2.4U;
+  font-size:2.1U;line-height:1.35;color:var(--lh-text)}
+.tile strong{color:var(--lh-green);font-weight:600}
+.tile strong.orange{color:#FF8A00}
+.ticon{display:block;font-size:4U;line-height:1;margin-bottom:1.6U}
+.ticon.dot{width:4U;height:4U;border-radius:50%;background:#FF8A00;box-shadow:0 0 2U rgba(255,138,0,.45)}
+.odots{position:absolute;inset:0;pointer-events:none;z-index:-1}
+.odots i{position:absolute;width:calc(var(--d)*var(--u));height:calc(var(--d)*var(--u));border-radius:50%;background:#FF8A00;opacity:.9}
+/* slide 10: bigger text and lots of emojis */
+#s10 ul.dash{gap:2U}
+#s10 .copy{max-width:54U}
+#s10 ul.dash>li{font-size:2.8U}
+.emojis{position:absolute;inset:0;pointer-events:none;z-index:-1}
+.emojis span{position:absolute;line-height:1}
+@media (max-width:767px){.tiles3{grid-template-columns:1fr}.odots,.emojis{display:none}}

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <rect x="6" y="6" width="388" height="388" rx="12" fill="none" stroke="#00FF88" stroke-width="6" stroke-dasharray="18 12"/>
+  <text x="200" y="190" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="34" fill="#00FF88">QR code</text>
+  <text x="200" y="236" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="28" fill="#00FF88">(placeholder)</text>
+</svg>
