@@ -232,11 +232,11 @@ h1{font-size:var(--s-h1);font-weight:300;line-height:1.08;letter-spacing:-.01em;
 /* canvas: a slide copied from PowerPoint; every object sits where it was (x, y, w, h in U), text keeps its size,
    click animations become steps (the arrow keys reveal them one by one; overview, print and phone show all);
    the headline may use the full width, as the HSG font is a little wider than the Light of many source decks */
-.l-canvas h2{max-width:92.16U}
+.l-canvas h2{max-width:92U;text-wrap:wrap}
 .l-canvas .dfoot{z-index:0}  /* the footer line lies behind the objects, so a filled box covers it */
 .cv{position:absolute;inset:0;z-index:1}
 .cv .it{position:absolute}
-.cv .it.off{visibility:hidden}
+.cv .off{visibility:hidden}
 .cv svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
 .cv .tx{position:absolute;inset:0;display:flex;flex-direction:column;color:var(--fg);line-height:1.2;font-weight:400}
 .cv .tx.m{justify-content:center}.cv .tx.b{justify-content:flex-end}
@@ -248,6 +248,7 @@ h1{font-size:var(--s-h1);font-weight:300;line-height:1.08;letter-spacing:-.01em;
 .cv .tx .serif{font-family:HSGSerif,"Palatino Linotype",Palatino,serif}
 .cv .tx.v270{writing-mode:vertical-rl;transform:rotate(180deg)}.cv .tx.v90{writing-mode:vertical-rl}
 .cv .pimg{position:absolute;inset:0;overflow:hidden}
+.cv .pimg video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#000}
 .cv .pimg img{position:absolute;display:block;max-width:none}
 .cv .it.shadow .pimg{filter:drop-shadow(.35U .35U .55U rgba(0,0,0,.38))}
 .cv table{position:absolute;inset:0;border-collapse:collapse;table-layout:fixed;width:100%}
@@ -339,7 +340,7 @@ body.show-notes .notes-view{display:block}
   .source,.dfoot{position:static;display:block;margin-top:24px}
   .pn{position:absolute;top:auto;bottom:16px;right:16px;width:30px;height:33px;font-size:12px}
   .cv{position:relative;inset:auto;width:100vw;height:56.25vw;margin:30px -20px 0;--u:1vw;overflow:hidden}
-  .cv .it.off{visibility:visible}
+  .cv .off{visibility:visible}
   .pill{width:100%;height:100%;padding:3px 10px 0;border-radius:0;border:0;box-shadow:none;justify-content:space-between}
   .pill .sep{display:none}
   .tools button{flex-direction:column;gap:3px;height:48px;min-width:56px;padding:0 6px;border-radius:10px;font-size:10.5px}
@@ -354,7 +355,7 @@ body.show-notes .notes-view{display:block}
   body{overflow:visible;background:#fff}
   .slide{position:relative;left:auto;top:auto;transform:none;visibility:visible;height:7.5in;width:100%;break-after:page}
   .controls,.overview,.notes-view{display:none!important}
-  .cv .it.off{visibility:visible}
+  .cv .off{visibility:visible}
   *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
 }
 """
@@ -365,7 +366,7 @@ JS = r"""
 const by=id=>document.getElementById(id);
 let cur=0,step=0;const m=location.hash.match(/(\d+)$/);if(m&&+m[1]>=1&&+m[1]<=slides.length)cur=+m[1]-1;
 const maxStep=()=>+slides[cur].dataset.steps||0,stepping=()=>!matchMedia('(max-width:999px),(max-height:480px)').matches;
-function show(){slides[cur].querySelectorAll('.it[data-s],.it[data-e]').forEach(e=>{const a=+e.dataset.s||0,x=e.dataset.e?+e.dataset.e:1e9;
+function show(){slides[cur].querySelectorAll('.it[data-s],.it[data-e],.tx p[data-s]').forEach(e=>{const a=+e.dataset.s||0,x=e.dataset.e?+e.dataset.e:1e9;
   e.classList.toggle('off',!(step>=a&&step<x))});by('prev').disabled=cur===0&&step===0;by('next').disabled=cur===slides.length-1&&step>=maxStep()}
 function go(n,end){cur=Math.max(0,Math.min(slides.length-1,n));step=end?maxStep():0;
  slides.forEach((s,i)=>{s.classList.toggle('active',i===cur);s.setAttribute('aria-hidden',i!==cur)});
@@ -820,7 +821,8 @@ class Html:
                 body = f"<b>{body}</b>" if r.get("b") else body
                 runs += f'<span{c} style="{rs}">{body}</span>'
             first = max((r.get("sz", 1.9) for r in p["r"] if "sz" in r), default=1.9)
-            out += f'<p style="{st};font-size:calc({first}*var(--u)*var(--f,1))">{runs}</p>'
+            ds = f' data-s="{p["s"]}"' if p.get("s") else ""
+            out += f'<p{ds} style="{st};font-size:calc({first}*var(--u)*var(--f,1))">{runs}</p>'
         pad = f'padding:calc({ins[1]}*var(--u)) calc({ins[2]}*var(--u)) calc({ins[3]}*var(--u)) calc({ins[0]}*var(--u))'
         return f'<div class="tx {tx.get("a", "t")}{" nw" if tx.get("nw") else ""}{v}{cls}" style="{pad}">{out}</div>'
 
@@ -867,6 +869,15 @@ class Html:
         iw, ih = 1 - cl - cr, 1 - ct - cb
         st = f"left:{_f(-cl / iw * 100)}%;top:{_f(-ct / ih * 100)}%;width:{_f(100 / iw)}%;height:{_f(100 / ih)}%"
         cls = " shadow" if it.get("shadow") else ""
+        if it.get("video"):
+            src = (self.base / it["video"]).resolve()
+            if src.exists():
+                (self.out / "media").mkdir(exist_ok=True)
+                shutil.copyfile(src, self.out / "media" / src.name)
+                typ = {"mov": "video/quicktime", "mp4": "video/mp4", "webm": "video/webm"}.get(src.suffix[1:].lower(), "video/mp4")
+                return (f'<div class="it{cls}" style="{self.cv_pos(it)}"{self.cv_attrs(it)}><div class="pimg">'
+                        f'<video controls preload="none" poster="{self.asset(it["src"])}" aria-label="{esc(it.get("alt", ""))}">'
+                        f'<source src="media/{src.name}" type="{typ}"></video></div></div>')
         return (f'<div class="it{cls}" style="{self.cv_pos(it)}"{self.cv_attrs(it)}><div class="pimg">'
                 f'<img src="{self.asset(it["src"])}" alt="{esc(it.get("alt", ""))}" style="{st}"></div></div>')
 
@@ -928,7 +939,8 @@ class Html:
             notes = f'<template class="notes">{esc(s["notes"])}</template>' if s.get("notes") else ""
             t = f' data-time="{esc(str(s["time"]))}"' if s.get("time") else ""
             bare = " bare" if lay == "questions" and not s.get("points") else ""
-            steps = max([i.get("s", 0) for i in s.get("items", [])] + [0]) if lay == "canvas" else 0
+            steps = max([i.get("s", 0) for i in s.get("items", [])] + [p.get("s", 0) for i in s.get("items", [])
+                        for p in (i.get("tx") or {}).get("p", [])] + [0]) if lay == "canvas" else 0
             ds = f' data-steps="{steps}"' if steps else ""
             sections += (f'<section class="slide l-{lay}{bare}{" active" if n == 1 else ""}" id="s{n}" data-title="{esc(plain(s["title"]) or f"Slide {n}")}"{t}{ds} '
                          f'aria-label="Slide {n} of {n_all}"><div class="frame">{inner}</div>{extra}{notes}</section>\n')
