@@ -18,7 +18,7 @@ Item format (see render_html.py, Html.cv_item):
   {"k":"pic", "src":"img/..", "alt":"..", "x","y","w","h", "crop":[l,t,r,b], "shadow":bool, "s":..}
   {"k":"table", "x","y","w","h", "cols":[U], "rows":[{"h":U,"cells":[{"tx":..,"fill":..}]}], "s":..}
 """
-import argparse, colorsys, json, math, re, sys, zipfile
+import argparse, colorsys, hashlib, json, math, re, sys, zipfile
 from pathlib import Path
 from lxml import etree
 from pptx import Presentation
@@ -241,7 +241,7 @@ def text_of(ctx, el, tx, placeholder=False, default_col=None):
                     para[key] = round(int(e.get("val")) / 100 * PT * scale, 3)
                 e = pPr.find(f"a:{tag}/a:spcPct", NS)
                 if e is not None:
-                    para[key] = round(int(e.get("val")) / 100000 * runs[0]["sz"] * 1.2, 3)
+                    para[key] = round(int(e.get("val")) / 100000 * next((r["sz"] for r in runs if "sz" in r), 1.9) * 1.2, 3)
         paras.append(para)
     if not any_text:
         return None
@@ -321,17 +321,18 @@ def adjusts(el):
 # ---- animations: a click is a step; effects before the first click are visible from the start
 
 def animation_steps(slide):
-    steps, exits = {}, {}
+    """(step of each shape, step where it disappears, {shape: {paragraph index: step}}); a click is a step."""
+    steps, exits, paras = {}, {}, {}
     timing = slide._element.find("p:timing", NS)
     if timing is None:
-        return steps, exits
+        return steps, exits, paras
     seq = None
     for c in timing.iter("{%s}cTn" % P):
         if c.get("nodeType") == "mainSeq":
             seq = c
             break
     if seq is None:
-        return steps, exits
+        return steps, exits, paras
     step = 0
     for par in seq.findall("p:childTnLst/p:par", NS):
         ctn = par.find("p:cTn", NS)
@@ -344,20 +345,32 @@ def animation_steps(slide):
                 continue
             for tgt in eff.iter("{%s}spTgt" % P):
                 sid = int(tgt.get("spid"))
-                if cls == "entr":
+                rg = tgt.find("p:txEl/p:pRg", NS)
+                if rg is not None and cls == "entr":
+                    for k in range(int(rg.get("st")), int(rg.get("end")) + 1):
+                        paras.setdefault(sid, {}).setdefault(k, step)
+                elif cls == "entr":
                     steps.setdefault(sid, step)
                 else:
                     exits.setdefault(sid, step)
-    return steps, exits
+    return steps, exits, paras
 
 
 # ---- the walk
 
+def title_marked(p):
+    """The text of a title paragraph with **bold** marks for bold runs."""
+    out = ""
+    for r in p.runs:
+        out += f"**{r.text}**" if r.font.bold and r.text.strip() else r.text
+    return out.replace("****", "").replace("** **", " ").strip()
+
+
 class Walker:
-    def __init__(self, ctx, slide, num, imgdir, imgrel, steps, exits):
+    def __init__(self, ctx, slide, num, imgdir, imgrel, steps, exits, paras):
         self.ctx, self.slide, self.num = ctx, slide, num
         self.imgdir, self.imgrel = imgdir, imgrel
-        self.steps, self.exits = steps, exits
+        self.steps, self.exits, self.paras = steps, exits, paras
         self.items, self.title, self.npics = [], "", 0
 
     def walk(self, shapes, tf=(0, 0, 1, 1), inh=(None, None)):
@@ -371,7 +384,7 @@ class Walker:
             ph = el.find(".//p:nvPr/p:ph", NS)
             if ph is not None and ph.get("type") in SKIP_PH:
                 if ph.get("type") in ("title", "ctrTitle") and sh.has_text_frame:
-                    self.title = "\n".join(p.text.strip() for p in sh.text_frame.paragraphs).strip()
+                    self.title = "\n".join(title_marked(p) for p in sh.text_frame.paragraphs).strip()
                 continue
             if sh.shape_type == MSO_SHAPE_TYPE.GROUP:
                 x = el.find("p:grpSpPr/a:xfrm", NS)
@@ -443,29 +456,62 @@ class Walker:
             for key, v in (("dash", ln[2]), ("head", ln[3]), ("tail", ln[4])):
                 if v:
                     it[key] = v
-        tx = text_of(ctx, el, el.find("p:txBody", NS), placeholder, default_color(ctx, el))
+        col = default_color(ctx, el)
+        if placeholder and not col:
+            col = self.layout_color(el)
+        tx = text_of(ctx, el, el.find("p:txBody", NS), placeholder, col)
         if tx:
             it["tx"] = tx
+            sid = int(el.xpath(".//p:cNvPr/@id")[0])
+            for k, st in self.paras.get(sid, {}).items():       # a text built paragraph by paragraph
+                if k < len(tx["p"]) and st:
+                    tx["p"][k]["s"] = st
         if "fill" not in it and "ln" not in it and "tx" not in it:
             return
         self.items.append(it)
 
+    def layout_color(self, el):
+        """Text colour that the layout sets for a placeholder, or None."""
+        ph = el.find(".//p:nvPr/p:ph", NS)
+        idx = ph.get("idx")
+        for lp in self.slide.slide_layout.placeholders:
+            if str(lp.placeholder_format.idx) == str(idx or 0) or (idx is None and lp.placeholder_format.type == ph.get("type")):
+                c = lp._element.find("p:txBody/a:lstStyle/a:lvl1pPr/a:defRPr/a:solidFill", NS)
+                col = clr(self.ctx, c.getparent().find("a:solidFill", NS).getparent()) if False else None
+                sf = lp._element.find("p:txBody/a:lstStyle/a:lvl1pPr/a:defRPr", NS)
+                if sf is not None and sf.find("a:solidFill", NS) is not None:
+                    col = clr(self.ctx, sf.find("a:solidFill", NS))
+                    return col[0] if col else None
+        return None
+
     def picture(self, sh, el, box):
+        has_video = el.find(".//a:videoFile", NS) is not None
         try:
             img = sh.image
         except Exception:
-            warn("a picture without image data was skipped")
+            if not has_video:
+                warn("a picture without image data was skipped")
+                return
+            img = None                                       # a video without a poster: show a black frame
+        import hashlib
+        if img is None:
+            from PIL import Image
+            (self.imgdir / "poster-black.png").exists() or Image.new("RGB", (16, 9), "black").save(self.imgdir / "poster-black.png")
+            self.npics += 1
+            it = {"k": "pic", "src": f"{self.imgrel}/poster-black.png", "alt": "Video", **box}
+            self.attach_video(sh, el, it)
+            self.items.append(it)
             return
         ext = img.ext.lower()
         self.npics += 1
-        name = f"s{self.num}-{self.npics}.{ext}"
+        name = f"{hashlib.sha1(img.blob).hexdigest()[:10]}.{ext}"       # same picture, same file
         if ext not in ("png", "jpg", "jpeg", "gif", "svg", "webp"):
             png = self.convert(img.blob, ext, name)
             if not png:
                 warn(f"picture {name} is a {ext} file, which a browser cannot show; it was skipped (convert it to PNG)")
                 return
             name = png
-        else:
+        elif not (self.imgdir / name).exists():
             (self.imgdir / name).write_bytes(img.blob)
         it = {"k": "pic", "src": f"{self.imgrel}/{name}", "alt": el.xpath(".//p:cNvPr/@descr")[0].strip() if el.xpath(".//p:cNvPr/@descr") else "", **box}
         sr = el.find("p:blipFill/a:srcRect", NS)
@@ -473,7 +519,24 @@ class Walker:
             it["crop"] = [int(sr.get(k, "0")) / 100000 for k in "ltrb"]
         if el.find("p:spPr/a:effectLst/a:outerShdw", NS) is not None:
             it["shadow"] = True
+        self.attach_video(sh, el, it)
         self.items.append(it)
+
+    def attach_video(self, sh, el, it):
+        vf = el.find(".//a:videoFile", NS)
+        if vf is None:
+            return
+        try:
+            part = sh.part.related_part(vf.get("{%s}link" % R))
+            vext = part.partname.rsplit(".", 1)[-1].lower()
+            vname = f"{hashlib.sha1(part.blob).hexdigest()[:10]}.{vext}"
+            mdir = self.imgdir.parent / "media"
+            mdir.mkdir(exist_ok=True)
+            if not (mdir / vname).exists():
+                (mdir / vname).write_bytes(part.blob)
+            it["video"] = f"media/{vname}"
+        except Exception:
+            warn("a video could not be extracted; only its poster is shown")
 
     def convert(self, blob, ext, name):
         """Try to make a PNG of formats a browser cannot show (JPEG XR .wdp, .emf) with Pillow."""
@@ -540,11 +603,22 @@ def convert_slide(pptx_path, num, imgdir, imgrel):
     prs = Presentation(pptx_path)
     slide = prs.slides[num - 1]
     ctx = Ctx(prs, slide)
-    steps, exits = animation_steps(slide)
-    w = Walker(ctx, slide, num, imgdir, imgrel, steps, exits)
+    steps, exits, paras = animation_steps(slide)
+    w = Walker(ctx, slide, num, imgdir, imgrel, steps, exits, paras)
     w.walk(slide.shapes)
+    # every step must change something: renumber the clicks that show or hide at least one thing (a click with only
+    # an emphasis or sound effect would be a dead key press)
+    used = sorted({i[k] for i in w.items for k in ("s", "e") if i.get(k)} | {p["s"] for i in w.items for p in (i.get("tx") or {}).get("p", []) if p.get("s")})
+    remap = {v: n for n, v in enumerate(used, 1)}
+    for i in w.items:
+        for k in ("s", "e"):
+            if i.get(k):
+                i[k] = remap[i[k]]
+        for p in (i.get("tx") or {}).get("p", []):
+            if p.get("s"):
+                p["s"] = remap[p["s"]]
     s = {"layout": "canvas", "title": w.title, "items": w.items}
-    mx = max([i.get("s", 0) for i in w.items] + [0])
+    mx = max([i.get("s", 0) for i in w.items] + [p.get("s", 0) for i in w.items for p in (i.get("tx") or {}).get("p", [])] + [0])
     if slide.has_notes_slide and slide.notes_slide.notes_text_frame.text.strip():
         s["notes"] = slide.notes_slide.notes_text_frame.text.strip()
     return s, mx

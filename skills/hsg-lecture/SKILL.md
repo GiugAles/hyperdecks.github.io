@@ -85,6 +85,7 @@ python scripts/pptx_canvas.py deck.json --pptx lecture.pptx --slide 60 --at 12  
 python scripts/pptx_canvas.py deck.json --pptx lecture.pptx --slide 60 --insert 12 # insert before slide 12
 ```
 
+* To convert a whole lecture at once: `python scripts/pptx_to_deck.py lecture.pptx deck.json --syllabus-from other/deck.json --current 8` (hidden slides are skipped; title, syllabus, questions and plain text slides get their normal layouts, everything else becomes `canvas`). Pictures are saved once per image (file name from its hash), so decks can share them.
 * The converter reads the .pptx and writes a `canvas` slide: every object with its position (`x`, `y`, `w`, `h` in U, 1% of the slide width), rectangles, rounded boxes, ellipses, block arrows, speech bubbles, lines and connectors with arrowheads, freeform paths, tables and pictures (saved in `img/`). Text stays text, at its PowerPoint size. Colours come from the theme of the slide master.
 * **Click animations become steps**: the arrow keys (and the buttons) reveal the next part of the slide before they move on; going back hides it again. Overview, print and the phone show the whole slide. Entrance and exit effects are copied; emphasis and paragraph-by-paragraph builds are not (the shape appears whole).
 * The title comes from the title placeholder. The footer, slide number and title placeholders are not copied (the frame draws them).
