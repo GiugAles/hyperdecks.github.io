@@ -9,9 +9,9 @@
       "kicker": "Opening Ceremony",
       "title": "Legal Hackathon\n**@ UNISG**",
       "meta": [
-        "$ hackathon --date \"Nov 7-8, 2026\"",
-        "$ hackathon --venue \"Rosenbergstrasse 30\"",
-        "$ hackathon --duration 24h --teams \"up to 4 members\""
+        "$ hack --date \"Nov 7-8, 2026\"",
+        "$ hack --venue \"Rosenbergstrasse 30\"",
+        "$ hack --duration 24h --teams \"up to 4 members\""
       ],
       "picture": {
         "image": "img/mark.png",
