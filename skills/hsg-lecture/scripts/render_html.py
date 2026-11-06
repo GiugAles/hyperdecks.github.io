@@ -24,18 +24,23 @@ def plain(text):
     """A headline without its **bold** marks, for the browser tab and the overview."""
     return text.replace("**", "")
 
-# Gill Sans MT Pro (the HSG font) is used where it is installed; it is licensed and never copied into the page.
-# Elsewhere the page falls back to the bundled Gillius ADF No2 (GPL with font exception), and for the serif
-# (Palatino Linotype on the template) to TeX Gyre Pagella (GUST Font License).
+# Gill Sans Nova (the font of the official HSG template) is used where it is installed, then Gill Sans MT Pro; both are
+# licensed and never copied into the page. Elsewhere the page falls back to the bundled Gillius ADF No2 (GPL with font
+# exception), and for the serif (Palatino Linotype on the template) to TeX Gyre Pagella (GUST Font License).
+# As on the template: Regular for headlines and text, Light for the large titles, Bold for bold.
 FONTS = [
-    ("HSGSans", 300, "normal", ["Gill Sans MT Pro Light", "GillSansMTPro-Light", "Gill Sans Nova Light", "GillSansNova-Light",
+    ("HSGSans", 300, "normal", ["Gill Sans Nova Light", "GillSansNova-Light", "Gill Sans MT Pro Light", "GillSansMTPro-Light",
                                 "Gill Sans Light", "GillSans-Light"], "GilliusADFNo2-Regular.otf"),
-    ("HSGSans", 300, "italic", ["Gill Sans MT Pro Light Italic", "GillSansMTPro-LightItalic", "Gill Sans Nova Light Italic",
-                                "GillSansNova-LightItalic", "Gill Sans Light Italic", "GillSans-LightItalic"], "GilliusADFNo2-Italic.otf"),
-    ("HSGSans", 600, "normal", ["Gill Sans MT Pro Medium", "GillSansMTPro-Medium", "Gill Sans Nova Medium", "GillSansNova-Medium",
-                                "Gill Sans SemiBold", "GillSans-SemiBold"], "GilliusADFNo2-Bold.otf"),
-    ("HSGSans", 600, "italic", ["Gill Sans MT Pro Medium Italic", "GillSansMTPro-MediumItalic", "Gill Sans Nova Medium Italic",
-                                "Gill Sans SemiBold Italic", "GillSans-SemiBoldItalic"], "GilliusADFNo2-BoldItalic.otf"),
+    ("HSGSans", 300, "italic", ["Gill Sans Nova Light Italic", "GillSansNova-LightItalic", "Gill Sans MT Pro Light Italic",
+                                "GillSansMTPro-LightItalic", "Gill Sans Light Italic", "GillSans-LightItalic"], "GilliusADFNo2-Italic.otf"),
+    ("HSGSans", 400, "normal", ["Gill Sans Nova", "GillSansNova", "Gill Sans MT Pro Book", "GillSansMTPro-Book",
+                                "Gill Sans", "GillSans"], "GilliusADFNo2-Regular.otf"),
+    ("HSGSans", 400, "italic", ["Gill Sans Nova Italic", "GillSansNova-Italic", "Gill Sans MT Pro Book Italic",
+                                "GillSansMTPro-BookItalic", "Gill Sans Italic", "GillSans-Italic"], "GilliusADFNo2-Italic.otf"),
+    ("HSGSans", 700, "normal", ["Gill Sans Nova Bold", "GillSansNova-Bold", "Gill Sans MT Pro Bold", "GillSansMTPro-Bold",
+                                "Gill Sans Bold", "GillSans-Bold"], "GilliusADFNo2-Bold.otf"),
+    ("HSGSans", 700, "italic", ["Gill Sans Nova Bold Italic", "GillSansNova-BoldItalic", "Gill Sans MT Pro Bold Italic",
+                                "GillSansMTPro-BoldItalic", "Gill Sans Bold Italic", "GillSans-BoldItalic"], "GilliusADFNo2-BoldItalic.otf"),
     ("HSGSerif", 400, "normal", ["Palatino Linotype", "PalatinoLinotype-Roman", "Palatino", "Palatino-Roman", "Book Antiqua"],
      "texgyrepagella-regular.otf"),
     ("HSGSerif", 400, "italic", ["Palatino Linotype Italic", "PalatinoLinotype-Italic", "Palatino Italic", "Palatino-Italic"],
@@ -47,15 +52,15 @@ CSS = r"""
 html,body{margin:0;height:100%}
 /* One unit (U) is 1% of a 16:9 slide; the template slide is 13.33in wide, so 1U = 9.6pt.
    Type scale of the HSG template, fixed for every deck: headline 32pt (3.33U), body 18.7pt (1.94U), sub-points 14pt (1.46U),
-   small 12pt (1.25U), source 8pt (.83U). Text is Gill Sans Light; bold is Gill Sans Medium. */
+   small 12pt (1.25U), source 8pt (.83U). Headlines and text are Gill Sans Regular, large titles Light, bold Bold. */
 :root{--ctl:60px;--bar:var(--ctl);--u:min(1vw,calc((100vh - var(--bar))/56.25));--u:min(1vw,calc((100dvh - var(--bar))/56.25));
   --s-h1:5.2U;--s-h2:3.33U;--s-kick:2.1U;--s-body:1.94U;--s-mid:1.6U;--s-sub:1.46U;--s-small:1.25U;--s-tiny:.83U;
   --green:#00802F;--dgreen:#0A5F2D;--salmon:#EB6969;--teal:#73A5AF;--row-a:#CBD8CD;--row-b:#E7EDE8;--yellow:#FFF04B;
   --fg:#000000;--body:#1a1a1a;--quiet:#595959;--line:#d9d9d9;--k-stage:#e4e4e4}
-body{font-family:HSGSans,"Gill Sans MT Pro","Gill Sans MT","Gill Sans","Gill Sans Nova",Calibri,sans-serif;font-weight:300;
+body{font-family:HSGSans,"Gill Sans Nova","Gill Sans MT Pro","Gill Sans MT","Gill Sans",Calibri,sans-serif;font-weight:400;
   -webkit-font-smoothing:antialiased;overflow:hidden;background:var(--k-stage);color:var(--fg)}
 h1,h2,h3,p,ul,ol,dl,dd,figure,pre{margin:0;padding:0}
-b,strong,th{font-weight:600}
+b,strong,th{font-weight:700}
 a{color:var(--green);text-underline-offset:.15em}
 a:focus-visible,button:focus-visible{outline:2px solid currentColor;outline-offset:2px}
 code,pre{font-family:"Courier New",Courier,"Liberation Mono",monospace;font-weight:400}
@@ -68,7 +73,7 @@ sub,sup{font-size:.65em;line-height:0}
 /* the title sits in the template's title box (4.1U to 10.8U, text on its bottom line); content starts at 14U */
 .frame{position:relative;z-index:1;width:100%;height:100%;padding:4.1U 3.92U 5U;display:flex;flex-direction:column;min-width:0}
 .headrow{display:flex;justify-content:space-between;align-items:flex-end;gap:3U;min-height:6.7U;flex:none}
-h2{font-size:var(--s-h2);font-weight:300;line-height:1.08;letter-spacing:-.005em;color:var(--fg);max-width:78U;text-wrap:balance}
+h2{font-size:var(--s-h2);font-weight:400;line-height:1.08;letter-spacing:-.005em;color:var(--fg);max-width:78U;text-wrap:balance}
 .lead{font-size:var(--s-body);line-height:1.25;margin-top:3.2U;max-width:86U;color:var(--body)}
 .main{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:flex-start;padding:3.2U 0 .6U}
 .l-menu .main,.l-quiz .main,.l-image .main,.l-gallery .main,.l-people .main,.l-syllabus .main{justify-content:safe center}
@@ -78,7 +83,7 @@ h2{font-size:var(--s-h2);font-weight:300;line-height:1.08;letter-spacing:-.005em
 .source~.dfoot{display:none}
 /* the slide number in the green HSG tab, bottom right */
 .pn{position:absolute;right:3.94U;top:51.41U;width:2.33U;height:2.56U;z-index:3;display:grid;place-items:center;padding:.45U 0 0 .45U;
-  font-size:1.1U;font-weight:300;color:#fff;font-variant-numeric:tabular-nums}
+  font-size:1.1U;font-weight:400;color:#fff;font-variant-numeric:tabular-nums}
 .pn svg{position:absolute;inset:0;width:100%;height:100%;fill:var(--green);z-index:-1}
 
 /* running text: paragraphs without a mark, points with a dash as on the template */
@@ -92,7 +97,7 @@ ul.dash ul li{position:relative;padding-left:1.8U;font-size:var(--s-sub);line-he
 ul.dash ul li::before{content:"-";position:absolute;left:0}
 .dense ul.dash>li,.dense .copy p{font-size:var(--s-mid)}
 .dense ul.dash{gap:.6U}
-.group h3{font-size:2.4U;font-weight:300;line-height:1.15;color:var(--fg);margin-bottom:.5U}
+.group h3{font-size:2.4U;font-weight:400;line-height:1.15;color:var(--fg);margin-bottom:.5U}
 .group ul.dash{gap:.2U}
 .dense .group ul.dash>li,.dense .group p{font-size:var(--s-mid)}
 .groups{display:grid;gap:3U}
@@ -115,7 +120,7 @@ ul.dash ul li::before{content:"-";position:absolute;left:0}
 .box.green{background:var(--green);border:.12U solid var(--dgreen);color:#fff;text-align:center}
 .box.outline{background:#fff;border:.12U solid var(--green);color:var(--body);border-radius:0}
 .box.teal{background:var(--teal);border:.12U solid #5d8f99;color:#fff;border-radius:0}
-.box h3{font-size:var(--s-mid);font-weight:600;margin-bottom:.4U}
+.box h3{font-size:var(--s-mid);font-weight:700;margin-bottom:.4U}
 .box a{color:inherit}
 .callout{flex:none;max-width:34U;margin-bottom:-1U}
 .callout.wide{max-width:48U}
@@ -135,14 +140,14 @@ table.t{width:100%;border-collapse:collapse;font-size:var(--s-mid);line-height:1
 .t tr:nth-child(even) td{background:var(--row-b)}
 .t th+th,.t td+td{border-left:.15U solid #fff}
 .t tr+tr td{border-top:.15U solid #fff}
-.t td:first-child{font-weight:600;color:var(--fg)}
+.t td:first-child{font-weight:700;color:var(--fg)}
 .t.many{font-size:var(--s-sub)}
 .t.many td{padding:.45U 1U}
 
 /* menu: the topics of the day in a thin green frame */
 .menu{border:.12U solid var(--green);padding:2.6U 2.4U;width:66U;display:grid;gap:.35U}
 .menu p{font-size:var(--s-sub);line-height:1.3;color:var(--body)}
-.menu p.cur{font-weight:600;color:var(--green)}
+.menu p.cur{font-weight:700;color:var(--green)}
 
 /* quiz: questions in green boxes, staggered in two columns */
 .quiz{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2.6U 3U;align-items:center}
@@ -169,7 +174,7 @@ table.t{width:100%;border-collapse:collapse;font-size:var(--s-mid);line-height:1
 
 /* quote: the quote is the headline, right aligned, the picture below on the left */
 .l-quote .headrow{justify-content:flex-end}
-.l-quote h2{text-align:right;max-width:64U;line-height:1.15;text-wrap:balance}
+.l-quote h2{font-weight:300;text-align:right;max-width:64U;line-height:1.15;text-wrap:balance}
 .attr{font-size:var(--s-mid);text-align:right;color:var(--body);margin-top:1U}
 .qbody{flex:1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:4U;align-items:end;padding:2U 0 1U}
 .qbody .pic{align-items:flex-start}
@@ -225,17 +230,20 @@ h1{font-size:var(--s-h1);font-weight:300;line-height:1.08;letter-spacing:-.01em;
 
 
 /* canvas: a slide copied from PowerPoint; every object sits where it was (x, y, w, h in U), text keeps its size,
-   click animations become steps (the arrow keys reveal them one by one; overview, print and phone show all) */
+   click animations become steps (the arrow keys reveal them one by one; overview, print and phone show all);
+   the headline may use the full width, as the HSG font is a little wider than the Light of many source decks */
+.l-canvas h2{max-width:92.16U}
+.l-canvas .dfoot{z-index:0}  /* the footer line lies behind the objects, so a filled box covers it */
 .cv{position:absolute;inset:0;z-index:1}
 .cv .it{position:absolute}
 .cv .it.off{visibility:hidden}
 .cv svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
-.cv .tx{position:absolute;inset:0;display:flex;flex-direction:column;color:var(--fg);line-height:1.2;font-weight:300}
+.cv .tx{position:absolute;inset:0;display:flex;flex-direction:column;color:var(--fg);line-height:1.2;font-weight:400}
 .cv .tx.m{justify-content:center}.cv .tx.b{justify-content:flex-end}
 .cv .tx.nw{white-space:nowrap}
 .cv .tx p{margin:0;min-height:1.2em}
 .cv .tx .bu{display:inline-block}
-.cv .tx b{font-weight:600}
+.cv .tx b{font-weight:700}
 .cv .tx .mono{font-family:"Courier New",Courier,"Liberation Mono",monospace;font-weight:400}
 .cv .tx .serif{font-family:HSGSerif,"Palatino Linotype",Palatino,serif}
 .cv .tx.v270{writing-mode:vertical-rl;transform:rotate(180deg)}.cv .tx.v90{writing-mode:vertical-rl}
@@ -365,7 +373,7 @@ function go(n,end){cur=Math.max(0,Math.min(slides.length-1,n));step=end?maxStep(
  by('count').textContent=(cur+1)+' / '+slides.length;
  by('progress').style.width=((cur+1)/slides.length*100)+'%';
  const t=slides[cur].querySelector('.notes');nv.textContent=t?t.textContent:'';
- history.replaceState(null,'','#/'+(cur+1));ov.classList.remove('open');show();
+ history.replaceState(null,'','#/'+(cur+1));ov.classList.remove('open');show();fitCanvas(slides[cur]);
 }
 const next=()=>{if(stepping()&&step<maxStep()){step++;show()}else go(cur+1)},prev=()=>{if(stepping()&&step>0){step--;show()}else go(cur-1,true)};
 by('prev').onclick=prev;by('next').onclick=next;
@@ -389,6 +397,16 @@ document.addEventListener('keydown',e=>{if(e.ctrlKey||e.metaKey||e.altKey)return
 let x0=null;document.addEventListener('touchstart',e=>{x0=e.touches[0].clientX},{passive:true});
 document.addEventListener('touchend',e=>{if(x0===null)return;const d=e.changedTouches[0].clientX-x0;x0=null;
  if(Math.abs(d)>60)(d<0?next():prev())},{passive:true});
+// canvas text that runs out of its box (Gill Sans Regular is wider than the Light of many source decks) shrinks until it
+// fits, as with PowerPoint's "shrink text on overflow", by at most 14%; if that is not enough it overflowed in PowerPoint too
+let fontsOk=false;
+function fitCanvas(s){const cv=s.querySelector('.cv');if(!fontsOk||!cv||!cv.clientWidth||s.dataset.fit)return;s.dataset.fit=1;
+ const leaves=t=>t.scrollHeight>t.clientHeight+1||t.scrollWidth>t.clientWidth+1;
+ for(const t of cv.querySelectorAll(':scope>.it>.tx:not(.v270):not(.v90)')){let f=1;
+  while(leaves(t)&&f>.87){f-=.02;t.style.setProperty('--f',f.toFixed(2))}
+  if(leaves(t))t.style.removeProperty('--f')}}
+Promise.all([...document.fonts].filter(f=>f.family.replace(/"/g,'')==='HSGSans').map(f=>f.load().catch(()=>0)))
+ .then(()=>document.fonts.ready).then(()=>{fontsOk=true;slides.forEach(fitCanvas);root.dataset.fit=1});
 window.hsgDeck={go,next,prev,count:slides.length};go(cur)})();
 """
 
@@ -788,7 +806,7 @@ class Html:
                 if r.get("br"):
                     runs += "<br>"
                     continue
-                rs = f'font-size:calc({r["sz"]}*var(--u))'
+                rs = f'font-size:calc({r["sz"]}*var(--u)*var(--f,1))'
                 if r.get("c"):
                     rs += f';color:{r["c"]}'
                 if r.get("u") or r.get("st"):
@@ -796,13 +814,13 @@ class Html:
                 if r.get("i"):
                     rs += ";font-style:italic"
                 if r.get("bl"):
-                    rs += f';vertical-align:{"super" if r["bl"] > 0 else "sub"};font-size:calc({r["sz"] * .65}*var(--u))'
+                    rs += f';vertical-align:{"super" if r["bl"] > 0 else "sub"};font-size:calc({r["sz"] * .65}*var(--u)*var(--f,1))'
                 c = f' class="{r["f"]}"' if r.get("f") else ""
                 body = esc(r["t"])
                 body = f"<b>{body}</b>" if r.get("b") else body
                 runs += f'<span{c} style="{rs}">{body}</span>'
             first = max((r.get("sz", 1.9) for r in p["r"] if "sz" in r), default=1.9)
-            out += f'<p style="{st};font-size:calc({first}*var(--u))">{runs}</p>'
+            out += f'<p style="{st};font-size:calc({first}*var(--u)*var(--f,1))">{runs}</p>'
         pad = f'padding:calc({ins[1]}*var(--u)) calc({ins[2]}*var(--u)) calc({ins[3]}*var(--u)) calc({ins[0]}*var(--u))'
         return f'<div class="tx {tx.get("a", "t")}{" nw" if tx.get("nw") else ""}{v}{cls}" style="{pad}">{out}</div>'
 
@@ -1003,6 +1021,7 @@ def shots(index, folder, n):
         pg = b.new_page(viewport={"width": 1440, "height": 810})
         pg.goto(index.as_uri())
         pg.evaluate("document.fonts.ready")
+        pg.wait_for_function("document.documentElement.dataset.fit")
         pg.wait_for_timeout(300)
         paths = []
         for i in range(n):
@@ -1017,6 +1036,7 @@ def shots(index, folder, n):
         ph = b.new_page(viewport={"width": 390, "height": 844})
         ph.goto(index.as_uri())
         ph.evaluate("document.fonts.ready")
+        ph.wait_for_function("document.documentElement.dataset.fit")
         ph.wait_for_timeout(300)
         phones = []
         for i in range(n):
