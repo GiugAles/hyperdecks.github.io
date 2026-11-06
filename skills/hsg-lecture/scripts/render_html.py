@@ -11,7 +11,7 @@ slide at a time, filling the window with the content in one column; a slide tall
 within itself. Printing gives one slide per page (PDF).
 Keys: arrows or space to move, O overview, F full screen, N speaker notes.
 """
-import argparse, html, re, shutil, sys
+import argparse, html, math, re, shutil, sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -223,6 +223,31 @@ h1{font-size:var(--s-h1);font-weight:300;line-height:1.08;letter-spacing:-.01em;
 .l-section .tblock{top:14U;height:20U;width:70U}
 .l-section .wedge{left:62U;width:38U;top:40.25U;height:16U}
 
+
+/* canvas: a slide copied from PowerPoint; every object sits where it was (x, y, w, h in U), text keeps its size,
+   click animations become steps (the arrow keys reveal them one by one; overview, print and phone show all) */
+.cv{position:absolute;inset:0;z-index:1}
+.cv .it{position:absolute}
+.cv .it.off{visibility:hidden}
+.cv svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.cv .tx{position:absolute;inset:0;display:flex;flex-direction:column;color:var(--fg);line-height:1.2;font-weight:300}
+.cv .tx.m{justify-content:center}.cv .tx.b{justify-content:flex-end}
+.cv .tx.nw{white-space:nowrap}
+.cv .tx p{margin:0;min-height:1.2em}
+.cv .tx .bu{display:inline-block}
+.cv .tx b{font-weight:600}
+.cv .tx .mono{font-family:"Courier New",Courier,"Liberation Mono",monospace;font-weight:400}
+.cv .tx .serif{font-family:HSGSerif,"Palatino Linotype",Palatino,serif}
+.cv .tx.v270{writing-mode:vertical-rl;transform:rotate(180deg)}.cv .tx.v90{writing-mode:vertical-rl}
+.cv .pimg{position:absolute;inset:0;overflow:hidden}
+.cv .pimg img{position:absolute;display:block;max-width:none}
+.cv .it.shadow .pimg{filter:drop-shadow(.35U .35U .55U rgba(0,0,0,.38))}
+.cv table{position:absolute;inset:0;border-collapse:collapse;table-layout:fixed;width:100%}
+.cv td{padding:0;vertical-align:middle;line-height:1.2;border:.1U solid #fff}
+.cv td.head{background:var(--green);color:#fff}.cv td.a{background:var(--row-a)}.cv td.b{background:var(--row-b)}
+.cv td .tx{position:static;display:block;padding:.3U .8U}
+.cv td.head .tx{color:#fff}
+
 /* the controls: a pill that floats under the slide, as in the FuSo decks, in HSG green */
 .controls{position:fixed;left:0;right:0;bottom:0;height:var(--ctl);display:grid;place-items:center;z-index:7;pointer-events:none;
   color:#111;font-family:system-ui,sans-serif;font-size:13px;font-weight:600}
@@ -305,6 +330,8 @@ body.show-notes .notes-view{display:block}
   .l-section .wedge{width:auto;height:90px;margin-top:40px}
   .source,.dfoot{position:static;display:block;margin-top:24px}
   .pn{position:absolute;top:auto;bottom:16px;right:16px;width:30px;height:33px;font-size:12px}
+  .cv{position:relative;inset:auto;width:100vw;height:56.25vw;margin:30px -20px 0;--u:1vw;overflow:hidden}
+  .cv .it.off{visibility:visible}
   .pill{width:100%;height:100%;padding:3px 10px 0;border-radius:0;border:0;box-shadow:none;justify-content:space-between}
   .pill .sep{display:none}
   .tools button{flex-direction:column;gap:3px;height:48px;min-width:56px;padding:0 6px;border-radius:10px;font-size:10.5px}
@@ -319,6 +346,7 @@ body.show-notes .notes-view{display:block}
   body{overflow:visible;background:#fff}
   .slide{position:relative;left:auto;top:auto;transform:none;visibility:visible;height:7.5in;width:100%;break-after:page}
   .controls,.overview,.notes-view{display:none!important}
+  .cv .it.off{visibility:visible}
   *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
 }
 """
@@ -327,16 +355,20 @@ JS = r"""
 (()=>{const slides=[...document.querySelectorAll('.slide')],root=document.documentElement,body=document.body,
  ov=document.getElementById('overview'),nv=document.getElementById('notesView');
 const by=id=>document.getElementById(id);
-let cur=0;const m=location.hash.match(/(\d+)$/);if(m&&+m[1]>=1&&+m[1]<=slides.length)cur=+m[1]-1;
-function go(n){cur=Math.max(0,Math.min(slides.length-1,n));
+let cur=0,step=0;const m=location.hash.match(/(\d+)$/);if(m&&+m[1]>=1&&+m[1]<=slides.length)cur=+m[1]-1;
+const maxStep=()=>+slides[cur].dataset.steps||0,stepping=()=>!matchMedia('(max-width:999px),(max-height:480px)').matches;
+function show(){slides[cur].querySelectorAll('.it[data-s],.it[data-e]').forEach(e=>{const a=+e.dataset.s||0,x=e.dataset.e?+e.dataset.e:1e9;
+  e.classList.toggle('off',!(step>=a&&step<x))});by('prev').disabled=cur===0&&step===0;by('next').disabled=cur===slides.length-1&&step>=maxStep()}
+function go(n,end){cur=Math.max(0,Math.min(slides.length-1,n));step=end?maxStep():0;
  slides.forEach((s,i)=>{s.classList.toggle('active',i===cur);s.setAttribute('aria-hidden',i!==cur)});
  slides[cur].scrollTop=0;
- by('count').textContent=(cur+1)+' / '+slides.length;by('prev').disabled=cur===0;by('next').disabled=cur===slides.length-1;
+ by('count').textContent=(cur+1)+' / '+slides.length;
  by('progress').style.width=((cur+1)/slides.length*100)+'%';
  const t=slides[cur].querySelector('.notes');nv.textContent=t?t.textContent:'';
- history.replaceState(null,'','#/'+(cur+1));ov.classList.remove('open');
+ history.replaceState(null,'','#/'+(cur+1));ov.classList.remove('open');show();
 }
-by('prev').onclick=()=>go(cur-1);by('next').onclick=()=>go(cur+1);
+const next=()=>{if(stepping()&&step<maxStep()){step++;show()}else go(cur+1)},prev=()=>{if(stepping()&&step>0){step--;show()}else go(cur-1,true)};
+by('prev').onclick=prev;by('next').onclick=next;
 by('ovBtn').onclick=()=>ov.classList.toggle('open');
 const notes=()=>body.classList.toggle('show-notes');if(by('notesBtn'))by('notesBtn').onclick=notes;
 if(!document.fullscreenEnabled)by('fsBtn').hidden=true;
@@ -349,15 +381,15 @@ slides.forEach((s,i)=>{const b=document.createElement('button'),sm=document.crea
  sm.textContent=(i+1)+(s.dataset.time?'  ·  '+s.dataset.time:'');b.append(sm,s.dataset.title);b.onclick=()=>go(i);grid.append(b)});
 document.addEventListener('keydown',e=>{if(e.ctrlKey||e.metaKey||e.altKey)return;
  const inCtl=e.target instanceof Element&&e.target.closest('a,button');const k=e.key;
- if(['ArrowRight','PageDown'].includes(k)||(k===' '&&!inCtl)){e.preventDefault();go(cur+1)}
- else if(['ArrowLeft','PageUp'].includes(k)){e.preventDefault();go(cur-1)}
+ if(['ArrowRight','PageDown'].includes(k)||(k===' '&&!inCtl)){e.preventDefault();next()}
+ else if(['ArrowLeft','PageUp'].includes(k)){e.preventDefault();prev()}
  else if(k==='Home')go(0);else if(k==='End')go(slides.length-1);
  else if(k==='o'||k==='O')ov.classList.toggle('open');else if(k==='Escape')ov.classList.remove('open');
  else if(k==='f'||k==='F')by('fsBtn').click();else if(k==='n'||k==='N')notes()});
 let x0=null;document.addEventListener('touchstart',e=>{x0=e.touches[0].clientX},{passive:true});
 document.addEventListener('touchend',e=>{if(x0===null)return;const d=e.changedTouches[0].clientX-x0;x0=null;
- if(Math.abs(d)>60)go(cur+(d<0?1:-1))},{passive:true});
-window.hsgDeck={go,count:slides.length};go(cur)})();
+ if(Math.abs(d)>60)(d<0?next():prev())},{passive:true});
+window.hsgDeck={go,next,prev,count:slides.length};go(cur)})();
 """
 
 # the slide number tab of the template (master freeform, 2.33U x 2.56U)
@@ -376,6 +408,126 @@ def css():
         src = ",".join(f'local("{n}")' for n in local) + f",url(assets/{file}) format('opentype')"
         faces += f"@font-face{{font-family:{fam};font-weight:{w};font-style:{style};font-display:swap;src:{src}}}\n"
     return faces + out
+
+
+def _f(v):
+    return f"{v:.3f}".rstrip("0").rstrip(".")
+
+
+def _poly(pts):
+    return "M" + "L".join(f"{_f(x)} {_f(y)}" for x, y in pts) + "Z"
+
+
+def _ell(cx, cy, rx, ry):
+    return f"M{_f(cx - rx)} {_f(cy)}A{_f(rx)} {_f(ry)} 0 1 1 {_f(cx + rx)} {_f(cy)}A{_f(rx)} {_f(ry)} 0 1 1 {_f(cx - rx)} {_f(cy)}Z"
+
+
+def _round(w, h, r):
+    r = min(r, w / 2, h / 2)
+    return (f"M{_f(r)} 0H{_f(w - r)}A{_f(r)} {_f(r)} 0 0 1 {_f(w)} {_f(r)}V{_f(h - r)}A{_f(r)} {_f(r)} 0 0 1 {_f(w - r)} {_f(h)}"
+            f"H{_f(r)}A{_f(r)} {_f(r)} 0 0 1 0 {_f(h - r)}V{_f(r)}A{_f(r)} {_f(r)} 0 0 1 {_f(r)} 0Z")
+
+
+def _callout(w, h, adj, circles):
+    """An ellipse with a pointer to (adj1, adj2); cloudCallout adds two small circles on the way."""
+    a1, a2 = adj.get("adj1", -20833) / 100000, adj.get("adj2", 62500) / 100000
+    cx, cy, rx, ry = w / 2, h / 2, w / 2, h / 2
+    tx, ty = cx + a1 * w, cy + a2 * h
+    th = math.atan2((ty - cy) / ry, (tx - cx) / rx)
+    if circles:
+        d = _ell(cx, cy, rx, ry)
+        for k, r in ((0.55, min(w, h) * .09), (0.8, min(w, h) * .06)):
+            d += _ell(cx + (tx - cx) * k * (1 + 0.45 / max(1e-6, math.hypot((tx - cx) / rx, (ty - cy) / ry))) * 0.78 + 0, cy + (ty - cy) * k * 0.95, r, r)
+        return d
+    dl = 0.28
+    p1 = (cx + rx * math.cos(th + dl), cy + ry * math.sin(th + dl))
+    p2 = (cx + rx * math.cos(th - dl), cy + ry * math.sin(th - dl))
+    return f"M{_f(p1[0])} {_f(p1[1])}A{_f(rx)} {_f(ry)} 0 1 1 {_f(p2[0])} {_f(p2[1])}L{_f(tx)} {_f(ty)}Z"
+
+
+def shape_paths(g, w, h, adj):
+    """The outline of a preset PowerPoint shape of w x h U as SVG path data; adj holds the shape's adjust values."""
+    m = min(w, h)
+    A = lambda name, dflt: adj.get(name, dflt) / 100000
+    if g in ("rect", "flowChartProcess"):
+        return [f"M0 0H{_f(w)}V{_f(h)}H0Z"]
+    if g == "roundRect":
+        return [_round(w, h, m * A("adj", 16667))]
+    if g in ("flowChartAlternateProcess", "flowChartTerminator"):
+        return [_round(w, h, m / 6 if g == "flowChartAlternateProcess" else m / 2)]
+    if g == "ellipse":
+        return [_ell(w / 2, h / 2, w / 2, h / 2)]
+    if g in ("rightArrow", "leftArrow", "leftRightArrow"):
+        sh, hl = h * A("adj1", 50000), m * A("adj2", 50000)
+        y0, y1 = (h - sh) / 2, (h + sh) / 2
+        if g == "rightArrow":
+            return [_poly([(0, y0), (w - hl, y0), (w - hl, 0), (w, h / 2), (w - hl, h), (w - hl, y1), (0, y1)])]
+        if g == "leftArrow":
+            return [_poly([(w, y0), (hl, y0), (hl, 0), (0, h / 2), (hl, h), (hl, y1), (w, y1)])]
+        return [_poly([(0, h / 2), (hl, 0), (hl, y0), (w - hl, y0), (w - hl, 0), (w, h / 2), (w - hl, h), (w - hl, y1), (hl, y1), (hl, h)])]
+    if g in ("downArrow", "upArrow"):
+        sw, hl = w * A("adj1", 50000), m * A("adj2", 50000)
+        x0, x1 = (w - sw) / 2, (w + sw) / 2
+        if g == "downArrow":
+            return [_poly([(x0, 0), (x1, 0), (x1, h - hl), (w, h - hl), (w / 2, h), (0, h - hl), (x0, h - hl)])]
+        return [_poly([(x0, h), (x1, h), (x1, hl), (w, hl), (w / 2, 0), (0, hl), (x0, hl)])]
+    if g == "curvedRightArrow":
+        return [f"M0 0C{_f(w * .5)} 0 {_f(w * .6)} {_f(h * .2)} {_f(w * .6)} {_f(h * .5)}V{_f(h)}H{_f(w)}L{_f(w * .8)} {_f(h * .75)}"
+                f"L{_f(w * .6)} {_f(h)}"]
+    if g in ("wedgeEllipseCallout", "cloudCallout"):
+        return [_callout(w, h, adj, g == "cloudCallout")]
+    if g in ("wedgeRectCallout", "wedgeRoundRectCallout"):
+        a1, a2 = A("adj1", -20833), A("adj2", 62500)
+        tx, ty = w / 2 + a1 * w, h / 2 + a2 * h
+        base = _round(w, h, m * .1667) if g == "wedgeRoundRectCallout" else f"M0 0H{_f(w)}V{_f(h)}H0Z"
+        sx = min(max(tx, w * .2), w * .8)
+        return [base, _poly([(sx - w * .06, h if ty > h else 0), (tx, ty), (sx + w * .06, h if ty > h else 0)])]
+    if g == "foldedCorner":
+        f = m * A("adj", 16667)
+        return [f"M0 0H{_f(w)}V{_f(h - f)}L{_f(w - f)} {_f(h)}H0Z", f"M{_f(w - f)} {_f(h)}V{_f(h - f)}H{_f(w)}"]
+    if g == "snip1Rect":
+        d = m * A("adj", 16667)
+        return [_poly([(0, 0), (w - d, 0), (w, d), (w, h), (0, h)])]
+    if g == "can":
+        ry = h * A("adj", 25000) / 2
+        return [f"M0 {_f(ry)}A{_f(w / 2)} {_f(ry)} 0 0 1 {_f(w)} {_f(ry)}V{_f(h - ry)}A{_f(w / 2)} {_f(ry)} 0 0 1 0 {_f(h - ry)}Z",
+                f"M0 {_f(ry)}A{_f(w / 2)} {_f(ry)} 0 0 0 {_f(w)} {_f(ry)}"]
+    if g == "plus":
+        d = m * A("adj", 25000)
+        return [_poly([(d, 0), (w - d, 0), (w - d, d), (w, d), (w, h - d), (w - d, h - d), (w - d, h), (d, h), (d, h - d), (0, h - d), (0, d), (d, d)])]
+    if g == "triangle":
+        return [_poly([(0, h), (w * A("adj", 50000), 0), (w, h)])]
+    if g == "diamond":
+        return [_poly([(w / 2, 0), (w, h / 2), (w / 2, h), (0, h / 2)])]
+    if g == "hexagon":
+        x = m * A("adj", 25000)
+        return [_poly([(0, h / 2), (x, 0), (w - x, 0), (w, h / 2), (w - x, h), (x, h)])]
+    if g == "parallelogram":
+        x = m * A("adj", 25000)
+        return [_poly([(x, 0), (w, 0), (w - x, h), (0, h)])]
+    if g == "cloud":
+        return [_ell(w / 2, h / 2, w / 2, h / 2)]
+    if g == "leftBrace":
+        return [f"M{_f(w)} 0C{_f(w * .4)} 0 {_f(w * .5)} {_f(h * .1)} {_f(w * .5)} {_f(h * .25)}V{_f(h * .4)}C{_f(w * .5)} {_f(h * .45)} {_f(w * .3)} {_f(h * .5)} 0 {_f(h * .5)}"
+                f"C{_f(w * .3)} {_f(h * .5)} {_f(w * .5)} {_f(h * .55)} {_f(w * .5)} {_f(h * .6)}V{_f(h * .75)}C{_f(w * .5)} {_f(h * .9)} {_f(w * .4)} {_f(h)} {_f(w)} {_f(h)}"]
+    if g == "mathEqual":
+        t = h * .2
+        return [f"M0 {_f(h * .2)}H{_f(w)}V{_f(h * .2 + t)}H0Z", f"M0 {_f(h * .6)}H{_f(w)}V{_f(h * .6 + t)}H0Z"]
+    if g == "arc":
+        return [f"M{_f(w / 2)} 0A{_f(w / 2)} {_f(h / 2)} 0 0 1 {_f(w)} {_f(h / 2)}"]
+    if g in ("line", "straightConnector1"):
+        return [f"M0 0L{_f(w)} {_f(h)}"]
+    if g == "curvedConnector2":
+        return [f"M0 0C{_f(w / 2)} 0 {_f(w)} {_f(h / 2)} {_f(w)} {_f(h)}"]
+    if g == "curvedConnector3":
+        x = w * A("adj1", 50000)
+        return [f"M0 0C{_f(x)} 0 {_f(x)} {_f(h)} {_f(w)} {_f(h)}"]
+    if g == "bentConnector2":
+        return [f"M0 0H{_f(w)}V{_f(h)}"]
+    if g == "bentConnector3":
+        x = w * A("adj1", 50000)
+        return [f"M0 0H{_f(x)}V{_f(h)}H{_f(w)}"]
+    return [f"M0 0H{_f(w)}V{_f(h)}H0Z"]
 
 
 class Html:
@@ -598,6 +750,134 @@ class Html:
         assign = f'<div class="assign" style="grid-template-rows:repeat({n},auto)">{boxes}</div>' if boxes else ""
         return self.main(s, f'<div class="plan">{legend}<div class="rows">{rows}</div>{assign}</div>')
 
+
+    # ---- canvas: a slide copied from PowerPoint (see pptx_canvas.py)
+
+    @staticmethod
+    def cv_pos(it):
+        st = f'left:{_f(it["x"])}%;top:{_f(it["y"] / .5625)}%;width:{_f(it["w"])}%;height:{_f(it["h"] / .5625)}%'
+        if it.get("rot"):
+            st += f';transform:rotate({it["rot"]}deg)'
+        return st
+
+    @staticmethod
+    def cv_attrs(it):
+        a = f' data-s="{it["s"]}"' if it.get("s") else ""
+        return a + (f' data-e="{it["e"]}"' if it.get("e") is not None else "")
+
+    def cv_text(self, tx, cls=""):
+        if not tx:
+            return ""
+        ins = tx.get("i", [.8, .4, .8, .4])
+        v = {"vert270": " v270", "vert": " v90"}.get(tx.get("v"), "")
+        out = ""
+        for p in tx["p"]:
+            st = f'text-align:{ {"c": "center", "r": "right", "j": "justify"}.get(p["al"], "left") }'
+            if p.get("pl") or p.get("in"):
+                st += f';padding-left:calc({p.get("pl", 0)}*var(--u));text-indent:calc({p.get("in", 0)}*var(--u))'
+            if p.get("ls"):
+                st += f';line-height:{p["ls"] * 1.2:.3f}'
+            if p.get("sb"):
+                st += f';margin-top:calc({p["sb"]}*var(--u))'
+            if p.get("sa"):
+                st += f';margin-bottom:calc({p["sa"]}*var(--u))'
+            runs = ""
+            if p.get("bu"):
+                runs += f'<span class="bu" style="width:calc({-p.get("in", -1.8)}*var(--u));text-indent:0">{esc(p["bu"])}</span>'
+            for r in p["r"]:
+                if r.get("br"):
+                    runs += "<br>"
+                    continue
+                rs = f'font-size:calc({r["sz"]}*var(--u))'
+                if r.get("c"):
+                    rs += f';color:{r["c"]}'
+                if r.get("u") or r.get("st"):
+                    rs += ";text-decoration:" + " ".join(x for x, k in (("underline", "u"), ("line-through", "st")) if r.get(k))
+                if r.get("i"):
+                    rs += ";font-style:italic"
+                if r.get("bl"):
+                    rs += f';vertical-align:{"super" if r["bl"] > 0 else "sub"};font-size:calc({r["sz"] * .65}*var(--u))'
+                c = f' class="{r["f"]}"' if r.get("f") else ""
+                body = esc(r["t"])
+                body = f"<b>{body}</b>" if r.get("b") else body
+                runs += f'<span{c} style="{rs}">{body}</span>'
+            first = max((r.get("sz", 1.9) for r in p["r"] if "sz" in r), default=1.9)
+            out += f'<p style="{st};font-size:calc({first}*var(--u))">{runs}</p>'
+        pad = f'padding:calc({ins[1]}*var(--u)) calc({ins[2]}*var(--u)) calc({ins[3]}*var(--u)) calc({ins[0]}*var(--u))'
+        return f'<div class="tx {tx.get("a", "t")}{" nw" if tx.get("nw") else ""}{v}{cls}" style="{pad}">{out}</div>'
+
+    def cv_shape(self, it, n):
+        w, h = it["w"], it["h"]
+        g = it.get("g", "rect")
+        svg = ""
+        if it.get("fill") or it.get("ln"):
+            if g == "path":
+                paths = [(p["d"], p["fill"], p["stroke"]) for p in it["paths"]]
+            else:
+                paths = [(d, k == 0, True) for k, d in enumerate(shape_paths(g, w, h, it.get("adj", {})))]
+            col, lw = it.get("ln"), it.get("lw", .1)
+            is_line = g in ("line", "straightConnector1", "curvedConnector2", "curvedConnector3", "bentConnector2", "bentConnector3", "arc")
+            defs, marks = "", ""
+            for pos, key in (("start", "head"), ("end", "tail")):
+                if it.get(key) and col:
+                    mid = f"m{n}{pos[0]}"
+                    big = 5 if it[key] in ("triangle", "arrow", "stealth") else 3.5
+                    shape = ('<circle cx="5" cy="5" r="4.5"/>' if it[key] == "oval" else
+                             '<path d="M0 0L10 5L0 10z"/>' if it[key] != "arrow" else '<path d="M1 1L9 5L1 9" fill="none" stroke="' + col + '" stroke-width="1.6"/>')
+                    defs += (f'<marker id="{mid}" viewBox="0 0 10 10" refX="{9 if it[key] != "oval" else 5}" refY="5" markerWidth="{big}" markerHeight="{big}" '
+                             f'orient="auto-start-reverse" fill="{col}">{shape}</marker>')
+                    marks += f' marker-{pos}="url(#{mid})"'
+            dash = ""
+            if it.get("dash") and it["dash"] != "solid":
+                u = lw
+                dash = f' stroke-dasharray="{_f(u * 3)} {_f(u * 2)}"' if "dash" in it["dash"].lower() else f' stroke-dasharray="{_f(u)} {_f(u * 1.5)}"'
+            flip = ""
+            if it.get("fx") or it.get("fy"):
+                sx, sy = (-1 if it.get("fx") else 1), (-1 if it.get("fy") else 1)
+                flip = f' transform="translate({_f(w) if sx < 0 else 0} {_f(h) if sy < 0 else 0}) scale({sx} {sy})"'
+            body = ""
+            for d, fl, stk in paths:
+                fill = it.get("fill") if (fl and not is_line) else None
+                fa = f' fill-opacity="{it["fa"]}"' if it.get("fa") and fill else ""
+                stroke = f' stroke="{col}" stroke-width="{_f(lw)}" stroke-linejoin="round" stroke-linecap="round"{dash}' if col and stk else ""
+                body += f'<path d="{d}" fill="{fill or "none"}"{fa}{stroke}{marks if is_line or g == "path" else ""}/>'
+            svg = f'<svg viewBox="0 0 {_f(w)} {_f(h)}" preserveAspectRatio="none" aria-hidden="true"><defs>{defs}</defs><g{flip}>{body}</g></svg>'
+        return f'<div class="it" style="{self.cv_pos(it)}"{self.cv_attrs(it)}>{svg}{self.cv_text(it.get("tx"))}</div>'
+
+    def cv_pic(self, it):
+        cl, ct, cr, cb = it.get("crop", [0, 0, 0, 0])
+        iw, ih = 1 - cl - cr, 1 - ct - cb
+        st = f"left:{_f(-cl / iw * 100)}%;top:{_f(-ct / ih * 100)}%;width:{_f(100 / iw)}%;height:{_f(100 / ih)}%"
+        cls = " shadow" if it.get("shadow") else ""
+        return (f'<div class="it{cls}" style="{self.cv_pos(it)}"{self.cv_attrs(it)}><div class="pimg">'
+                f'<img src="{self.asset(it["src"])}" alt="{esc(it.get("alt", ""))}" style="{st}"></div></div>')
+
+    def cv_table(self, it):
+        rows = ""
+        tot = sum(it["cols"]) or 1
+        cols = "".join(f'<col style="width:{_f(c / tot * 100)}%">' for c in it["cols"])
+        for r in it["rows"]:
+            tds = ""
+            for c in r["cells"]:
+                if c.get("hm"):
+                    continue
+                k = c.get("fill", "")
+                st = f' style="background:{k}"' if k.startswith("#") else ""
+                cls = f' class="{k}"' if k in ("head", "a", "b") else ""
+                span = f' colspan="{c["cs"]}"' if c.get("cs") else ""
+                tds += f'<td{cls}{st}{span}>{self.cv_text(c.get("tx"))}</td>'
+            rows += f'<tr style="height:{_f(r["h"] / .5625 / (it["h"] / .5625) * 100)}%">{tds}</tr>'
+        return f'<div class="it" style="{self.cv_pos(it)}"{self.cv_attrs(it)}><table><colgroup>{cols}</colgroup>{rows}</table></div>'
+
+    def l_canvas(self, s):
+        out = ""
+        for n, it in enumerate(s.get("items", [])):
+            if it["k"] == "shape":                         # a horizontal or vertical line has no area; give it a hairline box
+                it = {**it, "w": max(it["w"], .05), "h": max(it["h"], .05)}
+            out += getattr(self, "cv_" + {"shape": "shape", "pic": "pic", "table": "table"}[it["k"]])(*((it, n) if it["k"] == "shape" else (it,)))
+        head = f'<div class="headrow"><div><h2>{self.htitle(s["title"])}</h2></div></div>' if s.get("title") else ""
+        return head + f'<div class="cv">{out}</div>'
+
     def theme(self):
         """An optional theme: a CSS file named in the deck, set on top of the template; files it links with url() are copied."""
         if not self.deck.get("theme"):
@@ -630,7 +910,9 @@ class Html:
             notes = f'<template class="notes">{esc(s["notes"])}</template>' if s.get("notes") else ""
             t = f' data-time="{esc(str(s["time"]))}"' if s.get("time") else ""
             bare = " bare" if lay == "questions" and not s.get("points") else ""
-            sections += (f'<section class="slide l-{lay}{bare}{" active" if n == 1 else ""}" id="s{n}" data-title="{esc(plain(s["title"]))}"{t} '
+            steps = max([i.get("s", 0) for i in s.get("items", [])] + [0]) if lay == "canvas" else 0
+            ds = f' data-steps="{steps}"' if steps else ""
+            sections += (f'<section class="slide l-{lay}{bare}{" active" if n == 1 else ""}" id="s{n}" data-title="{esc(plain(s["title"]) or f"Slide {n}")}"{t}{ds} '
                          f'aria-label="Slide {n} of {n_all}"><div class="frame">{inner}</div>{extra}{notes}</section>\n')
 
         def ico(paths, cls=""):
@@ -682,7 +964,7 @@ class Html:
 OVERFLOW_JS = """() => {
   const s=document.querySelector('.slide.active'), f=s.querySelector('.frame'), bad=[];
   const fr=f.getBoundingClientRect();
-  if(f.scrollHeight>f.clientHeight+1||f.scrollWidth>f.clientWidth+1) bad.push('content is larger than the slide');
+  if(!s.matches('.l-canvas')&&(f.scrollHeight>f.clientHeight+1||f.scrollWidth>f.clientWidth+1)) bad.push('content is larger than the slide');
   for(const el of f.querySelectorAll('.main,.copy,.box,.pic,.menu,table,pre,.plan,.qbody,.stamp,.person')){
     if(el.matches('.main')&&el.scrollHeight>el.clientHeight+1) bad.push('the content runs into the foot of the slide');
     if(el.matches('pre')&&el.scrollWidth>el.clientWidth+1) bad.push('a code line is wider than its box');
@@ -691,7 +973,7 @@ OVERFLOW_JS = """() => {
   }
   const pn=s.querySelector('.pn'), src=s.querySelector('.source');
   if(pn){const p=pn.getBoundingClientRect();
-    for(const el of f.querySelectorAll('p,li,td,img,pre,.box,.stamp')){const r=el.getBoundingClientRect();
+    for(const el of f.querySelectorAll('p:not(.cv *),li,td:not(.cv *),img:not(.cv *),pre,.box,.stamp')){const r=el.getBoundingClientRect();
       if(r.width&&r.right>p.left&&r.left<p.right&&r.bottom>p.top&&r.top<p.bottom){bad.push('something covers the slide number');break}}}
   if(src){const q=src.getBoundingClientRect();
     for(const el of f.querySelectorAll('.main>*')){const r=el.getBoundingClientRect();
@@ -724,7 +1006,7 @@ def shots(index, folder, n):
         pg.wait_for_timeout(300)
         paths = []
         for i in range(n):
-            pg.evaluate("i => window.hsgDeck.go(i)", i)
+            pg.evaluate("i => window.hsgDeck.go(i, true)", i)
             pg.wait_for_timeout(60)
             for msg in pg.evaluate(OVERFLOW_JS):
                 (thin if msg.startswith("THIN") else problems).append(f"slide {i + 1}: {msg.replace('THIN: ', '')}")
@@ -739,7 +1021,7 @@ def shots(index, folder, n):
         phones = []
         for i in range(n):
             ph.set_viewport_size({"width": 390, "height": 844})
-            ph.evaluate("i => window.hsgDeck.go(i)", i)
+            ph.evaluate("i => window.hsgDeck.go(i, true)", i)
             ph.wait_for_timeout(60)
             wide, tall = ph.evaluate("() => { const s = document.querySelector('.slide.active');"
                                      " return [s.scrollWidth > s.clientWidth + 1, s.scrollHeight - s.clientHeight]; }")

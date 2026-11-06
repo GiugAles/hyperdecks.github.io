@@ -20,71 +20,96 @@
    ]
   },
   {
-   "layout": "image",
-   "title": "Interactions: Our Team",
-   "image": "img/team.jpg",
-   "alt": "Group photo of the research group on a lawn; dashed lines connect each person to a label with their name and topic, such as Simon, Systems and People; Jan, Software; Kenan, Gaze; Luka, Systemic Risks in VLOPs; Alessandro, Bio-Inspired Agents",
-   "shadow": false
+   "layout": "canvas",
+   "title": "",
+   "items": [
+    {"k": "pic", "src": "img/s2-1.png", "alt": "Group photo of the Interactions team standing outdoors in front of trees", "x": 6.167, "y": 8.593, "w": 88.759, "h": 28.747},
+    {"k": "shape", "x": 54.696, "y": 14.659, "w": 2.158, "h": 2.158, "s": 1, "g": "ellipse", "ln": "#0070c0", "lw": 0.417},
+    {"k": "shape", "x": 48.7, "y": 4.304, "w": 5.079, "h": 5.079, "s": 1, "g": "ellipse", "fill": "#ffffff", "ln": "#0070c0", "lw": 0.417},
+    {"k": "shape", "x": 51.24, "y": 9.383, "w": 3.772, "h": 5.591, "fx": true, "fy": true, "s": 1, "g": "line", "ln": "#0070c0", "lw": 0.417, "dash": "dash"},
+    {"k": "shape", "x": 49.557, "y": 5.185, "w": 20.562, "h": 2.999, "s": 1, "g": "rect", "fill": "#ffffff", "tx": {"p": [{"al": "l", "r": [{"t": "Simon", "sz": 1.389, "b": 1, "c": "#000000"}, {"t": ". Systems and People.", "sz": 1.389, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 19.724, "y": 32.347, "w": 4.078, "h": 4.078, "s": 1, "g": "ellipse", "ln": "#0070c0", "lw": 0.417},
+    {"k": "shape", "x": 25.695, "y": 41.994, "w": 5.079, "h": 5.079, "s": 1, "g": "ellipse", "fill": "#ffffff", "ln": "#0070c0", "lw": 0.417},
+    {"k": "shape", "x": 23.205, "y": 35.828, "w": 5.03, "h": 6.167, "s": 1, "g": "line", "ln": "#0070c0", "lw": 0.417, "dash": "dash"},
+    {"k": "shape", "x": 6.167, "y": 43.069, "w": 23.554, "h": 2.999, "s": 1, "g": "rect", "fill": "#ffffff", "tx": {"p": [{"al": "r", "r": [{"t": "Danai", "sz": 1.389, "b": 1, "c": "#000000"}, {"t": ". ", "sz": 1.389, "c": "#000000"}, {"t": "HyperAgents", "sz": 1.389, "c": "#000000"}, {"t": " Interactions.", "sz": 1.389, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 27.746, "y": 11.736, "w": 2.24, "h": 2.177, "s": 1, "g": "ellipse", "ln": "#0070c0", "lw": 0.417},
+    {"k": "shape", "x": 20.447, "y": 0.295, "w": 5.079, "h": 5.079, "s": 1, "g": "ellipse", "fill": "#ffffff", "ln": "#0070c0", "lw": 0.417},
+    {"k": "shape", "x": 22.987, "y": 5.374, "w": 5.087, "h": 6.681, "fx": true, "fy": true, "s": 1, "g": "line", "ln": "#0070c0", "lw": 0.417, "dash": "dash"},
+    {"k": "shape", "x": 21.843, "y": 1.359, "w": 19.319, "h": 2.966, "s": 1, "g": "rect", "fill": "#ffffff", "tx": {"p": [{"al": "l", "r": [{"t": "Sanjiv", "sz": 1.389, "b": 1, "c": "#000000"}, {"t": ". ", "sz": 1.389, "c": "#000000"}, {"t": "Explainable", "sz": 1.389, "c": "#000000"}, {"t": " CPS.", "sz": 1.389, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 78.504, "y": 11.258, "w": 2.158, "h": 2.06, "s": 1, "g": "ellipse", "ln": "#0070c0", "lw": 0.417},
+    {"k": "shape", "x": 82.739, "y": 1.643, "w": 5.079, "h": 5.079, "s": 1, "g": "ellipse", "fill": "#ffffff", "ln": "#0070c0", "lw": 0.417},
+    {"k": "shape", "x": 80.346, "y": 6.722, "w": 4.933, "h": 4.837, "fy": true, "s": 1, "g": "line", "ln": "#0070c0", "lw": 0.417, "dash": "dash"},
+    {"k": "shape", "x": 84.153, "y": 2.495, "w": 14.402, "h": 2.997, "s": 1, "g": "rect", "fill": "#ffffff", "tx": {"p": [{"al": "l", "r": [{"t": "Andrei", "sz": 1.389, "b": 1, "c": "#000000"}, {"t": ". HyperAgents.", "sz": 1.389, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 87.378, "y": 25.897, "w": 2.834, "h": 2.834, "s": 1, "g": "ellipse", "ln": "#0070c0", "lw": 0.417},
+    {"k": "shape", "x": 89.942, "y": 39.312, "w": 5.079, "h": 5.079, "s": 1, "g": "ellipse", "fill": "#ffffff", "ln": "#0070c0", "lw": 0.417},
+    {"k": "shape", "x": 88.795, "y": 28.731, "w": 3.686, "h": 10.581, "s": 1, "g": "line", "ln": "#0070c0", "lw": 0.417, "dash": "dash"},
+    {"k": "shape", "x": 83.199, "y": 40.356, "w": 11.193, "h": 2.99, "s": 1, "g": "rect", "fill": "#ffffff", "tx": {"p": [{"al": "r", "r": [{"t": "Kenan", "sz": 1.389, "b": 1, "c": "#000000"}, {"t": ". Gaze.", "sz": 1.389, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 50.333, "y": 31.241, "w": 3.476, "h": 3.476, "s": 1, "g": "ellipse", "ln": "#0070c0", "lw": 0.417},
+    {"k": "shape", "x": 51.697, "y": 36.164, "w": 5.079, "h": 5.079, "s": 1, "g": "ellipse", "fill": "#ffffff", "ln": "#0070c0", "lw": 0.417},
+    {"k": "shape", "x": 53.3, "y": 34.208, "w": 0.936, "h": 1.956, "s": 1, "g": "line", "ln": "#0070c0", "lw": 0.417, "dash": "dash"},
+    {"k": "shape", "x": 53.259, "y": 37.044, "w": 25.648, "h": 2.999, "s": 1, "g": "rect", "fill": "#ffffff", "tx": {"p": [{"al": "l", "r": [{"t": "Damian", "sz": 1.389, "b": 1, "c": "#000000"}, {"t": ". Automation and User Trust.", "sz": 1.389, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 35.544, "y": 13.081, "w": 1.745, "h": 1.745, "s": 1, "g": "ellipse", "ln": "#0070c0", "lw": 0.417},
+    {"k": "shape", "x": 34.885, "y": 4.287, "w": 5.079, "h": 5.079, "s": 1, "g": "ellipse", "fill": "#ffffff", "ln": "#0070c0", "lw": 0.417},
+    {"k": "shape", "x": 35.629, "y": 8.622, "w": 0.787, "h": 4.459, "fx": true, "fy": true, "s": 1, "g": "line", "ln": "#0070c0", "lw": 0.417, "dash": "dash"},
+    {"k": "shape", "x": 27.55, "y": 5.41, "w": 11.168, "h": 2.73, "s": 1, "g": "rect", "fill": "#ffffff", "tx": {"p": [{"al": "l", "r": [{"t": "Jan", "sz": 1.389, "b": 1, "c": "#000000"}, {"t": ". Software.", "sz": 1.389, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 44.31, "y": 32.263, "w": 1.664, "h": 2.049, "fy": true, "s": 1, "g": "ellipse", "ln": "#0070c0", "lw": 0.417},
+    {"k": "shape", "x": 48.371, "y": 41.079, "w": 5.079, "h": 5.079, "s": 1, "g": "ellipse", "fill": "#ffffff", "ln": "#0070c0", "lw": 0.417},
+    {"k": "shape", "x": 45.142, "y": 34.312, "w": 5.769, "h": 6.768, "s": 1, "g": "line", "ln": "#0070c0", "lw": 0.417, "dash": "dash"},
+    {"k": "shape", "x": 49.608, "y": 42.063, "w": 19.955, "h": 2.896, "s": 1, "g": "rect", "fill": "#ffffff", "tx": {"p": [{"al": "l", "r": [{"t": "Kim", "sz": 1.389, "b": 1, "c": "#000000"}, {"t": ". ", "sz": 1.389, "c": "#000000"}, {"t": "Sustainable", "sz": 1.389, "c": "#000000"}, {"t": " ", "sz": 1.389, "c": "#000000"}, {"t": "Intelligence", "sz": 1.389, "c": "#000000"}, {"t": ".", "sz": 1.389, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 32.569, "y": 32.472, "w": 2.691, "h": 2.751, "s": 1, "g": "ellipse", "ln": "#0070c0", "lw": 0.417},
+    {"k": "shape", "x": 41.226, "y": 39.545, "w": 5.079, "h": 5.079, "s": 1, "g": "ellipse", "fill": "#ffffff", "ln": "#0070c0", "lw": 0.417},
+    {"k": "shape", "x": 34.866, "y": 34.82, "w": 7.105, "h": 5.468, "s": 1, "g": "line", "ln": "#0070c0", "lw": 0.417, "dash": "dash"},
+    {"k": "shape", "x": 29.021, "y": 40.619, "w": 16.232, "h": 2.999, "s": 1, "g": "rect", "fill": "#ffffff", "tx": {"p": [{"al": "r", "r": [{"t": "Jing", "sz": 1.389, "b": 1, "c": "#000000"}, {"t": ". ", "sz": 1.389, "c": "#000000"}, {"t": "Personalized", "sz": 1.389, "c": "#000000"}, {"t": " ", "sz": 1.389, "c": "#000000"}, {"t": "Diet", "sz": 1.389, "c": "#000000"}, {"t": ".", "sz": 1.389, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 61.783, "y": 13.913, "w": 2.24, "h": 2.177, "s": 1, "g": "ellipse", "ln": "#0070c0", "lw": 0.417},
+    {"k": "shape", "x": 76.462, "y": 1.569, "w": 5.079, "h": 5.079, "s": 1, "g": "ellipse", "fill": "#ffffff", "ln": "#0070c0", "lw": 0.417},
+    {"k": "shape", "x": 62.903, "y": 6.648, "w": 16.098, "h": 7.265, "fy": true, "s": 1, "g": "line", "ln": "#0070c0", "lw": 0.417, "dash": "dash"},
+    {"k": "shape", "x": 57.755, "y": 2.477, "w": 22.344, "h": 2.966, "s": 1, "g": "rect", "fill": "#ffffff", "tx": {"p": [{"al": "r", "r": [{"t": "Jérémy", "sz": 1.389, "b": 1, "c": "#000000"}, {"t": ". Interoperable ", "sz": 1.389, "c": "#000000"}, {"t": "Intelligence", "sz": 1.389, "c": "#000000"}, {"t": ".", "sz": 1.389, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 22.59, "y": 11.386, "w": 2.24, "h": 2.177, "s": 1, "g": "ellipse", "ln": "#0070c0", "lw": 0.417},
+    {"k": "shape", "x": 14.23, "y": 2.314, "w": 5.079, "h": 5.079, "s": 1, "g": "ellipse", "fill": "#ffffff", "ln": "#0070c0", "lw": 0.417},
+    {"k": "shape", "x": 18.565, "y": 6.649, "w": 4.354, "h": 5.056, "fx": true, "fy": true, "s": 1, "g": "line", "ln": "#0070c0", "lw": 0.417, "dash": "dash"},
+    {"k": "shape", "x": 0.515, "y": 3.34, "w": 17.337, "h": 2.966, "s": 1, "g": "rect", "fill": "#ffffff", "tx": {"p": [{"al": "l", "r": [{"t": "Jannis", "sz": 1.389, "b": 1, "c": "#000000"}, {"t": ". ", "sz": 1.389, "c": "#000000"}, {"t": "Personalized Reality", "sz": 1.389, "c": "#000000"}, {"t": ".", "sz": 1.389, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 11.733, "y": 18.848, "w": 2.24, "h": 2.177, "s": 1, "g": "ellipse", "ln": "#0070c0", "lw": 0.417},
+    {"k": "shape", "x": 2.676, "y": 39.312, "w": 5.079, "h": 5.079, "s": 1, "g": "ellipse", "fill": "#ffffff", "ln": "#0070c0", "lw": 0.417},
+    {"k": "shape", "x": 5.216, "y": 20.706, "w": 6.845, "h": 18.606, "fx": true, "s": 1, "g": "line", "ln": "#0070c0", "lw": 0.417, "dash": "dash"},
+    {"k": "shape", "x": 4.072, "y": 40.375, "w": 20.1, "h": 2.804, "s": 1, "g": "rect", "fill": "#ffffff", "tx": {"p": [{"al": "l", "r": [{"t": "Lukas", "sz": 1.389, "b": 1, "c": "#000000"}, {"t": ". Research Entrepreneur.", "sz": 1.389, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "pic", "src": "img/s2-2.jpg", "alt": "Guitton", "x": 90.015, "y": 46.394, "w": 7.81, "h": 8.38, "rot": 341.3, "crop": [0.0, 0.0, 0.0, 0.17466]},
+    {"k": "shape", "x": 90.083, "y": 52.63, "w": 2.459, "h": 2.459, "s": 1, "g": "ellipse", "ln": "#0070c0", "lw": 0.417},
+    {"k": "shape", "x": 80.685, "y": 50.585, "w": 5.079, "h": 5.079, "s": 1, "g": "ellipse", "fill": "#ffffff", "ln": "#0070c0", "lw": 0.417},
+    {"k": "shape", "x": 85.764, "y": 53.124, "w": 4.319, "h": 0.736, "fx": true, "fy": true, "s": 1, "g": "line", "ln": "#0070c0", "lw": 0.417, "dash": "dash"},
+    {"k": "shape", "x": 61.158, "y": 51.659, "w": 23.554, "h": 2.999, "s": 1, "g": "rect", "fill": "#ffffff", "tx": {"p": [{"al": "r", "r": [{"t": "Clement", "sz": 1.389, "b": 1, "c": "#000000"}, {"t": ". Regulation Automation", "sz": 1.389, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 66.005, "y": 29.77, "w": 4.078, "h": 4.078, "s": 1, "g": "ellipse", "ln": "#0070c0", "lw": 0.417},
+    {"k": "shape", "x": 80.39, "y": 43.653, "w": 5.079, "h": 5.079, "s": 1, "g": "ellipse", "fill": "#ffffff", "ln": "#0070c0", "lw": 0.417},
+    {"k": "shape", "x": 69.486, "y": 33.251, "w": 11.648, "h": 11.146, "s": 1, "g": "line", "ln": "#0070c0", "lw": 0.417, "dash": "dash"},
+    {"k": "shape", "x": 60.863, "y": 44.727, "w": 23.554, "h": 2.999, "s": 1, "g": "rect", "fill": "#ffffff", "tx": {"p": [{"al": "r", "r": [{"t": "Alessandro", "sz": 1.389, "b": 1, "c": "#000000"}, {"t": ". Bio-", "sz": 1.389, "c": "#000000"}, {"t": "Inspired", "sz": 1.389, "c": "#000000"}, {"t": " ", "sz": 1.389, "c": "#000000"}, {"t": "Agents", "sz": 1.389, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "pic", "src": "img/s2-3.png", "alt": "Cut-out photo of a man with outstretched arms against a black background", "x": -4.633, "y": 39.397, "w": 18.997, "h": 27.754, "crop": [0.29073, 0.3013, 0.57487, 0.40418]},
+    {"k": "shape", "x": 6.053, "y": 48.038, "w": 3.55, "h": 3.55, "s": 1, "g": "ellipse", "ln": "#0070c0", "lw": 0.417},
+    {"k": "shape", "x": 12.925, "y": 46.58, "w": 5.079, "h": 5.079, "s": 1, "g": "ellipse", "fill": "#ffffff", "ln": "#0070c0", "lw": 0.417},
+    {"k": "shape", "x": 9.603, "y": 49.119, "w": 3.322, "h": 0.694, "fy": true, "s": 1, "g": "line", "ln": "#0070c0", "lw": 0.417, "dash": "dash"},
+    {"k": "shape", "x": 15.089, "y": 47.62, "w": 23.169, "h": 2.999, "s": 1, "g": "rect", "fill": "#ffffff", "tx": {"p": [{"al": "l", "r": [{"t": "Ganesh", "sz": 1.389, "b": 1, "c": "#000000"}, {"t": ". ", "sz": 1.389, "c": "#000000"}, {"t": "Autonomous", "sz": 1.389, "c": "#000000"}, {"t": " Buildings.", "sz": 1.389, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "pic", "src": "img/s2-4.jpg", "alt": "Our team in focus | CorpIn", "x": 41.738, "y": 46.713, "w": 7.071, "h": 9.194, "crop": [0.27099, 0.0, 0.2164, 0.0]},
+    {"k": "shape", "x": 41.676, "y": 51.31, "w": 2.459, "h": 2.459, "s": 1, "g": "ellipse", "ln": "#0070c0", "lw": 0.417},
+    {"k": "shape", "x": 32.532, "y": 50.671, "w": 5.079, "h": 5.079, "s": 1, "g": "ellipse", "fill": "#ffffff", "ln": "#0070c0", "lw": 0.417},
+    {"k": "shape", "x": 37.611, "y": 52.54, "w": 4.066, "h": 0.67, "fx": true, "s": 1, "g": "line", "ln": "#0070c0", "lw": 0.417, "dash": "dash"},
+    {"k": "shape", "x": 13.004, "y": 51.745, "w": 23.554, "h": 2.999, "s": 1, "g": "rect", "fill": "#ffffff", "tx": {"p": [{"al": "r", "r": [{"t": "Luka", "sz": 1.389, "b": 1, "c": "#000000"}, {"t": ". ", "sz": 1.389, "c": "#000000"}, {"t": "Systemic", "sz": 1.389, "c": "#000000"}, {"t": " ", "sz": 1.389, "c": "#000000"}, {"t": "Risks", "sz": 1.389, "c": "#000000"}, {"t": " in VLOPs", "sz": 1.389, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "pic", "src": "img/s2-5.jpg", "alt": "Vorschaubild", "x": 50.034, "y": 46.663, "w": 7.013, "h": 9.118},
+    {"k": "shape", "x": 55.658, "y": 48.732, "w": 3.55, "h": 3.55, "s": 1, "g": "ellipse", "ln": "#0070c0", "lw": 0.417},
+    {"k": "shape", "x": 62.53, "y": 47.274, "w": 5.079, "h": 5.079, "s": 1, "g": "ellipse", "fill": "#ffffff", "ln": "#0070c0", "lw": 0.417},
+    {"k": "shape", "x": 59.208, "y": 49.813, "w": 3.322, "h": 0.694, "fy": true, "s": 1, "g": "line", "ln": "#0070c0", "lw": 0.417, "dash": "dash"},
+    {"k": "shape", "x": 64.694, "y": 48.314, "w": 23.169, "h": 2.999, "s": 1, "g": "rect", "fill": "#ffffff", "tx": {"p": [{"al": "l", "r": [{"t": "Jan", "sz": 1.389, "b": 1, "c": "#000000"}, {"t": ". ", "sz": 1.389, "c": "#000000"}, {"t": "Better", "sz": 1.389, "c": "#000000"}, {"t": " ", "sz": 1.389, "c": "#000000"}, {"t": "Semantic", "sz": 1.389, "c": "#000000"}, {"t": " Web.", "sz": 1.389, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
+   ]
   },
   {
-   "layout": "text",
+   "layout": "canvas",
    "title": "Interactions: Our Research",
-   "groups": [
-    {
-     "heading": "Systems and People in Ubiquitous Computing Environments",
-     "points": [
-      "[GEAR: Gaze-enabled Augmented Reality for Human Activity Recognition](https://www.alexandria.unisg.ch/entities/publication/c3abaaf5-45ad-4d10-800e-83f025e1c4ea/details). ETRA 2023",
-      "[Semantic Web Ontologies for Automated Engineering of Smart Buildings](https://ieeexplore.ieee.org/document/11163940). CASE 2025",
-      "[Real-Time Adaptive Industrial Robots](https://dl.acm.org/doi/full/10.1145/3706598.3713889). CHI 2025",
-      "[Towards Societally Beneficial Personalized Realities](https://dl.acm.org/doi/full/10.1145/3715336.3735709). DIS 2025"
-     ]
-    }
-   ],
-   "aside": {
-    "image": "img/research-people.jpg",
-    "alt": "A robot arm seen through a mixed reality headset, and a person wearing the headset",
-    "shadow": false
-   }
-  },
-  {
-   "layout": "text",
-   "title": "Interactions: Our Research",
-   "groups": [
-    {
-     "heading": "World-Wide Autonomous Systems",
-     "points": [
-      "[A Decade in Hindsight: The Missing Bridge Between Multi-Agent Systems and the World Wide Web](https://www.alexandria.unisg.ch/256718/). AAMAS 2019",
-      "[Increasing the Intelligence of Low-Power Sensors with Autonomous Agents](https://www.alexandria.unisg.ch/268007/). SenSys 2022",
-      "[Signifiers as a First-class Abstraction in Hypermedia Multi-Agent Systems](https://www.alexandria.unisg.ch/269015/). AAMAS 2023",
-      "[Enabling BDI Agents to Reason on a Dynamic Action Repertoire in Hypermedia Environments](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=SToKj14AAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=SToKj14AAAAJ:tzM49s52ZIMC). AAMAS 2024"
-     ]
-    }
-   ],
-   "aside": {
-    "image": "img/research-agents.jpg",
-    "alt": "A JSON listing of a thing description and a diagram of a signifier exposure mechanism between an agent profile and an artifact profile",
-    "shadow": false
-   }
-  },
-  {
-   "layout": "text",
-   "title": "Interactions: Our Research",
-   "groups": [
-    {
-     "heading": "Legal Context of Ubiquitous Computing",
-     "points": [
-      "[Machine Capacity of Judgment](https://www.alexandria.unisg.ch/entities/publication/ea5b9115-5970-4eef-b3be-d5fd6a6889e0/details). Technology in Society 2022",
-      "[Responsible Automatically Processable Regulation](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=SToKj14AAAAJ&sortby=pubdate&citation_for_view=SToKj14AAAAJ:t7zJ5fGR-2UC). AI & Society 2024",
-      "[Regulating for Trust: Can Law establish Trust in Artificial Intelligence?](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=SToKj14AAAAJ&sortby=pubdate&citation_for_view=SToKj14AAAAJ:tKAzc9rXhukC) Regulation & Governance 2024",
-      "[From Walls to Windows: Creating Transparency to Understand Filter Bubbles in Social Media](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=SToKj14AAAAJ&sortby=pubdate&citation_for_view=SToKj14AAAAJ:g3aElNc5_aQC). NORMADIC 2024"
-     ]
-    }
-   ],
-   "aside": {
-    "image": "img/research-law.jpg",
-    "alt": "A window with labels for motorized blinds, controllable lights and two sensors, and below it a robotic hand holding scales of justice",
-    "shadow": false
-   }
+   "items": [
+    {"k": "shape", "x": 3.93, "y": 12.501, "w": 94.932, "h": 39.628, "s": 1, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "Systems and People in Ubiquitous Computing Environments", "sz": 2.222, "b": 1}]}, {"al": "l", "r": [{"t": "GEAR: Gaze-", "sz": 1.667}, {"t": "enabled", "sz": 1.667}, {"t": " ", "sz": 1.667}, {"t": "Augmented", "sz": 1.667}, {"t": " Reality ", "sz": 1.667}, {"t": "for", "sz": 1.667}, {"t": " Human ", "sz": 1.667}, {"t": "Activity", "sz": 1.667}, {"t": " Recognition", "sz": 1.667}, {"t": ". ETRA 2023", "sz": 1.667}], "pl": 1.875, "in": -1.875, "bu": "-"}, {"al": "l", "r": [{"t": "Semantic Web Ontologies for Automated Engineering of Smart Buildings", "sz": 1.667}, {"t": ". CASE 2025", "sz": 1.667}], "pl": 1.875, "in": -1.875, "bu": "-"}, {"al": "l", "r": [{"t": "Real-Time Adaptive Industrial Robots", "sz": 1.667, "c": "#00802f"}, {"t": ". CHI 2025", "sz": 1.667}], "pl": 1.875, "in": -1.875, "bu": "-"}, {"al": "l", "r": [{"t": "Towards Societally Beneficial Personalized Realities", "sz": 1.667, "c": "#00802f"}, {"t": ". ", "sz": 1.667, "c": "#00802f"}, {"t": "DIS 2025", "sz": 1.667}], "pl": 1.875, "in": -1.875, "bu": "-"}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 2.343, "in": -2.343}, {"al": "l", "r": [{"t": "World-Wide Autonomous Systems", "sz": 2.222, "b": 1}]}, {"al": "l", "r": [{"t": "A Decade in Hindsight: The Missing Bridge Between Multi-Agent Systems and the World Wide Web", "sz": 1.667}, {"t": ".  AAMAS 2019 ", "sz": 1.667}], "pl": 1.875, "in": -1.875, "bu": "-"}, {"al": "l", "r": [{"t": "Increasing the Intelligence of Low-Power Sensors with Autonomous Agents", "sz": 1.667, "c": "#333333"}, {"t": ". ", "sz": 1.667, "c": "#333333"}, {"t": "SenSys", "sz": 1.667, "c": "#333333"}, {"t": " 2022", "sz": 1.667, "c": "#333333"}], "pl": 1.875, "in": -1.875, "bu": "-"}, {"al": "l", "r": [{"t": "Signifiers as a First-class Abstraction in Hypermedia Multi-Agent Systems", "sz": 1.667, "c": "#00802f"}, {"t": ".  AAMAS 2023", "sz": 1.667}], "pl": 1.875, "in": -1.875, "bu": "-"}, {"al": "l", "r": [{"t": "Enabling BDI Agents to Reason on a Dynamic Action Repertoire in Hypermedia Environments", "sz": 1.667, "c": "#00802f"}, {"t": ".  AAMAS 2024", "sz": 1.667}], "pl": 1.875, "in": -1.875, "bu": "-"}, {"al": "l", "r": [{"t": "", "sz": 1.667}]}, {"al": "l", "r": [{"t": "Legal ", "sz": 2.222, "b": 1}, {"t": "Context", "sz": 2.222, "b": 1}, {"t": " ", "sz": 2.222, "b": 1}, {"t": "of", "sz": 2.222, "b": 1}, {"t": " ", "sz": 2.222, "b": 1}, {"t": "Ubiquitous", "sz": 2.222, "b": 1}, {"t": " Computing", "sz": 2.222, "b": 1}]}, {"al": "l", "r": [{"t": "Machine Capacity of Judgment", "sz": 1.667}, {"t": ". Technology in Society 2022", "sz": 1.667}], "pl": 1.875, "in": -1.875, "bu": "-"}, {"al": "l", "r": [{"t": "Responsible", "sz": 1.667, "c": "#1a0dab"}, {"t": " ", "sz": 1.667, "c": "#1a0dab"}, {"t": "A", "sz": 1.667, "c": "#1a0dab"}, {"t": "utomatically", "sz": 1.667, "c": "#1a0dab"}, {"t": " ", "sz": 1.667, "c": "#1a0dab"}, {"t": "P", "sz": 1.667, "c": "#1a0dab"}, {"t": "rocessable", "sz": 1.667, "c": "#1a0dab"}, {"t": " ", "sz": 1.667, "c": "#1a0dab"}, {"t": "R", "sz": 1.667, "c": "#1a0dab"}, {"t": "egulation", "sz": 1.667, "c": "#1a0dab"}, {"t": ".", "sz": 1.667, "c": "#1a0dab"}, {"t": " ", "sz": 1.667, "c": "#1a0dab"}, {"t": "AI & Society 2024", "sz": 1.667}], "pl": 1.875, "in": -1.875, "bu": "-"}, {"al": "l", "r": [{"t": "Regulating for Trust: Can Law establish Trust in Artificial Intelligence?", "sz": 1.667, "c": "#1a0dab"}, {"t": " ", "sz": 1.667, "c": "#1a0dab"}, {"t": "Regulation & Governance 2024", "sz": 1.667}], "pl": 1.875, "in": -1.875, "bu": "-"}, {"al": "l", "r": [{"t": "From Walls to Windows: Creating Transparency to Understand Filter Bubbles in Social Media", "sz": 1.667, "c": "#00802f"}, {"t": ". ", "sz": 1.667, "c": "#1a0dab"}, {"t": "NORMADIC 2024", "sz": 1.667}], "pl": 1.875, "in": -1.875, "bu": "-"}, {"al": "l", "r": [{"t": "", "sz": 1.667}], "pl": 2.343, "in": -2.343}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "pic", "src": "img/s3-1.png", "alt": "Ein Bild, das Maschine, Im Haus, medizinische Ausrüstung, Forschungsinstrument enthält.\n\nAutomatisch generierte Beschreibung", "x": 66.44, "y": 0.778, "w": 10.34, "h": 12.96, "shadow": true},
+    {"k": "pic", "src": "img/s3-2.png", "alt": "Listing of a W3C Thing Description of a boiler, extended with knowledge of the physical process, as JSON", "x": 84.139, "y": 7.85, "w": 11.661, "h": 13.278, "shadow": true},
+    {"k": "pic", "src": "img/s3-3.jpg", "alt": "A person in a green hoodie wearing a mixed reality headset with a camera attached", "x": 72.94, "y": 6.587, "w": 13.387, "h": 9.359, "rot": 90.0, "crop": [0.19538, 0.0, 0.0, 0.0], "shadow": true},
+    {"k": "pic", "src": "img/s3-4.png", "alt": "Diagram of the signifier exposure mechanism: an entity profile and an agent profile with operations S1 to S4, and an agent retrieving signifiers", "x": 69.613, "y": 19.354, "w": 21.694, "h": 8.609, "shadow": true},
+    {"k": "pic", "src": "img/s3-5.png", "alt": "Window frame with labelled sensors (VEML7700, AS7262, Sparkfun Edge) and the notes: motorized blinds and controllable lights, not visible", "x": 83.237, "y": 27.303, "w": 11.98, "h": 14.502, "shadow": true},
+    {"k": "pic", "src": "img/s3-6.png", "alt": "Illustration of a robotic hand holding the scales of justice", "x": 80.892, "y": 41.525, "w": 12.201, "h": 8.053, "shadow": true}
+   ]
   },
   {
    "layout": "image",
@@ -119,44 +144,45 @@
    "source": "Strecker, Akhunov, Carbone, Garcia, Bektas, Gomez, Mayer, Yildirim. *MR Object Identification and Interaction: Fusing Object Situation Information from Heterogeneous Sources*. IMWUT 2024"
   },
   {
-   "layout": "text",
+   "layout": "canvas",
    "title": "Simon: Systems and People",
-   "points": [
-    "PhD in **Computer Science**, ETH Zurich (2010-2014)",
-    "**Senior Key Expert for Smart and Interoperable Systems**, Siemens Corporate Technology, Berkeley (2014-2017)",
-    "**Research Group Leader** “Cognitive Products”, Pro²Future, and **Postdoctoral Researcher**, TU Graz (2017-2018)",
-    "Senior Researcher, ETH Zurich (2018-2020)",
-    {
-     "text": "University of St.Gallen",
-     "sub": [
-      "**Professor for Interaction- and Communication-based Systems** (2018 →)",
-      "**Director**, Institute of Computer Science (2019 →)",
-      "**Dean**, School of Computer Science (2024 →)"
-     ]
-    },
-    "Lecturer, ETH Zurich (2015-2020), MIT (2015), UC Berkeley (2015-2017), TU Graz (2017-2019), University of Zurich (2020-2022), University of Bologna (2023)"
-   ],
-   "aside": {
-    "image": "img/simon-collage.jpg",
-    "alt": "Collage of photos of ETH Zurich, MIT, Berkeley and Graz with the logos of Siemens, Berkeley, Pro²Future, TU Graz, University of Zurich, MIT, ETH Zurich and the University of St.Gallen, two children in judo suits and a snowboard track in the snow",
-    "shadow": false
-   },
-   "callout": {
-    "text": "3 children, backcountry snowboarding",
-    "style": "outline"
-   }
+   "items": [
+    {"k": "shape", "x": 3.924, "y": 12.501, "w": 55.44, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 1.458}]}, {"al": "l", "r": [{"t": "PhD in ", "sz": 1.458, "c": "#000000"}, {"t": "Computer Science", "sz": 1.458, "b": 1, "c": "#000000"}, {"t": ", ETH Zurich ", "sz": 1.458, "c": "#000000"}, {"t": "(", "sz": 0.938, "c": "#000000"}, {"t": "2010-", "sz": 0.938, "c": "#000000"}, {"t": "2014)", "sz": 0.938, "c": "#000000"}]}, {"al": "l", "r": [{"t": "", "sz": 0.938}]}, {"al": "l", "r": [{"t": "Senior Key Expert for Smart and Interoperable Systems", "sz": 1.458, "b": 1, "c": "#000000"}, {"t": ", Siemens Corporate Technology, Berkeley ", "sz": 1.458, "c": "#000000"}, {"t": "(", "sz": 0.938, "c": "#000000"}, {"t": "2014-2017)", "sz": 0.938, "c": "#000000"}]}, {"al": "l", "r": [{"t": "", "sz": 0.938}]}, {"al": "l", "r": [{"t": "Research Group Leader ", "sz": 1.458, "b": 1, "c": "#000000"}, {"t": "“Cognitive Products”, Pro²Future", "sz": 1.458, "c": "#000000"}, {"t": " (", "sz": 0.938, "c": "#000000"}, {"t": "2017-2018)", "sz": 0.938, "c": "#000000"}]}, {"al": "l", "r": [{"t": "Postdoctoral Researcher", "sz": 1.458, "b": 1, "c": "#000000"}, {"t": ", TU Graz ", "sz": 1.458, "c": "#000000"}, {"t": "(", "sz": 0.938, "c": "#000000"}, {"t": "2017-2018)", "sz": 0.938, "c": "#000000"}]}, {"al": "l", "r": [{"t": "", "sz": 0.938}]}, {"al": "l", "r": [{"t": "Senior Researcher, ETH Zurich ", "sz": 1.458, "c": "#000000"}, {"t": "(2018-2020)", "sz": 0.938, "c": "#000000"}]}, {"al": "l", "r": [{"t": "", "sz": 0.938}]}, {"al": "l", "r": [{"t": "Professor for Interaction-and Communication-based Systems", "sz": 1.458, "b": 1, "c": "#000000"}, {"t": ", University of St.Gallen ", "sz": 1.458, "c": "#000000"}, {"t": "(2018 ", "sz": 0.938, "c": "#000000"}, {"t": "→)", "sz": 0.938, "c": "#000000"}]}, {"al": "l", "r": [{"t": "", "sz": 0.938}]}, {"al": "l", "r": [{"t": "Director", "sz": 1.458, "b": 1, "c": "#000000"}, {"t": ", Institute of Computer Science, University of St.Gallen ", "sz": 1.458, "c": "#000000"}, {"t": "(2019 ", "sz": 0.938, "c": "#000000"}, {"t": "→)", "sz": 0.938, "c": "#000000"}]}, {"al": "l", "r": [{"t": "", "sz": 0.938}]}, {"al": "l", "r": [{"t": "Dean", "sz": 1.458, "b": 1, "c": "#000000"}, {"t": ", School of Computer Science, University of St.Gallen ", "sz": 1.458, "c": "#000000"}, {"t": "(2024 ", "sz": 0.938, "c": "#000000"}, {"t": "→)", "sz": 0.938, "c": "#000000"}]}, {"al": "l", "r": [{"t": "", "sz": 1.458}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "Lecturer", "sz": 1.25, "b": 1, "c": "#000000"}, {"t": ", ETH Zurich (2015-2020), MIT (2015), UC Berkeley (2015-2017), TU Graz (2017-2019), University of Zurich (2020-2022), University of Bologna (2023)", "sz": 1.25, "c": "#000000"}]}, {"al": "l", "r": [{"t": "", "sz": 0.938}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "3 Children, Backcountry Snowboarding", "sz": 1.25, "c": "#000000"}]}, {"al": "l", "r": [{"t": "", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "pic", "src": "img/s7-1.jpg", "alt": "Image result for MIT", "x": 70.652, "y": 12.351, "w": 17.981, "h": 11.328},
+    {"k": "pic", "src": "img/s7-2.jpg", "alt": "Image result for ghent university", "x": 87.695, "y": 12.764, "w": 12.577, "h": 11.328, "crop": [0.0, 0.10789, 0.38738, 0.18727]},
+    {"k": "pic", "src": "img/s7-3.png", "alt": "Image result for ghent university", "x": 96.077, "y": 14.046, "w": 2.986, "h": 2.598},
+    {"k": "pic", "src": "img/s7-4.png", "alt": "Image result for mit logo", "x": 83.581, "y": 16.52, "w": 3.485, "h": 1.804},
+    {"k": "pic", "src": "img/s7-5.jpg", "alt": "Image result for berkeley", "x": 67.379, "y": 23.135, "w": 16.651, "h": 11.111},
+    {"k": "pic", "src": "img/s7-6.png", "alt": "Image result for uc berkeley logo", "x": 77.992, "y": 31.468, "w": 4.889, "h": 1.635, "crop": [0.08278, 0.15659, 0.32286, 0.20743]},
+    {"k": "pic", "src": "img/s7-7.png", "alt": "Image result for siemens logo", "x": 68.534, "y": 31.596, "w": 8.308, "h": 1.378, "crop": [0.23423, 0.44029, 0.23609, 0.44169]},
+    {"k": "pic", "src": "img/s7-8.jpg", "alt": "Image result for eth zurich", "x": 72.946, "y": 0.077, "w": 26.933, "h": 13.432},
+    {"k": "pic", "src": "img/s7-9.png", "alt": "Image result for eth zurich logo", "x": 89.797, "y": 9.561, "w": 8.438, "h": 1.386},
+    {"k": "pic", "src": "img/s7-10.jpg", "alt": "Image result for powder line", "x": 86.233, "y": 41.426, "w": 12.419, "h": 15.02, "crop": [0.21732, 0.3209, 0.47886, 0.12132]},
+    {"k": "pic", "src": "img/s7-11.jpg", "alt": "A clock tower on a hill above the rooftops of a town at sunset", "x": 82.858, "y": 23.18, "w": 17.414, "h": 8.163},
+    {"k": "pic", "src": "img/s7-12.png", "alt": "Image result for tu graz logo", "x": 93.472, "y": 30.726, "w": 6.102, "h": 3.051},
+    {"k": "pic", "src": "img/s7-13.png", "alt": "Logo of Pro2Future", "x": 83.615, "y": 31.343, "w": 9.505, "h": 1.818, "crop": [0.0, 0.41306, 0.0, 0.3957]},
+    {"k": "pic", "src": "img/s7-14.png", "alt": "Image result for university of zurich logo", "x": 77.854, "y": 4.623, "w": 6.768, "h": 2.122},
+    {"k": "pic", "src": "img/s7-15.png", "alt": "Image result for eth zurich logo", "x": 89.648, "y": 39.068, "w": 9.301, "h": 1.528},
+    {"k": "pic", "src": "img/s7-16.jpg", "alt": "Logo of the University of California, Berkeley, with its seal", "x": 76.272, "y": 34.006, "w": 8.869, "h": 2.527},
+    {"k": "pic", "src": "img/s7-17.png", "alt": "Logo of MIT in red and black blocks", "x": 87.494, "y": 34.49, "w": 3.781, "h": 1.955},
+    {"k": "pic", "src": "img/s7-18.png", "alt": "Image result for tu graz logo", "x": 92.443, "y": 34.852, "w": 6.102, "h": 3.051},
+    {"k": "pic", "src": "img/s7-19.png", "alt": "Image result for university of zurich logo", "x": 67.379, "y": 34.772, "w": 7.414, "h": 2.325},
+    {"k": "pic", "src": "img/s7-20.jpg", "alt": "Partners | MeetingDem", "x": 83.874, "y": 36.594, "w": 4.459, "h": 4.459},
+    {"k": "pic", "src": "img/s7-21.jpg", "alt": "Ein Bild, das Person, Lächeln, Menschliches Gesicht, Kleidung enthält.\n\nAutomatisch generierte Beschreibung", "x": 70.608, "y": 41.137, "w": 15.142, "h": 15.142, "rot": 180.0},
+    {"k": "pic", "src": "img/s7-22.png", "alt": "University of St. Gallen Brand Guidelines | Frontify", "x": 61.575, "y": 35.528, "w": 21.805, "h": 4.536}
+   ]
   },
   {
-   "layout": "text",
+   "layout": "canvas",
    "title": "From Software to Systems",
-   "paragraphs": [
-    "After the focus on individual components in the first half of the semester, we now concentrate on **interactions between components**. Specifically, we will discuss the **trade-offs** that are involved in designing these interfaces and interactions.",
-    "Many of the concepts that you saw in the course up to now apply again!"
-   ],
-   "aside": {
-    "image": "img/fosa-book.jpg",
-    "alt": "Cover of the O'Reilly book Fundamentals of Software Architecture by Mark Richards and Neal Ford, with a drawing of a parrot"
-   }
+   "items": [
+    {"k": "shape", "x": 3.919, "y": 12.498, "w": 68.147, "h": 37.912, "g": "rect", "tx": {"p": [{"al": "j", "r": [{"t": "", "sz": 2.5}], "pl": 0.0, "in": 0.0}, {"al": "j", "r": [{"t": "After the focus on ", "sz": 2.083}, {"t": "individual components ", "sz": 2.083, "b": 1}, {"t": "in the first half of the semester, we now ", "sz": 2.083}, {"t": "concentrate on interactions between components", "sz": 2.083, "b": 1}, {"t": ". Specifically, we will discuss the ", "sz": 2.083}, {"t": "trade-offs", "sz": 2.083, "b": 1}, {"t": " that are involved in designing these interfaces and interactions.", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "j", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "j", "r": [{"t": "Many of the concepts that you saw in the course up to now ", "sz": 2.083}, {"t": "apply again", "sz": 2.083, "b": 1}, {"t": "!", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "j", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "j", "r": [{"t": "", "sz": 2.5}], "pl": 0.0, "in": 0.0}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 26.071, "y": 41.262, "w": 48.307, "h": 11.857, "g": "rect", "fill": "#f2f2f2", "ln": "#bfbfbf", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Software architecture ", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "consists of the ", "sz": 1.875, "c": "#000000"}, {"t": "structure", "sz": 1.875, "i": 1, "c": "#000000"}, {"t": " of the system, combined with ", "sz": 1.875, "c": "#000000"}, {"t": "architecture characteristics", "sz": 1.875, "i": 1, "c": "#000000"}, {"t": " (“-ilities”) the system must support, ", "sz": 1.875, "c": "#000000"}, {"t": "architecture decisions", "sz": 1.875, "i": 1, "c": "#000000"}, {"t": ", and finally ", "sz": 1.875, "c": "#000000"}, {"t": "design principles", "sz": 1.875, "i": 1, "c": "#000000"}, {"t": ".", "sz": 1.875, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 9.35, "y": 34.174, "w": 40.875, "h": 9.019, "g": "rect", "fill": "#ffffff", "ln": "#404040", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "„Everything in software architecture is a ", "sz": 2.917, "i": 1, "c": "#000000"}, {"t": "trade-off", "sz": 2.917, "b": 1, "i": 1, "c": "#000000"}, {"t": ".“", "sz": 2.917, "i": 1, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 58.62, "y": 34.284, "w": 33.468, "h": 8.908, "g": "rect", "fill": "#ffffff", "ln": "#404040", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "„", "sz": 2.917, "i": 1, "c": "#000000"}, {"t": "WHY", "sz": 2.917, "b": 1, "i": 1, "c": "#000000"}, {"t": " is more important than ", "sz": 2.917, "i": 1, "c": "#000000"}, {"t": "HOW", "sz": 2.917, "b": 1, "i": 1, "c": "#000000"}, {"t": ".“", "sz": 2.917, "i": 1, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "pic", "src": "img/s8-1.png", "alt": "Cover of the book Fundamentals of Software Architecture by Mark Richards and Neal Ford, with a drawing of a parrot", "x": 78.248, "y": 2.283, "w": 19.497, "h": 24.911, "crop": [0.0, 0.0, 0.6033, 0.0]},
+    {"k": "shape", "x": 30.05, "y": 30.498, "w": 12.93, "h": 3.916, "rot": 348.34, "g": "rect", "fill": "#ffffff", "ln": "#404040", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "and systems!", "sz": 2.083, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
+   ]
   },
   {
    "layout": "quote",
@@ -241,74 +267,62 @@
    ]
   },
   {
-   "layout": "image",
+   "layout": "canvas",
    "title": "Overall Goal: Conscious Handling of Architectural Trade-Offs",
-   "lead": "As the architect of a (distributed) (information) system, you should be aware of the design trade-offs that are induced by specific choices in order to construct a system with your desired non-functional properties.",
-   "image": "img/tradeoffs.jpg",
-   "alt": "Left: line drawing of a user handing a few dots across a dashed line to an architect who holds a tangled ball of connected nodes. Right: a projected slide titled Key Take-aways: software architecture is the art of managing trade-offs; context and domain partitioning drive appropriate design; architecture must be validated continuously",
-   "shadow": false,
-   "caption": "This is relevant in a (technology) world with projects that exhibit a broad range of non-functional requirements."
-  },
-  {
-   "layout": "image",
-   "title": "Overall Goal: Multi-Level View on Interoperability",
-   "lead": "As the architect of a (distributed) (information) system, you should be aware of different ways of how to consciously manage the interoperability of system components.",
-   "callout": {
-    "text": "Heard of «AI Agents»?"
-   },
-   "image": "img/interop-levels.png",
-   "alt": "IoT devices on the left are coupled on four levels, each with an example request and what breaks when it changes: coupled bits (a binary string), coupled schemas (Accept: application/json), coupled types (Accept: application/miele+json) and coupled meanings (Accept: application/ld+json with a SAREF temperature sensor); a person on the right looks at a phone",
-   "shadow": false,
-   "caption": "This is relevant in a (technology) world with increasingly heterogeneous and autonomous components."
-  },
-  {
-   "layout": "text",
-   "title": "Overall Goal: Precision",
-   "callout": {
-    "text": "«Asynchronous», what is that?"
-   },
-   "paragraphs": [
-    "As the architect of a (distributed) (information) system, you should use terminology in a clear and well-founded way. Your definitions should be based on accepted expert sources.",
-    "This is relevant as our (technology) world needs to be based on clearly-communicated facts, not on obfuscated beliefs."
-   ],
-   "aside": {
-    "image": "img/grpc-benchmark.jpg",
-    "alt": "Three screenshots: a bar chart of response times for REST HTTP/1.1, REST with keep-alive and gRPC; a blog post titled Benchmarking performance gRPC vs REST on Node.js; and a quote that gRPC is 7 to 10 times faster than REST",
-    "caption": "This doesn't compare apples to oranges… it compares apples to yaks",
-    "shadow": false
-   }
-  },
-  {
-   "layout": "quiz",
-   "title": "Overall Goal: Precision",
-   "lead": "Terms that come up: “client-server”, “blocking”, “request-response”",
    "items": [
-    "Is HTTP a “synchronous” or an “asynchronous” protocol?",
-    "Does this mean that we can only implement synchronous interactions with HTTP?",
-    "But then, aren't all protocols that work with TCP “synchronous” as well?"
-   ],
-   "aside": {
-    "image": "img/http-stack.png",
-    "alt": "Protocol stack: HTTP semantics on top of HTTP 1.1 over optional TLS over TCP, HTTP/2 over TLS 1.2+ over TCP, and HTTP/3 over QUIC with TLS 1.3 over UDP, all over IPv4 / IPv6",
-    "shadow": false
-   }
+    {"k": "shape", "x": 3.924, "y": 4.114, "w": 92.228, "h": 2.213, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "From", "sz": 1.948}, {"t": " Software ", "sz": 1.948}, {"t": "to", "sz": 1.948}, {"t": " Systems", "sz": 1.948}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 1.6, "y": 43.742, "w": 87.864, "h": 11.266, "s": 1, "g": "roundRect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "As ", "sz": 1.875, "c": "#000000"}, {"t": "the", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "architect", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": " ", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "of", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": " a (", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "distributed", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": ") (", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "information", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": ") ", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "system", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": ", ", "sz": 1.875, "c": "#000000"}, {"t": "you", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "should", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "be", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "aware", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "of", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "the", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "design trade-offs ", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "that", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": " ", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "are", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": " ", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "induced", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": " ", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "by", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": " ", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "specific", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": " ", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "choices", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": " ", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "in ", "sz": 1.875, "c": "#000000"}, {"t": "order", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "to", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "construct", "sz": 1.875, "c": "#000000"}, {"t": " a ", "sz": 1.875, "c": "#000000"}, {"t": "system", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "with", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": " ", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "your", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": " ", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "desired", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": " non-", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "functional", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": " ", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "properties", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": ". ", "sz": 1.875, "b": 1, "c": "#000000"}]}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "This ", "sz": 1.875, "c": "#000000"}, {"t": "is", "sz": 1.875, "c": "#000000"}, {"t": " relevant in a (", "sz": 1.875, "c": "#000000"}, {"t": "technology", "sz": 1.875, "c": "#000000"}, {"t": ") ", "sz": 1.875, "c": "#000000"}, {"t": "world", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "with", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "projects", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "that", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "exhibit", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": " a ", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "broad", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": " ", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "range", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": " ", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "of", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": " non-", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "functional", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": " ", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "requirements", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": ".", "sz": 1.875, "b": 1, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "pic", "src": "img/s10-1.png", "alt": "Silhouette drawing of a user on the left and an architect on the right, separated by a dashed line, with a tangle of nodes and arrows between them", "x": 8.511, "y": 15.012, "w": 36.023, "h": 22.067, "crop": [0.37693, 0.1325, 0.34616, 0.63594]},
+    {"k": "shape", "x": 12.025, "y": 37.352, "w": 12.301, "h": 3.514, "g": "rect", "tx": {"p": [{"al": "c", "r": [{"t": "user", "sz": 1.875, "b": 1}]}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
+    {"k": "shape", "x": 30.915, "y": 37.352, "w": 12.301, "h": 3.514, "g": "rect", "tx": {"p": [{"al": "c", "r": [{"t": "architect", "sz": 1.875, "b": 1}]}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
+    {"k": "pic", "src": "img/s10-2.png", "alt": "Photo of a screen showing Key Take-aways: software architecture is the art of managing trade-offs, context and domain drive appropriate design, architecture must be validated continuously", "x": 53.74, "y": 14.594, "w": 37.749, "h": 24.548}
+   ]
   },
   {
-   "layout": "text",
+   "layout": "canvas",
+   "title": "Overall Goal: Multi-Level View on Interoperability",
+   "items": [
+    {"k": "shape", "x": 3.924, "y": 4.114, "w": 92.228, "h": 2.213, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "From", "sz": 1.948}, {"t": " Software ", "sz": 1.948}, {"t": "to", "sz": 1.948}, {"t": " Systems", "sz": 1.948}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 1.011, "y": 43.742, "w": 80.307, "h": 11.266, "s": 1, "g": "roundRect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "As ", "sz": 1.875, "c": "#000000"}, {"t": "the", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "architect", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": " ", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "of", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": " a (", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "distributed", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": ") (", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "information", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": ") ", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "system", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": ", ", "sz": 1.875, "c": "#000000"}, {"t": "you", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "should", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "be", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "aware", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "of", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "different ", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "ways", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": " ", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "of", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "how", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "to", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "consciously", "sz": 1.875, "c": "#000000"}, {"t": " manage ", "sz": 1.875, "c": "#000000"}, {"t": "the", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "interoperability", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "of", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "system", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "components", "sz": 1.875, "c": "#000000"}, {"t": ". ", "sz": 1.875, "c": "#000000"}]}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "This ", "sz": 1.875, "c": "#000000"}, {"t": "is", "sz": 1.875, "c": "#000000"}, {"t": " relevant in a (", "sz": 1.875, "c": "#000000"}, {"t": "technology", "sz": 1.875, "c": "#000000"}, {"t": ") ", "sz": 1.875, "c": "#000000"}, {"t": "world", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "with", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "increasingly", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": " ", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "heterogeneous", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": " and ", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "autonomous", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": " ", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "components", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": ".", "sz": 1.875, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "pic", "src": "img/s11-1.png", "alt": "Illustration of four levels of coupling (bits, schemas, types, meanings) between IoT devices and a person with a phone, each with an example request", "x": 18.11, "y": 11.887, "w": 70.478, "h": 29.852},
+    {"k": "shape", "x": 77.186, "y": 40.953, "w": 18.891, "h": 3.574, "s": 2, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Heard ", "sz": 1.667, "c": "#ffffff"}, {"t": "of", "sz": 1.667, "c": "#ffffff"}, {"t": " «AI ", "sz": 1.667, "c": "#ffffff"}, {"t": "Agents", "sz": 1.667, "c": "#ffffff"}, {"t": "»?", "sz": 1.667, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
+   ]
+  },
+  {
+   "layout": "canvas",
    "title": "Overall Goal: Precision",
-   "callout": {
-    "text": "Maybe “synchronous by design” but “asynchronous in practice”?"
-   },
-   "points": [
-    "AJAX and the JS Fetch API",
-    "HTTP/2 multiplexing",
-    "WebSockets",
-    "WebHooks"
-   ],
-   "aside": {
-    "code": "fetch(file)\n  .then(x => x.text())\n  .then(y => myDisplay(y));"
-   },
-   "after": "Can the system not decide at run time whether it should communicate in a blocking or non-blocking way? ;-)"
+   "items": [
+    {"k": "shape", "x": 3.924, "y": 4.114, "w": 92.228, "h": 2.213, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "From", "sz": 1.948}, {"t": " Software ", "sz": 1.948}, {"t": "to", "sz": 1.948}, {"t": " Systems", "sz": 1.948}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "pic", "src": "img/s12-1.png", "alt": "Screenshot of a blog post titled Benchmarking performance gRPC vs REST on Node.js", "x": 3.924, "y": 13.573, "w": 44.544, "h": 25.984, "s": 2, "crop": [0.21263, 0.357, 0.22038, 0.05501], "shadow": true},
+    {"k": "pic", "src": "img/s12-2.png", "alt": "Excerpt of the blog post: 7 to 10 times faster message transmission with gRPC than with REST", "x": 50.483, "y": 23.467, "w": 44.057, "h": 15.975, "s": 3, "crop": [0.07475, 0.4055, 0.32873, 0.20998], "shadow": true},
+    {"k": "shape", "x": 40.382, "y": 3.208, "w": 20.58, "h": 7.572, "s": 5, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "This ", "sz": 1.875}, {"t": "doesn’t", "sz": 1.875}, {"t": " ", "sz": 1.875}, {"t": "compare", "sz": 1.875}, {"t": " ", "sz": 1.875}, {"t": "apples", "sz": 1.875, "b": 1}, {"t": " ", "sz": 1.875, "b": 1}, {"t": "to", "sz": 1.875, "b": 1}, {"t": " oranges", "sz": 1.875, "b": 1}, {"t": "… ", "sz": 1.875}, {"t": "it", "sz": 1.875}, {"t": " ", "sz": 1.875}, {"t": "compares", "sz": 1.875}, {"t": " ", "sz": 1.875}, {"t": "apples", "sz": 1.875, "b": 1}, {"t": " ", "sz": 1.875, "b": 1}, {"t": "to", "sz": 1.875, "b": 1}, {"t": " ", "sz": 1.875, "b": 1}, {"t": "yaks", "sz": 1.875, "b": 1}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 1.236, "y": 43.742, "w": 70.825, "h": 11.266, "s": 1, "g": "roundRect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "As ", "sz": 1.875, "c": "#000000"}, {"t": "the", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "architect", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": " ", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "of", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": " a (", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "distributed", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": ") (", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "information", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": ") ", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "system", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": ", ", "sz": 1.875, "c": "#000000"}, {"t": "you", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "should", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "use", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "terminology", "sz": 1.875, "c": "#000000"}, {"t": " in a ", "sz": 1.875, "c": "#000000"}, {"t": "clear", "sz": 1.875, "c": "#000000"}, {"t": " and well-", "sz": 1.875, "c": "#000000"}, {"t": "founded", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "way", "sz": 1.875, "c": "#000000"}, {"t": ".  ", "sz": 1.875, "c": "#000000"}, {"t": "Your", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "definitions", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "should", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "be", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "based", "sz": 1.875, "c": "#000000"}, {"t": " on ", "sz": 1.875, "c": "#000000"}, {"t": "accepted", "sz": 1.875, "c": "#000000"}, {"t": " expert ", "sz": 1.875, "c": "#000000"}, {"t": "sources", "sz": 1.875, "c": "#000000"}, {"t": ".", "sz": 1.875, "c": "#000000"}]}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "This ", "sz": 1.875, "c": "#000000"}, {"t": "is", "sz": 1.875, "c": "#000000"}, {"t": " relevant ", "sz": 1.875, "c": "#000000"}, {"t": "as", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "our", "sz": 1.875, "c": "#000000"}, {"t": " (", "sz": 1.875, "c": "#000000"}, {"t": "technology", "sz": 1.875, "c": "#000000"}, {"t": ") ", "sz": 1.875, "c": "#000000"}, {"t": "world", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "needs", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "to", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "be", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "based", "sz": 1.875, "c": "#000000"}, {"t": " on ", "sz": 1.875, "c": "#000000"}, {"t": "clearly-communicated", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": " ", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "facts", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": ", not on ", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "obfuscated", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": " beliefs", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": ".", "sz": 1.875, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "pic", "src": "img/s12-3.png", "alt": "Benchmarking performance gRPC vs REST on Node.js | by Sergey Onufrienko |  Medium", "x": 65.102, "y": 2.481, "w": 32.455, "h": 20.041, "s": 4},
+    {"k": "shape", "x": 74.154, "y": 45.391, "w": 24.015, "h": 3.574, "s": 6, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "«", "sz": 1.667, "c": "#ffffff"}, {"t": "Asynchronous", "sz": 1.667, "c": "#ffffff"}, {"t": "», ", "sz": 1.667, "c": "#ffffff"}, {"t": "what", "sz": 1.667, "c": "#ffffff"}, {"t": " ", "sz": 1.667, "c": "#ffffff"}, {"t": "is", "sz": 1.667, "c": "#ffffff"}, {"t": " ", "sz": 1.667, "c": "#ffffff"}, {"t": "that", "sz": 1.667, "c": "#ffffff"}, {"t": "?", "sz": 1.667, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
+   ]
+  },
+  {
+   "layout": "canvas",
+   "title": "Overall Goal: Precision",
+   "items": [
+    {"k": "shape", "x": 3.924, "y": 4.114, "w": 92.228, "h": 2.213, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "From", "sz": 1.948}, {"t": " Software ", "sz": 1.948}, {"t": "to", "sz": 1.948}, {"t": " Systems", "sz": 1.948}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "pic", "src": "img/s13-1.png", "alt": "Diagram of the HTTP protocol stack: HTTP semantics above HTTP/1.1, HTTP/2 and HTTP/3, which run over TCP with TLS or over QUIC on UDP, all over IPv4 and IPv6", "x": 61.601, "y": 3.704, "w": 36.588, "h": 25.154, "s": 12},
+    {"k": "shape", "x": 3.924, "y": 13.651, "w": 24.123, "h": 8.148, "s": 1, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Is", "sz": 1.875, "c": "#ffffff"}, {"t": " HTTP a „", "sz": 1.875, "c": "#ffffff"}, {"t": "synchronous", "sz": 1.875, "c": "#ffffff"}, {"t": "“ ", "sz": 1.875, "c": "#ffffff"}, {"t": "or", "sz": 1.875, "c": "#ffffff"}, {"t": " an „", "sz": 1.875, "c": "#ffffff"}, {"t": "asynchronous", "sz": 1.875, "c": "#ffffff"}, {"t": "“ ", "sz": 1.875, "c": "#ffffff"}, {"t": "protocol", "sz": 1.875, "c": "#ffffff"}, {"t": "?", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 8.368, "y": 23.52, "w": 36.523, "h": 6.672, "s": 5, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Does", "sz": 1.875, "c": "#ffffff"}, {"t": " ", "sz": 1.875, "c": "#ffffff"}, {"t": "this", "sz": 1.875, "c": "#ffffff"}, {"t": " ", "sz": 1.875, "c": "#ffffff"}, {"t": "mean", "sz": 1.875, "c": "#ffffff"}, {"t": " ", "sz": 1.875, "c": "#ffffff"}, {"t": "that", "sz": 1.875, "c": "#ffffff"}, {"t": " ", "sz": 1.875, "c": "#ffffff"}, {"t": "we", "sz": 1.875, "c": "#ffffff"}, {"t": " ", "sz": 1.875, "c": "#ffffff"}, {"t": "can", "sz": 1.875, "c": "#ffffff"}, {"t": " ", "sz": 1.875, "c": "#ffffff"}, {"t": "only", "sz": 1.875, "c": "#ffffff"}, {"t": " ", "sz": 1.875, "c": "#ffffff"}, {"t": "implement", "sz": 1.875, "c": "#ffffff"}, {"t": " ", "sz": 1.875, "c": "#ffffff"}, {"t": "synchronous", "sz": 1.875, "c": "#ffffff"}, {"t": " ", "sz": 1.875, "c": "#ffffff"}, {"t": "interactions", "sz": 1.875, "c": "#ffffff"}, {"t": " ", "sz": 1.875, "c": "#ffffff"}, {"t": "with", "sz": 1.875, "c": "#ffffff"}, {"t": " HTTP?", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 50.0, "y": 23.163, "w": 31.785, "h": 6.759, "s": 11, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "But ", "sz": 1.875, "c": "#ffffff"}, {"t": "then", "sz": 1.875, "c": "#ffffff"}, {"t": ", ", "sz": 1.875, "c": "#ffffff"}, {"t": "aren‘t", "sz": 1.875, "c": "#ffffff"}, {"t": " all ", "sz": 1.875, "c": "#ffffff"}, {"t": "protocols", "sz": 1.875, "c": "#ffffff"}, {"t": " ", "sz": 1.875, "c": "#ffffff"}, {"t": "that", "sz": 1.875, "c": "#ffffff"}, {"t": " ", "sz": 1.875, "c": "#ffffff"}, {"t": "work", "sz": 1.875, "c": "#ffffff"}, {"t": " ", "sz": 1.875, "c": "#ffffff"}, {"t": "with", "sz": 1.875, "c": "#ffffff"}, {"t": " TCP „", "sz": 1.875, "c": "#ffffff"}, {"t": "synchronous", "sz": 1.875, "c": "#ffffff"}, {"t": "“ ", "sz": 1.875, "c": "#ffffff"}, {"t": "as", "sz": 1.875, "c": "#ffffff"}, {"t": " ", "sz": 1.875, "c": "#ffffff"}, {"t": "well", "sz": 1.875, "c": "#ffffff"}, {"t": "?", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 28.831, "y": 13.786, "w": 10.03, "h": 3.188, "s": 2, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "„", "sz": 1.875, "c": "#ffffff"}, {"t": "blocking", "sz": 1.875, "c": "#ffffff"}, {"t": "“", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 40.974, "y": 15.861, "w": 16.761, "h": 2.75, "s": 4, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "„", "sz": 1.875, "c": "#ffffff"}, {"t": "request", "sz": 1.875, "c": "#ffffff"}, {"t": "-response“", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 33.846, "y": 9.339, "w": 13.231, "h": 2.75, "s": 3, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "„client-server“", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 27.507, "y": 33.67, "w": 16.761, "h": 2.75, "s": 7, "g": "roundRect", "fill": "#73a5af", "ln": "#101a1c", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "AJAX", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "pic", "src": "img/s13-2.png", "alt": "JavaScript code: fetch(file).then(x => x.text()).then(y => myDisplay(y));", "x": 2.407, "y": 33.453, "w": 22.052, "h": 7.334, "s": 6, "shadow": true},
+    {"k": "shape", "x": 13.45, "y": 32.295, "w": 12.044, "h": 2.75, "s": 6, "g": "roundRect", "fill": "#73a5af", "ln": "#101a1c", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "JS ", "sz": 1.875, "c": "#ffffff"}, {"t": "Fetch", "sz": 1.875, "c": "#ffffff"}, {"t": " API", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 47.316, "y": 32.842, "w": 17.64, "h": 2.75, "s": 9, "g": "roundRect", "fill": "#73a5af", "ln": "#101a1c", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "HTTP/2 Multiplexing", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 26.217, "y": 38.037, "w": 17.64, "h": 2.75, "s": 8, "g": "roundRect", "fill": "#73a5af", "ln": "#101a1c", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "WebSockets", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 49.394, "y": 37.6, "w": 12.527, "h": 2.75, "s": 10, "g": "roundRect", "fill": "#73a5af", "ln": "#101a1c", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "WebHooks ", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 72.573, "y": 32.387, "w": 26.312, "h": 6.759, "s": 13, "g": "roundRect", "fill": "#0a5f2d", "ln": "#010e07", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Maybe „", "sz": 1.875, "c": "#ffffff"}, {"t": "synchronous", "sz": 1.875, "c": "#ffffff"}, {"t": " ", "sz": 1.875, "c": "#ffffff"}, {"t": "by", "sz": 1.875, "c": "#ffffff"}, {"t": " design“ but „", "sz": 1.875, "c": "#ffffff"}, {"t": "asynchronous", "sz": 1.875, "c": "#ffffff"}, {"t": " in ", "sz": 1.875, "c": "#ffffff"}, {"t": "practice", "sz": 1.875, "c": "#ffffff"}, {"t": "“?", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 1.236, "y": 43.742, "w": 70.825, "h": 11.266, "g": "roundRect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "As ", "sz": 1.875, "c": "#000000"}, {"t": "the", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "architect", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": " ", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "of", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": " a (", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "distributed", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": ") (", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "information", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": ") ", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "system", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": ", ", "sz": 1.875, "c": "#000000"}, {"t": "you", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "should", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "use", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "terminology", "sz": 1.875, "c": "#000000"}, {"t": " in a ", "sz": 1.875, "c": "#000000"}, {"t": "clear", "sz": 1.875, "c": "#000000"}, {"t": " and well-", "sz": 1.875, "c": "#000000"}, {"t": "founded", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "way", "sz": 1.875, "c": "#000000"}, {"t": ".  ", "sz": 1.875, "c": "#000000"}, {"t": "Your", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "definitions", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "should", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "be", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "based", "sz": 1.875, "c": "#000000"}, {"t": " on ", "sz": 1.875, "c": "#000000"}, {"t": "accepted", "sz": 1.875, "c": "#000000"}, {"t": " expert ", "sz": 1.875, "c": "#000000"}, {"t": "sources", "sz": 1.875, "c": "#000000"}, {"t": ".", "sz": 1.875, "c": "#000000"}]}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "This ", "sz": 1.875, "c": "#000000"}, {"t": "is", "sz": 1.875, "c": "#000000"}, {"t": " relevant ", "sz": 1.875, "c": "#000000"}, {"t": "as", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "our", "sz": 1.875, "c": "#000000"}, {"t": " (", "sz": 1.875, "c": "#000000"}, {"t": "technology", "sz": 1.875, "c": "#000000"}, {"t": ") ", "sz": 1.875, "c": "#000000"}, {"t": "world", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "needs", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "to", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "be", "sz": 1.875, "c": "#000000"}, {"t": " ", "sz": 1.875, "c": "#000000"}, {"t": "based", "sz": 1.875, "c": "#000000"}, {"t": " on ", "sz": 1.875, "c": "#000000"}, {"t": "clearly-communicated", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": " ", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "facts", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": ", not on ", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "obfuscated", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": " beliefs", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": ".", "sz": 1.875, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 76.525, "y": 42.616, "w": 20.922, "h": 6.759, "s": 14, "g": "roundRect", "fill": "#000000", "ln": "#ffffff", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Can ", "sz": 1.146, "c": "#ffffff"}, {"t": "the", "sz": 1.146, "c": "#ffffff"}, {"t": " ", "sz": 1.146, "c": "#ffffff"}, {"t": "system", "sz": 1.146, "c": "#ffffff"}, {"t": " not ", "sz": 1.146, "c": "#ffffff"}, {"t": "decide", "sz": 1.146, "c": "#ffffff"}, {"t": " at ", "sz": 1.146, "c": "#ffffff"}, {"t": "run", "sz": 1.146, "c": "#ffffff"}, {"t": " time ", "sz": 1.146, "c": "#ffffff"}, {"t": "whether", "sz": 1.146, "c": "#ffffff"}, {"t": " ", "sz": 1.146, "c": "#ffffff"}, {"t": "it", "sz": 1.146, "c": "#ffffff"}, {"t": " ", "sz": 1.146, "c": "#ffffff"}, {"t": "should", "sz": 1.146, "c": "#ffffff"}, {"t": " ", "sz": 1.146, "c": "#ffffff"}, {"t": "communicate", "sz": 1.146, "c": "#ffffff"}, {"t": " in a ", "sz": 1.146, "c": "#ffffff"}, {"t": "blocking", "sz": 1.146, "c": "#ffffff"}, {"t": " ", "sz": 1.146, "c": "#ffffff"}, {"t": "or", "sz": 1.146, "c": "#ffffff"}, {"t": " non-", "sz": 1.146, "c": "#ffffff"}, {"t": "blocking", "sz": 1.146, "c": "#ffffff"}, {"t": " ", "sz": 1.146, "c": "#ffffff"}, {"t": "way", "sz": 1.146, "c": "#ffffff"}, {"t": "? ;-)", "sz": 1.146, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
+   ]
   },
   {
    "layout": "table",
@@ -351,22 +365,21 @@
    ]
   },
   {
-   "layout": "text",
-   "title": "What's with that PlugFest?",
-   "callout": {
-    "text": "Plugfest with Pitas (Dec 2, from 4:30pm)",
-    "style": "teal"
-   },
-   "points": [
-    "Gloriously integrate all groups' implementations",
-    "Experience how interoperability testing is done in practice with your results from Assignment 7 and Assignment 8",
-    "Socialize and have Pizza (sponsored by Siemens, thank you!)"
-   ],
-   "aside": {
-    "image": "img/plugfest.jpg",
-    "alt": "Photos of students working at laptops in a seminar room during an earlier plugfest, and a screenshot of the IETF document RFC 8352, Energy-Efficient Features of Internet of Things Protocols",
-    "shadow": false
-   }
+   "layout": "canvas",
+   "title": "What’s with that PlugFest?",
+   "items": [
+    {"k": "shape", "x": 3.924, "y": 4.114, "w": 92.228, "h": 2.213, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "From", "sz": 1.948}, {"t": " Software ", "sz": 1.948}, {"t": "to", "sz": 1.948}, {"t": " Systems", "sz": 1.948}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 3.924, "y": 12.501, "w": 51.479, "h": 37.907, "s": 1, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "Gloriously", "sz": 1.948, "b": 1}, {"t": " ", "sz": 1.948}, {"t": "integrate", "sz": 1.948}, {"t": " all ", "sz": 1.948}, {"t": "groups", "sz": 1.948}, {"t": "’ ", "sz": 1.948}, {"t": "implementations", "sz": 1.948}, {"t": " ", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "Experience ", "sz": 1.948}, {"t": "how", "sz": 1.948}, {"t": " ", "sz": 1.948}, {"t": "interoperability", "sz": 1.948}, {"t": " ", "sz": 1.948}, {"t": "testing", "sz": 1.948}, {"t": " ", "sz": 1.948}, {"t": "is", "sz": 1.948}, {"t": " ", "sz": 1.948}, {"t": "done", "sz": 1.948}, {"t": " ", "sz": 1.948}, {"t": "in ", "sz": 1.948, "b": 1}, {"t": "practice", "sz": 1.948, "b": 1}, {"t": " ", "sz": 1.948, "b": 1}, {"t": "with", "sz": 1.948, "b": 1}, {"t": " ", "sz": 1.948, "b": 1}, {"t": "your", "sz": 1.948, "b": 1}, {"t": " ", "sz": 1.948, "b": 1}, {"t": "results", "sz": 1.948, "b": 1}, {"t": " ", "sz": 1.948, "b": 1}, {"t": "from", "sz": 1.948, "b": 1}, {"t": " ", "sz": 1.948, "b": 1}, {"t": "Assignment", "sz": 1.948}, {"t": " 7 and ", "sz": 1.948}, {"t": "Assignment", "sz": 1.948}, {"t": " 8", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "Talk ", "sz": 1.948}, {"t": "to", "sz": 1.948}, {"t": " a ", "sz": 1.948}, {"t": "colleague", "sz": 1.948, "b": 1}, {"t": " ", "sz": 1.948}, {"t": "with", "sz": 1.948}, {"t": " >10 ", "sz": 1.948}, {"t": "years", "sz": 1.948}, {"t": " ", "sz": 1.948}, {"t": "of", "sz": 1.948}, {"t": " ", "sz": 1.948}, {"t": "standardization", "sz": 1.948}, {"t": " ", "sz": 1.948}, {"t": "experience", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "Socialize", "sz": 1.948, "b": 1}, {"t": " and ", "sz": 1.948}, {"t": "have", "sz": 1.948}, {"t": " Pizza (", "sz": 1.948}, {"t": "sponsored", "sz": 1.948}, {"t": " ", "sz": 1.948}, {"t": "by", "sz": 1.948}, {"t": " Siemens – ", "sz": 1.948}, {"t": "thank", "sz": 1.948}, {"t": " ", "sz": 1.948}, {"t": "you", "sz": 1.948}, {"t": "!)", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "pic", "src": "img/s15-1.png", "alt": "Professional profile card of Matthias Kovatsch, IoT and Enterprise Architecture at Siemens, with an aerial view of a town", "x": 6.81, "y": 37.633, "w": 31.259, "h": 15.259, "s": 3, "shadow": true},
+    {"k": "pic", "src": "img/s15-2.jpg", "alt": "Ein Bild, das Im Haus, Mobiliar, Stuhl, Bürogebäude enthält.\n\nAutomatisch generierte Beschreibung", "x": 47.035, "y": 0.933, "w": 21.451, "h": 16.088, "s": 2, "shadow": true},
+    {"k": "pic", "src": "img/s15-3.jpg", "alt": "Ein Bild, das Kleidung, Person, Im Haus, Mann enthält.\n\nAutomatisch generierte Beschreibung", "x": 76.122, "y": 10.495, "w": 22.5, "h": 16.875, "s": 2, "shadow": true},
+    {"k": "pic", "src": "img/s15-4.jpg", "alt": "Ein Bild, das Person, Im Haus, Kleidung, Computer enthält.\n\nAutomatisch generierte Beschreibung", "x": 68.299, "y": 2.562, "w": 17.105, "h": 12.829, "s": 2, "shadow": true},
+    {"k": "pic", "src": "img/s15-5.jpg", "alt": "Ein Bild, das Kleidung, Person, Schuhwerk, Im Haus enthält.\n\nAutomatisch generierte Beschreibung", "x": 58.867, "y": 20.052, "w": 20.332, "h": 15.249, "s": 2, "shadow": true},
+    {"k": "pic", "src": "img/s15-6.jpg", "alt": "Ein Bild, das Person, Kleidung, Im Haus, Computer enthält.\n\nAutomatisch generierte Beschreibung", "x": 71.918, "y": 37.176, "w": 17.288, "h": 12.966, "s": 2, "shadow": true},
+    {"k": "pic", "src": "img/s15-7.png", "alt": "Screenshot of the IETF datatracker page of RFC 8352, Energy-Efficient Features of Internet of Things Protocols", "x": 40.02, "y": 39.018, "w": 27.322, "h": 12.951, "s": 3, "shadow": true},
+    {"k": "shape", "x": 82.665, "y": 30.29, "w": 13.989, "h": 5.315, "g": "roundRect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "Plugfest", "sz": 1.25, "b": 1, "c": "#000000"}, {"t": " with Pitas (Dec 2, from 4:30pm)", "sz": 1.25, "b": 1, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "pic", "src": "img/s15-8.png", "alt": "Pizza Slice Detailed Icon PNG & SVG Design For T-Shirts", "x": 95.155, "y": 28.732, "w": 3.134, "h": 3.134}
+   ]
   },
   {
    "layout": "syllabus",

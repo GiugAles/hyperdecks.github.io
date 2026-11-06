@@ -9,7 +9,7 @@ Output: `html/index.html` next to the deck, with its fonts, logo and images in `
 
 Keys while presenting: arrows or space to move, O overview, F full screen, N speaker notes.
 
-Style: the HSG slide template as used in the lectures 01a Introduction, 01b Information Processing and 02 Circuits of Computersysteme (the three .pptx files in `../fuso-presentation/`). White slides, Gill Sans Light, headline top left at 32pt, points marked with a dash, the slide number in the green HSG tab at the bottom right, HSG green (#00802F) for boxes with questions to the room and table headers, teal (#73A5AF) for remarks, salmon (#EB6969) for tasks and assignments, the title slide with the HSG logo, the gear word cloud and the green wedge "From insight to impact.". Layout, fonts, sizes and colours are fixed in `scripts/render_html.py` and `scripts/hsg_deck.py`. A deck only chooses layouts and fills their fields; there are no free fields and no per-deck sizes.
+Style: the HSG slide template as used in the lectures 01a Introduction, 01b Information Processing and 02 Circuits of Computersysteme (the three .pptx files in `../fuso-presentation/`). White slides, Gill Sans Light, headline top left at 32pt, points marked with a dash, the slide number in the green HSG tab at the bottom right, HSG green (#00802F) for boxes with questions to the room and table headers, teal (#73A5AF) for remarks, salmon (#EB6969) for tasks and assignments, the title slide with the HSG logo, the gear word cloud and the green wedge "From insight to impact.". Layout, fonts, sizes and colours are fixed in `scripts/render_html.py` and `scripts/hsg_deck.py`. A deck only chooses layouts and fills their fields; there are no free fields and no per-deck sizes (the exception is `canvas`, below, which keeps the sizes and positions of a PowerPoint slide).
 
 ## Design rules
 
@@ -64,6 +64,7 @@ A line break in a title is written as `\n`, and `**words**` in a title is set bo
 | `quote` | a quote as the headline, right aligned | `title` is the quote with its quotation marks, `attribution`, `picture` (`image`, `alt`), `points` (up to 4, about the person) |
 | `questions` | "Any Questions / Comments / Doubts / Concerns?" with the figure on the question mark | `heading` (default "Take-Home"), `points` (the take-homes, up to 5), `after` (one line under them). Without `points` the slide is the headline and the figure only. |
 | `study` | "How to Study this Material?" with the light bulb | `groups` (e.g. "Basic Depth" and "Advanced Depth", each with `points`), `aside` |
+| `canvas` | a slide copied from a PowerPoint slide: diagrams, arrows, speech bubbles, free arrangements, click builds | `items` (made by `scripts/pptx_canvas.py`, see below); `title` may be empty |
 | `task` | homework or preparation, in the tilted salmon label | `stamp` (the task), `paragraphs` (left of the label), `url` and `label` (the link under it) |
 
 Details that are easy to miss:
@@ -73,6 +74,23 @@ Details that are easy to miss:
 * Pictures get the soft drop shadow of the template. Set `"shadow": false` for drawings, diagrams and logos on white.
 * Running text is set at body size (18.7pt). When a slide has more than about 55 words, the renderer sets it one step smaller (16pt); that is the smallest size. More text means another slide.
 * Formulas and circuit diagrams are pictures (`image` or an `aside` picture); there is no formula renderer. Short ones fit in text with `_{}` and `^{}`.
+
+### The `canvas` layout (slides that only work as drawn)
+
+Use it only when a PowerPoint slide cannot be said with the other layouts: a diagram drawn from shapes and arrows, a message flow, a build-up that appears click by click, a free arrangement of pictures, boxes and notes. It is the one exception to "no free fields", so keep it for those slides (in 07b about a third) and use the normal layouts for everything else.
+
+```
+python scripts/pptx_canvas.py deck.json --pptx lecture.pptx --slide 60            # append
+python scripts/pptx_canvas.py deck.json --pptx lecture.pptx --slide 60 --at 12     # replace slide 12 of the deck
+python scripts/pptx_canvas.py deck.json --pptx lecture.pptx --slide 60 --insert 12 # insert before slide 12
+```
+
+* The converter reads the .pptx and writes a `canvas` slide: every object with its position (`x`, `y`, `w`, `h` in U, 1% of the slide width), rectangles, rounded boxes, ellipses, block arrows, speech bubbles, lines and connectors with arrowheads, freeform paths, tables and pictures (saved in `img/`). Text stays text, at its PowerPoint size. Colours come from the theme of the slide master.
+* **Click animations become steps**: the arrow keys (and the buttons) reveal the next part of the slide before they move on; going back hides it again. Overview, print and the phone show the whole slide. Entrance and exit effects are copied; emphasis and paragraph-by-paragraph builds are not (the shape appears whole).
+* The title comes from the title placeholder. The footer, slide number and title placeholders are not copied (the frame draws them).
+* After converting: **write the `alt` of every picture** in the deck (the check lists those without), compare the render with the .pdf of the lecture, and read the converter's warnings (shape types it only approximated, rotated groups, picture formats a browser cannot show).
+* Not supported: SmartArt, charts, video, rotated groups, gradient fills (first colour is used), shadows of shapes, text effects. Say so in the report; for such a slide a picture of it is the last resort.
+* `items` are one per line in `deck.json`; they can be edited by hand (move a box, change a colour, delete an item), but re-running the converter for the slide replaces them.
 
 ### Limits the check applies
 

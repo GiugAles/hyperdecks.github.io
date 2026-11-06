@@ -48,6 +48,7 @@ LAYOUTS = {
     "people":    ({"title", "items"}, set()),
     "quote":     ({"title"}, {"attribution", "picture", "points"}),
     "syllabus":  ({"title", "items"}, {"current", "break_after", "assignments"}),
+    "canvas":    ({"title"}, {"items"}),       # a slide copied from PowerPoint by pptx_canvas.py; the title may be ""
 }
 ITEM_KEYS = {
     "gallery":  ({"image", "alt"}, {"caption", "shadow"}),
@@ -161,6 +162,18 @@ def check(deck, base):
         if lay in ("title", "section") and "callout" in s:
             errors.append(f"{w}: '{lay}' has no 'callout'")
         title = s.get("title", "")
+        if lay == "canvas":
+            for i, it in enumerate(s.get("items", []), 1):
+                if not isinstance(it, dict) or it.get("k") not in ("shape", "pic", "table"):
+                    errors.append(f"{w}, item {i}: 'k' must be shape, pic or table")
+                elif it["k"] == "pic":
+                    need_file(it.get("src"), f"{w}, item {i}")
+                    if not str(it.get("alt", "")).strip():
+                        warnings.append(f"{w}, item {i}: the picture has no alt text (describe what is visible, in the deck)")
+            if not isinstance(title, str):
+                errors.append(f"{w}: 'title' must be a string")
+            run = lay
+            continue
         if not isinstance(title, str) or not title.strip():
             errors.append(f"{w}: 'title' is empty")
             continue
