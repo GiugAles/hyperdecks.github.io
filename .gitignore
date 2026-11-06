@@ -2,3 +2,4 @@
 **/media/*
 !**/media/*.web.mp4
 /asse/*/media/
+__pycache__/
