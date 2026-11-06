@@ -24,18 +24,23 @@ def plain(text):
     """A headline without its **bold** marks, for the browser tab and the overview."""
     return text.replace("**", "")
 
-# Gill Sans MT Pro (the HSG font) is used where it is installed; it is licensed and never copied into the page.
-# Elsewhere the page falls back to the bundled Gillius ADF No2 (GPL with font exception), and for the serif
-# (Palatino Linotype on the template) to TeX Gyre Pagella (GUST Font License).
+# Gill Sans Nova (the font of the official HSG template) is used where it is installed, then Gill Sans MT Pro; both are
+# licensed and never copied into the page. Elsewhere the page falls back to the bundled Gillius ADF No2 (GPL with font
+# exception), and for the serif (Palatino Linotype on the template) to TeX Gyre Pagella (GUST Font License).
+# As on the template: Regular for headlines and text, Light for the large titles, Bold for bold.
 FONTS = [
-    ("HSGSans", 300, "normal", ["Gill Sans MT Pro Light", "GillSansMTPro-Light", "Gill Sans Nova Light", "GillSansNova-Light",
+    ("HSGSans", 300, "normal", ["Gill Sans Nova Light", "GillSansNova-Light", "Gill Sans MT Pro Light", "GillSansMTPro-Light",
                                 "Gill Sans Light", "GillSans-Light"], "GilliusADFNo2-Regular.otf"),
-    ("HSGSans", 300, "italic", ["Gill Sans MT Pro Light Italic", "GillSansMTPro-LightItalic", "Gill Sans Nova Light Italic",
-                                "GillSansNova-LightItalic", "Gill Sans Light Italic", "GillSans-LightItalic"], "GilliusADFNo2-Italic.otf"),
-    ("HSGSans", 600, "normal", ["Gill Sans MT Pro Medium", "GillSansMTPro-Medium", "Gill Sans Nova Medium", "GillSansNova-Medium",
-                                "Gill Sans SemiBold", "GillSans-SemiBold"], "GilliusADFNo2-Bold.otf"),
-    ("HSGSans", 600, "italic", ["Gill Sans MT Pro Medium Italic", "GillSansMTPro-MediumItalic", "Gill Sans Nova Medium Italic",
-                                "Gill Sans SemiBold Italic", "GillSans-SemiBoldItalic"], "GilliusADFNo2-BoldItalic.otf"),
+    ("HSGSans", 300, "italic", ["Gill Sans Nova Light Italic", "GillSansNova-LightItalic", "Gill Sans MT Pro Light Italic",
+                                "GillSansMTPro-LightItalic", "Gill Sans Light Italic", "GillSans-LightItalic"], "GilliusADFNo2-Italic.otf"),
+    ("HSGSans", 400, "normal", ["Gill Sans Nova", "GillSansNova", "Gill Sans MT Pro Book", "GillSansMTPro-Book",
+                                "Gill Sans", "GillSans"], "GilliusADFNo2-Regular.otf"),
+    ("HSGSans", 400, "italic", ["Gill Sans Nova Italic", "GillSansNova-Italic", "Gill Sans MT Pro Book Italic",
+                                "GillSansMTPro-BookItalic", "Gill Sans Italic", "GillSans-Italic"], "GilliusADFNo2-Italic.otf"),
+    ("HSGSans", 700, "normal", ["Gill Sans Nova Bold", "GillSansNova-Bold", "Gill Sans MT Pro Bold", "GillSansMTPro-Bold",
+                                "Gill Sans Bold", "GillSans-Bold"], "GilliusADFNo2-Bold.otf"),
+    ("HSGSans", 700, "italic", ["Gill Sans Nova Bold Italic", "GillSansNova-BoldItalic", "Gill Sans MT Pro Bold Italic",
+                                "GillSansMTPro-BoldItalic", "Gill Sans Bold Italic", "GillSans-BoldItalic"], "GilliusADFNo2-BoldItalic.otf"),
     ("HSGSerif", 400, "normal", ["Palatino Linotype", "PalatinoLinotype-Roman", "Palatino", "Palatino-Roman", "Book Antiqua"],
      "texgyrepagella-regular.otf"),
     ("HSGSerif", 400, "italic", ["Palatino Linotype Italic", "PalatinoLinotype-Italic", "Palatino Italic", "Palatino-Italic"],
@@ -47,15 +52,15 @@ CSS = r"""
 html,body{margin:0;height:100%}
 /* One unit (U) is 1% of a 16:9 slide; the template slide is 13.33in wide, so 1U = 9.6pt.
    Type scale of the HSG template, fixed for every deck: headline 32pt (3.33U), body 18.7pt (1.94U), sub-points 14pt (1.46U),
-   small 12pt (1.25U), source 8pt (.83U). Text is Gill Sans Light; bold is Gill Sans Medium. */
+   small 12pt (1.25U), source 8pt (.83U). Headlines and text are Gill Sans Regular, large titles Light, bold Bold. */
 :root{--ctl:60px;--bar:var(--ctl);--u:min(1vw,calc((100vh - var(--bar))/56.25));--u:min(1vw,calc((100dvh - var(--bar))/56.25));
   --s-h1:5.2U;--s-h2:3.33U;--s-kick:2.1U;--s-body:1.94U;--s-mid:1.6U;--s-sub:1.46U;--s-small:1.25U;--s-tiny:.83U;
   --green:#00802F;--dgreen:#0A5F2D;--salmon:#EB6969;--teal:#73A5AF;--row-a:#CBD8CD;--row-b:#E7EDE8;--yellow:#FFF04B;
   --fg:#000000;--body:#1a1a1a;--quiet:#595959;--line:#d9d9d9;--k-stage:#e4e4e4}
-body{font-family:HSGSans,"Gill Sans MT Pro","Gill Sans MT","Gill Sans","Gill Sans Nova",Calibri,sans-serif;font-weight:300;
+body{font-family:HSGSans,"Gill Sans Nova","Gill Sans MT Pro","Gill Sans MT","Gill Sans",Calibri,sans-serif;font-weight:400;
   -webkit-font-smoothing:antialiased;overflow:hidden;background:var(--k-stage);color:var(--fg)}
 h1,h2,h3,p,ul,ol,dl,dd,figure,pre{margin:0;padding:0}
-b,strong,th{font-weight:600}
+b,strong,th{font-weight:700}
 a{color:var(--green);text-underline-offset:.15em}
 a:focus-visible,button:focus-visible{outline:2px solid currentColor;outline-offset:2px}
 code,pre{font-family:"Courier New",Courier,"Liberation Mono",monospace;font-weight:400}
@@ -68,7 +73,7 @@ sub,sup{font-size:.65em;line-height:0}
 /* the title sits in the template's title box (4.1U to 10.8U, text on its bottom line); content starts at 14U */
 .frame{position:relative;z-index:1;width:100%;height:100%;padding:4.1U 3.92U 5U;display:flex;flex-direction:column;min-width:0}
 .headrow{display:flex;justify-content:space-between;align-items:flex-end;gap:3U;min-height:6.7U;flex:none}
-h2{font-size:var(--s-h2);font-weight:300;line-height:1.08;letter-spacing:-.005em;color:var(--fg);max-width:78U;text-wrap:balance}
+h2{font-size:var(--s-h2);font-weight:400;line-height:1.08;letter-spacing:-.005em;color:var(--fg);max-width:78U;text-wrap:balance}
 .lead{font-size:var(--s-body);line-height:1.25;margin-top:3.2U;max-width:86U;color:var(--body)}
 .main{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:flex-start;padding:3.2U 0 .6U}
 .l-menu .main,.l-quiz .main,.l-image .main,.l-gallery .main,.l-people .main,.l-syllabus .main{justify-content:safe center}
@@ -78,7 +83,7 @@ h2{font-size:var(--s-h2);font-weight:300;line-height:1.08;letter-spacing:-.005em
 .source~.dfoot{display:none}
 /* the slide number in the green HSG tab, bottom right */
 .pn{position:absolute;right:3.94U;top:51.41U;width:2.33U;height:2.56U;z-index:3;display:grid;place-items:center;padding:.45U 0 0 .45U;
-  font-size:1.1U;font-weight:300;color:#fff;font-variant-numeric:tabular-nums}
+  font-size:1.1U;font-weight:400;color:#fff;font-variant-numeric:tabular-nums}
 .pn svg{position:absolute;inset:0;width:100%;height:100%;fill:var(--green);z-index:-1}
 
 /* running text: paragraphs without a mark, points with a dash as on the template */
@@ -92,7 +97,7 @@ ul.dash ul li{position:relative;padding-left:1.8U;font-size:var(--s-sub);line-he
 ul.dash ul li::before{content:"-";position:absolute;left:0}
 .dense ul.dash>li,.dense .copy p{font-size:var(--s-mid)}
 .dense ul.dash{gap:.6U}
-.group h3{font-size:2.4U;font-weight:300;line-height:1.15;color:var(--fg);margin-bottom:.5U}
+.group h3{font-size:2.4U;font-weight:400;line-height:1.15;color:var(--fg);margin-bottom:.5U}
 .group ul.dash{gap:.2U}
 .dense .group ul.dash>li,.dense .group p{font-size:var(--s-mid)}
 .groups{display:grid;gap:3U}
@@ -115,7 +120,7 @@ ul.dash ul li::before{content:"-";position:absolute;left:0}
 .box.green{background:var(--green);border:.12U solid var(--dgreen);color:#fff;text-align:center}
 .box.outline{background:#fff;border:.12U solid var(--green);color:var(--body);border-radius:0}
 .box.teal{background:var(--teal);border:.12U solid #5d8f99;color:#fff;border-radius:0}
-.box h3{font-size:var(--s-mid);font-weight:600;margin-bottom:.4U}
+.box h3{font-size:var(--s-mid);font-weight:700;margin-bottom:.4U}
 .box a{color:inherit}
 .callout{flex:none;max-width:34U;margin-bottom:-1U}
 .callout.wide{max-width:48U}
@@ -135,14 +140,14 @@ table.t{width:100%;border-collapse:collapse;font-size:var(--s-mid);line-height:1
 .t tr:nth-child(even) td{background:var(--row-b)}
 .t th+th,.t td+td{border-left:.15U solid #fff}
 .t tr+tr td{border-top:.15U solid #fff}
-.t td:first-child{font-weight:600;color:var(--fg)}
+.t td:first-child{font-weight:700;color:var(--fg)}
 .t.many{font-size:var(--s-sub)}
 .t.many td{padding:.45U 1U}
 
 /* menu: the topics of the day in a thin green frame */
 .menu{border:.12U solid var(--green);padding:2.6U 2.4U;width:66U;display:grid;gap:.35U}
 .menu p{font-size:var(--s-sub);line-height:1.3;color:var(--body)}
-.menu p.cur{font-weight:600;color:var(--green)}
+.menu p.cur{font-weight:700;color:var(--green)}
 
 /* quiz: questions in green boxes, staggered in two columns */
 .quiz{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2.6U 3U;align-items:center}
@@ -169,7 +174,7 @@ table.t{width:100%;border-collapse:collapse;font-size:var(--s-mid);line-height:1
 
 /* quote: the quote is the headline, right aligned, the picture below on the left */
 .l-quote .headrow{justify-content:flex-end}
-.l-quote h2{text-align:right;max-width:64U;line-height:1.15;text-wrap:balance}
+.l-quote h2{font-weight:300;text-align:right;max-width:64U;line-height:1.15;text-wrap:balance}
 .attr{font-size:var(--s-mid);text-align:right;color:var(--body);margin-top:1U}
 .qbody{flex:1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:4U;align-items:end;padding:2U 0 1U}
 .qbody .pic{align-items:flex-start}
@@ -211,10 +216,22 @@ table.t{width:100%;border-collapse:collapse;font-size:var(--s-mid);line-height:1
 .logo{position:absolute;left:3.9U;top:3.4U;width:24.3U;height:auto;z-index:2}
 .art{position:absolute;inset:0;overflow:hidden;z-index:0}
 .gear{position:absolute;left:47.65U;top:-1.9U;width:53.2U;height:53.2U;object-fit:contain}
+/* the other title slides of the official template: "photo" (a photo behind the whole slide), "side" (a photo strip on the
+   right) and "slanted" (a slanted photo with a green frame); the last two have no wedge and a black tagline */
+.bgphoto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tblock.t-photo{width:87U}
+.tblock.t-side{width:52.11U}.tblock.t-slanted{width:49.25U}
+.tpic{position:absolute;object-fit:cover;z-index:1}
+.tpic.side{left:65.24U;top:0;width:34.76U;height:56.25U}
+.tpic.slanted{left:62.91U;top:4.9U;width:37.09U;height:41.54U;clip-path:polygon(0 21.87%,100% 0,100% 100%,15.27% 92.29%)}
+.tframe{position:absolute;left:63.01U;top:17.77U;width:26.46U;height:29.42U;overflow:visible;z-index:0}
+.tagline.side,.tagline.slanted{top:51.5U;color:var(--fg);z-index:2}
+.tagline.side{left:9.06U;right:auto}
+.tagline.slanted{right:3.92U}
 .veil{position:absolute;inset:0;z-index:1;background:linear-gradient(to top right,#fff 0%,rgba(255,255,255,.6) 50%,rgba(255,255,255,0) 100%)}
 .wedge{position:absolute;left:50U;top:34.65U;width:50U;height:21.6U;background:var(--green);z-index:2;
   clip-path:polygon(100% 0,100% 100%,3.65% 100%,0 52.9%)}
-.tagline{position:absolute;right:4U;top:15.65U;z-index:3;font-family:HSGSerif,"Palatino Linotype",Palatino,serif;font-size:1.39U;color:#fff}
+.tagline{position:absolute;right:4U;top:15.65U;z-index:3;font-size:1.39U;color:#fff}
 .tblock{position:absolute;left:9U;top:12U;width:44U;height:19.6U;z-index:2;display:flex;flex-direction:column;justify-content:flex-end}
 .kicker{font-size:var(--s-kick);line-height:1.2;color:var(--fg);margin-bottom:2.2U}
 h1{font-size:var(--s-h1);font-weight:300;line-height:1.08;letter-spacing:-.01em;color:var(--fg);text-wrap:balance}
@@ -225,21 +242,25 @@ h1{font-size:var(--s-h1);font-weight:300;line-height:1.08;letter-spacing:-.01em;
 
 
 /* canvas: a slide copied from PowerPoint; every object sits where it was (x, y, w, h in U), text keeps its size,
-   click animations become steps (the arrow keys reveal them one by one; overview, print and phone show all) */
+   click animations become steps (the arrow keys reveal them one by one; overview, print and phone show all);
+   the headline may use the full width, as the HSG font is a little wider than the Light of many source decks */
+.l-canvas h2{max-width:92U;text-wrap:wrap}
+.l-canvas .dfoot{z-index:0}  /* the footer line lies behind the objects, so a filled box covers it */
 .cv{position:absolute;inset:0;z-index:1}
 .cv .it{position:absolute}
-.cv .it.off{visibility:hidden}
+.cv .off{visibility:hidden}
 .cv svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
-.cv .tx{position:absolute;inset:0;display:flex;flex-direction:column;color:var(--fg);line-height:1.2;font-weight:300}
+.cv .tx{position:absolute;inset:0;display:flex;flex-direction:column;color:var(--fg);line-height:1.2;font-weight:400}
 .cv .tx.m{justify-content:center}.cv .tx.b{justify-content:flex-end}
 .cv .tx.nw{white-space:nowrap}
 .cv .tx p{margin:0;min-height:1.2em}
 .cv .tx .bu{display:inline-block}
-.cv .tx b{font-weight:600}
+.cv .tx b{font-weight:700}
 .cv .tx .mono{font-family:"Courier New",Courier,"Liberation Mono",monospace;font-weight:400}
 .cv .tx .serif{font-family:HSGSerif,"Palatino Linotype",Palatino,serif}
 .cv .tx.v270{writing-mode:vertical-rl;transform:rotate(180deg)}.cv .tx.v90{writing-mode:vertical-rl}
 .cv .pimg{position:absolute;inset:0;overflow:hidden}
+.cv .pimg video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#000}
 .cv .pimg img{position:absolute;display:block;max-width:none}
 .cv .it.shadow .pimg{filter:drop-shadow(.35U .35U .55U rgba(0,0,0,.38))}
 .cv table{position:absolute;inset:0;border-collapse:collapse;table-layout:fixed;width:100%}
@@ -323,6 +344,10 @@ body.show-notes .notes-view{display:block}
   .logo{width:190px;margin-bottom:44px}
   .tbody{margin:26px 0 30px;font-size:15px}
   .gear{left:auto;right:-70px;top:-50px;width:210px;height:210px}
+  .l-title .tblock{width:auto;height:auto}
+  .l-title .tpic{position:static;width:auto;height:200px;margin:0 -20px;clip-path:none}
+  .tframe{display:none}
+  .tagline.side,.tagline.slanted{margin-top:auto;padding:18px 0;font-size:15px}
   .l-title .frame,.l-section .frame{overflow:hidden}
   .wedge{position:static;width:auto;height:auto;clip-path:none;margin:auto -20px 0;padding:26px 20px 18px;display:flex;justify-content:flex-end;
     clip-path:polygon(100% 0,100% 100%,0 100%,0 40%)}
@@ -331,7 +356,7 @@ body.show-notes .notes-view{display:block}
   .source,.dfoot{position:static;display:block;margin-top:24px}
   .pn{position:absolute;top:auto;bottom:16px;right:16px;width:30px;height:33px;font-size:12px}
   .cv{position:relative;inset:auto;width:100vw;height:56.25vw;margin:30px -20px 0;--u:1vw;overflow:hidden}
-  .cv .it.off{visibility:visible}
+  .cv .off{visibility:visible}
   .pill{width:100%;height:100%;padding:3px 10px 0;border-radius:0;border:0;box-shadow:none;justify-content:space-between}
   .pill .sep{display:none}
   .tools button{flex-direction:column;gap:3px;height:48px;min-width:56px;padding:0 6px;border-radius:10px;font-size:10.5px}
@@ -346,7 +371,7 @@ body.show-notes .notes-view{display:block}
   body{overflow:visible;background:#fff}
   .slide{position:relative;left:auto;top:auto;transform:none;visibility:visible;height:7.5in;width:100%;break-after:page}
   .controls,.overview,.notes-view{display:none!important}
-  .cv .it.off{visibility:visible}
+  .cv .off{visibility:visible}
   *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
 }
 """
@@ -357,7 +382,7 @@ JS = r"""
 const by=id=>document.getElementById(id);
 let cur=0,step=0;const m=location.hash.match(/(\d+)$/);if(m&&+m[1]>=1&&+m[1]<=slides.length)cur=+m[1]-1;
 const maxStep=()=>+slides[cur].dataset.steps||0,stepping=()=>!matchMedia('(max-width:999px),(max-height:480px)').matches;
-function show(){slides[cur].querySelectorAll('.it[data-s],.it[data-e]').forEach(e=>{const a=+e.dataset.s||0,x=e.dataset.e?+e.dataset.e:1e9;
+function show(){slides[cur].querySelectorAll('.it[data-s],.it[data-e],.tx p[data-s]').forEach(e=>{const a=+e.dataset.s||0,x=e.dataset.e?+e.dataset.e:1e9;
   e.classList.toggle('off',!(step>=a&&step<x))});by('prev').disabled=cur===0&&step===0;by('next').disabled=cur===slides.length-1&&step>=maxStep()}
 function go(n,end){cur=Math.max(0,Math.min(slides.length-1,n));step=end?maxStep():0;
  slides.forEach((s,i)=>{s.classList.toggle('active',i===cur);s.setAttribute('aria-hidden',i!==cur)});
@@ -365,7 +390,7 @@ function go(n,end){cur=Math.max(0,Math.min(slides.length-1,n));step=end?maxStep(
  by('count').textContent=(cur+1)+' / '+slides.length;
  by('progress').style.width=((cur+1)/slides.length*100)+'%';
  const t=slides[cur].querySelector('.notes');nv.textContent=t?t.textContent:'';
- history.replaceState(null,'','#/'+(cur+1));ov.classList.remove('open');show();
+ history.replaceState(null,'','#/'+(cur+1));ov.classList.remove('open');show();fitCanvas(slides[cur]);
 }
 const next=()=>{if(stepping()&&step<maxStep()){step++;show()}else go(cur+1)},prev=()=>{if(stepping()&&step>0){step--;show()}else go(cur-1,true)};
 by('prev').onclick=prev;by('next').onclick=next;
@@ -389,6 +414,16 @@ document.addEventListener('keydown',e=>{if(e.ctrlKey||e.metaKey||e.altKey)return
 let x0=null;document.addEventListener('touchstart',e=>{x0=e.touches[0].clientX},{passive:true});
 document.addEventListener('touchend',e=>{if(x0===null)return;const d=e.changedTouches[0].clientX-x0;x0=null;
  if(Math.abs(d)>60)(d<0?next():prev())},{passive:true});
+// canvas text that runs out of its box (Gill Sans Regular is wider than the Light of many source decks) shrinks until it
+// fits, as with PowerPoint's "shrink text on overflow", by at most 14%; if that is not enough it overflowed in PowerPoint too
+let fontsOk=false;
+function fitCanvas(s){const cv=s.querySelector('.cv');if(!fontsOk||!cv||!cv.clientWidth||s.dataset.fit)return;s.dataset.fit=1;
+ const leaves=t=>t.scrollHeight>t.clientHeight+1||t.scrollWidth>t.clientWidth+1;
+ for(const t of cv.querySelectorAll(':scope>.it>.tx:not(.v270):not(.v90)')){let f=1;
+  while(leaves(t)&&f>.87){f-=.02;t.style.setProperty('--f',f.toFixed(2))}
+  if(leaves(t))t.style.removeProperty('--f')}}
+Promise.all([...document.fonts].filter(f=>f.family.replace(/"/g,'')==='HSGSans').map(f=>f.load().catch(()=>0)))
+ .then(()=>document.fonts.ready).then(()=>{fontsOk=true;slides.forEach(fitCanvas);root.dataset.fit=1});
 window.hsgDeck={go,next,prev,count:slides.length};go(cur)})();
 """
 
@@ -615,18 +650,30 @@ class Html:
     # ---- layouts: each returns the inside of .frame
 
     def l_title(self, s):
-        pic = s.get("picture")
-        gear = (f'<img class="gear" src="{self.asset(pic["image"])}" alt="{esc(pic["alt"])}">' if pic else
-                '<img class="gear" src="assets/title-gear.png" alt="Word cloud of research topics in the shape of a gear">')
+        pic, st = s.get("picture"), s.get("style", "gear")
+        src, alt = (self.asset(pic["image"]), esc(pic["alt"])) if pic else ("assets/title-photo.jpg", "")
+        if st == "photo":                              # the template's title slide 1: a photo behind the whole slide
+            art = f'<img class="bgphoto" src="{src}" alt="{alt}">'
+        else:
+            art = (f'<img class="gear" src="{self.asset(pic["image"])}" alt="{esc(pic["alt"])}">' if pic else
+                   '<img class="gear" src="assets/title-gear.png" alt="Word cloud of research topics in the shape of a gear">'
+                   ) + '<div class="veil"></div>'
         kick = f'<p class="kicker">{esc(s["kicker"])}</p>' if s.get("kicker") else ""
         body = ""
         if s.get("presenters"):
             body += f'<p>{esc(", ".join(s["presenters"]))}</p>'
         if s.get("meta"):
             body += "<p>" + "<br>".join(esc(x) for x in s["meta"]) + "</p>"
-        return (f'<div class="art">{gear}<div class="veil"></div></div><img class="logo" src="assets/hsg_logo.png" alt="University of St.Gallen">'
-                f'<div class="tblock">{kick}<h1>{self.htitle(s["title"])}</h1></div>'
-                + (f'<div class="tbody">{body}</div>' if body else "")
+        logo = '<img class="logo" src="assets/hsg_logo.png" alt="University of St.Gallen">'
+        head = f'<div class="tblock t-{st}">{kick}<h1>{self.htitle(s["title"])}</h1></div>'
+        tbody = f'<div class="tbody t-{st}">{body}</div>' if body else ""
+        if st in ("side", "slanted"):                  # the template's title slides 2 and 3
+            frame = ('<svg class="tframe" viewBox="0 0 26.46 29.42" preserveAspectRatio="none" aria-hidden="true"><polygon '
+                     'points="0,6.51 26.46,0 26.39,29.42 3.89,27.27" fill="none" stroke="#00802F" stroke-width=".56"/></svg>'
+                     if st == "slanted" else "")
+            return (logo + head + tbody + frame + f'<img class="tpic {st}" src="{src}" alt="{alt}">'
+                    f'<p class="tagline {st}">From insight to impact.</p>')
+        return (f'<div class="art">{art}</div>{logo}{head}{tbody}'
                 + '<div class="wedge"><p class="tagline">From insight to impact.</p></div>')
 
     def l_section(self, s):
@@ -788,7 +835,7 @@ class Html:
                 if r.get("br"):
                     runs += "<br>"
                     continue
-                rs = f'font-size:calc({r["sz"]}*var(--u))'
+                rs = f'font-size:calc({r["sz"]}*var(--u)*var(--f,1))'
                 if r.get("c"):
                     rs += f';color:{r["c"]}'
                 if r.get("u") or r.get("st"):
@@ -796,13 +843,14 @@ class Html:
                 if r.get("i"):
                     rs += ";font-style:italic"
                 if r.get("bl"):
-                    rs += f';vertical-align:{"super" if r["bl"] > 0 else "sub"};font-size:calc({r["sz"] * .65}*var(--u))'
+                    rs += f';vertical-align:{"super" if r["bl"] > 0 else "sub"};font-size:calc({r["sz"] * .65}*var(--u)*var(--f,1))'
                 c = f' class="{r["f"]}"' if r.get("f") else ""
                 body = esc(r["t"])
                 body = f"<b>{body}</b>" if r.get("b") else body
                 runs += f'<span{c} style="{rs}">{body}</span>'
             first = max((r.get("sz", 1.9) for r in p["r"] if "sz" in r), default=1.9)
-            out += f'<p style="{st};font-size:calc({first}*var(--u))">{runs}</p>'
+            ds = f' data-s="{p["s"]}"' if p.get("s") else ""
+            out += f'<p{ds} style="{st};font-size:calc({first}*var(--u)*var(--f,1))">{runs}</p>'
         pad = f'padding:calc({ins[1]}*var(--u)) calc({ins[2]}*var(--u)) calc({ins[3]}*var(--u)) calc({ins[0]}*var(--u))'
         return f'<div class="tx {tx.get("a", "t")}{" nw" if tx.get("nw") else ""}{v}{cls}" style="{pad}">{out}</div>'
 
@@ -849,6 +897,15 @@ class Html:
         iw, ih = 1 - cl - cr, 1 - ct - cb
         st = f"left:{_f(-cl / iw * 100)}%;top:{_f(-ct / ih * 100)}%;width:{_f(100 / iw)}%;height:{_f(100 / ih)}%"
         cls = " shadow" if it.get("shadow") else ""
+        if it.get("video"):
+            src = (self.base / it["video"]).resolve()
+            if src.exists():
+                (self.out / "media").mkdir(exist_ok=True)
+                shutil.copyfile(src, self.out / "media" / src.name)
+                typ = {"mov": "video/quicktime", "mp4": "video/mp4", "webm": "video/webm"}.get(src.suffix[1:].lower(), "video/mp4")
+                return (f'<div class="it{cls}" style="{self.cv_pos(it)}"{self.cv_attrs(it)}><div class="pimg">'
+                        f'<video controls preload="none" poster="{self.asset(it["src"])}" aria-label="{esc(it.get("alt", ""))}">'
+                        f'<source src="media/{src.name}" type="{typ}"></video></div></div>')
         return (f'<div class="it{cls}" style="{self.cv_pos(it)}"{self.cv_attrs(it)}><div class="pimg">'
                 f'<img src="{self.asset(it["src"])}" alt="{esc(it.get("alt", ""))}" style="{st}"></div></div>')
 
@@ -910,7 +967,8 @@ class Html:
             notes = f'<template class="notes">{esc(s["notes"])}</template>' if s.get("notes") else ""
             t = f' data-time="{esc(str(s["time"]))}"' if s.get("time") else ""
             bare = " bare" if lay == "questions" and not s.get("points") else ""
-            steps = max([i.get("s", 0) for i in s.get("items", [])] + [0]) if lay == "canvas" else 0
+            steps = max([i.get("s", 0) for i in s.get("items", [])] + [p.get("s", 0) for i in s.get("items", [])
+                        for p in (i.get("tx") or {}).get("p", [])] + [0]) if lay == "canvas" else 0
             ds = f' data-steps="{steps}"' if steps else ""
             sections += (f'<section class="slide l-{lay}{bare}{" active" if n == 1 else ""}" id="s{n}" data-title="{esc(plain(s["title"]) or f"Slide {n}")}"{t}{ds} '
                          f'aria-label="Slide {n} of {n_all}"><div class="frame">{inner}</div>{extra}{notes}</section>\n')
@@ -955,7 +1013,7 @@ class Html:
         self.assets.mkdir(parents=True, exist_ok=True)
         for *_, f in FONTS:
             shutil.copyfile(hd.ASSETS / "fonts" / f, self.assets / f)
-        for f in ("hsg_logo.png", "title-gear.png", "questions.png", "lightbulb.jpg"):
+        for f in ("hsg_logo.png", "title-gear.png", "title-photo.jpg", "questions.png", "lightbulb.jpg"):
             shutil.copyfile(hd.ASSETS / f, self.assets / f)
         (self.out / "index.html").write_text(self.page(), encoding="utf-8")
         return self.out / "index.html"
@@ -1003,6 +1061,7 @@ def shots(index, folder, n):
         pg = b.new_page(viewport={"width": 1440, "height": 810})
         pg.goto(index.as_uri())
         pg.evaluate("document.fonts.ready")
+        pg.wait_for_function("document.documentElement.dataset.fit")
         pg.wait_for_timeout(300)
         paths = []
         for i in range(n):
@@ -1017,6 +1076,7 @@ def shots(index, folder, n):
         ph = b.new_page(viewport={"width": 390, "height": 844})
         ph.goto(index.as_uri())
         ph.evaluate("document.fonts.ready")
+        ph.wait_for_function("document.documentElement.dataset.fit")
         ph.wait_for_timeout(300)
         phones = []
         for i in range(n):
