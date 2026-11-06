@@ -186,8 +186,8 @@
       "points": [
         "Be **respectful** of the environment",
         "**Work wherever you like**: in the room on the second floor and in the rooms above. **Leave the rooms as you found them.**",
-        "All **announcements** are made in room ==XX==",
-        "**Food** only in room ==YY==",
+        "All **announcements** are made in room C61-070",
+        "**Food** only in room 61-052",
         "**Take a break** or go home to rest whenever you need to. You can also **stay here** as long as you need.",
         "Be **cooperative**, **ask questions** and **ask the mentors** for help"
       ]
@@ -206,7 +206,7 @@
       "title": "We Are Here to **Have Fun**",
       "points": [
         "We provide food and drinks to keep you fuelled up, mate tea included 🧉",
-        "Pizza at 18:00 in room ==YYY== 🍕",
+        "Pizza at 18:00 in room 61-052 🍕",
         "Some games later in the evening"
       ]
     },
@@ -224,7 +224,7 @@
         ],
         [
           "After the talks",
-          "Ask the challenge owners your questions"
+          "Ask the challenge owners your questions and rank your preferences"
         ],
         [
           "Sat 12:00",
@@ -232,11 +232,15 @@
         ],
         [
           "Sat 18:00",
-          "Pizza in room ==YYY=="
+          "Pizza in room 61-052"
         ],
         [
           "Sun 09:00",
           "Breakfast"
+        ],
+        [
+          "Sun 11:00",
+          "Short presentation on how to pitch in room C61-070"
         ],
         [
           "Sun 12:00",
@@ -257,9 +261,9 @@
       "layout": "text",
       "title": "Choosing a **Challenge**",
       "points": [
-        "The challenge owners present their challenges next",
-        "At most 4 teams per challenge, so that every challenge gets addressed",
-        "Rate your preferences ==(where?)==; we assign 3 to 4 teams to each challenge"
+        "The challenge owners **present their challenges** next",
+        "**At most 4 teams** per challenge, so that every challenge gets addressed",
+        "**Rate your preferences** on the [website](https://www.legalhackathons.org/); we assign 3 to 4 teams to each challenge"
       ]
     },
     {
