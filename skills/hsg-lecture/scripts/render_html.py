@@ -269,6 +269,25 @@ h1{font-size:var(--s-h1);font-weight:300;line-height:1.08;letter-spacing:-.01em;
 .cv td .tx{position:static;display:block;padding:.3U .8U}
 .cv td.head .tx{color:#fff}
 
+/* references between slides and lectures: pills above the slide, links inside the text; all open in a new tab */
+.refs{position:absolute;top:.9U;right:3.92U;z-index:4;display:flex;gap:.8U;justify-content:flex-end;max-width:92U}
+.refs.left{right:auto;left:3.92U}
+.refs.bottom{top:auto;bottom:2U;right:9U}
+a.ref{display:inline-flex;align-items:center;gap:.6U;height:2.3U;padding:0 1.2U;border:.12U solid var(--green);border-radius:1.15U;
+  background:#fff;color:var(--green);font-size:var(--s-small);line-height:1;text-decoration:none;white-space:nowrap}
+a.ref b{font-weight:600}
+a.ref .lab{max-width:34U;overflow:hidden;text-overflow:ellipsis}
+a.ref:hover,a.ref:focus-visible{background:var(--green);color:#fff}
+a.ref svg{width:1.1U;height:1.1U;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+a.il,.copy a.il{color:var(--green)!important;text-decoration:underline;text-decoration-thickness:.1U;text-underline-offset:.25U}
+a.il:hover{background:var(--green);color:#fff!important}
+.cv a.il{color:inherit!important;text-decoration:none}
+.cv a.il:hover{background:rgba(0,128,47,.18);color:inherit!important}
+.cv a.il span{text-decoration:underline;text-decoration-thickness:.1U;text-underline-offset:.25U}
+.cv a.il span:not([style*='color']){color:var(--green)}
+.rows a.bar{text-decoration:underline;text-underline-offset:.3U;cursor:pointer}
+.rows a.bar:hover{filter:brightness(1.15)}
+
 /* the controls: a pill that floats under the slide, as in the FuSo decks, in HSG green */
 .controls{position:fixed;left:0;right:0;bottom:0;height:var(--ctl);display:grid;place-items:center;z-index:7;pointer-events:none;
   color:#111;font-family:system-ui,sans-serif;font-size:13px;font-weight:600}
@@ -355,6 +374,8 @@ body.show-notes .notes-view{display:block}
   .l-section .wedge{width:auto;height:90px;margin-top:40px}
   .source,.dfoot{position:static;display:block;margin-top:24px}
   .pn{position:absolute;top:auto;bottom:16px;right:16px;width:30px;height:33px;font-size:12px}
+  .refs{position:static;flex-wrap:wrap;justify-content:flex-start;margin:0 0 14px;max-width:none}
+  a.ref{height:auto;min-height:30px;padding:6px 12px;white-space:normal;line-height:1.2;border-radius:16px}
   .cv{position:relative;inset:auto;width:100vw;height:56.25vw;margin:30px -20px 0;--u:1vw;overflow:hidden}
   .cv .off{visibility:visible}
   .pill{width:100%;height:100%;padding:3px 10px 0;border-radius:0;border:0;box-shadow:none;justify-content:space-between}
@@ -371,6 +392,7 @@ body.show-notes .notes-view{display:block}
   body{overflow:visible;background:#fff}
   .slide{position:relative;left:auto;top:auto;transform:none;visibility:visible;height:7.5in;width:100%;break-after:page}
   .controls,.overview,.notes-view{display:none!important}
+  a.ref{border-color:#00802F}
   .cv .off{visibility:visible}
   *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
 }
@@ -380,7 +402,7 @@ JS = r"""
 (()=>{const slides=[...document.querySelectorAll('.slide')],root=document.documentElement,body=document.body,
  ov=document.getElementById('overview'),nv=document.getElementById('notesView');
 const by=id=>document.getElementById(id);
-let cur=0,step=0;const m=location.hash.match(/(\d+)$/);if(m&&+m[1]>=1&&+m[1]<=slides.length)cur=+m[1]-1;
+let cur=0,step=0,arrived=false;{const h=location.hash.replace(/^#\/?/,'');if(/^\d+$/.test(h)){if(+h>=1&&+h<=slides.length){cur=+h-1;arrived=true}}else if(h){const i=slides.findIndex(s=>s.dataset.id===decodeURIComponent(h));if(i>=0){cur=i;arrived=true}}}
 const maxStep=()=>+slides[cur].dataset.steps||0,stepping=()=>!matchMedia('(max-width:999px),(max-height:480px)').matches;
 function show(){slides[cur].querySelectorAll('.it[data-s],.it[data-e],.tx p[data-s]').forEach(e=>{const a=+e.dataset.s||0,x=e.dataset.e?+e.dataset.e:1e9;
   e.classList.toggle('off',!(step>=a&&step<x))});by('prev').disabled=cur===0&&step===0;by('next').disabled=cur===slides.length-1&&step>=maxStep()}
@@ -390,7 +412,7 @@ function go(n,end){cur=Math.max(0,Math.min(slides.length-1,n));step=end?maxStep(
  by('count').textContent=(cur+1)+' / '+slides.length;
  by('progress').style.width=((cur+1)/slides.length*100)+'%';
  const t=slides[cur].querySelector('.notes');nv.textContent=t?t.textContent:'';
- history.replaceState(null,'','#/'+(cur+1));ov.classList.remove('open');show();fitCanvas(slides[cur]);
+ history.replaceState(null,'','#/'+(slides[cur].dataset.id||cur+1));ov.classList.remove('open');show();fitCanvas(slides[cur]);
 }
 const next=()=>{if(stepping()&&step<maxStep()){step++;show()}else go(cur+1)},prev=()=>{if(stepping()&&step>0){step--;show()}else go(cur-1,true)};
 by('prev').onclick=prev;by('next').onclick=next;
@@ -414,6 +436,16 @@ document.addEventListener('keydown',e=>{if(e.ctrlKey||e.metaKey||e.altKey)return
 let x0=null;document.addEventListener('touchstart',e=>{x0=e.touches[0].clientX},{passive:true});
 document.addEventListener('touchend',e=>{if(x0===null)return;const d=e.changedTouches[0].clientX-x0;x0=null;
  if(Math.abs(d)>60)(d<0?next():prev())},{passive:true});
+function place(){if(matchMedia('(max-width:999px),(max-height:480px)').matches)return;
+ const boxes=s=>{const out=[];s.querySelectorAll('.frame img,.cv img,.cv table,.cv svg path,.frame .box,.frame li,.frame td,.cv .tx p,.frame p,.frame h2').forEach(el=>{
+  if(el.closest('.refs')||el.matches('.dfoot,.source,.pn')||el.closest('.pn'))return;
+  if(el.matches('svg path')&&el.getAttribute('fill')==='none')return;
+  let r;if(el.matches('p,li,h2,td')){const g=document.createRange();g.selectNodeContents(el);r=g.getBoundingClientRect()}else if(el.matches('.pimg img')){r=el.parentElement.getBoundingClientRect()}else r=el.getBoundingClientRect();
+  if(r.width>1&&r.height>1)out.push(r)});return out};
+ slides.forEach(s=>{const rf=s.querySelector('.refs');if(!rf)return;const prevVis=s.style.visibility;s.style.visibility='hidden';const bx=boxes(s);
+  for(const c of ['','left','bottom']){rf.classList.remove('left','bottom');if(c)rf.classList.add(c);const q=rf.getBoundingClientRect();
+   if(!bx.some(r=>r.right>q.left&&r.left<q.right&&r.bottom>q.top&&r.top<q.bottom))break}
+  s.style.visibility=prevVis})}
 // canvas text that runs out of its box (Gill Sans Regular is wider than the Light of many source decks) shrinks until it
 // fits, as with PowerPoint's "shrink text on overflow", by at most 14%; if that is not enough it overflowed in PowerPoint too
 let fontsOk=false;
@@ -424,7 +456,7 @@ function fitCanvas(s){const cv=s.querySelector('.cv');if(!fontsOk||!cv||!cv.clie
   if(leaves(t))t.style.removeProperty('--f')}}
 Promise.all([...document.fonts].filter(f=>f.family.replace(/"/g,'')==='HSGSans').map(f=>f.load().catch(()=>0)))
  .then(()=>document.fonts.ready).then(()=>{fontsOk=true;slides.forEach(fitCanvas);root.dataset.fit=1});
-window.hsgDeck={go,next,prev,count:slides.length};go(cur)})();
+window.hsgDeck={go,next,prev,count:slides.length,place};(document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve()).then(place);go(cur,arrived)})();
 """
 
 # the slide number tab of the template (master freeform, 2.33U x 2.56U)
@@ -582,18 +614,34 @@ class Html:
             self.files[src] = name
         return "assets/" + self.files[src]
 
+    def ref_url(self, to):
+        """The address of another slide, relative to this page (decks live in sibling folders)."""
+        folder, sid, _, _ = hd.resolve(to, self.base)
+        return f"../../{folder}/html/index.html#/{sid}"
+
+    def ref_chip(self, r):
+        folder, sid, tslide, tdeck = hd.resolve(r["to"], self.base)
+        kind = r.get("kind", "see")
+        word = {"recap": "Recap", "next": "Next", "see": "See also"}[kind]
+        where = tdeck.get("ref_label") or plain(tdeck["title"])
+        title = r.get("label") or plain(tslide["title"]).replace("\n", " ")
+        ext = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>'
+        return (f'<a class="ref" href="{self.ref_url(r["to"])}" target="_blank" rel="noopener" title="{esc(where)}: {esc(title)} (opens in a new tab)">'
+                f'<b>{word}</b><span class="lab">{esc(where)}: {esc(title)}</span>{ext}</a>')
+
     @staticmethod
     def htitle(text):
         """Escape a headline and apply its one inline mark, **bold**; a line break is written as \\n."""
         return re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", esc(text)).replace("\n", "<br>")
 
-    @staticmethod
-    def mark(text):
-        """Escape a text and apply the inline marks: **bold**, *italic*, `code`, ==marker==, x_{2}, 2^{n}, [link](url)."""
+    def mark(self, text):
+        """Escape a text and apply the inline marks: **bold**, *italic*, `code`, ==marker==, x_{2}, 2^{n}, [link](url),
+        [link](08#slide-id) for another slide (opens in a new tab)."""
         t = esc(text)
         codes = []
         t = re.sub(r"`([^`]+)`", lambda m: codes.append(m.group(1)) or f"\x00{len(codes) - 1}\x00", t)
         t = re.sub(r"\[([^\]]+)\]\((https?://[^)\s]+)\)", r'<a href="\2" target="_blank" rel="noopener">\1</a>', t)
+        t = hd.INLINE_REF.sub(lambda m: f'<a class="il" href="{self.ref_url(m.group(2))}" target="_blank" rel="noopener" title="Opens in a new tab">{m.group(1)}</a>', t)
         t = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", t)
         t = re.sub(r"(?<![\w*])\*([^*\s][^*]*)\*", r"<em>\1</em>", t)
         t = re.sub(r"==([^=]+)==", r"<mark>\1</mark>", t)
@@ -784,7 +832,11 @@ class Html:
         rows = ""
         for i, it in enumerate(s["items"], 1):
             cls = " cur" if i in cur else " ex" if it.get("kind") == "exercise" else ""
-            rows += f'<span class="date">{esc(it["date"])}</span><div class="bar{cls}">{esc(it["title"])}</div>'
+            if it.get("href"):
+                rows += (f'<span class="date">{esc(it["date"])}</span><a class="bar{cls}" href="{self.ref_url(it["href"])}" target="_blank" '
+                         f'rel="noopener" title="Open the slides of this session in a new tab">{esc(it["title"])}</a>')
+            else:
+                rows += f'<span class="date">{esc(it["date"])}</span><div class="bar{cls}">{esc(it["title"])}</div>'
             if s.get("break_after") == i:
                 rows += '<span></span><div class="brk" aria-label="Break"></div>'
         legend = '<div class="legend"><span class="lg-l">Lecture</span><span class="lg-e">Exercise</span><span class="lg-a">Assignment</span></div>'
@@ -847,7 +899,12 @@ class Html:
                 c = f' class="{r["f"]}"' if r.get("f") else ""
                 body = esc(r["t"])
                 body = f"<b>{body}</b>" if r.get("b") else body
-                runs += f'<span{c} style="{rs}">{body}</span>'
+                span = f'<span{c} style="{rs}">{body}</span>'
+                if r.get("href"):
+                    h = r["href"]
+                    url = h if h.startswith(("http://", "https://")) else self.ref_url(h)
+                    span = f'<a class="il" href="{esc(url)}" target="_blank" rel="noopener" title="Opens in a new tab">{span}</a>'
+                runs += span
             first = max((r.get("sz", 1.9) for r in p["r"] if "sz" in r), default=1.9)
             ds = f' data-s="{p["s"]}"' if p.get("s") else ""
             out += f'<p{ds} style="{st};font-size:calc({first}*var(--u)*var(--f,1))">{runs}</p>'
@@ -964,12 +1021,16 @@ class Html:
                 if d.get("footer"):
                     extra += f'<p class="dfoot">{esc(d["footer"])}</p>'
                 extra += f'<span class="pn" aria-hidden="true">{TAB}{n}</span>'
+            if s.get("refs"):
+                pos = " bottom" if s.get("refs_at") == "bottom" else ""
+                extra += (f'<nav class="refs{pos}" aria-label="Related slides, they open in a new tab">'
+                          + "".join(self.ref_chip(r) for r in s["refs"]) + "</nav>")
             notes = f'<template class="notes">{esc(s["notes"])}</template>' if s.get("notes") else ""
             t = f' data-time="{esc(str(s["time"]))}"' if s.get("time") else ""
             bare = " bare" if lay == "questions" and not s.get("points") else ""
             steps = max([i.get("s", 0) for i in s.get("items", [])] + [p.get("s", 0) for i in s.get("items", [])
                         for p in (i.get("tx") or {}).get("p", [])] + [0]) if lay == "canvas" else 0
-            ds = f' data-steps="{steps}"' if steps else ""
+            ds = (f' data-steps="{steps}"' if steps else "") + (f' data-id="{esc(s["id"])}"' if s.get("id") else "")
             sections += (f'<section class="slide l-{lay}{bare}{" active" if n == 1 else ""}" id="s{n}" data-title="{esc(plain(s["title"]) or f"Slide {n}")}"{t}{ds} '
                          f'aria-label="Slide {n} of {n_all}"><div class="frame">{inner}</div>{extra}{notes}</section>\n')
 
@@ -1036,6 +1097,12 @@ OVERFLOW_JS = """() => {
   if(src){const q=src.getBoundingClientRect();
     for(const el of f.querySelectorAll('.main>*')){const r=el.getBoundingClientRect();
       if(r.bottom>q.top+1&&r.left<q.right){bad.push('the content runs into the source line');break}}}
+  const rf=s.querySelector('.refs');
+  if(rf&&!matchMedia('(max-width:999px)').matches){const q=rf.getBoundingClientRect();
+    for(const el of s.querySelectorAll('.cv .tx p,.cv img,.cv svg path,.cv table,.frame p:not(.dfoot):not(.source),.frame img,.frame li,.frame .box')){
+      if(rf.contains(el))continue;let r;if(el.matches('p,li')){const g=document.createRange();g.selectNodeContents(el);r=g.getBoundingClientRect()}else if(el.matches('.pimg img'))r=el.parentElement.getBoundingClientRect();else r=el.getBoundingClientRect();if(!r.width||!r.height)continue;
+      if(el.matches('svg path')&&(el.getAttribute('fill')==='none'))continue;
+      if(r.right>q.left&&r.left<q.right&&r.bottom>q.top&&r.top<q.bottom){bad.push('the reference links cover content (set refs_at to bottom or move the link)');break}}}
   const m=f.querySelector('.main');
   if(m&&m.children.length&&!s.matches('.l-menu,.l-task,.bare')){const top=m.getBoundingClientRect().top+parseFloat(getComputedStyle(m).paddingTop);
     let lo=Infinity,hi=0;for(const c of m.children){const r=c.getBoundingClientRect();lo=Math.min(lo,r.top);hi=Math.max(hi,r.bottom)}

@@ -1,0 +1,1140 @@
+{
+ "labels": {
+  "07a": "Lecture 7a",
+  "07b": "Lecture 7b",
+  "08": "Lecture 8",
+  "09": "Lecture 9",
+  "10": "Lecture 10",
+  "11": "Lecture 11"
+ },
+ "ids": [
+  [
+   "07a",
+   "ASSE Reloaded",
+   "start"
+  ],
+  [
+   "07b",
+   "Principled Architectural Design#1",
+   "start"
+  ],
+  [
+   "08",
+   "Interaction Styles#1",
+   "start"
+  ],
+  [
+   "09",
+   "Interactive Ecosystems",
+   "start"
+  ],
+  [
+   "10",
+   "Semantic Interoperability#1",
+   "start"
+  ],
+  [
+   "11",
+   "Constrained Systems and Agents",
+   "start"
+  ],
+  [
+   "07a",
+   "Overall Goal: Conscious",
+   "tradeoffs"
+  ],
+  [
+   "07a",
+   "Overall Goal: Multi-Level",
+   "multilevel"
+  ],
+  [
+   "07a",
+   "Overall Goal: Precision#1",
+   "precision"
+  ],
+  [
+   "07a",
+   "Overall Goal: Precision#2",
+   "http-stack"
+  ],
+  [
+   "07a",
+   "What’s with that PlugFest",
+   "plugfest"
+  ],
+  [
+   "07b",
+   "Principled Architectural Design#2",
+   "principled-design"
+  ],
+  [
+   "07b",
+   "Let’s Talk NFPs#1",
+   "nfps"
+  ],
+  [
+   "07b",
+   "Case Study 5: Computer Networking",
+   "networking"
+  ],
+  [
+   "07b",
+   "Project Xanadu#1",
+   "xanadu"
+  ],
+  [
+   "07b",
+   "Representational State Transfer#1",
+   "rest-intro"
+  ],
+  [
+   "07b",
+   "Client-Server: Three High-level Options",
+   "client-server"
+  ],
+  [
+   "07b",
+   "Stateless Interactions#1",
+   "stateless"
+  ],
+  [
+   "07b",
+   "Cacheability#1",
+   "cacheability"
+  ],
+  [
+   "07b",
+   "Layered System#1",
+   "layered-system"
+  ],
+  [
+   "07b",
+   "Code-on-Demand",
+   "code-on-demand"
+  ],
+  [
+   "07b",
+   "Uniform Interface#1",
+   "uniform-interface"
+  ],
+  [
+   "07b",
+   "(1/4) Uniform Identification",
+   "uniform-identification"
+  ],
+  [
+   "07b",
+   "(2/4) Manipulation",
+   "manipulation"
+  ],
+  [
+   "07b",
+   "(3/4) Self-descriptive",
+   "self-descriptive"
+  ],
+  [
+   "07b",
+   "(4/4) Guidance",
+   "hateoas"
+  ],
+  [
+   "07b",
+   "Summary: Evaluating",
+   "evaluating-styles"
+  ],
+  [
+   "08",
+   "Let’s Talk NFPs",
+   "nfps"
+  ],
+  [
+   "08",
+   "Smart Things and their Ecosystems#1",
+   "smart-things"
+  ],
+  [
+   "08",
+   "Agenda: Interaction Styles",
+   "agenda"
+  ],
+  [
+   "08",
+   "Taking a step back: Core OOP",
+   "oop"
+  ],
+  [
+   "08",
+   "Remote Procedure Calls",
+   "rpc"
+  ],
+  [
+   "08",
+   "Interface Definition/Description Languages",
+   "idl"
+  ],
+  [
+   "08",
+   "Common ORB Architecture (CORBA)#1",
+   "corba"
+  ],
+  [
+   "08",
+   "W3C / OASIS Web Services#1",
+   "webservices"
+  ],
+  [
+   "08",
+   "From WS-* to CRUD-over-HTTP",
+   "crud-over-http"
+  ],
+  [
+   "08",
+   "Resource-oriented Architecture",
+   "roa"
+  ],
+  [
+   "08",
+   "Example: CRUD-over-HTTP11-bot",
+   "crud-bot"
+  ],
+  [
+   "08",
+   "Long-running Requests",
+   "long-running"
+  ],
+  [
+   "08",
+   "URIs and Statelessness",
+   "uris"
+  ],
+  [
+   "08",
+   "gRPC: RPC for the 2020s#1",
+   "grpc"
+  ],
+  [
+   "08",
+   "Example: gRPCBot",
+   "grpc-bot"
+  ],
+  [
+   "08",
+   "Reminder on HTTP/1.1 vs. HTTP/2#1",
+   "http2"
+  ],
+  [
+   "08",
+   "What about MCPbot",
+   "mcp-bot"
+  ],
+  [
+   "08",
+   "Towards the Exercise: Event-driven",
+   "exercise-events"
+  ],
+  [
+   "08",
+   "Publish/Subscribe on the Web",
+   "pubsub-web"
+  ],
+  [
+   "09",
+   "PlugFest Preview",
+   "plugfest-preview"
+  ],
+  [
+   "09",
+   "Ecosystems: Beyond individual requests",
+   "beyond-requests"
+  ],
+  [
+   "09",
+   "Decoupling and Guidance",
+   "decoupling-guidance"
+  ],
+  [
+   "09",
+   "Affordances are relational",
+   "affordances"
+  ],
+  [
+   "09",
+   "REST APIs Must be Hypertext-Driven",
+   "hypertext-driven"
+  ],
+  [
+   "09",
+   "The Hypermedia Way#1",
+   "hypermedia-way"
+  ],
+  [
+   "09",
+   "Contracts on the Web",
+   "contracts"
+  ],
+  [
+   "09",
+   "~Specification of the underlying protocol",
+   "http-idioms"
+  ],
+  [
+   "09",
+   "~When humans browse the Web",
+   "link-relations"
+  ],
+  [
+   "09",
+   "~Instead of hard-coding clients with specific application protocols",
+   "media-types"
+  ],
+  [
+   "09",
+   "The final step: A Common Conceptual Model",
+   "common-model"
+  ],
+  [
+   "09",
+   "Hypertext: Ted Nelson",
+   "nelson"
+  ],
+  [
+   "09",
+   "Data Decentralization#1",
+   "data-decentralization"
+  ],
+  [
+   "09",
+   "Data Decentralization: Personal Data Storage#1",
+   "personal-data"
+  ],
+  [
+   "09",
+   "Towards Assignment 9",
+   "assignment-9"
+  ],
+  [
+   "10",
+   "Smart Things and their Ecosystems#1",
+   "smart-things"
+  ],
+  [
+   "10",
+   "Level of Coupling",
+   "level-of-coupling"
+  ],
+  [
+   "10",
+   "What we‘ve seen by now",
+   "seen-by-now"
+  ],
+  [
+   "10",
+   "Shared Understanding: Is this even possible?#1",
+   "shared-understanding"
+  ],
+  [
+   "10",
+   "Some well-known Ontologies",
+   "ontologies"
+  ],
+  [
+   "10",
+   "Knowledge and Programming",
+   "knowledge-programming"
+  ],
+  [
+   "10",
+   "Semantics and Large Language Models",
+   "semantics-llms"
+  ],
+  [
+   "11",
+   "Programming on the Knowledge Level",
+   "knowledge-level"
+  ],
+  [
+   "11",
+   "Model Context Protocol: Overview",
+   "mcp-overview"
+  ],
+  [
+   "11",
+   "What‘s different when we instead consider systems",
+   "constrained"
+  ],
+  [
+   "11",
+   "The Hypertext Transfer Protocol (HTTP/X)",
+   "http-x"
+  ],
+  [
+   "11",
+   "The Constrained Application Protocol",
+   "coap"
+  ]
+ ],
+ "refs": [
+  [
+   "07a",
+   "Overall Goal: Conscious",
+   [
+    [
+     "07b#principled-design",
+     "next"
+    ]
+   ]
+  ],
+  [
+   "07a",
+   "Overall Goal: Multi-Level",
+   [
+    [
+     "10#level-of-coupling",
+     "next"
+    ]
+   ]
+  ],
+  [
+   "07a",
+   "Overall Goal: Precision#1",
+   [
+    [
+     "08#grpc",
+     "next"
+    ]
+   ]
+  ],
+  [
+   "07a",
+   "Overall Goal: Precision#2",
+   [
+    [
+     "08#http2",
+     "next"
+    ],
+    [
+     "11#http-x",
+     "next"
+    ]
+   ]
+  ],
+  [
+   "07a",
+   "What’s with that PlugFest",
+   [
+    [
+     "09#plugfest-preview",
+     "next"
+    ]
+   ]
+  ],
+  [
+   "07b",
+   "Principled Architectural Design#2",
+   [
+    [
+     "07a#tradeoffs",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "07b",
+   "Case Study 5: Computer Networking",
+   [
+    [
+     "11#constrained",
+     "next"
+    ]
+   ]
+  ],
+  [
+   "07b",
+   "Project Xanadu#1",
+   [
+    [
+     "09#nelson",
+     "next"
+    ]
+   ]
+  ],
+  [
+   "07b",
+   "(1/4) Uniform Identification",
+   [
+    [
+     "08#uris",
+     "next"
+    ]
+   ]
+  ],
+  [
+   "07b",
+   "(2/4) Manipulation",
+   [
+    [
+     "08#crud-over-http",
+     "next"
+    ]
+   ]
+  ],
+  [
+   "07b",
+   "(3/4) Self-descriptive",
+   [
+    [
+     "09#media-types",
+     "next",
+     "Media Types + RDF Vocabularies"
+    ]
+   ]
+  ],
+  [
+   "07b",
+   "Summary: Evaluating",
+   [
+    [
+     "08#grpc",
+     "next"
+    ]
+   ]
+  ],
+  [
+   "08",
+   "Review: Principled Architectural Design#1",
+   [
+    [
+     "07b#principled-design",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "08",
+   "Review: Principled Architectural Design#3",
+   [
+    [
+     "07b#rest-intro",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "08",
+   "Let’s Talk NFPs",
+   [
+    [
+     "07b#nfps",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "08",
+   "Smart Things and their Ecosystems#1",
+   [
+    [
+     "10#smart-things",
+     "next"
+    ]
+   ]
+  ],
+  [
+   "08",
+   "Copied from last week",
+   [
+    [
+     "07b#client-server",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "08",
+   "Remember?",
+   [
+    [
+     "07b#evaluating-styles",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "08",
+   "Reminder on HTTP/1.1 vs. HTTP/2#1",
+   [
+    [
+     "07a#http-stack",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "08",
+   "What about MCPbot",
+   [
+    [
+     "11#mcp-overview",
+     "next"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "Review: Interaction Styles",
+   [
+    [
+     "08#agenda",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "Resource-oriented Architecture",
+   [
+    [
+     "08#roa",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "Example: CRUD-over-HTTP11-bot",
+   [
+    [
+     "08#crud-bot",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "Long-running Requests",
+   [
+    [
+     "08#long-running",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "URIs and Statelessness#1",
+   [
+    [
+     "08#uris",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "gRPC: RPC for the 2020s#1",
+   [
+    [
+     "08#grpc",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "Example: gRPCBot",
+   [
+    [
+     "08#grpc-bot",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "Remember?",
+   [
+    [
+     "07b#evaluating-styles",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "Reminder on HTTP/1.1 vs. HTTP/2#1",
+   [
+    [
+     "08#http2",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "What about MCPbot",
+   [
+    [
+     "08#mcp-bot",
+     "recap"
+    ],
+    [
+     "11#mcp-overview",
+     "next"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "Review: Principled Architectural Design",
+   [
+    [
+     "07b#rest-intro",
+     "recap"
+    ],
+    [
+     "08#pubsub-web",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "PlugFest Preview",
+   [
+    [
+     "07a#plugfest",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "URIs and Statelessness#2",
+   [
+    [
+     "08#uris",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "Ecosystems: Beyond individual requests",
+   [
+    [
+     "08#oop",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "REST APIs Must be Hypertext-Driven",
+   [
+    [
+     "07b#hateoas",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "~Instead of hard-coding clients with specific application protocols",
+   [
+    [
+     "07b#self-descriptive",
+     "recap"
+    ],
+    [
+     "10#shared-understanding",
+     "next"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "Solid: Pods, WebIDs and Apps",
+   [
+    [
+     "09#personal-data",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "Reading and Writing Data",
+   [
+    [
+     "07b#uniform-interface",
+     "recap"
+    ],
+    [
+     "08#crud-over-http",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "Finding Data",
+   [
+    [
+     "09#hypermedia-way",
+     "recap"
+    ],
+    [
+     "10#shared-understanding",
+     "next"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "Data Sovereignty",
+   [
+    [
+     "09#data-decentralization",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "Critical View",
+   [
+    [
+     "07b#principled-design",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "10",
+   "Smart Things and their Ecosystems#1",
+   [
+    [
+     "08#smart-things",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "10",
+   "Level of Coupling",
+   [
+    [
+     "07a#multilevel",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "10",
+   "What we‘ve seen by now",
+   [
+    [
+     "07b#principled-design",
+     "recap"
+    ],
+    [
+     "09#decoupling-guidance",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "10",
+   "Don‘t make the same mistake twice",
+   [
+    [
+     "08#webservices",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "10",
+   "W3C WoT TD Ecosystems",
+   [
+    [
+     "09#link-relations",
+     "recap",
+     "HATEOAS + Link Relation Types"
+    ]
+   ]
+  ],
+  [
+   "10",
+   "Knowledge and Programming",
+   [
+    [
+     "11#knowledge-level",
+     "next"
+    ]
+   ]
+  ],
+  [
+   "10",
+   "Semantics and Large Language Models",
+   [
+    [
+     "11#mcp-overview",
+     "next"
+    ]
+   ]
+  ],
+  [
+   "10",
+   "Don‘t make the same mistake thrice",
+   [
+    [
+     "11#mcp-overview",
+     "next"
+    ]
+   ]
+  ],
+  [
+   "11",
+   "Programming on the Knowledge Level",
+   [
+    [
+     "10#knowledge-programming",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "11",
+   "Semantic Coupling",
+   [
+    [
+     "10#level-of-coupling",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "11",
+   "Towards Linked Open Data#1",
+   [
+    [
+     "10#ontologies",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "11",
+   "Model Context Protocol: Overview",
+   [
+    [
+     "08#mcp-bot",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "11",
+   "Noteworthy aspects",
+   [
+    [
+     "08#corba",
+     "recap"
+    ],
+    [
+     "08#crud-over-http",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "11",
+   "What‘s Next? Let‘s ask History#1",
+   [
+    [
+     "08#rpc",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "11",
+   "The Hypertext Transfer Protocol (HTTP/X)",
+   [
+    [
+     "08#http2",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "11",
+   "The Constrained Application Protocol",
+   [
+    [
+     "08#pubsub-web",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "08",
+   "=Remote Data Access",
+   [
+    [
+     "07b#client-server",
+     "recap"
+    ]
+   ]
+  ]
+ ],
+ "inline": [
+  [
+   "07b",
+   "Play and Discuss!#1",
+   "REST architectural style",
+   "07b#rest-intro"
+  ],
+  [
+   "07b",
+   "(4/4) Guidance",
+   "Lecture 9",
+   "09#hypertext-driven"
+  ],
+  [
+   "08",
+   "Different Market – Same Narrative",
+   "See Exercise 8",
+   "08#exercise-events"
+  ],
+  [
+   "08",
+   "From WS-* to CRUD-over-HTTP",
+   "REST’s Uniform Interface",
+   "07b#uniform-interface"
+  ],
+  [
+   "08",
+   "Publish/Subscribe on the Web",
+   "Week 11",
+   "11#coap"
+  ],
+  [
+   "09",
+   "Ecosystems: Beyond individual requests",
+   "Lecture 8",
+   "08#start"
+  ],
+  [
+   "09",
+   "Consider that clients may themselves modify hypermedia",
+   "Remember that affordances are relational",
+   "09#affordances"
+  ],
+  [
+   "10",
+   "Example: Semantic Sensor Network",
+   "Remember hyperlinks!",
+   "09#hypermedia-way"
+  ],
+  [
+   "10",
+   "Of course not!#1",
+   "Lecture 8",
+   "08#idl"
+  ],
+  [
+   "11",
+   "Branding Low-power Networking for the IoT",
+   "PlugFest",
+   "07a#plugfest"
+  ],
+  [
+   "09",
+   "~Show Galaxus",
+   "slide 9 of «Semantic Interoperability»",
+   "10#seen-by-now"
+  ]
+ ],
+ "syllabus": {
+  "Principled Architectural Design": "07b#start",
+  "Interaction Styles": "08#start",
+  "Interactive Ecosystems and Solid": "09#start",
+  "Semantic Interoperability": "10#start",
+  "Constrained Systems and Agents": "11#start"
+ },
+ "goals": {
+  "7": "07b#start",
+  "8": "08#start",
+  "9": "09#start",
+  "10": "10#start",
+  "11": "11#start"
+ },
+ "navigators": [
+  [
+   "07b",
+   [
+    "Client-Server",
+    "client-server"
+   ]
+  ],
+  [
+   "07b",
+   [
+    "Statelessness",
+    "stateless"
+   ]
+  ],
+  [
+   "07b",
+   [
+    "Cacheability",
+    "cacheability"
+   ]
+  ],
+  [
+   "07b",
+   [
+    "Layered System",
+    "layered-system"
+   ]
+  ],
+  [
+   "07b",
+   [
+    "Code-on-Demand",
+    "code-on-demand"
+   ]
+  ],
+  [
+   "07b",
+   [
+    "Uniform Interface",
+    "uniform-interface"
+   ]
+  ],
+  [
+   "09",
+   [
+    "HTTP Protocol Idioms",
+    "http-idioms"
+   ]
+  ],
+  [
+   "09",
+   [
+    "HATEOAS + Link Relation Types",
+    "link-relations"
+   ]
+  ],
+  [
+   "09",
+   [
+    "Media Types + RDF Vocabularies",
+    "media-types"
+   ]
+  ]
+ ]
+}

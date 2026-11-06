@@ -1,3 +1,4 @@
-# videos extracted from the .pptx files: too large for the repository
-media/
-**/html/media/
+# videos extracted from the .pptx files: keep only the re-encoded web versions (web_videos.py)
+**/media/*
+!**/media/*.web.mp4
+/asse/*/media/

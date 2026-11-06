@@ -136,7 +136,7 @@
     {"k": "pic", "src": "img/f7b72af7f4.png", "alt": "How to Train a Custom Object Detection Model with YOLOv7?", "x": 60.491, "y": 4.663, "w": 14.735, "h": 8.283},
     {"k": "pic", "src": "img/e7e3b896af.jpg", "alt": "Why does #5G need #Beamforming ?", "x": 76.513, "y": 1.13, "w": 21.656, "h": 16.242, "shadow": true},
     {"k": "shape", "x": 68.301, "y": 19.67, "w": 43.633, "h": 2.46, "s": 1, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Reverse Beamforming + Visual Object Reconition = ?", "sz": 1.405}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "pic", "src": "img/poster-black.png", "alt": "Video", "x": 3.13, "y": 12.407, "w": 63.517, "h": 35.729, "s": 2, "video": "media/cc14202b15.mp4"}
+    {"k": "pic", "src": "img/poster-black.png", "alt": "Video", "x": 3.13, "y": 12.407, "w": 63.517, "h": 35.729, "s": 2, "video": "media/cc14202b15.web.mp4"}
    ]
   },
   {
@@ -296,10 +296,10 @@
    "title": "Lecture Learning Goals",
    "items": [
     {"k": "shape", "x": 3.924, "y": 4.114, "w": 92.228, "h": 2.213, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "From Software to Systems", "sz": 1.948, "c": "#00802f"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 1.875}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "Lecture 1:", "sz": 1.875, "href": "07b#start"}, {"t": " Understand how you may ", "sz": 1.875}, {"t": "select fitting architectural constraints ", "sz": 1.875, "b": 1}, {"t": "to achieve a desired non-functional profile", "sz": 1.875}], "s": 1}, {"al": "l", "r": [{"t": "Assignment 1: Uniform Interaction? Exploring the REST Architectural Style", "sz": 1.875}], "s": 1}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "Lecture 2:", "sz": 1.875, "href": "08#start"}, {"t": " Understand how you may ", "sz": 1.875}, {"t": "select fitting interaction styles ", "sz": 1.875, "b": 1}, {"t": "to achieve a desired non-functional profile", "sz": 1.875}], "s": 2}, {"al": "l", "r": [{"t": "Assignment 2: What Interaction Style? Event-based Interaction using MQTT and W3C WebSub", "sz": 1.875}], "s": 2}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "Lecture 3:", "sz": 1.875, "href": "09#start"}, {"t": " Understand ecological interaction between hosts ", "sz": 1.875}, {"t": "beyond individual requests", "sz": 1.875, "b": 1}], "s": 4}, {"al": "l", "r": [{"t": "Assignment 3: Where to Couple? Decentralization and Informed Discovery", "sz": 1.875}], "s": 4}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "Lecture 4:", "sz": 1.875, "href": "10#start"}, {"t": " Understand that ", "sz": 1.875}, {"t": "decoupling may happen on many levels ", "sz": 1.875, "b": 1}, {"t": "beyond the immediate API", "sz": 1.875}], "s": 5}, {"al": "l", "r": [{"t": "Assignment 4: Multi-level Decoupling? Decoupling through Semantic Hypermedia", "sz": 1.875}], "s": 5}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "Lecture 5:", "sz": 1.875, "href": "11#start"}, {"t": " Understand ", "sz": 1.875}, {"t": "what changes ", "sz": 1.875, "b": 1}, {"t": "when higher autonomy potential and constrained devices enter the game", "sz": 1.875}], "s": 6}, {"al": "l", "r": [{"t": "Assignment 5: Autonomy and Interactions with Constrained Devices", "sz": 1.875}], "s": 6}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 1.875}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "Lecture 7:", "sz": 1.875, "href": "07b#start"}, {"t": " Understand how you may ", "sz": 1.875}, {"t": "select fitting architectural constraints ", "sz": 1.875, "b": 1}, {"t": "to achieve a desired non-functional profile", "sz": 1.875}], "s": 1}, {"al": "l", "r": [{"t": "Assignment 7: Uniform Interaction? Exploring the REST Architectural Style", "sz": 1.875}], "s": 1}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "Lecture 8:", "sz": 1.875, "href": "08#start"}, {"t": " Understand how you may ", "sz": 1.875}, {"t": "select fitting interaction styles ", "sz": 1.875, "b": 1}, {"t": "to achieve a desired non-functional profile", "sz": 1.875}], "s": 2}, {"al": "l", "r": [{"t": "Assignment 8: What Interaction Style? Event-based Interaction using MQTT and W3C WebSub", "sz": 1.875}], "s": 2}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "Lecture 9:", "sz": 1.875, "href": "09#start"}, {"t": " Understand ecological interaction between hosts ", "sz": 1.875}, {"t": "beyond individual requests", "sz": 1.875, "b": 1}], "s": 4}, {"al": "l", "r": [{"t": "Assignment 9: Where to Couple? Decentralization and Informed Discovery", "sz": 1.875}], "s": 4}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "Lecture 10:", "sz": 1.875, "href": "10#start"}, {"t": " Understand that ", "sz": 1.875}, {"t": "decoupling may happen on many levels ", "sz": 1.875, "b": 1}, {"t": "beyond the immediate API", "sz": 1.875}], "s": 5}, {"al": "l", "r": [{"t": "Assignment 10: Multi-level Decoupling? Decoupling through Semantic Hypermedia", "sz": 1.875}], "s": 5}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "Lecture 11:", "sz": 1.875, "href": "11#start"}, {"t": " Understand ", "sz": 1.875}, {"t": "what changes ", "sz": 1.875, "b": 1}, {"t": "when higher autonomy potential and constrained devices enter the game", "sz": 1.875}], "s": 6}, {"al": "l", "r": [{"t": "Assignment 11: Autonomy and Interactions with Constrained Devices", "sz": 1.875}], "s": 6}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 74.866, "y": 25.833, "w": 8.206, "h": 4.334, "rot": 25.38, "s": 3, "g": "rightArrow", "fill": "#00802f", "ln": "#001307", "lw": 0.104},
     {"k": "shape", "x": 84.341, "y": 22.117, "w": 9.688, "h": 4.334, "rot": 84.4, "s": 3, "g": "rightArrow", "fill": "#00802f", "ln": "#001307", "lw": 0.104},
-    {"k": "shape", "x": 82.665, "y": 30.29, "w": 13.989, "h": 5.315, "s": 3, "g": "roundRect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "Plugfest with Pitas (Dec 2, from 4:30pm)", "sz": 1.25, "b": 1, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 82.665, "y": 30.29, "w": 13.989, "h": 5.315, "s": 3, "g": "roundRect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "Plugfest with Pitas (Nov 24, 5 to 8pm)", "sz": 1.25, "b": 1, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "pic", "src": "img/021d51ae1a.png", "alt": "Pizza Slice Detailed Icon PNG & SVG Design For T-Shirts", "x": 95.155, "y": 28.732, "w": 3.134, "h": 3.134, "s": 3}
    ]
   },
@@ -316,7 +316,7 @@
     {"k": "pic", "src": "img/c8bf61e9e2.jpg", "alt": "Ein Bild, das Kleidung, Person, Schuhwerk, Im Haus enthält.\n\nAutomatisch generierte Beschreibung", "x": 58.867, "y": 20.052, "w": 20.332, "h": 15.249, "s": 2, "shadow": true},
     {"k": "pic", "src": "img/6c7e82ee58.jpg", "alt": "Ein Bild, das Person, Kleidung, Im Haus, Computer enthält.\n\nAutomatisch generierte Beschreibung", "x": 71.918, "y": 37.176, "w": 17.288, "h": 12.966, "s": 2, "shadow": true},
     {"k": "pic", "src": "img/96d5669bb0.png", "alt": "Screenshot of the IETF datatracker page of RFC 8352, Energy-Efficient Features of Internet of Things Protocols", "x": 40.02, "y": 39.018, "w": 27.322, "h": 12.951, "s": 3, "shadow": true},
-    {"k": "shape", "x": 82.665, "y": 30.29, "w": 13.989, "h": 5.315, "g": "roundRect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "Plugfest with Pitas (Dec 2, from 4:30pm)", "sz": 1.25, "b": 1, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 82.665, "y": 30.29, "w": 13.989, "h": 5.315, "g": "roundRect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "Plugfest with Pitas (Nov 24, 5 to 8pm)", "sz": 1.25, "b": 1, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "pic", "src": "img/021d51ae1a.png", "alt": "Pizza Slice Detailed Icon PNG & SVG Design For T-Shirts", "x": 95.155, "y": 28.732, "w": 3.134, "h": 3.134}
    ],
    "id": "plugfest",
@@ -367,7 +367,7 @@
     },
     {
      "date": "23.11.2026",
-     "title": "Interactive Ecosystems",
+     "title": "Interactive Ecosystems and Solid",
      "href": "09#start"
     },
     {
@@ -377,7 +377,7 @@
     },
     {
      "date": "07.12.2026",
-     "title": "Interaction with AI Agents and Physical Devices",
+     "title": "Constrained Systems and Agents",
      "href": "11#start"
     },
     {

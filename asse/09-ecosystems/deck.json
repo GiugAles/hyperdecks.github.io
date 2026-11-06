@@ -1,11 +1,11 @@
 {
- "title": "Interactive Ecosystems",
+ "title": "Interactive Ecosystems and Solid",
  "lang": "en",
  "footer": "Advanced Software and Systems Engineering | Institute of Computer Science | University of St.Gallen",
  "slides": [
   {
    "layout": "title",
-   "title": "Interactive Ecosystems",
+   "title": "Interactive Ecosystems\nand Solid",
    "presenters": [
     "Simon Mayer",
     "Alessandro Giugno",
@@ -515,7 +515,7 @@
     },
     {
      "date": "23.11.2026",
-     "title": "Interactive Ecosystems"
+     "title": "Interactive Ecosystems and Solid"
     },
     {
      "date": "30.11.2026",
@@ -524,7 +524,7 @@
     },
     {
      "date": "07.12.2026",
-     "title": "Interaction with AI Agents and Physical Devices",
+     "title": "Constrained Systems and Agents",
      "href": "11#start"
     },
     {
@@ -560,10 +560,10 @@
   },
   {
    "layout": "canvas",
-   "title": "Lecture Learning Goals: Interaction Styles",
+   "title": "Lecture Learning Goals: Interactive Ecosystems and Solid",
    "items": [
-    {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 1.875}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "Lecture 1:", "sz": 1.875, "c": "#a6a6a6", "href": "07b#start"}, {"t": " Understand how you may select fitting architectural constraints to achieve a desired non-functional profile", "sz": 1.875, "c": "#a6a6a6"}]}, {"al": "l", "r": [{"t": "Assignment 1: Uniform Interaction? Exploring the REST Architectural Style", "sz": 1.875, "c": "#a6a6a6"}]}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "Lecture 2:", "sz": 1.875, "c": "#a6a6a6", "href": "08#start"}, {"t": " Understand how you may select fitting interaction styles to achieve a desired non-functional profile", "sz": 1.875, "c": "#a6a6a6"}]}, {"al": "l", "r": [{"t": "Assignment 2: What Interaction Style? Event-based Interaction using MQTT and W3C WebSub", "sz": 1.875, "c": "#a6a6a6"}]}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "Lecture 3: Understand ecological interaction between hosts beyond individual requests", "sz": 1.875, "b": 1, "c": "#0a5f2d"}]}, {"al": "l", "r": [{"t": "Assignment 3: Where to Couple? Decentralization and Informed Discovery", "sz": 1.875, "b": 1, "c": "#0a5f2d"}]}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "Lecture 4:", "sz": 1.875, "c": "#a6a6a6", "href": "10#start"}, {"t": " Understand that ", "sz": 1.875, "c": "#a6a6a6"}, {"t": "decoupling may happen on many levels ", "sz": 1.875, "b": 1, "c": "#a6a6a6"}, {"t": "beyond the immediate API", "sz": 1.875, "c": "#a6a6a6"}]}, {"al": "l", "r": [{"t": "Assignment 4: Multi-level Decoupling? Decoupling through Semantic Hypermedia", "sz": 1.875, "c": "#a6a6a6"}]}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "Lecture 5:", "sz": 1.875, "c": "#a6a6a6", "href": "11#start"}, {"t": " Understand ", "sz": 1.875, "c": "#a6a6a6"}, {"t": "what changes ", "sz": 1.875, "b": 1, "c": "#a6a6a6"}, {"t": "when higher autonomy potential and constrained devices enter the game", "sz": 1.875, "c": "#a6a6a6"}]}, {"al": "l", "r": [{"t": "Assignment 5: Autonomy and Interactions with Constrained Devices", "sz": 1.875, "c": "#a6a6a6"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 82.665, "y": 30.29, "w": 13.989, "h": 5.315, "g": "roundRect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "Plugfest with Pitas (Dec 2, from 4:30pm)", "sz": 1.25, "b": 1, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 1.875}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "Lecture 7:", "sz": 1.875, "c": "#a6a6a6", "href": "07b#start"}, {"t": " Understand how you may select fitting architectural constraints to achieve a desired non-functional profile", "sz": 1.875, "c": "#a6a6a6"}]}, {"al": "l", "r": [{"t": "Assignment 7: Uniform Interaction? Exploring the REST Architectural Style", "sz": 1.875, "c": "#a6a6a6"}]}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "Lecture 8:", "sz": 1.875, "c": "#a6a6a6", "href": "08#start"}, {"t": " Understand how you may select fitting interaction styles to achieve a desired non-functional profile", "sz": 1.875, "c": "#a6a6a6"}]}, {"al": "l", "r": [{"t": "Assignment 8: What Interaction Style? Event-based Interaction using MQTT and W3C WebSub", "sz": 1.875, "c": "#a6a6a6"}]}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "Lecture 9: Understand ecological interaction between hosts beyond individual requests", "sz": 1.875, "b": 1, "c": "#0a5f2d"}]}, {"al": "l", "r": [{"t": "Assignment 9: Where to Couple? Decentralization and Informed Discovery", "sz": 1.875, "b": 1, "c": "#0a5f2d"}]}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "Lecture 10:", "sz": 1.875, "c": "#a6a6a6", "href": "10#start"}, {"t": " Understand that ", "sz": 1.875, "c": "#a6a6a6"}, {"t": "decoupling may happen on many levels ", "sz": 1.875, "b": 1, "c": "#a6a6a6"}, {"t": "beyond the immediate API", "sz": 1.875, "c": "#a6a6a6"}]}, {"al": "l", "r": [{"t": "Assignment 10: Multi-level Decoupling? Decoupling through Semantic Hypermedia", "sz": 1.875, "c": "#a6a6a6"}]}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "Lecture 11:", "sz": 1.875, "c": "#a6a6a6", "href": "11#start"}, {"t": " Understand ", "sz": 1.875, "c": "#a6a6a6"}, {"t": "what changes ", "sz": 1.875, "b": 1, "c": "#a6a6a6"}, {"t": "when higher autonomy potential and constrained devices enter the game", "sz": 1.875, "c": "#a6a6a6"}]}, {"al": "l", "r": [{"t": "Assignment 11: Autonomy and Interactions with Constrained Devices", "sz": 1.875, "c": "#a6a6a6"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 82.665, "y": 30.29, "w": 13.989, "h": 5.315, "g": "roundRect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "Plugfest with Pitas (Nov 24, 5 to 8pm)", "sz": 1.25, "b": 1, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "pic", "src": "img/021d51ae1a.png", "alt": "Pizza Slice Detailed Icon PNG & SVG Design For T-Shirts", "x": 95.155, "y": 28.732, "w": 3.134, "h": 3.134}
    ]
   },
@@ -1076,7 +1076,7 @@
    "items": [
     {"k": "shape", "x": 7.744, "y": 51.356, "w": 33.776, "h": 2.776, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Full Video: https://youtu.be/mmfjM-SGlGs?t=1890", "sz": 1.667}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375], "nw": 1}},
     {"k": "shape", "x": 3.011, "y": 11.894, "w": 31.664, "h": 3.281, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Ted Nelson on the World Wide Web", "sz": 2.083}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375], "nw": 1}},
-    {"k": "pic", "src": "img/804df3e6d5.png", "alt": "Video still of an elderly man with white hair sitting in front of bookshelves", "x": 4.274, "y": 18.411, "w": 43.085, "h": 32.266, "video": "media/2f17bacc21.mp4"},
+    {"k": "pic", "src": "img/804df3e6d5.png", "alt": "Video still of an elderly man with white hair sitting in front of bookshelves", "x": 4.274, "y": 18.411, "w": 43.085, "h": 32.266, "video": "media/2f17bacc21.web.mp4"},
     {"k": "shape", "x": 51.556, "y": 14.672, "w": 38.955, "h": 13.449, "s": 1, "g": "roundRect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "«It was a horrible shock (…). We had no idea [the competition] would be so simple-minded – just jump links to the ", "sz": 2.083, "c": "#000000"}, {"t": "unknown", "sz": 2.083, "b": 1, "c": "#000000"}, {"t": ".»", "sz": 2.083, "c": "#000000"}]}, {"al": "c", "r": [{"t": "", "sz": 2.083}]}, {"al": "c", "r": [{"t": "(from 31:30)", "sz": 2.083, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 76.002, "y": 27.134, "w": 21.594, "h": 4.879, "s": 2, "g": "wedgeEllipseCallout", "adj": {"adj1": -24917, "adj2": -113508}, "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Really?", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ]

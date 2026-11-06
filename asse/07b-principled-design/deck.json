@@ -58,7 +58,7 @@
     },
     {
      "date": "23.11.2026",
-     "title": "Interactive Ecosystems",
+     "title": "Interactive Ecosystems and Solid",
      "href": "09#start"
     },
     {
@@ -68,7 +68,7 @@
     },
     {
      "date": "07.12.2026",
-     "title": "Interaction with AI Agents and Physical Devices",
+     "title": "Constrained Systems and Agents",
      "href": "11#start"
     },
     {
@@ -107,8 +107,8 @@
    "title": "Lecture Learning Goals",
    "items": [
     {"k": "shape", "x": 3.924, "y": 4.114, "w": 92.228, "h": 2.213, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "From Software to Systems", "sz": 1.948, "c": "#00802f"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 1.875}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "Lecture 1: Understand how you may ", "sz": 1.875}, {"t": "select fitting architectural constraints ", "sz": 1.875, "b": 1}, {"t": "to achieve a desired non-functional profile", "sz": 1.875}]}, {"al": "l", "r": [{"t": "Assignment 1: Uniform Interaction? Exploring the REST Architectural Style", "sz": 1.875}]}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "Lecture 2:", "sz": 1.875, "c": "#a6a6a6", "href": "08#start"}, {"t": " Understand how you may ", "sz": 1.875, "c": "#a6a6a6"}, {"t": "select fitting interaction styles ", "sz": 1.875, "b": 1, "c": "#a6a6a6"}, {"t": "to achieve a desired non-functional profile", "sz": 1.875, "c": "#a6a6a6"}]}, {"al": "l", "r": [{"t": "Assignment 2: What Interaction Style? Event-based Interaction using MQTT and W3C WebSub", "sz": 1.875, "c": "#a6a6a6"}]}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "Lecture 3:", "sz": 1.875, "c": "#a6a6a6", "href": "09#start"}, {"t": " Understand ecological interaction between hosts ", "sz": 1.875, "c": "#a6a6a6"}, {"t": "beyond individual requests", "sz": 1.875, "b": 1, "c": "#a6a6a6"}]}, {"al": "l", "r": [{"t": "Assignment 3: Where to Couple? Decentralization and Informed Discovery", "sz": 1.875, "c": "#a6a6a6"}]}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "Lecture 4:", "sz": 1.875, "c": "#a6a6a6", "href": "10#start"}, {"t": " Understand that ", "sz": 1.875, "c": "#a6a6a6"}, {"t": "decoupling may happen on many levels ", "sz": 1.875, "b": 1, "c": "#a6a6a6"}, {"t": "beyond the immediate API", "sz": 1.875, "c": "#a6a6a6"}]}, {"al": "l", "r": [{"t": "Assignment 4: Multi-level Decoupling? Decoupling through Semantic Hypermedia", "sz": 1.875, "c": "#a6a6a6"}]}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "Lecture 5:", "sz": 1.875, "c": "#a6a6a6", "href": "11#start"}, {"t": " Understand ", "sz": 1.875, "c": "#a6a6a6"}, {"t": "what changes ", "sz": 1.875, "b": 1, "c": "#a6a6a6"}, {"t": "when higher autonomy potential and constrained devices enter the game", "sz": 1.875, "c": "#a6a6a6"}]}, {"al": "l", "r": [{"t": "Assignment 5: Autonomy and Interactions with Constrained Devices", "sz": 1.875, "c": "#a6a6a6"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 82.665, "y": 29.938, "w": 13.989, "h": 5.315, "g": "roundRect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "Plugfest with Pitas (Dec 2, from 4:30pm)", "sz": 1.25, "b": 1, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 1.875}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "Lecture 7: Understand how you may ", "sz": 1.875}, {"t": "select fitting architectural constraints ", "sz": 1.875, "b": 1}, {"t": "to achieve a desired non-functional profile", "sz": 1.875}]}, {"al": "l", "r": [{"t": "Assignment 7: Uniform Interaction? Exploring the REST Architectural Style", "sz": 1.875}]}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "Lecture 8:", "sz": 1.875, "c": "#a6a6a6", "href": "08#start"}, {"t": " Understand how you may ", "sz": 1.875, "c": "#a6a6a6"}, {"t": "select fitting interaction styles ", "sz": 1.875, "b": 1, "c": "#a6a6a6"}, {"t": "to achieve a desired non-functional profile", "sz": 1.875, "c": "#a6a6a6"}]}, {"al": "l", "r": [{"t": "Assignment 8: What Interaction Style? Event-based Interaction using MQTT and W3C WebSub", "sz": 1.875, "c": "#a6a6a6"}]}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "Lecture 9:", "sz": 1.875, "c": "#a6a6a6", "href": "09#start"}, {"t": " Understand ecological interaction between hosts ", "sz": 1.875, "c": "#a6a6a6"}, {"t": "beyond individual requests", "sz": 1.875, "b": 1, "c": "#a6a6a6"}]}, {"al": "l", "r": [{"t": "Assignment 9: Where to Couple? Decentralization and Informed Discovery", "sz": 1.875, "c": "#a6a6a6"}]}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "Lecture 10:", "sz": 1.875, "c": "#a6a6a6", "href": "10#start"}, {"t": " Understand that ", "sz": 1.875, "c": "#a6a6a6"}, {"t": "decoupling may happen on many levels ", "sz": 1.875, "b": 1, "c": "#a6a6a6"}, {"t": "beyond the immediate API", "sz": 1.875, "c": "#a6a6a6"}]}, {"al": "l", "r": [{"t": "Assignment 10: Multi-level Decoupling? Decoupling through Semantic Hypermedia", "sz": 1.875, "c": "#a6a6a6"}]}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "Lecture 11:", "sz": 1.875, "c": "#a6a6a6", "href": "11#start"}, {"t": " Understand ", "sz": 1.875, "c": "#a6a6a6"}, {"t": "what changes ", "sz": 1.875, "b": 1, "c": "#a6a6a6"}, {"t": "when higher autonomy potential and constrained devices enter the game", "sz": 1.875, "c": "#a6a6a6"}]}, {"al": "l", "r": [{"t": "Assignment 11: Autonomy and Interactions with Constrained Devices", "sz": 1.875, "c": "#a6a6a6"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 82.665, "y": 29.938, "w": 13.989, "h": 5.315, "g": "roundRect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "Plugfest with Pitas (Nov 24, 5 to 8pm)", "sz": 1.25, "b": 1, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "pic", "src": "img/021d51ae1a.png", "alt": "Pizza Slice Detailed Icon PNG & SVG Design For T-Shirts", "x": 95.155, "y": 28.38, "w": 3.134, "h": 3.134}
    ]
   },
@@ -581,7 +581,7 @@
    "layout": "canvas",
    "title": "It‘s again about Trade-offs!",
    "items": [
-    {"k": "pic", "src": "img/957fe688a2.png", "alt": "Waves on a beach at sunset, with the caption In 1989, Tim Berners-Lee", "x": 7.34, "y": 13.058, "w": 66.91, "h": 37.636, "shadow": true, "video": "media/af35761a2c.mov"},
+    {"k": "pic", "src": "img/957fe688a2.png", "alt": "Waves on a beach at sunset, with the caption In 1989, Tim Berners-Lee", "x": 7.34, "y": 13.058, "w": 66.91, "h": 37.636, "shadow": true, "video": "media/af35761a2c.web.mp4"},
     {"k": "shape", "x": 57.761, "y": 8.133, "w": 40.157, "h": 3.786, "s": 1, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "Emphasis on ", "sz": 1.25, "c": "#000000"}, {"t": "R", "sz": 1.25, "b": 1}, {"t": "ecoverability, Availability, Reliability, Integrity", "sz": 1.25, "b": 1, "c": "#000000"}]}, {"al": "r", "r": [{"t": "Good reasons to object to “individual links are allowed to break”!", "sz": 1.25}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "pic", "src": "img/ae3dc0b3b4.png", "alt": "Short biography of Mark Frisse, Professor Emeritus of Biomedical Informatics at Vanderbilt University", "x": 54.68, "y": 45.318, "w": 44.56, "h": 10.751},
     {"k": "shape", "x": 81.396, "y": 31.875, "w": 16.522, "h": 3.786, "s": 2, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "Very different emphasis and non-functional profile!", "sz": 1.25, "c": "#000000"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
@@ -592,7 +592,7 @@
    "layout": "canvas",
    "title": "It‘s again about Trade-offs!",
    "items": [
-    {"k": "pic", "src": "img/957fe688a2.png", "alt": "Waves on a beach at sunset, with the caption In 1989, Tim Berners-Lee", "x": 7.34, "y": 13.058, "w": 66.91, "h": 37.636, "shadow": true, "video": "media/af35761a2c.mov"},
+    {"k": "pic", "src": "img/957fe688a2.png", "alt": "Waves on a beach at sunset, with the caption In 1989, Tim Berners-Lee", "x": 7.34, "y": 13.058, "w": 66.91, "h": 37.636, "shadow": true, "video": "media/af35761a2c.web.mp4"},
     {"k": "shape", "x": 57.761, "y": 8.133, "w": 40.157, "h": 3.786, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "Emphasis on ", "sz": 1.25, "c": "#000000"}, {"t": "R", "sz": 1.25, "b": 1}, {"t": "ecoverability, Availability, Reliability, Integrity", "sz": 1.25, "b": 1, "c": "#000000"}]}, {"al": "r", "r": [{"t": "Good reasons to object to “individual links are allowed to break”!", "sz": 1.25}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "pic", "src": "img/679a508781.png", "alt": "Excerpt of the 1989 CERN proposal: a practical project to find a real system on CERN's many machines", "x": 7.34, "y": 13.058, "w": 67.627, "h": 37.636},
     {"k": "pic", "src": "img/ae3dc0b3b4.png", "alt": "Short biography of Mark Frisse, Professor Emeritus of Biomedical Informatics at Vanderbilt University", "x": 54.68, "y": 45.318, "w": 44.56, "h": 10.751},
@@ -628,7 +628,7 @@
    "layout": "canvas",
    "title": "It‘s again about Trade-offs!",
    "items": [
-    {"k": "pic", "src": "img/24f80fc24c.png", "alt": "Graphic on a transparent background", "x": 3.919, "y": 12.969, "w": 63.689, "h": 35.825, "shadow": true, "video": "media/5659e37484.mp4"},
+    {"k": "pic", "src": "img/24f80fc24c.png", "alt": "Graphic on a transparent background", "x": 3.919, "y": 12.969, "w": 63.689, "h": 35.825, "shadow": true, "video": "media/5659e37484.web.mp4"},
     {"k": "pic", "src": "img/50733416a9.png", "alt": "Wikipedia biography of Theodor Holm Nelson, who coined the terms hypertext and hypermedia", "x": 63.579, "y": 39.364, "w": 36.421, "h": 16.013},
     {"k": "pic", "src": "img/41511796b7.png", "alt": "Text excerpt from Ted Nelson: hypertexts, new forms of writing that branch or perform at the reader's command", "x": 71.852, "y": 12.969, "w": 23.904, "h": 16.771, "s": 1, "crop": [0.4061, 0.65674, 0.25295, 0.14182], "shadow": true}
    ]
