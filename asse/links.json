@@ -310,6 +310,86 @@
   ],
   [
    "09",
+   "Solid: Social Linked Data",
+   "solid-intro"
+  ],
+  [
+   "09",
+   "Solid: Pods, WebIDs and Apps",
+   "solid-pods"
+  ],
+  [
+   "09",
+   "WebID: A URI",
+   "webid"
+  ],
+  [
+   "09",
+   "A Pod Is a Tree",
+   "pod-tree"
+  ],
+  [
+   "09",
+   "Reading and Writing Data",
+   "ldp"
+  ],
+  [
+   "09",
+   "Example: Publishing an Auction",
+   "solid-post"
+  ],
+  [
+   "09",
+   "Changing Data: N3 Patch",
+   "n3-patch"
+  ],
+  [
+   "09",
+   "Who Is Asking",
+   "solid-oidc"
+  ],
+  [
+   "09",
+   "Who May Do What",
+   "wac"
+  ],
+  [
+   "09",
+   "Finding Data",
+   "type-index"
+  ],
+  [
+   "09",
+   "Data at Rest Needs a Contract",
+   "shapes"
+  ],
+  [
+   "09",
+   "Pods Can Tell You",
+   "solid-notifications"
+  ],
+  [
+   "09",
+   "Data Sovereignty",
+   "sovereignty"
+  ],
+  [
+   "09",
+   "Solid in the PITAS Ecosystem",
+   "pitas-solid"
+  ],
+  [
+   "09",
+   "Critical View",
+   "solid-critique"
+  ],
+  [
+   "09",
+   "Solid Symposium 2027",
+   "sosy"
+  ],
+  [
+   "09",
    "Towards Assignment 9",
    "assignment-9"
   ],
@@ -783,10 +863,6 @@
     [
      "09#hypermedia-way",
      "recap"
-    ],
-    [
-     "10#shared-understanding",
-     "next"
     ]
    ]
   ],
@@ -797,6 +873,36 @@
     [
      "09#data-decentralization",
      "recap"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "WebID: A URI",
+   [
+    [
+     "08#uris",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "Pods Can Tell You",
+   [
+    [
+     "08#pubsub-web",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "Data at Rest Needs a Contract",
+   [
+    [
+     "10#shared-understanding",
+     "next"
     ]
    ]
   ],

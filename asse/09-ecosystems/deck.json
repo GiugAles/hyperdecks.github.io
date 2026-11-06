@@ -1302,229 +1302,6 @@
    ]
   },
   {
-   "layout": "section",
-   "title": "Decentralizing\nData with **Solid**",
-   "kicker": "Placeholder section",
-   "notes": "PLACEHOLDER (instructors). This lecture runs in parallel with Assignment 9 (Solid). Plan: the Solid block takes the main part of the lecture. Consider compressing the hypermedia and HCI slides before it (Ecosystems: Beyond individual requests, affordances, doors, natural mappings) and moving this block to the front of the lecture after the review."
-  },
-  {
-   "layout": "canvas",
-   "title": "Data Decentralization",
-   "items": [
-    {"k": "shape", "x": 3.924, "y": 12.501, "w": 49.39, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Example Social Media: It ", "sz": 1.948, "c": "#222222"}, {"t": "lowered the entry barrier ", "sz": 1.948, "b": 1, "c": "#222222"}, {"t": "for writing to the Web by anyone. ", "sz": 1.948, "c": "#222222"}, {"t": "This is great", "sz": 1.948, "b": 1, "c": "#222222"}, {"t": "!", "sz": 1.948, "c": "#222222"}], "s": 1}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "However, social media (and other platform businesses) follow a ", "sz": 1.948, "c": "#222222"}, {"t": "winner-takes-all logic", "sz": 1.948, "b": 1, "c": "#222222"}], "s": 3}, {"al": "l", "r": [{"t": "This is because of ", "sz": 1.667, "c": "#222222"}, {"t": "network effects", "sz": 1.667, "b": 1, "c": "#222222"}, {"t": "!", "sz": 1.667, "c": "#222222"}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 4}, {"al": "l", "r": [{"t": "Interoperablity is not desired", "sz": 1.667, "b": 1, "c": "#222222"}, {"t": ": Contrary to blogs, we cannot interact with posts in “enemy” networks", "sz": 1.667, "c": "#222222"}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 5}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "The issue is caused by the ", "sz": 1.948, "c": "#222222"}, {"t": "centralization of personal data in walled gardens", "sz": 1.948, "b": 1, "c": "#222222"}, {"t": ". These gardens open their gate only in exchange for our personal data", "sz": 1.948, "c": "#222222"}], "s": 7}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "We can overcome it by ", "sz": 2.083, "c": "#222222"}, {"t": "moving the data ", "sz": 2.083, "b": 1, "c": "#222222"}, {"t": "(i.e., copy to several networks, export/import) or by ", "sz": 2.083, "c": "#222222"}, {"t": "moving the people ", "sz": 2.083, "b": 1, "c": "#222222"}, {"t": "(i.e., join several networks)", "sz": 2.083, "c": "#222222"}], "s": 8}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 0.0, "y": -1.136, "w": 0.001, "h": 2.272, "g": "rect", "fill": "#ffffff"},
-    {"k": "pic", "src": "img/2b31d9e316.png", "alt": "Diagram of a social post whose parts are stored in different data pods: author profile, opinion, article, likes and comments", "x": 57.846, "y": 20.694, "w": 38.252, "h": 24.003, "s": 2, "crop": [0.09162, 0.27925, 0.38215, 0.13373], "shadow": true},
-    {"k": "shape", "x": 0.0, "y": -1.136, "w": 0.001, "h": 2.272, "g": "rect", "fill": "#ffffff"},
-    {"k": "shape", "x": 55.703, "y": 6.686, "w": 38.979, "h": 7.237, "rot": 10.69, "s": 6, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "This is not specific to social media! It is a central feature and problem of any «platform business»", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 42.215, "y": 50.201, "w": 49.993, "h": 4.165, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "https://www.societybyte.swiss/en/2021/01/07/part-1-power-to-the-people-re-decentralizing-the-web-for-good-this-time/", "sz": 0.938, "c": "#808080"}]}, {"al": "r", "r": [{"t": "https://www.economist.com/leaders/2008/03/19/break-down-these-walls", "sz": 0.938, "c": "#808080"}]}, {"al": "r", "r": [{"t": "https://medium.com/@shevski/how-solid-is-tims-plan-to-redecentralize-the-web-b163ba78e835", "sz": 0.938}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}
-   ],
-   "notes": "Moved here from the Constrained Systems and Agents lecture, where it came after Linked Open Data.",
-   "id": "data-decentralization"
-  },
-  {
-   "layout": "canvas",
-   "title": "Data Decentralization: Personal Data Storage",
-   "items": [
-    {"k": "pic", "src": "img/2b31d9e316.png", "alt": "Diagram of a social post whose parts are stored in different data pods: author profile, opinion, article, likes and comments", "x": 57.846, "y": 20.694, "w": 38.252, "h": 24.003, "crop": [0.09162, 0.27925, 0.38215, 0.13373], "shadow": true},
-    {"k": "shape", "x": 3.924, "y": 12.501, "w": 45.054, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "Idea: Decouple data storage from services and thereby ", "sz": 2.083}, {"t": "separate markets for data and services", "sz": 2.083, "b": 1, "c": "#222222"}], "pl": 0.0, "in": 0.0, "s": 1}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "Pick ", "sz": 1.667, "c": "#222222"}, {"t": "any provider ", "sz": 1.667, "b": 1, "c": "#222222"}, {"t": "(or your own Web server) to store your data in a personal data store, or in multiple stores", "sz": 1.667, "c": "#222222"}], "s": 4}, {"al": "l", "r": [{"t": "", "sz": 1.667}]}, {"al": "l", "r": [{"t": "Selectively", "sz": 1.667, "b": 1, "c": "#222222"}, {"t": " give (fine-granular) permission to services to ", "sz": 1.667, "c": "#222222"}, {"t": "access", "sz": 1.667, "b": 1, "c": "#222222"}, {"t": " your data (but not store it)", "sz": 1.667, "c": "#222222"}], "s": 5}, {"al": "l", "r": [{"t": "", "sz": 1.667}]}, {"al": "l", "r": [{"t": "Selectively", "sz": 1.667, "b": 1, "c": "#222222"}, {"t": " give (fine-granular) permission to services to ", "sz": 1.667, "c": "#222222"}, {"t": "write", "sz": 1.667, "b": 1, "c": "#222222"}, {"t": " to your personal data stores", "sz": 1.667, "c": "#222222"}], "s": 6}, {"al": "l", "r": [{"t": "", "sz": 1.667}]}, {"al": "l", "r": [{"t": "Change or revoke ", "sz": 1.667, "b": 1, "c": "#222222"}, {"t": "these permissions at any time", "sz": 1.667, "c": "#222222"}], "s": 7}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 0.0, "y": -1.136, "w": 0.001, "h": 2.272, "g": "rect", "fill": "#ffffff"},
-    {"k": "pic", "src": "img/4efbe6b610.png", "alt": "Diagram comparing a single market of centralized apps with separate data and app markets, where data pods compete on storage and service quality", "x": 51.1, "y": 13.826, "w": 46.198, "h": 22.87, "s": 2, "crop": [0.01569, 0.3215, 0.38778, 0.1535], "shadow": true},
-    {"k": "shape", "x": 42.215, "y": 50.201, "w": 49.993, "h": 4.165, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "https://www.societybyte.swiss/en/2021/01/07/part-1-power-to-the-people-re-decentralizing-the-web-for-good-this-time/", "sz": 0.938, "c": "#808080"}]}, {"al": "r", "r": [{"t": "https://www.economist.com/leaders/2008/03/19/break-down-these-walls", "sz": 0.938, "c": "#808080"}]}, {"al": "r", "r": [{"t": "https://medium.com/@shevski/how-solid-is-tims-plan-to-redecentralize-the-web-b163ba78e835", "sz": 0.938}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 17.371, "y": 48.481, "w": 25.113, "h": 3.374, "s": 8, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Sounds like ", "sz": 1.875, "c": "#ffffff"}, {"t": "transclusion", "sz": 1.875, "b": 1, "c": "#ffffff"}, {"t": "…", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 55.109, "y": 19.831, "w": 20.637, "h": 9.941, "s": 3, "g": "rightArrow", "fill": "#00802f", "ln": "#001307", "lw": 0.104}
-   ],
-   "notes": "Moved here from the Constrained Systems and Agents lecture, where it came after Linked Open Data.",
-   "id": "personal-data"
-  },
-  {
-   "layout": "canvas",
-   "title": "Data Decentralization: Personal Data Storage",
-   "items": [
-    {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Considerable benefits", "sz": 2.083, "b": 1, "c": "#222222"}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 1.667}]}, {"al": "l", "r": [{"t": "", "sz": 1.667}]}, {"al": "l", "r": [{"t": "", "sz": 1.667}]}, {"al": "l", "r": [{"t": "", "sz": 1.667}]}, {"al": "l", "r": [{"t": "", "sz": 1.667}], "pl": 0.0, "in": 0.0}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 0.0, "y": -1.136, "w": 0.001, "h": 2.272, "g": "rect", "fill": "#ffffff"},
-    {"k": "shape", "x": 42.215, "y": 50.201, "w": 49.993, "h": 4.165, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "https://www.societybyte.swiss/en/2021/01/07/part-1-power-to-the-people-re-decentralizing-the-web-for-good-this-time/", "sz": 0.938, "c": "#808080"}]}, {"al": "r", "r": [{"t": "https://www.economist.com/leaders/2008/03/19/break-down-these-walls", "sz": 0.938, "c": "#808080"}]}, {"al": "r", "r": [{"t": "https://medium.com/@shevski/how-solid-is-tims-plan-to-redecentralize-the-web-b163ba78e835", "sz": 0.938}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "pic", "src": "img/cef6c547ed.png", "alt": "Diagram of decentralized Web applications (photo gallery, social feed, meeting scheduler) using one personal data pod with pictures, agenda and contact list", "x": 67.492, "y": 21.765, "w": 24.716, "h": 26.776, "crop": [0.32282, 0.2585, 0.39369, 0.1955]},
-    {"k": "shape", "x": 8.264, "y": 17.21, "w": 47.175, "h": 5.805, "s": 1, "g": "flowChartAlternateProcess", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "Decoupling preserves services but ", "sz": 1.875, "c": "#ffffff"}, {"t": "retains personal control ", "sz": 1.875, "b": 1, "c": "#ffffff"}, {"t": "over data.", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 8.264, "y": 24.882, "w": 47.175, "h": 5.805, "s": 2, "g": "flowChartAlternateProcess", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "Services can ", "sz": 1.875, "c": "#ffffff"}, {"t": "collaboratively update ", "sz": 1.875, "b": 1, "c": "#ffffff"}, {"t": "our personal data stores.", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 8.264, "y": 32.522, "w": 47.175, "h": 5.805, "s": 3, "g": "flowChartAlternateProcess", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "Data controllers are ", "sz": 1.875, "c": "#ffffff"}, {"t": "deburdened", "sz": 1.875, "b": 1, "c": "#ffffff"}, {"t": " from expensive and legally sensitive data collection.", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 8.264, "y": 40.163, "w": 47.175, "h": 5.805, "s": 4, "g": "flowChartAlternateProcess", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "Equal access to collected data levels the playing field: ", "sz": 1.875, "c": "#ffffff"}, {"t": "Equal opportunity to innovate", "sz": 1.875, "b": 1, "c": "#ffffff"}, {"t": " for all services.", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "pic", "src": "img/5d06268c18.png", "alt": "Solid logo, a white S in a purple hexagon, with the claim: Solid, your data, your choice", "x": 70.294, "y": 1.462, "w": 25.783, "h": 17.651, "shadow": true}
-   ],
-   "notes": "Moved here from the Constrained Systems and Agents lecture, where it came after Linked Open Data."
-  },
-  {
-   "layout": "canvas",
-   "title": "Data Decentralization: Personal Data Storage",
-   "items": [
-    {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "A lot of the ", "sz": 1.875}, {"t": "interesting", "sz": 1.875, "b": 1}, {"t": " data about a subject…", "sz": 1.875}], "pl": 0.0, "in": 0.0, "s": 1}, {"al": "l", "r": [{"t": "   …needs to be asserted by an ", "sz": 1.458}, {"t": "authoritative source ", "sz": 1.458, "b": 1}, {"t": "(e.g., a bank, a doctor, a state agency)", "sz": 1.458}], "pl": 0.0, "in": 0.0, "s": 2}, {"al": "l", "r": [{"t": "   …is about what the subject did ", "sz": 1.458}, {"t": "using a service ", "sz": 1.458, "b": 1}, {"t": "(e.g., buying, searching) and is ", "sz": 1.458}, {"t": "generated and owned ", "sz": 1.458, "b": 1}, {"t": "by the services", "sz": 1.458}], "pl": 0.0, "in": 0.0, "s": 3}, {"al": "l", "r": [{"t": "   …was given by ", "sz": 1.458}, {"t": "others ", "sz": 1.458, "b": 1}, {"t": "about the subject and the content it produced (e.g., ratings, reviews)", "sz": 1.458}], "pl": 0.0, "in": 0.0, "s": 4}, {"al": "l", "r": [{"t": "", "sz": 1.667}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "No convincing business model (yet?) for personal data storage. Today’s BMs depend on exclusive data control", "sz": 1.875}], "pl": 0.0, "in": 0.0, "s": 5}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "Services could still ask for «all data» and cut users if this is revoked. ", "sz": 1.875}, {"t": "If users lack alternatives, they will consent to this", "sz": 1.875, "b": 1}, {"t": "!", "sz": 1.875}], "pl": 0.0, "in": 0.0, "s": 6}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 0.0, "y": -1.136, "w": 0.001, "h": 2.272, "g": "rect", "fill": "#ffffff"},
-    {"k": "pic", "src": "img/92a1014bdd.jpg", "alt": "How one law student is making Facebook get serious about privacy | Ars  Technica", "x": 69.902, "y": 32.561, "w": 24.133, "h": 16.889, "s": 8, "shadow": true},
-    {"k": "shape", "x": 5.708, "y": 34.317, "w": 59.59, "h": 13.378, "s": 7, "g": "rect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "The lack of alternatives (i.e., of interoperability) and the issues with consent are ", "sz": 2.083, "c": "#000000"}, {"t": "beyond personal data storage", "sz": 2.083, "b": 1, "c": "#000000"}, {"t": ". ", "sz": 2.083, "c": "#000000"}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "If we want to tackle them, we might need to ", "sz": 2.083, "c": "#000000"}, {"t": "regulate for openness. ", "sz": 2.083, "b": 1, "c": "#000000"}, {"t": "Some argue that this ", "sz": 2.083, "c": "#000000"}, {"t": "is already there, but that it today lacks teeth.", "sz": 2.083, "b": 1, "c": "#000000"}], "pl": 0.0, "in": 0.0}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "pic", "src": "img/40ce756d79.png", "alt": "Screenshot of a news report with Max Schrems: Max Schrems versus Facebook, the company must pay 36 million euros in fines", "x": 77.895, "y": 30.751, "w": 19.728, "h": 13.098, "s": 9, "crop": [0.35352, 0.66107, 0.36849, 0.08698]},
-    {"k": "shape", "x": 35.503, "y": 50.723, "w": 59.177, "h": 3.786, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Zihlmann, Garcia, Mayer, Tamò-Larrieux: A right to repair privacy-invasive services: Is a new, more holistic European approach emerging? International Conference on Privacy-Friendly and Trustworthy Technology for Society, 2022", "sz": 1.25, "c": "#333333"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}
-   ],
-   "notes": "Moved here from the Constrained Systems and Agents lecture, where it came after Linked Open Data."
-  },
-  {
-   "layout": "text",
-   "title": "Solid: Pods, WebIDs and Apps",
-   "callout": {
-    "text": "Placeholder: to be written",
-    "style": "teal"
-   },
-   "points": [
-    "A **pod** is a personal data store: a Web server that holds one person's or organisation's resources",
-    "A **WebID** is a URI that identifies an agent and points to its profile document",
-    "Apps are separated from data: any app may read and write a pod if the owner allows it",
-    "One Web, many pods: the data lives where its owner chooses to host it"
-   ],
-   "notes": "PLACEHOLDER (instructors). Intended content: what Solid is and where it comes from (Tim Berners-Lee, Inrupt, Solid Community Group), pod, WebID, app/data separation, a diagram of apps, pods and WebIDs. Connect to the earlier Personal Data Storage slides.",
-   "refs": [
-    {
-     "to": "09#personal-data",
-     "kind": "recap"
-    }
-   ]
-  },
-  {
-   "layout": "text",
-   "title": "Reading and Writing Data: LDP over HTTP",
-   "callout": {
-    "text": "Placeholder: to be written",
-    "style": "teal"
-   },
-   "points": [
-    "Resources and containers: a pod is a tree of resources, listed by LDP containers",
-    "The uniform interface again: GET, POST to a container, PUT, PATCH, DELETE",
-    "Data is RDF (Turtle, JSON-LD): links to other documents, in any pod",
-    "Append-only containers and conditional requests (ETags) for concurrent writers"
-   ],
-   "notes": "PLACEHOLDER (instructors). Intended content: the Solid Protocol as an application of the REST constraints from lecture 7 (uniform interface, hypermedia) and of the interaction styles from lecture 8. Live example with curl against the Community Solid Server.",
-   "refs": [
-    {
-     "to": "07b#uniform-interface",
-     "kind": "recap"
-    },
-    {
-     "to": "08#crud-over-http",
-     "kind": "recap"
-    }
-   ]
-  },
-  {
-   "layout": "text",
-   "title": "Identity and Access Control",
-   "callout": {
-    "text": "Placeholder: to be written",
-    "style": "teal"
-   },
-   "points": [
-    "Solid-OIDC: how an app proves who is acting, and for whom",
-    "Web Access Control and Access Control Policies: read, append, write, control",
-    "Who may read what: the owner decides, per resource or per container",
-    "Authentication tells who you are; authorization tells what you may do"
-   ],
-   "notes": "PLACEHOLDER (instructors). Intended content: WebID-OIDC flow in one diagram, a WAC example (an .acl file or an ACP policy), the four access modes, and why append is useful for bids and logs."
-  },
-  {
-   "layout": "text",
-   "title": "Finding Data: Type Indexes and Shapes",
-   "callout": {
-    "text": "Placeholder: to be written",
-    "style": "teal"
-   },
-   "points": [
-    "Starting from a WebID, a client discovers where data of a given type is stored",
-    "The type index registers rdf:type values with container or resource locations",
-    "Shared vocabularies (schema.org, PROV-O) let applications understand each other's data",
-    "SHACL or ShEx shapes let a client validate data that it did not write"
-   ],
-   "notes": "PLACEHOLDER (instructors). Intended content: discovery by following links (hypermedia from lecture 9), the public and private type index, how a shared vocabulary decouples applications semantically (lecture 10), and shapes as the contract for data at rest.",
-   "refs": [
-    {
-     "to": "09#hypermedia-way",
-     "kind": "recap"
-    },
-    {
-     "to": "10#shared-understanding",
-     "kind": "next"
-    }
-   ]
-  },
-  {
-   "layout": "text",
-   "title": "Data Sovereignty: Who Owns What?",
-   "callout": {
-    "text": "Placeholder: to be written",
-    "style": "teal"
-   },
-   "points": [
-    "The sovereignty principle: data stays under the control of the entity that generates it",
-    "Other parties refer to data by its URI and keep no authoritative copies",
-    "Hard cases: an auction is the auction house's record, but the task belongs to the client",
-    "Regulation as a driver: data portability (GDPR), the EU Data Act, data spaces"
-   ],
-   "notes": "PLACEHOLDER (instructors). Intended content: the idea of digital sovereignty behind Solid, contested ownership with examples from PITAS (bids, awards, results), and the view of the different roles in the PITAS task force (platform, regulator, activists, industry).",
-   "refs": [
-    {
-     "to": "09#data-decentralization",
-     "kind": "recap"
-    }
-   ]
-  },
-  {
-   "layout": "text",
-   "title": "Solid in the PITAS Ecosystem",
-   "callout": {
-    "text": "Placeholder: to be written",
-    "style": "teal"
-   },
-   "points": [
-    "Participating entities: clients, auction houses, bidders and workers each get a WebID and a pod",
-    "Application plane stays in the deployment, data plane moves into the pods",
-    "The pod, not the application, is authoritative: restart from the pods",
-    "The course Community Solid Server for the ecosystem, and a second one you run locally"
-   ],
-   "notes": "PLACEHOLDER (instructors). Intended content: map the Assignment 9 tasks to the architecture: sovereignty design, shared RDF vocabulary and shapes, moving the data into pods, identity, discovery and access control, integration test with another group. Include the example pod layout of the assignment sheet."
-  },
-  {
-   "layout": "text",
-   "title": "Critical View: Where Does Solid Hurt?",
-   "callout": {
-    "text": "Placeholder: to be written",
-    "style": "teal"
-   },
-   "points": [
-    "Performance and consistency: no transactions across pods, many small requests",
-    "Who hosts the pods? Decentralization can shift power to pod providers",
-    "Usability: access control that people can understand and manage",
-    "Adoption: apps and data models need to agree on vocabularies"
-   ],
-   "notes": "PLACEHOLDER (instructors). Intended content: honest trade-offs in the spirit of lectures 7 and 8: which non-functional properties Solid improves (evolvability, autonomy, privacy) and which it costs (performance, simplicity). Prepare the discussion for the task force.",
-   "refs": [
-    {
-     "to": "07b#principled-design",
-     "kind": "recap"
-    }
-   ]
-  },
-  {
-   "layout": "text",
-   "title": "Towards Assignment 9",
-   "callout": {
-    "text": "Placeholder: to be written",
-    "style": "teal"
-   },
-   "points": [
-    "Task 1: decide who owns which data item and draw the ecosystem under the sovereignty principle",
-    "Task 2: agree on the RDF vocabulary, the shapes and the pod layout in the task force",
-    "Task 3: implement pods, WebIDs, discovery and access control, then test with another group",
-    "Hand-in: ADRs, the ownership table and diagram, and a release with your WebIDs"
-   ],
-   "notes": "PLACEHOLDER (instructors). Intended content: short walk through the assignment sheet; the PITAS PlugFest takes place on Tuesday 24.11.2026, 17:00 to 20:00.",
-   "id": "assignment-9"
-  },
-  {
    "layout": "canvas",
    "title": "Resources and Further Reading",
    "items": [
@@ -1580,15 +1357,499 @@
    ]
   },
   {
-   "layout": "questions",
-   "title": "Any Questions / Comments / Doubts / Concerns?"
+   "layout": "section",
+   "title": "Decentralizing\nData with **Solid**",
+   "kicker": "Interactive Ecosystems and Solid",
+   "notes": "Second part of the lecture, in parallel with Assignment 9. Narrative: the hypermedia part showed how clients find their next action at run time, and that a shared conceptual model (RDF vocabularies) is the final step. Solid applies exactly these ideas to data at rest: pods are hypermedia over HTTP with RDF representations, and the owner of the data, not the application, controls access. We start with why (platforms and walled gardens), then the building blocks (pods, WebIDs, LDP, Solid-OIDC, WAC, type indexes, shapes, notifications), then PITAS and the critique, and end with the assignment and SoSy 27."
   },
   {
    "layout": "canvas",
-   "title": "Towards the Exercise",
+   "title": "Data Decentralization",
    "items": [
-    {"k": "pic", "src": "img/18727aabfd.png", "alt": "Bridging the theory/practice gap: Ambigrams, quotes, posters & more… –  Punya Mishra's Web", "x": 1.776, "y": 15.751, "w": 42.894, "h": 32.17},
-    {"k": "pic", "src": "img/e460772e7b.png", "alt": "Assignment sheet of last year's Exercise 9: Hypermedia Ecosystems, abstract", "x": 45.346, "y": 9.381, "w": 51.307, "h": 21.142}
+    {"k": "shape", "x": 3.924, "y": 12.501, "w": 49.39, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Example Social Media: It ", "sz": 1.948, "c": "#222222"}, {"t": "lowered the entry barrier ", "sz": 1.948, "b": 1, "c": "#222222"}, {"t": "for writing to the Web by anyone. ", "sz": 1.948, "c": "#222222"}, {"t": "This is great", "sz": 1.948, "b": 1, "c": "#222222"}, {"t": "!", "sz": 1.948, "c": "#222222"}], "s": 1}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "However, social media (and other platform businesses) follow a ", "sz": 1.948, "c": "#222222"}, {"t": "winner-takes-all logic", "sz": 1.948, "b": 1, "c": "#222222"}], "s": 3}, {"al": "l", "r": [{"t": "This is because of ", "sz": 1.667, "c": "#222222"}, {"t": "network effects", "sz": 1.667, "b": 1, "c": "#222222"}, {"t": "!", "sz": 1.667, "c": "#222222"}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 4}, {"al": "l", "r": [{"t": "Interoperablity is not desired", "sz": 1.667, "b": 1, "c": "#222222"}, {"t": ": Contrary to blogs, we cannot interact with posts in “enemy” networks", "sz": 1.667, "c": "#222222"}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 5}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "The issue is caused by the ", "sz": 1.948, "c": "#222222"}, {"t": "centralization of personal data in walled gardens", "sz": 1.948, "b": 1, "c": "#222222"}, {"t": ". These gardens open their gate only in exchange for our personal data", "sz": 1.948, "c": "#222222"}], "s": 7}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "We can overcome it by ", "sz": 2.083, "c": "#222222"}, {"t": "moving the data ", "sz": 2.083, "b": 1, "c": "#222222"}, {"t": "(i.e., copy to several networks, export/import) or by ", "sz": 2.083, "c": "#222222"}, {"t": "moving the people ", "sz": 2.083, "b": 1, "c": "#222222"}, {"t": "(i.e., join several networks)", "sz": 2.083, "c": "#222222"}], "s": 8}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 0.0, "y": -1.136, "w": 0.001, "h": 2.272, "g": "rect", "fill": "#ffffff"},
+    {"k": "pic", "src": "img/2b31d9e316.png", "alt": "Diagram of a social post whose parts are stored in different data pods: author profile, opinion, article, likes and comments", "x": 57.846, "y": 20.694, "w": 38.252, "h": 24.003, "s": 2, "crop": [0.09162, 0.27925, 0.38215, 0.13373], "shadow": true},
+    {"k": "shape", "x": 0.0, "y": -1.136, "w": 0.001, "h": 2.272, "g": "rect", "fill": "#ffffff"},
+    {"k": "shape", "x": 55.703, "y": 6.686, "w": 38.979, "h": 7.237, "rot": 10.69, "s": 6, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "This is not specific to social media! It is a central feature and problem of any «platform business»", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 42.215, "y": 50.201, "w": 49.993, "h": 4.165, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "https://www.societybyte.swiss/en/2021/01/07/part-1-power-to-the-people-re-decentralizing-the-web-for-good-this-time/", "sz": 0.938, "c": "#808080"}]}, {"al": "r", "r": [{"t": "https://www.economist.com/leaders/2008/03/19/break-down-these-walls", "sz": 0.938, "c": "#808080"}]}, {"al": "r", "r": [{"t": "https://medium.com/@shevski/how-solid-is-tims-plan-to-redecentralize-the-web-b163ba78e835", "sz": 0.938}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}
+   ],
+   "id": "data-decentralization"
+  },
+  {
+   "layout": "canvas",
+   "title": "Data Decentralization: Personal Data Storage",
+   "items": [
+    {"k": "pic", "src": "img/2b31d9e316.png", "alt": "Diagram of a social post whose parts are stored in different data pods: author profile, opinion, article, likes and comments", "x": 57.846, "y": 20.694, "w": 38.252, "h": 24.003, "crop": [0.09162, 0.27925, 0.38215, 0.13373], "shadow": true},
+    {"k": "shape", "x": 3.924, "y": 12.501, "w": 45.054, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "Idea: Decouple data storage from services and thereby ", "sz": 2.083}, {"t": "separate markets for data and services", "sz": 2.083, "b": 1, "c": "#222222"}], "pl": 0.0, "in": 0.0, "s": 1}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "Pick ", "sz": 1.667, "c": "#222222"}, {"t": "any provider ", "sz": 1.667, "b": 1, "c": "#222222"}, {"t": "(or your own Web server) to store your data in a personal data store, or in multiple stores", "sz": 1.667, "c": "#222222"}], "s": 4}, {"al": "l", "r": [{"t": "", "sz": 1.667}]}, {"al": "l", "r": [{"t": "Selectively", "sz": 1.667, "b": 1, "c": "#222222"}, {"t": " give (fine-granular) permission to services to ", "sz": 1.667, "c": "#222222"}, {"t": "access", "sz": 1.667, "b": 1, "c": "#222222"}, {"t": " your data (but not store it)", "sz": 1.667, "c": "#222222"}], "s": 5}, {"al": "l", "r": [{"t": "", "sz": 1.667}]}, {"al": "l", "r": [{"t": "Selectively", "sz": 1.667, "b": 1, "c": "#222222"}, {"t": " give (fine-granular) permission to services to ", "sz": 1.667, "c": "#222222"}, {"t": "write", "sz": 1.667, "b": 1, "c": "#222222"}, {"t": " to your personal data stores", "sz": 1.667, "c": "#222222"}], "s": 6}, {"al": "l", "r": [{"t": "", "sz": 1.667}]}, {"al": "l", "r": [{"t": "Change or revoke ", "sz": 1.667, "b": 1, "c": "#222222"}, {"t": "these permissions at any time", "sz": 1.667, "c": "#222222"}], "s": 7}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 0.0, "y": -1.136, "w": 0.001, "h": 2.272, "g": "rect", "fill": "#ffffff"},
+    {"k": "pic", "src": "img/4efbe6b610.png", "alt": "Diagram comparing a single market of centralized apps with separate data and app markets, where data pods compete on storage and service quality", "x": 51.1, "y": 13.826, "w": 46.198, "h": 22.87, "s": 2, "crop": [0.01569, 0.3215, 0.38778, 0.1535], "shadow": true},
+    {"k": "shape", "x": 42.215, "y": 50.201, "w": 49.993, "h": 4.165, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "https://www.societybyte.swiss/en/2021/01/07/part-1-power-to-the-people-re-decentralizing-the-web-for-good-this-time/", "sz": 0.938, "c": "#808080"}]}, {"al": "r", "r": [{"t": "https://www.economist.com/leaders/2008/03/19/break-down-these-walls", "sz": 0.938, "c": "#808080"}]}, {"al": "r", "r": [{"t": "https://medium.com/@shevski/how-solid-is-tims-plan-to-redecentralize-the-web-b163ba78e835", "sz": 0.938}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 17.371, "y": 48.481, "w": 25.113, "h": 3.374, "s": 8, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Sounds like ", "sz": 1.875, "c": "#ffffff"}, {"t": "transclusion", "sz": 1.875, "b": 1, "c": "#ffffff"}, {"t": "…", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 55.109, "y": 19.831, "w": 20.637, "h": 9.941, "s": 3, "g": "rightArrow", "fill": "#00802f", "ln": "#001307", "lw": 0.104}
+   ],
+   "id": "personal-data"
+  },
+  {
+   "layout": "canvas",
+   "title": "Data Decentralization: Personal Data Storage",
+   "items": [
+    {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Considerable benefits", "sz": 2.083, "b": 1, "c": "#222222"}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 1.667}]}, {"al": "l", "r": [{"t": "", "sz": 1.667}]}, {"al": "l", "r": [{"t": "", "sz": 1.667}]}, {"al": "l", "r": [{"t": "", "sz": 1.667}]}, {"al": "l", "r": [{"t": "", "sz": 1.667}], "pl": 0.0, "in": 0.0}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 0.0, "y": -1.136, "w": 0.001, "h": 2.272, "g": "rect", "fill": "#ffffff"},
+    {"k": "shape", "x": 42.215, "y": 50.201, "w": 49.993, "h": 4.165, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "https://www.societybyte.swiss/en/2021/01/07/part-1-power-to-the-people-re-decentralizing-the-web-for-good-this-time/", "sz": 0.938, "c": "#808080"}]}, {"al": "r", "r": [{"t": "https://www.economist.com/leaders/2008/03/19/break-down-these-walls", "sz": 0.938, "c": "#808080"}]}, {"al": "r", "r": [{"t": "https://medium.com/@shevski/how-solid-is-tims-plan-to-redecentralize-the-web-b163ba78e835", "sz": 0.938}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "pic", "src": "img/cef6c547ed.png", "alt": "Diagram of decentralized Web applications (photo gallery, social feed, meeting scheduler) using one personal data pod with pictures, agenda and contact list", "x": 67.492, "y": 21.765, "w": 24.716, "h": 26.776, "crop": [0.32282, 0.2585, 0.39369, 0.1955]},
+    {"k": "shape", "x": 8.264, "y": 17.21, "w": 47.175, "h": 5.805, "s": 1, "g": "flowChartAlternateProcess", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "Decoupling preserves services but ", "sz": 1.875, "c": "#ffffff"}, {"t": "retains personal control ", "sz": 1.875, "b": 1, "c": "#ffffff"}, {"t": "over data.", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 8.264, "y": 24.882, "w": 47.175, "h": 5.805, "s": 2, "g": "flowChartAlternateProcess", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "Services can ", "sz": 1.875, "c": "#ffffff"}, {"t": "collaboratively update ", "sz": 1.875, "b": 1, "c": "#ffffff"}, {"t": "our personal data stores.", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 8.264, "y": 32.522, "w": 47.175, "h": 5.805, "s": 3, "g": "flowChartAlternateProcess", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "Data controllers are ", "sz": 1.875, "c": "#ffffff"}, {"t": "deburdened", "sz": 1.875, "b": 1, "c": "#ffffff"}, {"t": " from expensive and legally sensitive data collection.", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 8.264, "y": 40.163, "w": 47.175, "h": 5.805, "s": 4, "g": "flowChartAlternateProcess", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "Equal access to collected data levels the playing field: ", "sz": 1.875, "c": "#ffffff"}, {"t": "Equal opportunity to innovate", "sz": 1.875, "b": 1, "c": "#ffffff"}, {"t": " for all services.", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "pic", "src": "img/5d06268c18.png", "alt": "Solid logo, a white S in a purple hexagon, with the claim: Solid, your data, your choice", "x": 70.294, "y": 1.462, "w": 25.783, "h": 17.651, "shadow": true}
+   ]
+  },
+  {
+   "layout": "text",
+   "id": "solid-intro",
+   "title": "Solid: Social Linked Data",
+   "points": [
+    "Launched in 2016 by Tim Berners-Lee at MIT, to separate data from the apps that use it",
+    "Built from Web standards: HTTP, URIs, RDF, Linked Data Platform, OpenID Connect",
+    "Specified by the W3C Solid Community Group: the Solid Protocol (0.11) and companion specifications for identity, access control and notifications",
+    "Since 2024, the W3C Linked Web Storage Working Group turns it into a W3C standard",
+    "Servers: the open source Community Solid Server, which we use, and others"
+   ],
+   "aside": {
+    "image": "img/solid-logo.svg",
+    "alt": "Solid logo: a white S in a purple hexagon",
+    "shadow": false
+   },
+   "source": "[solidproject.org](https://solidproject.org/), [A Short History of the Solid Protocol](https://www.w3.org/DesignIssues/history/AShortHistoryoftheSolidProtocol.html)",
+   "notes": "Solid stands for Social Linked Data (the name came from Sandro Hawke in the MIT and QCRI read-write linked data work). Inrupt was founded in 2018 as the company around Solid; the Open Data Institute is now the steward of the Solid project. The LWS Working Group was chartered on 9 September 2024; its charter lists the Solid Protocol 0.11.0 as input document."
+  },
+  {
+   "layout": "quote",
+   "id": "lws-mission",
+   "title": "“…web applications where data storage, entity authentication, access control, and application provider are all loosely coupled”",
+   "attribution": "Mission of the W3C Linked Web Storage Working Group",
+   "points": [
+    "“…as opposed to the web of today where these are typically all tightly coupled and changing one requires changing all, sometimes at the price of all past data.”",
+    "Coupling again: the question of the last three lectures, now asked about data"
+   ],
+   "source": "[W3C Linked Web Storage Working Group](https://www.w3.org/groups/wg/lws/), [charter](https://www.w3.org/2024/09/linked-web-storage-wg-charter.html)",
+   "notes": "Connect to lecture 7 and 8: we chose architectural constraints and interaction styles to control coupling between components. Solid moves the boundary: storage, identity, access control and application become four independently replaceable parts."
+  },
+  {
+   "layout": "image",
+   "id": "solid-pods",
+   "title": "Solid: Pods, WebIDs and Apps",
+   "image": "img/solid-apps-pods.svg",
+   "shadow": false,
+   "alt": "Diagram: three applications (photo gallery, the PITAS app of group 3, a calendar) at the top, three pods at the bottom (Alice's pod with photos and calendar, an auction house pod with auctions and results, Bob's pod on his own server with photos and results); arrows show that each app reads and writes several pods, only with the owner's permission",
+   "caption": "A **pod** is a Web server space for one agent's data; a **WebID** is a URI that names an agent. Apps and pods are chosen independently.",
+   "notes": "Recall the personal data storage slides: separate markets for data and for services. Every pod has an owner identified by a WebID; one app can use many pods, one pod serves many apps. A pod can be hosted by a provider, by the institution, or on your own machine.",
+   "refs": [
+    {
+     "to": "09#personal-data",
+     "kind": "recap"
+    }
+   ]
+  },
+  {
+   "layout": "code",
+   "id": "webid",
+   "title": "WebID: A URI for Every Agent",
+   "code": "# GET https://solid.example.org/pitas-g3/profile/card\n@prefix foaf:  <http://xmlns.com/foaf/0.1/> .\n@prefix solid: <http://www.w3.org/ns/solid/terms#> .\n@prefix pim:   <http://www.w3.org/ns/pim/space#> .\n@prefix ldp:   <http://www.w3.org/ns/ldp#> .\n\n<#me> a foaf:Agent ;\n  foaf:name \"PITAS auction house of group 3\" ;\n  solid:oidcIssuer <https://solid.example.org/> ;\n  pim:storage <../> ;\n  solid:publicTypeIndex <../settings/publicTypeIndex.ttl> ;\n  ldp:inbox <../inbox/> .",
+   "points": [
+    "The WebID `…/card#me` names the agent; the document `…/card` describes it",
+    "Dereferencing the WebID tells a client who vouches for the agent (`solid:oidcIssuer`), where its pod is (`pim:storage`) and where to look for its data (`solid:publicTypeIndex`)",
+    "An agent can be a person, an organisation or a piece of software: in PITAS, every participating entity"
+   ],
+   "caption": "The profile is RDF in Turtle; relative URIs like `<../>` are resolved against the document.",
+   "notes": "Hash URI: the fragment #me separates the agent from the document about it (the person is not the document). The Community Solid Server creates this profile when you register; you add the type index link yourself (Assignment 9, Task 4.2).",
+   "refs": [
+    {
+     "to": "08#uris",
+     "kind": "recap"
+    }
+   ]
+  },
+  {
+   "layout": "code",
+   "id": "pod-tree",
+   "title": "A Pod Is a Tree of Resources",
+   "code": "https://solid.example.org/pitas-g3/\n    profile/card#me               # WebID document\n    settings/publicTypeIndex.ttl  # what lives where\n    pitas/\n        auctions/                 # LDP container\n            a-001.ttl             # the auction record\n            a-001/\n                bids/             # append-only container\n                    b-8f2c.ttl\n        results/",
+   "points": [
+    "Containers end with `/` and list their members with `ldp:contains`",
+    "Resources are RDF documents (Turtle, JSON-LD) or any other file: pictures, PDFs",
+    "Every resource has its own URI, so data in one pod can link to data in any other pod"
+   ],
+   "caption": "One possible layout of an auction house's pod, from the Assignment 9 sheet. The task force decides the real one.",
+   "notes": "LDP = W3C Linked Data Platform 1.0 (2015). Solid uses LDP Basic Containers: the server maintains the ldp:contains triples. Point out that the URI structure is not a contract: clients should find containers by following links (type index, later), not by constructing paths."
+  },
+  {
+   "layout": "table",
+   "id": "ldp",
+   "title": "Reading and Writing Data: LDP over HTTP",
+   "columns": [
+    "Request",
+    "Target",
+    "Effect",
+    "Access mode"
+   ],
+   "rows": [
+    [
+     "GET, HEAD",
+     "resource or container",
+     "read the representation; a container lists its members",
+     "Read"
+    ],
+    [
+     "POST",
+     "container",
+     "create a new resource in it; the server picks its URI (`Location`)",
+     "Append"
+    ],
+    [
+     "PUT",
+     "resource",
+     "create or replace the resource at this URI",
+     "Write"
+    ],
+    [
+     "PATCH",
+     "RDF document",
+     "insert and delete triples with an N3 Patch",
+     "Append (only inserts), else Read and Write"
+    ],
+    [
+     "DELETE",
+     "resource or empty container",
+     "remove it",
+     "Write"
+    ]
+   ],
+   "after": "The methods of the uniform interface with their defined semantics. Solid adds RDF representations, identity and access control.",
+   "notes": "This is the REST uniform interface of lecture 7 and CRUD over HTTP from lecture 8, plus hypermedia: representations are RDF with links. Mention OPTIONS for discovering allowed methods (Allow, Accept-Post, Accept-Patch headers), and that the WAC-Allow header tells a client which modes it has. Live demo: curl against a local Community Solid Server (npx @solid/community-server), anonymous access to a public container.",
+   "refs": [
+    {
+     "to": "07b#uniform-interface",
+     "kind": "recap"
+    },
+    {
+     "to": "08#crud-over-http",
+     "kind": "recap"
+    }
+   ]
+  },
+  {
+   "layout": "code",
+   "id": "solid-post",
+   "title": "Example: Publishing an Auction",
+   "code": "POST /pitas-g3/pitas/auctions/ HTTP/1.1\nHost: solid.example.org\nAuthorization: DPoP eyJhbGciOiJFUzI1NiIs…\nDPoP: eyJ0eXAiOiJkcG9wK2p3dCIs…\nContent-Type: text/turtle\n\n@prefix pitas: <https://pitas.example.org/ns#> .\n<#it> a pitas:Auction ;\n  pitas:task <https://solid.example.org/c7/tasks/t-17.ttl> ;\n  pitas:status pitas:Open .\n\nHTTP/1.1 201 Created\nLocation: /pitas-g3/pitas/auctions/3f9a2c",
+   "points": [
+    "`POST` to the container: the server mints the URI of the new resource and returns it in `Location`",
+    "The auction refers to the task in the client's pod by its URI: a link, not a copy",
+    "To choose the URI yourself, `PUT` to it, for example `…/auctions/a-001.ttl`",
+    "The two token headers say who is asking (Solid-OIDC, below)"
+   ],
+   "notes": "The Solid Protocol no longer requires servers to honour the Slug header; the Community Solid Server does use it as a hint. The task URI points to another pod on possibly another server: this is the 'link to it from another pod' option of the sovereignty discussion."
+  },
+  {
+   "layout": "code",
+   "id": "n3-patch",
+   "title": "Changing Data: N3 Patch and ETags",
+   "code": "PATCH /pitas-g3/pitas/auctions/a-001.ttl HTTP/1.1\nContent-Type: text/n3\nIf-Match: \"1f3a-9c\"\n\n@prefix solid: <http://www.w3.org/ns/solid/terms#> .\n@prefix pitas: <https://pitas.example.org/ns#> .\n_:close a solid:InsertDeletePatch ;\n  solid:where   { <#it> pitas:status pitas:Open . } ;\n  solid:deletes { <#it> pitas:status pitas:Open . } ;\n  solid:inserts { <#it> pitas:status pitas:Closed . } .",
+   "points": [
+    "`solid:where` is a condition: if the auction is no longer open, the server answers `409 Conflict`",
+    "`If-Match` sends the ETag of the version you read: if someone changed the document since, `412 Precondition Failed`",
+    "No transactions across resources: changing two documents takes two requests, and either can fail"
+   ],
+   "notes": "Concurrency is now the pod's problem and the client's: there is no database transaction around an auction and its bids. This is the coupling that Assignment 9, Task 3.1, says will become visible (code that assumed transactional writes). Reflection question 1 asks about exactly this."
+  },
+  {
+   "layout": "quiz",
+   "title": "Your Turn: Which Request?",
+   "items": [
+    "A bidder submits a sealed bid for auction a-001. Which method, to which URI, with which access mode?",
+    "The auction house closes the auction, but only if it is still open. What does it send?",
+    "A client moves to another PITAS provider. What happens to its tasks?",
+    "Two PITAS apps read the same auction. What must they agree on?"
+   ],
+   "notes": "Discuss in pairs for 3 minutes. Answers: POST to the bids container, Append; PATCH with solid:where (or If-Match); nothing, the tasks stay in the client's pod and the new provider gets access; HTTP, RDF and the shared vocabulary (next slides), not an API of each other."
+  },
+  {
+   "layout": "image",
+   "id": "solid-oidc",
+   "title": "Who Is Asking? Solid-OIDC",
+   "image": "img/solid-oidc.svg",
+   "shadow": false,
+   "alt": "Sequence diagram with four lifelines: PITAS app, identity provider, pod, WebID profile. 1 the app logs in as its WebID; 2 the identity provider returns a token that names the WebID, bound to the app's key with DPoP; 3 the app sends GET to the bids container with the token and a DPoP proof; 4 the pod dereferences the WebID and finds solid:oidcIssuer; 5 the pod checks the access rules; 6 it answers 200 OK, 401 Unauthorized or 403 Forbidden",
+   "caption": "The pod trusts an identity provider only if the WebID profile names it. Your PITAS app logs in without a browser, with client credentials of the Community Solid Server.",
+   "source": "[Solid-OIDC](https://solidproject.org/TR/oidc)",
+   "notes": "Simplified: Solid-OIDC is OpenID Connect plus the webid claim plus DPoP (proof of possession): a stolen token is useless without the app's private key. Authentication (who is asking) is separated from authorization (what they may do), and both from the storage. Assignment 9, Task 4.1."
+  },
+  {
+   "layout": "code",
+   "id": "wac",
+   "title": "Who May Do What? Web Access Control",
+   "callout": {
+    "text": "Why may bidders append to the bids container, but not write to it?"
+   },
+   "code": "# /pitas-g3/pitas/auctions/a-001/bids/.acl\n@prefix acl:  <http://www.w3.org/ns/auth/acl#> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\n<#submit> a acl:Authorization ;\n    acl:agentClass foaf:Agent ;\n    acl:accessTo   <./> ;\n    acl:default    <./> ;\n    acl:mode       acl:Append .\n\n<#house> a acl:Authorization ;\n    acl:agent    </pitas-g3/profile/card#me> ;\n    acl:accessTo <./> ;\n    acl:default  <./> ;\n    acl:mode     acl:Read, acl:Write, acl:Control .",
+   "points": [
+    "Modes: `Read`, `Write`, `Append` (add, never remove) and `Control` (change the rules)",
+    "`acl:accessTo` is the container itself, `acl:default` is inherited by everything in it",
+    "`acl:agent` names one WebID; `acl:agentClass foaf:Agent` is anyone",
+    "The pod enforces the sealed bid, not your code"
+   ],
+   "source": "[Web Access Control](https://solidproject.org/TR/wac), [Access Control Policy](https://solidproject.org/TR/acp)",
+   "notes": "Each resource links its ACL resource with Link: <…>; rel=\"acl\". acl:AuthenticatedAgent is the class of all logged-in agents. ACP (Access Control Policy) is the alternative model with policies and matchers, used by Inrupt's server and optional in the Community Solid Server. Assignment 9, Task 4.3 asks for four rules; the sealed-bid one is shown here (as on the sheet)."
+  },
+  {
+   "layout": "image",
+   "id": "type-index",
+   "title": "Finding Data: Follow Your Nose from the WebID",
+   "image": "img/solid-discovery.svg",
+   "shadow": false,
+   "alt": "Chain of five boxes connected by arrows: WebID …/profile/card#me, profile document with solid:publicTypeIndex, public type index with solid:forClass pitas:Auction and solid:instanceContainer, container …/pitas/auctions/ with ldp:contains, auction a-001.ttl. Below: the bidder knows only the auction house's WebID; each step is a GET and a link to follow; the only shared knowledge is HTTP, RDF, the Solid vocabulary and the class pitas:Auction",
+   "caption": "Hypermedia for data at rest: this replaces the resource directory of Assignment 8 (Task 4.2). A private type index, readable only by the owner, lists private data.",
+   "notes": "Compare with HATEOAS: the client starts from one URI and follows typed links. The type index maps an RDF class to a container (solid:instanceContainer) or a single resource (solid:instance). This only works if all groups use the same class, which is the vocabulary question of the next slide.",
+   "refs": [
+    {
+     "to": "09#hypermedia-way",
+     "kind": "recap"
+    }
+   ]
+  },
+  {
+   "layout": "code",
+   "id": "shapes",
+   "title": "Data at Rest Needs a Contract: Vocabulary and Shapes",
+   "code": "@prefix sh:     <http://www.w3.org/ns/shacl#> .\n@prefix schema: <https://schema.org/> .\n@prefix prov:   <http://www.w3.org/ns/prov#> .\n@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .\n@prefix pitas:  <https://pitas.example.org/ns#> .\n\npitas:BidShape a sh:NodeShape ;\n  sh:targetClass pitas:Bid ;\n  sh:property [ sh:path pitas:forAuction ;\n                sh:nodeKind sh:IRI ; sh:minCount 1 ] ;\n  sh:property [ sh:path schema:price ;\n                sh:datatype xsd:decimal ; sh:maxCount 1 ] ;\n  sh:property [ sh:path prov:wasAttributedTo ;\n                sh:nodeKind sh:IRI ; sh:minCount 1 ] .",
+   "points": [
+    "The API of Assignment 7 fixes messages in flight; pods hold data at rest that apps you never met will read",
+    "Reuse terms: schema.org for offers and prices, PROV-O for who produced what; mint `pitas:` terms only where nothing fits",
+    "A SHACL or ShEx shape lets an app validate data that it did not write"
+   ],
+   "caption": "An example shape for a bid, not the one your task force will agree on.",
+   "notes": "Assignment 9, Task 2. The tension: the more precisely the task force specifies the data plane, the more interoperable the ecosystem and the less room each group has to evolve. Lecture 10 goes deeper into shared vocabularies and semantic interoperability.",
+   "refs": [
+    {
+     "to": "10#shared-understanding",
+     "kind": "next"
+    }
+   ]
+  },
+  {
+   "layout": "code",
+   "id": "solid-notifications",
+   "title": "Pods Can Tell You: Solid Notifications",
+   "callout": {
+    "text": "Keep WebSub, or let the pods notify? (Assignment 9, Reflections)"
+   },
+   "points": [
+    "A client subscribes to changes of a resource or a container, for example new bids",
+    "The pod lists its channels in its storage description, found through a `Link` header",
+    "`WebSocketChannel2023`: the client keeps a connection open; `WebhookChannel2023`: the pod calls the client back",
+    "In Assignment 8, a WebSub hub or an MQTT broker sat between publisher and subscriber"
+   ],
+   "source": "[Solid Notifications Protocol](https://solidproject.org/TR/notifications-protocol)",
+   "notes": "Solid decentralizes the data at rest; Assignment 8 decentralized the flow of events. With notifications, the pod becomes an event source too. The Community Solid Server supports WebSocket and Webhook channels. Ask: what does the hub give you that the pod does not (fan-out, retries, decoupling of publisher availability)?",
+   "refs": [
+    {
+     "to": "08#pubsub-web",
+     "kind": "recap"
+    }
+   ],
+   "code": "POST /.notifications/WebSocketChannel2023/ HTTP/1.1\nContent-Type: application/ld+json\n\n{ \"@context\": [\n    \"https://www.w3.org/ns/solid/notifications-context/v1\" ],\n  \"type\": \"WebSocketChannel2023\",\n  \"topic\": \"…/pitas-g3/pitas/auctions/a-001/bids/\" }\n\nHTTP/1.1 200 OK\n\n{ \"type\": \"WebSocketChannel2023\",\n  \"topic\": \"…/pitas-g3/pitas/auctions/a-001/bids/\",\n  \"receiveFrom\": \"wss://solid.example.org/.notifications/…\" }",
+   "caption": "Subscription to the bids container on a Community Solid Server."
+  },
+  {
+   "layout": "text",
+   "id": "sovereignty",
+   "title": "Data Sovereignty: Who Owns What?",
+   "callout": {
+    "text": "Whose pod does a bid belong in?"
+   },
+   "points": [
+    "The sovereignty principle of Assignment 9: data stays in the pod of the entity that generates it, and only that entity decides who may use it",
+    "Others refer to it by its URI and keep no authoritative copies",
+    {
+     "text": "Hard cases:",
+     "sub": [
+      "the auction is the house's record, but the task is the client's",
+      "a bid is the bidder's, but it is evidence for the house",
+      "a result is the worker's, but the client paid for it"
+     ]
+    }
+   ],
+   "notes": "Where ownership is contested, the group's role in the task force shapes the answer. Digital sovereignty: people, organisations and public institutions decide for themselves about their data and the infrastructure they depend on. The principle itself is fixed on the sheet; what it means for PITAS is Task 1. Note for the discussion: the example pod layout and ACL on the sheet put the bids into the auction house's pod, which is one possible answer to the callout question, not the only one.",
+   "refs": [
+    {
+     "to": "09#data-decentralization",
+     "kind": "recap"
+    }
+   ]
+  },
+  {
+   "layout": "image",
+   "id": "pitas-solid",
+   "title": "Solid in the PITAS Ecosystem",
+   "image": "img/pitas-solid.svg",
+   "shadow": false,
+   "alt": "Diagram of PITAS under the sovereignty principle: on the course server solid.interactions.ics.unisg.ch the client's pod (tasks/t-17.ttl, WebID) and the auction house's pod (auctions/a-001.ttl, the bids container, WebID); on a group's own server the pod of a bidder and worker (bids/b-8f2c.ttl marked with a question mark, results/r-17.ttl, WebID). Dashed green links: the auction links to the task, the result links to the task. A red arrow labelled append? from the bidder to the bids container. Legend: pod of one entity, a link by URI and no copy, an open question for Task 1",
+   "caption": "The pod, not your application, is authoritative: stop your app, delete its local state, restart, and it continues from the pods (Task 3.1).",
+   "notes": "Walk through the sheet: which entities need a WebID and a pod, which data item lives where, which links and which permissions. The diagram is the kind of system diagram Task 1 asks for (with at least two other groups' applications). Pods spread over several servers must work: encourage a local Community Solid Server during development."
+  },
+  {
+   "layout": "text",
+   "id": "solid-critique",
+   "title": "Critical View: Where Does Solid Hurt?",
+   "callout": {
+    "text": "Which non-functional properties does Solid improve, and which does it cost?"
+   },
+   "points": [
+    "Performance: following links means many small requests, across servers",
+    "Consistency: no transactions across resources and pods; partial failure is normal",
+    "Power: whoever hosts pods and identity providers gains a new central position",
+    "Usability: people must understand the access rules they set",
+    "Agreement: apps interoperate only if they share vocabularies and shapes"
+   ],
+   "notes": "In the spirit of lectures 7 and 8: every architectural decision induces a non-functional profile. Solid improves evolvability, portability, autonomy of the data owner and privacy; it costs performance, simplicity and consistency. Prepare the task force discussion: what does a hyperscaler, a social media platform, a privacy activist and a government gain or lose? (Reflection question 5.)",
+   "refs": [
+    {
+     "to": "07b#principled-design",
+     "kind": "recap"
+    }
+   ]
+  },
+  {
+   "layout": "canvas",
+   "title": "Data Decentralization: Limits of Personal Data Storage",
+   "items": [
+    {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "A lot of the ", "sz": 1.875}, {"t": "interesting", "sz": 1.875, "b": 1}, {"t": " data about a subject…", "sz": 1.875}], "pl": 0.0, "in": 0.0, "s": 1}, {"al": "l", "r": [{"t": "   …needs to be asserted by an ", "sz": 1.458}, {"t": "authoritative source ", "sz": 1.458, "b": 1}, {"t": "(e.g., a bank, a doctor, a state agency)", "sz": 1.458}], "pl": 0.0, "in": 0.0, "s": 2}, {"al": "l", "r": [{"t": "   …is about what the subject did ", "sz": 1.458}, {"t": "using a service ", "sz": 1.458, "b": 1}, {"t": "(e.g., buying, searching) and is ", "sz": 1.458}, {"t": "generated and owned ", "sz": 1.458, "b": 1}, {"t": "by the services", "sz": 1.458}], "pl": 0.0, "in": 0.0, "s": 3}, {"al": "l", "r": [{"t": "   …was given by ", "sz": 1.458}, {"t": "others ", "sz": 1.458, "b": 1}, {"t": "about the subject and the content it produced (e.g., ratings, reviews)", "sz": 1.458}], "pl": 0.0, "in": 0.0, "s": 4}, {"al": "l", "r": [{"t": "", "sz": 1.667}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "No convincing business model (yet?) for personal data storage. Today’s BMs depend on exclusive data control", "sz": 1.875}], "pl": 0.0, "in": 0.0, "s": 5}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "Services could still ask for «all data» and cut users if this is revoked. ", "sz": 1.875}, {"t": "If users lack alternatives, they will consent to this", "sz": 1.875, "b": 1}, {"t": "!", "sz": 1.875}], "pl": 0.0, "in": 0.0, "s": 6}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 0.0, "y": -1.136, "w": 0.001, "h": 2.272, "g": "rect", "fill": "#ffffff"},
+    {"k": "pic", "src": "img/92a1014bdd.jpg", "alt": "How one law student is making Facebook get serious about privacy | Ars  Technica", "x": 69.902, "y": 32.561, "w": 24.133, "h": 16.889, "s": 8, "shadow": true},
+    {"k": "shape", "x": 5.708, "y": 34.317, "w": 59.59, "h": 13.378, "s": 7, "g": "rect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "The lack of alternatives (i.e., of interoperability) and the issues with consent are ", "sz": 2.083, "c": "#000000"}, {"t": "beyond personal data storage", "sz": 2.083, "b": 1, "c": "#000000"}, {"t": ". ", "sz": 2.083, "c": "#000000"}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "If we want to tackle them, we might need to ", "sz": 2.083, "c": "#000000"}, {"t": "regulate for openness. ", "sz": 2.083, "b": 1, "c": "#000000"}, {"t": "Some argue that this ", "sz": 2.083, "c": "#000000"}, {"t": "is already there, but that it today lacks teeth.", "sz": 2.083, "b": 1, "c": "#000000"}], "pl": 0.0, "in": 0.0}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "pic", "src": "img/40ce756d79.png", "alt": "Screenshot of a news report with Max Schrems: Max Schrems versus Facebook, the company must pay 36 million euros in fines", "x": 77.895, "y": 30.751, "w": 19.728, "h": 13.098, "s": 9, "crop": [0.35352, 0.66107, 0.36849, 0.08698]},
+    {"k": "shape", "x": 35.503, "y": 50.723, "w": 59.177, "h": 3.786, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Zihlmann, Garcia, Mayer, Tamò-Larrieux: A right to repair privacy-invasive services: Is a new, more holistic European approach emerging? International Conference on Privacy-Friendly and Trustworthy Technology for Society, 2022", "sz": 1.25, "c": "#333333"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}
+   ],
+   "notes": "Moved here from the old lecture on constrained systems. After the technical critique: even with Solid, much interesting data about a person is asserted or generated by others, and consent without alternatives is weak. This is where regulation comes in."
+  },
+  {
+   "layout": "table",
+   "id": "assignment-9",
+   "title": "Towards Assignment 9",
+   "columns": [
+    "Task",
+    "What you do",
+    "On the slides"
+   ],
+   "rows": [
+    [
+     "1 Data Sovereignty",
+     "entities, WebIDs and pods; who generates which data item; a system diagram",
+     "[Who owns what](09#sovereignty), [PITAS](09#pitas-solid)"
+    ],
+    [
+     "2 Shared Vocabulary",
+     "RDF terms, shapes and pod layout, agreed in the task force",
+     "[Vocabulary and shapes](09#shapes)"
+    ],
+    [
+     "3 Implementation",
+     "3.1 move the data into pods; 3.2 integration test with another group",
+     "[LDP](09#ldp), [N3 Patch](09#n3-patch)"
+    ],
+    [
+     "4 WebIDs",
+     "4.1 Solid-OIDC, 4.2 discovery through the type index, 4.3 access control",
+     "[Solid-OIDC](09#solid-oidc), [Type index](09#type-index), [WAC](09#wac)"
+    ],
+    [
+     "5 Measurement",
+     "the measurement framework of Assignment 7, applied to your system",
+     ""
+    ],
+    [
+     "6 Reflections",
+     "what the separation cost and bought, from your role's view",
+     "[Critical view](09#solid-critique)"
+    ]
+   ],
+   "after": "Deadline: Sunday 29.11.2026, 23:59 CET. Hand in a release with your ADRs and WebIDs, and a PDF with Tasks 1, 2, 3.2 and 6.",
+   "notes": "Walk through the sheet. The PITAS PlugFest takes place on Tuesday 24.11.2026, 17:00 to 20:00. Task 5 (Measurement) is still a placeholder on the sheet."
+  },
+  {
+   "layout": "task",
+   "id": "solid-pod-task",
+   "title": "Get Your Pod",
+   "stamp": "Register your group's WebIDs and pods this week!",
+   "paragraphs": [
+    "We host a Community Solid Server for the PITAS ecosystem. Register the accounts, WebIDs and pods your design needs.",
+    "For development, also run one locally: `npx @solid/community-server`. The ecosystem must work with pods on more than one server."
+   ],
+   "url": "https://solid.interactions.ics.unisg.ch/",
+   "label": "solid.interactions.ics.unisg.ch",
+   "notes": "Show the registration page of the course server live."
+  },
+  {
+   "layout": "section",
+   "id": "sosy",
+   "title": "Solid Symposium 2027\nin **St.Gallen**",
+   "kicker": "SoSy 27, 10 to 12 May 2027",
+   "notes": "Announcement. The fifth Solid Symposium comes to our campus."
+  },
+  {
+   "layout": "text",
+   "id": "sosy-announcement",
+   "title": "SoSy 27: The Solid Community Comes to St.Gallen",
+   "points": [
+    "The 5th Solid Symposium, the annual meeting of the Solid community since 2023",
+    "**Mon 10 May 2027**, Solid Open Day on digital sovereignty, open to the public: a student hack, an onboarding session for your first pod, an evening event in German",
+    "**Tue 11 and Wed 12 May 2027**, the symposium: keynotes, peer-reviewed papers, posters and demos, community sessions",
+    "At SQUARE on our campus, organised by the Future Society Hub, ICS-HSG and ILE-HSG",
+    "[sosy2027.org](https://sosy2027.org/)"
+   ],
+   "aside": {
+    "image": "img/sosy-square-aerial.jpg",
+    "alt": "Aerial view of the SQUARE building on the HSG campus above the city of St. Gallen, with the Säntis massif on the horizon"
+   },
+   "source": "Picture: [sosy2027.org](https://sosy2027.org/)",
+   "notes": "Earlier editions: SoSy 23, 24, 25 and 26 (sosy2026.eu). The Call for Sessions closes on 25 November 2026 (AoE); the call for papers, posters and demos follows, with submissions in February 2027 and registration from March 2027 (indicative dates). Participants pay a registration fee covering food and beverages."
+  },
+  {
+   "layout": "text",
+   "id": "sosy-invitation",
+   "title": "Two Invitations: Join and Help!",
+   "callout": {
+    "text": "Who wants to join, and who wants to help?"
+   },
+   "groups": [
+    {
+     "heading": "1 Join",
+     "points": [
+      "Hack at the Solid Open Day on 10 May: your Assignment 9 work is a head start",
+      "Show your PITAS app as a poster or demo (submissions in February 2027)",
+      "Meet the Solid community: researchers, developers, practitioners"
+     ]
+    },
+    {
+     "heading": "2 Help",
+     "points": [
+      "Help us run the Open Day, the student hack and the symposium",
+      "Write to fuso@unisg.ch or talk to us after the lecture"
+     ]
+    }
+   ],
+   "notes": "Instructors: name the concrete helper tasks and any benefit for students (for example free registration) once they are decided; the website does not list them yet."
+  },
+  {
+   "layout": "questions",
+   "title": "Any Questions / Comments / Doubts / Concerns?",
+   "points": [
+    "Hypermedia lets clients find their next action at run time, as affordances do for people",
+    "Link relation types and media types tell a client why to follow a link and how to read the result",
+    "Solid separates data from apps: data lives in pods that its owners control",
+    "From a WebID, a client finds identity provider, storage and type index",
+    "Access rules live in the pod, not in each app's code"
    ]
   }
  ],

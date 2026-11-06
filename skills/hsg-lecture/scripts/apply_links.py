@@ -28,10 +28,15 @@ PLAIN = str.maketrans({"’": "'", "‘": "'", "„": '"', "“": '"', "”": '"
 norm = lambda s: re.sub(r"\s+", " ", s.translate(PLAIN)).strip().lower()
 
 
+def items_of(s):
+    """The canvas items of a slide (other layouts, e.g. quiz, have plain strings as items)."""
+    return [it for it in s.get("items", []) if isinstance(it, dict)]
+
+
 def runs_text(s):
     """All (item, paragraph) text of a slide as plain strings."""
     out = []
-    for it in s.get("items", []):
+    for it in items_of(s):
         for p in (it.get("tx") or {}).get("p", []):
             out.append("".join(r.get("t", "") for r in p["r"]))
         if it["k"] == "table" if "k" in it else False:
@@ -129,11 +134,11 @@ def main():
     for d in decks.values():
         for s in d["slides"]:
             s.pop("refs", None)
-            for it in s.get("items", []):
+            for it in items_of(s):
                 for p in (it.get("tx") or {}).get("p", []):
                     for r in p["r"]:
                         r.pop("href", None)
-            for it in s.get("items", []):          # merge runs that were split only for a link
+            for it in items_of(s):          # merge runs that were split only for a link
                 for p in (it.get("tx") or {}).get("p", []):
                     merged = []
                     for r in p["r"]:
@@ -197,7 +202,7 @@ def main():
             p.write_text(pc.dumps(decks[n]), encoding="utf-8")
         nr = sum(len(s.get("refs", [])) for d in decks.values() for s in d["slides"])
         ni = sum(1 for d in decks.values() for s in d["slides"] if s.get("id"))
-        nl = sum(1 for d in decks.values() for s in d["slides"] for it in s.get("items", []) for p in (it.get("tx") or {}).get("p", []) for r in p["r"] if r.get("href"))
+        nl = sum(1 for d in decks.values() for s in d["slides"] for it in items_of(s) for p in (it.get("tx") or {}).get("p", []) for r in p["r"] if r.get("href"))
         print(f"{ni} slide ids, {nr} reference pills, {nl} linked text runs")
     sys.exit(1 if problems else 0)
 
