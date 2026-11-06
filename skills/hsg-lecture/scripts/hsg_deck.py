@@ -33,7 +33,7 @@ COMMON = {"layout", "title", "lead", "callout", "source", "notes", "time"}
 NO_LEAD = {"title", "section", "task", "quote"}
 # layout: (required fields, optional fields)
 LAYOUTS = {
-    "title":     ({"title"}, {"kicker", "presenters", "meta", "picture"}),
+    "title":     ({"title"}, {"kicker", "presenters", "meta", "picture", "style"}),
     "section":   ({"title"}, {"kicker"}),
     "menu":      ({"title", "items"}, {"current"}),
     "text":      ({"title"}, {"paragraphs", "points", "defs", "groups", "after", "aside"}),
@@ -262,6 +262,8 @@ def check(deck, base):
             need_picture(s["aside"], f"{w}, aside")
         if lay == "questions":
             need_points(s.get("points"), w, most=5)
+        if lay == "title" and s.get("style", "gear") not in ("gear", "photo", "side", "slanted"):
+            errors.append(f"{w}: 'style' must be gear, photo, side or slanted")
         if lay == "code":
             need_code(s.get("code"), w)
             need_points(s.get("points"), w, most=5)

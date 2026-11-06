@@ -50,7 +50,7 @@ A line break in a title is written as `\n`, and `**words**` in a title is set bo
 
 | Layout | For | Fields besides the common ones |
 |---|---|---|
-| `title` | first slide | `kicker` (line above the title: the course or "Welcome and Introduction"), `presenters` (list of names), `meta` (list of lines, e.g. "University of St.Gallen", "Bachelor in Computer Science", "", "Computersysteme (1,904)"; an empty string is a gap), `picture` (`image`, `alt`; replaces the gear word cloud) |
+| `title` | first slide | `kicker` (line above the title: the course or "Welcome and Introduction"), `presenters` (list of names), `meta` (list of lines, e.g. "University of St.Gallen", "Bachelor in Computer Science", "", "Computersysteme (1,904)"; an empty string is a gap), `picture` (`image`, `alt`; replaces the gear word cloud, or the photo), `style` (`gear`, the default, with the gear word cloud; and the three title slides of the official HSG template: `photo`, a photo behind the whole slide and the title across its width; `side`, a photo strip on the right third; `slanted`, a slanted photo with a green frame at the top right. Without a `picture` they show the template's concrete photo; for `side` and `slanted` give a picture that fits the talk) |
 | `section` | start of a part of the lecture | `kicker` |
 | `syllabus` | the course plan | `items` (`date`, `title`, `kind`: `lecture` default or `exercise`), `current` (number of today's session, or a list), `break_after` (number of the session before a break), `assignments` (`title`, `from`, `to`: session numbers the assignment runs over) |
 | `menu` | today's topics in a green frame | `items` (2 to 8 strings), `current` (number of the topic now starting, shown green) |
@@ -124,4 +124,4 @@ The renderer uses Microsoft Edge if installed, otherwise Playwright's Chromium (
 
 Fonts: the page uses Gill Sans Nova (Light, Regular, Bold), else Gill Sans MT Pro, and Palatino Linotype where they are installed; these fonts are licensed and are never copied into `html/assets/`. Everywhere else it falls back to the bundled Gillius ADF No2 (GPL with font exception, `assets/fonts/GILLIUS-LICENSE.txt`) and TeX Gyre Pagella (GUST Font License, `assets/fonts/PAGELLA-LICENSE.txt`), which are close but a little wider and heavier; the screenshots of the check use the fallback, so text that fits there fits with Gill Sans.
 
-Pictures bundled in `assets/` come from the Computersysteme decks: the HSG logo, the gear word cloud of the title slide, the figure on the question mark and the light bulb.
+Pictures bundled in `assets/` come from the Computersysteme decks: the HSG logo, the gear word cloud of the title slide, the figure on the question mark and the light bulb. The concrete photo of the `photo`, `side` and `slanted` title slides comes from the official HSG template.

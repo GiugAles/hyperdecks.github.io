@@ -216,10 +216,22 @@ table.t{width:100%;border-collapse:collapse;font-size:var(--s-mid);line-height:1
 .logo{position:absolute;left:3.9U;top:3.4U;width:24.3U;height:auto;z-index:2}
 .art{position:absolute;inset:0;overflow:hidden;z-index:0}
 .gear{position:absolute;left:47.65U;top:-1.9U;width:53.2U;height:53.2U;object-fit:contain}
+/* the other title slides of the official template: "photo" (a photo behind the whole slide), "side" (a photo strip on the
+   right) and "slanted" (a slanted photo with a green frame); the last two have no wedge and a black tagline */
+.bgphoto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tblock.t-photo{width:87U}
+.tblock.t-side{width:52.11U}.tblock.t-slanted{width:49.25U}
+.tpic{position:absolute;object-fit:cover;z-index:1}
+.tpic.side{left:65.24U;top:0;width:34.76U;height:56.25U}
+.tpic.slanted{left:62.91U;top:4.9U;width:37.09U;height:41.54U;clip-path:polygon(0 21.87%,100% 0,100% 100%,15.27% 92.29%)}
+.tframe{position:absolute;left:63.01U;top:17.77U;width:26.46U;height:29.42U;overflow:visible;z-index:0}
+.tagline.side,.tagline.slanted{top:51.5U;color:var(--fg);z-index:2}
+.tagline.side{left:9.06U;right:auto}
+.tagline.slanted{right:3.92U}
 .veil{position:absolute;inset:0;z-index:1;background:linear-gradient(to top right,#fff 0%,rgba(255,255,255,.6) 50%,rgba(255,255,255,0) 100%)}
 .wedge{position:absolute;left:50U;top:34.65U;width:50U;height:21.6U;background:var(--green);z-index:2;
   clip-path:polygon(100% 0,100% 100%,3.65% 100%,0 52.9%)}
-.tagline{position:absolute;right:4U;top:15.65U;z-index:3;font-family:HSGSerif,"Palatino Linotype",Palatino,serif;font-size:1.39U;color:#fff}
+.tagline{position:absolute;right:4U;top:15.65U;z-index:3;font-size:1.39U;color:#fff}
 .tblock{position:absolute;left:9U;top:12U;width:44U;height:19.6U;z-index:2;display:flex;flex-direction:column;justify-content:flex-end}
 .kicker{font-size:var(--s-kick);line-height:1.2;color:var(--fg);margin-bottom:2.2U}
 h1{font-size:var(--s-h1);font-weight:300;line-height:1.08;letter-spacing:-.01em;color:var(--fg);text-wrap:balance}
@@ -332,6 +344,10 @@ body.show-notes .notes-view{display:block}
   .logo{width:190px;margin-bottom:44px}
   .tbody{margin:26px 0 30px;font-size:15px}
   .gear{left:auto;right:-70px;top:-50px;width:210px;height:210px}
+  .l-title .tblock{width:auto;height:auto}
+  .l-title .tpic{position:static;width:auto;height:200px;margin:0 -20px;clip-path:none}
+  .tframe{display:none}
+  .tagline.side,.tagline.slanted{margin-top:auto;padding:18px 0;font-size:15px}
   .l-title .frame,.l-section .frame{overflow:hidden}
   .wedge{position:static;width:auto;height:auto;clip-path:none;margin:auto -20px 0;padding:26px 20px 18px;display:flex;justify-content:flex-end;
     clip-path:polygon(100% 0,100% 100%,0 100%,0 40%)}
@@ -634,18 +650,30 @@ class Html:
     # ---- layouts: each returns the inside of .frame
 
     def l_title(self, s):
-        pic = s.get("picture")
-        gear = (f'<img class="gear" src="{self.asset(pic["image"])}" alt="{esc(pic["alt"])}">' if pic else
-                '<img class="gear" src="assets/title-gear.png" alt="Word cloud of research topics in the shape of a gear">')
+        pic, st = s.get("picture"), s.get("style", "gear")
+        src, alt = (self.asset(pic["image"]), esc(pic["alt"])) if pic else ("assets/title-photo.jpg", "")
+        if st == "photo":                              # the template's title slide 1: a photo behind the whole slide
+            art = f'<img class="bgphoto" src="{src}" alt="{alt}">'
+        else:
+            art = (f'<img class="gear" src="{self.asset(pic["image"])}" alt="{esc(pic["alt"])}">' if pic else
+                   '<img class="gear" src="assets/title-gear.png" alt="Word cloud of research topics in the shape of a gear">'
+                   ) + '<div class="veil"></div>'
         kick = f'<p class="kicker">{esc(s["kicker"])}</p>' if s.get("kicker") else ""
         body = ""
         if s.get("presenters"):
             body += f'<p>{esc(", ".join(s["presenters"]))}</p>'
         if s.get("meta"):
             body += "<p>" + "<br>".join(esc(x) for x in s["meta"]) + "</p>"
-        return (f'<div class="art">{gear}<div class="veil"></div></div><img class="logo" src="assets/hsg_logo.png" alt="University of St.Gallen">'
-                f'<div class="tblock">{kick}<h1>{self.htitle(s["title"])}</h1></div>'
-                + (f'<div class="tbody">{body}</div>' if body else "")
+        logo = '<img class="logo" src="assets/hsg_logo.png" alt="University of St.Gallen">'
+        head = f'<div class="tblock t-{st}">{kick}<h1>{self.htitle(s["title"])}</h1></div>'
+        tbody = f'<div class="tbody t-{st}">{body}</div>' if body else ""
+        if st in ("side", "slanted"):                  # the template's title slides 2 and 3
+            frame = ('<svg class="tframe" viewBox="0 0 26.46 29.42" preserveAspectRatio="none" aria-hidden="true"><polygon '
+                     'points="0,6.51 26.46,0 26.39,29.42 3.89,27.27" fill="none" stroke="#00802F" stroke-width=".56"/></svg>'
+                     if st == "slanted" else "")
+            return (logo + head + tbody + frame + f'<img class="tpic {st}" src="{src}" alt="{alt}">'
+                    f'<p class="tagline {st}">From insight to impact.</p>')
+        return (f'<div class="art">{art}</div>{logo}{head}{tbody}'
                 + '<div class="wedge"><p class="tagline">From insight to impact.</p></div>')
 
     def l_section(self, s):
@@ -985,7 +1013,7 @@ class Html:
         self.assets.mkdir(parents=True, exist_ok=True)
         for *_, f in FONTS:
             shutil.copyfile(hd.ASSETS / "fonts" / f, self.assets / f)
-        for f in ("hsg_logo.png", "title-gear.png", "questions.png", "lightbulb.jpg"):
+        for f in ("hsg_logo.png", "title-gear.png", "title-photo.jpg", "questions.png", "lightbulb.jpg"):
             shutil.copyfile(hd.ASSETS / f, self.assets / f)
         (self.out / "index.html").write_text(self.page(), encoding="utf-8")
         return self.out / "index.html"
