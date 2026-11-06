@@ -11,7 +11,7 @@
       "meta": [
         "$ hackathon --date \"Nov 7-8, 2026\"",
         "$ hackathon --venue \"Rosenbergstrasse 30\"",
-        "$ hackathon --duration 24h --teams \"up to 4\""
+        "$ hackathon --duration 24h --teams \"up to 4 members\""
       ],
       "picture": {
         "image": "img/mark.png",
@@ -185,8 +185,8 @@
       "title": "Some **Ground Rules**",
       "points": [
         "Be **respectful** of the environment",
-        "**Work wherever you like**: in rooms ==61-070== and ==61-152==. **Leave the rooms as you found them.**",
-        "All **announcements** are made in room ==61-070==",
+        "**Work wherever you like**: in rooms 61-070 and 61-152. **Leave the rooms as you found them.**",
+        "All **announcements** are made in room 61-070",
          "**Take a break** or go home to rest whenever you need to. You can also **stay here** as long as you need.",
         "Be **cooperative**, **ask questions** and **ask the mentors** for help"
       ]
@@ -205,7 +205,7 @@
       "title": "We Are Here to **Have Fun**",
       "points": [
         "We provide food and drinks to keep you fuelled up, mate tea included 🧉",
-        "Pizza at 18:00 in the ==lounge opposite 61-070== 🍕",
+        "Pizza at 18:00 in the lounge opposite 61-070 🍕",
 
         "Some games later in the evening"
       ]
@@ -232,7 +232,7 @@
         ],
         [
           "Sat 18:00",
-          "Pizza in the ==lounge opposite 61-070=="
+          "Pizza in the lounge opposite 61-070"
 
         ],
         [
