@@ -957,9 +957,13 @@ class Html:
         cls = " shadow" if it.get("shadow") else ""
         if it.get("video"):
             src = (self.base / it["video"]).resolve()
-            if src.exists():
-                (self.out / "media").mkdir(exist_ok=True)
-                shutil.copyfile(src, self.out / "media" / src.name)
+            served = self.out / "media" / src.name      # the copy already published with the deck
+            if not src.exists() and not served.exists():
+                print(f"WARNING: video {it['video']} not found (neither {src} nor {served}); showing its poster only", file=sys.stderr)
+            if src.exists() or served.exists():
+                if src.exists() and src != served.resolve():
+                    (self.out / "media").mkdir(exist_ok=True)
+                    shutil.copyfile(src, served)
                 typ = {"mov": "video/quicktime", "mp4": "video/mp4", "webm": "video/webm"}.get(src.suffix[1:].lower(), "video/mp4")
                 return (f'<div class="it{cls}" style="{self.cv_pos(it)}"{self.cv_attrs(it)}><div class="pimg">'
                         f'<video controls preload="none" poster="{self.asset(it["src"])}" aria-label="{esc(it.get("alt", ""))}">'
