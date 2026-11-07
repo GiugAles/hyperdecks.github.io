@@ -165,6 +165,17 @@ table.t{width:100%;border-collapse:collapse;font-size:var(--s-mid);line-height:1
 
 .gallery{display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));gap:3U;align-items:end}
 .gallery .pic img{max-height:30U}
+.gallery.qr{max-width:60U;margin:0 auto;align-items:start}
+.gallery.qr .pic img{width:24U;height:24U;max-height:none;margin:0 auto}
+/* three tiles with an icon (an emoji, or a coloured dot) each */
+.tiles3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2.4U;margin-top:2U}
+.tile{border:.1U solid #ccc;border-radius:1U;padding:2.6U 2.4U;font-size:var(--s-body);line-height:1.35}
+.ticon{display:block;font-size:4U;line-height:1;margin-bottom:1.6U}
+.ticon.dot{width:4U;height:4U;border-radius:50%;background:#EB6969}
+/* decor: emojis or dots scattered behind the slide */
+.odots,.emojis{position:absolute;inset:0;pointer-events:none;z-index:-1}
+.odots i{position:absolute;width:calc(var(--d)*1U);height:calc(var(--d)*1U);border-radius:50%;background:#EB6969;opacity:.9}
+.emojis span{position:absolute;line-height:1}
 .people{display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));gap:3U;align-items:end;justify-items:center}
 .person{display:flex;flex-direction:column;align-items:center;text-align:center;gap:1.4U}
 .person img{width:13U;height:16U;object-fit:cover;display:block;filter:drop-shadow(.35U .35U .55U rgba(0,0,0,.38))}
@@ -299,7 +310,7 @@ a.il:hover{background:var(--green);color:#fff!important}
   display:flex;align-items:center;justify-content:center;gap:7px;white-space:nowrap}
 .controls [hidden]{display:none}
 .controls svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;flex:none}
-.controls button:hover,body.show-notes #notesBtn,body:has(.overview.open) #ovBtn{background:#f0f0f0}
+.controls button:hover,body.show-notes #notesBtn,body:has(.overview.open) #ovBtn,body.auto #autoBtn{background:#f0f0f0}
 .controls button:focus-visible{outline:2px solid #00802F;outline-offset:2px}
 .controls .nav button{width:32px;height:32px;padding:0;background:#00802F;color:#fff}
 .controls .nav button:not(:disabled):hover{background:#0A5F2D}
@@ -307,6 +318,7 @@ a.il:hover{background:var(--green);color:#fff!important}
 .nav svg{stroke-width:2.25}
 .count{min-width:60px;text-align:center;font-variant-numeric:tabular-nums}
 :root:not(:fullscreen) .fs-on,:root:fullscreen .fs-off{display:none}
+body:not(.auto) .auto-on,body.auto .auto-off{display:none}
 .progress{position:fixed;left:0;right:0;bottom:0;height:3px;background:#ddd}
 .progress span{display:block;height:100%;width:0;background:#00802F;transition:width .3s}
 :root:fullscreen{--bar:0px}
@@ -331,6 +343,7 @@ body.show-notes .notes-view{display:block}
 /* windows narrower than 1000px: still one slide at a time, but the slide fills the window and its content
    reflows into one column; a slide taller than the window scrolls within itself */
 @media (max-width:999px),(max-height:480px){
+  .tiles3{grid-template-columns:1fr}.odots,.emojis{display:none}
   :root{--u:8px;--s-h1:34px;--s-h2:25px;--s-kick:17px;--s-body:17px;--s-mid:16px;--s-sub:15px;--s-small:14px;--s-tiny:12px}
   body{background:#fff}
   .slide{left:0;top:0;width:100%;height:calc(100% - var(--bar));transform:none;overflow-y:auto}
@@ -406,7 +419,11 @@ const by=id=>document.getElementById(id);
 let cur=0,step=0,arrived=false;{const h=location.hash.replace(/^#\/?/,'');if(/^\d+$/.test(h)){if(+h>=1&&+h<=slides.length){cur=+h-1;arrived=true}}else if(h){const i=slides.findIndex(s=>s.dataset.id===decodeURIComponent(h));if(i>=0){cur=i;arrived=true}}}
 const maxStep=()=>+slides[cur].dataset.steps||0,stepping=()=>!matchMedia('(max-width:999px),(max-height:480px)').matches;
 function show(){slides[cur].querySelectorAll('.it[data-s],.it[data-e],.tx p[data-s]').forEach(e=>{const a=+e.dataset.s||0,x=e.dataset.e?+e.dataset.e:1e9;
-  e.classList.toggle('off',!(step>=a&&step<x))});by('prev').disabled=cur===0&&step===0;by('next').disabled=cur===slides.length-1&&step>=maxStep()}
+  e.classList.toggle('off',!(step>=a&&step<x))});by('prev').disabled=cur===0&&step===0;by('next').disabled=cur===slides.length-1&&step>=maxStep();tick()}
+// auto-advance (decks with "autoadvance"): every N seconds the next step or slide, after the last slide the first again
+const ab=by('autoBtn');let timer;
+function tick(){clearTimeout(timer);if(ab&&body.classList.contains('auto'))timer=setTimeout(()=>cur===slides.length-1&&step>=maxStep()?go(0):next(),ab.dataset.sec*1000)}
+const auto=()=>{if(ab){body.classList.toggle('auto');tick()}};if(ab)ab.onclick=auto;
 function go(n,end){cur=Math.max(0,Math.min(slides.length-1,n));step=end?maxStep():0;
  slides.forEach((s,i)=>{s.classList.toggle('active',i===cur);s.setAttribute('aria-hidden',i!==cur)});
  slides[cur].scrollTop=0;
@@ -433,7 +450,7 @@ document.addEventListener('keydown',e=>{if(e.ctrlKey||e.metaKey||e.altKey)return
  else if(['ArrowLeft','PageUp'].includes(k)){e.preventDefault();prev()}
  else if(k==='Home')go(0);else if(k==='End')go(slides.length-1);
  else if(k==='o'||k==='O')ov.classList.toggle('open');else if(k==='Escape')ov.classList.remove('open');
- else if(k==='f'||k==='F')by('fsBtn').click();else if(k==='n'||k==='N')notes()});
+ else if(k==='f'||k==='F')by('fsBtn').click();else if(k==='n'||k==='N')notes();else if(k==='a'||k==='A')auto()});
 let x0=null;document.addEventListener('touchstart',e=>{x0=e.touches[0].clientX},{passive:true});
 document.addEventListener('touchend',e=>{if(x0===null)return;const d=e.changedTouches[0].clientX-x0;x0=null;
  if(Math.abs(d)>60)(d<0?next():prev())},{passive:true});
@@ -755,7 +772,11 @@ class Html:
 
     def l_text(self, s):
         dense = self.density(s.get("paragraphs"), s.get("points"), s.get("groups"), s.get("defs"))
-        copy = self.text_copy(s)
+        copy = self.text_copy(s) if any(s.get(k) for k in ("paragraphs", "points", "defs", "groups")) else ""
+        if s.get("tiles"):
+            copy += '<div class="tiles3">' + "".join(
+                f'<div class="tile"><span class="ticon{" dot" if t["icon"] == "dot" else ""}" aria-hidden="true">'
+                f'{"" if t["icon"] == "dot" else esc(t["icon"])}</span><p>{self.mark(t["text"])}</p></div>' for t in s["tiles"]) + "</div>"
         if s.get("aside"):
             wide = " wide" if s["aside"].get("code") else ""
             copy = f'<div class="split{wide}">{copy}{self.aside(s["aside"])}</div>'
@@ -809,7 +830,8 @@ class Html:
     def l_gallery(self, s):
         pics = "".join(self.picture(it) for it in s["items"])
         after = f'<p class="after" style="padding-left:0">{self.mark(s["after"])}</p>' if s.get("after") else ""
-        return self.main(s, f'<div class="gallery" style="--n:{len(s["items"])}">{pics}</div>{after}')
+        qr = " qr" if s.get("style") == "qr" else ""
+        return self.main(s, f'<div class="gallery{qr}" style="--n:{len(s["items"])}">{pics}</div>{after}')
 
     def l_people(self, s):
         out = ""
@@ -1019,6 +1041,12 @@ class Html:
         for n, s in enumerate(d["slides"], 1):
             lay = s["layout"]
             inner = getattr(self, "l_" + lay)(s)
+            if s.get("decor"):
+                dots = "".join(f'<i style="left:{it["x"]}%;top:{it["y"]}%;--d:{it["size"]}"></i>' for it in s["decor"] if not it.get("emoji"))
+                emo = "".join(f'<span style="left:{it["x"]}%;top:{it["y"]}%;font-size:calc({it["size"]}*var(--u));transform:rotate({it.get("rot", 0)}deg)">'
+                              f'{esc(it["emoji"])}</span>' for it in s["decor"] if it.get("emoji"))
+                inner = ((f'<div class="odots" aria-hidden="true">{dots}</div>' if dots else "")
+                         + (f'<div class="emojis" aria-hidden="true">{emo}</div>' if emo else "") + inner)
             extra = ""
             if lay not in ("title", "section"):
                 if s.get("source"):
@@ -1047,12 +1075,16 @@ class Html:
         note = '<rect x="4" y="4" width="16" height="16" rx="2.5"/><path d="M8 9h8M8 12.5h8M8 16h4"/>'
         grow, shrink = '<path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/>', '<path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/>'
         notes_btn = f'<button id="notesBtn" title="Speaker notes (N)">{ico(note)}Notes</button>' if any(s.get("notes") for s in d["slides"]) else ""
+        play, pause = '<path d="M8 5l11 7-11 7z"/>', '<path d="M8 5v14M16 5v14"/>'
+        sec = d.get("autoadvance")
+        auto_btn = (f'<button id="autoBtn" data-sec="{sec}" title="Advance every {sec:g} seconds (A)">{ico(play, "auto-off")}'
+                    f'{ico(pause, "auto-on")}Auto</button>') if sec else ""
         ctl = ('<div class="controls" role="navigation" aria-label="Presentation controls"><div class="pill"><div class="nav">'
                f'<button id="prev" title="Previous slide (←)" aria-label="Previous slide">{ico(back)}</button>'
                f'<span class="count" id="count">1 / {n_all}</span>'
                f'<button id="next" title="Next slide (→)" aria-label="Next slide">{ico(fwd)}</button>'
                '</div><i class="sep"></i><div class="tools">'
-               f'<button id="ovBtn" title="All slides (O)">{ico(sq)}Overview</button>{notes_btn}'
+               f'<button id="ovBtn" title="All slides (O)">{ico(sq)}Overview</button>{notes_btn}{auto_btn}'
                f'<button id="fsBtn" title="Full screen (F)">{ico(grow, "fs-off")}<span class="fs-off">Full screen</span>'
                f'{ico(shrink, "fs-on")}<span class="fs-on">Exit</span></button></div></div>'
                '<div class="progress" aria-label="Slide progress"><span id="progress"></span></div></div>')

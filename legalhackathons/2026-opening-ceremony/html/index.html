@@ -202,7 +202,7 @@ h1{font-size:var(--s-h1);font-weight:300;line-height:1.08;letter-spacing:-.01em;
   display:flex;align-items:center;justify-content:center;gap:7px;white-space:nowrap}
 .controls [hidden]{display:none}
 .controls svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;flex:none}
-.controls button:hover,body.show-notes #notesBtn,body:has(.overview.open) #ovBtn{background:#f0f0f0}
+.controls button:hover,body.show-notes #notesBtn,body:has(.overview.open) #ovBtn,body.auto #autoBtn{background:#f0f0f0}
 .controls button:focus-visible{outline:2px solid #00802F;outline-offset:2px}
 .controls .nav button{width:32px;height:32px;padding:0;background:#00802F;color:#fff}
 .controls .nav button:not(:disabled):hover{background:#0A5F2D}
@@ -210,6 +210,7 @@ h1{font-size:var(--s-h1);font-weight:300;line-height:1.08;letter-spacing:-.01em;
 .nav svg{stroke-width:2.25}
 .count{min-width:60px;text-align:center;font-variant-numeric:tabular-nums}
 :root:not(:fullscreen) .fs-on,:root:fullscreen .fs-off{display:none}
+body:not(.auto) .auto-on,body.auto .auto-off{display:none}
 .progress{position:fixed;left:0;right:0;bottom:0;height:3px;background:#ddd}
 .progress span{display:block;height:100%;width:0;background:#00802F;transition:width .3s}
 :root:fullscreen{--bar:0px}
@@ -372,7 +373,7 @@ h1{font-weight:800}
 .pill{background:var(--lh-surface);border-color:var(--lh-border);box-shadow:none}
 .controls{color:var(--lh-text)}
 .pill .sep{background:var(--lh-border)}
-.controls button:hover,body.show-notes #notesBtn,body:has(.overview.open) #ovBtn{background:var(--lh-surface2)}
+.controls button:hover,body.show-notes #notesBtn,body:has(.overview.open) #ovBtn,body.auto #autoBtn{background:var(--lh-surface2)}
 .progress{background:var(--lh-border)}
 .progress span{background:var(--lh-green)}
 
@@ -436,7 +437,7 @@ h1{font-weight:800}
 <section class="slide l-section" id="s15" data-title="Next Legal Hackathon:
 5 and 6 November 2027" aria-label="Slide 15 of 15"><div class="frame"><img class="logo" src="assets/hsg_logo.png" alt="University of St.Gallen"><div class="tblock"><p class="kicker">Save the date</p><h1>Next Legal Hackathon:<br><strong>5 and 6 November 2027</strong></h1></div><div class="wedge"></div></div></section>
 </main>
-<div class="controls" role="navigation" aria-label="Presentation controls"><div class="pill"><div class="nav"><button id="prev" title="Previous slide (←)" aria-label="Previous slide"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><span class="count" id="count">1 / 15</span><button id="next" title="Next slide (→)" aria-label="Next slide"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button></div><i class="sep"></i><div class="tools"><button id="ovBtn" title="All slides (O)"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg>Overview</button><button id="fsBtn" title="Full screen (F)"><svg class="fs-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg><span class="fs-off">Full screen</span><svg class="fs-on" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/></svg><span class="fs-on">Exit</span></button></div></div><div class="progress" aria-label="Slide progress"><span id="progress"></span></div></div>
+<div class="controls" role="navigation" aria-label="Presentation controls"><div class="pill"><div class="nav"><button id="prev" title="Previous slide (←)" aria-label="Previous slide"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><span class="count" id="count">1 / 15</span><button id="next" title="Next slide (→)" aria-label="Next slide"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button></div><i class="sep"></i><div class="tools"><button id="ovBtn" title="All slides (O)"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg>Overview</button><button id="autoBtn" data-sec="5" title="Advance every 5 seconds (A)"><svg class="auto-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg><svg class="auto-on" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg>Auto</button><button id="fsBtn" title="Full screen (F)"><svg class="fs-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg><span class="fs-off">Full screen</span><svg class="fs-on" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/></svg><span class="fs-on">Exit</span></button></div></div><div class="progress" aria-label="Slide progress"><span id="progress"></span></div></div>
 <div class="overview" id="overview" role="dialog" aria-label="Slide overview"><h2>Legal Hackathon @ UNISG: Opening Ceremony</h2><div class="ov-grid"></div></div>
 <div class="notes-view" id="notesView" aria-label="Speaker notes"></div>
 <script>
@@ -450,8 +451,12 @@ function go(n){cur=Math.max(0,Math.min(slides.length-1,n));
  by('count').textContent=(cur+1)+' / '+slides.length;by('prev').disabled=cur===0;by('next').disabled=cur===slides.length-1;
  by('progress').style.width=((cur+1)/slides.length*100)+'%';
  const t=slides[cur].querySelector('.notes');nv.textContent=t?t.textContent:'';
- history.replaceState(null,'','#/'+(cur+1));ov.classList.remove('open');
+ history.replaceState(null,'','#/'+(cur+1));ov.classList.remove('open');tick();
 }
+// auto-advance: every N seconds the next slide, after the last slide the first again
+const ab=by('autoBtn');let timer;
+function tick(){clearTimeout(timer);if(ab&&body.classList.contains('auto'))timer=setTimeout(()=>go(cur===slides.length-1?0:cur+1),ab.dataset.sec*1000)}
+const auto=()=>{if(ab){body.classList.toggle('auto');tick()}};if(ab)ab.onclick=auto;
 by('prev').onclick=()=>go(cur-1);by('next').onclick=()=>go(cur+1);
 by('ovBtn').onclick=()=>ov.classList.toggle('open');
 const notes=()=>body.classList.toggle('show-notes');if(by('notesBtn'))by('notesBtn').onclick=notes;
@@ -469,7 +474,7 @@ document.addEventListener('keydown',e=>{if(e.ctrlKey||e.metaKey||e.altKey)return
  else if(['ArrowLeft','PageUp'].includes(k)){e.preventDefault();go(cur-1)}
  else if(k==='Home')go(0);else if(k==='End')go(slides.length-1);
  else if(k==='o'||k==='O')ov.classList.toggle('open');else if(k==='Escape')ov.classList.remove('open');
- else if(k==='f'||k==='F')by('fsBtn').click();else if(k==='n'||k==='N')notes()});
+ else if(k==='f'||k==='F')by('fsBtn').click();else if(k==='n'||k==='N')notes();else if(k==='a'||k==='A')auto()});
 let x0=null;document.addEventListener('touchstart',e=>{x0=e.touches[0].clientX},{passive:true});
 document.addEventListener('touchend',e=>{if(x0===null)return;const d=e.changedTouches[0].clientX-x0;x0=null;
  if(Math.abs(d)>60)go(cur+(d<0?1:-1))},{passive:true});

@@ -7,7 +7,7 @@ description: Creates lecture slides in the University of St.Gallen (HSG) design 
 
 Output: `html/index.html` next to the deck, with its fonts, logo and images in `html/assets/`. In a window of 1000px or wider it shows one 16:9 slide; in a narrower window (phone) the slide fills the window in one column. Printing from the browser gives a PDF with one slide per page. There is no PowerPoint renderer; if the user asks for a .pptx, say so.
 
-Keys while presenting: arrows or space to move, O overview, F full screen, N speaker notes.
+Keys while presenting: arrows or space to move, O overview, F full screen, N speaker notes, A auto-advance (decks with `autoadvance`).
 
 Style: the HSG slide template as used in the lectures 01a Introduction, 01b Information Processing and 02 Circuits of Computersysteme (the three .pptx files in `../fuso-presentation/`). White slides, Gill Sans Nova as on the official HSG template (Regular for headlines and text, Light for the large titles of the title, section and quote slides), headline top left at 32pt, points marked with a dash, the slide number in the green HSG tab at the bottom right, HSG green (#00802F) for boxes with questions to the room and table headers, teal (#73A5AF) for remarks, salmon (#EB6969) for tasks and assignments, the title slide with the HSG logo, the gear word cloud and the green wedge "From insight to impact.". Layout, fonts, sizes and colours are fixed in `scripts/render_html.py` and `scripts/hsg_deck.py`. A deck only chooses layouts and fills their fields; there are no free fields and no per-deck sizes (the exception is `canvas`, below, which keeps the sizes and positions of a PowerPoint slide).
 
@@ -32,6 +32,8 @@ One JSON file, `deck.json`. Image paths are relative to the folder of the deck.
 
 `footer` is optional: a quiet line at the foot of every content slide (hidden on slides with a `source`).
 
+`autoadvance` is optional: a number of seconds. The controls then get an Auto button (key A) that moves on to the next step or slide every that many seconds and starts again at the first slide after the last, e.g. for a deck that loops on a screen in the lobby.
+
 `theme` is optional: a CSS file (path relative to the deck) set on top of the template, for an event with its own look, e.g. `legalhackathons/theme/legalhackathons.css`. It may use the unit `U` and link fonts with `url()`; those files are copied into `html/assets/`. A theme changes colours and fonts only, never sizes; only use one when the user asks for another look.
 
 Every slide has `layout` and `title`, and optionally:
@@ -43,6 +45,7 @@ Every slide has `layout` and `title`, and optionally:
 | `source` | small credit line at the foot of the slide, links allowed |
 | `notes` | speaker notes (shown with N) |
 | `time` | pacing cue shown in the overview |
+| `decor` | emojis or dots scattered behind the slide, for an event deck with a playful theme: a list of `{"x", "y", "size"}` (position in percent of the slide, size in U) with optional `emoji` (without it the item is a dot) and `rot` (degrees) |
 
 A line break in a title is written as `\n`, and `**words**` in a title is set bold (use it sparingly, e.g. for the session name). In every other text field: `**words**` bold, `*words*` italic, `` `code` `` monospace, `==words==` yellow marker, `10_{2}` subscript, `2^{w-1}` superscript, `[words](https://...)` a link.
 
@@ -54,12 +57,12 @@ A line break in a title is written as `\n`, and `**words**` in a title is set bo
 | `section` | start of a part of the lecture | `kicker` |
 | `syllabus` | the course plan | `items` (`date`, `title`, `kind`: `lecture` default or `exercise`), `current` (number of today's session, or a list), `break_after` (number of the session before a break), `assignments` (`title`, `from`, `to`: session numbers the assignment runs over) |
 | `menu` | today's topics in a green frame | `items` (2 to 8 strings), `current` (number of the topic now starting, shown green) |
-| `text` | running text or points, with an optional picture, box or code on the right | `paragraphs`, `points`, `defs` (pairs `[term, detail]`, set as two columns), `groups` (`heading`, `points`, `paragraphs`), `after` (one line under the content), `aside` (see below). Needs `paragraphs`, `points`, `defs` or `groups`. |
+| `text` | running text or points, with an optional picture, box or code on the right | `paragraphs`, `points`, `defs` (pairs `[term, detail]`, set as two columns), `groups` (`heading`, `points`, `paragraphs`), `tiles` (exactly 3 `{"icon", "text"}` side by side; `icon` is an emoji, or `dot` for a coloured dot), `after` (one line under the content), `aside` (see below). Needs `paragraphs`, `points`, `defs`, `groups` or `tiles`. |
 | `table` | a table with a green header row | `columns` (2 to 6 headings), `rows` (lists of cells; the first column is bold), `after` |
 | `code` | a program and what to look at in it | `code` (string, `\n` between lines), `paragraphs`, `points`, `style` (`outline` default, `teal`), `caption` (e.g. a link to godbolt.org) |
 | `quiz` | 2 to 5 questions for the room, in green boxes | `items` (strings), `aside` (a picture: `image`, `alt`, `caption`) |
 | `image` | one large picture | `image`, `alt`, `caption`, `shadow` (false for drawings on white) |
-| `gallery` | 2 to 4 pictures side by side | `items` (`image`, `alt`, `caption`, `shadow`), `after` |
+| `gallery` | 2 to 4 pictures side by side | `items` (`image`, `alt`, `caption`, `shadow`), `after`, `style` (`photos` default, or `qr`: square boxes for QR codes, give the items `"shadow": false`) |
 | `people` | 1 to 6 people, e.g. the course team | `items` (`name`, `role`, `photo`, `alt`) |
 | `quote` | a quote as the headline, right aligned | `title` is the quote with its quotation marks, `attribution`, `picture` (`image`, `alt`), `points` (up to 4, about the person) |
 | `questions` | "Any Questions / Comments / Doubts / Concerns?" with the figure on the question mark | `heading` (default "Take-Home"), `points` (the take-homes, up to 5), `after` (one line under them). Without `points` the slide is the headline and the figure only. |

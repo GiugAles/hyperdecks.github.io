@@ -29,14 +29,14 @@ SALMON, TEAL, SAND, YELLOW = "#EB6969", "#73A5AF", "#E1D7C3", "#FFF04B"
 ROW_A, ROW_B = "#CBD8CD", "#E7EDE8"   # table rows: green at 20% and 10% on white
 BOX_STYLES = ("green", "outline", "teal")
 
-COMMON = {"layout", "title", "lead", "callout", "source", "notes", "time", "id", "refs", "refs_at"}
+COMMON = {"layout", "title", "lead", "callout", "source", "notes", "time", "id", "refs", "refs_at", "decor"}
 NO_LEAD = {"title", "section", "task", "quote"}
 # layout: (required fields, optional fields)
 LAYOUTS = {
     "title":     ({"title"}, {"kicker", "presenters", "meta", "picture", "style"}),
     "section":   ({"title"}, {"kicker"}),
     "menu":      ({"title", "items"}, {"current"}),
-    "text":      ({"title"}, {"paragraphs", "points", "defs", "groups", "after", "aside"}),
+    "text":      ({"title"}, {"paragraphs", "points", "defs", "groups", "tiles", "after", "aside"}),
     "study":     ({"title", "groups"}, {"aside"}),
     "questions": ({"title"}, {"heading", "points", "after"}),
     "table":     ({"title", "columns", "rows"}, {"after"}),
@@ -44,7 +44,7 @@ LAYOUTS = {
     "quiz":      ({"title", "items"}, {"aside"}),
     "task":      ({"title", "stamp"}, {"paragraphs", "url", "label"}),
     "image":     ({"title", "image", "alt"}, {"caption", "shadow"}),
-    "gallery":   ({"title", "items"}, {"after"}),
+    "gallery":   ({"title", "items"}, {"after", "style"}),
     "people":    ({"title", "items"}, set()),
     "quote":     ({"title"}, {"attribution", "picture", "points"}),
     "syllabus":  ({"title", "items"}, {"current", "break_after", "assignments"}),
@@ -124,7 +124,8 @@ def words(s):
     if isinstance(s, dict):
         return " ".join(words(v) for k, v in s.items()
                         if k not in ("layout", "notes", "image", "photo", "alt", "url", "time", "style", "code",
-                                     "shadow", "kind", "current", "break_after", "from", "to", "id", "refs", "refs_at", "href"))
+                                     "shadow", "kind", "current", "break_after", "from", "to", "id", "refs", "refs_at", "href",
+                                     "decor", "icon"))
     return ""
 
 
@@ -136,8 +137,11 @@ def points_of(pts):
 def check(deck, base):
     """Return (errors, warnings). Errors stop the render; warnings are design and structure tells to fix or justify."""
     errors, warnings = [], []
-    if not _keys(deck, {"title", "slides"}, {"lang", "footer", "theme", "ref_label"}, "deck", errors):
+    if not _keys(deck, {"title", "slides"}, {"lang", "footer", "theme", "ref_label", "autoadvance"}, "deck", errors):
         return errors, warnings
+    if "autoadvance" in deck and not (isinstance(deck["autoadvance"], (int, float)) and not isinstance(deck["autoadvance"], bool)
+                                      and deck["autoadvance"] > 0):
+        errors.append("deck: 'autoadvance' must be a number of seconds greater than 0")
     if "theme" in deck and not (isinstance(deck["theme"], str) and (base / deck["theme"]).is_file()):
         errors.append(f"deck: theme file not found: {deck['theme']}")
     slides = deck.get("slides") or []
@@ -202,6 +206,13 @@ def check(deck, base):
             continue
         req, opt = LAYOUTS[lay]
         _keys(s, req | {"layout"}, opt | COMMON, w, errors)
+        num = lambda v: isinstance(v, (int, float)) and not isinstance(v, bool)
+        for i, it in enumerate(s.get("decor", []) if isinstance(s.get("decor", []), list) else [None], 1):
+            if _keys(it, {"x", "y", "size"}, {"emoji", "rot"}, f"{w}, decor {i}", errors) and not all(
+                    num(it[k]) for k in ("x", "y", "size") if k in it):
+                errors.append(f"{w}, decor {i}: 'x', 'y' (percent of the slide) and 'size' (U) are numbers")
+        if lay == "gallery" and s.get("style", "photos") not in ("photos", "qr"):
+            errors.append(f"{w}: gallery 'style' must be photos or qr")
         if lay in NO_LEAD and "lead" in s:
             errors.append(f"{w}: '{lay}' has no 'lead'")
         if lay in ("title", "section") and "callout" in s:
@@ -313,8 +324,14 @@ def check(deck, base):
                 warnings.append(f"{w}: more than 4 assignments do not fit beside the plan")
 
         if lay in ("text", "study"):
-            if lay == "text" and not any(s.get(k) for k in ("paragraphs", "points", "defs", "groups")):
-                errors.append(f"{w}: 'text' needs 'paragraphs', 'points', 'defs' or 'groups'")
+            if lay == "text" and not any(s.get(k) for k in ("paragraphs", "points", "defs", "groups", "tiles")):
+                errors.append(f"{w}: 'text' needs 'paragraphs', 'points', 'defs', 'groups' or 'tiles'")
+            tiles = s.get("tiles", [])
+            if not isinstance(tiles, list) or len(tiles) not in (0, 3):
+                errors.append(f"{w}: 'tiles' takes exactly 3 tiles")
+            else:
+                for i, t in enumerate(tiles, 1):
+                    _keys(t, {"icon", "text"}, set(), f"{w}, tile {i}", errors)
             need_points(s.get("points"), w)
             for i, g in enumerate(s.get("groups", []), 1):
                 if _keys(g, {"heading"}, {"points", "paragraphs"}, f"{w}, group {i}", errors):
