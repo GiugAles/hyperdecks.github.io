@@ -513,6 +513,57 @@ def _round(w, h, r):
             f"H{_f(r)}A{_f(r)} {_f(r)} 0 0 1 0 {_f(h - r)}V{_f(r)}A{_f(r)} {_f(r)} 0 0 1 {_f(r)} 0Z")
 
 
+def _curved_right_arrow(w, h, adj1, adj2, adj3):
+    """The curvedRightArrow preset of OOXML (presetShapeDefinitions.xml): the arrow body and its back part."""
+    ss = min(w, h)
+    a2 = min(max(adj2, 0), .5 * h / ss)
+    a1 = min(max(adj1, 0), a2)
+    th, aw = ss * a1, ss * a2
+    hR = h / 2 - (th + aw) / 4
+    q7 = hR * 2
+    idx = math.sqrt(max(q7 * q7 - th * th, 0)) * w / q7
+    ah = ss * min(max(adj3, 0), idx / ss)
+    dy = math.sqrt(max(w * w - ah * ah, 0)) * hR / w
+    y3, y5 = hR + th, hR + dy
+    y7 = y3 + dy
+    dh = (aw - th) / 2
+    y4, y8, y6, x1 = y5 - dh, y7 + dh, h - aw / 2, w - ah
+    sw = math.atan2(dy, ah)
+    dang2 = math.atan2(th / 2, idx)
+    pts, cur = [], [0.0, 0.0]
+
+    def move(x, y):
+        pts.append(f"M{_f(x)} {_f(y)}")
+        cur[:] = [x, y]
+
+    def line(x, y):
+        pts.append(f"L{_f(x)} {_f(y)}")
+        cur[:] = [x, y]
+
+    def arc(st, swa):
+        # OOXML arcTo: the current point lies on the ellipse (w, hR) at the visual angle st
+        def par(a):
+            return math.atan2(w * math.sin(a), hR * math.cos(a))
+        t0 = par(st)
+        cx, cy = cur[0] - w * math.cos(t0), cur[1] - hR * math.sin(t0)
+        for k in range(1, 25):
+            t = par(st + swa * k / 24)
+            line(cx + w * math.cos(t), cy + hR * math.sin(t))
+
+    pi = math.pi
+    move(0, hR)
+    arc(pi, -sw)
+    line(x1, y4); line(w, y6); line(x1, y8); line(x1, y7)
+    arc(pi - sw, sw)
+    pts.append("Z")
+    move(0, hR)
+    arc(pi, pi / 2)
+    line(w, th)
+    arc(1.5 * pi, dang2 - pi / 2)
+    pts.append("Z")
+    return "".join(pts)
+
+
 def _callout(w, h, adj, circles):
     """An ellipse with a pointer to (adj1, adj2); cloudCallout adds two small circles on the way."""
     a1, a2 = adj.get("adj1", -20833) / 100000, adj.get("adj2", 62500) / 100000
@@ -557,8 +608,7 @@ def shape_paths(g, w, h, adj):
             return [_poly([(x0, 0), (x1, 0), (x1, h - hl), (w, h - hl), (w / 2, h), (0, h - hl), (x0, h - hl)])]
         return [_poly([(x0, h), (x1, h), (x1, hl), (w, hl), (w / 2, 0), (0, hl), (x0, hl)])]
     if g == "curvedRightArrow":
-        return [f"M0 0C{_f(w * .5)} 0 {_f(w * .6)} {_f(h * .2)} {_f(w * .6)} {_f(h * .5)}V{_f(h)}H{_f(w)}L{_f(w * .8)} {_f(h * .75)}"
-                f"L{_f(w * .6)} {_f(h)}"]
+        return [_curved_right_arrow(w, h, A("adj1", 25000), A("adj2", 50000), A("adj3", 25000))]
     if g in ("wedgeEllipseCallout", "cloudCallout"):
         return [_callout(w, h, adj, g == "cloudCallout")]
     if g in ("wedgeRectCallout", "wedgeRoundRectCallout"):
@@ -640,7 +690,7 @@ class Html:
     def ref_chip(self, r):
         folder, sid, tslide, tdeck = hd.resolve(r["to"], self.base)
         kind = r.get("kind", "see")
-        word = {"recap": "Recap", "next": "Next", "see": "See also"}[kind]
+        word = {"recap": "Recap", "next": "Pointer", "see": "See also"}[kind]
         where = tdeck.get("ref_label") or plain(tdeck["title"])
         title = r.get("label") or plain(tslide["title"]).replace("\n", " ")
         ext = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>'
