@@ -138,11 +138,18 @@ def points_of(pts):
 def check(deck, base):
     """Return (errors, warnings). Errors stop the render; warnings are design and structure tells to fix or justify."""
     errors, warnings = [], []
-    if not _keys(deck, {"title", "slides"}, {"lang", "footer", "theme", "ref_label", "autoadvance"}, "deck", errors):
+    if not _keys(deck, {"title", "slides"}, {"lang", "footer", "theme", "ref_label", "autoadvance", "pdf", "pdf_version"}, "deck", errors):
         return errors, warnings
     if "autoadvance" in deck and not (isinstance(deck["autoadvance"], (int, float)) and not isinstance(deck["autoadvance"], bool)
                                       and deck["autoadvance"] > 0):
         errors.append("deck: 'autoadvance' must be a number of seconds greater than 0")
+    if "pdf" in deck:
+        if not (isinstance(deck["pdf"], str) and deck["pdf"].lower().endswith(".pdf")):
+            errors.append("deck: 'pdf' must be the path of a .pdf file, relative to html/index.html")
+        elif not (base / "html" / deck["pdf"]).is_file():
+            warnings.append(f"deck: the PDF {deck['pdf']} does not exist yet (print html/index.html to make it)")
+    if "pdf_version" in deck and not ("pdf" in deck and isinstance(deck["pdf_version"], str) and deck["pdf_version"].strip()):
+        errors.append("deck: 'pdf_version' must be a text (e.g. a date) and needs 'pdf'")
     if "theme" in deck and not (isinstance(deck["theme"], str) and (base / deck["theme"]).is_file()):
         errors.append(f"deck: theme file not found: {deck['theme']}")
     slides = deck.get("slides") or []

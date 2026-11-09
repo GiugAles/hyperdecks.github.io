@@ -2,6 +2,8 @@
  "title": "Principled Architectural Design for Distributed Information Systems",
  "lang": "en",
  "footer": "Advanced Software and Systems Engineering | Institute of Computer Science | University of St.Gallen",
+ "pdf": "../ASSE-07b-Principled-Design-2026-11-09.pdf",
+ "pdf_version": "09.11.2026",
  "slides": [
   {
    "layout": "title",
@@ -690,10 +692,10 @@
    "id": "transclusion-agents",
    "items": [
     {"k": "pic", "src": "img/transclusion-llm-agents.svg", "alt": "Top: an AI agent copies a highlighted passage from a source page into its answer; the way back to the source is broken. Bottom: the answer refers to the passage in the source page, which sees every reuse.", "x": 3.9, "y": 12.5, "w": 40.0, "h": 31.1},
-    {"k": "shape", "x": 45.0, "y": 13.0, "w": 51.0, "h": 24.0, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "LLM agents ", "sz": 1.75, "b": 1}, {"t": "read Web pages and reuse their text in answers and actions", "sz": 1.75}], "pl": 2.0, "in": -2.0, "bu": "•", "sb": 0.4}, {"al": "l", "r": [{"t": "On the Web, they ", "sz": 1.75}, {"t": "copy", "sz": 1.75, "b": 1}, {"t": ": the answer loses its source, and the source sees the crawl but not the reuse", "sz": 1.75}], "pl": 2.0, "in": -2.0, "bu": "•", "sb": 0.4}, {"al": "l", "r": [{"t": "With transclusion, each quote would ", "sz": 1.75}, {"t": "stay connected to its source", "sz": 1.75, "b": 1}, {"t": ", with author and version", "sz": 1.75}], "pl": 2.0, "in": -2.0, "bu": "•", "sb": 0.4}, {"al": "l", "r": [{"t": "Workarounds today: robots.txt opt-outs, ", "sz": 1.75}, {"t": "pay per crawl", "sz": 1.75, "b": 1}, {"t": " with HTTP 402 Payment Required (Cloudflare, 2025)", "sz": 1.75}], "pl": 2.0, "in": -2.0, "bu": "•", "sb": 0.4}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
+    {"k": "shape", "x": 45.0, "y": 13.0, "w": 51.0, "h": 24.0, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "LLM agents ", "sz": 1.6, "b": 1}, {"t": "read Web pages and reuse their text in answers and actions", "sz": 1.6}], "pl": 2.0, "in": -2.0, "bu": "•", "sb": 0.4}, {"al": "l", "r": [{"t": "On the Web, they ", "sz": 1.6}, {"t": "copy", "sz": 1.6, "b": 1}, {"t": ": the answer loses its source, and the source sees the crawl but not the reuse", "sz": 1.6}], "pl": 2.0, "in": -2.0, "bu": "•", "sb": 0.4}, {"al": "l", "r": [{"t": "With transclusion, each quote would ", "sz": 1.6}, {"t": "stay connected to its source", "sz": 1.6, "b": 1}, {"t": ", with author and version", "sz": 1.6}], "pl": 2.0, "in": -2.0, "bu": "•", "sb": 0.4}, {"al": "l", "r": [{"t": "Workarounds today: robots.txt opt-outs, ", "sz": 1.6}, {"t": "pay per crawl", "sz": 1.6, "b": 1}, {"t": " with HTTP 402 Payment Required (Cloudflare, 2025)", "sz": 1.6}], "pl": 2.0, "in": -2.0, "bu": "•", "sb": 0.4}, {"al": "l", "r": [{"t": "Not new: Ted Nelson coined ", "sz": 1.6}, {"t": "micropayments", "sz": 1.6, "b": 1}, {"t": " for Xanadu, to pay the rights holders of every transcluded piece; the W3C later worked on payment requests in HTTP", "sz": 1.6}], "pl": 2.0, "in": -2.0, "bu": "•", "sb": 0.4}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
     {"k": "shape", "x": 45.0, "y": 38.0, "w": 51.0, "h": 7.2, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "What would AI agents gain or lose on a Web with transclusion? ", "sz": 1.75, "c": "#ffffff"}, {"t": "Who would pay whom?", "sz": 1.75, "b": 1, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ],
-   "source": "[Cloudflare: Introducing pay per crawl, 2025](https://blog.cloudflare.com/introducing-pay-per-crawl/)"
+   "source": "[Cloudflare: Introducing pay per crawl, 2025](https://blog.cloudflare.com/introducing-pay-per-crawl/); [Wikipedia: Micropayment](https://en.wikipedia.org/wiki/Micropayment)"
   },
   {
    "layout": "canvas",
