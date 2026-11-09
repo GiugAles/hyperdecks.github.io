@@ -28,6 +28,8 @@ A = "http://schemas.openxmlformats.org/drawingml/2006/main"
 P = "http://schemas.openxmlformats.org/presentationml/2006/main"
 R = "http://schemas.openxmlformats.org/officeDocument/2006/relationships"
 NS = {"a": A, "p": P, "r": R}
+DGM = "http://schemas.openxmlformats.org/drawingml/2006/diagram"
+DSP = "http://schemas.microsoft.com/office/drawing/2008/diagram"
 PT = 1 / 9.6          # 1pt in U (the template slide is 13.33in wide, 1U = 9.6pt)
 SKIP_PH = {"title", "ctrTitle", "sldNum", "ftr", "dt"}
 warnings = []
@@ -41,6 +43,13 @@ def warn(msg):
 class Ctx:
     def __init__(self, prs, slide):
         self.k = 100 / prs.slide_width          # U per EMU
+        self.pt = self.k * 12700                # U per pt: 1/9.6 on a 13.33in slide, 1/7.2 on a 10in slide
+        self.defsz = {}                         # default type size of text boxes per level (presentation defaultTextStyle)
+        dts = prs.part._element.find("p:defaultTextStyle", NS)
+        for e in (dts if dts is not None else []):
+            m = re.match(r"lvl(\d)pPr", etree.QName(e).localname)
+            if m and e.find("a:defRPr", NS) is not None and e.find("a:defRPr", NS).get("sz"):
+                self.defsz[int(m.group(1)) - 1] = int(e.find("a:defRPr", NS).get("sz")) / 100
         from pptx.opc.constants import RELATIONSHIP_TYPE as RT
         theme = etree.fromstring(slide.slide_layout.slide_master.part.part_related_by(RT.THEME).blob)
         self.theme = {}
@@ -80,10 +89,10 @@ def clr(ctx, parent):
                 s = min(1, s * v)
             elif mn == "alpha":
                 alpha = v
-            elif mn == "tint":
-                l = l + (1 - l) * (1 - v)
-            elif mn == "shade":
-                l *= v
+            elif mn in ("tint", "shade"):                   # PowerPoint mixes with white or black in linear RGB
+                lin = [(c / 12.92 if c <= .04045 else ((c + .055) / 1.055) ** 2.4) for c in colorsys.hls_to_rgb(hh, max(0, min(1, l)), s)]
+                lin = [c * v + (1 - v) if mn == "tint" else c * v for c in lin]
+                hh, l, s = colorsys.rgb_to_hls(*[(c * 12.92 if c <= .0031308 else 1.055 * c ** (1 / 2.4) - .055) for c in lin])
         r, g, b = colorsys.hls_to_rgb(hh, max(0, min(1, l)), s)
         return "#%02x%02x%02x" % (round(r * 255), round(g * 255), round(b * 255)), alpha
     return None
@@ -141,27 +150,40 @@ def default_color(ctx, el):
     return c[0] if c else None
 
 
-def text_of(ctx, el, tx, placeholder=False, default_col=None):
+def text_of(ctx, el, tx, placeholder=False, default_col=None, inh=()):
     """The 'tx' object of a shape from its txBody element, or None when there is no text."""
     if tx is None:
         return None
     body = tx.find("a:bodyPr", NS)
+    bodies = [b for b in [body] + [b for b, _ in inh] if b is not None]   # a placeholder inherits from layout and master
+
+    def battr(k, d=None):
+        return next((b.get(k) for b in bodies if b.get(k) is not None), d)
     scale = 1.0
     if body is not None and body.find("a:normAutofit", NS) is not None:
         scale = int(body.find("a:normAutofit", NS).get("fontScale", "100000")) / 100000
-    lst = {}
-    ls = tx.find("a:lstStyle", NS)
-    if ls is not None:
+    lst, lal, lls = {}, {}, {}
+    for ls in [tx.find("a:lstStyle", NS)] + [l for _, l in inh]:
+        if ls is None:
+            continue
         for e in ls:
             m = re.match(r"lvl(\d)pPr", etree.QName(e).localname)
-            if m and e.find("a:defRPr", NS) is not None and e.find("a:defRPr", NS).get("sz"):
-                lst[int(m.group(1)) - 1] = int(e.find("a:defRPr", NS).get("sz")) / 100
+            if not m:
+                continue
+            lv = int(m.group(1)) - 1
+            if lv not in lst and e.find("a:defRPr", NS) is not None and e.find("a:defRPr", NS).get("sz"):
+                lst[lv] = int(e.find("a:defRPr", NS).get("sz")) / 100
+            if lv not in lal and e.get("algn"):
+                lal[lv] = e.get("algn")
+            if lv not in lls and e.find("a:lnSpc/a:spcPct", NS) is not None:
+                lls[lv] = int(e.find("a:lnSpc/a:spcPct", NS).get("val")) / 100000
     paras, any_text = [], False
     for p in tx.findall("a:p", NS):
         pPr = p.find("a:pPr", NS)
         lvl = int(pPr.get("lvl", "0")) if pPr is not None else 0
-        al = {"ctr": "c", "r": "r", "just": "j"}.get(pPr.get("algn") if pPr is not None else None, "l")
-        base = lst.get(lvl) or ((18.7, 14, 12, 12, 12)[min(lvl, 4)] if placeholder else 18)
+        al = {"ctr": "c", "r": "r", "just": "j"}.get(pPr.get("algn") if pPr is not None and pPr.get("algn") else lal.get(lvl), "l")
+        # placeholder defaults are those of the 13.33in HSG template, kept in U on any slide size
+        base = lst.get(lvl) or ((18.7, 14, 12, 12, 12)[min(lvl, 4)] * PT / ctx.pt if placeholder else ctx.defsz.get(lvl, 18))
         runs = []
         for r in p:
             n = etree.QName(r).localname
@@ -175,7 +197,7 @@ def text_of(ctx, el, tx, placeholder=False, default_col=None):
                 continue
             rPr = r.find("a:rPr", NS)
             sz = (int(rPr.get("sz")) / 100 if rPr is not None and rPr.get("sz") else base) * scale
-            run = {"t": t, "sz": round(sz * PT, 3)}
+            run = {"t": t, "sz": round(sz * ctx.pt, 3)}
             if rPr is not None:
                 if rPr.get("b") == "1":
                     run["b"] = 1
@@ -190,6 +212,12 @@ def text_of(ctx, el, tx, placeholder=False, default_col=None):
                 c = clr(ctx, rPr.find("a:solidFill", NS))
                 if c:
                     run["c"] = c[0]
+                hl = rPr.find("a:hlinkClick", NS)
+                rel = getattr(ctx, "part", None) and hl is not None and ctx.part.rels.get(hl.get("{%s}id" % R))
+                if rel and rel.is_external:                  # a link, coloured and underlined as PowerPoint shows it
+                    run["href"] = rel.target_ref
+                    run["c"] = "#" + ctx.theme.get("hlink", "0563C1")   # PowerPoint ignores the run colour on a link
+                    run["u"] = 1
                 lat = rPr.find("a:latin", NS)
                 if lat is not None:
                     face = lat.get("typeface", "")
@@ -197,6 +225,8 @@ def text_of(ctx, el, tx, placeholder=False, default_col=None):
                         run["f"] = "mono"
                     elif re.search(r"Palatino|Times|Georgia|Cambria", face):
                         run["f"] = "serif"
+                    elif face and not face.startswith("+") and not face.startswith("Gill Sans"):
+                        run["ff"] = face                 # another typeface (Arial, Roboto Flex...): used where installed
             if "c" not in run and default_col:
                 run["c"] = default_col
             if t.strip():
@@ -206,7 +236,7 @@ def text_of(ctx, el, tx, placeholder=False, default_col=None):
         if not runs:                                  # an empty paragraph keeps its height
             e = p.find("a:endParaRPr", NS)
             sz = (int(e.get("sz")) / 100 if e is not None and e.get("sz") else base) * scale
-            runs.append({"t": "", "sz": round(sz * PT, 3)})
+            runs.append({"t": "", "sz": round(sz * ctx.pt, 3)})
         para = {"al": al, "r": runs}
         # bullets: the template marks sub-points with a dash; level 1 is plain text
         bu = None
@@ -231,6 +261,8 @@ def text_of(ctx, el, tx, placeholder=False, default_col=None):
         if bu:
             para["bu"] = bu
             para.setdefault("pl", 2.2)
+        if lls.get(lvl):
+            para["ls"] = lls[lvl]
         if pPr is not None:
             sp = pPr.find("a:lnSpc/a:spcPct", NS)
             if sp is not None:
@@ -238,7 +270,7 @@ def text_of(ctx, el, tx, placeholder=False, default_col=None):
             for key, tag in (("sb", "spcBef"), ("sa", "spcAft")):
                 e = pPr.find(f"a:{tag}/a:spcPts", NS)
                 if e is not None:
-                    para[key] = round(int(e.get("val")) / 100 * PT * scale, 3)
+                    para[key] = round(int(e.get("val")) / 100 * ctx.pt * scale, 3)
                 e = pPr.find(f"a:{tag}/a:spcPct", NS)
                 if e is not None:
                     para[key] = round(int(e.get("val")) / 100000 * next((r["sz"] for r in runs if "sz" in r), 1.9) * 1.2, 3)
@@ -246,14 +278,14 @@ def text_of(ctx, el, tx, placeholder=False, default_col=None):
     if not any_text:
         return None
     out = {"p": paras}
-    if body is not None:
-        out["a"] = {"t": "t", "ctr": "m", "b": "b"}.get(body.get("anchor", "t"), "t")
-        ins = [int(body.get(k, d)) * ctx.k for k, d in (("lIns", 91440), ("tIns", 45720), ("rIns", 91440), ("bIns", 45720))]
+    if bodies:
+        out["a"] = {"t": "t", "ctr": "m", "b": "b"}.get(battr("anchor", "t"), "t")
+        ins = [int(battr(k, d)) * ctx.k for k, d in (("lIns", 91440), ("tIns", 45720), ("rIns", 91440), ("bIns", 45720))]
         out["i"] = [round(v, 3) for v in ins]
-        if body.get("wrap") == "none":
+        if battr("wrap") == "none":
             out["nw"] = 1
-        if body.get("vert") in ("vert", "vert270"):
-            out["v"] = body.get("vert")
+        if battr("vert") in ("vert", "vert270"):
+            out["v"] = battr("vert")
     else:
         out["a"] = "t"
     return out
@@ -320,19 +352,60 @@ def adjusts(el):
 
 # ---- animations: a click is a step; effects before the first click are visible from the start
 
-def animation_steps(slide):
-    """(step of each shape, step where it disappears, {shape: {paragraph index: step}}); a click is a step."""
-    steps, exits, paras = {}, {}, {}
+def _delay(ctn):
+    c = ctn.find("p:stCondLst/p:cond", NS) if ctn is not None else None
+    v = c.get("delay", "0") if c is not None else "0"
+    return int(v) if v.lstrip("-").isdigit() else 0
+
+
+def _path_points(path, hu):
+    """Points (in U, relative to the shape) of a motion path such as 'M 0 0 C 0.1 0.2 0.3 0.2 0.4 0 E', whose
+    coordinates are fractions of the slide width and height. Curves are sampled, so the renderer only moves along lines."""
+    toks = re.findall(r"[A-Za-z]|-?\d*\.?\d+(?:[eE]-?\d+)?", path)
+    pts, cur, start, i, cmd = [], (0.0, 0.0), (0.0, 0.0), 0, "M"
+    while i < len(toks):
+        t = toks[i]
+        if t.isalpha():
+            cmd = t.upper()
+            i += 1
+            if cmd == "Z":
+                cur = start
+                pts.append(cur)
+            continue
+        if cmd in ("M", "L"):
+            cur = (float(toks[i]), float(toks[i + 1]))
+            i += 2
+            if cmd == "M":
+                start = cur
+            pts.append(cur)
+        elif cmd == "C":
+            p1, p2, p3 = [(float(toks[i + j]), float(toks[i + j + 1])) for j in (0, 2, 4)]
+            i += 6
+            for n in range(1, 17):
+                u = n / 16
+                pts.append(tuple((1 - u) ** 3 * a + 3 * (1 - u) ** 2 * u * b + 3 * (1 - u) * u * u * c + u ** 3 * d
+                                 for a, b, c, d in zip(cur, p1, p2, p3)))
+            cur = p3
+        else:
+            i += 1
+    return [[round(x * 100, 3), round(y * hu, 3)] for x, y in pts] or [[0, 0]]
+
+
+def animation_steps(slide, hu=56.25):
+    """(step of each shape, step where it disappears, {shape: {paragraph index: step}}, {shape: [effects]}); a click
+    is a step. A key is the shape id, or (shape id, modelId) for one element of a SmartArt diagram. Each effect is
+    {"k": "in"|"out"|"path"|"rot"|"cmd", "s": step, "d": ms from the click, "dur": ms, ...}; hu is the slide height in U."""
+    steps, exits, paras, anims = {}, {}, {}, {}
     timing = slide._element.find("p:timing", NS)
     if timing is None:
-        return steps, exits, paras
+        return steps, exits, paras, anims
     seq = None
     for c in timing.iter("{%s}cTn" % P):
         if c.get("nodeType") == "mainSeq":
             seq = c
             break
     if seq is None:
-        return steps, exits, paras
+        return steps, exits, paras, anims
     step = 0
     for par in seq.findall("p:childTnLst/p:par", NS):
         ctn = par.find("p:cTn", NS)
@@ -341,39 +414,96 @@ def animation_steps(slide):
             step += 1
         for eff in ctn.iter("{%s}cTn" % P):
             cls = eff.get("presetClass")
+            if cls is None:
+                continue
+            # start of the effect: the delays of its group (with / after previous) and of the effect itself
+            d, up = _delay(eff) + _delay(ctn), eff.getparent()
+            while up is not None and up is not ctn:
+                if etree.QName(up).localname == "cTn":
+                    d += _delay(up)
+                up = up.getparent()
+            tgt0 = next(eff.iter("{%s}spTgt" % P), None)
+            if tgt0 is not None and tgt0.find("p:txEl", NS) is None:
+                dg = tgt0.find("p:graphicEl/a:dgm", NS)
+                key = (int(tgt0.get("spid")), dg.get("id")) if dg is not None else int(tgt0.get("spid"))
+                bh = [(b, b.find("p:cBhvr/p:cTn", NS)) for b in eff.find("p:childTnLst", NS) if b.find("p:cBhvr/p:cTn", NS) is not None]
+                dur = max([_delay(c) + (int(c.get("dur")) if (c.get("dur") or "").isdigit() else 0) for _, c in bh] + [1])
+                rec = {"s": step, "d": d, "dur": dur}
+                if cls in ("entr", "exit"):
+                    fx = [b.get("filter") for b, _ in bh if etree.QName(b).localname == "animEffect"]
+                    rec.update(k="in" if cls == "entr" else "out", fx=fx[0] if fx else "appear")
+                    if fx and fx[0] != "fade":
+                        warn(f"the {fx[0]} effect is played as a fade")
+                    if any(etree.QName(b).localname in ("anim", "animMotion", "animScale", "animRot") for b, _ in bh):
+                        warn(f"an entrance or exit effect (preset {eff.get('presetID')}) that moves or scales is played as a fade")
+                elif cls == "path":
+                    m = next((b for b, _ in bh if etree.QName(b).localname == "animMotion"), None)
+                    rec.update(k="path", pts=_path_points(m.get("path", ""), hu))
+                elif cls == "emph" and any(etree.QName(b).localname == "animRot" for b, _ in bh):
+                    b = next(b for b, _ in bh if etree.QName(b).localname == "animRot")
+                    rec.update(k="rot", by=round(int(b.get("by", "0")) / 60000, 2))
+                elif cls == "mediacall":
+                    c = next((b.get("cmd") for b in eff.iter("{%s}cmd" % P)), "")
+                    rec.update(k="cmd", c="pause" if "pause" in c.lower() and "toggle" not in c.lower() else "toggle" if "toggle" in c.lower() else "play")
+                else:
+                    warn(f"a {cls} effect (preset {eff.get('presetID')}) is not copied")
+                    rec = None
+                if rec:
+                    anims.setdefault(key, []).append(rec)
             if cls not in ("entr", "exit"):
                 continue
             for tgt in eff.iter("{%s}spTgt" % P):
                 sid = int(tgt.get("spid"))
                 rg = tgt.find("p:txEl/p:pRg", NS)
-                if rg is not None and cls == "entr":
+                dgm = tgt.find("p:graphicEl/a:dgm", NS)
+                if dgm is not None:                              # one element of a SmartArt diagram
+                    (steps if cls == "entr" else exits).setdefault((sid, dgm.get("id")), step)
+                elif rg is not None and cls == "entr":
                     for k in range(int(rg.get("st")), int(rg.get("end")) + 1):
                         paras.setdefault(sid, {}).setdefault(k, step)
                 elif cls == "entr":
                     steps.setdefault(sid, step)
                 else:
                     exits.setdefault(sid, step)
-    return steps, exits, paras
+    return steps, exits, paras, anims
 
 
 # ---- the walk
 
+def box_of(ctx, sh, tf, s, e):
+    """Position of a shape in U (tf: the offset and scale of the groups it is in), with its steps."""
+    ox, oy, sx, sy = tf
+    b = {"x": round((ox + sh.left * sx) * ctx.k, 3), "y": round((oy + sh.top * sy) * ctx.k, 3),
+         "w": round(sh.width * sx * ctx.k, 3), "h": round(sh.height * sy * ctx.k, 3)}
+    if s:
+        b["s"] = s
+    if e is not None:
+        b["e"] = e
+    return b
+
+
 def title_marked(p):
     """The text of a title paragraph with **bold** marks for bold runs."""
     out = ""
-    for r in p.runs:
-        out += f"**{r.text}**" if r.font.bold and r.text.strip() else r.text
+    for e in p._p:
+        n = etree.QName(e).localname
+        if n == "br":
+            out += "\n"
+        elif n in ("r", "fld"):
+            t = e.findtext("a:t", default="", namespaces=NS)
+            rPr = e.find("a:rPr", NS)
+            out += f"**{t}**" if rPr is not None and rPr.get("b") == "1" and t.strip() else t
     return out.replace("****", "").replace("** **", " ").strip()
 
 
 class Walker:
-    def __init__(self, ctx, slide, num, imgdir, imgrel, steps, exits, paras):
+    def __init__(self, ctx, slide, num, imgdir, imgrel, steps, exits, paras, anims=None):
         self.ctx, self.slide, self.num = ctx, slide, num
         self.imgdir, self.imgrel = imgdir, imgrel
-        self.steps, self.exits, self.paras = steps, exits, paras
-        self.items, self.title, self.npics = [], "", 0
+        self.steps, self.exits, self.paras, self.anims = steps, exits, paras, anims or {}
+        self.items, self.title, self.npics, self.title_obj = [], "", 0, False
 
-    def walk(self, shapes, tf=(0, 0, 1, 1), inh=(None, None)):
+    def walk(self, shapes, tf=(0, 0, 1, 1), inh=(None, None, None)):
         for sh in shapes:
             el = sh._element
             if el.xpath("(.//p:cNvPr)[1]/@hidden") == ["1"]:       # hidden in PowerPoint
@@ -381,10 +511,14 @@ class Walker:
             sid = int(el.xpath(".//p:cNvPr/@id")[0])
             s = self.steps.get(sid, inh[0])
             e = self.exits.get(sid, inh[1])
+            an = self.anims.get(sid, inh[2])     # ponytail: a group's spin turns each child about its own centre
             ph = el.find(".//p:nvPr/p:ph", NS)
             if ph is not None and ph.get("type") in SKIP_PH:
                 if ph.get("type") in ("title", "ctrTitle") and sh.has_text_frame:
                     self.title = "\n".join(title_marked(p) for p in sh.text_frame.paragraphs).strip()
+                    if el.find(".//a:r/a:rPr[@sz]", NS) is not None:     # mixed sizes: keep it as drawn, no headline
+                        self.title_obj = True
+                        self.shape(sh, el, box_of(self.ctx, sh, tf, s, e), True)
                 continue
             if sh.shape_type == MSO_SHAPE_TYPE.GROUP:
                 x = el.find("p:grpSpPr/a:xfrm", NS)
@@ -396,7 +530,7 @@ class Walker:
                 ky = int(ext.get("cy")) / int(ce.get("cy")) if int(ce.get("cy")) else 1
                 ox, oy, sx, sy = tf
                 ntf = (ox + (int(off.get("x")) - int(co.get("x")) * kx) * sx, oy + (int(off.get("y")) - int(co.get("y")) * ky) * sy, kx * sx, ky * sy)
-                self.walk(sh.shapes, ntf, (s, e))
+                self.walk(sh.shapes, ntf, (s, e, an))
                 continue
             ox, oy, sx, sy = tf
             x, y, w, h = ox + sh.left * sx, oy + sh.top * sy, sh.width * sx, sh.height * sy
@@ -413,12 +547,16 @@ class Walker:
                 box["s"] = s
             if e is not None:
                 box["e"] = e
+            if an:
+                box["an"] = an
             if sh.shape_type == MSO_SHAPE_TYPE.PICTURE or etree.QName(el).localname == "pic":
                 self.picture(sh, el, box)
             elif getattr(sh, "has_table", False) and sh.has_table:
                 self.table(sh, box)
             elif etree.QName(el).localname in ("sp", "cxnSp"):
                 self.shape(sh, el, box, ph is not None)
+            elif el.find(".//dgm:relIds", {"dgm": DGM}) is not None:
+                self.diagram(sh, el, box, sid, s, e, an)
             else:
                 warn(f"an object of type {etree.QName(el).localname} was skipped")
 
@@ -459,7 +597,7 @@ class Walker:
         col = default_color(ctx, el)
         if placeholder and not col:
             col = self.layout_color(el)
-        tx = text_of(ctx, el, el.find("p:txBody", NS), placeholder, col)
+        tx = text_of(ctx, el, el.find("p:txBody", NS), placeholder, col, self.inherit(el) if placeholder else ())
         if tx:
             it["tx"] = tx
             sid = int(el.xpath(".//p:cNvPr/@id")[0])
@@ -469,6 +607,109 @@ class Walker:
         if "fill" not in it and "ln" not in it and "tx" not in it:
             return
         self.items.append(it)
+
+    def diagram(self, sh, el, box, sid, s, e, an=None):
+        """A SmartArt diagram, from the drawing PowerPoint keeps of it (ppt/diagrams/drawingN.xml): its shapes are
+        ordinary shapes placed relative to the frame. An animation of one diagram element names it by the modelId of
+        its drawn shape or of the data node the shape presents."""
+        ids = el.find(".//dgm:relIds", {"dgm": DGM})
+        data = etree.fromstring(sh.part.related_part(ids.get("{%s}dm" % R)).blob)
+        # PowerPoint colours diagram text by the colour definition of the shape's style label, not by the fontRef the
+        # saved drawing carries (which can be stale, e.g. white text on a white box)
+        try:
+            colors = etree.fromstring(sh.part.related_part(ids.get("{%s}cs" % R)).blob)
+        except Exception:
+            colors = None
+        txfill = {}
+        if colors is not None:
+            for sl in colors.iter("{%s}styleLbl" % DGM):
+                c = sl.find("{%s}txFillClrLst" % DGM)
+                if c is not None and len(c):
+                    txfill[sl.get("name")] = c[0]
+        lbl = {pt.get("modelId"): pt.find("{%s}prSet" % DGM).get("presStyleLbl")
+               for pt in data.iter("{%s}pt" % DGM) if pt.find("{%s}prSet" % DGM) is not None}
+        ext = data.find(".//{%s}dataModelExt" % DSP)
+        if ext is None:
+            warn("a SmartArt diagram without a saved drawing was skipped (open and save the file in PowerPoint)")
+            return
+        drawing = etree.fromstring(sh.part.related_part(ext.get("relId")).blob)
+        assoc = {pt.get("modelId"): pt.find("{%s}prSet" % DGM).get("presAssocID")
+                 for pt in data.iter("{%s}pt" % DGM) if pt.get("type") == "pres" and pt.find("{%s}prSet" % DGM) is not None}
+        k = self.ctx.k
+        for sp in drawing.iter("{%s}sp" % DSP):
+            sp = etree.fromstring(etree.tostring(sp))
+            for x in sp.iter():
+                if isinstance(x.tag, str) and x.tag.startswith("{%s}" % DSP):
+                    x.tag = "{%s}%s" % (P, etree.QName(x).localname)
+            mid = sp.get("modelId")
+            fr = sp.find("p:style/a:fontRef", NS)
+            if fr is not None and lbl.get(mid) in txfill:
+                for c in list(fr):
+                    fr.remove(c)
+                fr.append(etree.fromstring(etree.tostring(txfill[lbl[mid]])))
+            st = self.steps.get((sid, mid), self.steps.get((sid, assoc.get(mid)), s))
+            ex = self.exits.get((sid, mid), self.exits.get((sid, assoc.get(mid)), e))
+            a = self.anims.get((sid, mid), self.anims.get((sid, assoc.get(mid)), an))
+
+            def place(xf):
+                off, ext_ = xf.find("a:off", NS), xf.find("a:ext", NS)
+                b = {"x": round(box["x"] + int(off.get("x")) * k, 3), "y": round(box["y"] + int(off.get("y")) * k, 3),
+                     "w": round(int(ext_.get("cx")) * k, 3), "h": round(int(ext_.get("cy")) * k, 3)}
+                if xf.get("rot"):
+                    b["rot"] = round(int(xf.get("rot")) / 60000, 2)
+                if xf.get("flipH") == "1":
+                    b["fx"] = True
+                if xf.get("flipV") == "1":
+                    b["fy"] = True
+                if st:
+                    b["s"] = st
+                if ex is not None:
+                    b["e"] = ex
+                if a:
+                    b["an"] = a
+                return b
+            xf = sp.find("p:spPr/a:xfrm", NS)
+            if xf is None:
+                continue
+            txx = sp.find("p:txXfrm", NS)
+            body = sp.find("p:txBody", NS)
+            if txx is not None and body is not None:            # the text has its own box inside the shape
+                sp.remove(body)
+                self.shape(None, sp, place(xf), False)
+                tx = text_of(self.ctx, sp, body, False, default_color(self.ctx, sp))
+                if tx:
+                    self.items.append({"k": "shape", "g": "rect", **place(txx), "tx": tx})
+            else:
+                self.shape(None, sp, place(xf), False)
+
+    def inherit(self, el):
+        """(bodyPr, lstStyle) of what a placeholder inherits, nearest first: the layout's placeholder (same idx, or a
+        title for a title), the master's placeholder of the same type, and the master's title or body text style."""
+        ph = el.find(".//p:nvPr/p:ph", NS)
+        typ, idx = ph.get("type", "obj"), ph.get("idx")
+        title = typ in ("title", "ctrTitle")
+        mtyp = "title" if title else "body" if typ in ("obj", "body", "subTitle") else typ
+
+        def find(root, master):
+            for sp in root.iter("{%s}sp" % P):
+                q = sp.find("p:nvSpPr/p:nvPr/p:ph", NS)
+                if q is None:
+                    continue
+                qt = q.get("type", "obj")
+                if master and (qt == mtyp or (title and qt in ("title", "ctrTitle"))):
+                    return sp
+                if not master and ((title and qt in ("title", "ctrTitle")) or (not title and idx is not None and q.get("idx") == idx)):
+                    return sp
+            return None
+        out = []
+        for part, master in ((self.slide.slide_layout, False), (self.slide.slide_layout.slide_master, True)):
+            sp = find(part._element, master)
+            if sp is not None:
+                out.append((sp.find("p:txBody/a:bodyPr", NS), sp.find("p:txBody/a:lstStyle", NS)))
+        ts = self.slide.slide_layout.slide_master._element.find("p:txStyles", NS)
+        if ts is not None:
+            out.append((None, ts.find("p:titleStyle" if title else "p:bodyStyle" if mtyp == "body" else "p:otherStyle", NS)))
+        return out
 
     def layout_color(self, el):
         """Text colour that the layout sets for a placeholder, or None."""
@@ -486,8 +727,14 @@ class Walker:
 
     def picture(self, sh, el, box):
         has_video = el.find(".//a:videoFile", NS) is not None
+        svg = el.find(".//a:blip//{http://schemas.microsoft.com/office/drawing/2016/SVG/main}svgBlip", NS)
         try:
-            img = sh.image
+            if svg is not None:                              # PowerPoint draws the SVG; the bitmap is only its fallback
+                part = sh.part.related_part(svg.get("{%s}embed" % R))
+                img = type("Svg", (), {"blob": part.blob, "ext": "svg"})()
+            else:                                            # a video is a Movie in python-pptx, without .image: read its poster
+                part = sh.part.related_part(el.find("p:blipFill/a:blip", NS).get("{%s}embed" % R))
+                img = type("Img", (), {"blob": part.blob, "ext": part.partname.rsplit(".", 1)[-1]})()
         except Exception:
             if not has_video:
                 warn("a picture without image data was skipped")
@@ -525,6 +772,10 @@ class Walker:
     def attach_video(self, sh, el, it):
         vf = el.find(".//a:videoFile", NS)
         if vf is None:
+            return
+        rel = sh.part.rels.get(vf.get("{%s}link" % R))
+        if rel is not None and rel.is_external and rel.target_ref.startswith("http"):
+            it["embed"] = rel.target_ref                     # an online video (YouTube): played in place on click
             return
         try:
             part = sh.part.related_part(vf.get("{%s}link" % R))
@@ -603,12 +854,17 @@ def convert_slide(pptx_path, num, imgdir, imgrel):
     prs = Presentation(pptx_path)
     slide = prs.slides[num - 1]
     ctx = Ctx(prs, slide)
-    steps, exits, paras = animation_steps(slide)
-    w = Walker(ctx, slide, num, imgdir, imgrel, steps, exits, paras)
+    ctx.part = slide.part
+    steps, exits, paras, anims = animation_steps(slide, prs.slide_height * ctx.k)
+    w = Walker(ctx, slide, num, imgdir, imgrel, {}, {}, {}, {})
+    if slide._element.get("showMasterSp") != "0":       # texts the layout draws on every slide, e.g. a date
+        w.walk([sh for sh in slide.slide_layout.shapes if not sh.is_placeholder and sh.has_text_frame and sh.text_frame.text.strip()])
+    w.steps, w.exits, w.paras, w.anims = steps, exits, paras, anims
     w.walk(slide.shapes)
-    # every step must change something: renumber the clicks that show or hide at least one thing (a click with only
-    # an emphasis or sound effect would be a dead key press)
-    used = sorted({i[k] for i in w.items for k in ("s", "e") if i.get(k)} | {p["s"] for i in w.items for p in (i.get("tx") or {}).get("p", []) if p.get("s")})
+    # every step must change something: renumber the clicks that show, hide, move, turn or play at least one thing
+    # (a click with only a sound effect would be a dead key press)
+    used = sorted({i[k] for i in w.items for k in ("s", "e") if i.get(k)} | {p["s"] for i in w.items for p in (i.get("tx") or {}).get("p", []) if p.get("s")}
+                  | {a["s"] for i in w.items for a in i.get("an", []) if a["s"]})
     remap = {v: n for n, v in enumerate(used, 1)}
     for i in w.items:
         for k in ("s", "e"):
@@ -617,11 +873,53 @@ def convert_slide(pptx_path, num, imgdir, imgrel):
         for p in (i.get("tx") or {}).get("p", []):
             if p.get("s"):
                 p["s"] = remap[p["s"]]
-    s = {"layout": "canvas", "title": w.title, "items": w.items}
-    mx = max([i.get("s", 0) for i in w.items] + [p.get("s", 0) for i in w.items for p in (i.get("tx") or {}).get("p", [])] + [0])
+        if i.get("an"):
+            i["an"] = [{**a, "s": remap.get(a["s"], 0)} for a in i["an"]]
+    s = {"layout": "canvas", "title": "" if w.title_obj else w.title, "items": w.items}
+    mx = max(remap.values(), default=0)
     if slide.has_notes_slide and slide.notes_slide.notes_text_frame.text.strip():
         s["notes"] = slide.notes_slide.notes_text_frame.text.strip()
+    tr = transition_of(slide)
+    if tr:
+        s["transition"] = tr
+    if title_anchor(slide) == "t":
+        s["ta"] = "t"                                    # the headline hangs from the top of its box
+    for el in (slide._element, slide.slide_layout._element, slide.slide_layout.slide_master._element):
+        bg = el.find("p:cSld/p:bg", NS)                  # the first background set: slide, layout or master
+        if bg is not None:
+            c = clr(ctx, bg.find("p:bgPr/a:solidFill", NS)) or clr(ctx, bg.find("p:bgRef", NS))
+            if c and c[0] != "#ffffff":
+                s["bg"] = c[0]
+            break
     return s, mx
+
+
+def title_anchor(slide):
+    """Vertical anchor of the title placeholder (t, ctr, b), from the slide, its layout or its master."""
+    for src in (slide, slide.slide_layout, slide.slide_layout.slide_master):
+        for sh in src.placeholders:
+            ph = sh._element.find(".//p:nvPr/p:ph", NS)
+            b = sh._element.find("p:txBody/a:bodyPr", NS)
+            if ph is not None and ph.get("type") in ("title", "ctrTitle") and b is not None and b.get("anchor"):
+                return b.get("anchor")
+    return None
+
+
+def transition_of(slide):
+    """The transition into a slide: {"k": "fade"|"morph", "dur": ms} or None. PowerPoint writes newer transitions
+    (Morph, durations in ms) in an mc:Choice before an older fallback; the first p:transition is the one it plays."""
+    t = next(slide._element.iter("{%s}transition" % P), None)
+    if t is None:
+        return None
+    kind = next((etree.QName(c).localname for c in t if isinstance(c.tag, str) and etree.QName(c).localname != "extLst"), None)
+    if kind is None:
+        return None
+    dur = t.get("{http://schemas.microsoft.com/office/powerpoint/2010/main}dur")
+    dur = int(dur) if dur else {"fast": 500, "med": 750, "slow": 1000}.get(t.get("spd", "fast"), 500)
+    if kind not in ("fade", "morph"):
+        warn(f"the {kind} transition is played as a fade")
+        kind = "fade"
+    return {"k": kind, "dur": dur}
 
 
 def main():

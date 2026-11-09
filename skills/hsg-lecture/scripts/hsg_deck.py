@@ -29,7 +29,7 @@ SALMON, TEAL, SAND, YELLOW = "#EB6969", "#73A5AF", "#E1D7C3", "#FFF04B"
 ROW_A, ROW_B = "#CBD8CD", "#E7EDE8"   # table rows: green at 20% and 10% on white
 BOX_STYLES = ("green", "outline", "teal")
 
-COMMON = {"layout", "title", "lead", "callout", "source", "notes", "time"}
+COMMON = {"layout", "title", "lead", "callout", "source", "notes", "time", "transition"}   # transition: copied from PowerPoint
 NO_LEAD = {"title", "section", "task", "quote"}
 # layout: (required fields, optional fields)
 LAYOUTS = {
@@ -48,7 +48,7 @@ LAYOUTS = {
     "people":    ({"title", "items"}, set()),
     "quote":     ({"title"}, {"attribution", "picture", "points"}),
     "syllabus":  ({"title", "items"}, {"current", "break_after", "assignments"}),
-    "canvas":    ({"title"}, {"items"}),       # a slide copied from PowerPoint by pptx_canvas.py; the title may be ""
+    "canvas":    ({"title"}, {"items", "bg", "ta"}),       # a slide copied from PowerPoint by pptx_canvas.py; the title may be ""
 }
 ITEM_KEYS = {
     "gallery":  ({"image", "alt"}, {"caption", "shadow"}),

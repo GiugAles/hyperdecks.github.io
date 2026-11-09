@@ -5,13 +5,14 @@
   python render_html.py deck.json --out DIR
   python render_html.py deck.json --shots DIR     # also screenshots for the check: one PNG per slide,
                                                   # a contact sheet and the phone view
+  python render_html.py deck.json --shots DIR --slides 2,4-6   # only these slides (fast)
 
 In a window of 1000px or wider it shows one 16:9 slide, centred. In a narrower window (phone) it still shows one
 slide at a time, filling the window with the content in one column; a slide taller than the window scrolls
 within itself. Printing gives one slide per page (PDF).
 Keys: arrows or space to move, O overview, F full screen, N speaker notes.
 """
-import argparse, html, math, re, shutil, sys
+import argparse, html, json, math, re, shutil, sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -69,7 +70,7 @@ sub,sup{font-size:.65em;line-height:0}
 
 .slide{position:absolute;left:50%;top:calc((100% - var(--bar))/2);width:100U;height:56.25U;transform:translate(-50%,-50%);
   overflow:hidden;visibility:hidden;background:#fff;color:var(--fg)}
-.slide.active{visibility:visible}
+.slide.active{visibility:visible;z-index:2}.slide.leaving{visibility:visible;z-index:1}
 /* the title sits in the template's title box (4.1U to 10.8U, text on its bottom line); content starts at 14U */
 .frame{position:relative;z-index:1;width:100%;height:100%;padding:4.1U 3.92U 5U;display:flex;flex-direction:column;min-width:0}
 .headrow{display:flex;justify-content:space-between;align-items:flex-end;gap:3U;min-height:6.7U;flex:none}
@@ -245,6 +246,7 @@ h1{font-size:var(--s-h1);font-weight:300;line-height:1.08;letter-spacing:-.01em;
    click animations become steps (the arrow keys reveal them one by one; overview, print and phone show all);
    the headline may use the full width, as the HSG font is a little wider than the Light of many source decks */
 .l-canvas h2{max-width:92U;text-wrap:wrap}
+.l-canvas.ta-t .headrow{align-items:flex-start}  /* the PowerPoint title hangs from the top of its box */
 .l-canvas .dfoot{z-index:0}  /* the footer line lies behind the objects, so a filled box covers it */
 .cv{position:absolute;inset:0;z-index:1}
 .cv .it{position:absolute}
@@ -262,6 +264,7 @@ h1{font-size:var(--s-h1);font-weight:300;line-height:1.08;letter-spacing:-.01em;
 .cv .pimg{position:absolute;inset:0;overflow:hidden}
 .cv .pimg video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#000}
 .cv .pimg img{position:absolute;display:block;max-width:none}
+.cv .yt{border:0;padding:0;margin:0;background:none;cursor:pointer;width:100%;height:100%}.cv .yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .cv .it.shadow .pimg{filter:drop-shadow(.35U .35U .55U rgba(0,0,0,.38))}
 .cv table{position:absolute;inset:0;border-collapse:collapse;table-layout:fixed;width:100%}
 .cv td{padding:0;vertical-align:middle;line-height:1.2;border:.1U solid #fff}
@@ -382,18 +385,56 @@ JS = r"""
 const by=id=>document.getElementById(id);
 let cur=0,step=0;const m=location.hash.match(/(\d+)$/);if(m&&+m[1]>=1&&+m[1]<=slides.length)cur=+m[1]-1;
 const maxStep=()=>+slides[cur].dataset.steps||0,stepping=()=>!matchMedia('(max-width:999px),(max-height:480px)').matches;
-function show(){slides[cur].querySelectorAll('.it[data-s],.it[data-e],.tx p[data-s]').forEach(e=>{const a=+e.dataset.s||0,x=e.dataset.e?+e.dataset.e:1e9;
-  e.classList.toggle('off',!(step>=a&&step<x))});by('prev').disabled=cur===0&&step===0;by('next').disabled=cur===slides.length-1&&step>=maxStep()}
-function go(n,end){cur=Math.max(0,Math.min(slides.length-1,n));step=end?maxStep():0;
+// PowerPoint effects (data-an, see pptx_canvas.py): stepping forward plays the effects of the new step with their
+// delays and durations; going back or jumping shows the end state of the step at once. A motion path is a list of
+// offsets (U) from the place of the shape on the slide; a spin adds its angle.
+const A=e=>e._an||(e._an=JSON.parse(e.dataset.an||'[]'));
+const pose=(e,upto)=>{let t=[0,0],r=0;for(const f of A(e))if(f.s<=upto){if(f.k==='path')t=f.pts[f.pts.length-1];if(f.k==='rot')r+=f.by}return[t,r]};
+const tr=t=>`calc(var(--u)*${t[0]}) calc(var(--u)*${t[1]})`;
+function show(play){play=play&&stepping();
+ slides[cur].querySelectorAll('.it[data-s],.it[data-e],.it[data-an],.tx p[data-s]').forEach(e=>{const a=+e.dataset.s||0,x=e.dataset.e?+e.dataset.e:1e9;
+  e.getAnimations().forEach(n=>n.cancel());
+  const now=play?A(e).filter(f=>f.s===step):[];
+  e.classList.toggle('off',!(step>=a&&step<x)&&!now.some(f=>f.k==='out'));
+  let [t,r]=pose(e,now.length?step-1:step);e.style.translate=tr(t);e.style.rotate=r+'deg';
+  for(const f of now){const o={delay:f.d,duration:Math.max(f.dur,1),easing:'ease-in-out'};
+   if(f.k==='in')e.animate({opacity:[0,1]},{...o,duration:f.fx==='appear'?1:o.duration,fill:'backwards'});
+   else if(f.k==='out')e.animate({opacity:[1,0]},{...o,duration:f.fx==='appear'?1:o.duration,fill:'forwards'});
+   else if(f.k==='path')e.animate({translate:f.pts.map(tr)},{...o,easing:'linear',fill:'forwards'});
+   else if(f.k==='rot'){e.animate({rotate:[r+'deg',(r+f.by)+'deg']},{...o,fill:'forwards'});r+=f.by}
+   else if(f.k==='cmd'){const v=e.querySelector('video'),y=e.querySelector('.yt');if(v||y)e.animate([],{duration:f.d}).onfinish=()=>
+     y?f.c!=='pause'&&y.click():f.c==='pause'?v.pause():f.c==='toggle'&&!v.paused?v.pause():v.play()}}});
+ by('prev').disabled=cur===0&&step===0;by('next').disabled=cur===slides.length-1&&step>=maxStep()}
+// the transition into a slide, when stepping forward to it: fade (the slide fades in over the last one) or Morph
+// (objects with the same picture or text move and resize from their place on the last slide; the rest crossfades)
+function transition(o,s){const t=JSON.parse(s.dataset.tr||'null');if(!t||o===s)return;
+ o.classList.add('leaving');const bg0=s.style.background,run=[],hid=[],opt={duration:t.dur,easing:'ease-in-out'};
+ if(t.k==='morph'){const cv=s.querySelector('.cv'),ocv=o.querySelector('.cv'),used=new Set(),R=e=>e.getBoundingClientRect(),mt=new Set();
+  if(cv&&ocv)for(const e of cv.querySelectorAll(':scope>.it[data-m]')){
+   const m=[...ocv.querySelectorAll(':scope>.it[data-m]')].find(x=>!used.has(x)&&x.dataset.m===e.dataset.m);if(!m)continue;
+   used.add(m);mt.add(e);m.style.visibility='hidden';hid.push(m);const a=R(m),b=R(e),end=e.style.translate||'0px 0px';
+   run.push(e.animate({translate:[`${a.left+a.width/2-b.left-b.width/2}px ${a.top+a.height/2-b.top-b.height/2}px`,end],
+    scale:[`${a.width/b.width} ${a.height/b.height}`,'1 1']},opt))}
+  s.style.background='transparent';
+  for(const e of s.querySelectorAll(':scope>:not(.frame),.frame>:not(.cv),.cv>.it'))if(!mt.has(e))run.push(e.animate({opacity:[0,1]},opt));
+  for(const e of o.querySelectorAll(':scope>:not(.frame),.frame>:not(.cv),.cv>.it'))run.push(e.animate({opacity:[1,0]},{...opt,fill:'forwards'}))}
+ else run.push(s.animate({opacity:[0,1]},opt));
+ Promise.all(run.map(a=>a.finished.catch(()=>0))).then(()=>{o.classList.remove('leaving');s.style.background=bg0;
+  hid.forEach(e=>e.style.visibility='');o.getAnimations({subtree:true}).forEach(a=>a.cancel())})}
+function go(n,end){const old=slides[cur],fw=!end&&n===cur+1&&stepping();document.getAnimations().forEach(a=>a.cancel());old.querySelectorAll('video').forEach(v=>v.pause());old.querySelectorAll('.yt iframe').forEach(x=>x.remove());
+ cur=Math.max(0,Math.min(slides.length-1,n));step=end?maxStep():0;
  slides.forEach((s,i)=>{s.classList.toggle('active',i===cur);s.setAttribute('aria-hidden',i!==cur)});
  slides[cur].scrollTop=0;
  by('count').textContent=(cur+1)+' / '+slides.length;
  by('progress').style.width=((cur+1)/slides.length*100)+'%';
  const t=slides[cur].querySelector('.notes');nv.textContent=t?t.textContent:'';
- history.replaceState(null,'','#/'+(cur+1));ov.classList.remove('open');show();fitCanvas(slides[cur]);
+ history.replaceState(null,'','#/'+(cur+1));ov.classList.remove('open');show(!end);fitCanvas(slides[cur]);if(fw)transition(old,slides[cur]);
 }
-const next=()=>{if(stepping()&&step<maxStep()){step++;show()}else go(cur+1)},prev=()=>{if(stepping()&&step>0){step--;show()}else go(cur-1,true)};
+const next=()=>{if(stepping()&&step<maxStep()){step++;show(true)}else go(cur+1)},prev=()=>{if(stepping()&&step>0){step--;show()}else go(cur-1,true)};
 by('prev').onclick=prev;by('next').onclick=next;
+document.addEventListener('click',e=>{const y=e.target.closest('.yt');if(!y||y.querySelector('iframe'))return;const f=document.createElement('iframe');
+ f.src=y.dataset.yt+(y.dataset.yt.includes('?')?'&':'?')+'autoplay=1';f.allow='autoplay; encrypted-media; fullscreen';f.allowFullscreen=true;
+ f.title=y.getAttribute('aria-label');y.append(f)});
 by('ovBtn').onclick=()=>ov.classList.toggle('open');
 const notes=()=>body.classList.toggle('show-notes');if(by('notesBtn'))by('notesBtn').onclick=notes;
 if(!document.fullscreenEnabled)by('fsBtn').hidden=true;
@@ -810,6 +851,9 @@ class Html:
     @staticmethod
     def cv_attrs(it):
         a = f' data-s="{it["s"]}"' if it.get("s") else ""
+        a += f" data-an='{esc(json.dumps(it['an'], separators=(',', ':')))}'" if it.get("an") else ""
+        m = it.get("src") or "".join(r.get("t", "") for p in (it.get("tx") or {}).get("p", []) for r in p["r"]).strip()
+        a += f' data-m="{esc(m)}"' if m else ""      # Morph pairs objects with the same picture or text
         return a + (f' data-e="{it["e"]}"' if it.get("e") is not None else "")
 
     def cv_text(self, tx, cls=""):
@@ -842,11 +886,15 @@ class Html:
                     rs += ";text-decoration:" + " ".join(x for x, k in (("underline", "u"), ("line-through", "st")) if r.get(k))
                 if r.get("i"):
                     rs += ";font-style:italic"
+                if r.get("ff"):
+                    rs += f";font-family:'{r['ff']}',HSGSans,sans-serif"
                 if r.get("bl"):
                     rs += f';vertical-align:{"super" if r["bl"] > 0 else "sub"};font-size:calc({r["sz"] * .65}*var(--u)*var(--f,1))'
                 c = f' class="{r["f"]}"' if r.get("f") else ""
                 body = esc(r["t"])
                 body = f"<b>{body}</b>" if r.get("b") else body
+                if r.get("href"):
+                    body = f'<a href="{esc(r["href"])}" target="_blank" rel="noopener" style="color:inherit;text-decoration:inherit">{body}</a>'
                 runs += f'<span{c} style="{rs}">{body}</span>'
             first = max((r.get("sz", 1.9) for r in p["r"] if "sz" in r), default=1.9)
             ds = f' data-s="{p["s"]}"' if p.get("s") else ""
@@ -868,7 +916,8 @@ class Html:
             defs, marks = "", ""
             for pos, key in (("start", "head"), ("end", "tail")):
                 if it.get(key) and col:
-                    mid = f"m{n}{pos[0]}"
+                    self.nmark = getattr(self, "nmark", 0) + 1      # ids are unique in the page, not only in the slide
+                    mid = f"m{self.nmark}{pos[0]}"
                     big = 5 if it[key] in ("triangle", "arrow", "stealth") else 3.5
                     shape = ('<circle cx="5" cy="5" r="4.5"/>' if it[key] == "oval" else
                              '<path d="M0 0L10 5L0 10z"/>' if it[key] != "arrow" else '<path d="M1 1L9 5L1 9" fill="none" stroke="' + col + '" stroke-width="1.6"/>')
@@ -897,6 +946,8 @@ class Html:
         iw, ih = 1 - cl - cr, 1 - ct - cb
         st = f"left:{_f(-cl / iw * 100)}%;top:{_f(-ct / ih * 100)}%;width:{_f(100 / iw)}%;height:{_f(100 / ih)}%"
         cls = " shadow" if it.get("shadow") else ""
+        if it.get("fx") or it.get("fy"):                 # a mirrored picture
+            st += f';transform:scale({-1 if it.get("fx") else 1},{-1 if it.get("fy") else 1})'
         if it.get("video"):
             src = (self.base / it["video"]).resolve()
             if src.exists():
@@ -906,6 +957,9 @@ class Html:
                 return (f'<div class="it{cls}" style="{self.cv_pos(it)}"{self.cv_attrs(it)}><div class="pimg">'
                         f'<video controls preload="none" poster="{self.asset(it["src"])}" aria-label="{esc(it.get("alt", ""))}">'
                         f'<source src="media/{src.name}" type="{typ}"></video></div></div>')
+        if it.get("embed"):                  # online video: the poster, replaced by the player on click (as in PowerPoint)
+            return (f'<div class="it{cls}" style="{self.cv_pos(it)}"{self.cv_attrs(it)}><button class="pimg yt" data-yt="{esc(it["embed"])}" '
+                    f'aria-label="Play video: {esc(it.get("alt", ""))}"><img src="{self.asset(it["src"])}" alt="" style="{st}"></button></div>')
         return (f'<div class="it{cls}" style="{self.cv_pos(it)}"{self.cv_attrs(it)}><div class="pimg">'
                 f'<img src="{self.asset(it["src"])}" alt="{esc(it.get("alt", ""))}" style="{st}"></div></div>')
 
@@ -967,9 +1021,13 @@ class Html:
             notes = f'<template class="notes">{esc(s["notes"])}</template>' if s.get("notes") else ""
             t = f' data-time="{esc(str(s["time"]))}"' if s.get("time") else ""
             bare = " bare" if lay == "questions" and not s.get("points") else ""
+            bare += " ta-t" if s.get("ta") == "t" else ""
             steps = max([i.get("s", 0) for i in s.get("items", [])] + [p.get("s", 0) for i in s.get("items", [])
-                        for p in (i.get("tx") or {}).get("p", [])] + [0]) if lay == "canvas" else 0
+                        for p in (i.get("tx") or {}).get("p", [])] + [a["s"] for i in s.get("items", []) for a in i.get("an", [])]
+                        + [0]) if lay == "canvas" else 0
             ds = f' data-steps="{steps}"' if steps else ""
+            ds += f" data-tr='{esc(json.dumps(s['transition']))}'" if s.get("transition") else ""
+            ds += f' style="background:{esc(s["bg"])}"' if s.get("bg") else ""      # background copied from PowerPoint
             sections += (f'<section class="slide l-{lay}{bare}{" active" if n == 1 else ""}" id="s{n}" data-title="{esc(plain(s["title"]) or f"Slide {n}")}"{t}{ds} '
                          f'aria-label="Slide {n} of {n_all}"><div class="frame">{inner}</div>{extra}{notes}</section>\n')
 
@@ -1005,6 +1063,7 @@ class Html:
 <div class="overview" id="overview" role="dialog" aria-label="Slide overview"><h2>{esc(plain(d['title']))}</h2><div class="ov-grid"></div></div>
 <div class="notes-view" id="notesView" aria-label="Speaker notes"></div>
 <script>{JS}</script>
+<script>{REVIEW_JS}</script>
 </body>
 </html>
 """
@@ -1045,13 +1104,48 @@ OVERFLOW_JS = """() => {
 }"""
 
 
-def shots(index, folder, n):
-    """Screenshots for the visual check. Returns a list of overflow messages."""
+# Review comments: only with ?review in the address (index.html?review), never while presenting. A box per slide,
+# saved in the browser (localStorage); "Copy all" puts every comment with its slide number and title on the clipboard.
+REVIEW_JS = r"""
+(()=>{if(!/[?&]review\b/.test(location.search))return;
+const slides=[...document.querySelectorAll('.slide')],K='hsg-review:'+document.title;
+let c={};try{c=JSON.parse(localStorage.getItem(K))||{}}catch(e){}
+const st=document.createElement('style');st.textContent=`#review{position:fixed;right:12px;bottom:72px;width:320px;z-index:50;background:#fff;
+ border:2px solid #00802f;border-radius:6px;padding:8px;font:14px system-ui,sans-serif;box-shadow:0 2px 10px rgba(0,0,0,.25)}
+#review b{display:block;cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#review textarea{width:100%;box-sizing:border-box;font:inherit;resize:vertical;margin:6px 0 4px}#review button{font:inherit}
+#review.min textarea,#review.min div{display:none}@media print{#review{display:none}}`;
+const p=document.createElement('div');p.id='review';
+p.innerHTML='<b title="click to fold"></b><textarea rows="5" placeholder="Comment on this slide (Esc to leave the box)"></textarea>'
+ +'<div><button data-a="copy"></button> <button data-a="clear">Clear all</button></div>';
+document.head.append(st);document.body.append(p);
+const h=p.querySelector('b'),t=p.querySelector('textarea'),cp=p.querySelector('[data-a=copy]');
+const cur=()=>slides.findIndex(s=>s.classList.contains('active'));
+const title=n=>(slides[n-1]&&slides[n-1].dataset.title)||'';
+const save=()=>{localStorage.setItem(K,JSON.stringify(c));cp.textContent='Copy all ('+Object.keys(c).length+')'};
+let last=-1;const show=()=>{const i=cur();if(i===last)return;last=i;h.textContent='Slide '+(i+1)+': '+title(i+1);t.value=c[i+1]||'';save()};
+h.onclick=()=>p.classList.toggle('min');
+t.addEventListener('keydown',e=>{e.stopPropagation();if(e.key==='Escape')t.blur()});
+t.addEventListener('input',()=>{const n=cur()+1;if(t.value.trim())c[n]=t.value;else delete c[n];save()});
+cp.onclick=()=>{const txt=Object.keys(c).sort((a,b)=>a-b).map(n=>'Slide '+n+' ('+title(n)+'):\n'+c[n].trim()).join('\n\n');
+ const done=()=>{cp.textContent='Copied';setTimeout(save,1500)};
+ navigator.clipboard.writeText(txt).then(done,()=>{const a=document.createElement('textarea');a.value=txt;document.body.append(a);
+  a.select();document.execCommand('copy');a.remove();done()})};
+p.querySelector('[data-a=clear]').onclick=()=>{if(confirm('Delete all comments?')){c={};last=-1;show()}};
+const mo=new MutationObserver(show);slides.forEach(s=>mo.observe(s,{attributes:true,attributeFilter:['class']}));show()})();
+"""
+
+
+def shots(index, folder, n, sel=None):
+    """Screenshots for the visual check (all slides, or only the indices in sel). Returns a list of overflow messages."""
     from playwright.sync_api import sync_playwright
     from PIL import Image
     folder.mkdir(parents=True, exist_ok=True)
-    for old in list(folder.glob("slide-*.png")) + list(folder.glob("phone-*.png")) + list(folder.glob("contact*.png")):
-        old.unlink()
+    full = sel is None
+    sel = list(range(n)) if full else sel
+    if full:
+        for old in list(folder.glob("slide-*.png")) + list(folder.glob("phone-*.png")) + list(folder.glob("contact*.png")):
+            old.unlink()
     problems, thin = [], []
     with sync_playwright() as p:
         try:
@@ -1064,7 +1158,7 @@ def shots(index, folder, n):
         pg.wait_for_function("document.documentElement.dataset.fit")
         pg.wait_for_timeout(300)
         paths = []
-        for i in range(n):
+        for i in sel:
             pg.evaluate("i => window.hsgDeck.go(i, true)", i)
             pg.wait_for_timeout(60)
             for msg in pg.evaluate(OVERFLOW_JS):
@@ -1079,7 +1173,7 @@ def shots(index, folder, n):
         ph.wait_for_function("document.documentElement.dataset.fit")
         ph.wait_for_timeout(300)
         phones = []
-        for i in range(n):
+        for i in sel:
             ph.set_viewport_size({"width": 390, "height": 844})
             ph.evaluate("i => window.hsgDeck.go(i, true)", i)
             ph.wait_for_timeout(60)
@@ -1094,6 +1188,8 @@ def shots(index, folder, n):
             ph.screenshot(path=str(path))
             phones.append(path)
         b.close()
+    if not full:                              # a few slides: no contact sheets
+        return problems
     pw = 300
     for c, start in enumerate(range(0, len(phones), 6), 1):
         ims = [Image.open(x).convert("RGB") for x in phones[start:start + 6]]
@@ -1124,6 +1220,7 @@ def main():
     ap.add_argument("deck")
     ap.add_argument("--out", help="output folder (default: html/ next to the deck)")
     ap.add_argument("--shots", help="folder for check screenshots (keep it outside the repo)")
+    ap.add_argument("--slides", help="with --shots: only these slides, e.g. 2 or 2,4-6 (fast; no contact sheets)")
     a = ap.parse_args()
     deck, base, warnings = hd.load(a.deck)
     out = Path(a.out).resolve() if a.out else base / "html"
@@ -1131,7 +1228,12 @@ def main():
     print(f"Saved {index} ({len(deck['slides'])} slides)")
     hd.report(warnings)
     if a.shots:
-        problems = shots(index, Path(a.shots).resolve(), len(deck["slides"]))
+        n = len(deck["slides"])
+        sel = None
+        if a.slides:
+            sel = sorted({k - 1 for part in a.slides.split(",") for k in
+                          range(int(part.split("-")[0]), int(part.split("-")[-1]) + 1) if 1 <= k <= n})
+        problems = shots(index, Path(a.shots).resolve(), n, sel)
         print(f"Screenshots in {Path(a.shots).resolve()}: slide-NN.png, contact-NN.png, phone-NN.png, contact-phone-NN.png")
         if problems:
             print("OVERFLOW, shorten the text or split the slide (never change sizes):", file=sys.stderr)
