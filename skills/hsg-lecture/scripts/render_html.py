@@ -309,12 +309,12 @@ a.il:hover{background:var(--green);color:#fff!important}
   border:1px solid #ddd;box-shadow:0 4px 18px rgba(0,0,0,.1);transition:opacity .25s,transform .25s}
 .pill>div{display:flex;align-items:center;gap:2px}
 .pill .sep{width:1px;height:20px;background:#ddd;margin:0 8px}
-.controls button{border:0;background:transparent;color:inherit;font:inherit;height:34px;padding:0 12px;border-radius:17px;cursor:pointer;
+.controls button,.controls a.tbtn{border:0;background:transparent;color:inherit;font:inherit;text-decoration:none;height:34px;padding:0 12px;border-radius:17px;cursor:pointer;
   display:flex;align-items:center;justify-content:center;gap:7px;white-space:nowrap}
 .controls [hidden]{display:none}
 .controls svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;flex:none}
-.controls button:hover,body.show-notes #notesBtn,body:has(.overview.open) #ovBtn,body.auto #autoBtn{background:#f0f0f0}
-.controls button:focus-visible{outline:2px solid #00802F;outline-offset:2px}
+.controls button:hover,.controls a.tbtn:hover,body.show-notes #notesBtn,body:has(.overview.open) #ovBtn,body.auto #autoBtn{background:#f0f0f0}
+.controls button:focus-visible,.controls a.tbtn:focus-visible{outline:2px solid #00802F;outline-offset:2px}
 .controls .nav button{width:32px;height:32px;padding:0;background:#00802F;color:#fff}
 .controls .nav button:not(:disabled):hover{background:#0A5F2D}
 .controls .nav button:disabled{opacity:.3;cursor:default}
@@ -397,7 +397,7 @@ body.show-notes .notes-view{display:block}
   .slide.active .cv .off{visibility:visible}
   .pill{width:100%;height:100%;padding:3px 10px 0;border-radius:0;border:0;box-shadow:none;justify-content:space-between}
   .pill .sep{display:none}
-  .tools button{flex-direction:column;gap:3px;height:48px;min-width:56px;padding:0 6px;border-radius:10px;font-size:10.5px}
+  .tools button,.tools a.tbtn{flex-direction:column;gap:3px;height:48px;min-width:56px;padding:0 6px;border-radius:10px;font-size:10.5px}
   .tools svg{width:20px;height:20px}
   .controls .nav button{width:38px;height:38px}
   .progress{bottom:calc(var(--ctl) - 3px)}
@@ -1181,6 +1181,11 @@ class Html:
         note = '<rect x="4" y="4" width="16" height="16" rx="2.5"/><path d="M8 9h8M8 12.5h8M8 16h4"/>'
         grow, shrink = '<path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/>', '<path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/>'
         notes_btn = f'<button id="notesBtn" title="Speaker notes (N)">{ico(note)}Notes</button>' if any(s.get("notes") for s in d["slides"]) else ""
+        dl = '<path d="M12 4v11M7 10l5 5 5-5M5 20h14"/>'
+        pv = d.get("pdf_version")
+        pdf_btn = (f'<a class="tbtn" id="pdfBtn" href="{esc(d["pdf"])}" download title="Download the slides as PDF'
+                   f'{", version of " + esc(pv) if pv else ""}">{ico(dl)}PDF{" (" + esc(pv) + ")" if pv else ""}</a>'
+                   if d.get("pdf") else "")
         play, pause = '<path d="M8 5l11 7-11 7z"/>', '<path d="M8 5v14M16 5v14"/>'
         sec = d.get("autoadvance")
         auto_btn = (f'<button id="autoBtn" data-sec="{sec}" title="Advance every {sec:g} seconds (A)">{ico(play, "auto-off")}'
@@ -1190,7 +1195,7 @@ class Html:
                f'<span class="count" id="count">1 / {n_all}</span>'
                f'<button id="next" title="Next slide (→)" aria-label="Next slide">{ico(fwd)}</button>'
                '</div><i class="sep"></i><div class="tools">'
-               f'<button id="ovBtn" title="All slides (O)">{ico(sq)}Overview</button>{notes_btn}{auto_btn}'
+               f'<button id="ovBtn" title="All slides (O)">{ico(sq)}Overview</button>{notes_btn}{pdf_btn}{auto_btn}'
                f'<button id="fsBtn" title="Full screen (F)">{ico(grow, "fs-off")}<span class="fs-off">Full screen</span>'
                f'{ico(shrink, "fs-on")}<span class="fs-on">Exit</span></button></div></div>'
                '<div class="progress" aria-label="Slide progress"><span id="progress"></span></div></div>')

@@ -2,6 +2,8 @@
  "title": "ASSE Reloaded: Welcome and Introduction",
  "lang": "en",
  "footer": "Advanced Software and Systems Engineering | Institute of Computer Science | University of St.Gallen",
+ "pdf": "../ASSE-07a-Reloaded-2026-11-09.pdf",
+ "pdf_version": "09.11.2026",
  "slides": [
   {
    "layout": "title",

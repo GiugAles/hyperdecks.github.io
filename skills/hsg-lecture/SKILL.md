@@ -36,6 +36,8 @@ One JSON file, `deck.json`. Image paths are relative to the folder of the deck.
 
 `autoadvance` is optional: a number of seconds. The controls then get an Auto button (key A) that moves on to the next step or slide every that many seconds and starts again at the first slide after the last, e.g. for a deck that loops on a screen in the lobby.
 
+`pdf` is optional: the path of a PDF of the deck, relative to `html/index.html` (e.g. `"../lecture.pdf"`). The controls then get a PDF button that downloads it. Make the PDF by printing `html/index.html` (one slide per page, builds shown complete), e.g. with Playwright `page.pdf(width="13.333in", height="7.5in", print_background=True)`. Give the page size explicitly: with the default paper size Chromium lays the page out at letter width, which triggers the phone layout. `pdf_version` (optional, with `pdf`) is the version of that PDF, e.g. its date `"09.11.2026"`; the button then reads "PDF (09.11.2026)", so readers see that the PDF may be older than the slides.
+
 `theme` is optional: a CSS file (path relative to the deck) set on top of the template, for an event with its own look, e.g. `legalhackathons/theme/legalhackathons.css`. It may use the unit `U` and link fonts with `url()`; those files are copied into `html/assets/`. A theme changes colours and fonts only, never sizes; only use one when the user asks for another look.
 
 Every slide has `layout` and `title`, and optionally:
