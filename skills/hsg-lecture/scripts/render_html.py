@@ -166,6 +166,17 @@ table.t{width:100%;border-collapse:collapse;font-size:var(--s-mid);line-height:1
 
 .gallery{display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));gap:3U;align-items:end}
 .gallery .pic img{max-height:30U}
+.gallery.qr{max-width:60U;margin:0 auto;align-items:start}
+.gallery.qr .pic img{width:24U;height:24U;max-height:none;margin:0 auto}
+/* three tiles with an icon (an emoji, or a coloured dot) each */
+.tiles3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2.4U;margin-top:2U}
+.tile{border:.1U solid #ccc;border-radius:1U;padding:2.6U 2.4U;font-size:var(--s-body);line-height:1.35}
+.ticon{display:block;font-size:4U;line-height:1;margin-bottom:1.6U}
+.ticon.dot{width:4U;height:4U;border-radius:50%;background:#EB6969}
+/* decor: emojis or dots scattered behind the slide */
+.odots,.emojis{position:absolute;inset:0;pointer-events:none;z-index:-1}
+.odots i{position:absolute;width:calc(var(--d)*1U);height:calc(var(--d)*1U);border-radius:50%;background:#EB6969;opacity:.9}
+.emojis span{position:absolute;line-height:1}
 .people{display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));gap:3U;align-items:end;justify-items:center}
 .person{display:flex;flex-direction:column;align-items:center;text-align:center;gap:1.4U}
 .person img{width:13U;height:16U;object-fit:cover;display:block;filter:drop-shadow(.35U .35U .55U rgba(0,0,0,.38))}
@@ -272,6 +283,25 @@ h1{font-size:var(--s-h1);font-weight:300;line-height:1.08;letter-spacing:-.01em;
 .cv td .tx{position:static;display:block;padding:.3U .8U}
 .cv td.head .tx{color:#fff}
 
+/* references between slides and lectures: pills above the slide, links inside the text; all open in a new tab */
+.refs{position:absolute;top:.9U;right:3.92U;z-index:4;display:flex;gap:.8U;justify-content:flex-end;max-width:92U}
+.refs.left{right:auto;left:3.92U}
+.refs.bottom{top:auto;bottom:2U;right:9U}
+a.ref{display:inline-flex;align-items:center;gap:.6U;height:2.3U;padding:0 1.2U;border:.12U solid var(--green);border-radius:1.15U;
+  background:#fff;color:var(--green);font-size:var(--s-small);line-height:1;text-decoration:none;white-space:nowrap}
+a.ref b{font-weight:600}
+a.ref .lab{max-width:34U;overflow:hidden;text-overflow:ellipsis}
+a.ref:hover,a.ref:focus-visible{background:var(--green);color:#fff}
+a.ref svg{width:1.1U;height:1.1U;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+a.il,.copy a.il{color:var(--green)!important;text-decoration:underline;text-decoration-thickness:.1U;text-underline-offset:.25U}
+a.il:hover{background:var(--green);color:#fff!important}
+.cv a.il{color:inherit!important;text-decoration:none}
+.cv a.il:hover{background:rgba(0,128,47,.18);color:inherit!important}
+.cv a.il span{text-decoration:underline;text-decoration-thickness:.1U;text-underline-offset:.25U}
+.cv a.il span:not([style*='color']){color:var(--green)}
+.rows a.bar{text-decoration:underline;text-underline-offset:.3U;cursor:pointer}
+.rows a.bar:hover{filter:brightness(1.15)}
+
 /* the controls: a pill that floats under the slide, as in the FuSo decks, in HSG green */
 .controls{position:fixed;left:0;right:0;bottom:0;height:var(--ctl);display:grid;place-items:center;z-index:7;pointer-events:none;
   color:#111;font-family:system-ui,sans-serif;font-size:13px;font-weight:600}
@@ -283,7 +313,7 @@ h1{font-size:var(--s-h1);font-weight:300;line-height:1.08;letter-spacing:-.01em;
   display:flex;align-items:center;justify-content:center;gap:7px;white-space:nowrap}
 .controls [hidden]{display:none}
 .controls svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;flex:none}
-.controls button:hover,body.show-notes #notesBtn,body:has(.overview.open) #ovBtn{background:#f0f0f0}
+.controls button:hover,body.show-notes #notesBtn,body:has(.overview.open) #ovBtn,body.auto #autoBtn{background:#f0f0f0}
 .controls button:focus-visible{outline:2px solid #00802F;outline-offset:2px}
 .controls .nav button{width:32px;height:32px;padding:0;background:#00802F;color:#fff}
 .controls .nav button:not(:disabled):hover{background:#0A5F2D}
@@ -291,6 +321,7 @@ h1{font-size:var(--s-h1);font-weight:300;line-height:1.08;letter-spacing:-.01em;
 .nav svg{stroke-width:2.25}
 .count{min-width:60px;text-align:center;font-variant-numeric:tabular-nums}
 :root:not(:fullscreen) .fs-on,:root:fullscreen .fs-off{display:none}
+body:not(.auto) .auto-on,body.auto .auto-off{display:none}
 .progress{position:fixed;left:0;right:0;bottom:0;height:3px;background:#ddd}
 .progress span{display:block;height:100%;width:0;background:#00802F;transition:width .3s}
 :root:fullscreen{--bar:0px}
@@ -315,6 +346,7 @@ body.show-notes .notes-view{display:block}
 /* windows narrower than 1000px: still one slide at a time, but the slide fills the window and its content
    reflows into one column; a slide taller than the window scrolls within itself */
 @media (max-width:999px),(max-height:480px){
+  .tiles3{grid-template-columns:1fr}.odots,.emojis{display:none}
   :root{--u:8px;--s-h1:34px;--s-h2:25px;--s-kick:17px;--s-body:17px;--s-mid:16px;--s-sub:15px;--s-small:14px;--s-tiny:12px}
   body{background:#fff}
   .slide{left:0;top:0;width:100%;height:calc(100% - var(--bar));transform:none;overflow-y:auto}
@@ -324,6 +356,7 @@ body.show-notes .notes-view{display:block}
   .lead{margin-top:16px}
   .main{display:block;padding:22px 0 0}
   .split,.split.wide,.task,.qbody,.quiz,.gallery,.people,.l-questions .split{grid-template-columns:1fr;gap:24px}
+  .split>*{min-width:0}
   .quiz .box,.quiz .box:nth-child(even){justify-self:stretch;max-width:none}
   .after,.l-questions .after{padding-left:0}
   .defs{grid-template-columns:1fr;gap:2px}.defs dd{padding-left:22px;margin-bottom:8px}
@@ -358,8 +391,10 @@ body.show-notes .notes-view{display:block}
   .l-section .wedge{width:auto;height:90px;margin-top:40px}
   .source,.dfoot{position:static;display:block;margin-top:24px}
   .pn{position:absolute;top:auto;bottom:16px;right:16px;width:30px;height:33px;font-size:12px}
+  .refs{position:static;flex-wrap:wrap;justify-content:flex-start;margin:0 0 14px;max-width:none}
+  a.ref{height:auto;min-height:30px;padding:6px 12px;white-space:normal;line-height:1.2;border-radius:16px}
   .cv{position:relative;inset:auto;width:100vw;height:56.25vw;margin:30px -20px 0;--u:1vw;overflow:hidden}
-  .cv .off{visibility:visible}
+  .slide.active .cv .off{visibility:visible}
   .pill{width:100%;height:100%;padding:3px 10px 0;border-radius:0;border:0;box-shadow:none;justify-content:space-between}
   .pill .sep{display:none}
   .tools button{flex-direction:column;gap:3px;height:48px;min-width:56px;padding:0 6px;border-radius:10px;font-size:10.5px}
@@ -374,6 +409,7 @@ body.show-notes .notes-view{display:block}
   body{overflow:visible;background:#fff}
   .slide{position:relative;left:auto;top:auto;transform:none;visibility:visible;height:7.5in;width:100%;break-after:page}
   .controls,.overview,.notes-view{display:none!important}
+  a.ref{border-color:#00802F}
   .cv .off{visibility:visible}
   *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
 }
@@ -383,7 +419,7 @@ JS = r"""
 (()=>{const slides=[...document.querySelectorAll('.slide')],root=document.documentElement,body=document.body,
  ov=document.getElementById('overview'),nv=document.getElementById('notesView');
 const by=id=>document.getElementById(id);
-let cur=0,step=0;const m=location.hash.match(/(\d+)$/);if(m&&+m[1]>=1&&+m[1]<=slides.length)cur=+m[1]-1;
+let cur=0,step=0,arrived=false;{const h=location.hash.replace(/^#\/?/,'');if(/^\d+$/.test(h)){if(+h>=1&&+h<=slides.length){cur=+h-1;arrived=true}}else if(h){const i=slides.findIndex(s=>s.dataset.id===decodeURIComponent(h));if(i>=0){cur=i;arrived=true}}}
 const maxStep=()=>+slides[cur].dataset.steps||0,stepping=()=>!matchMedia('(max-width:999px),(max-height:480px)').matches;
 // PowerPoint effects (data-an, see pptx_canvas.py): stepping forward plays the effects of the new step with their
 // delays and durations; going back or jumping shows the end state of the step at once. A motion path is a list of
@@ -404,7 +440,11 @@ function show(play){play=play&&stepping();
    else if(f.k==='rot'){e.animate({rotate:[r+'deg',(r+f.by)+'deg']},{...o,fill:'forwards'});r+=f.by}
    else if(f.k==='cmd'){const v=e.querySelector('video'),y=e.querySelector('.yt');if(v||y)e.animate([],{duration:f.d}).onfinish=()=>
      y?f.c!=='pause'&&y.click():f.c==='pause'?v.pause():f.c==='toggle'&&!v.paused?v.pause():v.play()}}});
- by('prev').disabled=cur===0&&step===0;by('next').disabled=cur===slides.length-1&&step>=maxStep()}
+ by('prev').disabled=cur===0&&step===0;by('next').disabled=cur===slides.length-1&&step>=maxStep();tick()}
+// auto-advance (decks with "autoadvance"): every N seconds the next step or slide, after the last slide the first again
+const ab=by('autoBtn');let timer;
+function tick(){clearTimeout(timer);if(ab&&body.classList.contains('auto'))timer=setTimeout(()=>cur===slides.length-1&&step>=maxStep()?go(0):next(),ab.dataset.sec*1000)}
+const auto=()=>{if(ab){body.classList.toggle('auto');tick()}};if(ab)ab.onclick=auto;
 // the transition into a slide, when stepping forward to it: fade (the slide fades in over the last one) or Morph
 // (objects with the same picture or text move and resize from their place on the last slide; the rest crossfades)
 function transition(o,s){const t=JSON.parse(s.dataset.tr||'null');if(!t||o===s)return;
@@ -428,7 +468,7 @@ function go(n,end){const old=slides[cur],fw=!end&&n===cur+1&&stepping();document
  by('count').textContent=(cur+1)+' / '+slides.length;
  by('progress').style.width=((cur+1)/slides.length*100)+'%';
  const t=slides[cur].querySelector('.notes');nv.textContent=t?t.textContent:'';
- history.replaceState(null,'','#/'+(cur+1));ov.classList.remove('open');show(!end);fitCanvas(slides[cur]);if(fw)transition(old,slides[cur]);
+ history.replaceState(null,'','#/'+(slides[cur].dataset.id||cur+1));ov.classList.remove('open');show(!end);fitCanvas(slides[cur]);if(fw)transition(old,slides[cur]);
 }
 const next=()=>{if(stepping()&&step<maxStep()){step++;show(true)}else go(cur+1)},prev=()=>{if(stepping()&&step>0){step--;show()}else go(cur-1,true)};
 by('prev').onclick=prev;by('next').onclick=next;
@@ -451,10 +491,20 @@ document.addEventListener('keydown',e=>{if(e.ctrlKey||e.metaKey||e.altKey)return
  else if(['ArrowLeft','PageUp'].includes(k)){e.preventDefault();prev()}
  else if(k==='Home')go(0);else if(k==='End')go(slides.length-1);
  else if(k==='o'||k==='O')ov.classList.toggle('open');else if(k==='Escape')ov.classList.remove('open');
- else if(k==='f'||k==='F')by('fsBtn').click();else if(k==='n'||k==='N')notes()});
+ else if(k==='f'||k==='F')by('fsBtn').click();else if(k==='n'||k==='N')notes();else if(k==='a'||k==='A')auto()});
 let x0=null;document.addEventListener('touchstart',e=>{x0=e.touches[0].clientX},{passive:true});
 document.addEventListener('touchend',e=>{if(x0===null)return;const d=e.changedTouches[0].clientX-x0;x0=null;
  if(Math.abs(d)>60)(d<0?next():prev())},{passive:true});
+function place(){if(matchMedia('(max-width:999px),(max-height:480px)').matches)return;
+ const boxes=s=>{const out=[];s.querySelectorAll('.frame img,.cv img,.cv table,.cv svg path,.frame .box,.frame li,.frame td,.cv .tx p,.frame p,.frame h2').forEach(el=>{
+  if(el.closest('.refs')||el.matches('.dfoot,.source,.pn')||el.closest('.pn'))return;
+  if(el.matches('svg path')&&el.getAttribute('fill')==='none')return;
+  let r;if(el.matches('p,li,h2,td')){const g=document.createRange();g.selectNodeContents(el);r=g.getBoundingClientRect()}else if(el.matches('.pimg img')){r=el.parentElement.getBoundingClientRect()}else r=el.getBoundingClientRect();
+  if(r.width>1&&r.height>1)out.push(r)});return out};
+ slides.forEach(s=>{const rf=s.querySelector('.refs');if(!rf)return;const prevVis=s.style.visibility;s.style.visibility='hidden';const bx=boxes(s);
+  for(const c of ['','left','bottom']){rf.classList.remove('left','bottom');if(c)rf.classList.add(c);const q=rf.getBoundingClientRect();
+   if(!bx.some(r=>r.right>q.left&&r.left<q.right&&r.bottom>q.top&&r.top<q.bottom))break}
+  s.style.visibility=prevVis})}
 // canvas text that runs out of its box (Gill Sans Regular is wider than the Light of many source decks) shrinks until it
 // fits, as with PowerPoint's "shrink text on overflow", by at most 14%; if that is not enough it overflowed in PowerPoint too
 let fontsOk=false;
@@ -465,7 +515,7 @@ function fitCanvas(s){const cv=s.querySelector('.cv');if(!fontsOk||!cv||!cv.clie
   if(leaves(t))t.style.removeProperty('--f')}}
 Promise.all([...document.fonts].filter(f=>f.family.replace(/"/g,'')==='HSGSans').map(f=>f.load().catch(()=>0)))
  .then(()=>document.fonts.ready).then(()=>{fontsOk=true;slides.forEach(fitCanvas);root.dataset.fit=1});
-window.hsgDeck={go,next,prev,count:slides.length};go(cur)})();
+window.hsgDeck={go,next,prev,count:slides.length,place};(document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve()).then(place);go(cur,arrived)})();
 """
 
 # the slide number tab of the template (master freeform, 2.33U x 2.56U)
@@ -502,6 +552,57 @@ def _round(w, h, r):
     r = min(r, w / 2, h / 2)
     return (f"M{_f(r)} 0H{_f(w - r)}A{_f(r)} {_f(r)} 0 0 1 {_f(w)} {_f(r)}V{_f(h - r)}A{_f(r)} {_f(r)} 0 0 1 {_f(w - r)} {_f(h)}"
             f"H{_f(r)}A{_f(r)} {_f(r)} 0 0 1 0 {_f(h - r)}V{_f(r)}A{_f(r)} {_f(r)} 0 0 1 {_f(r)} 0Z")
+
+
+def _curved_right_arrow(w, h, adj1, adj2, adj3):
+    """The curvedRightArrow preset of OOXML (presetShapeDefinitions.xml): the arrow body and its back part."""
+    ss = min(w, h)
+    a2 = min(max(adj2, 0), .5 * h / ss)
+    a1 = min(max(adj1, 0), a2)
+    th, aw = ss * a1, ss * a2
+    hR = h / 2 - (th + aw) / 4
+    q7 = hR * 2
+    idx = math.sqrt(max(q7 * q7 - th * th, 0)) * w / q7
+    ah = ss * min(max(adj3, 0), idx / ss)
+    dy = math.sqrt(max(w * w - ah * ah, 0)) * hR / w
+    y3, y5 = hR + th, hR + dy
+    y7 = y3 + dy
+    dh = (aw - th) / 2
+    y4, y8, y6, x1 = y5 - dh, y7 + dh, h - aw / 2, w - ah
+    sw = math.atan2(dy, ah)
+    dang2 = math.atan2(th / 2, idx)
+    pts, cur = [], [0.0, 0.0]
+
+    def move(x, y):
+        pts.append(f"M{_f(x)} {_f(y)}")
+        cur[:] = [x, y]
+
+    def line(x, y):
+        pts.append(f"L{_f(x)} {_f(y)}")
+        cur[:] = [x, y]
+
+    def arc(st, swa):
+        # OOXML arcTo: the current point lies on the ellipse (w, hR) at the visual angle st
+        def par(a):
+            return math.atan2(w * math.sin(a), hR * math.cos(a))
+        t0 = par(st)
+        cx, cy = cur[0] - w * math.cos(t0), cur[1] - hR * math.sin(t0)
+        for k in range(1, 25):
+            t = par(st + swa * k / 24)
+            line(cx + w * math.cos(t), cy + hR * math.sin(t))
+
+    pi = math.pi
+    move(0, hR)
+    arc(pi, -sw)
+    line(x1, y4); line(w, y6); line(x1, y8); line(x1, y7)
+    arc(pi - sw, sw)
+    pts.append("Z")
+    move(0, hR)
+    arc(pi, pi / 2)
+    line(w, th)
+    arc(1.5 * pi, dang2 - pi / 2)
+    pts.append("Z")
+    return "".join(pts)
 
 
 def _callout(w, h, adj, circles):
@@ -548,8 +649,7 @@ def shape_paths(g, w, h, adj):
             return [_poly([(x0, 0), (x1, 0), (x1, h - hl), (w, h - hl), (w / 2, h), (0, h - hl), (x0, h - hl)])]
         return [_poly([(x0, h), (x1, h), (x1, hl), (w, hl), (w / 2, 0), (0, hl), (x0, hl)])]
     if g == "curvedRightArrow":
-        return [f"M0 0C{_f(w * .5)} 0 {_f(w * .6)} {_f(h * .2)} {_f(w * .6)} {_f(h * .5)}V{_f(h)}H{_f(w)}L{_f(w * .8)} {_f(h * .75)}"
-                f"L{_f(w * .6)} {_f(h)}"]
+        return [_curved_right_arrow(w, h, A("adj1", 25000), A("adj2", 50000), A("adj3", 25000))]
     if g in ("wedgeEllipseCallout", "cloudCallout"):
         return [_callout(w, h, adj, g == "cloudCallout")]
     if g in ("wedgeRectCallout", "wedgeRoundRectCallout"):
@@ -623,18 +723,34 @@ class Html:
             self.files[src] = name
         return "assets/" + self.files[src]
 
+    def ref_url(self, to):
+        """The address of another slide, relative to this page (decks live in sibling folders)."""
+        folder, sid, _, _ = hd.resolve(to, self.base)
+        return f"../../{folder}/html/index.html#/{sid}"
+
+    def ref_chip(self, r):
+        folder, sid, tslide, tdeck = hd.resolve(r["to"], self.base)
+        kind = r.get("kind", "see")
+        word = {"recap": "Recap", "next": "Pointer", "see": "See also"}[kind]
+        where = tdeck.get("ref_label") or plain(tdeck["title"])
+        title = r.get("label") or plain(tslide["title"]).replace("\n", " ")
+        ext = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>'
+        return (f'<a class="ref" href="{self.ref_url(r["to"])}" target="_blank" rel="noopener" title="{esc(where)}: {esc(title)} (opens in a new tab)">'
+                f'<b>{word}</b><span class="lab">{esc(where)}: {esc(title)}</span>{ext}</a>')
+
     @staticmethod
     def htitle(text):
         """Escape a headline and apply its one inline mark, **bold**; a line break is written as \\n."""
         return re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", esc(text)).replace("\n", "<br>")
 
-    @staticmethod
-    def mark(text):
-        """Escape a text and apply the inline marks: **bold**, *italic*, `code`, ==marker==, x_{2}, 2^{n}, [link](url)."""
+    def mark(self, text):
+        """Escape a text and apply the inline marks: **bold**, *italic*, `code`, ==marker==, x_{2}, 2^{n}, [link](url),
+        [link](08#slide-id) for another slide (opens in a new tab)."""
         t = esc(text)
         codes = []
         t = re.sub(r"`([^`]+)`", lambda m: codes.append(m.group(1)) or f"\x00{len(codes) - 1}\x00", t)
         t = re.sub(r"\[([^\]]+)\]\((https?://[^)\s]+)\)", r'<a href="\2" target="_blank" rel="noopener">\1</a>', t)
+        t = hd.INLINE_REF.sub(lambda m: f'<a class="il" href="{self.ref_url(m.group(2))}" target="_blank" rel="noopener" title="Opens in a new tab">{m.group(1)}</a>', t)
         t = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", t)
         t = re.sub(r"(?<![\w*])\*([^*\s][^*]*)\*", r"<em>\1</em>", t)
         t = re.sub(r"==([^=]+)==", r"<mark>\1</mark>", t)
@@ -747,7 +863,11 @@ class Html:
 
     def l_text(self, s):
         dense = self.density(s.get("paragraphs"), s.get("points"), s.get("groups"), s.get("defs"))
-        copy = self.text_copy(s)
+        copy = self.text_copy(s) if any(s.get(k) for k in ("paragraphs", "points", "defs", "groups")) else ""
+        if s.get("tiles"):
+            copy += '<div class="tiles3">' + "".join(
+                f'<div class="tile"><span class="ticon{" dot" if t["icon"] == "dot" else ""}" aria-hidden="true">'
+                f'{"" if t["icon"] == "dot" else esc(t["icon"])}</span><p>{self.mark(t["text"])}</p></div>' for t in s["tiles"]) + "</div>"
         if s.get("aside"):
             wide = " wide" if s["aside"].get("code") else ""
             copy = f'<div class="split{wide}">{copy}{self.aside(s["aside"])}</div>'
@@ -801,7 +921,8 @@ class Html:
     def l_gallery(self, s):
         pics = "".join(self.picture(it) for it in s["items"])
         after = f'<p class="after" style="padding-left:0">{self.mark(s["after"])}</p>' if s.get("after") else ""
-        return self.main(s, f'<div class="gallery" style="--n:{len(s["items"])}">{pics}</div>{after}')
+        qr = " qr" if s.get("style") == "qr" else ""
+        return self.main(s, f'<div class="gallery{qr}" style="--n:{len(s["items"])}">{pics}</div>{after}')
 
     def l_people(self, s):
         out = ""
@@ -825,7 +946,11 @@ class Html:
         rows = ""
         for i, it in enumerate(s["items"], 1):
             cls = " cur" if i in cur else " ex" if it.get("kind") == "exercise" else ""
-            rows += f'<span class="date">{esc(it["date"])}</span><div class="bar{cls}">{esc(it["title"])}</div>'
+            if it.get("href"):
+                rows += (f'<span class="date">{esc(it["date"])}</span><a class="bar{cls}" href="{self.ref_url(it["href"])}" target="_blank" '
+                         f'rel="noopener" title="Open the slides of this session in a new tab">{esc(it["title"])}</a>')
+            else:
+                rows += f'<span class="date">{esc(it["date"])}</span><div class="bar{cls}">{esc(it["title"])}</div>'
             if s.get("break_after") == i:
                 rows += '<span></span><div class="brk" aria-label="Break"></div>'
         legend = '<div class="legend"><span class="lg-l">Lecture</span><span class="lg-e">Exercise</span><span class="lg-a">Assignment</span></div>'
@@ -893,9 +1018,12 @@ class Html:
                 c = f' class="{r["f"]}"' if r.get("f") else ""
                 body = esc(r["t"])
                 body = f"<b>{body}</b>" if r.get("b") else body
+                span = f'<span{c} style="{rs}">{body}</span>'
                 if r.get("href"):
-                    body = f'<a href="{esc(r["href"])}" target="_blank" rel="noopener" style="color:inherit;text-decoration:inherit">{body}</a>'
-                runs += f'<span{c} style="{rs}">{body}</span>'
+                    h = r["href"]
+                    url = h if h.startswith(("http://", "https://")) else self.ref_url(h)
+                    span = f'<a class="il" href="{esc(url)}" target="_blank" rel="noopener" title="Opens in a new tab">{span}</a>'
+                runs += span
             first = max((r.get("sz", 1.9) for r in p["r"] if "sz" in r), default=1.9)
             ds = f' data-s="{p["s"]}"' if p.get("s") else ""
             out += f'<p{ds} style="{st};font-size:calc({first}*var(--u)*var(--f,1))">{runs}</p>'
@@ -950,9 +1078,13 @@ class Html:
             st += f';transform:scale({-1 if it.get("fx") else 1},{-1 if it.get("fy") else 1})'
         if it.get("video"):
             src = (self.base / it["video"]).resolve()
-            if src.exists():
-                (self.out / "media").mkdir(exist_ok=True)
-                shutil.copyfile(src, self.out / "media" / src.name)
+            served = self.out / "media" / src.name      # the copy already published with the deck
+            if not src.exists() and not served.exists():
+                print(f"WARNING: video {it['video']} not found (neither {src} nor {served}); showing its poster only", file=sys.stderr)
+            if src.exists() or served.exists():
+                if src.exists() and src != served.resolve():
+                    (self.out / "media").mkdir(exist_ok=True)
+                    shutil.copyfile(src, served)
                 typ = {"mov": "video/quicktime", "mp4": "video/mp4", "webm": "video/webm"}.get(src.suffix[1:].lower(), "video/mp4")
                 return (f'<div class="it{cls}" style="{self.cv_pos(it)}"{self.cv_attrs(it)}><div class="pimg">'
                         f'<video controls preload="none" poster="{self.asset(it["src"])}" aria-label="{esc(it.get("alt", ""))}">'
@@ -1011,6 +1143,12 @@ class Html:
         for n, s in enumerate(d["slides"], 1):
             lay = s["layout"]
             inner = getattr(self, "l_" + lay)(s)
+            if s.get("decor"):
+                dots = "".join(f'<i style="left:{it["x"]}%;top:{it["y"]}%;--d:{it["size"]}"></i>' for it in s["decor"] if not it.get("emoji"))
+                emo = "".join(f'<span style="left:{it["x"]}%;top:{it["y"]}%;font-size:calc({it["size"]}*var(--u));transform:rotate({it.get("rot", 0)}deg)">'
+                              f'{esc(it["emoji"])}</span>' for it in s["decor"] if it.get("emoji"))
+                inner = ((f'<div class="odots" aria-hidden="true">{dots}</div>' if dots else "")
+                         + (f'<div class="emojis" aria-hidden="true">{emo}</div>' if emo else "") + inner)
             extra = ""
             if lay not in ("title", "section"):
                 if s.get("source"):
@@ -1018,6 +1156,10 @@ class Html:
                 if d.get("footer"):
                     extra += f'<p class="dfoot">{esc(d["footer"])}</p>'
                 extra += f'<span class="pn" aria-hidden="true">{TAB}{n}</span>'
+            if s.get("refs"):
+                pos = " bottom" if s.get("refs_at") == "bottom" else ""
+                extra += (f'<nav class="refs{pos}" aria-label="Related slides, they open in a new tab">'
+                          + "".join(self.ref_chip(r) for r in s["refs"]) + "</nav>")
             notes = f'<template class="notes">{esc(s["notes"])}</template>' if s.get("notes") else ""
             t = f' data-time="{esc(str(s["time"]))}"' if s.get("time") else ""
             bare = " bare" if lay == "questions" and not s.get("points") else ""
@@ -1025,7 +1167,7 @@ class Html:
             steps = max([i.get("s", 0) for i in s.get("items", [])] + [p.get("s", 0) for i in s.get("items", [])
                         for p in (i.get("tx") or {}).get("p", [])] + [a["s"] for i in s.get("items", []) for a in i.get("an", [])]
                         + [0]) if lay == "canvas" else 0
-            ds = f' data-steps="{steps}"' if steps else ""
+            ds = (f' data-steps="{steps}"' if steps else "") + (f' data-id="{esc(s["id"])}"' if s.get("id") else "")
             ds += f" data-tr='{esc(json.dumps(s['transition']))}'" if s.get("transition") else ""
             ds += f' style="background:{esc(s["bg"])}"' if s.get("bg") else ""      # background copied from PowerPoint
             sections += (f'<section class="slide l-{lay}{bare}{" active" if n == 1 else ""}" id="s{n}" data-title="{esc(plain(s["title"]) or f"Slide {n}")}"{t}{ds} '
@@ -1039,12 +1181,16 @@ class Html:
         note = '<rect x="4" y="4" width="16" height="16" rx="2.5"/><path d="M8 9h8M8 12.5h8M8 16h4"/>'
         grow, shrink = '<path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/>', '<path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/>'
         notes_btn = f'<button id="notesBtn" title="Speaker notes (N)">{ico(note)}Notes</button>' if any(s.get("notes") for s in d["slides"]) else ""
+        play, pause = '<path d="M8 5l11 7-11 7z"/>', '<path d="M8 5v14M16 5v14"/>'
+        sec = d.get("autoadvance")
+        auto_btn = (f'<button id="autoBtn" data-sec="{sec}" title="Advance every {sec:g} seconds (A)">{ico(play, "auto-off")}'
+                    f'{ico(pause, "auto-on")}Auto</button>') if sec else ""
         ctl = ('<div class="controls" role="navigation" aria-label="Presentation controls"><div class="pill"><div class="nav">'
                f'<button id="prev" title="Previous slide (←)" aria-label="Previous slide">{ico(back)}</button>'
                f'<span class="count" id="count">1 / {n_all}</span>'
                f'<button id="next" title="Next slide (→)" aria-label="Next slide">{ico(fwd)}</button>'
                '</div><i class="sep"></i><div class="tools">'
-               f'<button id="ovBtn" title="All slides (O)">{ico(sq)}Overview</button>{notes_btn}'
+               f'<button id="ovBtn" title="All slides (O)">{ico(sq)}Overview</button>{notes_btn}{auto_btn}'
                f'<button id="fsBtn" title="Full screen (F)">{ico(grow, "fs-off")}<span class="fs-off">Full screen</span>'
                f'{ico(shrink, "fs-on")}<span class="fs-on">Exit</span></button></div></div>'
                '<div class="progress" aria-label="Slide progress"><span id="progress"></span></div></div>')
@@ -1095,6 +1241,12 @@ OVERFLOW_JS = """() => {
   if(src){const q=src.getBoundingClientRect();
     for(const el of f.querySelectorAll('.main>*')){const r=el.getBoundingClientRect();
       if(r.bottom>q.top+1&&r.left<q.right){bad.push('the content runs into the source line');break}}}
+  const rf=s.querySelector('.refs');
+  if(rf&&!matchMedia('(max-width:999px)').matches){const q=rf.getBoundingClientRect();
+    for(const el of s.querySelectorAll('.cv .tx p,.cv img,.cv svg path,.cv table,.frame p:not(.dfoot):not(.source),.frame img,.frame li,.frame .box')){
+      if(rf.contains(el))continue;let r;if(el.matches('p,li')){const g=document.createRange();g.selectNodeContents(el);r=g.getBoundingClientRect()}else if(el.matches('.pimg img'))r=el.parentElement.getBoundingClientRect();else r=el.getBoundingClientRect();if(!r.width||!r.height)continue;
+      if(el.matches('svg path')&&(el.getAttribute('fill')==='none'))continue;
+      if(r.right>q.left&&r.left<q.right&&r.bottom>q.top&&r.top<q.bottom){bad.push('the reference links cover content (set refs_at to bottom or move the link)');break}}}
   const m=f.querySelector('.main');
   if(m&&m.children.length&&!s.matches('.l-menu,.l-task,.bare')){const top=m.getBoundingClientRect().top+parseFloat(getComputedStyle(m).paddingTop);
     let lo=Infinity,hi=0;for(const c of m.children){const r=c.getBoundingClientRect();lo=Math.min(lo,r.top);hi=Math.max(hi,r.bottom)}

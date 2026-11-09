@@ -29,14 +29,15 @@ SALMON, TEAL, SAND, YELLOW = "#EB6969", "#73A5AF", "#E1D7C3", "#FFF04B"
 ROW_A, ROW_B = "#CBD8CD", "#E7EDE8"   # table rows: green at 20% and 10% on white
 BOX_STYLES = ("green", "outline", "teal")
 
-COMMON = {"layout", "title", "lead", "callout", "source", "notes", "time", "transition"}   # transition: copied from PowerPoint
+COMMON = {"layout", "title", "lead", "callout", "source", "notes", "time", "id", "refs", "refs_at", "decor",
+          "transition"}   # transition: copied from PowerPoint
 NO_LEAD = {"title", "section", "task", "quote"}
 # layout: (required fields, optional fields)
 LAYOUTS = {
     "title":     ({"title"}, {"kicker", "presenters", "meta", "picture", "style"}),
     "section":   ({"title"}, {"kicker"}),
     "menu":      ({"title", "items"}, {"current"}),
-    "text":      ({"title"}, {"paragraphs", "points", "defs", "groups", "after", "aside"}),
+    "text":      ({"title"}, {"paragraphs", "points", "defs", "groups", "tiles", "after", "aside"}),
     "study":     ({"title", "groups"}, {"aside"}),
     "questions": ({"title"}, {"heading", "points", "after"}),
     "table":     ({"title", "columns", "rows"}, {"after"}),
@@ -44,7 +45,7 @@ LAYOUTS = {
     "quiz":      ({"title", "items"}, {"aside"}),
     "task":      ({"title", "stamp"}, {"paragraphs", "url", "label"}),
     "image":     ({"title", "image", "alt"}, {"caption", "shadow"}),
-    "gallery":   ({"title", "items"}, {"after"}),
+    "gallery":   ({"title", "items"}, {"after", "style"}),
     "people":    ({"title", "items"}, set()),
     "quote":     ({"title"}, {"attribution", "picture", "points"}),
     "syllabus":  ({"title", "items"}, {"current", "break_after", "assignments"}),
@@ -53,7 +54,7 @@ LAYOUTS = {
 ITEM_KEYS = {
     "gallery":  ({"image", "alt"}, {"caption", "shadow"}),
     "people":   ({"name"}, {"photo", "alt", "role"}),
-    "syllabus": ({"date", "title"}, {"kind"}),
+    "syllabus": ({"date", "title"}, {"kind", "href"}),
 }
 ITEM_COUNT = {"gallery": (2, 4), "people": (1, 9), "quiz": (2, 5), "menu": (2, 8), "syllabus": (2, 14)}
 PICTURE_KEYS = ({"image", "alt"}, {"caption", "shadow"})
@@ -65,6 +66,43 @@ WORD_CAP = {"text": 90, "study": 110, "questions": 80, "table": 140, "code": 120
 
 class DeckError(Exception):
     pass
+
+
+REF_KINDS = ("recap", "next", "see")
+INLINE_REF = re.compile(r"\[([^\]]+)\]\(([\w.-]+#[\w-]+)\)")      # [text](08#slide-id), see SKILL.md
+
+
+def deck_folders(base):
+    """The decks next to this one: folder name -> deck.json path (a deck folder holds deck.json)."""
+    return {p.parent.name: p for p in sorted(base.parent.glob("*/deck.json"))}
+
+
+_cache = {}
+
+
+def load_deck(path):
+    path = Path(path)
+    if path not in _cache or _cache[path][0] != path.stat().st_mtime:
+        _cache[path] = (path.stat().st_mtime, json.loads(path.read_text(encoding="utf-8")))
+    return _cache[path][1]
+
+
+def resolve(to, base):
+    """Resolve "07b#uniform-interface" (deck folder name or its prefix, # slide id) for a deck in folder base.
+    Returns (folder name, slide id, target slide, target deck) or raises DeckError."""
+    m = re.fullmatch(r"([\w.-]+)#([\w-]+)", to or "")
+    if not m:
+        raise DeckError(f"'{to}' is not a reference like 08-interaction-styles#slide-id")
+    key, sid = m.groups()
+    folders = deck_folders(base)
+    hits = [n for n in folders if n == key or n.startswith(key)]
+    if len(hits) != 1:
+        raise DeckError(f"'{to}': deck '{key}' not found next to this deck" if not hits else f"'{to}': deck '{key}' is ambiguous ({', '.join(hits)})")
+    deck = load_deck(folders[hits[0]])
+    for s in deck["slides"]:
+        if s.get("id") == sid:
+            return hits[0], sid, s, deck
+    raise DeckError(f"'{to}': deck {hits[0]} has no slide with id '{sid}'")
 
 
 def _keys(obj, required, optional, where, errors):
@@ -87,7 +125,8 @@ def words(s):
     if isinstance(s, dict):
         return " ".join(words(v) for k, v in s.items()
                         if k not in ("layout", "notes", "image", "photo", "alt", "url", "time", "style", "code",
-                                     "shadow", "kind", "current", "break_after", "from", "to"))
+                                     "shadow", "kind", "current", "break_after", "from", "to", "id", "refs", "refs_at", "href",
+                                     "decor", "icon"))
     return ""
 
 
@@ -99,8 +138,11 @@ def points_of(pts):
 def check(deck, base):
     """Return (errors, warnings). Errors stop the render; warnings are design and structure tells to fix or justify."""
     errors, warnings = [], []
-    if not _keys(deck, {"title", "slides"}, {"lang", "footer", "theme"}, "deck", errors):
+    if not _keys(deck, {"title", "slides"}, {"lang", "footer", "theme", "ref_label", "autoadvance"}, "deck", errors):
         return errors, warnings
+    if "autoadvance" in deck and not (isinstance(deck["autoadvance"], (int, float)) and not isinstance(deck["autoadvance"], bool)
+                                      and deck["autoadvance"] > 0):
+        errors.append("deck: 'autoadvance' must be a number of seconds greater than 0")
     if "theme" in deck and not (isinstance(deck["theme"], str) and (base / deck["theme"]).is_file()):
         errors.append(f"deck: theme file not found: {deck['theme']}")
     slides = deck.get("slides") or []
@@ -149,6 +191,14 @@ def check(deck, base):
             warnings.append(f"{where}: a code line has more than 64 characters; it will be set smaller or wrap")
 
     run = None
+    ids = {}
+
+    def need_ref(to, where):
+        try:
+            resolve(to, base)
+        except DeckError as e:
+            errors.append(f"{where}: {e}")
+
     for n, s in enumerate(slides, 1):
         w = f"slide {n}"
         lay = s.get("layout") if isinstance(s, dict) else None
@@ -157,11 +207,52 @@ def check(deck, base):
             continue
         req, opt = LAYOUTS[lay]
         _keys(s, req | {"layout"}, opt | COMMON, w, errors)
+        num = lambda v: isinstance(v, (int, float)) and not isinstance(v, bool)
+        for i, it in enumerate(s.get("decor", []) if isinstance(s.get("decor", []), list) else [None], 1):
+            if _keys(it, {"x", "y", "size"}, {"emoji", "rot"}, f"{w}, decor {i}", errors) and not all(
+                    num(it[k]) for k in ("x", "y", "size") if k in it):
+                errors.append(f"{w}, decor {i}: 'x', 'y' (percent of the slide) and 'size' (U) are numbers")
+        if lay == "gallery" and s.get("style", "photos") not in ("photos", "qr"):
+            errors.append(f"{w}: gallery 'style' must be photos or qr")
         if lay in NO_LEAD and "lead" in s:
             errors.append(f"{w}: '{lay}' has no 'lead'")
         if lay in ("title", "section") and "callout" in s:
             errors.append(f"{w}: '{lay}' has no 'callout'")
         title = s.get("title", "")
+        if "id" in s:
+            if not re.fullmatch(r"[a-z0-9][a-z0-9-]*", str(s["id"])):
+                errors.append(f"{w}: 'id' must be lowercase letters, digits and hyphens")
+            elif s["id"] in ids:
+                errors.append(f"{w}: 'id' {s['id']} is already used by slide {ids[s['id']]}")
+            ids[s["id"]] = n
+        if "refs" in s:
+            refs = s["refs"]
+            if not isinstance(refs, list) or len(refs) > 2:
+                errors.append(f"{w}: 'refs' is a list of at most 2 references (more do not fit above the slide)")
+            else:
+                for i, r in enumerate(refs, 1):
+                    if _keys(r, {"to"}, {"kind", "label"}, f"{w}, ref {i}", errors):
+                        if r.get("kind", "see") not in REF_KINDS:
+                            errors.append(f"{w}, ref {i}: 'kind' must be one of {', '.join(REF_KINDS)}")
+                        try:
+                            _, _, tslide, _ = resolve(r["to"], base)
+                            if not r.get("label") and not str(tslide.get("title", "")).strip():
+                                errors.append(f"{w}, ref {i}: the target slide has no title; give the reference a 'label'")
+                        except DeckError as e:
+                            errors.append(f"{w}, ref {i}: {e}")
+        for m_ in INLINE_REF.finditer(words(s)):
+            need_ref(m_.group(2), f"{w}, link [{m_.group(1)}]")
+        if lay == "syllabus":
+            for i, it in enumerate(s.get("items", []), 1):
+                if isinstance(it, dict) and it.get("href"):
+                    need_ref(it["href"], f"{w}, item {i}")
+        if lay == "canvas":
+            for i, it in enumerate(s.get("items", []), 1):
+                for p in (it.get("tx") or {}).get("p", []) if isinstance(it, dict) else []:
+                    for r in p.get("r", []):
+                        h = r.get("href")
+                        if h and not str(h).startswith(("http://", "https://")):
+                            need_ref(h, f"{w}, item {i}, link '{r.get('t', '')[:30]}'")
         if lay == "canvas":
             for i, it in enumerate(s.get("items", []), 1):
                 if not isinstance(it, dict) or it.get("k") not in ("shape", "pic", "table"):
@@ -234,8 +325,14 @@ def check(deck, base):
                 warnings.append(f"{w}: more than 4 assignments do not fit beside the plan")
 
         if lay in ("text", "study"):
-            if lay == "text" and not any(s.get(k) for k in ("paragraphs", "points", "defs", "groups")):
-                errors.append(f"{w}: 'text' needs 'paragraphs', 'points', 'defs' or 'groups'")
+            if lay == "text" and not any(s.get(k) for k in ("paragraphs", "points", "defs", "groups", "tiles")):
+                errors.append(f"{w}: 'text' needs 'paragraphs', 'points', 'defs', 'groups' or 'tiles'")
+            tiles = s.get("tiles", [])
+            if not isinstance(tiles, list) or len(tiles) not in (0, 3):
+                errors.append(f"{w}: 'tiles' takes exactly 3 tiles")
+            else:
+                for i, t in enumerate(tiles, 1):
+                    _keys(t, {"icon", "text"}, set(), f"{w}, tile {i}", errors)
             need_points(s.get("points"), w)
             for i, g in enumerate(s.get("groups", []), 1):
                 if _keys(g, {"heading"}, {"points", "paragraphs"}, f"{w}, group {i}", errors):

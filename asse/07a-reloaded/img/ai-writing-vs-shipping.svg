@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 620">
+<line x1="90" y1="530.0" x2="1160" y2="530.0" stroke="#d9d9d9" stroke-width="2"/>
+<text x="78" y="539.0" text-anchor="end" font-family="Gill Sans, Gill Sans MT, Calibri, Arial, sans-serif" font-size="26" fill="#5a5a5a">×1</text>
+<line x1="90" y1="428.1" x2="1160" y2="428.1" stroke="#d9d9d9" stroke-width="2"/>
+<text x="78" y="437.1" text-anchor="end" font-family="Gill Sans, Gill Sans MT, Calibri, Arial, sans-serif" font-size="26" fill="#5a5a5a">×2</text>
+<line x1="90" y1="293.4" x2="1160" y2="293.4" stroke="#d9d9d9" stroke-width="2"/>
+<text x="78" y="302.4" text-anchor="end" font-family="Gill Sans, Gill Sans MT, Calibri, Arial, sans-serif" font-size="26" fill="#5a5a5a">×5</text>
+<line x1="90" y1="191.5" x2="1160" y2="191.5" stroke="#d9d9d9" stroke-width="2"/>
+<text x="78" y="200.5" text-anchor="end" font-family="Gill Sans, Gill Sans MT, Calibri, Arial, sans-serif" font-size="26" fill="#5a5a5a">×10</text>
+<line x1="90" y1="89.6" x2="1160" y2="89.6" stroke="#d9d9d9" stroke-width="2"/>
+<text x="78" y="98.6" text-anchor="end" font-family="Gill Sans, Gill Sans MT, Calibri, Arial, sans-serif" font-size="26" fill="#5a5a5a">×20</text>
+<rect x="122.1" y="53.9" width="114.1" height="476.1" fill="#eb6969"/>
+<text x="179.2" y="41.9" text-anchor="middle" font-family="Gill Sans, Gill Sans MT, Calibri, Arial, sans-serif" font-size="30" font-weight="700" fill="#1a1a1a">×25.5</text>
+<text x="179.2" y="568" text-anchor="middle" font-family="Gill Sans, Gill Sans MT, Calibri, Arial, sans-serif" font-size="27" fill="#1a1a1a">Lines of code</text>
+<rect x="300.4" y="293.4" width="114.1" height="236.6" fill="#9a9a9a"/>
+<text x="357.5" y="281.4" text-anchor="middle" font-family="Gill Sans, Gill Sans MT, Calibri, Arial, sans-serif" font-size="30" font-weight="700" fill="#1a1a1a">×5.0</text>
+<text x="357.5" y="568" text-anchor="middle" font-family="Gill Sans, Gill Sans MT, Calibri, Arial, sans-serif" font-size="27" fill="#1a1a1a">Files</text>
+<rect x="478.8" y="350.1" width="114.1" height="179.9" fill="#9a9a9a"/>
+<text x="535.8" y="338.1" text-anchor="middle" font-family="Gill Sans, Gill Sans MT, Calibri, Arial, sans-serif" font-size="30" font-weight="700" fill="#1a1a1a">×3.4</text>
+<text x="535.8" y="568" text-anchor="middle" font-family="Gill Sans, Gill Sans MT, Calibri, Arial, sans-serif" font-size="27" fill="#1a1a1a">Commits</text>
+<rect x="657.1" y="384.0" width="114.1" height="146.0" fill="#9a9a9a"/>
+<text x="714.2" y="372.0" text-anchor="middle" font-family="Gill Sans, Gill Sans MT, Calibri, Arial, sans-serif" font-size="30" font-weight="700" fill="#1a1a1a">×2.7</text>
+<text x="714.2" y="568" text-anchor="middle" font-family="Gill Sans, Gill Sans MT, Calibri, Arial, sans-serif" font-size="27" fill="#1a1a1a">Pull requests</text>
+<rect x="835.4" y="443.6" width="114.1" height="86.4" fill="#9a9a9a"/>
+<text x="892.5" y="431.6" text-anchor="middle" font-family="Gill Sans, Gill Sans MT, Calibri, Arial, sans-serif" font-size="30" font-weight="700" fill="#1a1a1a">×1.8</text>
+<text x="892.5" y="568" text-anchor="middle" font-family="Gill Sans, Gill Sans MT, Calibri, Arial, sans-serif" font-size="27" fill="#1a1a1a">Projects</text>
+<rect x="1013.8" y="491.4" width="114.1" height="38.6" fill="#00802f"/>
+<text x="1070.8" y="479.4" text-anchor="middle" font-family="Gill Sans, Gill Sans MT, Calibri, Arial, sans-serif" font-size="30" font-weight="700" fill="#1a1a1a">×1.3</text>
+<text x="1070.8" y="568" text-anchor="middle" font-family="Gill Sans, Gill Sans MT, Calibri, Arial, sans-serif" font-size="27" fill="#1a1a1a">Releases</text>
+<line x1="90" y1="530.0" x2="1160" y2="530.0" stroke="#1a1a1a" stroke-width="2"/>
+</svg>

@@ -80,7 +80,7 @@ h1{font-weight:800}
 .pill{background:var(--lh-surface);border-color:var(--lh-border);box-shadow:none}
 .controls{color:var(--lh-text)}
 .pill .sep{background:var(--lh-border)}
-.controls button:hover,body.show-notes #notesBtn,body:has(.overview.open) #ovBtn{background:var(--lh-surface2)}
+.controls button:hover,body.show-notes #notesBtn,body:has(.overview.open) #ovBtn,body.auto #autoBtn{background:var(--lh-surface2)}
 .progress{background:var(--lh-border)}
 .progress span{background:var(--lh-green)}
 
@@ -110,7 +110,7 @@ h1{font-weight:800}
 .tile{background:var(--lh-surface);border:.1U solid var(--lh-border);border-radius:1U;padding:2.6U 2.4U;
   font-size:2.1U;line-height:1.35;color:var(--lh-text)}
 .tile strong{color:var(--lh-green);font-weight:600}
-.tile strong.orange{color:#FF8A00}
+.tile:has(.ticon.dot) strong{color:#FF8A00}
 .ticon{display:block;font-size:4U;line-height:1;margin-bottom:1.6U}
 .ticon.dot{width:4U;height:4U;border-radius:50%;background:#FF8A00;box-shadow:0 0 2U rgba(255,138,0,.45)}
 .odots{position:absolute;inset:0;pointer-events:none;z-index:-1}
