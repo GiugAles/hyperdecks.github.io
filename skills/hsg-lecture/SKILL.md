@@ -7,7 +7,7 @@ description: Creates lecture slides in the University of St.Gallen (HSG) design 
 
 Output: `html/index.html` next to the deck, with its fonts, logo and images in `html/assets/`. In a window of 1000px or wider it shows one 16:9 slide; in a narrower window (phone) the slide fills the window in one column. Printing from the browser gives a PDF with one slide per page. There is no PowerPoint renderer; if the user asks for a .pptx, say so.
 
-Keys while presenting: arrows or space to move, O overview, F full screen, N speaker notes, A auto-advance (decks with `autoadvance`).
+Keys while presenting: arrows or space to move, O overview, F full screen, N speaker notes (a button in the panel moves them to their own window), A auto-advance (decks with `autoadvance`).
 
 Review comments: open `html/index.html?review` to get a small box for a comment on each slide. Comments are saved in the browser; "Copy all" puts them on the clipboard with slide number and title, ready to paste back to Claude. Without `?review` the box does not appear, and it is never printed.
 
@@ -47,7 +47,7 @@ Every slide has `layout` and `title`, and optionally:
 | `lead` | one line under the headline, at body size (not on `title`, `section`, `task`, `quote`) |
 | `callout` | a box beside the headline: `text`, optional `style` (`green` default, `outline`, `teal`), `heading`, `wide` (true lets the box grow to 48U instead of 34U, for lines that should not wrap, e.g. names with affiliations) |
 | `source` | small credit line at the foot of the slide, links allowed |
-| `notes` | speaker notes (shown with N) |
+| `notes` | speaker notes (shown with N; a button moves them to their own window for the presenter) |
 | `time` | pacing cue shown in the overview |
 | `decor` | emojis or dots scattered behind the slide, for an event deck with a playful theme: a list of `{"x", "y", "size"}` (position in percent of the slide, size in U) with optional `emoji` (without it the item is a dot) and `rot` (degrees) |
 

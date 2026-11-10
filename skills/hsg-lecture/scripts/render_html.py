@@ -10,7 +10,7 @@
 In a window of 1000px or wider it shows one 16:9 slide, centred. In a narrower window (phone) it still shows one
 slide at a time, filling the window with the content in one column; a slide taller than the window scrolls
 within itself. Printing gives one slide per page (PDF).
-Keys: arrows or space to move, O overview, F full screen, N speaker notes.
+Keys: arrows or space to move, O overview, F full screen, N speaker notes (a button in the panel moves them to their own window).
 """
 import argparse, html, json, math, re, shutil, sys
 from pathlib import Path
@@ -341,6 +341,7 @@ body:not(.auto) .auto-on,body.auto .auto-off{display:none}
 .notes-view{position:fixed;left:0;right:0;bottom:var(--bar);z-index:6;display:none;max-height:42%;overflow:auto;padding:2U 5U;
   background:#f2f2f2;color:#111;border-top:1px solid #ddd;font-size:1.4U;line-height:1.45;white-space:pre-wrap}
 body.show-notes .notes-view{display:block}
+.notes-view button{float:right;margin:0 0 1U 2U;font:inherit;font-size:.9U;padding:.3U .8U;cursor:pointer}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
 
 /* windows narrower than 1000px: still one slide at a time, but the slide fills the window and its content
@@ -417,7 +418,7 @@ body.show-notes .notes-view{display:block}
 
 JS = r"""
 (()=>{const slides=[...document.querySelectorAll('.slide')],root=document.documentElement,body=document.body,
- ov=document.getElementById('overview'),nv=document.getElementById('notesView');
+ ov=document.getElementById('overview'),nt=document.getElementById('notesText');
 const by=id=>document.getElementById(id);
 let cur=0,step=0,arrived=false;{const h=location.hash.replace(/^#\/?/,'');if(/^\d+$/.test(h)){if(+h>=1&&+h<=slides.length){cur=+h-1;arrived=true}}else if(h){const i=slides.findIndex(s=>s.dataset.id===decodeURIComponent(h));if(i>=0){cur=i;arrived=true}}}
 const maxStep=()=>+slides[cur].dataset.steps||0,stepping=()=>!matchMedia('(max-width:999px),(max-height:480px)').matches;
@@ -467,7 +468,7 @@ function go(n,end){const old=slides[cur],fw=!end&&n===cur+1&&stepping();document
  slides[cur].scrollTop=0;
  by('count').textContent=(cur+1)+' / '+slides.length;
  by('progress').style.width=((cur+1)/slides.length*100)+'%';
- const t=slides[cur].querySelector('.notes');nv.textContent=t?t.textContent:'';
+ upNotes();
  history.replaceState(null,'','#/'+(slides[cur].dataset.id||cur+1));ov.classList.remove('open');show(!end);fitCanvas(slides[cur]);if(fw)transition(old,slides[cur]);
 }
 const next=()=>{if(stepping()&&step<maxStep()){step++;show(true)}else go(cur+1)},prev=()=>{if(stepping()&&step>0){step--;show()}else go(cur-1,true)};
@@ -476,7 +477,21 @@ document.addEventListener('click',e=>{const y=e.target.closest('.yt');if(!y||y.q
  f.src=y.dataset.yt+(y.dataset.yt.includes('?')?'&':'?')+'autoplay=1';f.allow='autoplay; encrypted-media; fullscreen';f.allowFullscreen=true;
  f.title=y.getAttribute('aria-label');y.append(f)});
 by('ovBtn').onclick=()=>ov.classList.toggle('open');
-const notes=()=>body.classList.toggle('show-notes');if(by('notesBtn'))by('notesBtn').onclick=notes;
+// speaker notes: N shows them in a panel in this tab, its button moves them to their own window for the presenter's screen
+// (the window follows the slides and passes keys back)
+let nw=null;
+function upNotes(){const t=slides[cur].querySelector('.notes');nt.textContent=t?t.content.textContent:'';if(!nw||nw.closed)return;const d=nw.document;
+ d.getElementById('c').textContent=(cur+1)+' / '+slides.length+'   '+(slides[cur].dataset.title||'');
+ d.getElementById('n').textContent=t?t.content.textContent:''}
+const notes=()=>body.classList.toggle('show-notes');
+const notesWin=()=>{body.classList.remove('show-notes');if(nw&&!nw.closed){nw.focus();return}
+ nw=window.open('','hsg-notes','width=720,height=520');if(!nw)return;const d=nw.document;d.title='Speaker notes';
+ d.body.innerHTML='<p id="c"></p><div id="n"></div>';
+ d.body.style.cssText='margin:0;padding:24px 32px;font:26px/1.5 system-ui,sans-serif;background:#fff;color:#111';
+ d.getElementById('c').style.cssText='margin:0 0 16px;font-size:18px;color:#666';
+ d.getElementById('n').style.whiteSpace='pre-wrap';
+ d.onkeydown=key;upNotes()};
+if(by('notesBtn')){by('notesBtn').onclick=notes;by('popBtn').onclick=notesWin}
 if(!document.fullscreenEnabled)by('fsBtn').hidden=true;
 let idle;const pill=document.querySelector('.pill'),wake=()=>{body.classList.add('awake');clearTimeout(idle);
  idle=setTimeout(()=>{if(!pill.matches(':hover'))body.classList.remove('awake')},2500)};
@@ -485,13 +500,14 @@ by('fsBtn').onclick=()=>document.fullscreenElement?document.exitFullscreen():roo
 const grid=ov.querySelector('.ov-grid');
 slides.forEach((s,i)=>{const b=document.createElement('button'),sm=document.createElement('small');
  sm.textContent=(i+1)+(s.dataset.time?'  ·  '+s.dataset.time:'');b.append(sm,s.dataset.title);b.onclick=()=>go(i);grid.append(b)});
-document.addEventListener('keydown',e=>{if(e.ctrlKey||e.metaKey||e.altKey)return;
+function key(e){if(e.ctrlKey||e.metaKey||e.altKey)return;
  const inCtl=e.target instanceof Element&&e.target.closest('a,button');const k=e.key;
  if(['ArrowRight','PageDown'].includes(k)||(k===' '&&!inCtl)){e.preventDefault();next()}
  else if(['ArrowLeft','PageUp'].includes(k)){e.preventDefault();prev()}
  else if(k==='Home')go(0);else if(k==='End')go(slides.length-1);
  else if(k==='o'||k==='O')ov.classList.toggle('open');else if(k==='Escape')ov.classList.remove('open');
- else if(k==='f'||k==='F')by('fsBtn').click();else if(k==='n'||k==='N')notes();else if(k==='a'||k==='A')auto()});
+ else if(k==='f'||k==='F')by('fsBtn').click();else if(k==='n'||k==='N')notes();else if(k==='a'||k==='A')auto()}
+document.addEventListener('keydown',key);
 let x0=null;document.addEventListener('touchstart',e=>{x0=e.touches[0].clientX},{passive:true});
 document.addEventListener('touchend',e=>{if(x0===null)return;const d=e.changedTouches[0].clientX-x0;x0=null;
  if(Math.abs(d)>60)(d<0?next():prev())},{passive:true});
@@ -1212,7 +1228,7 @@ class Html:
 {sections}</main>
 {ctl}
 <div class="overview" id="overview" role="dialog" aria-label="Slide overview"><h2>{esc(plain(d['title']))}</h2><div class="ov-grid"></div></div>
-<div class="notes-view" id="notesView" aria-label="Speaker notes"></div>
+<div class="notes-view" id="notesView" aria-label="Speaker notes"><button id="popBtn" title="Notes in their own window">Open in<br>separate window</button><div id="notesText"></div></div>
 <script>{JS}</script>
 <script>{REVIEW_JS}</script>
 </body>
