@@ -473,6 +473,7 @@ function go(n,end){const old=slides[cur],fw=!end&&n===cur+1&&stepping();document
 }
 const next=()=>{if(stepping()&&step<maxStep()){step++;show(true)}else go(cur+1)},prev=()=>{if(stepping()&&step>0){step--;show()}else go(cur-1,true)};
 by('prev').onclick=prev;by('next').onclick=next;
+addEventListener('hashchange',()=>{const h=decodeURIComponent(location.hash.replace(/^#\/?/,'')),i=/^\d+$/.test(h)?+h-1:slides.findIndex(s=>s.dataset.id===h);if(i>=0&&i!==cur)go(i)});
 document.addEventListener('click',e=>{const y=e.target.closest('.yt');if(!y||y.querySelector('iframe'))return;const f=document.createElement('iframe');
  f.src=y.dataset.yt+(y.dataset.yt.includes('?')?'&':'?')+'autoplay=1';f.allow='autoplay; encrypted-media; fullscreen';f.allowFullscreen=true;
  f.title=y.getAttribute('aria-label');y.append(f)});
@@ -740,9 +741,14 @@ class Html:
         return "assets/" + self.files[src]
 
     def ref_url(self, to):
-        """The address of another slide, relative to this page (decks live in sibling folders)."""
+        """The address of another slide, relative to this page (decks live in sibling folders); "#/id" in this deck."""
         folder, sid, _, _ = hd.resolve(to, self.base)
-        return f"../../{folder}/html/index.html#/{sid}"
+        return f"#/{sid}" if folder == self.base.name else f"../../{folder}/html/index.html#/{sid}"
+
+    @staticmethod
+    def new_tab(url):
+        """Link attributes: a slide of this deck opens in the same tab, everything else in a new one."""
+        return "" if url.startswith("#") else ' target="_blank" rel="noopener" title="Opens in a new tab"'
 
     def ref_chip(self, r):
         folder, sid, tslide, tdeck = hd.resolve(r["to"], self.base)
@@ -766,7 +772,7 @@ class Html:
         codes = []
         t = re.sub(r"`([^`]+)`", lambda m: codes.append(m.group(1)) or f"\x00{len(codes) - 1}\x00", t)
         t = re.sub(r"\[([^\]]+)\]\((https?://[^)\s]+)\)", r'<a href="\2" target="_blank" rel="noopener">\1</a>', t)
-        t = hd.INLINE_REF.sub(lambda m: f'<a class="il" href="{self.ref_url(m.group(2))}" target="_blank" rel="noopener" title="Opens in a new tab">{m.group(1)}</a>', t)
+        t = hd.INLINE_REF.sub(lambda m: (lambda u: f'<a class="il" href="{u}"{self.new_tab(u)}>{m.group(1)}</a>')(self.ref_url(m.group(2))), t)
         t = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", t)
         t = re.sub(r"(?<![\w*])\*([^*\s][^*]*)\*", r"<em>\1</em>", t)
         t = re.sub(r"==([^=]+)==", r"<mark>\1</mark>", t)
@@ -1038,7 +1044,7 @@ class Html:
                 if r.get("href"):
                     h = r["href"]
                     url = h if h.startswith(("http://", "https://")) else self.ref_url(h)
-                    span = f'<a class="il" href="{esc(url)}" target="_blank" rel="noopener" title="Opens in a new tab">{span}</a>'
+                    span = f'<a class="il" href="{esc(url)}"{self.new_tab(url)}>{span}</a>'
                 runs += span
             first = max((r.get("sz", 1.9) for r in p["r"] if "sz" in r), default=1.9)
             ds = f' data-s="{p["s"]}"' if p.get("s") else ""
