@@ -104,16 +104,11 @@
    ]
   },
   {
-   "layout": "menu",
+   "layout": "image",
    "title": "Today",
-   "items": [
-    "PITAS infrastructure rules",
-    "WebSub: publish and discover new auctions",
-    "MQTT: agree on topics and message formats",
-    "Preparing for the PlugFest",
-    "WebSub vs. MQTT"
-   ],
-   "current": 1
+   "image": "img/event-interactions.svg",
+   "shadow": false,
+   "alt": "Two graphs side by side. W3C WebSub: Groups 1, 2 and 3 are linked with each other in both directions, and each points to a resource directory, which holds a resource list of auction URLs such as http://group1.ex.org/auctions/. MQTT: Groups 1, 2 and 3 are each linked in both directions to one event broker in the middle."
   },
   {
    "layout": "text",
