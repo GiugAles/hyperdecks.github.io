@@ -246,6 +246,7 @@ table.t{width:100%;border-collapse:collapse;font-size:var(--s-mid);line-height:1
 .tagline{position:absolute;right:4U;top:15.65U;z-index:3;font-size:1.39U;color:#fff}
 .tblock{position:absolute;left:9U;top:12U;width:44U;height:19.6U;z-index:2;display:flex;flex-direction:column;justify-content:flex-end}
 .kicker{font-size:var(--s-kick);line-height:1.2;color:var(--fg);margin-bottom:2.2U}
+.subtitle{font-size:var(--s-kick);line-height:1.2;color:var(--fg);margin-top:1.6U}
 h1{font-size:var(--s-h1);font-weight:300;line-height:1.08;letter-spacing:-.01em;color:var(--fg);text-wrap:balance}
 .tbody{position:absolute;left:9U;top:34.2U;width:40U;z-index:2;font-size:1.67U;line-height:1.3;color:var(--fg)}
 .tbody p+p{margin-top:2.2U}
@@ -844,7 +845,8 @@ class Html:
         if s.get("meta"):
             body += "<p>" + "<br>".join(esc(x) for x in s["meta"]) + "</p>"
         logo = '<img class="logo" src="assets/hsg_logo.png" alt="University of St.Gallen">'
-        head = f'<div class="tblock t-{st}">{kick}<h1>{self.htitle(s["title"])}</h1></div>'
+        sub = f'<p class="subtitle">{esc(s["subtitle"])}</p>' if s.get("subtitle") else ""
+        head = f'<div class="tblock t-{st}">{kick}<h1>{self.htitle(s["title"])}</h1>{sub}</div>'
         tbody = f'<div class="tbody t-{st}">{body}</div>' if body else ""
         if st in ("side", "slanted"):                  # the template's title slides 2 and 3
             frame = ('<svg class="tframe" viewBox="0 0 26.46 29.42" preserveAspectRatio="none" aria-hidden="true"><polygon '
