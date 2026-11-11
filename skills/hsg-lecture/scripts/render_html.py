@@ -249,6 +249,7 @@ table.t{width:100%;border-collapse:collapse;font-size:var(--s-mid);line-height:1
 .subtitle{font-size:var(--s-kick);line-height:1.2;color:var(--fg);margin-top:1.6U}
 h1{font-size:var(--s-h1);font-weight:300;line-height:1.08;letter-spacing:-.01em;color:var(--fg);text-wrap:balance}
 .tbody{position:absolute;left:9U;top:34.2U;width:40U;z-index:2;font-size:1.67U;line-height:1.3;color:var(--fg)}
+.tbody .affil{margin-top:0;font-size:.75em;color:#a6a6a6}
 .tbody p+p{margin-top:2.2U}
 .l-section .tblock{top:14U;height:20U;width:70U}
 .l-section .wedge{left:62U;width:38U;top:40.25U;height:16U}
@@ -842,6 +843,8 @@ class Html:
         body = ""
         if s.get("presenters"):
             body += f'<p>{esc(", ".join(s["presenters"]))}</p>'
+        if s.get("affiliation"):                       # grey lines right under the names, as on the template
+            body += '<p class="affil">' + "<br>".join(esc(x) for x in s["affiliation"]) + "</p>"
         if s.get("meta"):
             body += "<p>" + "<br>".join(esc(x) for x in s["meta"]) + "</p>"
         logo = '<img class="logo" src="assets/hsg_logo.png" alt="University of St.Gallen">'
