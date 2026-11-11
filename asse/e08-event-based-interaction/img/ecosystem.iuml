@@ -1,0 +1,58 @@
+' The PITAS ecosystem used by all rule diagrams: four outside providers, two groups.
+' Define $FOREIGN to title the frames as seen from Group 2.
+!if %variable_exists("$FOREIGN")
+!$OG = "Foreign provider: Google"
+!$OS = "Foreign provider: Switchboard"
+!$OH = "Foreign provider: HiveMQ"
+!$OC = "Foreign provider: the course"
+!$O2 = "Operator: Group 2 (your group)"
+!$O5 = "Foreign provider: Group 5"
+!else
+!$OG = "Operator: Google"
+!$OS = "Operator: Switchboard"
+!$OH = "Operator: HiveMQ"
+!$OC = "Operator: the course"
+!$O2 = "Operator: Group 2"
+!$O5 = "Operator: Group 5"
+!endif
+rectangle "$OG" as G $FG {
+  node "Google cloud" {
+    component "WebSub hub" as hubG
+  }
+}
+rectangle "$OS" as S $FS {
+  node "Switchboard server" {
+    component "WebSub hub" as hubS
+  }
+}
+rectangle "$OH" as H $FH {
+  node "HiveMQ cloud" {
+    component "MQTT broker" as mqttH
+  }
+}
+rectangle "$OC" as C $FC {
+  node "resource VM" {
+    component "resource directory" as dir
+  }
+}
+rectangle "$O2" as G2 $FG2 {
+  node "Group 2 VM" {
+    component "PITAS app" as app2
+    component "MQTT broker" as mqtt2 $SH
+  }
+  node "extra VM" {
+    component "MQTT broker" as mqtt2b $SH
+  }
+}
+rectangle "$O5" as G5 $FG5 {
+  node "Group 5 VM" {
+    component "PITAS app" as app5
+  }
+}
+' Hidden links between components (links between frames add an empty band on top)
+hubG -[hidden]right- hubS
+hubS -[hidden]right- mqttH
+mqttH -[hidden]right- dir
+mqtt2b -[hidden]right- app5
+hubG -[hidden]down- app2
+dir -[hidden]down- app5

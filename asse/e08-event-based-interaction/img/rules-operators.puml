@@ -1,0 +1,11 @@
+@startuml
+!include hsg.iuml
+!$FG = "" 
+!$FS = ""
+!$FH = ""
+!$FC = ""
+!$FG2 = ""
+!$FG5 = ""
+!$SH = ""
+!include ecosystem.iuml
+@enduml

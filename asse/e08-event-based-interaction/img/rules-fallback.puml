@@ -1,0 +1,26 @@
+@startuml
+!include hsg.iuml
+left to right direction
+show <<fallback>> stereotype
+' Only the provided instances, so the question on the slide can be answered from the picture.
+' Machines are left out: Rule 7 depends on operators only.
+rectangle "Operator: Group 5" {
+  component "PITAS app" as app5
+}
+rectangle "Operator: Google" {
+  component "WebSub hub" as hubG
+}
+rectangle "Operator: Switchboard" {
+  component "WebSub hub" as hubS <<fallback>>
+}
+rectangle "Operator: HiveMQ" {
+  component "MQTT broker" as mqttH
+}
+rectangle "Operator: the course" {
+  component "resource directory" as dir
+}
+app5 --> hubG
+app5 ..> hubS : alongside, or\nby configuration
+app5 --> mqttH
+app5 --> dir
+@enduml

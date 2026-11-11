@@ -1,0 +1,14 @@
+@startuml
+!include hsg.iuml
+!$FOREIGN = 1
+!$F = "<<foreign provider>>"
+!$FG = $F
+!$FS = $F
+!$FH = $F
+!$FC = $F
+!$FG2 = ""
+!$FG5 = $F
+!$SH = "<<self-hosted>>"
+show <<self-hosted>> stereotype
+!include ecosystem.iuml
+@enduml
