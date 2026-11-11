@@ -249,9 +249,9 @@ table.t{width:100%;border-collapse:collapse;font-size:var(--s-mid);line-height:1
 .subtitle{font-size:var(--s-kick);line-height:1.2;color:var(--fg);margin-top:1.6U}
 h1{font-size:var(--s-h1);font-weight:300;line-height:1.08;letter-spacing:-.01em;color:var(--fg);text-wrap:balance}
 .tbody{position:absolute;left:9U;top:34.2U;width:40U;z-index:2;font-size:1.67U;line-height:1.3;color:var(--fg)}
-.tbody .affil{margin-top:0;font-size:.75em;color:#595959}
+.tbody .affil{margin-top:0;font-size:.75em;font-style:italic;color:#595959}
 .tbody.t-slanted{top:36.2U}
-.tevent{position:absolute;left:9U;top:51.5U;z-index:2;font-size:1.39U;color:var(--fg)}
+.tevent{position:absolute;left:9U;top:51.5U;z-index:2;font-size:1.2525U;color:#595959}   /* as .affil: .75 of .tbody */
 .tbody p+p{margin-top:2.2U}
 .l-section .tblock{top:14U;height:20U;width:70U}
 .l-section .wedge{left:62U;width:38U;top:40.25U;height:16U}
@@ -382,7 +382,7 @@ body.show-notes .notes-view{display:block}
   .l-quote h2{text-align:left}.attr{text-align:left}
   .l-title .frame,.l-section .frame{display:flex;flex-direction:column;padding:24px 20px 0}
   .logo,.tblock,.tbody,.tagline,.tevent{position:static;width:auto;height:auto}
-  .tevent{font-size:15px;margin-bottom:24px}
+  .tevent{font-size:11.25px;margin-bottom:24px}
   .logo{width:190px;margin-bottom:44px}
   .tbody{margin:26px 0 30px;font-size:15px}
   .gear{left:auto;right:-70px;top:-50px;width:210px;height:210px}
