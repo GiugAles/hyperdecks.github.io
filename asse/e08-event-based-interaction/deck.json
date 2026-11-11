@@ -241,7 +241,25 @@
    ],
    "aside": {
     "image": "img/rules-fallback.svg",
-    "alt": "Group 5's PITAS app uses four provided instances: the WebSub hub of Google, the WebSub hub of Switchboard, marked fallback and reached by a dashed arrow labelled alongside, or by configuration, the MQTT broker of HiveMQ and the resource directory of the course.",
+    "alt": "Group 5's PITAS app uses four provided instances: the WebSub hub of Google, the WebSub hub of Switchboard, reached by a dashed arrow labelled alongside, or by configuration, the MQTT broker of HiveMQ and the resource directory of the course.",
+    "shadow": false
+   },
+   "notes": "Ask the room first; the next slide shows the answer."
+  },
+  {
+   "layout": "text",
+   "title": "A Fallback",
+   "callout": {
+    "text": "Which components have no fallback yet among the provided instances?"
+   },
+   "points": [
+    "Rule 8: a second counting instance of the same component",
+    "It has a different operator",
+    "Groups use it alongside the first instance, or switch to it by changing configuration only"
+   ],
+   "aside": {
+    "image": "img/rules-nofallback.svg",
+    "alt": "The same diagram with the answer in colour: the WebSub hub of Switchboard is green, and the MQTT broker of HiveMQ and the resource directory of the course are teal.",
     "shadow": false
    },
    "notes": "Answer to the question: the MQTT broker (only HiveMQ) and the discovery service (only the course's resource directory). The WebSub hubs have a fallback: Google and Switchboard, once both count. A group can give the broker a fallback, e.g. a broker on its own VM that another group uses."

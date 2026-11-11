@@ -6,3 +6,5 @@ set -e
 cd "$(dirname "$0")"
 plantuml -tsvg rules-*.puml
 sed -i "s/font-family=\"sans-serif\"/font-family=\"'Gill Sans Nova','Gill Sans MT Pro','Gill Sans',sans-serif\"/g" rules-*.svg
+# PlantUML draws the small component icon with the box's border style; keep icons thin and solid.
+sed -i -E 's/(<rect [^>]*width="(15|4)" [^>]*stroke-width:)2\.5;stroke-dasharray:7,7;/\10.5;/g' rules-*.svg
