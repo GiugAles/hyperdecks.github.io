@@ -36,7 +36,7 @@
      \url{http://group1.ex.org/auctions/}\\
      \url{http://group2.ex.org/auctions/}\\
      \ldots};
-  \node[font=\small, anchor=west] at (5.75,-2.3) {W3C WebSub};
+  \node[font=\small, anchor=base] at (3.1,0.15) {W3C WebSub};
 
   % MQTT: hub-and-spoke via an event broker.
   \node[grp] (b1)  at (8.7,-0.75)   {Group 1};
@@ -46,6 +46,6 @@
   \draw[link] (b1) -- (brk);
   \draw[link] (b2) -- (brk);
   \draw[link] (b3) -- (brk);
-  \node[font=\small, anchor=east] at (10.0,-2.3) {MQTT};
+  \node[font=\small, anchor=base] at (10.975,0.15) {MQTT};
 \end{tikzpicture}}
 \end{document}
