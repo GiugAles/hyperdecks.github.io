@@ -223,10 +223,10 @@
    "layout": "image",
    "title": "A Single Designated Instance",
    "image": "img/rules-designated.svg",
-   "alt": "The PITAS apps of Groups 1 to 6 all point to one MQTT broker in the HiveMQ cloud, marked designated, with the note: the only MQTT broker in the decision log.",
+   "alt": "The PITAS apps of Groups 1 to 6 all point to one MQTT broker in the HiveMQ cloud, marked designated, with the note: the only counting MQTT broker.",
    "shadow": false,
    "caption": "Who operates it does not matter.",
-   "lead": "Rule 7: the only instance of a component in the decision log, used by all six groups."
+   "lead": "Rule 7: the only counting instance of a component, used by all six groups."
   },
   {
    "layout": "text",

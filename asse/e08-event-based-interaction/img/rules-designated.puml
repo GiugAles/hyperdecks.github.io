@@ -19,7 +19,7 @@ a4 .up.> b
 a5 .up.> b
 a6 .up.> b
 note right of b
-  the only MQTT broker
-  in the decision log
+  the only counting
+  MQTT broker
 end note
 @enduml
