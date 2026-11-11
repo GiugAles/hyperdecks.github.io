@@ -13,6 +13,7 @@ deck.json
 
 Every slide: "layout", "title", and optionally "lead" (one line under the headline), "callout" (a box beside
 the headline), "source" (small credit line), "notes" (speaker notes), "time" (pacing cue shown in the overview).
+Speaker notes can also live in speaker-notes.md next to the deck (see load_notes), which overrides "notes".
 The fields of each layout are listed in LAYOUTS below and explained in SKILL.md.
 
   python hsg_deck.py deck.json            # check a deck without rendering
@@ -402,6 +403,28 @@ def check(deck, base):
     return errors, warnings
 
 
+def load_notes(deck, md):
+    """Speaker notes from speaker-notes.md next to the deck: the lines under a heading "### N Title" become the
+    notes of slide N and replace its "notes" in deck.json. Any other heading ends a slide's notes."""
+    if not md.is_file():
+        return []
+    warnings, n, body, found = [], None, [], {}
+    for line in md.read_text(encoding="utf-8").splitlines() + ["#"]:
+        if line.startswith("#"):
+            if n is not None:
+                found[n] = "\n".join(body).strip()
+            m = re.match(r"###\s+(\d+)\b", line)
+            n, body = (int(m.group(1)) if m else None), []
+        elif n is not None:
+            body.append(line)
+    for n, text in found.items():
+        if 1 <= n <= len(deck["slides"]):
+            deck["slides"][n - 1]["notes"] = text
+        else:
+            warnings.append(f"{md.name}: there is no slide {n}")
+    return warnings
+
+
 def load(path):
     """Read and check a deck. Returns (deck, base folder, warnings); exits with the list of errors."""
     path = Path(path).resolve()
@@ -409,7 +432,9 @@ def load(path):
         deck = json.loads(path.read_text(encoding="utf-8"))
     except (OSError, ValueError) as e:
         sys.exit(f"Could not read {path}: {e}")
+    notes_warnings = load_notes(deck, path.parent / "speaker-notes.md")
     errors, warnings = check(deck, path.parent)
+    warnings += notes_warnings
     if errors:
         sys.exit("The deck has errors:\n  " + "\n  ".join(errors))
     return deck, path.parent, warnings

@@ -47,7 +47,7 @@ Every slide has `layout` and `title`, and optionally:
 | `lead` | one line under the headline, at body size (not on `title`, `section`, `task`, `quote`) |
 | `callout` | a box beside the headline: `text`, optional `style` (`green` default, `outline`, `teal`), `heading`, `wide` (true lets the box grow to 48U instead of 34U, for lines that should not wrap, e.g. names with affiliations) |
 | `source` | small credit line at the foot of the slide, links allowed |
-| `notes` | speaker notes (shown with N; a button moves them to their own window for the presenter) |
+| `notes` | speaker notes (shown with N; a button moves them to their own window for the presenter). Alternatively in `speaker-notes.md` next to deck.json: the lines under `### N Title` are the notes of slide N and replace `notes` |
 | `time` | pacing cue shown in the overview |
 | `decor` | emojis or dots scattered behind the slide, for an event deck with a playful theme: a list of `{"x", "y", "size"}` (position in percent of the slide, size in U) with optional `emoji` (without it the item is a dot) and `rot` (degrees) |
 
