@@ -35,7 +35,7 @@ COMMON = {"layout", "title", "lead", "callout", "source", "notes", "time", "id",
 NO_LEAD = {"title", "section", "task", "quote"}
 # layout: (required fields, optional fields)
 LAYOUTS = {
-    "title":     ({"title"}, {"kicker", "subtitle", "presenters", "affiliation", "meta", "picture", "style"}),
+    "title":     ({"title"}, {"kicker", "subtitle", "presenters", "affiliation", "meta", "date", "venue", "picture", "style"}),
     "section":   ({"title"}, {"kicker"}),
     "menu":      ({"title", "items"}, {"current"}),
     "text":      ({"title"}, {"paragraphs", "points", "defs", "groups", "tiles", "after", "aside"}),
