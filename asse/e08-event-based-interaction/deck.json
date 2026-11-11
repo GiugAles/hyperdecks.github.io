@@ -118,7 +118,7 @@
   {
    "layout": "text",
    "title": "PITAS Infrastructure Rules",
-   "lead": "They hold for Assignments 8 to 11 and define the terms used in your role briefing.",
+   "lead": "They hold for Assignments 8 to 11. Your final presentation assesses each objective against its “Achieved when” column, using these terms.",
    "defs": [
     [
      "Component",
@@ -155,11 +155,23 @@
    "callout": {
     "text": "Who is a foreign provider for Group 5?"
    },
-   "image": "img/rules-foreign.svg",
-   "alt": "The same deployment diagram seen from Group 2. The frames of Google, Switchboard, HiveMQ, the course and Group 5 are grey and titled foreign provider; the frame of Group 2 is titled your group. The two MQTT brokers on the VMs of Group 2 are green and marked self-hosted.",
+   "image": "img/rules-selfhosted.svg",
+   "alt": "The deployment diagram of the previous slide, with one frame per operator: Google, Switchboard, HiveMQ, the course, Group 2 and Group 5. The two MQTT brokers on the VMs of Group 2 are green and marked self-hosted.",
    "shadow": false,
-   "notes": "Every operator except Group 5, Group 2 included. Rule 2: Group 2 becomes a foreign provider for the other groups once its broker counts.",
-   "lead": "Rule 2: your own VMs are self-hosted. Rule 8: every other operator is a foreign provider."
+   "notes": "Ask the room first; the next slide shows the answer.",
+   "lead": "Rule 2: your own VMs are self-hosted. Rule 3: every other operator is a foreign provider."
+  },
+  {
+   "layout": "image",
+   "title": "Self-Hosted or Foreign?",
+   "callout": {
+    "text": "Who is a foreign provider for Group 5?"
+   },
+   "image": "img/rules-foreign.svg",
+   "alt": "The same diagram with the answer: the frames of Google, Switchboard, HiveMQ, the course and Group 2 are highlighted in teal and titled foreign provider. Only the frame of Group 5 keeps the title operator. The two MQTT brokers of Group 2 are still marked self-hosted.",
+   "shadow": false,
+   "notes": "Every operator except Group 5, Group 2 included (Rule 3). Group 2's brokers are self-hosted for Group 2 (Rule 2) and come from a foreign provider for Group 5.",
+   "lead": "Rule 2: your own VMs are self-hosted. Rule 3: every other operator is a foreign provider."
   },
   {
    "layout": "text",
@@ -177,14 +189,14 @@
     "caption": "Both brokers are listed and reachable. The one on the laptop fails (d)."
    },
    "paragraphs": [
-    "Rule 3: an instance counts exactly when"
+    "Rule 4: an instance counts exactly when"
    ]
   },
   {
    "layout": "text",
    "title": "One Service, Several Components",
    "points": [
-    "Rule 4: a service counts once for each component it provides",
+    "Rule 5: a service counts once for each component it provides",
     "A Community Solid Server (CSS) is both a pod server and an identity provider",
     "You will learn more about the CSS in Assignment 9"
    ],
@@ -205,7 +217,7 @@
    "shadow": false,
    "caption": "The two WebSub hubs are independently operated.",
    "notes": "No. Group 2 operates both of its VMs (Rule 1), so one party can stop both brokers.",
-   "lead": "Rule 5: different operators, so no single party can reconfigure or stop both."
+   "lead": "Rule 6: different operators, so no single party can reconfigure or stop both."
   },
   {
    "layout": "image",
@@ -214,7 +226,7 @@
    "alt": "The PITAS apps of Groups 1 to 6 all point to one MQTT broker in the HiveMQ cloud, marked designated, with the note: the only MQTT broker in the decision log.",
    "shadow": false,
    "caption": "Who operates it does not matter.",
-   "lead": "Rule 6: the only instance of a component in the decision log, used by all six groups."
+   "lead": "Rule 7: the only instance of a component in the decision log, used by all six groups."
   },
   {
    "layout": "text",
@@ -223,7 +235,7 @@
     "text": "Which components have no fallback yet among the provided instances?"
    },
    "points": [
-    "Rule 7: a second counting instance of the same component",
+    "Rule 8: a second counting instance of the same component",
     "It has a different operator",
     "Groups use it alongside the first instance, or switch to it by changing configuration only"
    ],
@@ -248,7 +260,7 @@
     },
     "Several objectives in your role briefing depend on these decisions",
     "Record them as ADRs in the [decision log](https://github.com/unisg-scs-asse/pitas-hs26-itf/tree/main/adr) of the task force",
-    "Rule 9: assess each objective against the “Achieved when” column of your role briefing; the narrative parts add no conditions"
+    "Rule 9: the narrative parts of your role briefing, such as the memo, add no conditions to your objectives"
    ]
   },
   {

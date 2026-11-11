@@ -33,7 +33,9 @@ skinparam component<<not counted>> {
   BackgroundColor #FFFFFF
 }
 skinparam rectangle<<foreign provider>> {
-  BackgroundColor #F2F2F2
+  BackgroundColor #DCE9EC
+  BorderColor #73A5AF
+  BorderThickness 2.5
 }
 skinparam note {
   BorderColor #73A5AF
