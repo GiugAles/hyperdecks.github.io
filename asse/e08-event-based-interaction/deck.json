@@ -302,21 +302,52 @@
    "notes": "Answer to the question: the MQTT broker (only HiveMQ) and the discovery service (only the course's resource directory). The WebSub hubs have a fallback: Google and Switchboard, once both count. A group can give the broker a fallback, e.g. a broker on its own VM that another group uses. From Assignment 9, the pod server and the identity provider have no fallback either among the provided instances: only the course CSS provides them."
   },
   {
+   "layout": "table",
+   "title": "What Does the Task Force Decide?",
+   "lead": "Examples for this week; each decision becomes an ADR.",
+   "columns": [
+    "Decision",
+    "Examples"
+   ],
+   "rows": [
+    [
+     "Events",
+     "Auction launched, bid placed, auction awarded; who publishes and who receives each"
+    ],
+    [
+     "Instances",
+     "Which hubs, brokers and discovery service, with address, operator and fallback (Rule 9)"
+    ],
+    [
+     "Payloads",
+     "Format and contents; the same for WebSub and MQTT? Reuse of the Assignment 7 representations"
+    ],
+    [
+     "WebSub",
+     "One topic per auction house? Full content or a link? Signed with `hub.secret`?"
+    ],
+    [
+     "MQTT",
+     "Topic structure and wildcards, QoS per event, retained messages, TCP, TLS or WebSockets"
+    ],
+    [
+     "Discovery",
+     "How an application finds the feeds of the other groups, and what it registers where"
+    ]
+   ],
+   "notes": "MQTT exchanges messages, whereas WebSub observes Web resources: rather than copying the WebSub design, the task force should approach MQTT with a fresh mind. Under Rule 4, the list of instances decides which instances count."
+  },
+  {
    "layout": "text",
    "title": "The Decision Log Decides What Counts",
    "points": [
-    {
-     "text": "This week the task force decides",
-     "sub": [
-      "which hubs and brokers the ecosystem relies on",
-      "the topic structure, delivery guarantees and payload contents",
-      "whether notifications are signed"
-     ]
-    },
-    "Several objectives in your role briefing depend on these decisions",
+    "Several objectives in your role briefing depend on the decisions of the task force",
     "Record them as ADRs in the [decision log](https://github.com/unisg-scs-asse/pitas-hs26-itf/tree/main/adr) of the task force",
     "Rule 10: the narrative parts of your role briefing, such as the memo, add no conditions to your objectives"
-   ]
+   ],
+   "aside": {
+    "code": "# 2. WebSub hubs of the ecosystem\n\n## Considered Alternatives\n1. **Google hub only**\n2. **Google hub and Switchboard**\n\n## Decision\n...\n\n## Delegation Positions\n| Delegation | Position | Main argument |\n| Group 1    | ...      | ...           |\n| ...        |          |               |"
+   }
   },
   {
    "layout": "questions",
