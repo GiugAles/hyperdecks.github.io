@@ -142,6 +142,7 @@ table.t{width:100%;border-collapse:collapse;font-size:var(--s-mid);line-height:1
 .t th+th,.t td+td{border-left:.15U solid #fff}
 .t tr+tr td{border-top:.15U solid #fff}
 .t td:first-child{font-weight:700;color:var(--fg)}
+.t tr.light td{opacity:.6}
 .t.many{font-size:var(--s-sub)}
 .t.many td{padding:.45U 1U}
 
@@ -933,7 +934,10 @@ class Html:
 
     def l_table(self, s):
         head = "".join(f"<th>{self.mark(c)}</th>" for c in s["columns"])
-        rows = "".join("<tr>" + "".join(f"<td>{self.mark(c)}</td>" for c in r) + "</tr>" for r in s["rows"])
+        def row(r):  # a row is a list of cells, or {"cells": [...], "light": true} for a lighter row
+            cells, light = (r["cells"], r.get("light")) if isinstance(r, dict) else (r, False)
+            return ('<tr class="light">' if light else "<tr>") + "".join(f"<td>{self.mark(c)}</td>" for c in cells) + "</tr>"
+        rows = "".join(row(r) for r in s["rows"])
         many = " many" if len(s["rows"]) > 7 or len(s["columns"]) > 4 else ""
         after = f'<p class="after" style="padding-left:0">{self.mark(s["after"])}</p>' if s.get("after") else ""
         return self.main(s, f'<div class="tablewrap"><table class="t{many}"><thead><tr>{head}</tr></thead><tbody>{rows}</tbody></table></div>{after}')

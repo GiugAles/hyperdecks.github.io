@@ -62,7 +62,7 @@ A line break in a title is written as `\n`, and `**words**` in a title is set bo
 | `syllabus` | the course plan | `items` (`date`, `title`, `kind`: `lecture` default or `exercise`), `current` (number of today's session, or a list), `break_after` (number of the session before a break), `assignments` (`title`, `from`, `to`: session numbers the assignment runs over) |
 | `menu` | today's topics in a green frame | `items` (2 to 8 strings), `current` (number of the topic now starting, shown green) |
 | `text` | running text or points, with an optional picture, box or code on the right | `paragraphs`, `points`, `defs` (pairs `[term, detail]`, set as two columns), `groups` (`heading`, `points`, `paragraphs`), `tiles` (exactly 3 `{"icon", "text"}` side by side; `icon` is an emoji, or `dot` for a coloured dot), `after` (one line under the content), `aside` (see below). Needs `paragraphs`, `points`, `defs`, `groups` or `tiles`. |
-| `table` | a table with a green header row | `columns` (2 to 6 headings), `rows` (lists of cells; the first column is bold), `after` |
+| `table` | a table with a green header row | `columns` (2 to 6 headings), `rows` (lists of cells; the first column is bold; a row written as `{"cells": [...], "light": true}` is set lighter, e.g. for what only starts later), `after` |
 | `code` | a program and what to look at in it | `code` (string, `\n` between lines), `paragraphs`, `points`, `style` (`outline` default, `teal`), `caption` (e.g. a link to godbolt.org) |
 | `quiz` | 2 to 5 questions for the room, in green boxes | `items` (strings), `aside` (a picture: `image`, `alt`, `caption`) |
 | `image` | one large picture | `image`, `alt`, `caption`, `shadow` (false for drawings on white) |

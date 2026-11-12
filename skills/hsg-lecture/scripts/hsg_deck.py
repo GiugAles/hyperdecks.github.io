@@ -378,8 +378,14 @@ def check(deck, base):
             cols, rows = s.get("columns"), s.get("rows")
             if not (isinstance(cols, list) and 2 <= len(cols) <= 6):
                 errors.append(f"{w}: 'columns' must be a list of 2 to 6 headings")
-            elif not (isinstance(rows, list) and rows and all(isinstance(r, list) and len(r) == len(cols) for r in rows)):
-                errors.append(f"{w}: 'rows' must be a list of rows with {len(cols)} cells each")
+            elif not (isinstance(rows, list) and rows and all(
+                    (isinstance(r, list) and len(r) == len(cols))
+                    or (isinstance(r, dict) and not r.keys() - {"cells", "light"}
+                        and isinstance(r.get("cells"), list) and len(r["cells"]) == len(cols)
+                        and isinstance(r.get("light", False), bool))
+                    for r in rows)):
+                errors.append(f"{w}: 'rows' must be a list of rows with {len(cols)} cells each"
+                              ' (a list of cells, or {"cells": [...], "light": true})')
             elif len(rows) > 10:
                 warnings.append(f"{w}: {len(rows)} rows; at most 10 fit, split the table")
         if lay == "task" and s.get("url") and not str(s["url"]).startswith(("http://", "https://")):
