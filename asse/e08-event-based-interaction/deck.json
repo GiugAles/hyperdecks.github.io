@@ -189,9 +189,26 @@
   },
   {
    "layout": "text",
+   "title": "Instances That Do Not Count",
+   "paragraphs": [
+    "Rule 5: an instance that does not count may still serve as a demonstrator"
+   ],
+   "points": [
+    "Show it to the task force to back your arguments, e.g. that an alternative works",
+    "Using it as a demonstrator does not make it count (Rule 4)"
+   ],
+   "aside": {
+    "image": "img/rules-demonstrator.svg",
+    "alt": "The diagram of Rule 4, with the MQTT broker on the Group 2 laptop marked demonstrator.",
+    "shadow": false,
+    "caption": "The broker on the laptop does not count, but Group 2 can show it to the task force."
+   }
+  },
+  {
+   "layout": "text",
    "title": "One Service, Several Components",
    "points": [
-    "Rule 5: a service counts once for each component it provides",
+    "Rule 6: a service counts once for each component it provides",
     "A Community Solid Server (CSS) is both a pod server and an identity provider",
     "You will learn more about the CSS in Assignment 9"
    ],
@@ -212,7 +229,7 @@
    "shadow": false,
    "caption": "The two WebSub hubs are independently operated.",
    "notes": "No. Group 2 operates both of its VMs (Rule 1), so one party can stop both brokers.",
-   "lead": "Rule 6: different operators, so no single party can reconfigure or stop both."
+   "lead": "Rule 7: different operators, so no single party can reconfigure or stop both."
   },
   {
    "layout": "image",
@@ -221,7 +238,7 @@
    "alt": "The PITAS apps of Groups 1 to 6 all point to one MQTT broker in the HiveMQ cloud, marked designated, with the note: the only counting MQTT broker.",
    "shadow": false,
    "caption": "Who operates it does not matter.",
-   "lead": "Rule 7: the only counting instance of a component, used by all six groups."
+   "lead": "Rule 8: the only counting instance of a component, used by all six groups."
   },
   {
    "layout": "text",
@@ -230,7 +247,7 @@
     "text": "Which components have no fallback yet among the provided instances?"
    },
    "points": [
-    "Rule 8: a second counting instance of the same component",
+    "Rule 9: a second counting instance of the same component",
     "It has a different operator",
     "Groups use it alongside the first instance, or switch to it by changing configuration only"
    ],
@@ -248,7 +265,7 @@
     "text": "Which components have no fallback yet among the provided instances?"
    },
    "points": [
-    "Rule 8: a second counting instance of the same component",
+    "Rule 9: a second counting instance of the same component",
     "It has a different operator",
     "Groups use it alongside the first instance, or switch to it by changing configuration only"
    ],
@@ -273,7 +290,7 @@
     },
     "Several objectives in your role briefing depend on these decisions",
     "Record them as ADRs in the [decision log](https://github.com/unisg-scs-asse/pitas-hs26-itf/tree/main/adr) of the task force",
-    "Rule 9: the narrative parts of your role briefing, such as the memo, add no conditions to your objectives"
+    "Rule 10: the narrative parts of your role briefing, such as the memo, add no conditions to your objectives"
    ]
   },
   {

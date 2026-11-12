@@ -13,7 +13,7 @@
 !$USE2LABEL = ""
 !endif
 left to right direction
-' Machines are left out: Rule 8 depends on operators only.
+' Machines are left out: Rule 9 depends on operators only.
 rectangle "Operator: Group 5" {
   component "PITAS app" as app5
 }
