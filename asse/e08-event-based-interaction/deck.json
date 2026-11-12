@@ -111,29 +111,54 @@
    "alt": "Two graphs side by side. W3C WebSub: Groups 1, 2 and 3 are linked with each other in both directions, and each points to a resource directory, which holds a resource list of auction URLs such as http://group1.ex.org/auctions/. MQTT: Groups 1, 2 and 3 are each linked in both directions to one event broker in the middle."
   },
   {
-   "layout": "text",
+   "layout": "table",
    "title": "PITAS Infrastructure Rules",
    "lead": "They hold for Assignments 8 to 11. Your final presentation assesses each objective against its “Achieved when” column, using these terms.",
-   "defs": [
-    [
-     "Component",
-     "A kind of shared service: WebSub hub, MQTT broker, pod server, identity provider (Solid-OIDC issuer) or discovery service"
-    ],
-    [
-     "Instance",
-     "One running deployment of a component at its own address, e.g. the HiveMQ public broker"
-    ],
-    [
-     "Operator",
-     "The party that decides what runs on an instance and can stop it"
-    ]
+   "columns": [
+    "Component",
+    "Operator",
+    "Instance"
    ],
-   "aside": {
-    "image": "img/rules-terms.svg",
-    "shadow": false,
-    "alt": "A frame labelled Operator: HiveMQ around a machine labelled HiveMQ cloud, which holds a green box labelled Instance of MQTT broker at broker.hivemq.com.",
-    "caption": "The notation of the following diagrams"
-   }
+   "rows": [
+    [
+     "WebSub hub",
+     "Google",
+     "Google WebSub hub, [websub.appspot.com](https://websub.appspot.com/)"
+    ],
+    [
+     "WebSub hub",
+     "Switchboard",
+     "Switchboard, an open-source hub, [switchboard.p3k.io](https://switchboard.p3k.io/)"
+    ],
+    [
+     "MQTT broker",
+     "HiveMQ",
+     "HiveMQ public broker, `broker.hivemq.com` ([dashboard](http://www.mqtt-dashboard.com/))"
+    ],
+    [
+     "Discovery service",
+     "the course",
+     "PITAS resource directory, where groups register their auction feeds ([API](https://app.swaggerhub.com/apis/PITAS/auction-house/1.0.0))"
+    ],
+    {
+     "cells": [
+      "Pod server",
+      "the course",
+      "Community Solid Server (CSS) of the course, from Assignment 9"
+     ],
+     "light": true
+    },
+    {
+     "cells": [
+      "Identity provider",
+      "the course",
+      "The same CSS, as Solid-OIDC issuer"
+     ],
+     "light": true
+    }
+   ],
+   "after": "None of them is a default. To run your own, e.g. [pitas-hs26-websubhub](https://github.com/unisg-scs-asse/pitas-hs26-websubhub) or [Mosquitto](https://mosquitto.org/), talk to the tutors first.",
+   "notes": "The column headings are the terms of the rules. Component: a kind of shared service. Instance: one running deployment of a component at its own address. Operator: the party that decides what runs on an instance and can stop it. The lighter rows start in Assignment 9. None of these instances is a default: the task force decides which ones the ecosystem uses, and an instance counts only once the decision log lists it (Rule 4). Groups can also run instances on their group VM or an extra VM from the course (Rule 1); the tutors help them make it reachable from every group VM, as Rule 4 (b) requires."
   },
   {
    "layout": "image",
@@ -274,7 +299,7 @@
     "alt": "The same diagram with the answer in colour: the WebSub hub of Switchboard is green, and the MQTT broker of HiveMQ and the resource directory of the course are teal.",
     "shadow": false
    },
-   "notes": "Answer to the question: the MQTT broker (only HiveMQ) and the discovery service (only the course's resource directory). The WebSub hubs have a fallback: Google and Switchboard, once both count. A group can give the broker a fallback, e.g. a broker on its own VM that another group uses."
+   "notes": "Answer to the question: the MQTT broker (only HiveMQ) and the discovery service (only the course's resource directory). The WebSub hubs have a fallback: Google and Switchboard, once both count. A group can give the broker a fallback, e.g. a broker on its own VM that another group uses. From Assignment 9, the pod server and the identity provider have no fallback either among the provided instances: only the course CSS provides them."
   },
   {
    "layout": "text",
