@@ -8,8 +8,11 @@ plantuml -tsvg rules-*.puml
 sed -i "s/font-family=\"sans-serif\"/font-family=\"'Gill Sans Nova','Gill Sans MT Pro','Gill Sans',sans-serif\"/g" rules-*.svg
 # PlantUML draws the small component icon with the box's border style; keep icons thin and solid.
 sed -i -E 's/(<rect [^>]*width="(15|4)" [^>]*stroke-width:)2\.5;stroke-dasharray:7,7;/\10.5;/g' rules-*.svg
-# The event-interaction graph from the Assignment 7 deck (TikZ; needs xelatex and pdftocairo).
+# The TikZ graphs (need xelatex and pdftocairo): the event interactions from the Assignment 7 deck,
+# and the loop between a group and the task force.
 tmp=$(mktemp -d)
-xelatex -interaction=nonstopmode -halt-on-error -output-directory="$tmp" event-interactions.tex >/dev/null
-pdftocairo -svg "$tmp/event-interactions.pdf" event-interactions.svg
+for g in event-interactions iteration; do
+  xelatex -interaction=nonstopmode -halt-on-error -output-directory="$tmp" "$g.tex" >/dev/null
+  pdftocairo -svg "$tmp/$g.pdf" "$g.svg"
+done
 rm -rf "$tmp"

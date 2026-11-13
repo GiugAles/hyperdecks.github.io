@@ -392,6 +392,14 @@
    }
   },
   {
+   "layout": "image",
+   "title": "Your Group and the Task Force Iterate",
+   "image": "img/iteration.svg",
+   "shadow": false,
+   "alt": "Loop diagram in two frames. Frame Your group: Argue for your role (arguments and demonstrators) and Implement (WebSub, MQTT, and your own ADRs). Frame Task force: Negotiate (delegates of all six groups) and Decide (one ADR per decision in the decision log). Arrows run clockwise: from Argue to Negotiate, labelled your delegate; from Negotiate to Decide, labelled may supersede earlier ADRs; from Decide to Implement, labelled cite its ADR in yours; from Implement back to Argue, labelled experience from the code.",
+   "notes": "Your delegate needs your support: arguments and demonstrators that strengthen their position in the negotiations. In your own ADRs, state how you implement a task force decision and cite its ADR, record the decisions your group takes on its own, and say where your role motivates a decision."
+  },
+  {
    "layout": "text",
    "title": "Debugging WebSub",
    "points": [
