@@ -939,8 +939,11 @@ class Html:
             return ('<tr class="light">' if light else "<tr>") + "".join(f"<td>{self.mark(c)}</td>" for c in cells) + "</tr>"
         rows = "".join(row(r) for r in s["rows"])
         many = " many" if len(s["rows"]) > 7 or len(s["columns"]) > 4 else ""
+        # widths: percent of the table width per column, e.g. to keep the columns still across a build-up;
+        # a column still grows where its content needs more room (phone)
+        cols = ("<colgroup>" + "".join(f'<col style="width:{w:g}%">' for w in s["widths"]) + "</colgroup>") if s.get("widths") else ""
         after = f'<p class="after" style="padding-left:0">{self.mark(s["after"])}</p>' if s.get("after") else ""
-        return self.main(s, f'<div class="tablewrap"><table class="t{many}"><thead><tr>{head}</tr></thead><tbody>{rows}</tbody></table></div>{after}')
+        return self.main(s, f'<div class="tablewrap"><table class="t{many}">{cols}<thead><tr>{head}</tr></thead><tbody>{rows}</tbody></table></div>{after}')
 
     def l_code(self, s):
         code = self.code(s["code"], s.get("style", "outline"), s.get("caption"))

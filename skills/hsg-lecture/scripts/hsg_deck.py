@@ -41,7 +41,7 @@ LAYOUTS = {
     "text":      ({"title"}, {"paragraphs", "points", "defs", "groups", "tiles", "after", "aside"}),
     "study":     ({"title", "groups"}, {"aside"}),
     "questions": ({"title"}, {"heading", "points", "after"}),
-    "table":     ({"title", "columns", "rows"}, {"after"}),
+    "table":     ({"title", "columns", "rows"}, {"after", "widths"}),
     "code":      ({"title", "code"}, {"paragraphs", "points", "style", "caption"}),
     "quiz":      ({"title", "items"}, {"aside"}),
     "task":      ({"title", "stamp"}, {"paragraphs", "url", "label"}),
@@ -388,6 +388,12 @@ def check(deck, base):
                               ' (a list of cells, or {"cells": [...], "light": true})')
             elif len(rows) > 10:
                 warnings.append(f"{w}: {len(rows)} rows; at most 10 fit, split the table")
+            ws = s.get("widths")
+            if ws is not None and isinstance(cols, list) and not (
+                    isinstance(ws, list) and len(ws) == len(cols)
+                    and all(isinstance(x, (int, float)) and not isinstance(x, bool) and x > 0 for x in ws)
+                    and sum(ws) <= 100):
+                errors.append(f"{w}: 'widths' must be {len(cols)} positive numbers, percent of the table width, at most 100 in sum")
         if lay == "task" and s.get("url") and not str(s["url"]).startswith(("http://", "https://")):
             errors.append(f"{w}: 'url' must start with http:// or https://")
         if lay == "image":
