@@ -179,7 +179,7 @@
    "alt": "The deployment diagram of the previous slide, with one frame per operator: Google, Switchboard, HiveMQ, the course, Group 2 and Group 5. The two MQTT brokers on the VMs of Group 2 are green and marked self-hosted.",
    "shadow": false,
    "notes": "Ask the room first; the next slide shows the answer.",
-   "lead": "Rule 2: your own VMs are self-hosted. Rule 3: every other operator is a foreign provider."
+   "lead": "Rule 2: your own VMs are self-hosted.\nRule 3: every other operator is a foreign provider."
   },
   {
    "layout": "image",
@@ -191,7 +191,7 @@
    "alt": "The same diagram with the answer: the frames of Google, Switchboard, HiveMQ, the course and Group 2 are highlighted in teal and titled foreign provider. Only the frame of Group 5 keeps the title operator. The two MQTT brokers of Group 2 are still marked self-hosted.",
    "shadow": false,
    "notes": "Every operator except Group 5, Group 2 included (Rule 3). Group 2's brokers are self-hosted for Group 2 (Rule 2) and come from a foreign provider for Group 5.",
-   "lead": "Rule 2: your own VMs are self-hosted. Rule 3: every other operator is a foreign provider."
+   "lead": "Rule 2: your own VMs are self-hosted.\nRule 3: every other operator is a foreign provider."
   },
   {
    "layout": "text",
@@ -232,8 +232,10 @@
   {
    "layout": "text",
    "title": "One Service, Several Components",
+   "paragraphs": [
+    "Rule 6: a service counts once for each component it provides"
+   ],
    "points": [
-    "Rule 6: a service counts once for each component it provides",
     "A Community Solid Server (CSS) is both a pod server and an identity provider",
     "You will learn more about the CSS in Assignment 9"
    ],
@@ -271,8 +273,10 @@
    "callout": {
     "text": "Which components have no fallback yet among the provided instances?"
    },
+   "paragraphs": [
+    "Rule 9: a second counting instance of the same component"
+   ],
    "points": [
-    "Rule 9: a second counting instance of the same component",
     "It has a different operator",
     "Groups use it alongside the first instance, or switch to it by changing configuration only"
    ],
@@ -289,8 +293,10 @@
    "callout": {
     "text": "Which components have no fallback yet among the provided instances?"
    },
+   "paragraphs": [
+    "Rule 9: a second counting instance of the same component"
+   ],
    "points": [
-    "Rule 9: a second counting instance of the same component",
     "It has a different operator",
     "Groups use it alongside the first instance, or switch to it by changing configuration only"
    ],
@@ -302,6 +308,16 @@
    "notes": "Answer to the question: the MQTT broker (only HiveMQ) and the discovery service (only the course's resource directory). The WebSub hubs have a fallback: Google and Switchboard, once both count. A group can give the broker a fallback, e.g. a broker on its own VM that another group uses. From Assignment 9, the pod server and the identity provider have no fallback either among the provided instances: only the course CSS provides them."
   },
   {
+   "layout": "text",
+   "title": "The Narrative Adds No Conditions",
+   "paragraphs": [
+    "Rule 10: the narrative parts of your role briefing, such as the memo, add no conditions to your objectives"
+   ],
+   "points": [
+    "Your final presentation assesses each objective against its “Achieved when” column"
+   ]
+  },
+  {
    "layout": "table",
    "title": "What Does the Task Force Decide?",
    "lead": "Examples for this week; each decision becomes an ADR.",
@@ -309,18 +325,45 @@
     "Decision",
     "Examples"
    ],
+   "widths": [
+    13,
+    87
+   ],
    "rows": [
     [
      "Events",
      "Auction launched, bid placed, auction awarded; who publishes and who receives each"
     ],
     [
-     "Instances",
-     "Which hubs, brokers and discovery service, with address, operator and fallback (Rule 9)"
+     "Payloads",
+     "Format and contents; the same for WebSub and MQTT? Reuse of the Assignment 7 representations"
+    ]
+   ]
+  },
+  {
+   "layout": "table",
+   "title": "What Does the Task Force Decide?",
+   "lead": "Examples for this week; each decision becomes an ADR.",
+   "columns": [
+    "Decision",
+    "Examples"
+   ],
+   "widths": [
+    13,
+    87
+   ],
+   "rows": [
+    [
+     "Events",
+     "Auction launched, bid placed, auction awarded; who publishes and who receives each"
     ],
     [
      "Payloads",
      "Format and contents; the same for WebSub and MQTT? Reuse of the Assignment 7 representations"
+    ],
+    [
+     "Instances",
+     "Which hubs, brokers and discovery service, with address, operator and fallback"
     ],
     [
      "WebSub",
@@ -342,12 +385,40 @@
    "title": "The Decision Log Decides What Counts",
    "points": [
     "Several objectives in your role briefing depend on the decisions of the task force",
-    "Record them as ADRs in the [decision log](https://github.com/unisg-scs-asse/pitas-hs26-itf/tree/main/adr) of the task force",
-    "Rule 10: the narrative parts of your role briefing, such as the memo, add no conditions to your objectives"
+    "Record them as ADRs in the [decision log](https://github.com/unisg-scs-asse/pitas-hs26-itf/tree/main/adr) of the task force"
    ],
    "aside": {
     "code": "# 2. WebSub hubs of the ecosystem\n\n## Considered Alternatives\n1. **Google hub only**\n2. **Google hub and Switchboard**\n\n## Decision\n...\n\n## Delegation Positions\n| Delegation | Position | Main argument |\n| Group 1    | ...      | ...           |\n| ...        |          |               |"
    }
+  },
+  {
+   "layout": "text",
+   "title": "Debugging WebSub",
+   "points": [
+    {
+     "text": "[websub.rocks](https://websub.rocks/) tests your publisher and your subscriber",
+     "sub": [
+      "Publisher: it subscribes through the hub you advertise and shows the notifications",
+      "Subscriber: discovery, subscribing and signatures"
+     ]
+    },
+    {
+     "text": "The course provides a WebSub hub; its implementation may be adjusted to the needs of the course",
+     "sub": [
+      "`/logs`: its recent log lines",
+      "`/status`: subscriptions, leases and the last delivery of each",
+      "Its address is in the [task force repository](https://github.com/unisg-scs-asse/pitas-hs26-itf/tree/main/infrastructure#websub-hub)"
+     ]
+    }
+   ],
+   "aside": {
+    "box": {
+     "heading": "Rule 5",
+     "style": "teal",
+     "text": "Until the task force decides differently, the course hub may serve as a demonstrator, but it does not count."
+    }
+   },
+   "notes": "websub.rocks asks you to sign in with a passkey. Its tests call the callback of your subscriber, so the subscriber must be reachable from the Internet, e.g. on your group VM. /logs takes ?filter=<words>&lines=<n>."
   },
   {
    "layout": "questions",
