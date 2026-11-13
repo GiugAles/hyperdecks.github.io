@@ -113,7 +113,7 @@
   {
    "layout": "table",
    "title": "PITAS Infrastructure Rules",
-   "lead": "They hold for Assignments 8 to 11. Your final presentation assesses each objective against its “Achieved when” column, using these terms.",
+   "lead": "They hold for Exercises 8 to 11. Your final presentation assesses each objective against its “Achieved when” column, using these terms.",
    "columns": [
     "Component",
     "Operator",
@@ -144,7 +144,7 @@
      "cells": [
       "Pod server",
       "the course",
-      "Community Solid Server (CSS) of the course, from Assignment 9"
+      "Community Solid Server (CSS) of the course, from Exercise 9"
      ],
      "light": true
     },
@@ -158,7 +158,7 @@
     }
    ],
    "after": "None of them is a default. To run your own, e.g. [pitas-hs26-websubhub](https://github.com/unisg-scs-asse/pitas-hs26-websubhub) or [Mosquitto](https://mosquitto.org/), talk to the tutors first.",
-   "notes": "The column headings are the terms of the rules. Component: a kind of shared service. Instance: one running deployment of a component at its own address. Operator: the party that decides what runs on an instance and can stop it. The lighter rows start in Assignment 9. None of these instances is a default: the task force decides which ones the ecosystem uses, and an instance counts only once the decision log lists it (Rule 4). Groups can also run instances on their group VM or an extra VM from the course (Rule 1); the tutors help them make it reachable from every group VM, as Rule 4 (b) requires."
+   "notes": "The column headings are the terms of the rules. Component: a kind of shared service. Instance: one running deployment of a component at its own address. Operator: the party that decides what runs on an instance and can stop it. The lighter rows start in Exercise 9. None of these instances is a default: the task force decides which ones the ecosystem uses, and an instance counts only once the decision log lists it (Rule 4). Groups can also run instances on their group VM or an extra VM from the course (Rule 1); the tutors help them make it reachable from every group VM, as Rule 4 (b) requires."
   },
   {
    "layout": "image",
@@ -237,7 +237,7 @@
    ],
    "points": [
     "A Community Solid Server (CSS) is both a pod server and an identity provider",
-    "You will learn more about the CSS in Assignment 9"
+    "You will learn more about the CSS in Exercise 9"
    ],
    "aside": {
     "image": "img/rules-css.svg",
@@ -305,7 +305,7 @@
     "alt": "The same diagram with the answer in colour: the WebSub hub of Switchboard is green, and the MQTT broker of HiveMQ and the resource directory of the course are teal.",
     "shadow": false
    },
-   "notes": "Answer to the question: the MQTT broker (only HiveMQ) and the discovery service (only the course's resource directory). The WebSub hubs have a fallback: Google and Switchboard, once both count. A group can give the broker a fallback, e.g. a broker on its own VM that another group uses. From Assignment 9, the pod server and the identity provider have no fallback either among the provided instances: only the course CSS provides them."
+   "notes": "Answer to the question: the MQTT broker (only HiveMQ) and the discovery service (only the course's resource directory). The WebSub hubs have a fallback: Google and Switchboard, once both count. A group can give the broker a fallback, e.g. a broker on its own VM that another group uses. From Exercise 9, the pod server and the identity provider have no fallback either among the provided instances: only the course CSS provides them."
   },
   {
    "layout": "text",
@@ -336,7 +336,7 @@
     ],
     [
      "Payloads",
-     "Format and contents; the same for WebSub and MQTT? Reuse of the Assignment 7 representations"
+     "Format and contents; the same for WebSub and MQTT? Reuse of the Exercise 7 representations"
     ]
    ]
   },
@@ -359,7 +359,7 @@
     ],
     [
      "Payloads",
-     "Format and contents; the same for WebSub and MQTT? Reuse of the Assignment 7 representations"
+     "Format and contents; the same for WebSub and MQTT? Reuse of the Exercise 7 representations"
     ],
     [
      "Instances",
