@@ -776,7 +776,8 @@
     {"k": "shape", "x": 61.948, "y": 31.271, "w": 16.397, "h": 7.193, "s": 5, "g": "straightConnector1", "ln": "#00802f", "lw": 0.104, "tail": "triangle"},
     {"k": "shape", "x": 36.56, "y": 46.0, "w": 41.12, "h": 6.4, "s": 7, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "What follows is an ", "sz": 1.875, "c": "#ffffff"}, {"t": "illustrated summary to accompany your required reading", "sz": 1.875, "b": 1, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ],
-   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000 · Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002"
+   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000 · Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002",
+   "id": "rest-constraints"
   },
   {
    "layout": "canvas",

@@ -1480,7 +1480,8 @@
     {"k": "shape", "x": 79.46, "y": 37.028, "w": 1.072, "h": 1.006, "rot": 330.0, "g": "ellipse", "fill": "#ffffff"},
     {"k": "shape", "x": 81.804, "y": 38.29, "w": 1.072, "h": 1.006, "rot": 30.0, "g": "ellipse", "fill": "#ffffff"},
     {"k": "pic", "src": "img/18727aabfd.png", "alt": "Bridging the theory/practice gap: Ambigrams, quotes, posters & more… –  Punya Mishra's Web", "x": 75.693, "y": 1.277, "w": 21.722, "h": 16.292}
-   ]
+   ],
+   "id": "exercise-10-11"
   },
   {
    "layout": "canvas",

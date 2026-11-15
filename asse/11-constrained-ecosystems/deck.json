@@ -252,6 +252,49 @@
    ]
   },
   {
+   "layout": "text",
+   "title": "Update 2026: Stateless MCP (SEP-2575)",
+   "groups": [
+    {
+     "heading": "Until now: a session",
+     "points": [
+      "A mandatory **initialize handshake** fixes version and capabilities",
+      "Load balancers need **sticky sessions**; failures **lose the session**"
+     ]
+    },
+    {
+     "heading": "SEP-2575 (May 2026): every request stands alone",
+     "points": [
+      "Version, client info and **capabilities** travel in **every request**",
+      "Servers **must** offer `server/discover`; clients **may** call it",
+      "Notifications via `subscriptions/listen`; `ping` is gone"
+     ]
+    }
+   ],
+   "callout": {
+    "text": "Any server instance can answer any request. **Which REST constraint is this?**"
+   },
+   "aside": {
+    "box": {
+     "heading": "Pay as you go",
+     "text": "Stateless by default, then **references to state**, stateful as a last resort",
+     "style": "teal"
+    }
+   },
+   "source": "[SEP-2575: Make MCP Stateless](https://github.com/modelcontextprotocol/modelcontextprotocol/pull/2575), merged 11.05.2026",
+   "id": "mcp-stateless",
+   "refs": [
+    {
+     "to": "07b#stateless",
+     "kind": "recap"
+    },
+    {
+     "to": "08#mcp-bot",
+     "kind": "recap"
+    }
+   ]
+  },
+  {
    "layout": "canvas",
    "title": "MCP and Registries",
    "items": [
