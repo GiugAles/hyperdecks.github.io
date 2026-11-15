@@ -1,0 +1,26 @@
+#!/bin/sh
+# Render the rule diagrams of the deck to SVG (needs plantuml).
+# PlantUML measures text with the font "sans-serif" and fixes each label's width;
+# the slides should show Gill Sans where it is installed, so swap in a font list.
+set -e
+cd "$(dirname "$0")"
+plantuml -tsvg rules-*.puml
+sed -i "s/font-family=\"sans-serif\"/font-family=\"'Gill Sans Nova','Gill Sans MT Pro','Gill Sans',sans-serif\"/g" rules-*.svg
+# PlantUML draws the small component icon with the box's border style; keep icons thin and solid.
+sed -i -E 's/(<rect [^>]*width="(15|4)" [^>]*stroke-width:)2\.5;stroke-dasharray:7,7;/\10.5;/g' rules-*.svg
+# The TikZ graphs (need xelatex and pdftocairo): the event interactions from the Exercise 7 deck,
+# the loop between a group and the task force, and the auction house narrative.
+tmp=$(mktemp -d)
+for g in event-interactions iteration narrative; do
+  xelatex -interaction=nonstopmode -halt-on-error -output-directory="$tmp" "$g.tex" >/dev/null
+  pdftocairo -svg "$tmp/$g.pdf" "$g.svg"
+done
+# The first step of the narrative: the same picture with only the customer and the empty frame.
+xelatex -interaction=nonstopmode -halt-on-error -output-directory="$tmp" -jobname=narrative-intro '\def\intro{}\input{narrative.tex}' >/dev/null
+pdftocairo -svg "$tmp/narrative-intro.pdf" narrative-intro.svg
+# The build-up of the event interactions: no graph, then WebSub only (the last step is event-interactions).
+for r in 0 1; do
+  xelatex -interaction=nonstopmode -halt-on-error -output-directory="$tmp" -jobname=event-interactions-$r "\\def\\reveal{$r}\\input{event-interactions.tex}" >/dev/null
+  pdftocairo -svg "$tmp/event-interactions-$r.pdf" event-interactions-$r.svg
+done
+rm -rf "$tmp"
