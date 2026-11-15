@@ -1003,6 +1003,16 @@
      "recap"
     ]
    ]
+  ],
+  [
+   "08",
+   "Towards the Exercise",
+   [
+    [
+     "e08#start",
+     "next"
+    ]
+   ]
   ]
  ],
  "inline": [
@@ -1022,7 +1032,7 @@
    "08",
    "Same Task, Different Protocols",
    "See Exercise 8",
-   "08#exercise-events"
+   "e08#start"
   ],
   [
    "08",
@@ -1580,7 +1590,7 @@
    "08",
    "Content Overview#3",
    "Exercise 8",
-   "08#exercise-events"
+   "e08#start"
   ],
   [
    "08",
@@ -1593,6 +1603,12 @@
    "Reminder on HTTP/1.1 vs. HTTP/2#2",
    "https://freecontent.manning.com/animation-http-1-1-vs-http-2-vs-http-2-with-push/",
    "https://web.archive.org/web/20251119132828/https://freecontent.manning.com/animation-http-1-1-vs-http-2-vs-http-2-with-push/"
+  ],
+  [
+   "08",
+   "Lecture Learning Goals",
+   "Assignment 8",
+   "e08#start"
   ]
  ],
  "syllabus": {
