@@ -18,4 +18,9 @@ done
 # The first step of the narrative: the same picture with only the customer and the empty frame.
 xelatex -interaction=nonstopmode -halt-on-error -output-directory="$tmp" -jobname=narrative-intro '\def\intro{}\input{narrative.tex}' >/dev/null
 pdftocairo -svg "$tmp/narrative-intro.pdf" narrative-intro.svg
+# The build-up of the event interactions: no graph, then WebSub only (the last step is event-interactions).
+for r in 0 1; do
+  xelatex -interaction=nonstopmode -halt-on-error -output-directory="$tmp" -jobname=event-interactions-$r "\\def\\reveal{$r}\\input{event-interactions.tex}" >/dev/null
+  pdftocairo -svg "$tmp/event-interactions-$r.pdf" event-interactions-$r.svg
+done
 rm -rf "$tmp"

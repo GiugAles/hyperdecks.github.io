@@ -9,6 +9,11 @@
 \usetikzlibrary{arrows.meta}
 \definecolor{HSGgreenDark}{HTML}{0A5F2D}
 \begin{document}
+% \reveal (see make.sh) builds the slide up: 0 shows neither graph, 1 only WebSub, 2 (default) both.
+% Hidden graphs keep their space so that the pictures have the same size.
+\providecommand{\reveal}{2}
+\ifnum\reveal<1 \tikzset{websub/.style={opacity=0}}\else\tikzset{websub/.style={}}\fi
+\ifnum\reveal<2 \tikzset{mqtt/.style={opacity=0}}\else\tikzset{mqtt/.style={}}\fi
 % Scaled up so that the slide, which never enlarges a picture, can show it at full width.
 \scalebox{2.5}{\begin{tikzpicture}[
     x=1cm, y=1cm,
@@ -18,6 +23,7 @@
     link/.style={<->, very thick, shorten <=3pt, shorten >=3pt},
     uni/.style={->, very thick, shorten <=3pt, shorten >=3pt}]
 
+  \begin{scope}[websub]
   % W3C WebSub: every group subscribes to every other group; groups
   % register with the resource directory and share a resource list.
   \node[grp] (a1)  at (1.0,-0.75) {Group 1};
@@ -37,7 +43,9 @@
      \url{http://group2.ex.org/auctions/}\\
      \ldots};
   \node[font=\small, anchor=base] at (3.1,0.15) {W3C WebSub};
+  \end{scope}
 
+  \begin{scope}[mqtt]
   % MQTT: hub-and-spoke via an event broker.
   \node[grp] (b1)  at (8.7,-0.75)   {Group 1};
   \node[grp] (b2)  at (13.25,-0.75) {Group 2};
@@ -47,5 +55,6 @@
   \draw[link] (b2) -- (brk);
   \draw[link] (b3) -- (brk);
   \node[font=\small, anchor=base] at (10.975,0.15) {MQTT};
+  \end{scope}
 \end{tikzpicture}}
 \end{document}
