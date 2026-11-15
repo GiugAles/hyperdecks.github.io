@@ -82,6 +82,11 @@ h2{font-size:var(--s-h2);font-weight:400;line-height:1.08;letter-spacing:-.005em
 .source{position:absolute;left:3.92U;bottom:2.1U;max-width:84U;font-size:var(--s-tiny);line-height:1.3;color:var(--quiet);z-index:2}
 .dfoot{position:absolute;left:3.92U;bottom:2.1U;font-size:var(--s-tiny);color:var(--quiet);z-index:2}
 .source~.dfoot{display:none}
+/* source_at corner: the credit sits right aligned above the slide number, and the footer line stays */
+.source.corner{left:auto;right:3.94U;bottom:5.3U;max-width:60U;text-align:right}
+.source.corner~.dfoot{display:block}
+.src-corner .frame{padding-bottom:8.4U}  /* keeps two lines of the credit free of the content */
+.src-corner .pic img{max-height:28U}
 /* the slide number in the green HSG tab, bottom right */
 .pn{position:absolute;right:3.94U;top:51.41U;width:2.33U;height:2.56U;z-index:3;display:grid;place-items:center;padding:.45U 0 0 .45U;
   font-size:1.1U;font-weight:400;color:#fff;font-variant-numeric:tabular-nums}
@@ -397,6 +402,9 @@ body.show-notes .notes-view{display:block}
   .tagline{font-size:15px}
   .l-section .wedge{width:auto;height:90px;margin-top:40px}
   .source,.dfoot{position:static;display:block;margin-top:24px}
+  .source.corner{text-align:left;max-width:none}
+  .src-corner .frame{padding-bottom:70px}
+  .src-corner .pic img{max-height:none}
   .pn{position:absolute;top:auto;bottom:16px;right:16px;width:30px;height:33px;font-size:12px}
   .refs{position:static;flex-wrap:wrap;justify-content:flex-start;margin:0 0 14px;max-width:none}
   a.ref{height:auto;min-height:30px;padding:6px 12px;white-space:normal;line-height:1.2;border-radius:16px}
@@ -1201,7 +1209,7 @@ class Html:
             extra = ""
             if lay not in ("title", "section"):
                 if s.get("source"):
-                    extra += f'<p class="source">{self.mark(s["source"])}</p>'
+                    extra += f'<p class="source{" corner" if s.get("source_at") == "corner" else ""}">{self.mark(s["source"])}</p>'
                 if d.get("footer"):
                     extra += f'<p class="dfoot">{esc(d["footer"])}</p>'
                 extra += f'<span class="pn" aria-hidden="true">{TAB}{n}</span>'
@@ -1213,6 +1221,7 @@ class Html:
             t = f' data-time="{esc(str(s["time"]))}"' if s.get("time") else ""
             bare = " bare" if lay == "questions" and not s.get("points") else ""
             bare += " ta-t" if s.get("ta") == "t" else ""
+            bare += " src-corner" if s.get("source_at") == "corner" else ""
             steps = max([i.get("s", 0) for i in s.get("items", [])] + [p.get("s", 0) for i in s.get("items", [])
                         for p in (i.get("tx") or {}).get("p", [])] + [a["s"] for i in s.get("items", []) for a in i.get("an", [])]
                         + [0]) if lay == "canvas" else 0
@@ -1294,7 +1303,7 @@ OVERFLOW_JS = """() => {
       if(r.width&&r.right>p.left&&r.left<p.right&&r.bottom>p.top&&r.top<p.bottom){bad.push('something covers the slide number');break}}}
   if(src){const q=src.getBoundingClientRect();
     for(const el of f.querySelectorAll('.main>*')){const r=el.getBoundingClientRect();
-      if(r.bottom>q.top+1&&r.left<q.right){bad.push('the content runs into the source line');break}}}
+      if(r.bottom>q.top+1&&r.left<q.right&&r.right>q.left){bad.push('the content runs into the source line');break}}}
   const rf=s.querySelector('.refs');
   if(rf&&!matchMedia('(max-width:999px)').matches){const q=rf.getBoundingClientRect();
     for(const el of s.querySelectorAll('.cv .tx p,.cv img,.cv svg path,.cv table,.frame p:not(.dfoot):not(.source),.frame img,.frame li,.frame .box')){

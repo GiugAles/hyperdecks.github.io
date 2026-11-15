@@ -30,7 +30,7 @@ SALMON, TEAL, SAND, YELLOW = "#EB6969", "#73A5AF", "#E1D7C3", "#FFF04B"
 ROW_A, ROW_B = "#CBD8CD", "#E7EDE8"   # table rows: green at 20% and 10% on white
 BOX_STYLES = ("green", "outline", "teal")
 
-COMMON = {"layout", "title", "lead", "callout", "source", "notes", "time", "id", "refs", "refs_at", "decor",
+COMMON = {"layout", "title", "lead", "callout", "source", "source_at", "notes", "time", "id", "refs", "refs_at", "decor",
           "transition"}   # transition: copied from PowerPoint
 NO_LEAD = {"title", "section", "task", "quote"}
 # layout: (required fields, optional fields)
@@ -126,7 +126,7 @@ def words(s):
     if isinstance(s, dict):
         return " ".join(words(v) for k, v in s.items()
                         if k not in ("layout", "notes", "image", "photo", "alt", "url", "time", "style", "code",
-                                     "shadow", "kind", "current", "break_after", "from", "to", "id", "refs", "refs_at", "href",
+                                     "shadow", "kind", "current", "break_after", "from", "to", "id", "refs", "refs_at", "source_at", "href",
                                      "decor", "icon"))
     return ""
 
@@ -216,6 +216,8 @@ def check(deck, base):
         req, opt = LAYOUTS[lay]
         _keys(s, req | {"layout"}, opt | COMMON, w, errors)
         num = lambda v: isinstance(v, (int, float)) and not isinstance(v, bool)
+        if "source_at" in s and (s["source_at"] != "corner" or "source" not in s):
+            errors.append(f"{w}: 'source_at' is \"corner\" and needs a 'source'")
         for i, it in enumerate(s.get("decor", []) if isinstance(s.get("decor", []), list) else [None], 1):
             if _keys(it, {"x", "y", "size"}, {"emoji", "rot"}, f"{w}, decor {i}", errors) and not all(
                     num(it[k]) for k in ("x", "y", "size") if k in it):
