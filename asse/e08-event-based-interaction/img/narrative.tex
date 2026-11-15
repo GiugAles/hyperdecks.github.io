@@ -1,0 +1,48 @@
+% The auction house narrative: a customer's job request, served directly or auctioned off,
+% in an ecosystem whose common goal is to serve as many customers as possible. Built to SVG by make.sh.
+\documentclass[border=3pt]{standalone}
+\usepackage{tikz}
+\usepackage{fontspec}
+\setsansfont{GilliusADFNo2}[Path=../../assets/, Extension=.otf, UprightFont=*-Regular, BoldFont=*-Bold]
+\renewcommand{\familydefault}{\sfdefault}
+\usetikzlibrary{arrows.meta, positioning, fit, backgrounds}
+\definecolor{HSGgreen}{HTML}{00802F}
+\definecolor{HSGgreenLight}{HTML}{E7EDE8}
+\definecolor{HSGteal}{HTML}{73A5AF}
+\definecolor{HSGtealLight}{HTML}{DCE9EC}
+\definecolor{ink}{HTML}{1A1A1A}
+\definecolor{frame}{HTML}{595959}
+\begin{document}
+% With \intro defined (narrative-intro, see make.sh) only the customer, the arrow and the empty frame
+% are visible; the hidden parts keep their space so that both pictures have the same size.
+\ifdefined\intro\tikzset{hide/.style={opacity=0}}\else\tikzset{hide/.style={}}\fi
+% Scaled up so that the slide, which never enlarges a picture, can show it at full width.
+\scalebox{2.5}{\begin{tikzpicture}[
+    x=1cm, y=1cm, font=\small, text=ink,
+    box/.style={rounded corners=3pt, draw, thick, text width=3.1cm, minimum height=1.35cm,
+                align=center, inner sep=4pt},
+    plain/.style={box, draw=frame, fill=white},
+    served/.style={box, draw=HSGgreen, fill=HSGgreenLight},
+    auction/.style={box, draw=HSGteal, fill=HSGtealLight},
+    >={Stealth[length=7pt, width=6pt]},
+    flow/.style={->, very thick, draw=ink, shorten <=2pt, shorten >=2pt},
+    lab/.style={font=\footnotesize, fill=white, inner sep=2pt}]
+
+  \node[plain] (cust) at (0, 0)      {\textbf{Customer}\\[1pt]{\footnotesize has a job to get done}};
+  \node[plain, hide] (a)    at (4.6, 0)    {\textbf{Auction house A}\\[1pt]{\footnotesize receives the job request}};
+  \node[served, hide] (self) at (13.4, 1.7) {\textbf{A handles the job}\\[1pt]{\footnotesize all credit to A}};
+  \node[auction, hide] (off) at (9.0, -1.7) {\textbf{A auctions off\\the job request}\\[1pt]{\footnotesize B, C, \dots{} bid}};
+  \node[served, hide] (b)    at (13.4, -1.7) {\textbf{B handles the job}\\[1pt]{\footnotesize credit shared by A and B}};
+
+  \draw[flow] (cust) -- node[lab, above=1pt] {asks} (a);
+  \draw[flow, hide] (a.north) |- node[lab, pos=0.75, above=1pt] {can handle it: no need to share} (self);
+  \draw[flow, hide] (a.south) |- node[lab, pos=0.75, below=1pt] {cannot handle it} (off);
+  \draw[flow, hide] (off) -- node[lab, above=1pt] {B wins} (b);
+
+  \begin{scope}[on background layer]
+    \node[draw=frame, rounded corners=4pt, inner sep=10pt, fit=(a)(self)(off)(b),
+          label={[font=\small\bfseries, text=frame, text height=1.6ex, text depth=.4ex]above:Ecosystem of auction houses},
+          label={[hide, font=\small, text=HSGgreen, text height=1.6ex, text depth=.4ex]below:Common goal: as many served customers as possible}] {};
+  \end{scope}
+\end{tikzpicture}}
+\end{document}

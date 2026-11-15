@@ -22,102 +22,34 @@
    ]
   },
   {
-   "layout": "syllabus",
-   "title": "Syllabus",
-   "items": [
-    {
-     "date": "14.09.2026",
-     "title": "Fundamentals of Software Architecture"
-    },
-    {
-     "date": "21.09.2026",
-     "title": "Hard Parts I: Service Granularity"
-    },
-    {
-     "date": "28.09.2026",
-     "title": "Performance Testing and Fitness Functions"
-    },
-    {
-     "date": "05.10.2026",
-     "title": "Hard Parts II: Code Sharing"
-    },
-    {
-     "date": "12.10.2026",
-     "title": "Hard Parts III: Data Ownership and Access"
-    },
-    {
-     "date": "19.10.2026",
-     "title": "Intermediate Presentations"
-    },
-    {
-     "date": "09.11.2026",
-     "title": "Principled Architectural Design for Distributed Information Systems",
-     "href": "07b#start"
-    },
-    {
-     "date": "16.11.2026",
-     "title": "Interaction Styles"
-    },
-    {
-     "date": "23.11.2026",
-     "title": "Decoupling and Interoperability",
-     "href": "09#start"
-    },
-    {
-     "date": "30.11.2026",
-     "title": "Hypermedia APIs",
-     "href": "10#start"
-    },
-    {
-     "date": "07.12.2026",
-     "title": "Interaction with AI Agents and with Physical Devices",
-     "href": "11#start"
-    },
-    {
-     "date": "14.12.2026",
-     "title": "Final Presentations"
-    }
-   ],
-   "current": 8,
-   "break_after": 6,
-   "assignments": [
-    {
-     "title": "Event Storming, Architecture Characteristics, ADRs, Service Granularity, Spring 101",
-     "from": 1,
-     "to": 2
-    },
-    {
-     "title": "Hexagonal Architecture, Persistence, Interactions, Testing",
-     "from": 3,
-     "to": 5
-    },
-    {
-     "title": "Uniform Interaction, Event-Driven Interaction, Hypermedia Ecosystems",
-     "from": 7,
-     "to": 9
-    },
-    {
-     "title": "Semantic Hypermedia, Agents and the Web of Things",
-     "from": 10,
-     "to": 11
-    }
-   ]
+   "layout": "image",
+   "title": "The Auction House Narrative",
+   "image": "img/narrative-intro.svg",
+   "shadow": false,
+   "alt": "A customer, who has a job to get done, asks into an empty frame labelled Ecosystem of auction houses."
   },
   {
    "layout": "image",
-   "title": "Today",
+   "title": "The Auction House Narrative",
+   "image": "img/narrative.svg",
+   "shadow": false,
+   "alt": "Flow diagram. A customer, who has a job to get done, asks auction house A, which receives the job request. Auction house A and the outcomes sit in a frame labelled Ecosystem of auction houses. If A can handle the job, an arrow labelled no need to share leads to A handles the job, all credit to A. If A cannot handle it, an arrow leads to A auctions off the job request, where B, C and others bid; an arrow labelled B wins leads to B handles the job, credit shared by A and B. Under the frame: Common goal: as many served customers as possible.",
+   "notes": "To get their jobs handled, customers ask an auction house. If the auction house can handle the job itself, it keeps all the credit and involves no one else. If it cannot, it can still hope for part of the credit by auctioning off the job request to the other auction houses. The ecosystem of auction houses shares one goal: to serve as many customers as possible. That is why the auction houses of the six groups must interoperate."
+  },
+  {
+   "layout": "image",
+   "title": "How to Enable Event-Based Interactions?",
    "image": "img/event-interactions.svg",
    "shadow": false,
    "alt": "Two graphs side by side. W3C WebSub: Groups 1, 2 and 3 are linked with each other in both directions, and each points to a resource directory, which holds a resource list of auction URLs such as http://group1.ex.org/auctions/. MQTT: Groups 1, 2 and 3 are each linked in both directions to one event broker in the middle."
   },
   {
    "layout": "table",
-   "title": "PITAS Infrastructure Rules",
-   "lead": "They hold for Exercises 8 to 11. Your final presentation assesses each objective against its “Achieved when” column, using these terms.",
+   "title": "Ecosystem Components",
    "columns": [
     "Component",
-    "Operator",
-    "Instance"
+    "Operator Examples",
+    "Instance Examples"
    ],
    "rows": [
     [
@@ -157,8 +89,138 @@
      "light": true
     }
    ],
-   "after": "None of them is a default. To run your own, e.g. [pitas-hs26-websubhub](https://github.com/unisg-scs-asse/pitas-hs26-websubhub) or [Mosquitto](https://mosquitto.org/), talk to the tutors first.",
-   "notes": "The column headings are the terms of the rules. Component: a kind of shared service. Instance: one running deployment of a component at its own address. Operator: the party that decides what runs on an instance and can stop it. The lighter rows start in Exercise 9. None of these instances is a default: the task force decides which ones the ecosystem uses, and an instance counts only once the decision log lists it (Rule 4). Groups can also run instances on their group VM or an extra VM from the course (Rule 1); the tutors help them make it reachable from every group VM, as Rule 4 (b) requires."
+   "notes": "Terms of the rules:\n• Component: a kind of shared service\n• Instance: one running deployment of a component at its own address\n• Operator: the party that decides what runs on an instance and can stop it\n\nThe lighter rows start in Exercise 9. No instance is a default: it counts only once the decision log of the task force lists it (Rule 4). Groups can also run instances on their group VM or an extra VM from the course (Rule 1). The tutors help to make them reachable from every group VM at a public hostname (Rule 4 (b)); for MQTT, over TLS on port 443 through Traefik, or on a port the tutors open."
+  },
+  {
+   "layout": "table",
+   "title": "Ecosystem Components",
+   "columns": [
+    "Component",
+    "Operator Examples",
+    "Instance Examples"
+   ],
+   "rows": [
+    [
+     "WebSub hub",
+     "Google",
+     "Google WebSub hub, [websub.appspot.com](https://websub.appspot.com/)"
+    ],
+    [
+     "WebSub hub",
+     "Switchboard",
+     "Switchboard, an open-source hub, [switchboard.p3k.io](https://switchboard.p3k.io/)"
+    ],
+    [
+     "MQTT broker",
+     "HiveMQ",
+     "HiveMQ public broker, `broker.hivemq.com` ([dashboard](http://www.mqtt-dashboard.com/))"
+    ],
+    [
+     "Discovery service",
+     "the course",
+     "PITAS resource directory, where groups register their auction feeds ([API](https://app.swaggerhub.com/apis/PITAS/auction-house/1.0.0))"
+    ],
+    {
+     "cells": [
+      "Pod server",
+      "the course",
+      "Community Solid Server (CSS) of the course, from Exercise 9"
+     ],
+     "light": true
+    },
+    {
+     "cells": [
+      "Identity provider",
+      "the course",
+      "The same CSS, as Solid-OIDC issuer"
+     ],
+     "light": true
+    }
+   ],
+   "notes": "Terms of the rules:\n• Component: a kind of shared service\n• Instance: one running deployment of a component at its own address\n• Operator: the party that decides what runs on an instance and can stop it\n\nThe lighter rows start in Exercise 9. No instance is a default: it counts only once the decision log of the task force lists it (Rule 4). Groups can also run instances on their group VM or an extra VM from the course (Rule 1). The tutors help to make them reachable from every group VM at a public hostname (Rule 4 (b)); for MQTT, over TLS on port 443 through Traefik, or on a port the tutors open.",
+   "after": "The instances that the task force repository rolls out are listed under [Managed components](https://github.com/unisg-scs-asse/pitas-hs26-itf/blob/main/infrastructure/README.md#managed-components)."
+  },
+  {
+   "layout": "table",
+   "title": "What Does the Task Force Decide?",
+   "lead": "Examples for this week; each decision becomes an ADR.",
+   "columns": [
+    "Decision",
+    "Examples"
+   ],
+   "widths": [
+    13,
+    87
+   ],
+   "rows": [
+    [
+     "Events",
+     "Auction launched, bid placed, auction awarded; who publishes and who receives each"
+    ],
+    [
+     "Payloads",
+     "Format and contents; the same for WebSub and MQTT? Reuse of the Exercise 7 representations"
+    ]
+   ]
+  },
+  {
+   "layout": "table",
+   "title": "What Does the Task Force Decide?",
+   "lead": "Examples for this week; each decision becomes an ADR.",
+   "columns": [
+    "Decision",
+    "Examples"
+   ],
+   "widths": [
+    13,
+    87
+   ],
+   "rows": [
+    [
+     "Events",
+     "Auction launched, bid placed, auction awarded; who publishes and who receives each"
+    ],
+    [
+     "Payloads",
+     "Format and contents; the same for WebSub and MQTT? Reuse of the Exercise 7 representations"
+    ],
+    [
+     "Instances",
+     "Which hubs, brokers and discovery service, with address, operator and fallback"
+    ],
+    [
+     "WebSub",
+     "One topic per auction house? Full content or a link? Signed with `hub.secret`?"
+    ],
+    [
+     "MQTT",
+     "Topic structure and wildcards, QoS per event, retained messages, TCP, TLS or WebSockets"
+    ],
+    [
+     "Discovery",
+     "How an application finds the feeds of the other groups, and what it registers where"
+    ]
+   ],
+   "notes": "MQTT exchanges messages, whereas WebSub observes Web resources: rather than copying the WebSub design, the task force should approach MQTT with a fresh mind. Under Rule 4, the list of instances decides which instances count."
+  },
+  {
+   "layout": "text",
+   "title": "The Decision Log Decides What Counts",
+   "points": [
+    "Several objectives in your role briefing depend on the decisions of the task force",
+    "Record them as ADRs in the [decision log](https://github.com/unisg-scs-asse/pitas-hs26-itf/tree/main/adr) of the task force"
+   ],
+   "aside": {
+    "code": "# 2. WebSub hubs of the ecosystem\n\n## Considered Alternatives\n1. **Google hub only**\n2. **Google hub and Switchboard**\n\n## Decision\n...\n\n## Delegation Positions\n| Delegation | Position | Main argument |\n| Group 1    | ...      | ...           |\n| ...        |          |               |"
+   }
+  },
+  {
+   "layout": "image",
+   "title": "Your Group and the Task Force Iterate",
+   "image": "img/iteration.svg",
+   "shadow": false,
+   "alt": "Loop diagram in two frames. Frame Your group: Argue for your role (arguments and demonstrators) and Implement (WebSub, MQTT, and your own ADRs). Frame Task force: Negotiate (delegates of all six groups) and Decide (one ADR per decision in the decision log). Arrows run clockwise: from Argue to Negotiate, labelled your delegate; from Negotiate to Decide, labelled may supersede earlier ADRs; from Decide to Implement, labelled cite its ADR in yours; from Implement back to Argue, labelled experience from the code.",
+   "notes": "Your delegate needs your support: arguments and demonstrators that strengthen their position in the negotiations. In your own ADRs, state how you implement a task force decision and cite its ADR, record the decisions your group takes on its own, and say where your role motivates a decision."
   },
   {
    "layout": "image",
@@ -198,7 +260,7 @@
    "title": "When Does an Instance Count?",
    "points": [
     "(a) the decision log lists it",
-    "(b) it is reachable from every group VM",
+    "(b) every group VM reaches it at its public hostname or address, not at a private one",
     "(c) a group other than its operator uses it in a demonstration",
     "(d) if a group operates it, it runs on that group's VM or an extra VM from the course"
    ],
@@ -206,7 +268,7 @@
     "image": "img/rules-counts.svg",
     "alt": "Group 5's PITAS app uses an MQTT broker on the Group 2 VM, marked counts, and, through a tunnel, an MQTT broker on a Group 2 laptop, marked not counted.",
     "shadow": false,
-    "caption": "Both brokers are listed and reachable. The one on the laptop fails (d)."
+    "caption": "Both brokers are listed and reachable at public hostnames. The one on the laptop fails (d)."
    },
    "paragraphs": [
     "Rule 4: an instance counts exactly when"
@@ -316,88 +378,6 @@
    "points": [
     "Your final presentation assesses each objective against its “Achieved when” column"
    ]
-  },
-  {
-   "layout": "table",
-   "title": "What Does the Task Force Decide?",
-   "lead": "Examples for this week; each decision becomes an ADR.",
-   "columns": [
-    "Decision",
-    "Examples"
-   ],
-   "widths": [
-    13,
-    87
-   ],
-   "rows": [
-    [
-     "Events",
-     "Auction launched, bid placed, auction awarded; who publishes and who receives each"
-    ],
-    [
-     "Payloads",
-     "Format and contents; the same for WebSub and MQTT? Reuse of the Exercise 7 representations"
-    ]
-   ]
-  },
-  {
-   "layout": "table",
-   "title": "What Does the Task Force Decide?",
-   "lead": "Examples for this week; each decision becomes an ADR.",
-   "columns": [
-    "Decision",
-    "Examples"
-   ],
-   "widths": [
-    13,
-    87
-   ],
-   "rows": [
-    [
-     "Events",
-     "Auction launched, bid placed, auction awarded; who publishes and who receives each"
-    ],
-    [
-     "Payloads",
-     "Format and contents; the same for WebSub and MQTT? Reuse of the Exercise 7 representations"
-    ],
-    [
-     "Instances",
-     "Which hubs, brokers and discovery service, with address, operator and fallback"
-    ],
-    [
-     "WebSub",
-     "One topic per auction house? Full content or a link? Signed with `hub.secret`?"
-    ],
-    [
-     "MQTT",
-     "Topic structure and wildcards, QoS per event, retained messages, TCP, TLS or WebSockets"
-    ],
-    [
-     "Discovery",
-     "How an application finds the feeds of the other groups, and what it registers where"
-    ]
-   ],
-   "notes": "MQTT exchanges messages, whereas WebSub observes Web resources: rather than copying the WebSub design, the task force should approach MQTT with a fresh mind. Under Rule 4, the list of instances decides which instances count."
-  },
-  {
-   "layout": "text",
-   "title": "The Decision Log Decides What Counts",
-   "points": [
-    "Several objectives in your role briefing depend on the decisions of the task force",
-    "Record them as ADRs in the [decision log](https://github.com/unisg-scs-asse/pitas-hs26-itf/tree/main/adr) of the task force"
-   ],
-   "aside": {
-    "code": "# 2. WebSub hubs of the ecosystem\n\n## Considered Alternatives\n1. **Google hub only**\n2. **Google hub and Switchboard**\n\n## Decision\n...\n\n## Delegation Positions\n| Delegation | Position | Main argument |\n| Group 1    | ...      | ...           |\n| ...        |          |               |"
-   }
-  },
-  {
-   "layout": "image",
-   "title": "Your Group and the Task Force Iterate",
-   "image": "img/iteration.svg",
-   "shadow": false,
-   "alt": "Loop diagram in two frames. Frame Your group: Argue for your role (arguments and demonstrators) and Implement (WebSub, MQTT, and your own ADRs). Frame Task force: Negotiate (delegates of all six groups) and Decide (one ADR per decision in the decision log). Arrows run clockwise: from Argue to Negotiate, labelled your delegate; from Negotiate to Decide, labelled may supersede earlier ADRs; from Decide to Implement, labelled cite its ADR in yours; from Implement back to Argue, labelled experience from the code.",
-   "notes": "Your delegate needs your support: arguments and demonstrators that strengthen their position in the negotiations. In your own ADRs, state how you implement a task force decision and cite its ADR, record the decisions your group takes on its own, and say where your role motivates a decision."
   },
   {
    "layout": "text",

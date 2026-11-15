@@ -9,10 +9,13 @@ sed -i "s/font-family=\"sans-serif\"/font-family=\"'Gill Sans Nova','Gill Sans M
 # PlantUML draws the small component icon with the box's border style; keep icons thin and solid.
 sed -i -E 's/(<rect [^>]*width="(15|4)" [^>]*stroke-width:)2\.5;stroke-dasharray:7,7;/\10.5;/g' rules-*.svg
 # The TikZ graphs (need xelatex and pdftocairo): the event interactions from the Exercise 7 deck,
-# and the loop between a group and the task force.
+# the loop between a group and the task force, and the auction house narrative.
 tmp=$(mktemp -d)
-for g in event-interactions iteration; do
+for g in event-interactions iteration narrative; do
   xelatex -interaction=nonstopmode -halt-on-error -output-directory="$tmp" "$g.tex" >/dev/null
   pdftocairo -svg "$tmp/$g.pdf" "$g.svg"
 done
+# The first step of the narrative: the same picture with only the customer and the empty frame.
+xelatex -interaction=nonstopmode -halt-on-error -output-directory="$tmp" -jobname=narrative-intro '\def\intro{}\input{narrative.tex}' >/dev/null
+pdftocairo -svg "$tmp/narrative-intro.pdf" narrative-intro.svg
 rm -rf "$tmp"
