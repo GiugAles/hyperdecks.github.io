@@ -38,7 +38,7 @@
   },
   {
    "layout": "image",
-   "title": "How to Enable Event-Based Interactions?",
+   "title": "Enabling Event-Based Interactions",
    "image": "img/event-interactions-0.svg",
    "shadow": false,
    "alt": "An empty area where the next slides show two graphs.",
@@ -46,15 +46,172 @@
   },
   {
    "layout": "image",
-   "title": "How to Enable Event-Based Interactions?",
+   "title": "Enabling Event-Based Interactions",
    "image": "img/event-interactions-1.svg",
    "shadow": false,
    "alt": "W3C WebSub: Groups 1, 2 and 3 are linked with each other in both directions, and each points to a resource directory, which holds a resource list of auction URLs such as http://group1.ex.org/auctions/. The right half of the slide is empty.",
-   "notes": "• W3C WebSub: a brokered publish/subscribe protocol for observing resources on the open Web, at Web scale\n• E.g. observe the auction houses of the other groups to be notified when they launch new auctions\n• Your auction house publishes the events of the ecosystem design and gets notified of those of the other groups, through the hubs and the discovery service the task force chose\n• A publisher advertises its hubs in the Link header of a topic (rel=\"hub\"); subscribers discover them there at run time instead of hard-coding a hub\n• Test your publisher and subscriber with websub.rocks"
+   "notes": "• W3C WebSub: a brokered publish/subscribe protocol for observing resources on the open Web, at Web scale\n• E.g. observe the auction houses of the other groups to be notified when they launch new auctions"
+  },
+  {
+   "layout": "canvas",
+   "title": "Enabling Event-Based Interactions",
+   "items": [
+    {
+     "k": "pic",
+     "src": "img/event-interactions-1.svg",
+     "alt": "W3C WebSub: Groups 1, 2 and 3 are linked with each other in both directions, and each points to a resource directory, which holds a resource list of auction URLs such as http://group1.ex.org/auctions/.",
+     "x": 7.794,
+     "y": 15.324,
+     "w": 84.412,
+     "h": 34.0
+    },
+    {
+     "k": "shape",
+     "x": 50.5,
+     "y": 15.3,
+     "w": 45.6,
+     "h": 34.0,
+     "g": "rect",
+     "tx": {
+      "p": [
+       {
+        "al": "l",
+        "r": [
+         {
+          "t": "Debugging WebSub",
+          "sz": 1.6,
+          "b": 1
+         }
+        ],
+        "sa": 0.6
+       },
+       {
+        "al": "l",
+        "bu": "-",
+        "pl": 2.2,
+        "in": -2.2,
+        "sb": 0.5,
+        "r": [
+         {
+          "t": "websub.rocks",
+          "sz": 1.6,
+          "href": "https://websub.rocks/"
+         },
+         {
+          "t": " tests your publisher and your subscriber",
+          "sz": 1.6
+         }
+        ]
+       },
+       {
+        "al": "l",
+        "bu": "-",
+        "pl": 4.4,
+        "in": -2.2,
+        "sb": 0.2,
+        "r": [
+         {
+          "t": "Publisher: it subscribes through the hub you advertise and shows the notifications",
+          "sz": 1.6
+         }
+        ]
+       },
+       {
+        "al": "l",
+        "bu": "-",
+        "pl": 4.4,
+        "in": -2.2,
+        "sb": 0.2,
+        "r": [
+         {
+          "t": "Subscriber: discovery, subscribing and signatures",
+          "sz": 1.6
+         }
+        ]
+       },
+       {
+        "al": "l",
+        "bu": "-",
+        "pl": 2.2,
+        "in": -2.2,
+        "sb": 0.5,
+        "r": [
+         {
+          "t": "The course provides a WebSub hub; its implementation may be adjusted to the needs of the course",
+          "sz": 1.6
+         }
+        ]
+       },
+       {
+        "al": "l",
+        "bu": "-",
+        "pl": 4.4,
+        "in": -2.2,
+        "sb": 0.2,
+        "r": [
+         {
+          "t": "/logs",
+          "sz": 1.6,
+          "f": "mono"
+         },
+         {
+          "t": ": its recent log lines",
+          "sz": 1.6
+         }
+        ]
+       },
+       {
+        "al": "l",
+        "bu": "-",
+        "pl": 4.4,
+        "in": -2.2,
+        "sb": 0.2,
+        "r": [
+         {
+          "t": "/status",
+          "sz": 1.6,
+          "f": "mono"
+         },
+         {
+          "t": ": subscriptions, leases and the last delivery of each",
+          "sz": 1.6
+         }
+        ]
+       },
+       {
+        "al": "l",
+        "bu": "-",
+        "pl": 4.4,
+        "in": -2.2,
+        "sb": 0.2,
+        "r": [
+         {
+          "t": "Its address is in the ",
+          "sz": 1.6
+         },
+         {
+          "t": "task force repository",
+          "sz": 1.6,
+          "href": "https://github.com/unisg-scs-asse/pitas-hs26-itf/blob/main/infrastructure/README.md#managed-components"
+         }
+        ]
+       }
+      ],
+      "a": "t",
+      "i": [
+       0,
+       0,
+       0,
+       0
+      ]
+     }
+    }
+   ],
+   "notes": "• websub.rocks asks you to sign in with a passkey\n• Its tests call the callback of your subscriber, so the subscriber must be reachable from the Internet, e.g. on your group VM\n• /logs takes ?filter=<words>&lines=<n>"
   },
   {
    "layout": "image",
-   "title": "How to Enable Event-Based Interactions?",
+   "title": "Enabling Event-Based Interactions",
    "image": "img/event-interactions.svg",
    "shadow": false,
    "alt": "Two graphs side by side. W3C WebSub: Groups 1, 2 and 3 are linked with each other in both directions, and each points to a resource directory, which holds a resource list of auction URLs such as http://group1.ex.org/auctions/. MQTT: Groups 1, 2 and 3 are each linked in both directions to one event broker in the middle.",
@@ -281,7 +438,8 @@
     "alt": "The diagram of Rule 4, with the MQTT broker on the Group 2 laptop marked demonstrator.",
     "shadow": false,
     "caption": "The broker on the laptop does not count, but Group 2 can show it to the task force."
-   }
+   },
+   "notes": "• Until the task force decides differently, the course WebSub hub may serve as a demonstrator, but it does not count"
   },
   {
    "layout": "text",
@@ -399,35 +557,6 @@
    "source": "Drosos, Sotiropoulos, Alexopoulos, Mitropoulos, Su. *When Your Infrastructure Is a Buggy Program: Understanding Faults in Infrastructure as Code Ecosystems*, Fig. 1, cropped. [PACMPL 8 (OOPSLA2), 2024](https://doi.org/10.1145/3689799), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)",
    "notes": "• Data: group_vars, tfvars, secrets\n• Program: site.yml, roles, main.tf\n• Interpreter: ansible-playbook, tofu (GitHub Actions)\n• Units: Ansible modules, OpenTofu resources\n• System: resource VMs",
    "source_at": "corner"
-  },
-  {
-   "layout": "text",
-   "title": "Debugging WebSub",
-   "points": [
-    {
-     "text": "[websub.rocks](https://websub.rocks/) tests your publisher and your subscriber",
-     "sub": [
-      "Publisher: it subscribes through the hub you advertise and shows the notifications",
-      "Subscriber: discovery, subscribing and signatures"
-     ]
-    },
-    {
-     "text": "The course provides a WebSub hub; its implementation may be adjusted to the needs of the course",
-     "sub": [
-      "`/logs`: its recent log lines",
-      "`/status`: subscriptions, leases and the last delivery of each",
-      "Its address is in the [task force repository](https://github.com/unisg-scs-asse/pitas-hs26-itf/tree/main/infrastructure#websub-hub)"
-     ]
-    }
-   ],
-   "aside": {
-    "box": {
-     "heading": "Rule 5",
-     "style": "teal",
-     "text": "Until the task force decides differently, the course hub may serve as a demonstrator, but it does not count."
-    }
-   },
-   "notes": "• websub.rocks asks you to sign in with a passkey\n• Its tests call the callback of your subscriber, so the subscriber must be reachable from the Internet, e.g. on your group VM\n• /logs takes ?filter=<words>&lines=<n>"
   },
   {
    "layout": "questions",
