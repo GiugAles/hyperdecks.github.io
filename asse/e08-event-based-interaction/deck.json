@@ -523,9 +523,6 @@
    "title": "The Narrative Adds No Conditions",
    "paragraphs": [
     "Rule 10: the narrative parts of your role briefing, such as the memo, add no conditions to your objectives"
-   ],
-   "points": [
-    "Your final presentation assesses each objective against its “Achieved when” column"
    ]
   },
   {
@@ -533,7 +530,8 @@
    "title": "The Decision Log Decides What Counts",
    "points": [
     "Several objectives in your role briefing depend on the decisions of the task force",
-    "Record them as ADRs in the [decision log](https://github.com/unisg-scs-asse/pitas-hs26-itf/tree/main/adr) of the task force"
+    "Record them as ADRs in the [decision log](https://github.com/unisg-scs-asse/pitas-hs26-itf/tree/main/adr) of the task force",
+    "Your final presentation assesses each objective against its “Achieved when” column"
    ],
    "aside": {
     "code": "# 2. WebSub hubs of the ecosystem\n\n## Considered Alternatives\n1. **Google hub only**\n2. **Google hub and Switchboard**\n\n## Decision\n...\n\n## Delegation Positions\n| Delegation | Position | Main argument |\n| Group 1    | ...      | ...           |\n| ...        |          |               |"
@@ -555,7 +553,18 @@
    "shadow": false,
    "alt": "Architecture of configuration-based infrastructure-as-code tools. User input data goes into an application of templates and code files, which a runtime parses and interprets. The interpreter invokes configuration units, third-party and built-in, which read and update the system state of the infrastructure: servers, routers and switches. Configuration units are assembled into programs. Bottom line: the user initializes the IaC program, which is parsed by the runtime interpreter, which invokes configuration units, which interact with the system.",
    "source": "Drosos, Sotiropoulos, Alexopoulos, Mitropoulos, Su. *When Your Infrastructure Is a Buggy Program: Understanding Faults in Infrastructure as Code Ecosystems*, Fig. 1, cropped. [PACMPL 8 (OOPSLA2), 2024](https://doi.org/10.1145/3689799), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)",
-   "notes": "• Data: group_vars, tfvars, secrets\n• Program: site.yml, roles, main.tf\n• Interpreter: ansible-playbook, tofu (GitHub Actions)\n• Units: Ansible modules, OpenTofu resources\n• System: resource VMs",
+   "notes": "• Data: group_vars, tfvars, secrets\n• Program: site.yml, roles, main.tf\n• Interpreter: ansible-playbook, tofu (GitHub Actions)\n• Units: Ansible modules, OpenTofu resources\n• System: resource VMs\n\n• Infrastructure as code (IaC) is a best practice in DevOps\n• More importantly, it gives all participants a standardized means to understand the current state of the infrastructure\n• Executable documentation\n• Since IaC is a best practice, coding agents should be good at interpreting it, too",
+   "source_at": "corner"
+  },
+  {
+   "layout": "image",
+   "title": "How Decisions Become Deployments",
+   "lead": "The [task force repository](https://github.com/unisg-scs-asse/pitas-hs26-itf/tree/main/infrastructure) contains an infrastructure-as-code setup for the resource VMs.",
+   "image": "img/drosos2024-fig1-codefile.png",
+   "shadow": false,
+   "alt": "Architecture of configuration-based infrastructure-as-code tools. User input data goes into an application of templates and code files, which a runtime parses and interprets. The interpreter invokes configuration units, third-party and built-in, which read and update the system state of the infrastructure: servers, routers and switches. Configuration units are assembled into programs. Bottom line: the user initializes the IaC program, which is parsed by the runtime interpreter, which invokes configuration units, which interact with the system. A green rectangle highlights the Code File box in the application.",
+   "source": "Drosos, Sotiropoulos, Alexopoulos, Mitropoulos, Su. *When Your Infrastructure Is a Buggy Program: Understanding Faults in Infrastructure as Code Ecosystems*, Fig. 1, cropped, highlight added. [PACMPL 8 (OOPSLA2), 2024](https://doi.org/10.1145/3689799), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)",
+   "notes": "• The code files are the most important entry point for groups",
    "source_at": "corner"
   },
   {
