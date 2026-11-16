@@ -81,6 +81,7 @@ h2{font-size:var(--s-h2);font-weight:400;line-height:1.08;letter-spacing:-.005em
 .lead+.main{padding-top:2.6U}
 .source{position:absolute;left:3.92U;bottom:2.1U;max-width:84U;font-size:var(--s-tiny);line-height:1.3;color:var(--quiet);z-index:2}
 .dfoot{position:absolute;left:3.92U;bottom:2.1U;font-size:var(--s-tiny);color:var(--quiet);z-index:2}
+.source.corner{left:auto;right:7.5U;bottom:.7U;max-width:62U;text-align:right}
 .source~.dfoot{display:none}
 /* the slide number in the green HSG tab, bottom right */
 .pn{position:absolute;right:3.94U;top:51.41U;width:2.33U;height:2.56U;z-index:3;display:grid;place-items:center;padding:.45U 0 0 .45U;
@@ -142,6 +143,7 @@ table.t{width:100%;border-collapse:collapse;font-size:var(--s-mid);line-height:1
 .t th+th,.t td+td{border-left:.15U solid #fff}
 .t tr+tr td{border-top:.15U solid #fff}
 .t td:first-child{font-weight:700;color:var(--fg)}
+.t tr.light td{color:var(--quiet)}.t tr.light td:first-child{font-weight:400;color:var(--quiet)}
 .t.many{font-size:var(--s-sub)}
 .t.many td{padding:.45U 1U}
 
@@ -264,6 +266,8 @@ h1{font-size:var(--s-h1);font-weight:300;line-height:1.08;letter-spacing:-.01em;
 .l-canvas.ta-t .headrow{align-items:flex-start}  /* the PowerPoint title hangs from the top of its box */
 .l-canvas .dfoot{z-index:0}  /* the footer line lies behind the objects, so a filled box covers it */
 .cv{position:absolute;inset:0;z-index:1}
+/* a transcluded slide: the origin line is a reference chip (.refs), the slide is the original's, drawn with this deck's footer and number */
+.tfall{margin-top:4U;font-size:var(--s-body)}
 .cv .it{position:absolute}
 .cv .off{visibility:hidden}
 .cv svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
@@ -309,6 +313,7 @@ a.il:hover{background:var(--green);color:#fff!important}
 /* the controls: a pill that floats under the slide, as in the FuSo decks, in HSG green */
 .controls{position:fixed;left:0;right:0;bottom:0;height:var(--ctl);display:grid;place-items:center;z-index:7;pointer-events:none;
   color:#111;font-family:system-ui,sans-serif;font-size:13px;font-weight:600}
+:root:not(:fullscreen) .controls{background:var(--k-stage);pointer-events:auto}  /* a solid strip: nothing shows through beside the pill */
 .pill{pointer-events:auto;display:flex;align-items:center;height:44px;padding:0 6px;border-radius:22px;background:#fff;
   border:1px solid #ddd;box-shadow:0 4px 18px rgba(0,0,0,.1);transition:opacity .25s,transform .25s}
 .pill>div{display:flex;align-items:center;gap:2px}
@@ -399,6 +404,7 @@ body.show-notes .notes-view{display:block}
   .pn{position:absolute;top:auto;bottom:16px;right:16px;width:30px;height:33px;font-size:12px}
   .refs{position:static;flex-wrap:wrap;justify-content:flex-start;margin:0 0 14px;max-width:none}
   a.ref{height:auto;min-height:30px;padding:6px 12px;white-space:normal;line-height:1.2;border-radius:16px}
+  .l-embed .embed{position:static;display:block;width:100vw;height:56.25vw;margin:30px -20px 0;transform:none}
   .cv{position:relative;inset:auto;width:100vw;height:56.25vw;margin:30px -20px 0;--u:1vw;overflow:hidden}
   .slide.active .cv .off{visibility:visible}
   .pill{width:100%;height:100%;padding:3px 10px 0;border-radius:0;border:0;box-shadow:none;justify-content:space-between}
@@ -535,6 +541,25 @@ function fitCanvas(s){const cv=s.querySelector('.cv');if(!fontsOk||!cv||!cv.clie
  for(const t of cv.querySelectorAll(':scope>.it>.tx:not(.v270):not(.v90)')){let f=1;
   while(leaves(t)&&f>.87){f-=.02;t.style.setProperty('--f',f.toFixed(2))}
   if(leaves(t))t.style.removeProperty('--f')}}
+// TRANSCLUDE: a slide with data-from/data-sid (layout "transclude") is not a copy. When the page opens it fetches the deck it
+// belongs to and takes the slide's content from there, so the original is the only place where it is stored and changes
+// to it show here at once. Pictures are addressed in the original's folder; steps and effects work as in the original.
+// The fallback text stays when the original cannot be fetched.
+{const cache={},get=u=>cache[u]||(cache[u]=fetch(u).then(r=>{if(!r.ok)throw 0;return r.text()}).then(h=>new DOMParser().parseFromString(h,'text/html')));
+ slides.filter(s=>s.dataset.from).forEach(async s=>{try{
+  const base=new URL(s.dataset.from,location.href),doc=await get(s.dataset.from);
+  const src=[...doc.querySelectorAll('section.slide')].find(x=>x.dataset.id===s.dataset.sid);if(!src)throw 0;
+  const fr=s.querySelector('.frame');fr.innerHTML=src.querySelector('.frame').innerHTML;
+  fr.querySelectorAll('[id]').forEach(e=>e.removeAttribute('id'));
+  fr.querySelectorAll('[src],[href],[poster]').forEach(e=>{for(const a of['src','href','poster']){const v=e.getAttribute(a);
+   if(v&&!v.startsWith('#'))e.setAttribute(a,new URL(v,base).href)}});
+  fr.querySelectorAll('[style*="url("]').forEach(e=>{e.style.cssText=e.style.cssText.replace(/url\(["']?([^"')]+)["']?\)/g,(m,v)=>`url("${new URL(v,base).href}")`)});
+  s.className=[...src.classList].filter(c=>c!=='active').concat('transcluded',s.classList.contains('active')?'active':[]).join(' ');
+  s.dataset.steps=src.dataset.steps||'';if(!s.dataset.steps)delete s.dataset.steps;
+  if(src.style.background)s.style.background=src.style.background;
+  delete s.dataset.fit;if(fontsOk)fitCanvas(s);
+  if(s===slides[cur])show();
+ }catch(e){}})}
 Promise.all([...document.fonts].filter(f=>f.family.replace(/"/g,'')==='HSGSans').map(f=>f.load().catch(()=>0)))
  .then(()=>document.fonts.ready).then(()=>{fontsOk=true;slides.forEach(fitCanvas);root.dataset.fit=1});
 window.hsgDeck={go,next,prev,count:slides.length,place};(document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve()).then(place);go(cur,arrived)})();
@@ -932,11 +957,18 @@ class Html:
         return self.main(s, f'<div class="split"><div>{copy}</div>{fig}</div>{after}')
 
     def l_table(self, s):
+        n = len(s["columns"])
         head = "".join(f"<th>{self.mark(c)}</th>" for c in s["columns"])
-        rows = "".join("<tr>" + "".join(f"<td>{self.mark(c)}</td>" for c in r) + "</tr>" for r in s["rows"])
+        cols = "<colgroup>" + "".join(f'<col style="width:{w}%">' for w in s["widths"]) + "</colgroup>" if s.get("widths") else ""
+        rows = ""
+        for r in s["rows"]:                            # a short row stretches its last cell; {"cells", "light"} sets a row in lighter type
+            cells, light = (r["cells"], r.get("light")) if isinstance(r, dict) else (r, False)
+            tds = "".join(f"<td{f' colspan={n - len(cells) + 1}' if i == len(cells) - 1 and len(cells) < n else ''}>{self.mark(c)}</td>"
+                          for i, c in enumerate(cells))
+            rows += f'<tr class="light">{tds}</tr>' if light else f"<tr>{tds}</tr>"
         many = " many" if len(s["rows"]) > 7 or len(s["columns"]) > 4 else ""
         after = f'<p class="after" style="padding-left:0">{self.mark(s["after"])}</p>' if s.get("after") else ""
-        return self.main(s, f'<div class="tablewrap"><table class="t{many}"><thead><tr>{head}</tr></thead><tbody>{rows}</tbody></table></div>{after}')
+        return self.main(s, f'<div class="tablewrap"><table class="t{many}">{cols}<thead><tr>{head}</tr></thead><tbody>{rows}</tbody></table></div>{after}')
 
     def l_code(self, s):
         code = self.code(s["code"], s.get("style", "outline"), s.get("caption"))
@@ -1163,6 +1195,54 @@ class Html:
         head = f'<div class="headrow"><div><h2>{self.htitle(s["title"])}</h2></div></div>' if s.get("title") else ""
         return head + f'<div class="cv">{out}</div>'
 
+    def l_transclude(self, s):
+        """A slide of another deck, transcluded in Ted Nelson's sense: stored once, in its own deck, and pulled in by reference
+        each time this page opens (see TRANSCLUDE in the script). What is rendered here is the fallback, shown until the
+        slide arrives and kept if it cannot (a page opened from disk, a deck that is offline)."""
+        folder, sid, tslide, tdeck = hd.resolve(s["to"], self.base)
+        where = tdeck.get("ref_label") or plain(tdeck["title"])
+        url = self.ref_url(s["to"])
+        n = tdeck["slides"].index(tslide) + 1
+        return (f'<div class="headrow"><div><h2>{self.htitle(s["title"])}</h2></div></div>'
+                f'<p class="tfall">This slide lives in {esc(where)} (slide {n}) and is transcluded here when the page opens. '
+                f'<a href="{esc(url)}">Open the original</a></p>')
+
+    def backlink_chips(self, s):
+        """Nelson's links run both ways: a slide that other decks transclude says where (one chip per use)."""
+        if not s.get("id"):
+            return ""
+        out = ""
+        for folder, path in hd.deck_folders(self.base).items():
+            deck = hd.load_deck(path)
+            for n, o in enumerate(deck["slides"], 1):
+                if o.get("layout") != "transclude":
+                    continue
+                try:
+                    f, sid, _, _ = hd.resolve(o["to"], path.parent)
+                except hd.DeckError:
+                    continue
+                if f != self.base.name or sid != s["id"]:
+                    continue
+                where = deck.get("ref_label") or plain(deck["title"])
+                ext = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>'
+                out += (f'<a class="ref" href="../../{folder}/html/index.html#/{n}" '
+                        f'title="Transcluded in {esc(where)}, slide {n}"><b>Transcluded in</b>'
+                        f'<span class="lab">{esc(where)}, slide {n}</span>{ext}</a>')
+        return out
+
+    def transclusion_attrs(self, s):
+        """Data attributes and the origin line of a transcluded slide."""
+        folder, sid, tslide, tdeck = hd.resolve(s["to"], self.base)
+        where = tdeck.get("ref_label") or plain(tdeck["title"])
+        url = self.ref_url(s["to"])
+        n = tdeck["slides"].index(tslide) + 1
+        attrs = f' data-from="{esc(url.split("#")[0])}" data-sid="{esc(sid)}"'
+        ext = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>'
+        note = (f'<a class="ref" href="{esc(url)}" '
+                f'title="Transcluded, not embedded: the original is {esc(where)}, slide {n}"><b>Transcluded, not embedded</b>'
+                f'<span class="lab">{esc(where)}, slide {n}</span>{ext}</a>')
+        return attrs, note
+
     def theme(self):
         """An optional theme: a CSS file named in the deck, set on top of the template; files it links with url() are copied."""
         if not self.deck.get("theme"):
@@ -1194,14 +1274,18 @@ class Html:
             extra = ""
             if lay not in ("title", "section"):
                 if s.get("source"):
-                    extra += f'<p class="source">{self.mark(s["source"])}</p>'
+                    corner = " corner" if s.get("source_at") == "corner" else ""     # tucked into the bottom right corner, next to the number
+                    extra += f'<p class="source{corner}">{self.mark(s["source"])}</p>'
                 if d.get("footer"):
                     extra += f'<p class="dfoot">{esc(d["footer"])}</p>'
                 extra += f'<span class="pn" aria-hidden="true">{TAB}{n}</span>'
-            if s.get("refs"):
+            chips = "".join(self.ref_chip(r) for r in s.get("refs", [])) + self.backlink_chips(s)
+            if lay == "transclude":
+                tattrs, tnote = self.transclusion_attrs(s)
+                chips = tnote + chips
+            if chips:
                 pos = " bottom" if s.get("refs_at") == "bottom" else ""
-                extra += (f'<nav class="refs{pos}" aria-label="Related slides, they open in a new tab">'
-                          + "".join(self.ref_chip(r) for r in s["refs"]) + "</nav>")
+                extra += f'<nav class="refs{pos}" aria-label="Related slides, they open in a new tab">{chips}</nav>'
             notes = f'<template class="notes">{esc(s["notes"])}</template>' if s.get("notes") else ""
             t = f' data-time="{esc(str(s["time"]))}"' if s.get("time") else ""
             bare = " bare" if lay == "questions" and not s.get("points") else ""
@@ -1211,6 +1295,8 @@ class Html:
                         + [0]) if lay == "canvas" else 0
             ds = (f' data-steps="{steps}"' if steps else "") + (f' data-id="{esc(s["id"])}"' if s.get("id") else "")
             ds += f" data-tr='{esc(json.dumps(s['transition']))}'" if s.get("transition") else ""
+            if lay == "transclude":
+                ds += tattrs
             ds += f' style="background:{esc(s["bg"])}"' if s.get("bg") else ""      # background copied from PowerPoint
             sections += (f'<section class="slide l-{lay}{bare}{" active" if n == 1 else ""}" id="s{n}" data-title="{esc(plain(s["title"]) or f"Slide {n}")}"{t}{ds} '
                          f'aria-label="Slide {n} of {n_all}"><div class="frame">{inner}</div>{extra}{notes}</section>\n')

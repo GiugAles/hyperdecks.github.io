@@ -45,6 +45,7 @@ h2{font-size:var(--s-h2);font-weight:400;line-height:1.08;letter-spacing:-.005em
 .lead+.main{padding-top:calc(2.6*var(--u))}
 .source{position:absolute;left:calc(3.92*var(--u));bottom:calc(2.1*var(--u));max-width:calc(84*var(--u));font-size:var(--s-tiny);line-height:1.3;color:var(--quiet);z-index:2}
 .dfoot{position:absolute;left:calc(3.92*var(--u));bottom:calc(2.1*var(--u));font-size:var(--s-tiny);color:var(--quiet);z-index:2}
+.source.corner{left:auto;right:calc(7.5*var(--u));bottom:calc(.7*var(--u));max-width:calc(62*var(--u));text-align:right}
 .source~.dfoot{display:none}
 /* the slide number in the green HSG tab, bottom right */
 .pn{position:absolute;right:calc(3.94*var(--u));top:calc(51.41*var(--u));width:calc(2.33*var(--u));height:calc(2.56*var(--u));z-index:3;display:grid;place-items:center;padding:calc(.45*var(--u)) 0 0 calc(.45*var(--u));
@@ -106,6 +107,7 @@ table.t{width:100%;border-collapse:collapse;font-size:var(--s-mid);line-height:1
 .t th+th,.t td+td{border-left:calc(.15*var(--u)) solid #fff}
 .t tr+tr td{border-top:calc(.15*var(--u)) solid #fff}
 .t td:first-child{font-weight:700;color:var(--fg)}
+.t tr.light td{color:var(--quiet)}.t tr.light td:first-child{font-weight:400;color:var(--quiet)}
 .t.many{font-size:var(--s-sub)}
 .t.many td{padding:calc(.45*var(--u)) calc(1*var(--u))}
 
@@ -228,6 +230,8 @@ h1{font-size:var(--s-h1);font-weight:300;line-height:1.08;letter-spacing:-.01em;
 .l-canvas.ta-t .headrow{align-items:flex-start}  /* the PowerPoint title hangs from the top of its box */
 .l-canvas .dfoot{z-index:0}  /* the footer line lies behind the objects, so a filled box covers it */
 .cv{position:absolute;inset:0;z-index:1}
+/* a transcluded slide: the origin line is a reference chip (.refs), the slide is the original's, drawn with this deck's footer and number */
+.tfall{margin-top:calc(4*var(--u));font-size:var(--s-body)}
 .cv .it{position:absolute}
 .cv .off{visibility:hidden}
 .cv svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
@@ -273,6 +277,7 @@ a.il:hover{background:var(--green);color:#fff!important}
 /* the controls: a pill that floats under the slide, as in the FuSo decks, in HSG green */
 .controls{position:fixed;left:0;right:0;bottom:0;height:var(--ctl);display:grid;place-items:center;z-index:7;pointer-events:none;
   color:#111;font-family:system-ui,sans-serif;font-size:13px;font-weight:600}
+:root:not(:fullscreen) .controls{background:var(--k-stage);pointer-events:auto}  /* a solid strip: nothing shows through beside the pill */
 .pill{pointer-events:auto;display:flex;align-items:center;height:44px;padding:0 6px;border-radius:22px;background:#fff;
   border:1px solid #ddd;box-shadow:0 4px 18px rgba(0,0,0,.1);transition:opacity .25s,transform .25s}
 .pill>div{display:flex;align-items:center;gap:2px}
@@ -363,6 +368,7 @@ body.show-notes .notes-view{display:block}
   .pn{position:absolute;top:auto;bottom:16px;right:16px;width:30px;height:33px;font-size:12px}
   .refs{position:static;flex-wrap:wrap;justify-content:flex-start;margin:0 0 14px;max-width:none}
   a.ref{height:auto;min-height:30px;padding:6px 12px;white-space:normal;line-height:1.2;border-radius:16px}
+  .l-embed .embed{position:static;display:block;width:100vw;height:56.25vw;margin:30px -20px 0;transform:none}
   .cv{position:relative;inset:auto;width:100vw;height:56.25vw;margin:30px -20px 0;--u:1vw;overflow:hidden}
   .slide.active .cv .off{visibility:visible}
   .pill{width:100%;height:100%;padding:3px 10px 0;border-radius:0;border:0;box-shadow:none;justify-content:space-between}
@@ -536,6 +542,25 @@ function fitCanvas(s){const cv=s.querySelector('.cv');if(!fontsOk||!cv||!cv.clie
  for(const t of cv.querySelectorAll(':scope>.it>.tx:not(.v270):not(.v90)')){let f=1;
   while(leaves(t)&&f>.87){f-=.02;t.style.setProperty('--f',f.toFixed(2))}
   if(leaves(t))t.style.removeProperty('--f')}}
+// TRANSCLUDE: a slide with data-from/data-sid (layout "transclude") is not a copy. When the page opens it fetches the deck it
+// belongs to and takes the slide's content from there, so the original is the only place where it is stored and changes
+// to it show here at once. Pictures are addressed in the original's folder; steps and effects work as in the original.
+// The fallback text stays when the original cannot be fetched.
+{const cache={},get=u=>cache[u]||(cache[u]=fetch(u).then(r=>{if(!r.ok)throw 0;return r.text()}).then(h=>new DOMParser().parseFromString(h,'text/html')));
+ slides.filter(s=>s.dataset.from).forEach(async s=>{try{
+  const base=new URL(s.dataset.from,location.href),doc=await get(s.dataset.from);
+  const src=[...doc.querySelectorAll('section.slide')].find(x=>x.dataset.id===s.dataset.sid);if(!src)throw 0;
+  const fr=s.querySelector('.frame');fr.innerHTML=src.querySelector('.frame').innerHTML;
+  fr.querySelectorAll('[id]').forEach(e=>e.removeAttribute('id'));
+  fr.querySelectorAll('[src],[href],[poster]').forEach(e=>{for(const a of['src','href','poster']){const v=e.getAttribute(a);
+   if(v&&!v.startsWith('#'))e.setAttribute(a,new URL(v,base).href)}});
+  fr.querySelectorAll('[style*="url("]').forEach(e=>{e.style.cssText=e.style.cssText.replace(/url\(["']?([^"')]+)["']?\)/g,(m,v)=>`url("${new URL(v,base).href}")`)});
+  s.className=[...src.classList].filter(c=>c!=='active').concat('transcluded',s.classList.contains('active')?'active':[]).join(' ');
+  s.dataset.steps=src.dataset.steps||'';if(!s.dataset.steps)delete s.dataset.steps;
+  if(src.style.background)s.style.background=src.style.background;
+  delete s.dataset.fit;if(fontsOk)fitCanvas(s);
+  if(s===slides[cur])show();
+ }catch(e){}})}
 Promise.all([...document.fonts].filter(f=>f.family.replace(/"/g,'')==='HSGSans').map(f=>f.load().catch(()=>0)))
  .then(()=>document.fonts.ready).then(()=>{fontsOk=true;slides.forEach(fitCanvas);root.dataset.fit=1});
 window.hsgDeck={go,next,prev,count:slides.length,place};(document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve()).then(place);go(cur,arrived)})();

@@ -26,13 +26,13 @@
     {"k": "shape", "x": 3.924, "y": 12.501, "w": 45.092, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "We developed an intuition for ", "sz": 1.948}, {"t": "architectural styles ", "sz": 1.948, "b": 1}, {"t": "and how they ", "sz": 1.948}, {"t": "promote", "sz": 1.948, "b": 1}, {"t": " specific ", "sz": 1.948}, {"t": "non-functional properties ", "sz": 1.948, "b": 1}, {"t": "and challenge others", "sz": 1.948}], "pl": 2.812, "in": -2.812, "bu": "-"}, {"al": "l", "r": [{"t": "We understood that architectural styles are configured through ", "sz": 1.948}, {"t": "coordinated sets of architectural constraints", "sz": 1.948, "b": 1}], "pl": 2.812, "in": -2.812, "bu": "-", "sb": 0.45}, {"al": "l", "r": [{"t": "We considered the ", "sz": 1.948}, {"t": "technical history of the World Wide Web ", "sz": 1.948, "b": 1}, {"t": "and saw that it was ", "sz": 1.948}, {"t": "not the only contender ", "sz": 1.948, "b": 1}, {"t": "to becoming the most important information system globally", "sz": 1.948}], "pl": 2.812, "in": -2.812, "bu": "-", "sb": 0.45}, {"al": "l", "r": [{"t": "The REST architectural style summarizes the core ", "sz": 1.948}, {"t": "architectural constraints of the World Wide Web", "sz": 1.948, "b": 1}], "pl": 2.812, "in": -2.812, "bu": "-", "sb": 0.45}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 54.922, "y": 17.389, "w": 42.565, "h": 26.338, "g": "roundRect", "adj": {"adj": 7232}, "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "Gothic Style, Lego Style, Bologna Style, Unix Style, REST Style – We went from architectural principles to properties of components and interfaces", "sz": 1.875, "c": "#ffffff"}]}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "Emphasis on „Uniform“ Interfaces", "sz": 1.875, "c": "#ffffff"}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}], "pl": 2.343, "in": -2.343}, {"al": "l", "r": [{"t": "Loose coupling – interoperability, flexibility, adaptability – are much-desired properties today.", "sz": 1.458, "c": "#ffffff"}], "pl": 2.343, "in": -2.343, "bu": "-"}, {"al": "l", "r": [{"t": "", "sz": 1.458}], "pl": 2.343, "in": -2.343}, {"al": "l", "r": [{"t": "It‘s our job to know when we may tolerate or even desire tighter coupling, which often implies higher performance and reliability", "sz": 1.458, "c": "#ffffff"}], "pl": 2.343, "in": -2.343, "bu": "-"}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ],
+   "id": "review",
    "refs": [
     {
      "to": "07b#principled-design",
      "kind": "recap"
     }
-   ],
-   "id": "review"
+   ]
   },
   {
    "layout": "canvas",
@@ -1153,6 +1153,7 @@
     {"k": "shape", "x": 81.0, "y": 33.05, "w": 12.962, "h": 3.303, "s": 6, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Client load…", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 66.5, "y": 30.85, "w": 12.962, "h": 3.169, "s": 5, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Server load…", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ],
+   "id": "data-access",
    "refs": [
     {
      "to": "07b#client-server",
@@ -1163,8 +1164,7 @@
      "kind": "next",
      "label": "Towards Exercise 10: SPARQL"
     }
-   ],
-   "id": "data-access"
+   ]
   },
   {
    "layout": "canvas",

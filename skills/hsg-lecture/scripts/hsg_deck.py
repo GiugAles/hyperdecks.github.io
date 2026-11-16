@@ -30,7 +30,7 @@ SALMON, TEAL, SAND, YELLOW = "#EB6969", "#73A5AF", "#E1D7C3", "#FFF04B"
 ROW_A, ROW_B = "#CBD8CD", "#E7EDE8"   # table rows: green at 20% and 10% on white
 BOX_STYLES = ("green", "outline", "teal")
 
-COMMON = {"layout", "title", "lead", "callout", "source", "notes", "time", "id", "refs", "refs_at", "decor",
+COMMON = {"layout", "title", "lead", "callout", "source", "source_at", "notes", "time", "id", "refs", "refs_at", "decor",
           "transition"}   # transition: copied from PowerPoint
 NO_LEAD = {"title", "section", "task", "quote"}
 # layout: (required fields, optional fields)
@@ -41,7 +41,7 @@ LAYOUTS = {
     "text":      ({"title"}, {"paragraphs", "points", "defs", "groups", "tiles", "after", "aside"}),
     "study":     ({"title", "groups"}, {"aside"}),
     "questions": ({"title"}, {"heading", "points", "after"}),
-    "table":     ({"title", "columns", "rows"}, {"after"}),
+    "table":     ({"title", "columns", "rows"}, {"after", "widths"}),
     "code":      ({"title", "code"}, {"paragraphs", "points", "style", "caption"}),
     "quiz":      ({"title", "items"}, {"aside"}),
     "task":      ({"title", "stamp"}, {"paragraphs", "url", "label"}),
@@ -50,6 +50,7 @@ LAYOUTS = {
     "people":    ({"title", "items"}, set()),
     "quote":     ({"title"}, {"attribution", "picture", "points"}),
     "syllabus":  ({"title", "items"}, {"current", "break_after", "assignments"}),
+    "transclude": ({"title", "to"}, set()),                # a slide of another deck, transcluded live when the page opens ("to" as in refs)
     "canvas":    ({"title"}, {"items", "bg", "ta"}),       # a slide copied from PowerPoint by pptx_canvas.py; the title may be ""
 }
 ITEM_KEYS = {
@@ -129,6 +130,12 @@ def words(s):
                                      "shadow", "kind", "current", "break_after", "from", "to", "id", "refs", "refs_at", "href",
                                      "decor", "icon"))
     return ""
+
+
+def table_cells(row):
+    """The cells of a table row: a list of strings, or {"cells": [...], "light": true} for a row set in lighter type."""
+    cells = row.get("cells") if isinstance(row, dict) else row
+    return cells if isinstance(cells, list) else []
 
 
 def points_of(pts):
@@ -250,6 +257,8 @@ def check(deck, base):
                             errors.append(f"{w}, ref {i}: {e}")
         for m_ in INLINE_REF.finditer(words(s)):
             need_ref(m_.group(2), f"{w}, link [{m_.group(1)}]")
+        if lay == "transclude":
+            need_ref(s.get("to"), f"{w}, transclude")
         if lay == "syllabus":
             for i, it in enumerate(s.get("items", []), 1):
                 if isinstance(it, dict) and it.get("href"):
@@ -378,12 +387,17 @@ def check(deck, base):
             cols, rows = s.get("columns"), s.get("rows")
             if not (isinstance(cols, list) and 2 <= len(cols) <= 6):
                 errors.append(f"{w}: 'columns' must be a list of 2 to 6 headings")
-            elif not (isinstance(rows, list) and rows and all(isinstance(r, list) and len(r) == len(cols) for r in rows)):
-                errors.append(f"{w}: 'rows' must be a list of rows with {len(cols)} cells each")
+            elif not (isinstance(rows, list) and rows and all(1 <= len(table_cells(r)) <= len(cols) for r in rows)):
+                errors.append(f"{w}: 'rows' must be a list of rows with up to {len(cols)} cells each (a short row stretches its last cell)")
+            if "widths" in s and not (isinstance(cols, list) and isinstance(s["widths"], list) and len(s["widths"]) == len(cols)
+                                      and all(isinstance(x, (int, float)) and not isinstance(x, bool) and x > 0 for x in s["widths"])):
+                errors.append(f"{w}: 'widths' must be a list with one positive number (a percentage) per column")
             elif len(rows) > 10:
                 warnings.append(f"{w}: {len(rows)} rows; at most 10 fit, split the table")
         if lay == "task" and s.get("url") and not str(s["url"]).startswith(("http://", "https://")):
             errors.append(f"{w}: 'url' must start with http:// or https://")
+        if s.get("source_at") is not None and (s["source_at"] != "corner" or not s.get("source")):
+            errors.append(f"{w}: 'source_at' must be 'corner' and needs a 'source'")
         if lay == "image":
             need_picture({k: s[k] for k in ("image", "alt", "caption", "shadow") if k in s}, w)
         if lay in ("title", "quote") and s.get("picture"):
