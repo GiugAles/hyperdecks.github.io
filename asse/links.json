@@ -462,6 +462,176 @@
    "11",
    "Update 2026: Stateless MCP",
    "mcp-stateless"
+  ],
+  [
+   "08",
+   "Review: Principled Architectural Design",
+   "review"
+  ],
+  [
+   "08",
+   "Performant, but Not Fault-Tolerant",
+   "outage"
+  ],
+  [
+   "08",
+   "=Syllabus",
+   "syllabus"
+  ],
+  [
+   "08",
+   "Lecture Learning Goals",
+   "goals"
+  ],
+  [
+   "08",
+   "Same Task, Different Protocols",
+   "instant-messaging"
+  ],
+  [
+   "08",
+   "Proprietary Binary Protocol",
+   "binary-protocol"
+  ],
+  [
+   "08",
+   "What do YOU prefer",
+   "client-developer"
+  ],
+  [
+   "08",
+   "What Is in the Contract",
+   "ladder"
+  ],
+  [
+   "08",
+   "One Task, Many Styles",
+   "bot-task"
+  ],
+  [
+   "08",
+   "Content Overview#1",
+   "overview-invoke"
+  ],
+  [
+   "08",
+   "Example: RPCbot",
+   "rpc-bot"
+  ],
+  [
+   "08",
+   "RPC + RMI#1",
+   "rpc-rmi"
+  ],
+  [
+   "08",
+   "=#1",
+   "delivery-semantics"
+  ],
+  [
+   "08",
+   "RPC + RMI#2",
+   "rpc-failures"
+  ],
+  [
+   "08",
+   "Example: CORBAbot",
+   "corba-bot"
+  ],
+  [
+   "08",
+   "Common ORB Architecture (CORBA)#2",
+   "corba-tradeoffs"
+  ],
+  [
+   "08",
+   "W3C / OASIS Web Services#2",
+   "webservices-stack"
+  ],
+  [
+   "08",
+   "W3C / OASIS Web Services#3",
+   "webservices-decline"
+  ],
+  [
+   "08",
+   "Symptomatic of badly done RPC",
+   "rpc-tunneling"
+  ],
+  [
+   "08",
+   "Reminder on HTTP/1.1 vs. HTTP/2#1",
+   "http2-reminder"
+  ],
+  [
+   "08",
+   "Reminder on HTTP/1.1 vs. HTTP/2#2",
+   "http2-reminder-2"
+  ],
+  [
+   "08",
+   "Content Overview#2",
+   "overview-data"
+  ],
+  [
+   "08",
+   "=Remote Data Access",
+   "data-access"
+  ],
+  [
+   "08",
+   "Remote Data Access: *QL",
+   "query-languages"
+  ],
+  [
+   "08",
+   "Remote Data Access: Linked Data",
+   "linked-data-fragments"
+  ],
+  [
+   "08",
+   "Content Overview#3",
+   "overview-events"
+  ],
+  [
+   "08",
+   "Publish-Subscribe",
+   "pubsub"
+  ],
+  [
+   "08",
+   "~Who knows",
+   "mqtt-intro"
+  ],
+  [
+   "08",
+   "Brokered Publish-Subscribe: MQTT",
+   "mqtt"
+  ],
+  [
+   "08",
+   "MQTT Bot",
+   "mqtt-bot"
+  ],
+  [
+   "08",
+   "=W3C WebSub",
+   "websub"
+  ],
+  [
+   "08",
+   "W3C WebSub Subscription Flow",
+   "websub-flow"
+  ],
+  [
+   "08",
+   "Interaction Styles Compared",
+   "compared"
+  ],
+  [
+   "08",
+   "Any Questions",
+   "questions"
   ]
  ],
  "refs": [

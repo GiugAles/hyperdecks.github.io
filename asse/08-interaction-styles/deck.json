@@ -31,7 +31,8 @@
      "to": "07b#principled-design",
      "kind": "recap"
     }
-   ]
+   ],
+   "id": "review"
   },
   {
    "layout": "canvas",
@@ -126,7 +127,8 @@
      "to": 11
     }
    ],
-   "notes": "Assignments per session in the original plan: 14.09 Event Storming & Architecture Characteristics; 21.09 ADRs, Service Granularity, Spring 101; 28.09 Hexagonal Architecture, Domain Entity Testing; 05.10 Persistence, Integration Testing; 12.10 Interactions, Communication, System Testing; 19.10 Cleanup and Group Split; 09.11 Uniform Interaction; 16.11 Event-Driven Interaction; 23.11 Hypermedia Ecosystems; 30.11 Decoupling through Semantic Hypermedia; 07.12 Agents and the Web of Things. PITAS PlugFest: 24.11, 5 to 8pm."
+   "notes": "Assignments per session in the original plan: 14.09 Event Storming & Architecture Characteristics; 21.09 ADRs, Service Granularity, Spring 101; 28.09 Hexagonal Architecture, Domain Entity Testing; 05.10 Persistence, Integration Testing; 12.10 Interactions, Communication, System Testing; 19.10 Cleanup and Group Split; 09.11 Uniform Interaction; 16.11 Event-Driven Interaction; 23.11 Hypermedia Ecosystems; 30.11 Decoupling through Semantic Hypermedia; 07.12 Agents and the Web of Things. PITAS PlugFest: 24.11, 5 to 8pm.",
+   "id": "syllabus"
   },
   {
    "layout": "canvas",
@@ -136,7 +138,8 @@
     {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Lecture 7:", "sz": 1.875, "c": "#a6a6a6", "href": "07b#start"}, {"t": " Understand how to ", "sz": 1.875, "c": "#a6a6a6"}, {"t": "select fitting architectural constraints ", "sz": 1.875, "b": 1, "c": "#a6a6a6"}, {"t": "to achieve a desired non-functional profile", "sz": 1.875, "c": "#a6a6a6"}]}, {"al": "l", "r": [{"t": "Assignment 7: Uniform Interaction? Exploring the REST Architectural Style", "sz": 1.875, "c": "#a6a6a6"}], "sb": 0.5}, {"al": "l", "r": [{"t": "Lecture 8: Understand how to ", "sz": 1.875}, {"t": "select fitting interaction styles ", "sz": 1.875, "b": 1}, {"t": "to achieve a desired non-functional profile", "sz": 1.875}], "sb": 1.7}, {"al": "l", "r": [{"t": "Assignment 8", "sz": 1.875, "href": "e08#start"}, {"t": ": What Interaction Style? Event-based Interaction using MQTT and W3C WebSub", "sz": 1.875}], "sb": 0.5}, {"al": "l", "r": [{"t": "Lecture 9:", "sz": 1.875, "c": "#a6a6a6", "href": "09#start"}, {"t": " Understand ", "sz": 1.875, "c": "#a6a6a6"}, {"t": "interactive ecosystems ", "sz": 1.875, "b": 1, "c": "#a6a6a6"}, {"t": "and how data can be separated from applications", "sz": 1.875, "c": "#a6a6a6"}], "sb": 1.7}, {"al": "l", "r": [{"t": "Assignment 9: Who Owns the Data? Data Sovereignty with Solid Pods and WebIDs", "sz": 1.875, "c": "#a6a6a6"}], "sb": 0.5}, {"al": "l", "r": [{"t": "Lecture 10:", "sz": 1.875, "c": "#a6a6a6", "href": "10#start"}, {"t": " Understand that ", "sz": 1.875, "c": "#a6a6a6"}, {"t": "decoupling may happen on many levels ", "sz": 1.875, "b": 1, "c": "#a6a6a6"}, {"t": "beyond the immediate API", "sz": 1.875, "c": "#a6a6a6"}], "sb": 1.7}, {"al": "l", "r": [{"t": "Assignment 10: Multi-level Decoupling? Decoupling through Semantic Hypermedia", "sz": 1.875, "c": "#a6a6a6"}], "sb": 0.5}, {"al": "l", "r": [{"t": "Lecture 11:", "sz": 1.875, "c": "#a6a6a6", "href": "11#start"}, {"t": " Understand ", "sz": 1.875, "c": "#a6a6a6"}, {"t": "what changes ", "sz": 1.875, "b": 1, "c": "#a6a6a6"}, {"t": "when higher autonomy potential and constrained devices enter the game", "sz": 1.875, "c": "#a6a6a6"}], "sb": 1.7}, {"al": "l", "r": [{"t": "Assignment 11: Autonomy and Interactions with Constrained Devices", "sz": 1.875, "c": "#a6a6a6"}], "sb": 0.5}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 82.665, "y": 30.29, "w": 13.989, "h": 5.315, "g": "roundRect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "Plugfest with Pitas (Nov 24, 5 to 8pm)", "sz": 1.25, "b": 1, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "pic", "src": "img/021d51ae1a.png", "alt": "Drawing of a pizza slice", "x": 95.155, "y": 28.732, "w": 3.134, "h": 3.134}
-   ]
+   ],
+   "id": "goals"
   },
   {
    "layout": "canvas",
@@ -151,7 +154,8 @@
     {"k": "shape", "x": 57.58, "y": 17.356, "w": 30.821, "h": 6.815, "s": 5, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "“For instance, WeChat servers can certainly see chat messages since WeChat can censor them according to their content.”", "sz": 1.667, "c": "#000000"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 52.087, "y": 51.732, "w": 30.821, "h": 2.776, "s": 10, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "WebSub + MQTT: ", "sz": 1.667, "c": "#000000"}, {"t": "See Exercise 8", "sz": 1.667, "c": "#000000", "href": "e08#start"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 52.5, "y": 40.623, "w": 44.0, "h": 4.796, "s": 7, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "XMPP = Full-fledged IM protocol", "sz": 1.5, "c": "#000000"}]}, {"al": "l", "r": [{"t": "MQTT = Multi-purpose pub/sub protocol over reliable transport", "sz": 1.5, "c": "#000000"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}
-   ]
+   ],
+   "id": "instant-messaging"
   },
   {
    "layout": "canvas",
@@ -173,7 +177,8 @@
     {"k": "pic", "src": "img/c56db31b31.jpg", "alt": "Proprietary - Make the Right Choice for a Learning Management System!", "x": 58.952, "y": 16.623, "w": 6.618, "h": 4.976, "s": 4},
     {"k": "shape", "x": 48.437, "y": 39.731, "w": 12.661, "h": 5.432, "s": 10, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Occupancy detection", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 79.417, "y": 42.02, "w": 17.526, "h": 5.432, "s": 6, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Demand-side load management", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
-   ]
+   ],
+   "id": "binary-protocol"
   },
   {
    "layout": "canvas",
@@ -255,7 +260,8 @@
     {"k": "shape", "x": 33.115, "y": 22.32, "w": 12.885, "h": 0.441, "fx": true, "fy": true, "g": "straightConnector1", "ln": "#00802f", "lw": 0.104, "head": "triangle", "tail": "triangle"},
     {"k": "shape", "x": 33.115, "y": 18.09, "w": 12.885, "h": 1.813, "fx": true, "fy": true, "g": "straightConnector1", "ln": "#00802f", "lw": 0.104, "head": "triangle", "tail": "triangle"},
     {"k": "pic", "src": "img/af5ad711ed.png", "alt": "A robot arm in a lab holding a small cupcake on a plate, with visitors in the background", "x": 4.6, "y": 15.485, "w": 8.787, "h": 9.177, "crop": [0.41939, 0.14927, 0.16888, 0.08626], "shadow": true}
-   ]
+   ],
+   "id": "client-developer"
   },
   {
    "layout": "canvas",
@@ -388,7 +394,8 @@
     {"k": "pic", "src": "img/3101ccc989.png", "alt": "Redmi 8A Dual (Sea Blue, 2GB RAM, 32GB Storage) – Dual Cameras & 5,000 mAH  Battery: Amazon.in: Electronics", "x": 16.074, "y": 28.121, "w": 6.18, "h": 9.024, "crop": [0.14753, 0.0, 0.1676, 0.0]},
     {"k": "pic", "src": "img/3772dbd653.jpg", "alt": "Image result for firefox", "x": 11.643, "y": 31.952, "w": 4.159, "h": 4.159},
     {"k": "shape", "x": 26.083, "y": 25.928, "w": 50.786, "h": 20.95, "s": 1, "g": "rect", "fill": "#73a5af", "ln": "#101a1c", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "Client program ", "sz": 1.667, "c": "#ffffff"}, {"t": "knows Cherrybot and Piebot IP addresses", "sz": 1.667, "b": 1, "c": "#ffffff"}], "pl": 2.812, "in": -2.812, "bu": "•", "s": 2}, {"al": "l", "r": [{"t": "", "sz": 1.667}], "pl": 2.812, "in": -2.812}, {"al": "l", "r": [{"t": "Client achieves ", "sz": 1.667, "c": "#ffffff"}, {"t": "direct and visible location transparency", "sz": 1.667, "b": 1, "c": "#ffffff"}], "pl": 2.812, "in": -2.812, "bu": "•", "s": 3}, {"al": "l", "r": [{"t": "  ", "sz": 1.667, "c": "#ffffff"}], "s": 4}, {"al": "l", "r": [{"t": "Arguments may be ", "sz": 1.667, "c": "#ffffff"}, {"t": "encoded in optimized binary format ", "sz": 1.667, "b": 1, "c": "#ffffff"}, {"t": "for 6D robot position parameters", "sz": 1.667, "c": "#ffffff"}], "pl": 2.812, "in": -2.812, "bu": "•", "s": 5}, {"al": "l", "r": [{"t": "", "sz": 1.667}], "pl": 2.812, "in": -2.812}, {"al": "l", "r": [{"t": "Client and Server are ", "sz": 1.667, "c": "#ffffff"}, {"t": "tightly coupled ", "sz": 1.667, "b": 1, "c": "#ffffff"}, {"t": "via method signatures", "sz": 1.667, "c": "#ffffff"}], "pl": 2.812, "in": -2.812, "bu": "•", "s": 6}, {"al": "l", "r": [{"t": "", "sz": 1.667}], "pl": 2.812, "in": -2.812}, {"al": "l", "r": [{"t": "Calls sent ", "sz": 1.667, "c": "#ffffff"}, {"t": "over", "sz": 1.667, "b": 1, "c": "#ffffff"}, {"t": " ", "sz": 1.667, "c": "#ffffff"}, {"t": "any transport ", "sz": 1.667, "b": 1, "c": "#ffffff"}, {"t": "given desired characteristics", "sz": 1.667, "c": "#ffffff"}], "pl": 2.812, "in": -2.812, "bu": "•", "s": 7}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}
-   ]
+   ],
+   "id": "rpc-bot"
   },
   {
    "layout": "canvas",
@@ -397,14 +404,16 @@
     {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Client-Server Request-Response", "sz": 2.083, "c": "#202122"}], "pl": 0.0, "in": 0.0, "s": 1}, {"al": "l", "r": [{"t": "Messages sent to ", "sz": 1.667, "c": "#202122"}, {"t": "known", "sz": 1.667, "b": 1, "c": "#202122"}, {"t": " servers to execute request with ", "sz": 1.667, "c": "#202122"}, {"t": "known", "sz": 1.667, "b": 1, "c": "#202122"}, {"t": " parameters", "sz": 1.667, "c": "#202122"}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 2, "sb": 0.45}, {"al": "l", "r": [{"t": "Client might block or might handle the call asynchronously", "sz": 1.667, "c": "#202122"}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 3, "sb": 0.45}, {"al": "l", "r": [{"t": "Failure Handling in Remote Calls", "sz": 2.083, "c": "#202122"}], "pl": 0.0, "in": 0.0, "s": 4, "sb": 1.7}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "pic", "src": "img/c9012e6414.gif", "alt": "at-most-once and exactly-once - Stack Overflow", "x": 66.499, "y": 0.275, "w": 32.476, "h": 35.902, "s": 6, "crop": [0.0, 0.0, 0.04231, 0.0]},
     {"k": "shape", "x": 47.872, "y": 22.393, "w": 20.239, "h": 5.641, "rot": 20.87, "s": 5, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "What fundamental ", "sz": 1.667, "c": "#ffffff"}, {"t": "delivery semantics", "sz": 1.667, "b": 1, "c": "#ffffff"}, {"t": " do you know?", "sz": 1.667, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
-   ]
+   ],
+   "id": "rpc-rmi"
   },
   {
    "layout": "canvas",
    "title": "",
    "items": [
     {"k": "pic", "x": 25.914, "y": 2.0, "w": 48.172, "h": 51.0, "src": "img/c9012e6414.gif", "alt": "Three producer-consumer diagrams: at-most-once delivery (the message may be lost), at-least-once delivery (the message may be duplicated) and exactly-once delivery (the message is delivered exactly once, with state on both sides)"}
-   ]
+   ],
+   "id": "delivery-semantics"
   },
   {
    "layout": "canvas",
@@ -414,7 +423,8 @@
     {"k": "pic", "src": "img/c9012e6414.gif", "alt": "at-most-once and exactly-once - Stack Overflow", "x": 66.499, "y": 0.275, "w": 32.476, "h": 35.902, "crop": [0.0, 0.0, 0.04231, 0.0]},
     {"k": "shape", "x": 20.974, "y": 42.648, "w": 62.149, "h": 6.984, "s": 5, "g": "rect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "We can solve any problem by introducing an extra level of indirection (…) except for the problem of too many levels of indirection”", "sz": 1.875, "c": "#000000"}], "sb": 0.0, "sa": 0.0}, {"al": "r", "r": [{"t": "Fundamental Theorem of Software Engineering (Wheeler, Lampson, Koenig)", "sz": 1.25, "c": "#000000"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 47.872, "y": 22.393, "w": 20.239, "h": 5.641, "rot": 20.87, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "What fundamental ", "sz": 1.667, "c": "#ffffff"}, {"t": "delivery semantics", "sz": 1.667, "b": 1, "c": "#ffffff"}, {"t": " do you know?", "sz": 1.667, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
-   ]
+   ],
+   "id": "rpc-failures"
   },
   {
    "layout": "canvas",
@@ -456,7 +466,8 @@
     {"k": "shape", "x": 26.1, "y": 12.4, "w": 50.8, "h": 7.4, "s": 1, "g": "rect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "module CORBABot { ", "sz": 0.968, "c": "#ffffff", "f": "mono"}], "pl": 0.0, "in": 0.0, "ls": 1.0, "sb": 0.0, "sa": 0.0}, {"al": "l", "r": [{"t": "  interface CherryControl {", "sz": 0.968, "c": "#ffffff", "f": "mono"}], "pl": 0.0, "in": 0.0, "ls": 1.0, "sb": 0.0, "sa": 0.0}, {"al": "l", "r": [{"t": "\tint [] coordinates getPosition();", "sz": 0.968, "c": "#ffffff", "f": "mono"}], "pl": 0.0, "in": 0.0, "ls": 1.0, "sb": 0.0, "sa": 0.0}, {"al": "l", "r": [{"t": "\toneway void moveToTarget(int [] coordinates); ", "sz": 0.968, "c": "#ffffff", "f": "mono"}], "pl": 0.0, "in": 0.0, "ls": 1.0, "sb": 0.0, "sa": 0.0}, {"al": "l", "r": [{"t": "  }; ", "sz": 0.968, "c": "#ffffff", "f": "mono"}], "pl": 0.0, "in": 0.0, "ls": 1.0, "sb": 0.0, "sa": 0.0}, {"al": "l", "r": [{"t": "}; ", "sz": 0.968, "c": "#ffffff", "f": "mono"}], "pl": 0.0, "in": 0.0, "ls": 1.0, "sb": 0.0, "sa": 0.0}], "a": "m", "i": [2.082, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 26.1, "y": 32.6, "w": 50.8, "h": 19.2, "s": 10, "g": "rect", "fill": "#73a5af", "ln": "#101a1c", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "Client achieves ", "sz": 1.291, "c": "#ffffff"}, {"t": "direct location transparency with wrapped remote objects", "sz": 1.291, "b": 1, "c": "#ffffff"}], "pl": 2.812, "in": -2.812, "bu": "•", "s": 11, "sb": 0}, {"al": "l", "r": [{"t": "Arguments ", "sz": 1.291, "c": "#ffffff"}, {"t": "encoded in efficient binary format", "sz": 1.291, "b": 1, "c": "#ffffff"}, {"t": ", taking into account int [] type", "sz": 1.291, "c": "#ffffff"}], "pl": 2.812, "in": -2.812, "bu": "•", "s": 12, "sb": 0.5}, {"al": "l", "r": [{"t": "Calls sent over…", "sz": 1.291, "c": "#ffffff"}], "pl": 2.812, "in": -2.812, "bu": "•", "s": 13, "sb": 0.5}, {"al": "l", "r": [{"t": "…TCP/IP (Internet InterORB Protocol)", "sz": 0.968, "c": "#ffffff"}], "pl": 5.0, "in": 0, "s": 13, "sb": 0.5}, {"al": "l", "r": [{"t": "…SSLIOP (CORBA-over-SSL)", "sz": 0.968, "c": "#ffffff"}], "pl": 5.0, "in": 0, "s": 13, "sb": 0.5}, {"al": "l", "r": [{"t": "…HTIOP (HyperText InterORB Protocol)", "sz": 0.968, "c": "#ffffff"}], "pl": 5.0, "in": 0, "s": 13, "sb": 0.5}, {"al": "l", "r": [{"t": "…ZIOP (zipped InterORB Protocol)", "sz": 0.968, "c": "#ffffff"}], "pl": 5.0, "in": 0, "s": 13, "sb": 0.5}, {"al": "l", "r": [{"t": "Client and Server are ", "sz": 1.291, "c": "#ffffff"}, {"t": "tightly coupled ", "sz": 1.291, "b": 1, "c": "#ffffff"}, {"t": "via method signatures", "sz": 1.291, "c": "#ffffff"}], "pl": 2.812, "in": -2.812, "bu": "•", "s": 14, "sb": 0.5}, {"al": "l", "r": [{"t": "Client and server agree on interface through ", "sz": 1.291, "c": "#ffffff"}, {"t": "IDL", "sz": 1.291, "b": 1, "c": "#ffffff"}, {"t": ". Much of this code can be ", "sz": 1.291, "c": "#ffffff"}, {"t": "auto-generated", "sz": 1.291, "b": 1, "c": "#ffffff"}], "pl": 2.812, "in": -2.812, "bu": "•", "s": 15, "sb": 0.5}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 66.0, "y": 49.8, "w": 15.354, "h": 2.932, "s": 16, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Is this a good idea?", "sz": 1.458, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
-   ]
+   ],
+   "id": "corba-bot"
   },
   {
    "layout": "canvas",
@@ -468,7 +479,8 @@
     {"k": "shape", "x": 59.16, "y": 28.025, "w": 33.502, "h": 5.47, "s": 5, "g": "rect", "fill": "#73a5af", "ln": "#101a1c", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "It implies that each request is as complex as the most complex class of requests!", "sz": 1.875, "c": "#ffffff"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 54.713, "y": 45.847, "w": 25.546, "h": 5.801, "s": 10, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "What happened in the late 1990s regarding firewalls?", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 18.0, "y": 45.0, "w": 30.322, "h": 5.801, "s": 9, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "Yes, this really was a huge ", "sz": 1.875, "c": "#ffffff"}, {"t": "problem", "sz": 1.875, "b": 1, "c": "#ffffff"}, {"t": "!", "sz": 1.875, "c": "#ffffff"}], "pl": 1.523}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
-   ]
+   ],
+   "id": "corba-tradeoffs"
   },
   {
    "layout": "canvas",
@@ -919,7 +931,8 @@
     {"k": "shape", "x": 37.087, "y": 46.821, "w": 21.595, "h": 4.922, "s": 16, "g": "rect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "Element (req./reply)", "sz": 1.458, "b": 1, "f": "mono", "c": "#000000"}]}, {"al": "l", "r": [{"t": "", "sz": 0.521}]}, {"al": "l", "r": [{"t": "Arguments + Result", "sz": 1.458, "b": 1, "f": "mono", "c": "#000000"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 40.257, "y": 20.763, "w": 6.668, "h": 3.281, "s": 5, "g": "rect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "UDDI", "sz": 2.083, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375], "nw": 1}},
     {"k": "shape", "x": 50.354, "y": 15.687, "w": 16.133, "h": 3.281, "s": 3, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Lookup-Service", "sz": 2.083}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375], "nw": 1}}
-   ]
+   ],
+   "id": "webservices-stack"
   },
   {
    "layout": "canvas",
@@ -930,7 +943,8 @@
     {"k": "shape", "x": 84.733, "y": 32.192, "w": 11.595, "h": 5.317, "g": "roundRect", "fill": "#2196f3", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "RESTful", "sz": 2.083, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 33.882, "y": 32.357, "w": 15.218, "h": 5.317, "g": "roundRect", "fill": "#f44336", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "SOAP Java", "sz": 2.083, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 56.5, "y": 11.868, "w": 41.5, "h": 12.182, "s": 1, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Central Learning from WS-*", "sz": 2.917, "b": 1, "c": "#ffffff"}]}, {"al": "c", "r": [{"t": "", "sz": 1.875}]}, {"al": "c", "r": [{"t": "When creating an API, ", "sz": 1.875, "c": "#ffffff"}, {"t": "think about the next version", "sz": 1.875, "b": 1, "c": "#ffffff"}, {"t": ". Introduce API-wide requirements only when absolutely sure.", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
-   ]
+   ],
+   "id": "webservices-decline"
   },
   {
    "layout": "canvas",
@@ -942,7 +956,8 @@
     {"k": "shape", "x": 1.721, "y": 49.309, "w": 52.597, "h": 2.082, "s": 5, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "https://google.aip.dev/127", "sz": 1.094, "c": "#808080", "href": "https://google.aip.dev/127"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "pic", "src": "img/bf96203a6c.png", "alt": "Google API Improvement Proposal AIP-131, Standard methods: Get", "x": 56.946, "y": 29.33, "w": 40.747, "h": 19.851, "s": 6, "crop": [0.28738, 0.3005, 0.25194, 0.3005], "shadow": true},
     {"k": "shape", "x": 56.946, "y": 49.181, "w": 49.993, "h": 2.082, "s": 6, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "https://google.aip.dev/131", "sz": 1.094, "c": "#808080", "href": "https://google.aip.dev/131"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}
-   ]
+   ],
+   "id": "rpc-tunneling"
   },
   {
    "layout": "canvas",
@@ -1148,7 +1163,8 @@
      "kind": "next",
      "label": "Towards Exercise 10: SPARQL"
     }
-   ]
+   ],
+   "id": "data-access"
   },
   {
    "layout": "canvas",
@@ -1161,7 +1177,8 @@
     {"k": "shape", "x": 43.504, "y": 12.589, "w": 54.164, "h": 14.387, "s": 1, "g": "rect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "SELECT people.name", "sz": 1.875, "c": "#000000", "f": "mono"}]}, {"al": "l", "r": [{"t": "FROM people", "sz": 1.875, "c": "#000000", "f": "mono"}]}, {"al": "l", "r": [{"t": "  INNER JOIN (", "sz": 1.875, "c": "#000000", "f": "mono"}]}, {"al": "l", "r": [{"t": "    SELECT person1 AS friend", "sz": 1.875, "c": "#000000", "f": "mono"}]}, {"al": "l", "r": [{"t": "    FROM friends", "sz": 1.875, "c": "#000000", "f": "mono"}]}, {"al": "l", "r": [{"t": "    WHERE person2 = ?", "sz": 1.875, "c": "#000000", "f": "mono"}]}, {"al": "l", "r": [{"t": "  ) AS f ON people.personID = f.friend;", "sz": 1.875, "c": "#000000", "f": "mono"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 67.716, "y": 8.7, "w": 31.199, "h": 4.83, "s": 2, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "SQL: Query relational databases", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 5.156, "y": 39.349, "w": 39.566, "h": 12.984, "s": 7, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Very different functionality!", "sz": 1.667}]}, {"al": "l", "r": [{"t": "", "sz": 1.667}]}, {"al": "l", "r": [{"t": "Example: ", "sz": 1.667}, {"t": "No transitive closure ", "sz": 1.667, "b": 1}, {"t": "in GraphQL – needs two separate queries to find friends of friends.", "sz": 1.667}]}, {"al": "l", "r": [{"t": "", "sz": 1.667}]}, {"al": "l", "r": [{"t": "That‘s interesting regarding ", "sz": 1.667}, {"t": "load balancing", "sz": 1.667, "b": 1}, {"t": "!", "sz": 1.667}]}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}}
-   ]
+   ],
+   "id": "query-languages"
   },
   {
    "layout": "canvas",
@@ -1169,7 +1186,8 @@
    "items": [
     {"k": "pic", "src": "img/142e20d675.png", "alt": "Slide about Linked Data Fragments: a scale between data dump and SPARQL endpoint, trading client cost against server cost", "x": 7.954, "y": 15.591, "w": 87.141, "h": 29.527, "crop": [0.13382, 0.185, 0.15154, 0.3845], "shadow": true},
     {"k": "shape", "x": 38.854, "y": 46.43, "w": 56.094, "h": 2.082, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "Linked Data Fragments | In depth", "sz": 1.094}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}
-   ]
+   ],
+   "id": "linked-data-fragments"
   },
   {
    "layout": "canvas",
@@ -1209,7 +1227,8 @@
     {"k": "shape", "x": 60.075, "y": 25.8, "w": 32.848, "h": 3.2, "s": 3, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Location, Temporal, Workflow Decoupling", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 79.794, "y": 30.5, "w": 15.497, "h": 3.725, "s": 5, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Security Issues", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 82.163, "y": 38, "w": 11.607, "h": 3.725, "s": 8, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Scalability?", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
-   ]
+   ],
+   "id": "pubsub"
   },
   {
    "layout": "canvas",
@@ -1221,7 +1240,8 @@
     {"k": "shape", "x": 45.276, "y": 33.807, "w": 49.993, "h": 5.805, "s": 3, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "MQTT is ", "sz": 2.083}, {"t": "not", "sz": 2.083, "b": 1}, {"t": " a “Message Queue” but a publish-subscribe brokerage system. “MQ” comes from a product line at IBM", "sz": 2.083}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 4.521, "y": 42.017, "w": 53.739, "h": 5.805, "s": 4, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Created at IBM in 1999 (part of IBM MQ), open specification since 2010, OASIS standard since 2014", "sz": 2.083}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 4.521, "y": 49.2, "w": 70.0, "h": 2.2, "s": 1, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "* Originally «MQ Telemetry Transport», after IBM’s MQSeries; since 2013 the name officially stands for nothing. OASIS versions: 3.1.1 (2014), 5.0 (2019)", "sz": 1.15, "c": "#808080"}]}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}}
-   ]
+   ],
+   "id": "mqtt-intro"
   },
   {
    "layout": "canvas",
@@ -1248,7 +1268,8 @@
     {"k": "shape", "x": 42.218, "y": 52.241, "w": 49.993, "h": 2.145, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "https://www.hivemq.com/blog/mqtt-essentials-part-5-mqtt-topics-best-practices/", "sz": 1.146, "c": "#808080", "href": "https://www.hivemq.com/blog/mqtt-essentials-part-5-mqtt-topics-best-practices/"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 76.213, "y": 32.107, "w": 6.026, "h": 9.5, "fx": true, "s": 8, "g": "straightConnector1", "ln": "#0070c0", "lw": 0.234, "tail": "arrow"},
     {"k": "shape", "x": 85.566, "y": 32.107, "w": 6.032, "h": 9.5, "s": 8, "g": "straightConnector1", "ln": "#0070c0", "lw": 0.234, "tail": "arrow"}
-   ]
+   ],
+   "id": "mqtt"
   },
   {
    "layout": "canvas",
@@ -1262,7 +1283,8 @@
     {"k": "shape", "x": 25.701, "y": 36.307, "w": 51.551, "h": 13.904, "s": 1, "g": "rect", "fill": "#73a5af", "ln": "#101a1c", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "Agreed-upon interaction semantics through MQTT", "sz": 1.667, "c": "#ffffff"}], "pl": 2.812, "in": -2.812, "bu": "•", "s": 2}, {"al": "l", "r": [{"t": "", "sz": 1.667}], "pl": 2.812, "in": -2.812}, {"al": "l", "r": [{"t": "Hard-coded broker, topic names, and exchange formats", "sz": 1.667, "c": "#ffffff"}], "pl": 2.812, "in": -2.812, "bu": "•", "s": 3}, {"al": "l", "r": [{"t": "", "sz": 1.667}], "pl": 2.812, "in": -2.812}, {"al": "l", "r": [{"t": "MQTT uses TCP for messaging. MQTT-SN is a 2024 standard for constrained devices (e.g., Sensor Networks)", "sz": 1.667, "c": "#ffffff"}], "pl": 2.812, "in": -2.812, "bu": "•", "s": 4}], "a": "t", "i": [0.886, 0.886, 0.886, 0.886]}},
     {"k": "shape", "x": 25.701, "y": 14.622, "w": 51.551, "h": 20.193, "g": "rect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "TOPIC_REQUEST = \"robot/gripper/request\" ", "sz": 1.458, "c": "#ffffff", "f": "mono"}], "sb": 0.0, "sa": 0.0}, {"al": "l", "r": [{"t": "TOPIC_RESPONSE = \"robot/gripper/response\" ", "sz": 1.458, "c": "#ffffff", "f": "mono"}], "sb": 0.0, "sa": 0.0}, {"al": "l", "r": [{"br": 1}, {"t": "client.connect(BROKER, PORT, 60)", "sz": 1.458, "c": "#ffffff", "f": "mono"}], "sb": 0.0, "sa": 0.0}, {"al": "l", "r": [{"t": "", "sz": 1.458}], "sb": 0.0, "sa": 0.0}, {"al": "l", "r": [{"t": "client.subscribe(TOPIC_RESPONSE)", "sz": 1.458, "c": "#ffffff", "f": "mono"}], "sb": 0.0, "sa": 0.0}, {"al": "l", "r": [{"t": "", "sz": 1.458}], "sb": 0.0, "sa": 0.0}, {"al": "l", "r": [{"t": "client.publish(TOPIC_REQUEST, \"getPosition\")", "sz": 1.458, "c": "#ffffff", "f": "mono"}], "sb": 0.0, "sa": 0.0}, {"al": "l", "r": [{"t": "", "sz": 1.458}], "sb": 0.0, "sa": 0.0}, {"al": "l", "r": [{"t": "def on_message(client, userdata, msg): ", "sz": 1.458, "c": "#ffffff", "f": "mono"}], "sb": 0.0, "sa": 0.0}, {"al": "l", "r": [{"t": "\t…", "sz": 1.458, "c": "#ffffff", "f": "mono"}], "sb": 0.0, "sa": 0.0}], "a": "m", "i": [2.082, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 40.038, "y": 51.391, "w": 63.872, "h": 4.796, "s": 4, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "https://www.hivemq.com/blog/mqtt-sn-smart-choice-for-iiot/", "sz": 1.667, "href": "https://www.hivemq.com/blog/mqtt-sn-smart-choice-for-iiot/"}]}, {"al": "l", "r": [{"t": "", "sz": 1.667}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}
-   ]
+   ],
+   "id": "mqtt-bot"
   },
   {
    "layout": "canvas",
@@ -1281,7 +1303,8 @@
     {"k": "pic", "src": "img/89ee67b486.png", "alt": "RSS — Wikipédia", "x": 34.874, "y": 5.396, "w": 6.868, "h": 6.868, "s": 1},
     {"k": "pic", "src": "img/85deefc50d.png", "alt": "The orange RSS feed icon", "x": 44.27, "y": 8.714, "w": 6.868, "h": 6.868, "s": 2},
     {"k": "shape", "x": 68.096, "y": 5.538, "w": 29.244, "h": 15.902, "s": 4, "g": "rect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "\"100% vendor neutral\"", "sz": 2.083, "c": "#202122"}]}, {"al": "l", "r": [{"t": "\"implemented by everybody\"", "sz": 2.083, "c": "#202122"}]}, {"al": "l", "r": [{"t": "\"freely extensible by anybody\"", "sz": 2.083, "c": "#202122"}]}, {"al": "l", "r": [{"t": "\"cleanly and thoroughly specified\"", "sz": 2.083, "c": "#202122"}]}, {"al": "r", "r": [{"t": "", "sz": 2.083}]}, {"al": "r", "r": [{"t": "S. Ruby", "sz": 2.083, "c": "#202122"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}
-   ]
+   ],
+   "id": "websub"
   },
   {
    "layout": "canvas",
@@ -1292,7 +1315,8 @@
     {"k": "shape", "x": 58.556, "y": 23.7, "w": 23.87, "h": 5.582, "rot": 344.35, "s": 15, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "No coincidence ", "sz": 2.083, "b": 1, "c": "#ffffff"}, {"t": "that this comes out of ", "sz": 2.083, "c": "#ffffff"}, {"t": "IndieWeb", "sz": 2.083, "b": 1, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 61.339, "y": 4.414, "w": 20.417, "h": 4.728, "rot": 18.43, "s": 2, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Look! The Hub is discovered in-band at run time!!", "sz": 1.458, "b": 1, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 83.304, "y": 5.651, "w": 11.082, "h": 4.728, "rot": 18.43, "s": 3, "g": "roundRect", "fill": "#eb6969", "ln": "#eb6969", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Implications?", "sz": 1.458, "b": 1, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
-   ]
+   ],
+   "id": "websub-flow"
   },
   {
    "layout": "canvas",
@@ -1382,7 +1406,8 @@
     "**CRUD-over-HTTP** uses HTTP as an **application protocol**, not as a transport",
     "**Remote data access** needs a **shared schema**; where queries run decides **who carries the load**",
     "**Pub-sub** decouples senders from receivers: **MQTT** via a broker, **WebSub** via hubs found at run time"
-   ]
+   ],
+   "id": "questions"
   }
  ],
  "ref_label": "Lecture 8",
