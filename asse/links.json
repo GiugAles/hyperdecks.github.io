@@ -25,7 +25,7 @@
   ],
   [
    "09",
-   "Decoupling and Interoperability#1",
+   "Decoupling#1",
    "start"
   ],
   [
@@ -1784,7 +1784,7 @@
  "syllabus": {
   "Principled Architectural Design for Distributed Information Systems": "07b#start",
   "Interaction Styles": "08#start",
-  "Decoupling and Interoperability": "09#start",
+  "Decoupling": "09#start",
   "Hypermedia APIs": "10#start",
   "Interaction with AI Agents and with Physical Devices": "11#start"
  },
