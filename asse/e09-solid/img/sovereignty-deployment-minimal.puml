@@ -40,18 +40,31 @@ database ClientPod
 ' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/270f04fab3f55f9debb8d1e8fdeeba597b9a23fd/main.tex#L242
 node Auctioneer
 
-' AuctioneerPod: mandated-by: the auction house publishes auctions "in its pod" (Task 3.2)
-' and has a bid container that only it may read (Task 4.3); Rule 3 moves
-' persistence to pods, and after a wipe the application rebuilds open
-' auctions and received bids from pods (Task 3.1).
-' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/270f04fab3f55f9debb8d1e8fdeeba597b9a23fd/main.tex#L178
-' Task 1.2 leaves the owner of bids and awards open; this diagram puts them
-' here because Task 4.3 describes the bid container as the auction house's.
-' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/270f04fab3f55f9debb8d1e8fdeeba597b9a23fd/main.tex#L241
-' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/270f04fab3f55f9debb8d1e8fdeeba597b9a23fd/main.tex#L277
-' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/270f04fab3f55f9debb8d1e8fdeeba597b9a23fd/main.tex#L234
-' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/270f04fab3f55f9debb8d1e8fdeeba597b9a23fd/main.tex#L188
-database AuctioneerPod
+' AuctionHousePods: grouped to show both as pods of PITAS applications; the
+' sheet does not mandate a shared server; it encourages several.
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/270f04fab3f55f9debb8d1e8fdeeba597b9a23fd/main.tex#L162
+rectangle AuctionHousePods {
+  ' AuctioneerPod: mandated-by: the auction house publishes auctions "in its pod" (Task 3.2)
+  ' and has a bid container that only it may read (Task 4.3); Rule 3 moves
+  ' persistence to pods, and after a wipe the application rebuilds open
+  ' auctions and received bids from pods (Task 3.1).
+  ' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/270f04fab3f55f9debb8d1e8fdeeba597b9a23fd/main.tex#L178
+  ' Task 1.2 leaves the owner of bids and awards open; this diagram puts them
+  ' here because Task 4.3 describes the bid container as the auction house's.
+  ' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/270f04fab3f55f9debb8d1e8fdeeba597b9a23fd/main.tex#L241
+  ' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/270f04fab3f55f9debb8d1e8fdeeba597b9a23fd/main.tex#L277
+  ' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/270f04fab3f55f9debb8d1e8fdeeba597b9a23fd/main.tex#L234
+  ' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/270f04fab3f55f9debb8d1e8fdeeba597b9a23fd/main.tex#L188
+  database AuctioneerPod
+
+  ' BidderPod: mandated-by: Rule 3 moves persistence to pods; Task 3.1 names
+  ' worker IDs as persistent data for pods, and after a wipe the application
+  ' rebuilds its registered workers from pods. The registry holds WebIDs only.
+  ' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/270f04fab3f55f9debb8d1e8fdeeba597b9a23fd/main.tex#L178
+  ' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/270f04fab3f55f9debb8d1e8fdeeba597b9a23fd/main.tex#L232
+  ' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/270f04fab3f55f9debb8d1e8fdeeba597b9a23fd/main.tex#L234
+  database BidderPod
+}
 
 ' EventQueue: not mandated. It is the event plane from Exercise 8; the sheet
 ' asks whether to keep it next to Solid (Task 5).
@@ -69,14 +82,6 @@ node "Bidder (PITAS application)" as BidderApp {
   ' pitas-jobs + pitas-scheduler: not mandated; groups' code.
   node "pitas-jobs +\npitas-scheduler" as BidderJobs
 }
-
-' BidderPod: mandated-by: Rule 3 moves persistence to pods; Task 3.1 names
-' worker IDs as persistent data for pods, and after a wipe the application
-' rebuilds its registered workers from pods. The registry holds WebIDs only.
-' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/270f04fab3f55f9debb8d1e8fdeeba597b9a23fd/main.tex#L178
-' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/270f04fab3f55f9debb8d1e8fdeeba597b9a23fd/main.tex#L232
-' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/270f04fab3f55f9debb8d1e8fdeeba597b9a23fd/main.tex#L234
-database BidderPod
 
 ' Worker and WorkerPod: mandated-by: Rule 2 keeps worker details in the worker's pod;
 ' Task 1.1 states that the rules require workers to have pods.
