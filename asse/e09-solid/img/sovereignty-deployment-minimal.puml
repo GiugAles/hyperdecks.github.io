@@ -1,0 +1,59 @@
+@startuml
+left to right direction
+
+actor Client
+database ClientPod
+node Auctioneer
+queue EventQueue
+node "Bidder (PITAS application)" as BidderApp {
+  node "pitas-auction-house" as BidderAH
+  node "pitas-worker-pool" as WorkerPool
+  node "pitas-jobs +\npitas-scheduler" as BidderJobs
+}
+control Worker
+database WorkerPod
+
+' Minimum deployment that satisfies the two sovereignty rules of Exercise 9:
+'   Rule 1: task input and result stay in the ClientPod; Auctioneer, Bidder
+'           and Worker only pass links and keep no copy.
+'   Rule 2: worker details stay in the WorkerPod; the Bidder keeps only the
+'           Worker's WebID.
+' "Auction house" in Rule 2 is the whole Bidder application: as in the groups'
+' code (E7/E8), the Worker registers with the worker pool, the auction house
+' only reads it, and a won job goes through pitas-jobs and the scheduler to
+' the Worker; the auction house never calls the Worker directly.
+' Auctions, bids, and awards are not covered by the rules; here they travel
+' as messages and stay in the applications (no further pods).
+' Permission grants are left out.
+' Timing: only step 8 is placed by a rule. Rule 2 makes the Bidder resolve
+' worker details "at run time ... whenever it needs them", so it fetches them
+' per auction. Step 7 could happen at any time (the Bidder may keep WebIDs);
+' it comes before step 8 only because the WebID is needed to reach the pod.
+' Layout: Client and Auctioneer left, Bidder and Worker right, queue in
+' between. Arrows are written left to right (with <-- for the reverse flow)
+' to keep the columns; parallel messages share one arrow, numbers give the
+' order. Worker setup (1.-2.) comes before the task.
+
+Client --> ClientPod : 3. write task input\n25. read task result
+Client --> Auctioneer : 4. commission task (link to input)
+Client <-- Auctioneer : 24. notify task done (link to result)
+
+Auctioneer --> EventQueue : 5. push auction event\n13. push award event
+Auctioneer <-- EventQueue : 11. deliver sealed bid\n23. deliver result event
+Auctioneer --> Auctioneer : 12. evaluate bids
+
+EventQueue --> BidderAH : 6. deliver auction event\n14. deliver award event
+EventQueue <-- BidderAH : 10. push sealed bid (Worker WebID)\n22. push result event (link to result)
+BidderAH --> WorkerPool : 7. fetch registered Worker WebIDs
+BidderAH --> WorkerPod : 8. fetch worker details
+BidderAH --> BidderAH : 9. evaluate auction
+BidderAH --> BidderJobs : 15. hand over won job (links only)\n21. poll job status
+
+WorkerPool <-- Worker : 1. register (WebID only)
+Worker --> WorkerPod : 2. write worker details
+BidderJobs --> Worker : 16. dispatch (links only)
+BidderJobs <-- Worker : 20. report execution done
+ClientPod <-- Worker : 17. fetch task input\n19. append task result
+Worker --> Worker : 18. execute (no copy kept)
+
+@enduml
