@@ -1,59 +1,179 @@
 @startuml
 left to right direction
 
-actor Client
-database ClientPod
-node Auctioneer
-queue EventQueue
-node "Bidder (PITAS application)" as BidderApp {
-  node "pitas-auction-house" as BidderAH
-  node "pitas-worker-pool" as WorkerPool
-  node "pitas-jobs +\npitas-scheduler" as BidderJobs
-}
-control Worker
-database WorkerPod
-
-' Minimum deployment that satisfies the two sovereignty rules of Exercise 9:
-'   Rule 1: task input and result stay in the ClientPod; Auctioneer, Bidder
-'           and Worker only pass links and keep no copy.
-'   Rule 2: worker details stay in the WorkerPod; the Bidder keeps only the
-'           Worker's WebID.
+' Minimum deployment for Exercise 9: the two sovereignty rules plus the pods
+' that Tasks 3 and 4 of the sheet require. Each entity and edge below carries
+' a comment that says what in the sheet mandates it, with a link to the line.
+' "mandated-by:" marks what the sheet mandates (grep for it); "not mandated"
+' marks parts taken from the groups' code (E7/E8).
+' Sheet version: Interactions-HSG/ASSE-Exercise-9 at commit 0c4250f.
+'
 ' "Auction house" in Rule 2 is the whole Bidder application: as in the groups'
 ' code (E7/E8), the Worker registers with the worker pool, the auction house
 ' only reads it, and a won job goes through pitas-jobs and the scheduler to
 ' the Worker; the auction house never calls the Worker directly.
-' Auctions, bids, and awards are not covered by the rules; here they travel
-' as messages and stay in the applications (no further pods).
-' Permission grants are left out.
-' Timing: only step 8 is placed by a rule. Rule 2 makes the Bidder resolve
-' worker details "at run time ... whenever it needs them", so it fetches them
-' per auction. Step 7 could happen at any time (the Bidder may keep WebIDs);
-' it comes before step 8 only because the WebID is needed to reach the pod.
+' The queue carries only notifications with links; the data is in the pods.
+' Left out: permission grants, the type index (Task 4.2), and the Auctioneer's
+' own worker pool and the Bidder's own auctions (each group plays both roles).
+' Timing: only step 11 is placed by a rule. Step 10 could happen at any time
+' (the Bidder may keep WebIDs); it comes before step 11 only because the
+' WebID is needed to reach the pod.
 ' Layout: Client and Auctioneer left, Bidder and Worker right, queue in
 ' between. Arrows are written left to right (with <-- for the reverse flow)
 ' to keep the columns; parallel messages share one arrow, numbers give the
-' order. Worker setup (1.-2.) comes before the task.
+' order. Worker setup (1.-3.) comes before the task.
 
-Client --> ClientPod : 3. write task input\n25. read task result
-Client --> Auctioneer : 4. commission task (link to input)
-Client <-- Auctioneer : 24. notify task done (link to result)
+' --- Entities ---------------------------------------------------------------
 
-Auctioneer --> EventQueue : 5. push auction event\n13. push award event
-Auctioneer <-- EventQueue : 11. deliver sealed bid\n23. deliver result event
-Auctioneer --> Auctioneer : 12. evaluate bids
+' Client and ClientPod: mandated-by: Rule 1 stores task input and result in the client's
+' pod; Task 1.1 states that the rules require clients to have pods.
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L175
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L184
+actor Client
+database ClientPod
 
-EventQueue --> BidderAH : 6. deliver auction event\n14. deliver award event
-EventQueue <-- BidderAH : 10. push sealed bid (Worker WebID)\n22. push result event (link to result)
-BidderAH --> WorkerPool : 7. fetch registered Worker WebIDs
-BidderAH --> WorkerPod : 8. fetch worker details
-BidderAH --> BidderAH : 9. evaluate auction
-BidderAH --> BidderJobs : 15. hand over won job (links only)\n21. poll job status
+' Auctioneer: mandated-by: the auction house that publishes the auction and reads all bids
+' in the integration test.
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L238
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L239
+node Auctioneer
 
+' AuctioneerPod: mandated-by: the auction house publishes auctions "in its pod" (Task 3.2)
+' and has a bid container that only it may read (Task 4.3); after a wipe the
+' application rebuilds open auctions and received bids from pods (Task 3.1).
+' Task 1.2 leaves the owner of bids and awards open; this diagram puts them
+' here because Task 4.3 describes the bid container as the auction house's.
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L238
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L274
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L231
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L185
+database AuctioneerPod
+
+' EventQueue: not mandated. It is the event plane from Exercise 8; the sheet
+' allows its state to stay in the application (Task 1) and asks whether to
+' keep it next to Solid (Task 5).
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L181
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L317
+queue EventQueue
+
+' Bidder: mandated-by: the bidder of the integration test. Its split into components is
+' not mandated; it follows the groups' code.
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L239
+node "Bidder (PITAS application)" as BidderApp {
+  node "pitas-auction-house" as BidderAH
+  ' pitas-worker-pool: mandated-by: Rule 2 has workers register with an auction house.
+  ' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L178
+  node "pitas-worker-pool" as WorkerPool
+  ' pitas-jobs + pitas-scheduler: not mandated; groups' code.
+  node "pitas-jobs +\npitas-scheduler" as BidderJobs
+}
+
+' BidderPod: mandated-by: after a wipe the application rebuilds its registered workers
+' from pods (Task 3.1), so the worker registry (WebIDs only) needs a pod.
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L231
+database BidderPod
+
+' Worker and WorkerPod: mandated-by: Rule 2 keeps worker details in the worker's pod;
+' Task 1.1 states that the rules require workers to have pods.
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L178
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L184
+control Worker
+database WorkerPod
+
+' --- Edges ------------------------------------------------------------------
+
+' 4, 30: mandated-by: Rule 1 stores the input in the client's pod; the commissioning
+' client can read the result (Task 3.2).
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L175
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L241
+Client --> ClientPod : 4. write task input\n30. read task result
+' 5: mandated-by: Rule 1 for passing only a link (no intermediary stores
+' the input); the commission itself is not mandated.
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L175
+Client --> Auctioneer : 5. commission task (link to input)
+' 29: not mandated; groups' code. The link only, as for 5.
+Client <-- Auctioneer : 29. notify task done (link to result)
+
+' 6: mandated-by: the auction house publishes the auction in its pod (Task 3.2), readable
+' by anyone (Task 4.3).
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L238
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L273
+' 14: the auction house can read all bids (Task 3.2, Task 4.3).
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L239
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L274
+' 16: the auction house awards the auction (Task 3.2); the award is stored in
+' a pod (Task 1.3), whose owner Task 1.2 leaves open.
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L240
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L186
+Auctioneer --> AuctioneerPod : 6. create auction (link to input)\n14. read bids\n16. write award
+' 7, 17: not mandated; event plane from Exercise 8 (see EventQueue).
+Auctioneer --> EventQueue : 7. push auction event (link to auction)\n17. push award event (link to award)
+' 28: not mandated; event plane from Exercise 8.
+Auctioneer <-- EventQueue : 28. deliver result event
+' 15: not mandated; how bids are evaluated is up to the groups.
+Auctioneer --> Auctioneer : 15. evaluate bids
+
+' 9: mandated-by: the bidder discovers the auction from the auction house's WebID
+' (Task 3.2).
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L238
+' 13: the bidder appends a bid and cannot read others' bids (Task 3.2); the
+' bid container is append-only for anyone (Task 4.3).
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L239
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L274
+' 19: after the award, the task description becomes readable to the winner
+' only (Task 3.2, Task 4.3).
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L240
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L275
+AuctioneerPod <-- BidderAH : 9. read auction\n13. append sealed bid (Worker WebID)\n19. read award
+' 8, 18: not mandated; event plane from Exercise 8.
+EventQueue --> BidderAH : 8. deliver auction event\n18. deliver award event
+' 27: not mandated; event plane from Exercise 8.
+EventQueue <-- BidderAH : 27. push result event (link to result)
+' 10: mandated-by: Rule 2 resolves details "starting from the worker's WebID"; when the
+' WebIDs are read is not mandated.
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L178
+BidderAH --> WorkerPool : 10. fetch registered Worker WebIDs
+' 11: mandated-by: Rule 2 resolves worker details at run time, whenever needed; the bidder
+' resolves them "at that moment" (Task 3.2). The read access comes from the
+' registration (Task 4.3).
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L178
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L239
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L277
+BidderAH --> WorkerPod : 11. fetch worker details
+' 12: mandated-by: the bidder decides to bid based on its workers' details (Task 3.2).
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L239
+BidderAH --> BidderAH : 12. evaluate auction
+' 20, 26: mandated-by: Rule 1 for passing links only (no copies); the
+' hand-over and polling themselves are not mandated (groups' code).
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L175
+BidderAH --> BidderJobs : 20. hand over won job (links only)\n26. poll job status
+
+' 1: mandated-by: Rule 2 has the worker register with an auction house; the auction house
+' stores no details about it.
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L178
 WorkerPool <-- Worker : 1. register (WebID only)
+' 3: mandated-by: the application rebuilds its registered workers from pods after a wipe
+' (Task 3.1).
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L231
+WorkerPool --> BidderPod : 3. store Worker WebID
+' 2: mandated-by: Rule 2 keeps the worker details in the worker's pod.
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L178
 Worker --> WorkerPod : 2. write worker details
-BidderJobs --> Worker : 16. dispatch (links only)
-BidderJobs <-- Worker : 20. report execution done
-ClientPod <-- Worker : 17. fetch task input\n19. append task result
-Worker --> Worker : 18. execute (no copy kept)
+' 21, 25: mandated-by: Rule 1 for passing links only (no copies); dispatch
+' and report themselves are not mandated (groups' code).
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L175
+BidderJobs --> Worker : 21. dispatch (links only)
+BidderJobs <-- Worker : 25. report execution done
+' 22, 24: mandated-by: the worker reads the input from and writes the result into the
+' client's pod (Rule 1, Task 3.2); it may write there but read nothing else
+' (Task 4.3).
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L175
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L241
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L276
+ClientPod <-- Worker : 22. fetch task input\n24. append task result
+' 23: mandated-by: neither the winner nor any intermediary keeps a copy (Rule 1, Task 3.2).
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L175
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/0c4250f9e526924a9fb5ac7d5c447e125c9cf964/main.tex#L241
+Worker --> Worker : 23. execute (no copy kept)
 
 @enduml
