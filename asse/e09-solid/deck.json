@@ -1,0 +1,32 @@
+{
+ "title": "Solid",
+ "lang": "en",
+ "footer": "Advanced Software and Systems Engineering | Institute of Computer Science | University of St.Gallen",
+ "ref_label": "Exercise 9",
+ "slides": [
+  {
+   "layout": "title",
+   "id": "start",
+   "kicker": "Exercise Session 9",
+   "title": "Solid",
+   "presenters": [
+    "Alessandro Giugno",
+    "Luka Bekavac",
+    "Simon Mayer"
+   ],
+   "meta": [
+    "University of St.Gallen",
+    "Master in Computer Science",
+    "",
+    "Advanced Software and Systems Engineering (7,856)"
+   ]
+  },
+  {
+   "layout": "image",
+   "title": "One Task Through the Pods",
+   "image": "https://solid.interactions.ics.unisg.ch/mcs-asse/slides/assets/sovereignty-deployment-minimal.svg",
+   "shadow": false,
+   "alt": "Deployment diagram with numbered steps 1 to 30. Client, Auctioneer, an EventQueue, a PITAS application with Bidder, pitas-jobs and pitas-scheduler, and pitas-worker-pool, and a Worker. ClientPod, WorkerPod, and an AuctionHousePods group with AuctioneerPod and BidderPod. The Client writes the task input to ClientPod, the Auctioneer creates the auction in AuctioneerPod, the Bidder appends a bid there, and the Worker fetches the task input from ClientPod and appends the result to it."
+  }
+ ]
+}
