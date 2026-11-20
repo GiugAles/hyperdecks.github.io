@@ -735,7 +735,9 @@ class Html:
         self.files = {}
 
     def asset(self, rel):
-        """Copy a deck image next to the page and return its relative URL."""
+        """Copy a deck image next to the page and return its relative URL; an https:// URL is kept, so the browser loads it when the page is shown."""
+        if rel.startswith("https://"):
+            return esc(rel)
         src = (self.base / rel).resolve()
         if src not in self.files:
             name = re.sub(r"[^A-Za-z0-9._-]", "-", src.name)

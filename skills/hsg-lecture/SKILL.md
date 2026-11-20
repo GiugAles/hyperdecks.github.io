@@ -24,7 +24,7 @@ Style: the HSG slide template as used in the lectures 01a Introduction, 01b Info
 
 ## Deck format
 
-One JSON file, `deck.json`. Image paths are relative to the folder of the deck.
+One JSON file, `deck.json`. Image paths are relative to the folder of the deck. An image given as an `https://` URL (e.g. a resource in a Solid pod) is not copied: the browser loads it each time the page is shown, so a new version at the same URL needs no new render.
 
 ```json
 {"title": "Computing on Bits", "lang": "en",

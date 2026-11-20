@@ -159,6 +159,8 @@ def check(deck, base):
         return errors, warnings
 
     def need_file(p, where):
+        if isinstance(p, str) and p.startswith("https://"):
+            return
         if not isinstance(p, str) or not (base / p).is_file():
             errors.append(f"{where}: file not found: {p}")
 
