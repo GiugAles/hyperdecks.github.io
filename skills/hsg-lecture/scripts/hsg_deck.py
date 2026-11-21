@@ -432,7 +432,8 @@ def load_notes(deck, md):
             n, head, body = (int(m.group(1)) if m else None), (m.group(2).strip() if m else ""), []
         elif n is not None:
             body.append(line)
-    plain = lambda s: re.sub(r"[\s*]+", " ", s or "").strip().lower()
+    quotes = str.maketrans({"‘": "'", "’": "'", "“": '"', "”": '"', "„": '"'})
+    plain = lambda s: re.sub(r"[\s*]+", " ", (s or "").translate(quotes)).strip().lower()
     for n, (head, text) in found.items():
         if 1 <= n <= len(deck["slides"]):
             s = deck["slides"][n - 1]

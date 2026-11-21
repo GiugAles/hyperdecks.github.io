@@ -108,7 +108,9 @@ Headline under 80 characters (140 on `quote`), not in capitals. Words per slide:
 ## Where decks go
 
 * A lecture: `lectures/<course>/<NN-topic>/deck.json`, e.g. `lectures/computersysteme/02-circuits/deck.json`, its pictures in `img/` beside it.
+* A talk or event that is not part of a course: `events/<YYYY-MM-DD-Name>/deck.json`, listed in `events/index.html` and as a small tile under "Other Events" on the front page `index.html` (courses get the large tiles). A theme shared by events lives in `events/theme/`.
 * Check screenshots go outside the repo.
+* The hero of every index page uses the green wedge of the title slide at its fixed proportions (50 : 21.6, polygon `100% 0, 100% 100%, 3.65% 100%, 0 52.9%`); never give it a percentage width with a fixed height, which distorts it.
 
 ## Steps
 
