@@ -1417,14 +1417,15 @@
     "text": "Who owns auctions, bids, and awards?"
    },
    "points": [
-    "Rule 1: task input and task result stay in the client's pod; the worker and intermediaries keep no copy",
-    "Rule 2: worker details stay in the worker's pod; the auction house resolves them at run time",
+    "Task data stays with the client: input and result live in the client's pod; no one else keeps a copy",
+    "Worker details stay with the worker: the house knows only the WebID and resolves details at run time",
+    "Persistence moves to pods: your app recovers from the pods",
     {
-     "text": "Your group decides who owns:",
+     "text": "You work out the full rule set and decide who owns:",
      "sub": [
       "the auction: the house or the client?",
       "a bid: the bidder or the house?",
-      "an award: the house or the winning bidder?"
+      "an award: the house or the winner?"
      ]
     }
    ],
@@ -1441,7 +1442,7 @@
    "title": "Solid in the PITAS Ecosystem",
    "image": "img/pitas-solid.svg",
    "shadow": false,
-   "alt": "Diagram of PITAS under the two rules: on the course server solid.interactions.ics.unisg.ch the client's pod (tasks/t-17.ttl with the task input, results/r-17.ttl, WebID) and the auction house's pod (workers/ with WebIDs only, auctions, bids, and awards marked with a question mark, WebID); on a group's own server the worker's pod (details.ttl with its task types, bids marked with a question mark, WebID). A dashed green arrow labelled Rule 2 from the auction house's workers/ to the worker's details. A grey arrow from the worker to the client's pod labelled Rule 1: the worker reads the input and writes the result, and keeps no copy. Legend: pod of one entity, resolved by URI at run time and no copy, red items whose owner the group decides in Task 1",
+   "alt": "Diagram of PITAS under the sovereignty rules: on the course server solid.interactions.ics.unisg.ch the client's pod (tasks/t-17.ttl with the task input, results/r-17.ttl, WebID) and the auction house's pod (workers/ with WebIDs only, auctions, bids, and awards marked with a question mark, WebID); on a group's own server the worker's pod (details.ttl with its task types, bids marked with a question mark, WebID). A dashed green arrow labelled worker details stay with worker from the auction house's workers/ to the worker's details. A grey arrow from the worker to the client's pod labelled Task data stays with the client: the worker reads the input and writes the result, and keeps no copy. Legend: pod of one entity, resolved by URI at run time and no copy, red items whose owner the group decides in Task 1",
    "caption": "The pod, not your application, is authoritative: stop your app, delete its local state, restart, and it continues from the pods (Task 3.1)."
   },
   {
@@ -1489,7 +1490,7 @@
    "rows": [
     [
      "1 Data Sovereignty",
-     "what the two rules mean for PITAS; who owns auctions, bids, and awards; entities, WebIDs, and pods; a system diagram",
+     "the full set of sovereignty rules; who owns auctions, bids, and awards; entities, WebIDs, and pods; a system diagram",
      "[Who owns what](09#sovereignty), [PITAS](09#pitas-solid)"
     ],
     [
