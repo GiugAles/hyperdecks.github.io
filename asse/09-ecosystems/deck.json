@@ -1316,8 +1316,9 @@
    "layout": "quiz",
    "title": "Your Turn: Which Request?",
    "items": [
-    "A bidder submits a sealed bid for auction a-001. Which method, to which URI, with which access mode?",
-    "The auction house closes the auction, but only if it is still open. What does it send?",
+    "A bidder submits a sealed bid for a-001. Which method, to which URI, with which mode?",
+    "The house closes the auction, but only if it is still open. What does it send?",
+    "The winner writes its result into the client's pod. Which access mode does it need?",
     "A client moves to another PITAS provider. What happens to its tasks?",
     "Two PITAS apps read the same auction. What must they agree on?"
    ]
@@ -1355,7 +1356,7 @@
    "image": "img/solid-discovery.svg",
    "shadow": false,
    "alt": "Chain of five boxes connected by arrows: WebID …/profile/card#me, profile document with solid:publicTypeIndex, public type index with solid:forClass pitas:Auction and solid:instanceContainer, container …/pitas/auctions/ with ldp:contains, auction a-001.ttl. Below: the bidder knows only the auction house's WebID; each step is a GET and a link to follow; the only shared knowledge is HTTP, RDF, the Solid vocabulary, and the class pitas:Auction",
-   "caption": "Hypermedia for data at rest: this replaces the resource directory of Assignment 8 (Task 4.2). A private type index, readable only by the owner, lists private data.",
+   "caption": "Hypermedia for data at rest: this replaces the resource directory of Assignment 8 (Assignment 9, Task 4.2). A private type index, readable only by the owner, lists private data.",
    "refs": [
     {
      "to": "09#hypermedia-way",
@@ -1517,7 +1518,7 @@
      "[Critical view](09#solid-critique)"
     ]
    ],
-   "after": "Deadline: Sunday 29.11.2026, 23:59 CET. Hand in a release with your ADRs and WebIDs, and a PDF with Tasks 1, 2, 3.2 and 6."
+   "after": "Deadline: Sunday 29.11.2026, 23:59 CET. Hand in a release with your ADRs and WebIDs, and a PDF with Tasks 1, 2, 3.2, and 6."
   },
   {
    "layout": "task",
@@ -1526,7 +1527,7 @@
    "stamp": "Register your group's WebIDs and pods this week!",
    "paragraphs": [
     "We host a Community Solid Server for the PITAS ecosystem. Register the accounts, WebIDs, and pods your design needs.",
-    "For development, also run one locally: `npx @solid/community-server`. The ecosystem must work with pods on more than one server."
+    "Better still, run a second one on your group VM: `npx @solid/community-server`. The ecosystem must work with pods on more than one server. A server on your laptop is fine for development, but it is not part of the ecosystem."
    ],
    "url": "https://solid.interactions.ics.unisg.ch/",
    "label": "solid.interactions.ics.unisg.ch"
