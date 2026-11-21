@@ -827,7 +827,7 @@
     "Core issue of the example: the encoding of «Jump» (00) is a prefix of the encoding of «Run» (001)",
     "We say that such codes break the Fano condition"
    ],
-   "source": "[godbolt.org](https://godbolt.org/) · [defuse.ca/online-x86-assembler.htm](https://defuse.ca/online-x86-assembler.htm)"
+   "source": "[godbolt.org](https://godbolt.org/); [defuse.ca/online-x86-assembler.htm](https://defuse.ca/online-x86-assembler.htm)"
   },
   {
    "layout": "quiz",
@@ -897,7 +897,7 @@
    "aside": {
     "code": "long doubleMe(long number) {\n  long doubleNumber = number + number;\n  return doubleNumber;\n}"
    },
-   "source": "[godbolt.org](https://godbolt.org/) · [defuse.ca/online-x86-assembler.htm](https://defuse.ca/online-x86-assembler.htm)",
+   "source": "[godbolt.org](https://godbolt.org/); [defuse.ca/online-x86-assembler.htm](https://defuse.ca/online-x86-assembler.htm)",
    "points": [
     "**High-level programming language**: productivity features to simplify writing code; rather generic!",
     "**Assembly code**: textual representation of the machine code with individual instructions; machine-specific!",

@@ -830,7 +830,7 @@
     ]
    ],
    "after": "You'll understand better in a week, and much better in 6 weeks!",
-   "source": "Try it: [2's complement](https://www.exploringbinary.com/twos-complement-converter/) · [IEEE 754](https://www.h-schmidt.net/FloatConverter/IEEE754.html) · [binary to ASCII](https://mothereff.in/binary-ascii)"
+   "source": "Try it: [2's complement](https://www.exploringbinary.com/twos-complement-converter/); [IEEE 754](https://www.h-schmidt.net/FloatConverter/IEEE754.html); [binary to ASCII](https://mothereff.in/binary-ascii)"
   },
   {
    "layout": "text",
