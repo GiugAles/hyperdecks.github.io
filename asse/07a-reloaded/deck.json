@@ -172,7 +172,7 @@
     {"k": "shape", "x": 46.976, "y": 43.816, "w": 45.57, "h": 7.572, "s": 4, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Reactive Executable Markers (REMs) ", "sz": 1.875, "c": "#00802f"}, {"t": "expose code that changes based on the current ambient temperature", "sz": 1.875, "b": 1, "c": "#00802f"}, {"t": ".", "sz": 1.875, "c": "#00802f"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "pic", "src": "img/75d4e083be.png", "alt": "First page of the paper Supernatural Superserious: Reactive Executable Markers, with a QR code and execution flows", "x": 45.468, "y": 25.329, "w": 39.076, "h": 19.055, "s": 4}
    ],
-   "source": "Jenss, Mayer. QRUco: Interactive QR Codes Through Thermoresponsive Embeddings. CHI 2023. [Paper & Video](https://dl.acm.org/doi/10.1145/3544549.3583923) · Eichelberger, Mayer, Ramanathan. Supernatural Superserious: Reactive Executable Markers. UbiComp 2025."
+   "source": "Jenss, Mayer. QRUco: Interactive QR Codes Through Thermoresponsive Embeddings. CHI 2023. [Paper & Video](https://dl.acm.org/doi/10.1145/3544549.3583923); Eichelberger, Mayer, Ramanathan. Supernatural Superserious: Reactive Executable Markers. UbiComp 2025."
   },
   {
    "layout": "canvas",

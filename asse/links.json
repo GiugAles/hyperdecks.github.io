@@ -250,6 +250,11 @@
   ],
   [
    "09",
+   "HCI: The Animals",
+   "animals-way"
+  ],
+  [
+   "09",
    "Affordances are relational",
    "affordances"
   ],
@@ -282,6 +287,11 @@
    "09",
    "~Instead of hard-coding clients with specific application protocols",
    "media-types"
+  ],
+  [
+   "09",
+   "~Our problem to distinguish between director and cast",
+   "director-link"
   ],
   [
    "09",
@@ -865,16 +875,6 @@
   ],
   [
    "09",
-   "REST APIs Must be Hypertext-Driven",
-   [
-    [
-     "07b#hateoas",
-     "recap"
-    ]
-   ]
-  ],
-  [
-   "09",
    "~Instead of hard-coding clients with specific application protocols",
    [
     [
@@ -915,6 +915,11 @@
    "09",
    "Does the Link Care Where It Points",
    [
+    [
+     "09#director-link",
+     "recap",
+     "JSON: Director and Cast"
+    ],
     [
      "09#common-model",
      "recap"
@@ -989,6 +994,10 @@
    "09",
    "Data at Rest Needs a Contract",
    [
+    [
+     "09#common-model",
+     "recap"
+    ],
     [
      "10#shared-understanding",
      "next"
@@ -1232,6 +1241,115 @@
      "next"
     ]
    ]
+  ],
+  [
+   "09",
+   "~https://schema.org/Movie",
+   [
+    [
+     "10#seen-by-now",
+     "next"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "Sounds Familiar",
+   [
+    [
+     "07b#hateoas",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "The Hypermedia Way#1",
+   [
+    [
+     "09#animals-way",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "~Specification of the underlying protocol",
+   [
+    [
+     "08#crud-over-http",
+     "recap"
+    ],
+    [
+     "09#n3-patch",
+     "next"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "The final step: A Common Conceptual Model",
+   [
+    [
+     "10#shared-understanding",
+     "next"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "Data Decentralization: Personal Data Storage#1",
+   [
+    [
+     "07b#jump-vs-transclusion",
+     "recap"
+    ],
+    [
+     "09#nelson",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "Changing Data: N3 Patch",
+   [
+    [
+     "09#http-idioms",
+     "recap",
+     "HTTP Protocol Idioms"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "(4/4) Guidance",
+   [
+    [
+     "07b#hateoas",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "What Is in the Contract",
+   [
+    [
+     "08#ladder",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "Jump Links (Web) and Transclusion",
+   [
+    [
+     "07b#jump-vs-transclusion",
+     "recap"
+    ]
+   ]
   ]
  ],
  "inline": [
@@ -1288,12 +1406,6 @@
    "Branding Low-power Networking for the IoT",
    "PlugFest",
    "07a#plugfest"
-  ],
-  [
-   "09",
-   "~Show Galaxus",
-   "slide 9 of «Hypermedia APIs»",
-   "10#seen-by-now"
   ],
   [
    "07a",
@@ -1531,42 +1643,6 @@
   ],
   [
    "09",
-   "~https://rubenverborgh.github.io/WebFundamentals/web-apis/#web-without-hypermedia",
-   "https://rubenverborgh.github.io/WebFundamentals/web-apis/#web-without-hypermedia",
-   "https://rubenverborgh.github.io/WebFundamentals/web-apis/#web-without-hypermedia"
-  ],
-  [
-   "09",
-   "~https://rubenverborgh.github.io/WebFundamentals/web-apis/#web-without-hypermedia#2",
-   "https://rubenverborgh.github.io/WebFundamentals/web-apis/#web-without-hypermedia",
-   "https://rubenverborgh.github.io/WebFundamentals/web-apis/#web-without-hypermedia"
-  ],
-  [
-   "09",
-   "~http://www.notpron.org/notpron/",
-   "http://www.notpron.org/notpron/",
-   "https://web.archive.org/web/20230928211533/https://notpron.org/notpron/"
-  ],
-  [
-   "09",
-   "~https://datatracker.ietf.org/doc/html/rfc5789",
-   "https://datatracker.ietf.org/doc/html/rfc5789",
-   "https://datatracker.ietf.org/doc/html/rfc5789"
-  ],
-  [
-   "09",
-   "~https://monoskop.org/images/7/73/Nelson_Ted_1965_A_File_Structure_for_the_Complex_the_Changing_and_the_Indeterminate.pdf",
-   "https://monoskop.org/images/7/73/Nelson_Ted_1965_A_File_Structure_for_the_Complex_the_Changing_and_the_Indeterminate.pdf",
-   "https://monoskop.org/images/7/73/Nelson_Ted_1965_A_File_Structure_for_the_Complex_the_Changing_and_the_Indeterminate.pdf"
-  ],
-  [
-   "09",
-   "~https://youtu.be/mmfjM-SGlGs?t=1890",
-   "https://youtu.be/mmfjM-SGlGs?t=1890",
-   "https://youtu.be/mmfjM-SGlGs?t=1890"
-  ],
-  [
-   "09",
    "~https://www.iana.org/assignments/link-relations/link-relations.xhtml",
    "https://www.iana.org/assignments/link-relations/link-relations.xhtml",
    "https://www.iana.org/assignments/link-relations/link-relations.xhtml"
@@ -1576,12 +1652,6 @@
    "~https://www.iana.org/assignments/link-relations/link-relations.xhtml#2",
    "https://www.iana.org/assignments/link-relations/link-relations.xhtml",
    "https://www.iana.org/assignments/link-relations/link-relations.xhtml"
-  ],
-  [
-   "09",
-   "~https://martinfowler.com/articles/richardsonMaturityModel.html",
-   "https://martinfowler.com/articles/richardsonMaturityModel.html",
-   "https://martinfowler.com/articles/richardsonMaturityModel.html"
   ],
   [
    "09",
@@ -1612,60 +1682,6 @@
    "~https://schema.org/sameAs",
    "https://schema.org/sameAs",
    "https://schema.org/sameAs"
-  ],
-  [
-   "09",
-   "~https://www.societybyte.swiss/en/2021/01/07/part-1-power-to-the-people-re-decentralizing-the-web-for-good-this-time/",
-   "https://www.societybyte.swiss/en/2021/01/07/part-1-power-to-the-people-re-decentralizing-the-web-for-good-this-time/",
-   "https://www.societybyte.swiss/en/2021/01/07/part-1-power-to-the-people-re-decentralizing-the-web-for-good-this-time/"
-  ],
-  [
-   "09",
-   "~https://www.economist.com/leaders/2008/03/19/break-down-these-walls",
-   "https://www.economist.com/leaders/2008/03/19/break-down-these-walls",
-   "https://www.economist.com/leaders/2008/03/19/break-down-these-walls"
-  ],
-  [
-   "09",
-   "~https://medium.com/@shevski/how-solid-is-tims-plan-to-redecentralize-the-web-b163ba78e835",
-   "https://medium.com/@shevski/how-solid-is-tims-plan-to-redecentralize-the-web-b163ba78e835",
-   "https://medium.com/@shevski/how-solid-is-tims-plan-to-redecentralize-the-web-b163ba78e835"
-  ],
-  [
-   "09",
-   "~https://www.societybyte.swiss/en/2021/01/07/part-1-power-to-the-people-re-decentralizing-the-web-for-good-this-time/#2",
-   "https://www.societybyte.swiss/en/2021/01/07/part-1-power-to-the-people-re-decentralizing-the-web-for-good-this-time/",
-   "https://www.societybyte.swiss/en/2021/01/07/part-1-power-to-the-people-re-decentralizing-the-web-for-good-this-time/"
-  ],
-  [
-   "09",
-   "~https://www.economist.com/leaders/2008/03/19/break-down-these-walls#2",
-   "https://www.economist.com/leaders/2008/03/19/break-down-these-walls",
-   "https://www.economist.com/leaders/2008/03/19/break-down-these-walls"
-  ],
-  [
-   "09",
-   "~https://medium.com/@shevski/how-solid-is-tims-plan-to-redecentralize-the-web-b163ba78e835#2",
-   "https://medium.com/@shevski/how-solid-is-tims-plan-to-redecentralize-the-web-b163ba78e835",
-   "https://medium.com/@shevski/how-solid-is-tims-plan-to-redecentralize-the-web-b163ba78e835"
-  ],
-  [
-   "09",
-   "~https://www.societybyte.swiss/en/2021/01/07/part-1-power-to-the-people-re-decentralizing-the-web-for-good-this-time/#3",
-   "https://www.societybyte.swiss/en/2021/01/07/part-1-power-to-the-people-re-decentralizing-the-web-for-good-this-time/",
-   "https://www.societybyte.swiss/en/2021/01/07/part-1-power-to-the-people-re-decentralizing-the-web-for-good-this-time/"
-  ],
-  [
-   "09",
-   "~https://www.economist.com/leaders/2008/03/19/break-down-these-walls#3",
-   "https://www.economist.com/leaders/2008/03/19/break-down-these-walls",
-   "https://www.economist.com/leaders/2008/03/19/break-down-these-walls"
-  ],
-  [
-   "09",
-   "~https://medium.com/@shevski/how-solid-is-tims-plan-to-redecentralize-the-web-b163ba78e835#3",
-   "https://medium.com/@shevski/how-solid-is-tims-plan-to-redecentralize-the-web-b163ba78e835",
-   "https://medium.com/@shevski/how-solid-is-tims-plan-to-redecentralize-the-web-b163ba78e835"
   ],
   [
    "10",

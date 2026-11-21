@@ -122,7 +122,7 @@
     {"k": "shape", "x": 3.924, "y": 14.91, "w": 90.885, "h": 11.266, "g": "roundRect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "As the ", "sz": 1.875, "c": "#000000"}, {"t": "architect of a (distributed) (information) system", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": ", you should be aware of the ", "sz": 1.875, "c": "#000000"}, {"t": "design trade-offs that are induced by specific choices ", "sz": 1.875, "b": 1, "c": "#000000"}, {"t": "in order to construct a system ", "sz": 1.875, "c": "#000000"}, {"t": "with your desired non-functional properties. ", "sz": 1.875, "b": 1, "c": "#000000"}]}, {"al": "c", "r": [{"t": "", "sz": 1.875}]}, {"al": "c", "r": [{"t": "This is relevant in a (technology) world with projects that ", "sz": 1.875, "c": "#000000"}, {"t": "exhibit a broad range of non-functional requirements.", "sz": 1.875, "b": 1, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ],
    "id": "principled-design",
-   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000 · Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002",
+   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000; Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002",
    "refs": [
     {
      "to": "07a#tradeoffs",
@@ -205,7 +205,7 @@
    "layout": "canvas",
    "title": "Case Study 1: Creative Play",
    "items": [
-    {"k": "shape", "x": 3.924, "y": 12.501, "w": 77.16, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Ole Christiansen’s „Leg godt“ („Play Well“) in 1932", "sz": 2.083}]}, {"al": "l", "r": [{"t": "Godtfred Christiansen’s „system for creative play“ in 1958", "sz": 2.083}]}, {"al": "l", "r": [{"t": "Derivative of Kiddicraft play system", "sz": 2.083}]}, {"al": "l", "r": [{"t": "Lego was designed ", "sz": 2.083}, {"t": "with the system in mind", "sz": 2.083, "b": 1}]}, {"al": "l", "r": [{"t": "", "sz": 2.917}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 2.917}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "Main desired (non-functional) characteristics: ", "sz": 2.083}, {"t": "Many recombinations in sturdy designs!", "sz": 2.083, "b": 1}], "pl": 0.0, "in": 0.0, "s": 1}, {"al": "l", "r": [{"t": "", "sz": 1.667}]}, {"al": "l", "r": [{"t": "", "sz": 1.667}]}, {"al": "l", "r": [{"t": "Problem #1: ", "sz": 2.083}, {"t": "Light but durable materials", "sz": 2.083, "b": 1}, {"t": "! ", "sz": 2.083}], "s": 2}, {"al": "l", "r": [{"t": "Hollow bricks are desired", "sz": 1.667}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 2}, {"al": "l", "r": [{"t": "However, especially the notches need to be resistant to impact and heat", "sz": 1.667}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 2}, {"al": "l", "r": [{"t": "Solution: Injection-molded acrylonitrile butadiene styrene (ABS)", "sz": 1.667}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 2}, {"al": "l", "r": [{"t": "", "sz": 1.667}], "pl": 2.2}, {"al": "l", "r": [{"t": "Problem #2:", "sz": 2.083}, {"t": " Interlocks need to be sturdier", "sz": 2.083, "b": 1}, {"t": " than for previous blocks! ", "sz": 2.083}], "s": 3}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 3.924, "y": 12.501, "w": 77.16, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Ole Christiansen’s “Leg godt” (“Play Well”) in 1932", "sz": 2.083}]}, {"al": "l", "r": [{"t": "Godtfred Christiansen’s “system for creative play” in 1958", "sz": 2.083}]}, {"al": "l", "r": [{"t": "Derivative of Kiddicraft play system", "sz": 2.083}]}, {"al": "l", "r": [{"t": "Lego was designed ", "sz": 2.083}, {"t": "with the system in mind", "sz": 2.083, "b": 1}]}, {"al": "l", "r": [{"t": "", "sz": 2.917}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 2.917}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "Main desired (non-functional) characteristics: ", "sz": 2.083}, {"t": "Many recombinations in sturdy designs!", "sz": 2.083, "b": 1}], "pl": 0.0, "in": 0.0, "s": 1}, {"al": "l", "r": [{"t": "", "sz": 1.667}]}, {"al": "l", "r": [{"t": "", "sz": 1.667}]}, {"al": "l", "r": [{"t": "Problem #1: ", "sz": 2.083}, {"t": "Light but durable materials", "sz": 2.083, "b": 1}, {"t": "! ", "sz": 2.083}], "s": 2}, {"al": "l", "r": [{"t": "Hollow bricks are desired", "sz": 1.667}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 2}, {"al": "l", "r": [{"t": "However, especially the notches need to be resistant to impact and heat", "sz": 1.667}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 2}, {"al": "l", "r": [{"t": "Solution: Injection-molded acrylonitrile butadiene styrene (ABS)", "sz": 1.667}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 2}, {"al": "l", "r": [{"t": "", "sz": 1.667}], "pl": 2.2}, {"al": "l", "r": [{"t": "Problem #2:", "sz": 2.083}, {"t": " Interlocks need to be sturdier", "sz": 2.083, "b": 1}, {"t": " than for previous blocks! ", "sz": 2.083}], "s": 3}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "pic", "src": "img/3d3dd0b2b1.gif", "alt": "Automatic Binding Brick | Brickipedia | Fandom", "x": 80.586, "y": 0.576, "w": 13.318, "h": 38.203, "s": 1},
     {"k": "pic", "src": "img/368b71b1d6.jpg", "alt": "ABS Injection Mould, Acrylonitrile Butadiene Styrene Injection Mold,  Acrylonitrile Butadiene Styrene Injection Mould, एबीएस इंजेक्शन मोल्ड in  Jahangirpuri, Delhi , Thermoplastic Technologies | ID: 4277348291", "x": 67.184, "y": 40.437, "w": 18.5, "h": 11.692, "s": 3},
     {"k": "pic", "src": "img/749f6610d9.jpg", "alt": "The first interlocking toy bricks in pastel and primary colours with their cardboard box", "x": 55.984, "y": 10.429, "w": 14.706, "h": 14.706},
@@ -216,7 +216,7 @@
    "layout": "canvas",
    "title": "Case Study 1: Creative Play",
    "items": [
-    {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "Christiansen’s „Automatic Binding Brick“ (1958; later: Lego brick)", "sz": 2.083}], "pl": 0.0, "in": 0.0, "s": 4}, {"al": "l", "r": [{"t": "The relevant difference to competitors is on the system level – it is the interfaces!", "sz": 2.083, "b": 1}], "pl": 0.0, "in": 0.0, "s": 5}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "Christiansen’s “Automatic Binding Brick” (1958; later: Lego brick)", "sz": 2.083}], "pl": 0.0, "in": 0.0, "s": 4}, {"al": "l", "r": [{"t": "The relevant difference to competitors is on the system level – it is the interfaces!", "sz": 2.083, "b": 1}], "pl": 0.0, "in": 0.0, "s": 5}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "pic", "src": "img/4ac85d4ee1.png", "alt": "Patent drawing Fig. 8 of a toy brick with two large studs and numbered parts", "x": 73.031, "y": 32.872, "w": 24.765, "h": 17.319, "s": 3, "crop": [0.43846, 0.6995, 0.31957, 0.06951]},
     {"k": "pic", "src": "img/d465c2c2d0.png", "alt": "Excerpt of the Lego patent text about toy building elements and coupling means", "x": 1.308, "y": 28.121, "w": 37.009, "h": 14.082, "s": 1, "crop": [0.36925, 0.72938, 0.35385, 0.12679]},
     {"k": "shape", "x": 2.468, "y": 29.217, "w": 35.577, "h": 11.51, "s": 1, "g": "rect", "ln": "#e1d7c3", "lw": 0.417},
@@ -230,7 +230,7 @@
    "layout": "canvas",
    "title": "Case Study 1: Creative Play",
    "items": [
-    {"k": "shape", "x": 3.919, "y": 12.498, "w": 61.029, "h": 37.912, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "The „Lego System“ concept introduced ", "sz": 2.083}, {"t": "architectural constraints", "sz": 2.083, "b": 1}, {"t": " to permit a specific desired non-functional profile: ", "sz": 2.083}, {"t": "Huge Network Effects", "sz": 2.083, "b": 1}], "s": 1}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "Reinforced Interfaces ", "sz": 2.083, "b": 1}, {"t": "support ", "sz": 2.083}, {"t": "durability", "sz": 2.083, "b": 1}, {"t": " of designs", "sz": 2.083}], "pl": 2.0, "in": -2.0, "bu": "•", "s": 3}, {"al": "l", "r": [{"t": "Uniform Interfaces ", "sz": 2.083, "b": 1}, {"t": "enable ", "sz": 2.083}, {"t": "creative recombinations", "sz": 2.083, "b": 1}], "pl": 2.0, "in": -2.0, "bu": "•", "s": 4}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "This non-functional profile proved ", "sz": 2.083}, {"t": "highly successful on the market", "sz": 2.083, "b": 1}, {"t": "!", "sz": 2.083}], "s": 5}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 3.919, "y": 12.498, "w": 61.029, "h": 37.912, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "The “Lego System” concept introduced ", "sz": 2.083}, {"t": "architectural constraints", "sz": 2.083, "b": 1}, {"t": " to permit a specific desired non-functional profile: ", "sz": 2.083}, {"t": "Huge Network Effects", "sz": 2.083, "b": 1}], "s": 1}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "Reinforced Interfaces ", "sz": 2.083, "b": 1}, {"t": "support ", "sz": 2.083}, {"t": "durability", "sz": 2.083, "b": 1}, {"t": " of designs", "sz": 2.083}], "pl": 2.0, "in": -2.0, "bu": "•", "s": 3}, {"al": "l", "r": [{"t": "Uniform Interfaces ", "sz": 2.083, "b": 1}, {"t": "enable ", "sz": 2.083}, {"t": "creative recombinations", "sz": 2.083, "b": 1}], "pl": 2.0, "in": -2.0, "bu": "•", "s": 4}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "This non-functional profile proved ", "sz": 2.083}, {"t": "highly successful on the market", "sz": 2.083, "b": 1}, {"t": "!", "sz": 2.083}], "s": 5}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "pic", "src": "img/8904668fe5.png", "alt": "Chalkboard-style text: 6 bricks = 950,103,765 options", "x": 68.194, "y": 14.777, "w": 28.459, "h": 9.744, "s": 2, "crop": [0.32871, 0.61776, 0.3462, 0.2303]},
     {"k": "pic", "src": "img/23d7b044ad.png", "alt": "System | Brickipedia | Fandom", "x": 24.95, "y": 43.0, "w": 27.178, "h": 8.799},
     {"k": "pic", "src": "img/4ac85d4ee1.png", "alt": "Patent drawing Fig. 8 of a toy brick with two large studs and numbered parts", "x": 73.031, "y": 32.872, "w": 24.765, "h": 17.319, "crop": [0.43846, 0.6995, 0.31957, 0.06951]}
@@ -553,7 +553,7 @@
    "title": "Coincidence?",
    "items": [
     {"k": "shape", "x": 11.882, "y": 16.056, "w": 44.717, "h": 11.504, "s": 1, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Was the Web ", "sz": 2.5, "c": "#ffffff"}, {"t": "the only contender ", "sz": 2.5, "b": 1, "c": "#ffffff"}, {"t": "for a hypermedia-based information system?", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 43.149, "y": 31.352, "w": 48.819, "h": 11.504, "s": 2, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Was it easy for „the Web“ to make its case and ", "sz": 2.5, "c": "#ffffff"}, {"t": "dominate", "sz": 2.5, "b": 1, "c": "#ffffff"}, {"t": " distributed information systems?", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
+    {"k": "shape", "x": 43.149, "y": 31.352, "w": 48.819, "h": 11.504, "s": 2, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Was it easy for “the Web” to make its case and ", "sz": 2.5, "c": "#ffffff"}, {"t": "dominate", "sz": 2.5, "b": 1, "c": "#ffffff"}, {"t": " distributed information systems?", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ]
   },
   {
@@ -561,11 +561,11 @@
    "title": "The World Wide Web’s NFPs",
    "items": [
     {"k": "shape", "x": 3.924, "y": 12.501, "w": 48.648, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "Berners-Lee defines the terms ", "sz": 2.083}, {"t": "URI", "sz": 2.083, "b": 1}, {"t": " (then UDI), ", "sz": 2.083}, {"t": "HTTP", "sz": 2.083, "b": 1}, {"t": ", and ", "sz": 2.083}, {"t": "HTML", "sz": 2.083, "b": 1}, {"t": ", and develops the first components and tools for the Web (browser, editor, server, line-mode browser) in 1990.", "sz": 2.083}], "pl": 0.0, "in": 0.0, "s": 1}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "Tim Berners-Lee submits a paper on the World Wide Web to the ", "sz": 2.083}, {"t": "Hypertext ’91 Conference", "sz": 2.083, "i": 1}, {"t": ". ", "sz": 2.083}], "pl": 0.0, "in": 0.0, "s": 2}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "The paper is ", "sz": 2.083}, {"t": "rejected as an oral presentation ", "sz": 2.083, "b": 1}, {"t": "and only accepted as a ", "sz": 2.083}, {"t": "poster", "sz": 2.083, "b": 1}, {"t": " contribution.", "sz": 2.083}], "pl": 0.0, "in": 0.0, "s": 5}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 11.247, "y": 34.845, "w": 39.505, "h": 5.805, "s": 4, "g": "rect", "fill": "#ffffff", "ln": "#0a5f2d", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "\"Individual links are allowed to break", "sz": 2.083, "c": "#000000"}, {"t": " so the entire Web does not", "sz": 2.083, "b": 1, "c": "#000000"}, {"t": ".\" ", "sz": 2.083, "c": "#000000"}, {"t": "– T. Berners-Lee", "sz": 1.458, "c": "#000000"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 11.247, "y": 34.845, "w": 39.505, "h": 5.805, "s": 4, "g": "rect", "fill": "#ffffff", "ln": "#0a5f2d", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "“Individual links are allowed to break", "sz": 2.083, "c": "#000000"}, {"t": " so the entire Web does not", "sz": 2.083, "b": 1, "c": "#000000"}, {"t": ".” ", "sz": 2.083, "c": "#000000"}, {"t": "– T. Berners-Lee", "sz": 1.458, "c": "#000000"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "pic", "src": "img/41fd29161d.png", "alt": "List of five hypertext research articles from 1991 in a digital library", "x": 55.777, "y": 6.646, "w": 41.681, "h": 40.968, "s": 3, "crop": [0.40001, 0.06824, 0.30771, 0.53959]},
     {"k": "pic", "src": "img/5e45dd7386.png", "alt": "List of four more hypertext research articles from 1991 in a digital library", "x": 55.777, "y": 5.22, "w": 42.702, "h": 34.747, "s": 3, "crop": [0.40001, 0.185, 0.30001, 0.48179]}
    ],
-   "source": "[W3C: How It All Started](https://www.w3.org/2004/Talks/w3c10-HowItAllStarted/all.html) · [Hypertext ’91 proceedings](https://dl.acm.org/doi/proceedings/10.1145/122974#secAbs)"
+   "source": "[W3C: How It All Started](https://www.w3.org/2004/Talks/w3c10-HowItAllStarted/all.html); [Hypertext ’91 proceedings](https://dl.acm.org/doi/proceedings/10.1145/122974#secAbs)"
   },
   {
    "layout": "canvas",
@@ -595,12 +595,12 @@
    "items": [
     {"k": "pic", "src": "img/69fc86e1e4.png", "alt": "Error page of the University of St.Gallen website: Page not found", "x": 3.346, "y": 24.5, "w": 35.131, "h": 19.973, "s": 1, "crop": [0.58161, 0.0434, 0.05718, 0.49396], "shadow": true},
     {"k": "pic", "src": "img/7fcc248bab.jpg", "alt": "Wie man den 404 Fehler auf einer WordPress Seite repariert", "x": 10.728, "y": 31.068, "w": 35.434, "h": 21.824, "s": 2, "shadow": true},
-    {"k": "shape", "x": 7.177, "y": 15.776, "w": 39.505, "h": 5.805, "g": "rect", "fill": "#ffffff", "ln": "#0a5f2d", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "\"Individual links are allowed to break", "sz": 2.083, "c": "#000000"}, {"t": " so the entire Web does not", "sz": 2.083, "b": 1, "c": "#000000"}, {"t": ".\" ", "sz": 2.083, "c": "#000000"}, {"t": "– T. Berners-Lee", "sz": 1.458, "c": "#000000"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 54.909, "y": 12.746, "w": 42.924, "h": 12.62, "s": 3, "g": "rect", "fill": "#ffffff", "ln": "#0a5f2d", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "“I was part of the camp who really believed that hypertext systems had to be ", "sz": 2.083, "c": "#000000"}, {"t": "closed", "sz": 2.083, "b": 1, "c": "#000000"}, {"t": " systems with ", "sz": 2.083, "c": "#000000"}, {"t": "bi-directional links", "sz": 2.083, "b": 1, "c": "#000000"}, {"t": ".\" ", "sz": 2.083, "c": "#000000"}]}, {"al": "l", "r": [{"t": "", "sz": 2.083}]}, {"al": "r", "r": [{"t": "M. Frisse", "sz": 1.458, "c": "#000000"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 7.177, "y": 15.776, "w": 39.505, "h": 5.805, "g": "rect", "fill": "#ffffff", "ln": "#0a5f2d", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "“Individual links are allowed to break", "sz": 2.083, "c": "#000000"}, {"t": " so the entire Web does not", "sz": 2.083, "b": 1, "c": "#000000"}, {"t": ".” ", "sz": 2.083, "c": "#000000"}, {"t": "– T. Berners-Lee", "sz": 1.458, "c": "#000000"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 54.909, "y": 12.746, "w": 42.924, "h": 12.62, "s": 3, "g": "rect", "fill": "#ffffff", "ln": "#0a5f2d", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "“I was part of the camp who really believed that hypertext systems had to be ", "sz": 2.083, "c": "#000000"}, {"t": "closed", "sz": 2.083, "b": 1, "c": "#000000"}, {"t": " systems with ", "sz": 2.083, "c": "#000000"}, {"t": "bi-directional links", "sz": 2.083, "b": 1, "c": "#000000"}, {"t": ".” ", "sz": 2.083, "c": "#000000"}]}, {"al": "l", "r": [{"t": "", "sz": 2.083}]}, {"al": "r", "r": [{"t": "M. Frisse", "sz": 1.458, "c": "#000000"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 62.485, "y": 26.1, "w": 35.432, "h": 1.893, "s": 3, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "https://archive.org/embed/Munnecke-MarkFrissesMessageToTimBernersLee313", "sz": 0.938, "href": "https://archive.org/embed/Munnecke-MarkFrissesMessageToTimBernersLee313"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 3.346, "y": 10.585, "w": 50.197, "h": 2.272, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Emphasis: Adaptability, Scalability, ", "sz": 1.25, "c": "#000000"}, {"t": "Extensibility, Interoperability", "sz": 1.25}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 57.761, "y": 10.583, "w": 40.157, "h": 2.272, "s": 4, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "Emphasis: ", "sz": 1.25, "c": "#000000"}, {"t": "R", "sz": 1.25}, {"t": "ecoverability, Availability, Reliability, Integrity", "sz": 1.25, "c": "#000000"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 54.909, "y": 31.514, "w": 42.924, "h": 18.258, "s": 5, "g": "rect", "fill": "#ffffff", "ln": "#0a5f2d", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "\"Today's popular software simulates paper. The World Wide Web (another imitation of paper) ", "sz": 2.083, "c": "#000000"}, {"t": "trivialises our original hypertext model with one-way ever-breaking links and no management of version or contents", "sz": 2.083, "b": 1, "c": "#000000"}, {"t": ".\" ", "sz": 2.083, "c": "#000000"}]}, {"al": "l", "r": [{"t": "", "sz": 2.083}]}, {"al": "r", "r": [{"t": "Project Xanadu", "sz": 1.458, "c": "#000000"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 54.909, "y": 31.514, "w": 42.924, "h": 18.258, "s": 5, "g": "rect", "fill": "#ffffff", "ln": "#0a5f2d", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "“Today’s popular software simulates paper. The World Wide Web (another imitation of paper) ", "sz": 2.083, "c": "#000000"}, {"t": "trivialises our original hypertext model with one-way ever-breaking links and no management of version or contents", "sz": 2.083, "b": 1, "c": "#000000"}, {"t": ".” ", "sz": 2.083, "c": "#000000"}]}, {"al": "l", "r": [{"t": "", "sz": 2.083}]}, {"al": "r", "r": [{"t": "Project Xanadu", "sz": 1.458, "c": "#000000"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 50.0, "y": 1.719, "w": 0.0, "h": 52.676, "g": "line", "ln": "#eb6969", "lw": 0.104}
    ]
   },
@@ -702,7 +702,7 @@
     {"k": "table", "x": 3.924, "y": 22.943, "w": 90.625, "h": 24.247, "cols": [19.15, 30.777, 18.042, 22.656], "rows": [{"h": 3.041, "cells": [{"fill": "head", "tx": {"p": [{"al": "l", "r": [{"t": "Case", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}, {"fill": "head", "tx": {"p": [{"al": "l", "r": [{"t": "Constraints", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}, {"fill": "head", "tx": {"p": [{"al": "l", "r": [{"t": "Desired", "sz": 1.458}, {"t": " NFPs", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}, {"fill": "head", "tx": {"p": [{"al": "l", "r": [{"t": "Trade-Offs", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}]}, {"h": 3.041, "cells": [{"fill": "a", "tx": {"p": [{"al": "l", "r": [{"t": "Lego", "sz": 1.458, "b": 1}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}, {"fill": "a", "tx": {"p": [{"al": "l", "r": [{"t": "Uniform Interfaces (", "sz": 1.458}, {"t": "patented", "sz": 1.458}, {"t": ")", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}, {"fill": "a", "tx": {"p": [{"al": "l", "r": [{"t": "Interoperability", "sz": 1.458}, {"t": ", ", "sz": 1.458}, {"t": "Extensibility", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}, {"fill": "a", "tx": {"p": [{"al": "l", "r": [{"t": "Design Freedom, ", "sz": 1.458}, {"t": "Durability", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}]}, {"h": 3.041, "cells": [{"fill": "b", "tx": {"p": [{"al": "l", "r": [{"t": "Gothic", "sz": 1.458, "b": 1}, {"t": " Style", "sz": 1.458, "b": 1}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}, {"fill": "b", "tx": {"p": [{"al": "l", "r": [{"t": "Pointed", "sz": 1.458}, {"t": " ", "sz": 1.458}, {"t": "Arches", "sz": 1.458}, {"t": ", Flying ", "sz": 1.458}, {"t": "Buttresses", "sz": 1.458}, {"t": ", ", "sz": 1.458}, {"t": "Rib", "sz": 1.458}, {"t": " ", "sz": 1.458}, {"t": "Vaults", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}, {"fill": "b", "tx": {"p": [{"al": "l", "r": [{"t": "Brightness", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}, {"fill": "b", "tx": {"p": [{"al": "l", "r": [{"t": "Cost", "sz": 1.458}, {"t": ", ", "sz": 1.458}, {"t": "Aesthetics", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}]}, {"h": 3.041, "cells": [{"fill": "a", "tx": {"p": [{"al": "l", "r": [{"t": "Bologna", "sz": 1.458, "b": 1}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}, {"fill": "a", "tx": {"p": [{"al": "l", "r": [{"t": "Uniform Interfaces (ECTS, ", "sz": 1.458}, {"t": "BSc", "sz": 1.458}, {"t": "/", "sz": 1.458}, {"t": "MSc", "sz": 1.458}, {"t": ")", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}, {"fill": "a", "tx": {"p": [{"al": "l", "r": [{"t": "Interoperability", "sz": 1.458}, {"t": ", ", "sz": 1.458}, {"t": "Scalability", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}, {"fill": "a", "tx": {"p": [{"al": "l", "r": [{"t": "Autonomy", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}]}, {"h": 3.041, "cells": [{"fill": "b", "tx": {"p": [{"al": "l", "r": [{"t": "Unix Philosophy", "sz": 1.458, "b": 1}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}, {"fill": "b", "tx": {"p": [{"al": "l", "r": [{"t": "Uniform Interfaces (", "sz": 1.458}, {"t": "pipe", "sz": 1.458}, {"t": "-and-filter)", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}, {"fill": "b", "tx": {"p": [{"al": "l", "r": [{"t": "Interoperability", "sz": 1.458}, {"t": ", ", "sz": 1.458}, {"t": "Extensibility", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}, {"fill": "b", "tx": {"p": [{"al": "l", "r": [{"t": "Design Freedom, Efficiency", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}]}, {"h": 3.041, "cells": [{"fill": "a", "tx": {"p": [{"al": "l", "r": [{"t": "Computer Networking", "sz": 1.458, "b": 1}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}, {"fill": "a", "tx": {"p": [{"al": "l", "r": [{"t": "Layers", "sz": 1.458}, {"t": ", Uniform Interfaces", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}, {"fill": "a", "tx": {"p": [{"al": "l", "r": [{"t": "Extensibility", "sz": 1.458}, {"t": ", ", "sz": 1.458}, {"t": "Adaptability", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}, {"fill": "a", "tx": {"p": [{"al": "l", "r": [{"t": "Performance", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}]}, {"h": 3.041, "cells": [{"fill": "b", "tx": {"p": [{"al": "l", "r": [{"t": "Flexible and Open World-Wide Information System", "sz": 1.458, "b": 1, "c": "#000000"}], "pl": 0.0, "in": 0.0, "ls": 1.0, "sb": 0.0, "sa": 0.0}, {"al": "l", "r": [{"t": "", "sz": 1.458}], "pl": 0.0}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}, {"fill": "b", "tx": null}, {"fill": "b", "tx": {"p": [{"al": "l", "r": [{"t": "Scalability", "sz": 1.458, "c": "#000000"}, {"t": ", ", "sz": 1.458, "c": "#000000"}, {"t": "Adaptability", "sz": 1.458, "c": "#000000"}, {"t": ", ", "sz": 1.458, "c": "#000000"}, {"t": "Evolvability", "sz": 1.458, "c": "#000000"}, {"t": ", ", "sz": 1.458, "c": "#000000"}, {"t": "Extensibility", "sz": 1.458, "c": "#000000"}, {"t": ", ", "sz": 1.458, "c": "#000000"}, {"t": "Interoperability", "sz": 1.458, "c": "#000000"}], "pl": 0.0, "in": 0.0, "ls": 1.0, "sb": 0.0, "sa": 0.0}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}, {"fill": "b", "tx": {"p": [{"al": "l", "r": [{"t": "Performance, Responsiveness, Data Integrity, Reliability", "sz": 1.458, "c": "#000000"}], "pl": 0.0}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}]}]},
     {"k": "shape", "x": 26.98, "y": 42.467, "w": 19.455, "h": 6.421, "rot": 14.81, "s": 1, "g": "roundRect", "fill": "#ffffff", "ln": "#0a5f2d", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Architectural ", "sz": 2.083, "c": "#000000"}, {"t": "Constraints?", "sz": 2.083, "b": 1, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ],
-   "source": "F. D. Davis. Perceived Usefulness, Perceived Ease of Use, and User Acceptance of Information Technology, 1989 · D. Gefen, M. Keil. The Impact of Developer Responsiveness on Perceptions of Usefulness and Ease of Use, 1998 · D. Guinard, I. Ion, S. Mayer. REST or WS-*? A Developers’ Perspective, 2011 · L. Popa, P. Wendell, A. Ghodsi, I. Stoica. HTTP: An Evolvable Narrow Waist for the Future Internet, 2012"
+   "source": "F. D. Davis. Perceived Usefulness, Perceived Ease of Use, and User Acceptance of Information Technology, 1989; D. Gefen, M. Keil. The Impact of Developer Responsiveness on Perceptions of Usefulness and Ease of Use, 1998; D. Guinard, I. Ion, S. Mayer. REST or WS-*? A Developers’ Perspective, 2011; L. Popa, P. Wendell, A. Ghodsi, I. Stoica. HTTP: An Evolvable Narrow Waist for the Future Internet, 2012"
   },
   {
    "layout": "section",
@@ -744,18 +744,18 @@
     {"k": "pic", "src": "img/130cbf7593.jpg", "alt": "Colourful hand-lettered sign: required reading, with a drawing of a book", "x": 45.152, "y": 42.261, "w": 9.162, "h": 8.996, "s": 6, "crop": [0.0, 0.0, 0.0, 0.08171]}
    ],
    "id": "rest-intro",
-   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000 · Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002"
+   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000; Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002"
   },
   {
    "layout": "canvas",
    "title": "Representational State Transfer",
    "items": [
     {"k": "shape", "x": 3.997, "y": 29.589, "w": 61.375, "h": 20.193, "g": "rect", "fill": "#ffffff", "ln": "#0a5f2d", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "“Even if it were possible to build a software system that perfectly matches the requirements of its users, those requirements will change over time just as society changes over time. A long-lived system like the Web must be prepared for (…) gradual and fragmented change, where old and new implementations co-exist without preventing the new implementations from making use of their extended capabilities. (…) The introduction of each new goal presents us with a challenge", "sz": 1.458, "c": "#000000"}, {"t": ": how do we introduce a new set of functionality to an architecture that is already widely deployed, and how do we ensure that its introduction does not adversely impact, or even destroy, the architectural properties that have enabled the Web to succeed? It was this question that motivated our development of the REST architectural style.”", "sz": 1.458, "b": 1, "c": "#000000"}]}, {"al": "r", "r": [{"t": "", "sz": 1.458}]}, {"al": "r", "r": [{"t": "R.T. Fielding and R.N. Taylor, 2002", "sz": 1.458, "c": "#000000"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 3.997, "y": 13.71, "w": 61.375, "h": 14.892, "g": "rect", "fill": "#ffffff", "ln": "#0a5f2d", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "\"At the beginning of our efforts within the Internet Engineering Task Force (...) we recognized the need for a model of how the World Wide Web ", "sz": 1.458, "c": "#000000"}, {"t": "should", "sz": 1.458, "i": 1, "c": "#000000"}, {"t": " work. This ", "sz": 1.458, "c": "#000000"}, {"t": "idealized model of the interactions within an overall Web application", "sz": 1.458, "b": 1, "c": "#000000"}, {"t": " - what we refer to as the ", "sz": 1.458, "c": "#000000"}, {"t": "Representational State Transfer (REST)", "sz": 1.458, "b": 1, "c": "#000000"}, {"t": " architectural style -became the foundation for the ", "sz": 1.458, "c": "#000000"}, {"t": "modern Web architecture", "sz": 1.458, "b": 1, "c": "#000000"}, {"t": ", providing the guiding principles by which flaws in the existing architecture could be identified and extensions validated prior to deployment.” ", "sz": 1.458, "c": "#000000"}]}, {"al": "l", "r": [{"t": "", "sz": 1.458}]}, {"al": "r", "r": [{"t": "R.T. Fielding and R.N. Taylor, 2002", "sz": 1.458, "c": "#000000"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 3.997, "y": 13.71, "w": 61.375, "h": 14.892, "g": "rect", "fill": "#ffffff", "ln": "#0a5f2d", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "“At the beginning of our efforts within the Internet Engineering Task Force (...) we recognized the need for a model of how the World Wide Web ", "sz": 1.458, "c": "#000000"}, {"t": "should", "sz": 1.458, "i": 1, "c": "#000000"}, {"t": " work. This ", "sz": 1.458, "c": "#000000"}, {"t": "idealized model of the interactions within an overall Web application", "sz": 1.458, "b": 1, "c": "#000000"}, {"t": " - what we refer to as the ", "sz": 1.458, "c": "#000000"}, {"t": "Representational State Transfer (REST)", "sz": 1.458, "b": 1, "c": "#000000"}, {"t": " architectural style -became the foundation for the ", "sz": 1.458, "c": "#000000"}, {"t": "modern Web architecture", "sz": 1.458, "b": 1, "c": "#000000"}, {"t": ", providing the guiding principles by which flaws in the existing architecture could be identified and extensions validated prior to deployment.” ", "sz": 1.458, "c": "#000000"}]}, {"al": "l", "r": [{"t": "", "sz": 1.458}]}, {"al": "r", "r": [{"t": "R.T. Fielding and R.N. Taylor, 2002", "sz": 1.458, "c": "#000000"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 76.624, "y": 30.555, "w": 20.09, "h": 1.893, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "https://dl.acm.org/doi/pdf/10.1145/514183.514185", "sz": 0.938, "href": "https://dl.acm.org/doi/pdf/10.1145/514183.514185"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375], "nw": 1}},
     {"k": "pic", "src": "img/4e8f1cf473.png", "alt": "Title page of the paper Principled Design of the Modern Web Architecture by Roy T. Fielding and Richard N. Taylor", "x": 68.658, "y": 1.849, "w": 30.357, "h": 27.597, "crop": [0.34903, 0.11075, 0.34771, 0.5129], "shadow": true}
    ],
-   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000 · Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002"
+   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000; Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002"
   },
   {
    "layout": "canvas",
@@ -772,7 +772,7 @@
     {"k": "shape", "x": 61.948, "y": 31.271, "w": 16.397, "h": 7.193, "s": 5, "g": "straightConnector1", "ln": "#00802f", "lw": 0.104, "tail": "triangle"},
     {"k": "shape", "x": 36.56, "y": 46.0, "w": 41.12, "h": 6.4, "s": 7, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "What follows is an ", "sz": 1.875, "c": "#ffffff"}, {"t": "illustrated summary to accompany your required reading", "sz": 1.875, "b": 1, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ],
-   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000 · Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002",
+   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000; Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002",
    "id": "rest-constraints"
   },
   {
@@ -818,7 +818,7 @@
     {"k": "shape", "x": 89.19, "y": 43.567, "w": 9.596, "h": 3.566, "g": "roundRect", "fill": "#ffffff", "ln": "#00802f", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Uniform Interface", "sz": 0.938, "c": "#000000", "href": "07b#uniform-interface"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 89.234, "y": 39.43, "w": 9.508, "h": 3.566, "g": "roundRect", "fill": "#ffffff", "ln": "#00802f", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Code-on-Demand (Optional)", "sz": 0.938, "c": "#000000", "href": "07b#code-on-demand"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ],
-   "source": "Slide based on A. Ciortea, 2020 · W3C Recommendation, *Architecture of the World Wide Web, Volume One* · Matthias Kovatsch. The Web-based Application-layer Protocol for the IoT. IoTSC 2014"
+   "source": "Slide based on A. Ciortea, 2020; W3C Recommendation, *Architecture of the World Wide Web, Volume One*; Matthias Kovatsch. The Web-based Application-layer Protocol for the IoT. IoTSC 2014"
   },
   {
    "layout": "canvas",
@@ -893,7 +893,7 @@
     {"k": "shape", "x": 83.07, "y": 37.119, "w": 15.341, "h": 4.922, "g": "roundRect", "fill": "#ffffff", "ln": "#00802f", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Code-on-Demand (Optional)", "sz": 1.667, "c": "#000000", "href": "07b#code-on-demand"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ],
    "id": "client-server",
-   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000 · Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002"
+   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000; Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002"
   },
   {
    "layout": "canvas",
@@ -909,7 +909,7 @@
     {"k": "shape", "x": 83.07, "y": 43.437, "w": 15.484, "h": 4.922, "g": "roundRect", "fill": "#ffffff", "ln": "#00802f", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Uniform Interface", "sz": 1.667, "c": "#000000", "href": "07b#uniform-interface"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 83.07, "y": 37.119, "w": 15.341, "h": 4.922, "g": "roundRect", "fill": "#ffffff", "ln": "#00802f", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Code-on-Demand (Optional)", "sz": 1.667, "c": "#000000", "href": "07b#code-on-demand"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ],
-   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000 · Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002"
+   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000; Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002"
   },
   {
    "layout": "canvas",
@@ -924,7 +924,7 @@
     {"k": "shape", "x": 83.07, "y": 37.119, "w": 15.341, "h": 4.922, "g": "roundRect", "fill": "#ffffff", "ln": "#00802f", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Code-on-Demand (Optional)", "sz": 1.667, "c": "#000000", "href": "07b#code-on-demand"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ],
    "id": "stateless",
-   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000 · Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002"
+   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000; Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002"
   },
   {
    "layout": "canvas",
@@ -1056,7 +1056,7 @@
     {"k": "shape", "x": 83.07, "y": 43.437, "w": 15.484, "h": 4.922, "g": "roundRect", "fill": "#ffffff", "ln": "#00802f", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Uniform Interface", "sz": 1.667, "c": "#000000", "href": "07b#uniform-interface"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 83.07, "y": 37.119, "w": 15.341, "h": 4.922, "g": "roundRect", "fill": "#ffffff", "ln": "#00802f", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Code-on-Demand (Optional)", "sz": 1.667, "c": "#000000", "href": "07b#code-on-demand"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ],
-   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000 · Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002"
+   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000; Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002"
   },
   {
    "layout": "canvas",
@@ -1084,7 +1084,7 @@
     {"k": "shape", "x": 83.07, "y": 37.119, "w": 15.341, "h": 4.922, "g": "roundRect", "fill": "#ffffff", "ln": "#00802f", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Code-on-Demand (Optional)", "sz": 1.667, "c": "#000000", "href": "07b#code-on-demand"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ],
    "id": "cacheability",
-   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000 · Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002"
+   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000; Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002"
   },
   {
    "layout": "canvas",
@@ -1098,7 +1098,7 @@
     {"k": "shape", "x": 83.07, "y": 43.437, "w": 15.484, "h": 4.922, "g": "roundRect", "fill": "#ffffff", "ln": "#00802f", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Uniform Interface", "sz": 1.667, "c": "#000000", "href": "07b#uniform-interface"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 83.07, "y": 37.119, "w": 15.341, "h": 4.922, "g": "roundRect", "fill": "#ffffff", "ln": "#00802f", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Code-on-Demand (Optional)", "sz": 1.667, "c": "#000000", "href": "07b#code-on-demand"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ],
-   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000 · Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002"
+   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000; Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002"
   },
   {
    "layout": "canvas",
@@ -1114,7 +1114,7 @@
     {"k": "pic", "src": "img/f22d21c4f6.png", "alt": "Logo of the W3C", "x": 65.405, "y": 2.828, "w": 11.835, "h": 8.069, "s": 1},
     {"k": "shape", "x": 63.616, "y": 10.467, "w": 15.415, "h": 2.679, "s": 1, "g": "rect", "tx": {"p": [{"al": "c", "r": [{"t": "(founded in 1994)", "sz": 1.667}]}], "a": "m", "i": [0.0, 0.0, 0.0, 0.0], "nw": 1}}
    ],
-   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000 · Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002"
+   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000; Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002"
   },
   {
    "layout": "canvas",
@@ -1140,7 +1140,7 @@
     {"k": "shape", "x": 34.989, "y": 29.462, "w": 8.988, "h": 0.0, "s": 1, "g": "straightConnector1", "ln": "#ff9900", "lw": 0.312, "dash": "solid", "head": "oval", "tail": "oval"}
    ],
    "id": "layered-system",
-   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000 · Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002"
+   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000; Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002"
   },
   {
    "layout": "canvas",
@@ -1172,7 +1172,7 @@
     {"k": "shape", "x": 34.164, "y": 33.367, "w": 1.367, "h": 4.271, "s": 2, "g": "rect", "fill": "#ffffff", "fa": 0.8},
     {"k": "shape", "x": 59.189, "y": 38.107, "w": 19.816, "h": 9.492, "s": 3, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "What standard software design principle is this?", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ],
-   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000 · Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002"
+   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000; Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002"
   },
   {
    "layout": "canvas",
@@ -1187,7 +1187,7 @@
     {"k": "shape", "x": 83.07, "y": 37.119, "w": 15.341, "h": 4.922, "g": "roundRect", "fill": "#ffffff", "ln": "#00802f", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Code-on-Demand (Optional)", "sz": 1.667, "c": "#000000", "href": "07b#code-on-demand"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 47.337, "y": 32.401, "w": 27.486, "h": 4.291, "s": 2, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Flight of the Starlings: Watch This Eerie but Beautiful Phenomenon | Short Film Showcase", "sz": 1.458, "href": "https://www.youtube.com/watch?v=V4f_1_r80RY"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}
    ],
-   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000 · Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002"
+   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000; Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002"
   },
   {
    "layout": "canvas",
@@ -1202,7 +1202,7 @@
     {"k": "shape", "x": 83.07, "y": 37.119, "w": 15.341, "h": 4.922, "g": "roundRect", "fill": "#0a5f2d", "ln": "#010e07", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Code-on-Demand (Optional)", "sz": 1.667, "b": 1, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ],
    "id": "code-on-demand",
-   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000 · Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002"
+   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000; Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002"
   },
   {
    "layout": "canvas",
@@ -1273,7 +1273,7 @@
     {"k": "shape", "x": 83.07, "y": 37.119, "w": 15.341, "h": 4.922, "g": "roundRect", "fill": "#ffffff", "ln": "#00802f", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Code-on-Demand (Optional)", "sz": 1.667, "c": "#000000", "href": "07b#code-on-demand"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "pic", "src": "img/6d229f345f.gif", "alt": "Breitspur - Britische Bahn Wiki", "x": 42.407, "y": 13.217, "w": 37.163, "h": 16.695}
    ],
-   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000 · Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002"
+   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000; Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002"
   },
   {
    "layout": "canvas",
@@ -1285,7 +1285,7 @@
     {"k": "shape", "x": 58.492, "y": 31.703, "w": 11.427, "h": 7.367, "s": 3, "g": "roundRect", "adj": {"adj": 16667}, "fill": "#d9d9d9", "ln": "#000000", "lw": 0.156, "dash": "solid", "tx": {"p": [{"al": "c", "r": [{"t": "Intermediary or Origin Server", "sz": 1.667}]}], "a": "m", "i": [0.75, 0.75, 0.75, 0.75]}},
     {"k": "shape", "x": 34.308, "y": 35.459, "w": 24.184, "h": 0.0, "s": 3, "g": "straightConnector1", "ln": "#ff9900", "lw": 0.312, "dash": "solid", "head": "oval", "tail": "oval"},
     {"k": "shape", "x": 39.879, "y": 32.539, "w": 13.042, "h": 4.971, "s": 3, "g": "foldedCorner", "adj": {"adj": 16667}, "fill": "#cfe2f3", "ln": "#000000", "lw": 0.156, "dash": "solid"},
-    {"k": "shape", "x": 39.94, "y": 33.626, "w": 12.98, "h": 2.798, "s": 3, "g": "rect", "tx": {"p": [{"al": "c", "r": [{"t": "{ ", "sz": 1.25, "b": 1}, {"t": "\"on”", "sz": 1.25, "b": 1, "c": "#c00000"}, {"t": " : ", "sz": 1.25, "b": 1}, {"t": "true", "sz": 1.25, "b": 1, "c": "#00509d"}, {"t": " }", "sz": 1.25, "b": 1}]}], "a": "m", "i": [0.75, 0.75, 0.75, 0.75]}},
+    {"k": "shape", "x": 39.94, "y": 33.626, "w": 12.98, "h": 2.798, "s": 3, "g": "rect", "tx": {"p": [{"al": "c", "r": [{"t": "{ ", "sz": 1.25, "b": 1}, {"t": "\"on\"", "sz": 1.25, "b": 1, "c": "#c00000"}, {"t": " : ", "sz": 1.25, "b": 1}, {"t": "true", "sz": 1.25, "b": 1, "c": "#00509d"}, {"t": " }", "sz": 1.25, "b": 1}]}], "a": "m", "i": [0.75, 0.75, 0.75, 0.75]}},
     {"k": "shape", "x": 37.395, "y": 29.658, "w": 18.009, "h": 3.018, "s": 3, "g": "rect", "tx": {"p": [{"al": "c", "r": [{"t": "application/json", "sz": 1.458, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.75, 0.75, 0.75]}},
     {"k": "pic", "src": "img/314668d802.png", "alt": "hue_on.png", "x": 71.181, "y": 32.28, "w": 3.482, "h": 6.212, "s": 3},
     {"k": "shape", "x": 40.455, "y": 39.733, "w": 13.938, "h": 3.197, "s": 3, "g": "rightArrow", "adj": {"adj1": 64183, "adj2": 50000}, "fill": "#99ccff", "tx": {"p": [{"al": "c", "r": [{"t": "HTTP PUT", "sz": 1.667, "c": "#0000ff"}], "sb": 0.625}], "a": "m", "i": [0.0, 0.0, 0.0, 0.0]}},
@@ -1316,13 +1316,13 @@
     {"k": "shape", "x": 83.07, "y": 43.437, "w": 15.484, "h": 4.922, "g": "roundRect", "fill": "#0a5f2d", "ln": "#010e07", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Uniform Interface", "sz": 1.667, "b": 1, "c": "#ffffff", "href": "07b#uniform-interface"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 83.07, "y": 37.119, "w": 15.341, "h": 4.922, "g": "roundRect", "fill": "#ffffff", "ln": "#00802f", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Code-on-Demand (Optional)", "sz": 1.667, "c": "#000000", "href": "07b#code-on-demand"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ],
-   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000 · Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002"
+   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000; Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002"
   },
   {
    "layout": "canvas",
    "title": "(1/4) Uniform Identification",
    "items": [
-    {"k": "shape", "x": 3.924, "y": 12.501, "w": 74.103, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "Name everything you want to talk about in your application. Those are resources.", "sz": 2.083}], "pl": 0.0, "in": 0.0, "s": 1}, {"al": "l", "r": [{"t": "Products", "sz": 1.667, "b": 1}, {"t": " in an online shop", "sz": 1.667}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 2}, {"al": "l", "r": [{"t": "Customers", "sz": 1.667, "b": 1}, {"t": " that are expected to buy products", "sz": 1.667}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 3}, {"al": "l", "r": [{"t": "Shopping Carts ", "sz": 1.667, "b": 1}, {"t": "where customers collect products", "sz": 1.667}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 4}, {"al": "l", "r": [{"t": "Next", "sz": 1.667, "b": 1}, {"t": " links on multi-page submission processes or ", "sz": 1.667}, {"t": "paged results", "sz": 1.667, "b": 1}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 5}, {"al": "l", "r": [{"t": "Robots", "sz": 1.667, "b": 1}, {"t": " in a laboratory", "sz": 1.667}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 6}, {"al": "l", "r": [{"t": "", "sz": 1.667}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "The standard RFC 3986 „URI“ defines the term “resource” as ", "sz": 2.083}, {"t": "anything", "sz": 2.083, "b": 1}, {"t": " that might be referred to by a URI.", "sz": 2.083}], "pl": 0.0, "in": 0.0, "s": 7}, {"al": "l", "r": [{"t": "Abstract", "sz": 1.667, "b": 1}, {"t": " concepts can also be resources", "sz": 1.667}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 8}, {"al": "l", "r": [{"t": "Non-network-retrievable", "sz": 1.667, "b": 1}, {"t": " artifacts can also be resources", "sz": 1.667}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 9}, {"al": "l", "r": [{"t": "", "sz": 1.667}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "Resources have uniform identifiers that are uniquely addressable using a universal syntax", "sz": 2.083}], "s": 11}, {"al": "l", "r": [{"t": "They should mean the same anywhere (think load balancing, but also intranets or DNS spoofing)", "sz": 1.667}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 12}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 3.924, "y": 12.501, "w": 74.103, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "Name everything you want to talk about in your application. Those are resources.", "sz": 2.083}], "pl": 0.0, "in": 0.0, "s": 1}, {"al": "l", "r": [{"t": "Products", "sz": 1.667, "b": 1}, {"t": " in an online shop", "sz": 1.667}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 2}, {"al": "l", "r": [{"t": "Customers", "sz": 1.667, "b": 1}, {"t": " that are expected to buy products", "sz": 1.667}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 3}, {"al": "l", "r": [{"t": "Shopping Carts ", "sz": 1.667, "b": 1}, {"t": "where customers collect products", "sz": 1.667}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 4}, {"al": "l", "r": [{"t": "Next", "sz": 1.667, "b": 1}, {"t": " links on multi-page submission processes or ", "sz": 1.667}, {"t": "paged results", "sz": 1.667, "b": 1}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 5}, {"al": "l", "r": [{"t": "Robots", "sz": 1.667, "b": 1}, {"t": " in a laboratory", "sz": 1.667}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 6}, {"al": "l", "r": [{"t": "", "sz": 1.667}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "The standard RFC 3986 “URI” defines the term “resource” as ", "sz": 2.083}, {"t": "anything", "sz": 2.083, "b": 1}, {"t": " that might be referred to by a URI.", "sz": 2.083}], "pl": 0.0, "in": 0.0, "s": 7}, {"al": "l", "r": [{"t": "Abstract", "sz": 1.667, "b": 1}, {"t": " concepts can also be resources", "sz": 1.667}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 8}, {"al": "l", "r": [{"t": "Non-network-retrievable", "sz": 1.667, "b": 1}, {"t": " artifacts can also be resources", "sz": 1.667}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 9}, {"al": "l", "r": [{"t": "", "sz": 1.667}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "Resources have uniform identifiers that are uniquely addressable using a universal syntax", "sz": 2.083}], "s": 11}, {"al": "l", "r": [{"t": "They should mean the same anywhere (think load balancing, but also intranets or DNS spoofing)", "sz": 1.667}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 12}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "pic", "src": "img/32a2669a1a.png", "alt": "The pagination of a Google search result page: Goooooooooogle with page numbers 1 to 10 and Next", "x": 58.0, "y": 19.0, "w": 22.0, "h": 4.56, "s": 5, "crop": [0.23472, 0.70494, 0.49861, 0.19629]},
     {"k": "shape", "x": 83.07, "y": 11.846, "w": 15.224, "h": 4.922, "g": "roundRect", "fill": "#ffffff", "ln": "#00802f", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Client-Server", "sz": 1.667, "c": "#000000", "href": "07b#client-server"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 83.07, "y": 18.164, "w": 15.224, "h": 4.922, "g": "roundRect", "fill": "#ffffff", "ln": "#00802f", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Statelessness", "sz": 1.667, "c": "#000000", "href": "07b#stateless"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
@@ -1333,7 +1333,7 @@
     {"k": "shape", "x": 52.0, "y": 37.0, "w": 20.0, "h": 1.388, "s": 10, "g": "rect", "fill": "#333333", "tx": {"p": [{"al": "c", "r": [{"t": "https://github.com/smnmyr#me", "sz": 1.146, "b": 1, "c": "#a2fca2", "f": "mono"}]}], "a": "m", "i": [0.0, 0.0, 0.0, 0.0]}}
    ],
    "id": "uniform-identification",
-   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000 · Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002",
+   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000; Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002",
    "refs": [
     {
      "to": "08#uris",
@@ -1354,7 +1354,7 @@
     {"k": "shape", "x": 83.07, "y": 37.119, "w": 15.341, "h": 4.922, "g": "roundRect", "fill": "#ffffff", "ln": "#00802f", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Code-on-Demand (Optional)", "sz": 1.667, "c": "#000000", "href": "07b#code-on-demand"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ],
    "id": "manipulation",
-   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000 · Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002",
+   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000; Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002",
    "refs": [
     {
      "to": "08#crud-over-http",
@@ -1387,7 +1387,7 @@
     {"k": "shape", "x": 52.663, "y": 43.138, "w": 28.243, "h": 8.303, "s": 7, "g": "roundRect", "adj": {"adj": 19809}, "fill": "#73a5af", "ln": "#101a1c", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Clients, Servers, and Intermediaries can ", "sz": 1.667, "b": 1, "c": "#ffffff"}, {"t": "i", "sz": 1.667, "c": "#ffffff"}, {"t": "nterpret ", "sz": 1.667, "b": 1, "c": "#ffffff"}, {"t": "messages (e.g., to help the Web scale up)", "sz": 1.667, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ],
    "id": "self-descriptive",
-   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000 · Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002",
+   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000; Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002",
    "refs": [
     {
      "to": "09#media-types",
@@ -1410,11 +1410,11 @@
     {"k": "shape", "x": 83.07, "y": 37.119, "w": 15.341, "h": 4.922, "g": "roundRect", "fill": "#ffffff", "ln": "#00802f", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Code-on-Demand (Optional)", "sz": 1.667, "c": "#000000", "href": "07b#code-on-demand"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ],
    "id": "hateoas",
-   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000 · Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002"
+   "source": "Roy T. Fielding. *Architectural Styles and the Design of Network-based Software Architectures*. 2000; Roy T. Fielding, Richard N. Taylor. *Principled Design of the Modern Web Architecture*. 2002"
   },
   {
    "layout": "canvas",
-   "title": "Summary: Evaluating „Styles“",
+   "title": "Summary: Evaluating “Styles”",
    "items": [
     {"k": "pic", "src": "img/1de05fe886.png", "alt": "Social media comment thread comparing gRPC and REST: REST is an architectural principle, gRPC vs normal HTTP JSON API", "x": 53.555, "y": 14.942, "w": 43.099, "h": 34.287, "s": 1, "crop": [0.13972, 0.20997, 0.35825, 0.08001]},
     {"k": "shape", "x": 1.16, "y": 46.531, "w": 49.993, "h": 1.893, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "https://dev.to/techschoolguru/is-grpc-better-than-rest-where-to-use-it-3blg", "sz": 0.938, "c": "#808080", "href": "https://dev.to/techschoolguru/is-grpc-better-than-rest-where-to-use-it-3blg"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
