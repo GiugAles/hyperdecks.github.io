@@ -6,6 +6,8 @@
   python render_html.py deck.json --shots DIR     # also screenshots for the check: one PNG per slide,
                                                   # a contact sheet and the phone view
   python render_html.py deck.json --shots DIR --slides 2,4-6   # only these slides (fast)
+  python render_html.py deck.json --notes --out DIR             # with speaker notes, for presenting (keep DIR
+                                                                # outside the repo: the published page has no notes)
 
 In a window of 1000px or wider it shows one 16:9 slide, centred. In a narrower window (phone) it still shows one
 slide at a time, filling the window with the content in one column; a slide taller than the window scrolls
@@ -1153,6 +1155,9 @@ class Html:
         if it.get("video"):
             src = (self.base / it["video"]).resolve()
             served = self.out / "media" / src.name      # the copy already published with the deck
+            published = self.base / "html" / "media" / src.name
+            if not src.exists() and not served.exists() and published.exists():   # rendering elsewhere (--out)
+                src = published
             if not src.exists() and not served.exists():
                 print(f"WARNING: video {it['video']} not found (neither {src} nor {served}); showing its poster only", file=sys.stderr)
             if src.exists() or served.exists():
@@ -1506,8 +1511,13 @@ def main():
     ap.add_argument("--out", help="output folder (default: html/ next to the deck)")
     ap.add_argument("--shots", help="folder for check screenshots (keep it outside the repo)")
     ap.add_argument("--slides", help="with --shots: only these slides, e.g. 2 or 2,4-6 (fast; no contact sheets)")
+    ap.add_argument("--notes", action="store_true",
+                    help="include the speaker notes (N key); without it the page has none, so it can be published")
     a = ap.parse_args()
     deck, base, warnings = hd.load(a.deck)
+    if not a.notes:
+        for s in deck["slides"]:
+            s.pop("notes", None)
     out = Path(a.out).resolve() if a.out else base / "html"
     index = Html(deck, base, out).write()
     print(f"Saved {index} ({len(deck['slides'])} slides)")

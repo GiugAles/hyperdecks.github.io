@@ -13,7 +13,8 @@ deck.json
 
 Every slide: "layout", "title", and optionally "lead" (one line under the headline), "callout" (a box beside
 the headline), "source" (small credit line), "notes" (speaker notes), "time" (pacing cue shown in the overview).
-Speaker notes can also live in speaker-notes.md next to the deck (see load_notes), which overrides "notes".
+Speaker notes live in speaker-notes.md next to the deck (see load_notes; ignored by git, so they are never
+published); "notes" in deck.json is still read but gets a warning. render_html.py leaves notes out unless --notes.
 The fields of each layout are listed in LAYOUTS below and explained in SKILL.md.
 
   python hsg_deck.py deck.json            # check a deck without rendering
@@ -422,18 +423,23 @@ def load_notes(deck, md):
     notes of slide N and replace its "notes" in deck.json. Any other heading ends a slide's notes."""
     if not md.is_file():
         return []
-    warnings, n, body, found = [], None, [], {}
+    warnings, n, head, body, found = [], None, "", [], {}
     for line in md.read_text(encoding="utf-8").splitlines() + ["#"]:
         if line.startswith("#"):
             if n is not None:
-                found[n] = "\n".join(body).strip()
-            m = re.match(r"###\s+(\d+)\b", line)
-            n, body = (int(m.group(1)) if m else None), []
+                found[n] = (head, "\n".join(body).strip())
+            m = re.match(r"###\s+(\d+)\b\s*(.*)", line)
+            n, head, body = (int(m.group(1)) if m else None), (m.group(2).strip() if m else ""), []
         elif n is not None:
             body.append(line)
-    for n, text in found.items():
+    plain = lambda s: re.sub(r"[\s*]+", " ", s or "").strip().lower()
+    for n, (head, text) in found.items():
         if 1 <= n <= len(deck["slides"]):
-            deck["slides"][n - 1]["notes"] = text
+            s = deck["slides"][n - 1]
+            if head and plain(head) != plain(s.get("title")):
+                warnings.append(f"{md.name}: '### {n} {head}' but slide {n} is '{s.get('title', '')}' "
+                                "(slides moved? renumber the headings)")
+            s["notes"] = text
         else:
             warnings.append(f"{md.name}: there is no slide {n}")
     return warnings
@@ -446,7 +452,10 @@ def load(path):
         deck = json.loads(path.read_text(encoding="utf-8"))
     except (OSError, ValueError) as e:
         sys.exit(f"Could not read {path}: {e}")
-    notes_warnings = load_notes(deck, path.parent / "speaker-notes.md")
+    in_deck = [str(i) for i, s in enumerate(deck.get("slides", []), 1) if isinstance(s, dict) and s.get("notes")]
+    notes_warnings = [f"speaker notes in deck.json (slides {', '.join(in_deck)}) are published with the repo: "
+                      "move them to speaker-notes.md"] if in_deck else []
+    notes_warnings += load_notes(deck, path.parent / "speaker-notes.md")
     errors, warnings = check(deck, path.parent)
     warnings += notes_warnings
     if errors:

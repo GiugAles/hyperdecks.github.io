@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" font-family="Gill Sans Nova, Gill Sans MT, Gill Sans, Gillius ADF No2, Calibri, sans-serif" style="font-variant-ligatures:none;font-feature-settings:'liga' 0,'dlig' 0">
+<rect x="10" y="10" width="580" height="480" rx="18" fill="#f2f2f2" stroke="#595959" stroke-width="4"/>
+<text x="300" y="58" font-size="28" fill="#000" text-anchor="middle" font-weight="600">One server: www.rottentomato&#8204;es.com</text>
+<rect x="40" y="90" width="250" height="175" rx="12" fill="#00802F"/>
+<text x="165" y="165" font-size="28" fill="#fff" text-anchor="middle" font-weight="600">Application</text>
+<text x="165" y="202" font-size="21" fill="#fff" text-anchor="middle">pages, search, logic</text>
+<rect x="310" y="90" width="250" height="175" rx="12" fill="#efe9ff" stroke="#7C4DFF" stroke-width="3"/>
+<text x="435" y="165" font-size="28" fill="#000" text-anchor="middle" font-weight="600">Data</text>
+<text x="435" y="202" font-size="21" fill="#595959" text-anchor="middle">ratings, reviews</text>
+<rect x="40" y="285" width="250" height="175" rx="12" fill="#fff" stroke="#595959" stroke-width="3"/>
+<text x="165" y="360" font-size="28" fill="#000" text-anchor="middle" font-weight="600">Identity</text>
+<text x="165" y="397" font-size="21" fill="#595959" text-anchor="middle">accounts, logins</text>
+<rect x="310" y="285" width="250" height="175" rx="12" fill="#fff" stroke="#595959" stroke-width="3"/>
+<text x="435" y="360" font-size="28" fill="#000" text-anchor="middle" font-weight="600">Access control</text>
+<text x="435" y="397" font-size="21" fill="#595959" text-anchor="middle">who may read or write</text>
+</svg>

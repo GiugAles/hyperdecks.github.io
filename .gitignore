@@ -3,3 +3,6 @@
 !**/media/*.web.mp4
 /asse/*/media/
 __pycache__/
+
+# speaker notes are never published: render with --notes --out <folder outside the repo> to present
+speaker-notes.md

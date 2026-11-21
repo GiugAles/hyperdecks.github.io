@@ -290,6 +290,21 @@
   ],
   [
    "09",
+   "What Have We Decoupled So Far",
+   "decoupled-so-far"
+  ],
+  [
+   "09",
+   "Does the Link Care Where It Points",
+   "link-location"
+  ],
+  [
+   "09",
+   "Where Does Your Rating Live",
+   "your-rating"
+  ],
+  [
+   "09",
    "Hypertext: Ted Nelson",
    "nelson"
   ],
@@ -310,7 +325,7 @@
   ],
   [
    "09",
-   "Solid: Pods, WebIDs and Apps",
+   "Solid: Pods, WebIDs, and Apps",
    "solid-pods"
   ],
   [
@@ -874,10 +889,44 @@
   ],
   [
    "09",
-   "Solid: Pods, WebIDs and Apps",
+   "Solid: Pods, WebIDs, and Apps",
    [
     [
      "09#personal-data",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "What Have We Decoupled So Far",
+   [
+    [
+     "07b#principled-design",
+     "recap"
+    ],
+    [
+     "08#start",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "Does the Link Care Where It Points",
+   [
+    [
+     "09#common-model",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "~web applications where data storage",
+   [
+    [
+     "09#decoupled-so-far",
      "recap"
     ]
    ]

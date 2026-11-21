@@ -35,8 +35,7 @@
    "title": "The Auction House Narrative",
    "image": "img/narrative.svg",
    "shadow": false,
-   "alt": "Flow diagram. A customer, who has a job to get done, asks auction house A, which receives the job request. Auction house A and the outcomes sit in a frame labelled Ecosystem of auction houses. If A can handle the job, an arrow labelled no need to share leads to A handles the job, all credit to A. If A cannot handle it, an arrow leads to A auctions off the job request, where B, C and others bid; an arrow labelled B wins leads to B handles the job, credit shared by A and B. Under the frame: Common goal: as many served customers as possible.",
-   "notes": "• To get their jobs handled, customers ask an auction house\n• If the auction house can handle the job itself, it keeps all the credit and involves no one else\n• If it cannot, it can still hope for part of the credit by auctioning off the job request to the other auction houses\n• The ecosystem of auction houses shares one goal: to serve as many customers as possible\n• That is why the auction houses of the six groups must interoperate"
+   "alt": "Flow diagram. A customer, who has a job to get done, asks auction house A, which receives the job request. Auction house A and the outcomes sit in a frame labelled Ecosystem of auction houses. If A can handle the job, an arrow labelled no need to share leads to A handles the job, all credit to A. If A cannot handle it, an arrow leads to A auctions off the job request, where B, C, and others bid; an arrow labelled B wins leads to B handles the job, credit shared by A and B. Under the frame: Common goal: as many served customers as possible."
   },
   {
    "layout": "image",
@@ -44,8 +43,7 @@
    "title": "Enabling Event-Based Interactions",
    "image": "img/event-interactions-0.svg",
    "shadow": false,
-   "alt": "An empty area where the next slides show two graphs.",
-   "notes": "• This week: two implementations of event-based interaction, one with W3C WebSub and one with MQTT (see Lecture 8)\n• A first step towards an open and decentralized marketplace, in which each group operates its own auction house\n• The task force designs the event ecosystem: the components that the applications of all six groups need to reach, e.g. WebSub hubs and MQTT brokers"
+   "alt": "An empty area where the next slides show two graphs."
   },
   {
    "layout": "image",
@@ -53,18 +51,16 @@
    "title": "Enabling Event-Based Interactions",
    "image": "img/event-interactions-1.svg",
    "shadow": false,
-   "alt": "W3C WebSub: Groups 1, 2 and 3 are linked with each other in both directions, and each points to a resource directory, which holds a resource list of auction URLs such as http://group1.ex.org/auctions/. The right half of the slide is empty.",
-   "notes": "• W3C WebSub: a brokered publish/subscribe protocol for observing resources on the open Web, at Web scale\n• E.g. observe the auction houses of the other groups to be notified when they launch new auctions"
+   "alt": "W3C WebSub: Groups 1, 2, and 3 are linked with each other in both directions, and each points to a resource directory, which holds a resource list of auction URLs such as http://group1.ex.org/auctions/. The right half of the slide is empty."
   },
   {
    "layout": "canvas",
    "id": "websub-debugging",
    "title": "Enabling Event-Based Interactions",
    "items": [
-    {"k": "pic", "src": "img/event-interactions-1.svg", "alt": "W3C WebSub: Groups 1, 2 and 3 are linked with each other in both directions, and each points to a resource directory, which holds a resource list of auction URLs such as http://group1.ex.org/auctions/.", "x": 7.794, "y": 15.324, "w": 84.412, "h": 34.0},
-    {"k": "shape", "x": 50.5, "y": 15.3, "w": 45.6, "h": 34.0, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Debugging WebSub", "sz": 1.6, "b": 1}], "sa": 0.6}, {"al": "l", "bu": "-", "pl": 2.2, "in": -2.2, "sb": 0.5, "r": [{"t": "websub.rocks tests your publisher and your subscriber", "sz": 1.6}]}, {"al": "l", "bu": "-", "pl": 4.4, "in": -2.2, "sb": 0.2, "r": [{"t": "Publisher: it subscribes through the hub you advertise and shows the notifications", "sz": 1.6}]}, {"al": "l", "bu": "-", "pl": 4.4, "in": -2.2, "sb": 0.2, "r": [{"t": "Subscriber: discovery, subscribing and signatures", "sz": 1.6}]}, {"al": "l", "bu": "-", "pl": 2.2, "in": -2.2, "sb": 0.5, "r": [{"t": "The course provides a WebSub hub; its implementation may be adjusted to the needs of the course", "sz": 1.6}]}, {"al": "l", "bu": "-", "pl": 4.4, "in": -2.2, "sb": 0.2, "r": [{"t": "/logs", "sz": 1.6, "f": "mono"}, {"t": ": its recent log lines", "sz": 1.6}]}, {"al": "l", "bu": "-", "pl": 4.4, "in": -2.2, "sb": 0.2, "r": [{"t": "/status", "sz": 1.6, "f": "mono"}, {"t": ": subscriptions, leases and the last delivery of each", "sz": 1.6}]}, {"al": "l", "bu": "-", "pl": 4.4, "in": -2.2, "sb": 0.2, "r": [{"t": "Its address is in the task force repository", "sz": 1.6}]}], "a": "t", "i": [0, 0, 0, 0]}}
-   ],
-   "notes": "• websub.rocks asks you to sign in with a passkey\n• Its tests call the callback of your subscriber, so the subscriber must be reachable from the Internet, e.g. on your group VM\n• /logs takes ?filter=<words>&lines=<n>"
+    {"k": "pic", "src": "img/event-interactions-1.svg", "alt": "W3C WebSub: Groups 1, 2, and 3 are linked with each other in both directions, and each points to a resource directory, which holds a resource list of auction URLs such as http://group1.ex.org/auctions/.", "x": 7.794, "y": 15.324, "w": 84.412, "h": 34.0},
+    {"k": "shape", "x": 50.5, "y": 15.3, "w": 45.6, "h": 34.0, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Debugging WebSub", "sz": 1.6, "b": 1}], "sa": 0.6}, {"al": "l", "bu": "-", "pl": 2.2, "in": -2.2, "sb": 0.5, "r": [{"t": "websub.rocks tests your publisher and your subscriber", "sz": 1.6}]}, {"al": "l", "bu": "-", "pl": 4.4, "in": -2.2, "sb": 0.2, "r": [{"t": "Publisher: it subscribes through the hub you advertise and shows the notifications", "sz": 1.6}]}, {"al": "l", "bu": "-", "pl": 4.4, "in": -2.2, "sb": 0.2, "r": [{"t": "Subscriber: discovery, subscribing, and signatures", "sz": 1.6}]}, {"al": "l", "bu": "-", "pl": 2.2, "in": -2.2, "sb": 0.5, "r": [{"t": "The course provides a WebSub hub; its implementation may be adjusted to the needs of the course", "sz": 1.6}]}, {"al": "l", "bu": "-", "pl": 4.4, "in": -2.2, "sb": 0.2, "r": [{"t": "/logs", "sz": 1.6, "f": "mono"}, {"t": ": its recent log lines", "sz": 1.6}]}, {"al": "l", "bu": "-", "pl": 4.4, "in": -2.2, "sb": 0.2, "r": [{"t": "/status", "sz": 1.6, "f": "mono"}, {"t": ": subscriptions, leases, and the last delivery of each", "sz": 1.6}]}, {"al": "l", "bu": "-", "pl": 4.4, "in": -2.2, "sb": 0.2, "r": [{"t": "Its address is in the task force repository", "sz": 1.6}]}], "a": "t", "i": [0, 0, 0, 0]}}
+   ]
   },
   {
    "layout": "image",
@@ -72,8 +68,7 @@
    "title": "Enabling Event-Based Interactions",
    "image": "img/event-interactions.svg",
    "shadow": false,
-   "alt": "Two graphs side by side. W3C WebSub: Groups 1, 2 and 3 are linked with each other in both directions, and each points to a resource directory, which holds a resource list of auction URLs such as http://group1.ex.org/auctions/. MQTT: Groups 1, 2 and 3 are each linked in both directions to one event broker in the middle.",
-   "notes": "• MQTT: a brokered publish/subscribe protocol to publish and receive events in the auction domain\n• Unlike WebSub, MQTT does not emphasize openness and scalability; it is designed to be lightweight\n• Keep the broker addresses in your configuration, so that your application follows whichever brokers the task force agrees on\n• Task 5 compares both implementations, with measurements from the testing infrastructure of Exercise 7"
+   "alt": "Two graphs side by side. W3C WebSub: Groups 1, 2, and 3 are linked with each other in both directions, and each points to a resource directory, which holds a resource list of auction URLs such as http://group1.ex.org/auctions/. MQTT: Groups 1, 2, and 3 are each linked in both directions to one event broker in the middle."
   },
   {
    "layout": "table",
@@ -125,14 +120,13 @@
     ],
     [
      "MQTT",
-     "Topic structure and wildcards, QoS per event, retained messages, TCP, TLS or WebSockets"
+     "Topic structure and wildcards, QoS per event, retained messages, TCP, TLS, or WebSockets"
     ],
     [
      "...",
      "..."
     ]
-   ],
-   "notes": "• MQTT exchanges messages, whereas WebSub observes Web resources\n• Rather than copying the WebSub design, the task force should approach MQTT with a fresh mind"
+   ]
   },
   {
    "layout": "table",
@@ -180,8 +174,7 @@
      ],
      "light": true
     }
-   ],
-   "notes": "Terms:\n• Component: a kind of shared service\n• Instance: one running deployment of a component at its own address\n• Operator: the party that decides what runs on an instance and can stop it\n\n• The lighter rows start in Exercise 9\n• No instance is a default: the task force decides which instances the ecosystem uses\n• Groups can also run instances on their group VM or an extra VM from the course\n• The tutors help to make such an instance reachable from every group VM at a public hostname"
+   ]
   },
   {
    "layout": "table",
@@ -230,7 +223,6 @@
      "light": true
     }
    ],
-   "notes": "• Managed components is an aid for keeping track of the instances\n• The ground truth is the ADRs in the decision log of the task force",
    "after": "The instances that the task force repository rolls out are listed under [Managed components](https://github.com/unisg-scs-asse/pitas-hs26-itf/blob/main/infrastructure/README.md#managed-components)."
   },
   {
@@ -240,8 +232,7 @@
    "image": "img/rules-operators.svg",
    "alt": "Deployment diagram with one frame per operator. Top row: Google and Switchboard each run a WebSub hub, HiveMQ runs an MQTT broker, and the course runs the resource directory on its resource VM. Bottom row: Group 2 runs a PITAS app and an MQTT broker on its VM and a second MQTT broker on an extra VM; Group 5 runs a PITAS app on its VM.",
    "shadow": false,
-   "lead": "Rule 1: count operators, not machines.\nA group operates its group VM and any extra VM the course gives it.",
-   "notes": "• The operator of an instance is the party that decides what runs on it and can stop it\n• Top row: the outside providers Google, Switchboard, HiveMQ and the course\n• Bottom row: two of the six groups\n• The task force repository lists four resource VMs; a group can claim one of them without asking the tutors\n• Only groups that need more than these four, e.g. to host services for other groups, ask the tutors"
+   "lead": "Rule 1: count operators, not machines.\nA group operates its group VM and any extra VM the course gives it."
   },
   {
    "layout": "image",
@@ -251,7 +242,7 @@
     "text": "Who is a foreign provider for Group 5?"
    },
    "image": "img/rules-selfhosted.svg",
-   "alt": "The deployment diagram of the previous slide, with one frame per operator: Google, Switchboard, HiveMQ, the course, Group 2 and Group 5. The two MQTT brokers on the VMs of Group 2 are green and marked self-hosted.",
+   "alt": "The deployment diagram of the previous slide, with one frame per operator: Google, Switchboard, HiveMQ, the course, Group 2, and Group 5. The two MQTT brokers on the VMs of Group 2 are green and marked self-hosted.",
    "shadow": false,
    "lead": "Rule 2: an instance on a VM your group operates is self-hosted.\nRule 3: for your group, every other operator is a foreign provider."
   },
@@ -263,9 +254,8 @@
     "text": "Who is a foreign provider for Group 5?"
    },
    "image": "img/rules-foreign.svg",
-   "alt": "The same diagram with the answer: the frames of Google, Switchboard, HiveMQ, the course and Group 2 are highlighted in teal and titled foreign provider. Only the frame of Group 5 keeps the title operator. The two MQTT brokers of Group 2 are still marked self-hosted.",
+   "alt": "The same diagram with the answer: the frames of Google, Switchboard, HiveMQ, the course, and Group 2 are highlighted in teal and titled foreign provider. Only the frame of Group 5 keeps the title operator. The two MQTT brokers of Group 2 are still marked self-hosted.",
    "shadow": false,
-   "notes": "• Every operator except Group 5, Group 2 included (Rule 3)\n• Group 2's brokers are self-hosted for Group 2 (Rule 2) and come from a foreign provider for Group 5",
    "lead": "Rule 2: an instance on a VM your group operates is self-hosted.\nRule 3: for your group, every other operator is a foreign provider."
   },
   {
@@ -286,8 +276,7 @@
    },
    "paragraphs": [
     "Rule 4: an instance counts exactly when"
-   ],
-   "notes": "• Because of (a), everything handed in to the course is preliminary until the task force decides"
+   ]
   },
   {
    "layout": "text",
@@ -305,8 +294,7 @@
     "alt": "The diagram of Rule 4, with the MQTT broker on the Group 2 laptop marked demonstrator.",
     "shadow": false,
     "caption": "The broker on the laptop does not count, but Group 2 can show it to the task force."
-   },
-   "notes": "• Until the task force decides differently, the course WebSub hub may serve as a demonstrator, but it does not count"
+   }
   },
   {
    "layout": "text",
@@ -336,7 +324,6 @@
    "alt": "Google and Switchboard each run a WebSub hub in their own operator frame. Group 2 runs one MQTT broker on its VM and one on its extra VM, both inside the Group 2 frame.",
    "shadow": false,
    "caption": "The two WebSub hubs are independently operated.",
-   "notes": "• No: Group 2 operates both of its VMs (Rule 1), so one party can stop both brokers",
    "lead": "Rule 7: different operators, so no single party can reconfigure or stop both."
   },
   {
@@ -365,7 +352,7 @@
    ],
    "aside": {
     "image": "img/rules-fallback.svg",
-    "alt": "Group 5's PITAS app uses four provided instances: the WebSub hub of Google, the WebSub hub of Switchboard, reached by a dashed arrow labelled alongside, or by configuration, the MQTT broker of HiveMQ and the resource directory of the course.",
+    "alt": "Group 5's PITAS app uses four provided instances: the WebSub hub of Google, the WebSub hub of Switchboard, reached by a dashed arrow labelled alongside, or by configuration, the MQTT broker of HiveMQ, and the resource directory of the course.",
     "shadow": false
    }
   },
@@ -387,8 +374,7 @@
     "image": "img/rules-nofallback.svg",
     "alt": "The same diagram with the answer in colour: the WebSub hub of Switchboard is green, and the MQTT broker of HiveMQ and the resource directory of the course are teal.",
     "shadow": false
-   },
-   "notes": "• Answer: the MQTT broker (only HiveMQ) and the discovery service (only the course's resource directory)\n• The WebSub hubs have a fallback: Google and Switchboard, once both count\n• A group can give the broker a fallback, e.g. a broker on its own VM that another group uses\n• From Exercise 9, the pod server and the identity provider have no fallback either among the provided instances: only the course CSS provides them"
+   }
   },
   {
    "layout": "text",
@@ -417,8 +403,7 @@
    "title": "Your Group and the Task Force Iterate",
    "image": "img/iteration.svg",
    "shadow": false,
-   "alt": "Loop diagram in two frames. Frame Your group: Argue for your role (arguments and demonstrators) and Implement (WebSub, MQTT, and your own ADRs). Frame Task force: Negotiate (delegates of all six groups) and Decide (one ADR per decision in the decision log). Arrows run clockwise: from Argue to Negotiate, labelled your delegate; from Negotiate to Decide, labelled may supersede earlier ADRs; from Decide to Implement, labelled cite its ADR in yours; from Implement back to Argue, labelled experience from the code.",
-   "notes": "• Your delegate needs your support: arguments and demonstrators that strengthen their position in the negotiations\n• In your own ADRs:\n  ◦ state how you implement a task force decision and cite its ADR\n  ◦ record the decisions your group takes on its own\n  ◦ say where your role motivates a decision"
+   "alt": "Loop diagram in two frames. Frame Your group: Argue for your role (arguments and demonstrators) and Implement (WebSub, MQTT, and your own ADRs). Frame Task force: Negotiate (delegates of all six groups) and Decide (one ADR per decision in the decision log). Arrows run clockwise: from Argue to Negotiate, labelled your delegate; from Negotiate to Decide, labelled may supersede earlier ADRs; from Decide to Implement, labelled cite its ADR in yours; from Implement back to Argue, labelled experience from the code."
   },
   {
    "layout": "image",
@@ -427,9 +412,8 @@
    "lead": "The [task force repository](https://github.com/unisg-scs-asse/pitas-hs26-itf/tree/main/infrastructure) contains an infrastructure-as-code setup for the resource VMs.",
    "image": "img/drosos2024-fig1.png",
    "shadow": false,
-   "alt": "Architecture of configuration-based infrastructure-as-code tools. User input data goes into an application of templates and code files, which a runtime parses and interprets. The interpreter invokes configuration units, third-party and built-in, which read and update the system state of the infrastructure: servers, routers and switches. Configuration units are assembled into programs. Bottom line: the user initializes the IaC program, which is parsed by the runtime interpreter, which invokes configuration units, which interact with the system.",
+   "alt": "Architecture of configuration-based infrastructure-as-code tools. User input data goes into an application of templates and code files, which a runtime parses and interprets. The interpreter invokes configuration units, third-party and built-in, which read and update the system state of the infrastructure: servers, routers, and switches. Configuration units are assembled into programs. Bottom line: the user initializes the IaC program, which is parsed by the runtime interpreter, which invokes configuration units, which interact with the system.",
    "source": "Drosos, Sotiropoulos, Alexopoulos, Mitropoulos, Su. *When Your Infrastructure Is a Buggy Program: Understanding Faults in Infrastructure as Code Ecosystems*, Fig. 1, cropped. [PACMPL 8 (OOPSLA2), 2024](https://doi.org/10.1145/3689799), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)",
-   "notes": "• Data: group_vars, tfvars, secrets\n• Program: site.yml, roles, main.tf\n• Interpreter: ansible-playbook, tofu (GitHub Actions)\n• Units: Ansible modules, OpenTofu resources\n• System: resource VMs\n\n• Infrastructure as code (IaC) is a best practice in DevOps\n• More importantly, it gives all participants a standardized means to understand the current state of the infrastructure\n• Executable documentation\n• Since IaC is a best practice, coding agents should be good at interpreting it, too",
    "source_at": "corner"
   },
   {
@@ -439,9 +423,8 @@
    "lead": "The [task force repository](https://github.com/unisg-scs-asse/pitas-hs26-itf/tree/main/infrastructure) contains an infrastructure-as-code setup for the resource VMs.",
    "image": "img/drosos2024-fig1-codefile.png",
    "shadow": false,
-   "alt": "Architecture of configuration-based infrastructure-as-code tools. User input data goes into an application of templates and code files, which a runtime parses and interprets. The interpreter invokes configuration units, third-party and built-in, which read and update the system state of the infrastructure: servers, routers and switches. Configuration units are assembled into programs. Bottom line: the user initializes the IaC program, which is parsed by the runtime interpreter, which invokes configuration units, which interact with the system. A green rectangle highlights the Code File box in the application.",
+   "alt": "Architecture of configuration-based infrastructure-as-code tools. User input data goes into an application of templates and code files, which a runtime parses and interprets. The interpreter invokes configuration units, third-party and built-in, which read and update the system state of the infrastructure: servers, routers, and switches. Configuration units are assembled into programs. Bottom line: the user initializes the IaC program, which is parsed by the runtime interpreter, which invokes configuration units, which interact with the system. A green rectangle highlights the Code File box in the application.",
    "source": "Drosos, Sotiropoulos, Alexopoulos, Mitropoulos, Su. *When Your Infrastructure Is a Buggy Program: Understanding Faults in Infrastructure as Code Ecosystems*, Fig. 1, cropped, highlight added. [PACMPL 8 (OOPSLA2), 2024](https://doi.org/10.1145/3689799), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)",
-   "notes": "• The code files are the most important entry point for groups",
    "source_at": "corner"
   },
   {

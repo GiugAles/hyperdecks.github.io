@@ -38,7 +38,7 @@ One JSON file, `deck.json`. Image paths are relative to the folder of the deck.
 
 `pdf` is optional: the path of a PDF of the deck, relative to `html/index.html` (e.g. `"../lecture.pdf"`). The controls then get a PDF button that downloads it. Make the PDF by printing `html/index.html` (one slide per page, builds shown complete), e.g. with Playwright `page.pdf(width="13.333in", height="7.5in", print_background=True)`. Give the page size explicitly: with the default paper size Chromium lays the page out at letter width, which triggers the phone layout. `pdf_version` (optional, with `pdf`) is the version of that PDF, e.g. its date `"09.11.2026"`; the button then reads "PDF (09.11.2026)", so readers see that the PDF may be older than the slides.
 
-`theme` is optional: a CSS file (path relative to the deck) set on top of the template, for an event with its own look, e.g. `legalhackathons/theme/legalhackathons.css`. It may use the unit `U` and link fonts with `url()`; those files are copied into `html/assets/`. A theme changes colours and fonts only, never sizes; only use one when the user asks for another look.
+`theme` is optional: a CSS file (path relative to the deck) set on top of the template, for an event with its own look, e.g. `events/theme/legalhackathons.css`. It may use the unit `U` and link fonts with `url()`; those files are copied into `html/assets/`. A theme changes colours and fonts only, never sizes; only use one when the user asks for another look.
 
 Every slide has `layout` and `title`, and optionally:
 
@@ -47,7 +47,7 @@ Every slide has `layout` and `title`, and optionally:
 | `lead` | one line under the headline, at body size (not on `title`, `section`, `task`, `quote`) |
 | `callout` | a box beside the headline: `text`, optional `style` (`green` default, `outline`, `teal`), `heading`, `wide` (true lets the box grow to 48U instead of 34U, for lines that should not wrap, e.g. names with affiliations) |
 | `source` | small credit line at the foot of the slide, links allowed |
-| `notes` | speaker notes (shown with N; a button moves them to their own window for the presenter). Alternatively in `speaker-notes.md` next to deck.json: the lines under `### N Title` are the notes of slide N and replace `notes` |
+| `notes` | speaker notes are never published: write them in `speaker-notes.md` next to deck.json (ignored by git), the lines under `### N Title` are the notes of slide N; renumber the headings when slides move (the check warns when a heading's title no longer matches). `notes` in deck.json still works but gets a warning, since deck.json is public. The published page has no notes; to present with them (N; a button moves them to their own window), render with `--notes --out <folder outside the repo>` |
 | `time` | pacing cue shown in the overview |
 | `decor` | emojis or dots scattered behind the slide, for an event deck with a playful theme: a list of `{"x", "y", "size"}` (position in percent of the slide, size in U) with optional `emoji` (without it the item is a dot) and `rot` (degrees) |
 

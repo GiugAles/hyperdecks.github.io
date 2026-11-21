@@ -95,12 +95,11 @@
      "to": 9
     },
     {
-     "title": "Semantic Hypermedia, Agents and the Web of Things",
+     "title": "Semantic Hypermedia, Agents, and the Web of Things",
      "from": 10,
      "to": 11
     }
-   ],
-   "notes": "Assignments per session in the original plan: 14.09 Event Storming & Architecture Characteristics; 21.09 ADRs, Service Granularity, Spring 101; 28.09 Hexagonal Architecture, Domain Entity Testing; 05.10 Persistence, Integration Testing; 12.10 Interactions, Communication, System Testing; 19.10 Cleanup and Group Split; 09.11 Uniform Interaction; 16.11 Event-Driven Interaction; 23.11 Hypermedia Ecosystems; 30.11 Decoupling through Semantic Hypermedia; 07.12 Agents and the Web of Things. PITAS PlugFest: 24.11, 5 to 8pm."
+   ]
   },
   {
    "layout": "canvas",
@@ -234,9 +233,9 @@
   },
   {
    "layout": "canvas",
-   "title": "What we‘ve seen by now",
+   "title": "What we’ve seen by now",
    "items": [
-    {"k": "shape", "x": 3.924, "y": 12.501, "w": 64.036, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "When creating a system, make the desired non-functional profile explicit", "sz": 1.948}], "pl": 2.812, "in": -2.812, "bu": "-"}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 2.812, "in": -2.812}, {"al": "l", "r": [{"t": "Select architecture and technologies based on this NFP", "sz": 1.948}], "pl": 2.812, "in": -2.812, "bu": "-"}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 2.812, "in": -2.812}, {"al": "l", "r": [{"t": "For immediate interactions between components, consider the NFP when selecting an IDL (or when choosing to not use an IDL). Think about the ", "sz": 1.948}, {"t": "next version of your APIs", "sz": 1.948, "b": 1}], "pl": 2.812, "in": -2.812, "bu": "-"}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 2.812, "in": -2.812}, {"al": "l", "r": [{"t": "For interactions in component ecosystems, check how much guidance you can integrate in-band and aim at avoiding out-of-band contracts. Hypermedia guides the way. Think about a ", "sz": 1.948}, {"t": "client‘s next action possibility", "sz": 1.948, "b": 1}], "pl": 2.812, "in": -2.812, "bu": "-"}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 2.812, "in": -2.812}, {"al": "l", "r": [{"t": "We stopped when asking: How might we have a ", "sz": 1.948}, {"t": "common conceptual model", "sz": 1.948, "b": 1}, {"t": "?", "sz": 1.948}], "pl": 2.812, "in": -2.812, "bu": "-"}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 3.924, "y": 12.501, "w": 64.036, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "When creating a system, make the desired non-functional profile explicit", "sz": 1.948}], "pl": 2.812, "in": -2.812, "bu": "-"}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 2.812, "in": -2.812}, {"al": "l", "r": [{"t": "Select architecture and technologies based on this NFP", "sz": 1.948}], "pl": 2.812, "in": -2.812, "bu": "-"}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 2.812, "in": -2.812}, {"al": "l", "r": [{"t": "For immediate interactions between components, consider the NFP when selecting an IDL (or when choosing to not use an IDL). Think about the ", "sz": 1.948}, {"t": "next version of your APIs", "sz": 1.948, "b": 1}], "pl": 2.812, "in": -2.812, "bu": "-"}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 2.812, "in": -2.812}, {"al": "l", "r": [{"t": "For interactions in component ecosystems, check how much guidance you can integrate in-band and aim at avoiding out-of-band contracts. Hypermedia guides the way. Think about a ", "sz": 1.948}, {"t": "client’s next action possibility", "sz": 1.948, "b": 1}], "pl": 2.812, "in": -2.812, "bu": "-"}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 2.812, "in": -2.812}, {"al": "l", "r": [{"t": "We stopped when asking: How might we have a ", "sz": 1.948}, {"t": "common conceptual model", "sz": 1.948, "b": 1}, {"t": "?", "sz": 1.948}], "pl": 2.812, "in": -2.812, "bu": "-"}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "pic", "src": "img/cd5d0e9d3c.png", "alt": "Photo of a front-loading washing machine", "x": 81.222, "y": 5.743, "w": 12.237, "h": 16.174},
     {"k": "shape", "x": 79.912, "y": 17.245, "w": 8.406, "h": 4.726, "g": "rect", "fill": "#ffffff", "ln": "#000000", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "BOXED", "sz": 0.938, "b": 1, "c": "#000000"}, {"t": " Control Logic, Sensors, Actuators", "sz": 0.938, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "pic", "src": "img/cd5d0e9d3c.png", "alt": "Photo of a front-loading washing machine", "x": 72.384, "y": 26.741, "w": 12.003, "h": 15.864},
@@ -370,7 +369,7 @@
   },
   {
    "layout": "canvas",
-   "title": "Let‘s do the same for machines!",
+   "title": "Let’s do the same for machines!",
    "items": [
     {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "We provide", "sz": 1.948}]}, {"al": "l", "r": [{"t": "Informative Media", "sz": 1.875}], "pl": 2.343, "in": -2.343, "bu": "-"}, {"al": "l", "r": [{"t": "Rendering", "sz": 1.875}], "pl": 2.343, "in": -2.343, "bu": "-"}, {"al": "l", "r": [{"t": "Hyperlinks", "sz": 1.875}], "pl": 2.343, "in": -2.343, "bu": "-"}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 2.812, "in": -2.812}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "pic", "src": "img/85ac867a11.png", "alt": "Cast and crew list of Star Trek IV: The Voyage Home with portrait photos", "x": 50.89, "y": 10.851, "w": 39.168, "h": 42.181, "crop": [0.37597, 0.18501, 0.24013, 0.08], "shadow": true},
@@ -382,7 +381,7 @@
    "layout": "canvas",
    "title": "",
    "items": [
-    {"k": "pic", "src": "img/7c43472fb0.jpg", "alt": "Cartoon drawing of a house, a tree, a door, shirt, pants and a dog, each labelled with its own name", "x": 28.146, "y": 0.807, "w": 40.802, "h": 50.277},
+    {"k": "pic", "src": "img/7c43472fb0.jpg", "alt": "Cartoon drawing of a house, a tree, a door, shirt, pants, and a dog, each labelled with its own name", "x": 28.146, "y": 0.807, "w": 40.802, "h": 50.277},
     {"k": "shape", "x": 72.933, "y": 15.368, "w": 23.614, "h": 18.932, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Now... ", "sz": 3.75}, {"t": "that", "sz": 3.75, "b": 1}, {"t": " should clear up a few things around here", "sz": 3.75}], "sb": 2.25}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 0.625, "y": 53.164, "w": 83.504, "h": 2.272, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Ian Horrocks, Semantic Web: the Story So Far. International Conference on Tools with Artificial Intelligence (ICTAI). Patras, Greece, October 2007", "sz": 1.25, "c": "#a6a6a6"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}
    ]
@@ -398,7 +397,7 @@
     {"k": "shape", "x": 33.479, "y": 27.289, "w": 24.803, "h": 4.429, "rot": 347.13, "s": 4, "g": "leftRightArrow", "fill": "#f8ec12", "ln": "#404040", "lw": 0.104},
     {"k": "shape", "x": 14.408, "y": 21.941, "w": 56.989, "h": 4.429, "rot": 340.43, "s": 4, "g": "leftRightArrow", "fill": "#f8ec12", "ln": "#404040", "lw": 0.104},
     {"k": "shape", "x": 3.149, "y": 38.025, "w": 48.392, "h": 7.704, "s": 5, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "You interpret the depicted situation with respect to your ", "sz": 2.5, "c": "#ffffff"}, {"t": "understanding of tis context", "sz": 2.5, "b": 1, "c": "#ffffff"}, {"t": "!", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 53.101, "y": 38.025, "w": 42.501, "h": 7.594, "s": 6, "g": "roundRect", "fill": "#73a5af", "ln": "#101a1c", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "It‘s not enough to know „lion“, and „antelope“. ", "sz": 1.875, "c": "#ffffff"}]}, {"al": "c", "r": [{"t": "You need to understand them!", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 53.101, "y": 38.025, "w": 42.501, "h": 7.594, "s": 6, "g": "roundRect", "fill": "#73a5af", "ln": "#101a1c", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "It’s not enough to know „lion“, and „antelope“. ", "sz": 1.875, "c": "#ffffff"}]}, {"al": "c", "r": [{"t": "You need to understand them!", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 16.087, "y": 46.801, "w": 65.932, "h": 7.594, "s": 7, "g": "rect", "fill": "#eb6969", "ln": "#eb6969", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "The very same «context» is also key to productive use of generative AI!", "sz": 2.083, "c": "#ffffff"}]}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "Effective context engineering for AI agents \\ Anthropic", "sz": 1.458, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ]
   },
@@ -408,7 +407,7 @@
    "items": [
     {"k": "pic", "src": "img/29ec1da4c3.jpg", "alt": "Fuel truck catches fire near CBS gas station | CBC News", "x": 37.764, "y": 3.513, "w": 59.416, "h": 33.44, "shadow": true},
     {"k": "shape", "x": 3.149, "y": 38.025, "w": 48.392, "h": 7.704, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "You interpret the depicted situation with respect to your ", "sz": 2.5, "c": "#ffffff"}, {"t": "understanding of tis context", "sz": 2.5, "b": 1, "c": "#ffffff"}, {"t": "!", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 53.101, "y": 38.025, "w": 42.501, "h": 7.594, "g": "roundRect", "fill": "#73a5af", "ln": "#101a1c", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "It‘s not enough to know „truck“ and „fire“ and „self-service price tag“.  You need to understand them!", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 53.101, "y": 38.025, "w": 42.501, "h": 7.594, "g": "roundRect", "fill": "#73a5af", "ln": "#101a1c", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "It’s not enough to know „truck“ and „fire“ and „self-service price tag“. You need to understand them!", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 16.087, "y": 46.801, "w": 65.932, "h": 7.594, "g": "rect", "fill": "#eb6969", "ln": "#eb6969", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "The very same «context» is also key to productive use of generative AI!", "sz": 2.083, "c": "#ffffff"}]}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "Effective context engineering for AI agents \\ Anthropic", "sz": 1.458, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ]
   },
@@ -416,7 +415,7 @@
    "layout": "canvas",
    "title": "",
    "items": [
-    {"k": "pic", "src": "img/7c43472fb0.jpg", "alt": "Cartoon drawing of a house, a tree, a door, shirt, pants and a dog, each labelled with its own name", "x": 79.411, "y": 1.547, "w": 17.781, "h": 27.755},
+    {"k": "pic", "src": "img/7c43472fb0.jpg", "alt": "Cartoon drawing of a house, a tree, a door, shirt, pants, and a dog, each labelled with its own name", "x": 79.411, "y": 1.547, "w": 17.781, "h": 27.755},
     {"k": "shape", "x": 2.809, "y": 5.382, "w": 47.836, "h": 10.63, "s": 1, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "For interoperability (and effective decoupling), we require ", "sz": 2.5, "c": "#ffffff"}, {"t": "sufficient shared", "sz": 2.5, "b": 1, "c": "#ffffff"}, {"t": " ", "sz": 2.5, "c": "#ffffff"}, {"t": "understanding", "sz": 2.5, "b": 1, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "pic", "src": "img/85ac867a11.png", "alt": "Cast and crew list of Star Trek IV: The Voyage Home with portrait photos", "x": 62.557, "y": 17.683, "w": 30.414, "h": 32.753, "crop": [0.37597, 0.18501, 0.24013, 0.08], "shadow": true},
     {"k": "shape", "x": 29.294, "y": 40.231, "w": 31.994, "h": 10.63, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "„Cast“ is well-defined!", "sz": 1.875}], "s": 2}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "We have a shared understanding of what a „cast“ is ", "sz": 1.875}, {"t": "in the context ", "sz": 1.875, "b": 1}, {"t": "of a „movie“", "sz": 1.875}], "s": 4}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
@@ -436,7 +435,7 @@
     {"k": "shape", "x": 5.71, "y": 25.356, "w": 41.407, "h": 10.63, "s": 1, "g": "roundRect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "„All soccer players who are taller than 1.9m and playing for a team whose home stadium is located in Switzerland.“", "sz": 2.5, "i": 1, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 50.066, "y": 34.027, "w": 50.28, "h": 18.897, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "We ", "sz": 1.875}, {"t": "could solve this ", "sz": 1.875, "b": 1}, {"t": "and integrate the relevant sources automatically, if we had a ", "sz": 1.875}, {"t": "shared understanding ", "sz": 1.875, "b": 1}, {"t": "of:", "sz": 1.875}], "s": 2}, {"al": "l", "r": [{"t": "What a „soccer player“ is", "sz": 1.667}], "s": 3}, {"al": "l", "r": [{"t": "What a „Country“ is", "sz": 1.667}], "s": 4}, {"al": "l", "r": [{"t": "What „Switzerland“ is", "sz": 1.667}], "s": 5}, {"al": "l", "r": [{"t": "That „soccer players“ „play for“ a „team“", "sz": 1.667}], "s": 6}, {"al": "l", "r": [{"t": "That „stadiums“ „are located in“ „countries“", "sz": 1.667}], "s": 7}, {"al": "l", "r": [{"t": "That „soccer players“ „have“ a „height“", "sz": 1.667}], "s": 8}, {"al": "l", "r": [{"t": "That this „height“ can be compared to a number", "sz": 1.667}], "s": 9}, {"al": "l", "r": [{"t": "", "sz": 1.875}], "pl": 6.562, "in": -2.812}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
     {"k": "shape", "x": 4.643, "y": 40.62, "w": 38.305, "h": 10.63, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "<http://dbpedia.org/ontology/SoccerPlayer>", "sz": 1.25, "f": "mono"}], "s": 10}, {"al": "l", "r": [{"t": "<http://dbpedia.org/ontology/Country>", "sz": 1.25, "f": "mono"}], "s": 11}, {"al": "l", "r": [{"t": "<http://dbpedia.org/resource/Switzerland>", "sz": 1.25, "f": "mono"}], "s": 12}, {"al": "l", "r": [{"t": "<http://dbpedia.org/ontology/team> ", "sz": 1.25, "f": "mono"}], "s": 13}, {"al": "l", "r": [{"t": "<http://dbpedia.org/ontology/ground>", "sz": 1.25, "f": "mono"}], "s": 14}, {"al": "l", "r": [{"t": "<http://dbpedia.org/ontology/heightt>", "sz": 1.25, "f": "mono"}], "s": 15}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
-    {"k": "pic", "src": "img/7c43472fb0.jpg", "alt": "Cartoon drawing of a house, a tree, a door, shirt, pants and a dog, each labelled with its own name", "x": 70.525, "y": 1.236, "w": 17.781, "h": 27.755},
+    {"k": "pic", "src": "img/7c43472fb0.jpg", "alt": "Cartoon drawing of a house, a tree, a door, shirt, pants, and a dog, each labelled with its own name", "x": 70.525, "y": 1.236, "w": 17.781, "h": 27.755},
     {"k": "shape", "x": 37.612, "y": 40.232, "w": 14.763, "h": 0.881, "fx": true, "s": 10, "g": "straightConnector1", "ln": "#00802f", "lw": 0.104, "tail": "triangle"},
     {"k": "shape", "x": 33.825, "y": 41.807, "w": 18.55, "h": 1.078, "fx": true, "s": 11, "g": "straightConnector1", "ln": "#00802f", "lw": 0.104, "tail": "triangle"},
     {"k": "shape", "x": 36.451, "y": 43.704, "w": 15.925, "h": 0.517, "fx": true, "s": 12, "g": "straightConnector1", "ln": "#00802f", "lw": 0.104, "tail": "triangle"},
@@ -482,7 +481,7 @@
     {"k": "shape", "x": 64.679, "y": 38.341, "w": 12.401, "h": 2.691, "s": 10, "g": "flowChartAlternateProcess", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "n", "sz": 1.875, "c": "#ffffff"}, {"t": "2", "sz": 1.875, "bl": 1, "c": "#ffffff"}, {"t": " - n", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 79.309, "y": 41.032, "w": 12.401, "h": 2.691, "s": 12, "g": "flowChartAlternateProcess", "fill": "#73a5af", "ln": "#101a1c", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "2n", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 68.897, "y": 44.994, "w": 12.401, "h": 2.691, "s": 14, "g": "flowChartAlternateProcess", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "0", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "pic", "src": "img/d7fd59d232.png", "alt": "Diagram of an ontology of manufacturing concepts: agent, capability, tool, object, goal, task, state, hazard and constraint, linked to existing ontologies", "x": 65.914, "y": 9.094, "w": 29.926, "h": 27.279, "s": 6, "crop": [0.44684, 0.28181, 0.17516, 0.10565], "shadow": true},
+    {"k": "pic", "src": "img/d7fd59d232.png", "alt": "Diagram of an ontology of manufacturing concepts: agent, capability, tool, object, goal, task, state, hazard, and constraint, linked to existing ontologies", "x": 65.914, "y": 9.094, "w": 29.926, "h": 27.279, "s": 6, "crop": [0.44684, 0.28181, 0.17516, 0.10565], "shadow": true},
     {"k": "shape", "x": 4.365, "y": 53.249, "w": 60.826, "h": 1.244, "s": 6, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Shafei, Mayer, Hodges: Ensuring Workplace Safety in Goal-based Industrial Manufacturing Systems. Proc. Semantics 2018", "sz": 1.094, "c": "#808080"}]}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}}
    ]
   },
@@ -496,7 +495,7 @@
     {"k": "shape", "x": 2.108, "y": 46.359, "w": 31.489, "h": 3.281, "s": 6, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "https://www.gartner.com/smarterwithgartner/2-megatrends-dominate-the-gartner-hype-cycle-for-artificial-intelligence-2020/", "sz": 1.042, "c": "#808080", "href": "https://www.gartner.com/smarterwithgartner/2-megatrends-dominate-the-gartner-hype-cycle-for-artificial-intelligence-2020/"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "pic", "src": "img/42a7d91a0f.png", "alt": "Gartner Hype Cycle for Artificial Intelligence, 2020", "x": 2.905, "y": 19.608, "w": 30.692, "h": 25.951, "s": 6},
     {"k": "shape", "x": 8.978, "y": 25.05, "w": 4.643, "h": 1.012, "s": 6, "g": "ellipse", "ln": "#ff0000", "lw": 0.104},
-    {"k": "pic", "src": "img/ac4a72a1a6.png", "alt": "Note: schema.org vocabularies are developed by Google, Microsoft, Yahoo and Yandex in an open community process", "x": 4.521, "y": 12.206, "w": 92.133, "h": 5.224, "s": 2, "crop": [0.01953, 0.5735, 0.05902, 0.33362], "shadow": true},
+    {"k": "pic", "src": "img/ac4a72a1a6.png", "alt": "Note: schema.org vocabularies are developed by Google, Microsoft, Yahoo, and Yandex in an open community process", "x": 4.521, "y": 12.206, "w": 92.133, "h": 5.224, "s": 2, "crop": [0.01953, 0.5735, 0.05902, 0.33362], "shadow": true},
     {"k": "pic", "src": "img/da7a52004d.png", "alt": "Schema.org Attributes | Schema.org Structured Data | Go Live UK", "x": 37.176, "y": 18.881, "w": 20.252, "h": 15.785, "s": 3},
     {"k": "pic", "src": "img/fb5629c4e3.png", "alt": "Text box on schema markup for product pages in Google Shopping", "x": 44.781, "y": 32.651, "w": 29.373, "h": 12.102, "s": 4, "crop": [0.14563, 0.33788, 0.14563, 0.143]}
    ]
@@ -525,9 +524,9 @@
   },
   {
    "layout": "canvas",
-   "title": "I‘ll introduce a bit of this tooling…",
+   "title": "I’ll introduce a bit of this tooling…",
    "items": [
-    {"k": "pic", "src": "img/10a3f797b5.png", "alt": "Diagram of the Semantic Web layer cake: RDF for data interchange, RDFS taxonomies, OWL ontologies, RIF/SWRL rules, SPARQL querying, unifying logic and proof", "x": 47.41, "y": 16.901, "w": 46.679, "h": 28.292, "crop": [0.0, 0.23779, 0.10778, 0.24019]},
+    {"k": "pic", "src": "img/10a3f797b5.png", "alt": "Diagram of the Semantic Web layer cake: RDF for data interchange, RDFS taxonomies, OWL ontologies, RIF/SWRL rules, SPARQL querying, unifying logic, and proof", "x": 47.41, "y": 16.901, "w": 46.679, "h": 28.292, "crop": [0.0, 0.23779, 0.10778, 0.24019]},
     {"k": "shape", "x": 12.119, "y": 40.598, "w": 24.973, "h": 4.595, "s": 1, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Triples and RDF", "sz": 2.083, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 12.119, "y": 33.847, "w": 24.973, "h": 4.595, "s": 2, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "RDF Schema and OWL", "sz": 2.083, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 12.119, "y": 26.915, "w": 24.973, "h": 4.595, "s": 3, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "SPARQL", "sz": 2.083, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
@@ -779,7 +778,7 @@
     {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Ontologies are a means to make an ", "sz": 1.948}, {"t": "explicit commitment to shared meaning ", "sz": 1.948, "b": 1}, {"t": "among a community", "sz": 1.948}], "s": 1}, {"al": "l", "r": [{"t": "Model of (some aspects of) the world or a specific domain (“domain ontology”)", "sz": 1.667}], "pl": 2.812, "in": -2.812, "bu": "-", "s": 1}, {"al": "l", "r": [{"t": "Defines ", "sz": 1.667}, {"t": "vocabulary", "sz": 1.667, "b": 1}, {"t": " relevant to a domain with intended meaning of domain concepts", "sz": 1.667}], "pl": 2.812, "in": -2.812, "bu": "-", "s": 1}, {"al": "l", "r": [{"t": "Gives ", "sz": 1.667}, {"t": "taxonomy", "sz": 1.667, "b": 1}, {"t": " of concepts in the vocabulary (classes and their relationships)", "sz": 1.667}], "pl": 2.812, "in": -2.812, "bu": "-", "s": 1}, {"al": "l", "r": [{"t": "Gives ", "sz": 1.667}, {"t": "relationships", "sz": 1.667, "b": 1}, {"t": " among these concepts (triples)", "sz": 1.667}], "pl": 2.812, "in": -2.812, "bu": "-", "s": 1}, {"al": "l", "r": [{"t": "", "sz": 2.5}]}, {"al": "l", "r": [{"t": "Components", "sz": 2.917}], "s": 3}, {"al": "l", "r": [{"t": "Set of ", "sz": 1.667}, {"t": "axioms", "sz": 1.667, "b": 1}, {"t": " describing structure of the model (", "sz": 1.667}, {"t": "schema", "sz": 1.667, "b": 1}, {"t": ")", "sz": 1.667}], "pl": 2.812, "in": -2.812, "bu": "-", "s": 3}, {"al": "l", "r": [{"t": "Set of ", "sz": 1.667}, {"t": "facts", "sz": 1.667, "b": 1}, {"t": " describing some particular concrete situation (", "sz": 1.667}, {"t": "instances", "sz": 1.667, "b": 1}, {"t": ")", "sz": 1.667}], "pl": 2.812, "in": -2.812, "bu": "-", "s": 3}, {"al": "l", "r": [{"t": "(Set of rules for reasoning)", "sz": 1.667}], "pl": 2.812, "in": -2.812, "bu": "-", "s": 3}, {"al": "l", "r": [{"t": "", "sz": 2.5}]}, {"al": "l", "r": [{"t": "Trade-offs", "sz": 2.917}], "s": 4}, {"al": "l", "r": [{"t": "Deep ontologies ", "sz": 1.667, "b": 1}, {"t": "are highly expressive, but require considerable effort to build (e.g., sosa:Sensor)", "sz": 1.667}], "pl": 2.812, "in": -2.812, "bu": "-", "s": 4}, {"al": "l", "r": [{"t": "Shallow ontologies ", "sz": 1.667, "b": 1}, {"t": "are broad rather than deep and much less expressive (e.g., foaf:Person)", "sz": 1.667}], "pl": 2.812, "in": -2.812, "bu": "-", "s": 4}, {"al": "l", "r": [{"t": "Folksonomies", "sz": 1.667, "b": 1}, {"t": " are created by end users, largely ambiguous and processed best-effort / statistically (e.g., TikTok tags)", "sz": 1.667}], "pl": 2.812, "in": -2.812, "bu": "-", "s": 4}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 60.651, "y": 22.162, "w": 41.348, "h": 2.776, "s": 2, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "brick:Zone_Air_Temperature_Sensor", "sz": 1.667, "f": "mono"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 68.289, "y": 26.616, "w": 13.651, "h": 3.457, "s": 2, "g": "roundRect", "fill": "#73a5af", "ln": "#101a1c", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Example", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "pic", "src": "img/e106160f19.png", "alt": "Class hierarchy of the Brick ontology in an ontology browser, with classes such as Sensor, Location and Point", "x": 83.333, "y": 25.043, "w": 14.395, "h": 20.447, "s": 2}
+    {"k": "pic", "src": "img/e106160f19.png", "alt": "Class hierarchy of the Brick ontology in an ontology browser, with classes such as Sensor, Location, and Point", "x": 83.333, "y": 25.043, "w": 14.395, "h": 20.447, "s": 2}
    ]
   },
   {
@@ -789,7 +788,7 @@
     {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "Friend of a Friend ", "sz": 1.948}, {"t": "(", "sz": 1.458}, {"t": "http://xmlns.com/foaf/spec/", "sz": 1.458, "href": "http://xmlns.com/foaf/spec/"}, {"t": ")", "sz": 1.458}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "Dublin Core", "sz": 1.948}, {"t": " (", "sz": 1.458}, {"t": "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/", "sz": 1.458, "href": "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/"}, {"t": ")", "sz": 1.458}], "s": 1}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "Provenance Ontology ", "sz": 1.948}, {"t": "(PROV-O, ", "sz": 1.458}, {"t": "https://www.w3.org/TR/prov-o/", "sz": 1.458, "href": "https://www.w3.org/TR/prov-o/"}, {"t": ")", "sz": 1.458}], "s": 2}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "Semantic Sensor Network ", "sz": 1.948}, {"t": "(", "sz": 1.458}, {"t": "https://www.w3.org/TR/vocab-ssn/", "sz": 1.458, "href": "https://www.w3.org/TR/vocab-ssn/"}, {"t": ")", "sz": 1.458}], "s": 3}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "Thing Description Ontology ", "sz": 1.948}, {"t": "(", "sz": 1.458}, {"t": "https://www.w3.org/2019/wot/td", "sz": 1.458, "href": "https://www.w3.org/2019/wot/td"}, {"t": ")", "sz": 1.458}], "s": 4}, {"al": "l", "r": [{"t": "", "sz": 1.458}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "pic", "src": "img/c404629553.png", "alt": "Dublin Core - Wikipedia", "x": 54.425, "y": 16.249, "w": 7.275, "h": 7.275, "s": 1},
     {"k": "pic", "src": "img/386d169aca.png", "alt": "PDF] Dublin Core: Process and Principles | Semantic Scholar", "x": 63.294, "y": 10.237, "w": 35.159, "h": 21.218, "s": 1},
-    {"k": "pic", "src": "img/dff2818f97.png", "alt": "Diagram of the PROV-O ontology: entity, agent and activity with the relations was generated by, used, was attributed to and was associated with", "x": 56.754, "y": 34.598, "w": 30.377, "h": 17.531, "s": 2, "crop": [-7e-05, 0.1474, 0.34054, 0.17594]},
+    {"k": "pic", "src": "img/dff2818f97.png", "alt": "Diagram of the PROV-O ontology: entity, agent, and activity with the relations was generated by, used, was attributed to, and was associated with", "x": 56.754, "y": 34.598, "w": 30.377, "h": 17.531, "s": 2, "crop": [-7e-05, 0.1474, 0.34054, 0.17594]},
     {"k": "pic", "src": "img/5014867678.png", "alt": "FOAF (ontology) - Wikipedia", "x": 37.565, "y": 14.351, "w": 7.534, "h": 5.333}
    ],
    "id": "ontologies"
@@ -891,7 +890,7 @@
   },
   {
    "layout": "canvas",
-   "title": "Don‘t make the same mistake twice…",
+   "title": "Don’t make the same mistake twice…",
    "items": [
     {"k": "shape", "x": 22.696, "y": 36.284, "w": 9.255, "h": 9.255, "g": "ellipse", "fill": "#0a5f2d", "ln": "#0a5f2d", "lw": 0.104},
     {"k": "shape", "x": 29.574, "y": 38.876, "w": 0.323, "h": 1.973, "g": "path", "paths": [{"d": "M0.323 1.820 L0.275 1.881 L0.212 1.912 L0.000 1.973 L0.000 0.000 L0.275 0.083 L0.323 0.135 L0.323 1.820 Z", "fill": true, "stroke": true}], "fill": "#ffffff", "ln": "#000000", "lw": 0.0, "dash": "solid"},
@@ -1314,7 +1313,7 @@
     {"k": "shape", "x": 40.257, "y": 20.763, "w": 6.668, "h": 3.281, "g": "rect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "UDDI", "sz": 2.083, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375], "nw": 1}},
     {"k": "shape", "x": 27.26, "y": 25.489, "w": 8.298, "h": 3.281, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "look up", "sz": 2.083}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375], "nw": 1}},
     {"k": "shape", "x": 24.589, "y": 28.068, "w": 32.417, "h": 11.417, "rot": 332.47, "g": "arc", "adj": {"adj1": 11766219, "adj2": 20714455}, "ln": "#000000", "lw": 0.104, "tail": "triangle"},
-    {"k": "shape", "x": 2.4, "y": 50.188, "w": 33.64, "h": 4.671, "s": 1, "g": "roundRect", "adj": {"adj": 21303}, "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Don‘t compile ", "sz": 2.083, "b": 1, "c": "#ffffff"}, {"t": "against TDs, please!", "sz": 2.083, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 2.4, "y": 50.188, "w": 33.64, "h": 4.671, "s": 1, "g": "roundRect", "adj": {"adj": 21303}, "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Don’t compile ", "sz": 2.083, "b": 1, "c": "#ffffff"}, {"t": "against TDs, please!", "sz": 2.083, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 38.317, "y": 50.224, "w": 27.222, "h": 4.671, "s": 2, "g": "roundRect", "adj": {"adj": 21303}, "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Resolve them at ", "sz": 2.083, "c": "#ffffff"}, {"t": "Run Time", "sz": 2.083, "b": 1, "c": "#ffffff"}, {"t": "!", "sz": 2.083, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ],
    "refs": [
@@ -1405,7 +1404,7 @@
    "layout": "canvas",
    "title": "Of course not!",
    "items": [
-    {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "But please (please!) add „programming at the knowledge level“ to your engineer‘s toolbox!", "sz": 1.948, "b": 1}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "It will enable you to design systems that", "sz": 1.948}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "But please (please!) add „programming at the knowledge level“ to your engineer’s toolbox!", "sz": 1.948, "b": 1}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "It will enable you to design systems that", "sz": 1.948}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 0.0, "y": 0.476, "w": 0.001, "h": 2.797, "g": "rect", "fill": "#f5f5f5"},
     {"k": "shape", "x": 37.985, "y": 18.242, "w": 13.456, "h": 5.172, "g": "roundRect", "adj": {"adj": 5848}, "fill": "#00802f", "tx": {"p": [{"al": "c", "r": [{"t": "React to unexpected events", "sz": 1.458, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 52.143, "y": 18.238, "w": 13.456, "h": 5.172, "g": "roundRect", "adj": {"adj": 5848}, "fill": "#00802f", "tx": {"p": [{"al": "c", "r": [{"t": "Develop ", "sz": 1.458, "c": "#ffffff"}]}, {"al": "c", "r": [{"t": "new solutions", "sz": 1.458, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
@@ -1421,7 +1420,7 @@
    "layout": "canvas",
    "title": "Of course not!",
    "items": [
-    {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "But please (please!) add „programming at the knowledge level“ to your engineer‘s toolbox!", "sz": 1.948, "b": 1}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "It will enable you to design systems that", "sz": 1.948}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "But please (please!) add „programming at the knowledge level“ to your engineer’s toolbox!", "sz": 1.948, "b": 1}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "It will enable you to design systems that", "sz": 1.948}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 0.0, "y": 0.476, "w": 0.001, "h": 2.797, "g": "rect", "fill": "#f5f5f5"},
     {"k": "shape", "x": 37.985, "y": 18.242, "w": 13.456, "h": 5.172, "g": "roundRect", "adj": {"adj": 5848}, "fill": "#00802f", "tx": {"p": [{"al": "c", "r": [{"t": "React to unexpected events", "sz": 1.458, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 52.143, "y": 18.238, "w": 13.456, "h": 5.172, "g": "roundRect", "adj": {"adj": 5848}, "fill": "#00802f", "tx": {"p": [{"al": "c", "r": [{"t": "Develop ", "sz": 1.458, "c": "#ffffff"}]}, {"al": "c", "r": [{"t": "new solutions", "sz": 1.458, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
@@ -1439,7 +1438,7 @@
     {"k": "pic", "src": "img/3330768f53.png", "alt": "Medieval manuscript page with a drawing of a plant", "x": 25.521, "y": 15.555, "w": 17.42, "h": 26.899},
     {"k": "pic", "src": "img/130cbf7593.jpg", "alt": "Colourful hand-lettered sign: required reading, with a drawing of a book", "x": 44.46, "y": 21.093, "w": 18.03, "h": 17.704, "crop": [0.0, 0.0, 0.0, 0.08171]},
     {"k": "shape", "x": 4.377, "y": 45.242, "w": 26.937, "h": 10.183, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "AI and Law: How Automation is Changing the Law", "sz": 1.875, "b": 1}, {"t": ", Chapter 2.2 Guitton, Tamò-Larrieux, Mayer; Routledge, 2025", "sz": 1.875}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "pic", "src": "img/c6a761c0d0.png", "alt": "Cover of the book AI and Law: How Automation is Changing the Law by Aurelia Tamo-Larrieux, Clement Guitton and Simon Mayer", "x": 6.085, "y": 16.514, "w": 18.932, "h": 25.939, "shadow": true},
+    {"k": "pic", "src": "img/c6a761c0d0.png", "alt": "Cover of the book AI and Law: How Automation is Changing the Law by Aurelia Tamo-Larrieux, Clement Guitton, and Simon Mayer", "x": 6.085, "y": 16.514, "w": 18.932, "h": 25.939, "shadow": true},
     {"k": "pic", "src": "img/9f34b15617.png", "alt": "First page of a position paper: Autonomy in the Age of Knowledge Graphs, vision and challenges", "x": 65.229, "y": 12.121, "w": 31.425, "h": 32.001},
     {"k": "shape", "x": 65.229, "y": 45.312, "w": 32.891, "h": 2.145, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Autonomy in the Age of Knowledge Graphs: Vision and Challenges", "sz": 1.146}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 37.369, "y": 45.242, "w": 23.694, "h": 6.886, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "How to ", "sz": 2.5, "c": "#ffffff"}, {"t": "ride a bus", "sz": 2.5, "b": 1, "c": "#ffffff"}, {"t": "?", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
@@ -1485,7 +1484,7 @@
   },
   {
    "layout": "canvas",
-   "title": "Don‘t make the same mistake thrice…",
+   "title": "Don’t make the same mistake thrice…",
    "items": [
     {"k": "shape", "x": 22.696, "y": 36.284, "w": 9.255, "h": 9.255, "g": "ellipse", "fill": "#0a5f2d", "ln": "#0a5f2d", "lw": 0.104},
     {"k": "shape", "x": 29.574, "y": 38.876, "w": 0.323, "h": 1.973, "g": "path", "paths": [{"d": "M0.323 1.820 L0.275 1.881 L0.212 1.912 L0.000 1.973 L0.000 0.000 L0.275 0.083 L0.323 0.135 L0.323 1.820 Z", "fill": true, "stroke": true}], "fill": "#ffffff", "ln": "#000000", "lw": 0.0, "dash": "solid"},
@@ -1908,7 +1907,7 @@
     {"k": "shape", "x": 40.257, "y": 20.763, "w": 6.668, "h": 3.281, "g": "rect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "UDDI", "sz": 2.083, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375], "nw": 1}},
     {"k": "shape", "x": 27.26, "y": 25.489, "w": 8.298, "h": 3.281, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "look up", "sz": 2.083}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375], "nw": 1}},
     {"k": "shape", "x": 24.589, "y": 28.068, "w": 32.417, "h": 11.417, "rot": 332.47, "g": "arc", "adj": {"adj1": 11766219, "adj2": 20714455}, "ln": "#000000", "lw": 0.104, "tail": "triangle"},
-    {"k": "shape", "x": 2.4, "y": 50.188, "w": 38.056, "h": 4.671, "s": 1, "g": "roundRect", "adj": {"adj": 21303}, "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Don‘t compile ", "sz": 2.083, "b": 1, "c": "#ffffff"}, {"t": "against MCP IDLs, please!", "sz": 2.083, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 2.4, "y": 50.188, "w": 38.056, "h": 4.671, "s": 1, "g": "roundRect", "adj": {"adj": 21303}, "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Don’t compile ", "sz": 2.083, "b": 1, "c": "#ffffff"}, {"t": "against MCP IDLs, please!", "sz": 2.083, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 43.232, "y": 50.224, "w": 27.222, "h": 4.671, "s": 2, "g": "roundRect", "adj": {"adj": 21303}, "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Resolve them at ", "sz": 2.083, "c": "#ffffff"}, {"t": "Run Time", "sz": 2.083, "b": 1, "c": "#ffffff"}, {"t": "!", "sz": 2.083, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ],
    "refs": [

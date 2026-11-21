@@ -531,8 +531,7 @@
    "aside": {
     "image": "img/diver-ok.png",
     "alt": "A scuba diver under water makes the OK sign with one hand"
-   },
-   "notes": "Demo"
+   }
   },
   {
    "layout": "text",
@@ -666,8 +665,7 @@
      "Store R[0] into M[00]"
     ]
    ],
-   "after": "We address memory in bytes (0x100 = 256). A 9-bit instruction is rounded up to the next byte: 2 bytes.",
-   "notes": "Why 0x102? Because we count the bits in the instruction (9 bits) and round up to the next byte (2 bytes)."
+   "after": "We address memory in bytes (0x100 = 256). A 9-bit instruction is rounded up to the next byte: 2 bytes."
   },
   {
    "layout": "code",
@@ -693,8 +691,7 @@
    "callout": {
     "text": "What's the content of M[00]?"
    },
-   "code": "0x100  100001000        Insert 2 in M[00]\n0x102  100100001        Insert 8 in M[01]\n0x104  000000           Load M[00] into R[0]\n0x105  000011           Load M[01] into R[1]\n0x106  0100             Add into R[0]\n0x107  001000           Store R[0] into M[00]\n0x108  101000100000110  Jump to 0x106…",
-   "notes": "M[00]: 2 … 10 … 18 … 26 … 34 …"
+   "code": "0x100  100001000        Insert 2 in M[00]\n0x102  100100001        Insert 8 in M[01]\n0x104  000000           Load M[00] into R[0]\n0x105  000011           Load M[01] into R[1]\n0x106  0100             Add into R[0]\n0x107  001000           Store R[0] into M[00]\n0x108  101000100000110  Jump to 0x106…"
   },
   {
    "layout": "questions",
@@ -840,7 +837,6 @@
     "How many programs are there?",
     "How many problems are there?"
    ],
-   "notes": "This implies that there are (very many) problems for which no algorithm exists to solve them. Classic example: the Halting Problem.",
    "aside": {
     "image": "img/leibniz.jpg",
     "alt": "Painted portrait of Gottfried Wilhelm Leibniz with a long curly wig"
@@ -1035,8 +1031,7 @@
    "code": "// To emulate a \"timer\", we keep the\n// processor busy counting to 500000\nfor(timer = 0; timer < 500000; timer++) {\n  ;\n}\n\n// arm-none-eabi-objdump -D kernel.elf\n80dc:  e5932000  ldr   r2, [r3]\n80e0:  e30a311f  movw  r3, #41247  ; 0xa11f\n80e4:  e3403007  movt  r3, #7\n80e8:  e1520003  cmp   r2, r3",
    "points": [
     "Objdump shows us the machine code (so-called «assembly instructions») of the `kernel.elf` file"
-   ],
-   "notes": "movw and movt put 0x0007A11F = 499'999 into r3: the loop bound."
+   ]
   },
   {
    "layout": "study",

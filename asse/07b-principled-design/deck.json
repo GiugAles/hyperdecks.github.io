@@ -97,12 +97,11 @@
      "to": 9
     },
     {
-     "title": "Semantic Hypermedia, Agents and the Web of Things",
+     "title": "Semantic Hypermedia, Agents, and the Web of Things",
      "from": 10,
      "to": 11
     }
-   ],
-   "notes": "Assignments per session in the original plan: 14.09 Event Storming & Architecture Characteristics; 21.09 ADRs, Service Granularity, Spring 101; 28.09 Hexagonal Architecture, Domain Entity Testing; 05.10 Persistence, Integration Testing; 12.10 Interactions, Communication, System Testing; 19.10 Cleanup and Group Split; 09.11 Uniform Interaction; 16.11 Event-Driven Interaction; 23.11 Hypermedia Ecosystems; 30.11 Decoupling through Semantic Hypermedia; 07.12 Agents and the Web of Things. PITAS PlugFest: 24.11, 5 to 8pm."
+   ]
   },
   {
    "layout": "canvas",
@@ -206,7 +205,7 @@
    "layout": "canvas",
    "title": "Case Study 1: Creative Play",
    "items": [
-    {"k": "shape", "x": 3.924, "y": 12.501, "w": 77.16, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Ole Christiansen‘s „Leg godt“ („Play Well“) in 1932", "sz": 2.083}]}, {"al": "l", "r": [{"t": "Godtfred Christiansen‘s „system for creative play“ in 1958", "sz": 2.083}]}, {"al": "l", "r": [{"t": "Derivative of Kiddicraft play system", "sz": 2.083}]}, {"al": "l", "r": [{"t": "Lego was designed ", "sz": 2.083}, {"t": "with the system in mind", "sz": 2.083, "b": 1}]}, {"al": "l", "r": [{"t": "", "sz": 2.917}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 2.917}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "Main desired (non-functional) characteristics: ", "sz": 2.083}, {"t": "Many recombinations in sturdy designs!", "sz": 2.083, "b": 1}], "pl": 0.0, "in": 0.0, "s": 1}, {"al": "l", "r": [{"t": "", "sz": 1.667}]}, {"al": "l", "r": [{"t": "", "sz": 1.667}]}, {"al": "l", "r": [{"t": "Problem #1: ", "sz": 2.083}, {"t": "Light but durable materials", "sz": 2.083, "b": 1}, {"t": "! ", "sz": 2.083}], "s": 2}, {"al": "l", "r": [{"t": "Hollow bricks are desired", "sz": 1.667}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 2}, {"al": "l", "r": [{"t": "However, especially the notches need to be resistant to impact and heat", "sz": 1.667}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 2}, {"al": "l", "r": [{"t": "Solution: Injection-molded acrylonitrile butadiene styrene (ABS)", "sz": 1.667}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 2}, {"al": "l", "r": [{"t": "", "sz": 1.667}], "pl": 2.2}, {"al": "l", "r": [{"t": "Problem #2:", "sz": 2.083}, {"t": " Interlocks need to be sturdier", "sz": 2.083, "b": 1}, {"t": " than for previous blocks! ", "sz": 2.083}], "s": 3}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 3.924, "y": 12.501, "w": 77.16, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Ole Christiansen’s „Leg godt“ („Play Well“) in 1932", "sz": 2.083}]}, {"al": "l", "r": [{"t": "Godtfred Christiansen’s „system for creative play“ in 1958", "sz": 2.083}]}, {"al": "l", "r": [{"t": "Derivative of Kiddicraft play system", "sz": 2.083}]}, {"al": "l", "r": [{"t": "Lego was designed ", "sz": 2.083}, {"t": "with the system in mind", "sz": 2.083, "b": 1}]}, {"al": "l", "r": [{"t": "", "sz": 2.917}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 2.917}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "Main desired (non-functional) characteristics: ", "sz": 2.083}, {"t": "Many recombinations in sturdy designs!", "sz": 2.083, "b": 1}], "pl": 0.0, "in": 0.0, "s": 1}, {"al": "l", "r": [{"t": "", "sz": 1.667}]}, {"al": "l", "r": [{"t": "", "sz": 1.667}]}, {"al": "l", "r": [{"t": "Problem #1: ", "sz": 2.083}, {"t": "Light but durable materials", "sz": 2.083, "b": 1}, {"t": "! ", "sz": 2.083}], "s": 2}, {"al": "l", "r": [{"t": "Hollow bricks are desired", "sz": 1.667}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 2}, {"al": "l", "r": [{"t": "However, especially the notches need to be resistant to impact and heat", "sz": 1.667}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 2}, {"al": "l", "r": [{"t": "Solution: Injection-molded acrylonitrile butadiene styrene (ABS)", "sz": 1.667}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 2}, {"al": "l", "r": [{"t": "", "sz": 1.667}], "pl": 2.2}, {"al": "l", "r": [{"t": "Problem #2:", "sz": 2.083}, {"t": " Interlocks need to be sturdier", "sz": 2.083, "b": 1}, {"t": " than for previous blocks! ", "sz": 2.083}], "s": 3}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "pic", "src": "img/3d3dd0b2b1.gif", "alt": "Automatic Binding Brick | Brickipedia | Fandom", "x": 80.586, "y": 0.576, "w": 13.318, "h": 38.203, "s": 1},
     {"k": "pic", "src": "img/368b71b1d6.jpg", "alt": "ABS Injection Mould, Acrylonitrile Butadiene Styrene Injection Mold,  Acrylonitrile Butadiene Styrene Injection Mould, एबीएस इंजेक्शन मोल्ड in  Jahangirpuri, Delhi , Thermoplastic Technologies | ID: 4277348291", "x": 67.184, "y": 40.437, "w": 18.5, "h": 11.692, "s": 3},
     {"k": "pic", "src": "img/749f6610d9.jpg", "alt": "The first interlocking toy bricks in pastel and primary colours with their cardboard box", "x": 55.984, "y": 10.429, "w": 14.706, "h": 14.706},
@@ -217,7 +216,7 @@
    "layout": "canvas",
    "title": "Case Study 1: Creative Play",
    "items": [
-    {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "Christiansen‘s „Automatic Binding Brick“ (1958; later: Lego brick)", "sz": 2.083}], "pl": 0.0, "in": 0.0, "s": 4}, {"al": "l", "r": [{"t": "The relevant difference to competitors is on the system level – it is the interfaces!", "sz": 2.083, "b": 1}], "pl": 0.0, "in": 0.0, "s": 5}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "Christiansen’s „Automatic Binding Brick“ (1958; later: Lego brick)", "sz": 2.083}], "pl": 0.0, "in": 0.0, "s": 4}, {"al": "l", "r": [{"t": "The relevant difference to competitors is on the system level – it is the interfaces!", "sz": 2.083, "b": 1}], "pl": 0.0, "in": 0.0, "s": 5}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "pic", "src": "img/4ac85d4ee1.png", "alt": "Patent drawing Fig. 8 of a toy brick with two large studs and numbered parts", "x": 73.031, "y": 32.872, "w": 24.765, "h": 17.319, "s": 3, "crop": [0.43846, 0.6995, 0.31957, 0.06951]},
     {"k": "pic", "src": "img/d465c2c2d0.png", "alt": "Excerpt of the Lego patent text about toy building elements and coupling means", "x": 1.308, "y": 28.121, "w": 37.009, "h": 14.082, "s": 1, "crop": [0.36925, 0.72938, 0.35385, 0.12679]},
     {"k": "shape", "x": 2.468, "y": 29.217, "w": 35.577, "h": 11.51, "s": 1, "g": "rect", "ln": "#e1d7c3", "lw": 0.417},
@@ -316,7 +315,7 @@
     {"k": "pic", "src": "img/d00c0079db.jpg", "alt": "ReimsCathedral0116.jpg", "x": 41.85, "y": 29.043, "w": 35.263, "h": 22.365, "s": 1},
     {"k": "shape", "x": 45.386, "y": 17.133, "w": 36.023, "h": 6.809, "s": 3, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "What do you think ", "sz": 2.5, "c": "#ffffff"}, {"t": "why", "sz": 2.5, "b": 1, "c": "#ffffff"}, {"t": " that is?", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 52.024, "y": 4.114, "w": 38.542, "h": 9.128, "s": 2, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "What are the ", "sz": 2.5, "c": "#ffffff"}, {"t": "defining constraints ", "sz": 2.5, "b": 1, "c": "#ffffff"}, {"t": "of the Gothic Architectural Style?", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 38.195, "y": 27.317, "w": 32.697, "h": 6.809, "s": 4, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "What‘s the ", "sz": 2.5, "c": "#ffffff"}, {"t": "point in case ", "sz": 2.5, "b": 1, "c": "#ffffff"}, {"t": "of designing in this way?", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
+    {"k": "shape", "x": 38.195, "y": 27.317, "w": 32.697, "h": 6.809, "s": 4, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "What’s the ", "sz": 2.5, "c": "#ffffff"}, {"t": "point in case ", "sz": 2.5, "b": 1, "c": "#ffffff"}, {"t": "of designing in this way?", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ],
    "source": "[Notre-Dame de Reims, Wikimedia Commons](https://commons.wikimedia.org/wiki/Cath%C3%A9drale_Notre-Dame_de_Reims)"
   },
@@ -329,7 +328,7 @@
     {"k": "pic", "src": "img/d00c0079db.jpg", "alt": "ReimsCathedral0116.jpg", "x": 41.85, "y": 29.043, "w": 35.263, "h": 22.365},
     {"k": "shape", "x": 45.386, "y": 17.133, "w": 36.023, "h": 6.809, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "What do you think ", "sz": 2.5, "c": "#ffffff"}, {"t": "why", "sz": 2.5, "b": 1, "c": "#ffffff"}, {"t": " that is?", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 52.024, "y": 4.114, "w": 38.542, "h": 9.128, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "What are the ", "sz": 2.5, "c": "#ffffff"}, {"t": "defining constraints ", "sz": 2.5, "b": 1, "c": "#ffffff"}, {"t": "of the Gothic Architectural Style?", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 38.195, "y": 27.317, "w": 32.697, "h": 6.809, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "What‘s the ", "sz": 2.5, "c": "#ffffff"}, {"t": "point in case ", "sz": 2.5, "b": 1, "c": "#ffffff"}, {"t": "of designing in this way?", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 38.195, "y": 27.317, "w": 32.697, "h": 6.809, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "What’s the ", "sz": 2.5, "c": "#ffffff"}, {"t": "point in case ", "sz": 2.5, "b": 1, "c": "#ffffff"}, {"t": "of designing in this way?", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "table", "x": 5.847, "y": 15.35, "w": 19.135, "h": 34.84, "cols": [19.135], "rows": [{"h": 2.68, "cells": [{"fill": "head", "tx": {"p": [{"al": "c", "r": [{"t": "Non-Functional Profile", "sz": 1.458, "b": 1}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}]}, {"h": 2.68, "cells": [{"fill": "a", "tx": {"p": [{"al": "c", "r": [{"t": "Low Cost", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}]}, {"h": 2.68, "cells": [{"fill": "b", "tx": {"p": [{"al": "c", "r": [{"t": "Lightweight Construction", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}]}, {"h": 2.68, "cells": [{"fill": "a", "tx": {"p": [{"al": "c", "r": [{"t": "Bright Spaces", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}]}, {"h": 2.68, "cells": [{"fill": "b", "tx": {"p": [{"al": "c", "r": [{"t": "Tall Structures", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}]}, {"h": 2.68, "cells": [{"fill": "a", "tx": {"p": [{"al": "c", "r": [{"t": "Rapid Construction", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}]}, {"h": 2.68, "cells": [{"fill": "b", "tx": {"p": [{"al": "c", "r": [{"t": "Aesthetics", "sz": 1.458, "c": "#000000"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}]}, {"h": 2.68, "cells": [{"fill": "a", "tx": {"p": [{"al": "c", "r": [{"t": "…", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}]}, {"h": 2.68, "cells": [{"fill": "b", "tx": {"p": [{"al": "c", "r": [{"t": "…", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}]}, {"h": 2.68, "cells": [{"fill": "a", "tx": {"p": [{"al": "c", "r": [{"t": "…", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}]}, {"h": 2.68, "cells": [{"fill": "b", "tx": {"p": [{"al": "c", "r": [{"t": "…", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}]}, {"h": 2.68, "cells": [{"fill": "a", "tx": {"p": [{"al": "c", "r": [{"t": "…", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}]}, {"h": 2.68, "cells": [{"fill": "b", "tx": {"p": [{"al": "c", "r": [{"t": "…", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}]}]}
    ],
    "source": "[Notre-Dame de Reims, Wikimedia Commons](https://commons.wikimedia.org/wiki/Cath%C3%A9drale_Notre-Dame_de_Reims)"
@@ -410,7 +409,7 @@
     {"k": "shape", "x": 5.119, "y": 18.862, "w": 50.799, "h": 5.807, "g": "rect", "fill": "#000000", "ln": "#0a5f2d", "lw": 0.104},
     {"k": "shape", "x": 5.119, "y": 19.867, "w": 54.33, "h": 6.058, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "SMayer@NB-21280 ", "sz": 1.458, "c": "#7db700"}, {"t": "MINGW64", "sz": 1.458, "c": "#b100a4"}, {"t": " .../Teaching/ASSE/FS22/ (master)", "sz": 1.458, "c": "#7db700"}]}, {"al": "l", "r": [{"t": "$ ls –l | grep key | less", "sz": 1.458, "c": "#ffffff"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 6.304, "y": 28.735, "w": 38.618, "h": 2.443, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "process1 | process2 | process3", "sz": 1.875, "f": "mono"}]}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
-    {"k": "pic", "src": "img/41292fdb31.png", "alt": "Diagram of Unix pipes: a keyboard feeds Program 1, whose output goes through Program 2 and Program 3 to the display, with stdin, stdout and stderr streams", "x": 63.486, "y": 6.077, "w": 31.395, "h": 29.826},
+    {"k": "pic", "src": "img/41292fdb31.png", "alt": "Diagram of Unix pipes: a keyboard feeds Program 1, whose output goes through Program 2 and Program 3 to the display, with stdin, stdout, and stderr streams", "x": 63.486, "y": 6.077, "w": 31.395, "h": 29.826},
     {"k": "shape", "x": 48.721, "y": 41.0, "w": 36.023, "h": 6.4, "s": 2, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "And what are the ", "sz": 2.5, "c": "#ffffff"}, {"t": "trade-offs", "sz": 2.5, "b": 1, "c": "#ffffff"}, {"t": "?", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 61.945, "y": 47.9, "w": 29.479, "h": 5.4, "s": 3, "g": "roundRect", "fill": "#ffffff", "ln": "#00802f", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Low design freedom ", "sz": 1.458, "b": 1, "c": "#000000"}, {"t": "of individual elements", "sz": 1.458, "c": "#000000"}, {"t": ". Optimization across processes ", "sz": 1.458, "b": 1, "c": "#000000"}, {"t": "is impossible without sacrificing the uniform interface", "sz": 1.458, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ]
@@ -434,8 +433,8 @@
     {"k": "shape", "x": 7.322, "y": 38.455, "w": 8.143, "h": 4.262, "g": "roundRect", "adj": {"adj": 7307}, "fill": "#eb6969", "ln": "#eb6969", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "bits", "sz": 1.458, "c": "#000000"}], "ls": 1.0}], "a": "m", "i": [1.181, 0.591, 0.591, 0.591]}},
     {"k": "shape", "x": 16.493, "y": 38.455, "w": 11.758, "h": 4.262, "g": "roundRect", "adj": {"adj": 7307}, "fill": "#fff04b", "ln": "#fff04b", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "physical", "sz": 2.083, "c": "#000000"}], "ls": 1.0}], "a": "m", "i": [1.181, 0.591, 0.591, 0.591]}},
     {"k": "table", "x": 80.38, "y": 0.39, "w": 19.135, "h": 34.84, "cols": [19.135], "rows": [{"h": 2.68, "cells": [{"fill": "head", "tx": {"p": [{"al": "c", "r": [{"t": "Non-Functional Profile", "sz": 1.458, "b": 1}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}]}, {"h": 2.68, "cells": [{"fill": "a", "tx": {"p": [{"al": "c", "r": [{"t": "Reliability", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}]}, {"h": 2.68, "cells": [{"fill": "b", "tx": {"p": [{"al": "c", "r": [{"t": "Responsiveness", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}]}, {"h": 2.68, "cells": [{"fill": "a", "tx": {"p": [{"al": "c", "r": [{"t": "Availability", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}]}, {"h": 2.68, "cells": [{"fill": "b", "tx": {"p": [{"al": "c", "r": [{"t": "Fault Tolerance", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}]}, {"h": 2.68, "cells": [{"fill": "a", "tx": {"p": [{"al": "c", "r": [{"t": "Scalability", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}]}, {"h": 2.68, "cells": [{"fill": "b", "tx": {"p": [{"al": "c", "r": [{"t": "Elasticity", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}]}, {"h": 2.68, "cells": [{"fill": "a", "tx": {"p": [{"al": "c", "r": [{"t": "Data integrity", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}]}, {"h": 2.68, "cells": [{"fill": "b", "tx": {"p": [{"al": "c", "r": [{"t": "Data consistency", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}]}, {"h": 2.68, "cells": [{"fill": "a", "tx": {"p": [{"al": "c", "r": [{"t": "Adaptability", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}]}, {"h": 2.68, "cells": [{"fill": "b", "tx": {"p": [{"al": "c", "r": [{"t": "Extensibility", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}]}, {"h": 2.68, "cells": [{"fill": "a", "tx": {"p": [{"al": "c", "r": [{"t": "Testability", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}]}, {"h": 2.68, "cells": [{"fill": "b", "tx": {"p": [{"al": "c", "r": [{"t": "Deployability", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}]}]},
-    {"k": "shape", "x": 35.487, "y": 16.068, "w": 34.899, "h": 20.95, "s": 1, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Individual layers ", "sz": 2.083, "b": 1}, {"t": "should be exchangeable / reusable / recombinable", "sz": 2.083}]}, {"al": "l", "r": [{"t": "", "sz": 2.083}]}, {"al": "l", "r": [{"t": "Applications should ", "sz": 2.083}, {"t": "not depend on physical carrier medium", "sz": 2.083, "b": 1}]}, {"al": "l", "r": [{"t": "", "sz": 2.083}]}, {"al": "l", "r": [{"t": "Core intent was to ", "sz": 2.083}, {"t": "circumvent AT&T‘s monopoly ", "sz": 2.083, "b": 1}, {"t": "on telephone cables", "sz": 2.083}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 45.366, "y": 46.3, "w": 42.48, "h": 6.4, "s": 6, "g": "roundRect", "fill": "#ffffff", "ln": "#00802f", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Optimization across layers ", "sz": 1.667, "b": 1, "c": "#000000"}, {"t": "is impossible without sacrificing separation of concerns. Points in case: QUIC, CoAP, BLE !", "sz": 1.667, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
+    {"k": "shape", "x": 35.487, "y": 16.068, "w": 34.899, "h": 20.95, "s": 1, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Individual layers ", "sz": 2.083, "b": 1}, {"t": "should be exchangeable / reusable / recombinable", "sz": 2.083}]}, {"al": "l", "r": [{"t": "", "sz": 2.083}]}, {"al": "l", "r": [{"t": "Applications should ", "sz": 2.083}, {"t": "not depend on physical carrier medium", "sz": 2.083, "b": 1}]}, {"al": "l", "r": [{"t": "", "sz": 2.083}]}, {"al": "l", "r": [{"t": "Core intent was to ", "sz": 2.083}, {"t": "circumvent AT&T’s monopoly ", "sz": 2.083, "b": 1}, {"t": "on telephone cables", "sz": 2.083}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 45.366, "y": 46.3, "w": 42.48, "h": 6.4, "s": 6, "g": "roundRect", "fill": "#ffffff", "ln": "#00802f", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Optimization across layers ", "sz": 1.667, "b": 1, "c": "#000000"}, {"t": "is impossible without sacrificing separation of concerns. Points in case: QUIC, CoAP, BLE!", "sz": 1.667, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ],
    "id": "networking",
    "refs": [
@@ -497,7 +496,7 @@
    "layout": "canvas",
    "title": "No coincidence!",
    "items": [
-    {"k": "shape", "x": 20.707, "y": 19.581, "w": 59.256, "h": 18.484, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Let‘s look at one of the mo", "sz": 2.5, "c": "#ffffff"}, {"t": "st interoperable technical system ", "sz": 2.5, "b": 1, "c": "#ffffff"}, {"t": "we know today… ", "sz": 2.5, "c": "#ffffff"}]}, {"al": "c", "r": [{"t": "", "sz": 2.5}]}, {"al": "c", "r": [{"t": "…which is, at the same time, the ", "sz": 2.5, "c": "#ffffff"}, {"t": "most prominent information system", "sz": 2.5, "b": 1, "c": "#ffffff"}, {"t": " globally.", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
+    {"k": "shape", "x": 20.707, "y": 19.581, "w": 59.256, "h": 18.484, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Let’s look at one of the mo", "sz": 2.5, "c": "#ffffff"}, {"t": "st interoperable technical system ", "sz": 2.5, "b": 1, "c": "#ffffff"}, {"t": "we know today… ", "sz": 2.5, "c": "#ffffff"}]}, {"al": "c", "r": [{"t": "", "sz": 2.5}]}, {"al": "c", "r": [{"t": "…which is, at the same time, the ", "sz": 2.5, "c": "#ffffff"}, {"t": "most prominent information system", "sz": 2.5, "b": 1, "c": "#ffffff"}, {"t": " globally.", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ]
   },
   {
@@ -540,7 +539,6 @@
     {"k": "pic", "src": "img/3b72237199.jpg", "alt": "World Wide Web born at CERN 25 years ago | CERN", "x": 57.086, "y": 27.531, "w": 36.233, "h": 23.691, "s": 2, "crop": [0.06997, 0.04052, 0.05711, 0.27034], "shadow": true},
     {"k": "pic", "src": "img/c759c8bc71.png", "alt": "Screen Shot 2019-04-29 at 3.02.45 PM.png", "x": 8.535, "y": 27.531, "w": 42.448, "h": 23.715, "s": 1, "shadow": true}
    ],
-   "notes": "Mike Sendall",
    "source": "[http://info.cern.ch/Proposal.html](http://info.cern.ch/Proposal.html)"
   },
   {
@@ -567,12 +565,11 @@
     {"k": "pic", "src": "img/41fd29161d.png", "alt": "List of five hypertext research articles from 1991 in a digital library", "x": 55.777, "y": 6.646, "w": 41.681, "h": 40.968, "s": 3, "crop": [0.40001, 0.06824, 0.30771, 0.53959]},
     {"k": "pic", "src": "img/5e45dd7386.png", "alt": "List of four more hypertext research articles from 1991 in a digital library", "x": 55.777, "y": 5.22, "w": 42.702, "h": 34.747, "s": 3, "crop": [0.40001, 0.185, 0.30001, 0.48179]}
    ],
-   "notes": "Mike Sendall",
    "source": "[W3C: How It All Started](https://www.w3.org/2004/Talks/w3c10-HowItAllStarted/all.html) · [Hypertext ’91 proceedings](https://dl.acm.org/doi/proceedings/10.1145/122974#secAbs)"
   },
   {
    "layout": "canvas",
-   "title": "It‘s again about Trade-offs!",
+   "title": "It’s again about Trade-offs!",
    "items": [
     {"k": "pic", "src": "img/957fe688a2.png", "alt": "Waves on a beach at sunset, with the caption In 1989, Tim Berners-Lee", "x": 7.34, "y": 13.058, "w": 57.83, "h": 32.5, "shadow": true, "video": "media/af35761a2c.web.mp4"},
     {"k": "shape", "x": 57.761, "y": 8.133, "w": 40.157, "h": 3.786, "s": 1, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "Emphasis on ", "sz": 1.25, "c": "#000000"}, {"t": "R", "sz": 1.25, "b": 1}, {"t": "ecoverability, Availability, Reliability, Integrity", "sz": 1.25, "b": 1, "c": "#000000"}]}, {"al": "r", "r": [{"t": "Good reasons to object to “individual links are allowed to break”!", "sz": 1.25}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
@@ -582,7 +579,7 @@
   },
   {
    "layout": "canvas",
-   "title": "It‘s again about Trade-offs!",
+   "title": "It’s again about Trade-offs!",
    "items": [
     {"k": "pic", "src": "img/957fe688a2.png", "alt": "Waves on a beach at sunset, with the caption In 1989, Tim Berners-Lee", "x": 7.34, "y": 13.058, "w": 57.83, "h": 32.5, "shadow": true, "video": "media/af35761a2c.web.mp4"},
     {"k": "shape", "x": 57.761, "y": 8.133, "w": 40.157, "h": 3.786, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "Emphasis on ", "sz": 1.25, "c": "#000000"}, {"t": "R", "sz": 1.25, "b": 1}, {"t": "ecoverability, Availability, Reliability, Integrity", "sz": 1.25, "b": 1, "c": "#000000"}]}, {"al": "r", "r": [{"t": "Good reasons to object to “individual links are allowed to break”!", "sz": 1.25}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
@@ -594,7 +591,7 @@
   },
   {
    "layout": "canvas",
-   "title": "It‘s again about Trade-offs!",
+   "title": "It’s again about Trade-offs!",
    "items": [
     {"k": "pic", "src": "img/69fc86e1e4.png", "alt": "Error page of the University of St.Gallen website: Page not found", "x": 3.346, "y": 24.5, "w": 35.131, "h": 19.973, "s": 1, "crop": [0.58161, 0.0434, 0.05718, 0.49396], "shadow": true},
     {"k": "pic", "src": "img/7fcc248bab.jpg", "alt": "Wie man den 404 Fehler auf einer WordPress Seite repariert", "x": 10.728, "y": 31.068, "w": 35.434, "h": 21.824, "s": 2, "shadow": true},
@@ -605,12 +602,11 @@
     {"k": "shape", "x": 57.761, "y": 10.583, "w": 40.157, "h": 2.272, "s": 4, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "Emphasis: ", "sz": 1.25, "c": "#000000"}, {"t": "R", "sz": 1.25}, {"t": "ecoverability, Availability, Reliability, Integrity", "sz": 1.25, "c": "#000000"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 54.909, "y": 31.514, "w": 42.924, "h": 18.258, "s": 5, "g": "rect", "fill": "#ffffff", "ln": "#0a5f2d", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "\"Today's popular software simulates paper. The World Wide Web (another imitation of paper) ", "sz": 2.083, "c": "#000000"}, {"t": "trivialises our original hypertext model with one-way ever-breaking links and no management of version or contents", "sz": 2.083, "b": 1, "c": "#000000"}, {"t": ".\" ", "sz": 2.083, "c": "#000000"}]}, {"al": "l", "r": [{"t": "", "sz": 2.083}]}, {"al": "r", "r": [{"t": "Project Xanadu", "sz": 1.458, "c": "#000000"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 50.0, "y": 1.719, "w": 0.0, "h": 52.676, "g": "line", "ln": "#eb6969", "lw": 0.104}
-   ],
-   "notes": "Mike Sendall"
+   ]
   },
   {
    "layout": "canvas",
-   "title": "It‘s again about Trade-offs!",
+   "title": "It’s again about Trade-offs!",
    "items": [
     {"k": "pic", "src": "img/24f80fc24c.png", "alt": "Graphic on a transparent background", "x": 3.919, "y": 12.969, "w": 63.689, "h": 35.825, "shadow": true, "video": "media/5659e37484.web.mp4"},
     {"k": "pic", "src": "img/50733416a9.png", "alt": "Wikipedia biography of Theodor Holm Nelson, who coined the terms hypertext and hypermedia", "x": 69.5, "y": 39.3, "w": 27.3, "h": 12.0},
@@ -672,7 +668,7 @@
    "title": "Project Xanadu",
    "items": [
     {"k": "pic", "src": "img/c6cb104f4e.png", "alt": "The Transcopyright License: about the license, allowing parties to republish content indirectly", "x": 4.734, "y": 12.606, "w": 38.098, "h": 20.572, "crop": [0.11302, 0.17422, 0.1331, 0.10212], "shadow": true},
-    {"k": "pic", "src": "img/dbaf7996c8.png", "alt": "Terms of the transcopyright license: any party may download, keep and republish content, provided that they obtain it from the designated server", "x": 15.534, "y": 31.697, "w": 44.794, "h": 22.397, "crop": [0.15154, 0.26901, 0.16335, 0.12201], "shadow": true},
+    {"k": "pic", "src": "img/dbaf7996c8.png", "alt": "Terms of the transcopyright license: any party may download, keep, and republish content, provided that they obtain it from the designated server", "x": 15.534, "y": 31.697, "w": 44.794, "h": 22.397, "crop": [0.15154, 0.26901, 0.16335, 0.12201], "shadow": true},
     {"k": "pic", "src": "img/d7d9ab710f.png", "alt": "Blog post: CJEU, posting a hyperlink to infringing content, not a communication to the public, unless...", "x": 48.786, "y": 5.252, "w": 48.458, "h": 24.62, "crop": [0.13382, 0.26901, 0.13381, 0.06951], "shadow": true},
     {"k": "shape", "x": 62.069, "y": 38.683, "w": 29.466, "h": 7.086, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "This issue was ", "sz": 1.875}, {"t": "highly debated ", "sz": 1.875, "b": 1}, {"t": "in the run-up to the ", "sz": 1.875}, {"t": "EU Copyright Directive", "sz": 1.875, "b": 1}, {"t": " as recently as 2016!", "sz": 1.875}]}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}}
    ],
@@ -904,7 +900,7 @@
    "title": "Client-Server",
    "items": [
     {"k": "shape", "x": 3.924, "y": 12.501, "w": 71.517, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "REST Client-Server: Hybrid Style", "sz": 2.083}], "pl": 1.055, "in": 0.0, "s": 1}, {"al": "l", "r": [{"t": "Shared understanding of data types with metadata but ", "sz": 1.667}, {"t": "limited to a standardized interface", "sz": 1.667, "b": 1}], "pl": 3.398, "in": -2.343, "bu": "-", "s": 2}, {"al": "l", "r": [{"t": "Approximation of Mobile Object Style: Interaction by ", "sz": 1.667}, {"t": "transferring representations ", "sz": 1.667, "b": 1}, {"t": "according to an evolving set of dynamically selected standard data types", "sz": 1.667}], "pl": 3.398, "in": -2.343, "bu": "-", "s": 3}, {"al": "l", "r": [{"t": "Gains ", "sz": 1.667}, {"t": "separation of concerns ", "sz": 1.667, "b": 1}, {"t": "(e.g., UI vs. Data Storage) between ", "sz": 1.667}, {"t": "clients", "sz": 1.667, "b": 1}, {"t": " (that send requests) and ", "sz": 1.667}, {"t": "servers", "sz": 1.667, "b": 1}, {"t": " (that receive requests and may send responses)", "sz": 1.667}], "pl": 3.398, "in": -2.343, "bu": "-", "s": 4}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 3.867}, {"al": "l", "r": [{"t": "Non-functional benefits", "sz": 2.083}], "pl": 0.0, "in": 0.0, "s": 7}, {"al": "l", "r": [{"t": "\t+ evolvability", "sz": 1.667, "b": 1}, {"t": " (independent evolution of components through SoC)", "sz": 1.667}], "pl": 0.0, "in": 0.0, "s": 9}, {"al": "l", "r": [{"t": "\t", "sz": 2.083, "b": 1}, {"t": "+ scalability", "sz": 1.667, "b": 1}, {"t": " (on the server side)", "sz": 1.667}], "pl": 0.0, "in": 0.0, "s": 10}, {"al": "l", "r": [{"t": "\t+ portability", "sz": 1.667, "b": 1}, {"t": " (of user interfaces: same user interface across platforms)", "sz": 1.667}], "s": 11}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "Non-functional drawbacks", "sz": 2.083}], "pl": 0.0, "in": 0.0, "s": 8}, {"al": "l", "r": [{"t": "\t", "sz": 2.083, "b": 1}, {"t": "- performance ", "sz": 1.667, "b": 1}, {"t": "(cannot optimize across client and server)", "sz": 1.667}], "pl": 0.0, "in": 0.0, "s": 12}, {"al": "l", "r": [{"t": "\t- responsiveness ", "sz": 1.667, "b": 1}, {"t": "(cannot optimize across client and server)", "sz": 1.667}], "pl": 0.0, "in": 0.0, "s": 13}, {"al": "l", "r": [{"t": "\t- behavioral", "sz": 1.667, "b": 1}, {"t": " ", "sz": 1.667}, {"t": "consistency", "sz": 1.667, "b": 1}, {"t": " (different clients may behave differently)", "sz": 1.667}], "s": 14}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 48.252, "y": 9.476, "w": 20.669, "h": 3.693, "s": 5, "g": "wedgeEllipseCallout", "adj": {"adj1": 23147, "adj2": 96231}, "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "What‘s meant here?", "sz": 1.25, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 48.252, "y": 9.476, "w": 20.669, "h": 3.693, "s": 5, "g": "wedgeEllipseCallout", "adj": {"adj1": 23147, "adj2": 96231}, "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "What’s meant here?", "sz": 1.25, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 24.069, "y": 3.811, "w": 48.696, "h": 3.693, "s": 6, "g": "wedgeEllipseCallout", "adj": {"adj1": 18572, "adj2": 115570}, "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "These: ", "sz": 1.25, "c": "#000000"}, {"t": "https://www.iana.org/assignments/media-types/", "sz": 1.25, "c": "#000000", "href": "https://www.iana.org/assignments/media-types/"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 83.07, "y": 11.846, "w": 15.224, "h": 4.922, "g": "roundRect", "fill": "#0a5f2d", "ln": "#010e07", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Client-Server", "sz": 1.667, "b": 1, "c": "#ffffff", "href": "07b#client-server"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 83.07, "y": 18.164, "w": 15.224, "h": 4.922, "g": "roundRect", "fill": "#ffffff", "ln": "#00802f", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Statelessness", "sz": 1.667, "c": "#000000", "href": "07b#stateless"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
@@ -1245,7 +1241,7 @@
   },
   {
    "layout": "canvas",
-   "title": "HTTP‘s Uniform Interface",
+   "title": "HTTP’s Uniform Interface",
    "items": [
     {"k": "shape", "x": 83.07, "y": 11.846, "w": 15.224, "h": 4.922, "g": "roundRect", "fill": "#ffffff", "ln": "#00802f", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Client-Server", "sz": 1.667, "c": "#000000", "href": "07b#client-server"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 83.07, "y": 18.164, "w": 15.224, "h": 4.922, "g": "roundRect", "fill": "#ffffff", "ln": "#00802f", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Statelessness", "sz": 1.667, "c": "#000000", "href": "07b#stateless"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
@@ -1310,7 +1306,7 @@
   },
   {
    "layout": "canvas",
-   "title": "REST‘s 4 Uniform Interface Constraints",
+   "title": "REST’s 4 Uniform Interface Constraints",
    "items": [
     {"k": "shape", "x": 3.924, "y": 12.501, "w": 76.283, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 2.083}]}, {"al": "l", "r": [{"t": " Resources must have ", "sz": 1.875}, {"t": "uniform identifiers", "sz": 1.875, "b": 1}, {"t": " that are uniquely addressable using a universal syntax", "sz": 1.875}], "in": -1.8, "bu": "1.", "pl": 2.2, "s": 1}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": " There is ", "sz": 1.875}, {"t": "no direct access ", "sz": 1.875, "b": 1}, {"t": "to resources. Rather, components exchange representations of resources and manipulate resources via representations.", "sz": 1.875}], "in": -1.8, "bu": "2.", "pl": 2.2, "s": 2}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": " Messages must be self-descriptive. They need to include ", "sz": 1.875}, {"t": "metadata", "sz": 1.875, "b": 1}, {"t": " that describes their meaning.", "sz": 1.875}], "in": -1.8, "bu": "3.", "pl": 2.2, "s": 3}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": " The state of the client-server application is ", "sz": 1.875}, {"t": "guided by server-provided hyperlinks", "sz": 1.875, "b": 1}, {"t": ".", "sz": 1.875}], "in": -1.8, "bu": "4.", "pl": 2.2, "s": 4}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 83.07, "y": 11.846, "w": 15.224, "h": 4.922, "g": "roundRect", "fill": "#ffffff", "ln": "#00802f", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Client-Server", "sz": 1.667, "c": "#000000", "href": "07b#client-server"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
@@ -1422,7 +1418,7 @@
    "items": [
     {"k": "pic", "src": "img/1de05fe886.png", "alt": "Social media comment thread comparing gRPC and REST: REST is an architectural principle, gRPC vs normal HTTP JSON API", "x": 53.555, "y": 14.942, "w": 43.099, "h": 34.287, "s": 1, "crop": [0.13972, 0.20997, 0.35825, 0.08001]},
     {"k": "shape", "x": 1.16, "y": 46.531, "w": 49.993, "h": 1.893, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "https://dev.to/techschoolguru/is-grpc-better-than-rest-where-to-use-it-3blg", "sz": 0.938, "c": "#808080", "href": "https://dev.to/techschoolguru/is-grpc-better-than-rest-where-to-use-it-3blg"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "pic", "src": "img/deb4ff18e0.png", "alt": "Table comparing gRPC and REST by feature: protocol, payload, API contract, code generation, security, streaming and browser support", "x": 1.16, "y": 18.663, "w": 52.994, "h": 27.7, "crop": [0.18664, 0.20601, 0.19115, 0.2158]},
+    {"k": "pic", "src": "img/deb4ff18e0.png", "alt": "Table comparing gRPC and REST by feature: protocol, payload, API contract, code generation, security, streaming, and browser support", "x": 1.16, "y": 18.663, "w": 52.994, "h": 27.7, "crop": [0.18664, 0.20601, 0.19115, 0.2158]},
     {"k": "shape", "x": 67.8, "y": 6.327, "w": 27.783, "h": 7.534, "s": 2, "g": "wedgeEllipseCallout", "adj": {"adj1": -24509, "adj2": 97467}, "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Actually, an architectural ", "sz": 2.083, "c": "#000000"}, {"t": "style", "sz": 2.083, "b": 1, "c": "#000000"}, {"t": "…", "sz": 2.083, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ],
    "id": "evaluating-styles",
@@ -1455,7 +1451,7 @@
     ],
     [
      "3 PITAS Interoperability Task Force",
-     "one delegate per group; agree on identifiers, HTTP methods and media types; keep the decision log",
+     "one delegate per group; agree on identifiers, HTTP methods, and media types; keep the decision log",
      "[Self-descriptive messages](07b#self-descriptive), [hypermedia](07b#hateoas)"
     ],
     [
@@ -1464,8 +1460,7 @@
      ""
     ]
    ],
-   "after": "Deadline: Monday 16.11.2026, 23:59 CET. Hand in a GitHub release with your ADRs, and a PDF with Tasks 1 and 4. PITAS Plugtest: Tuesday 24.11.2026, 17:00 to 20:00.",
-   "notes": "Walk through the Assignment 7 sheet. Assignments 7 and 8 build towards the Plugtest; full interoperability is not required at the end of Assignment 7. The role briefings are handed out at the start of the assignment; page 2 is confidential."
+   "after": "Deadline: Monday 16.11.2026, 23:59 CET. Hand in a GitHub release with your ADRs, and a PDF with Tasks 1 and 4. PITAS Plugtest: Tuesday 24.11.2026, 17:00 to 20:00."
   },
   {
    "layout": "canvas",

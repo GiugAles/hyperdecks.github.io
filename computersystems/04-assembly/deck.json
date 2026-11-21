@@ -671,8 +671,7 @@
     "What would be any alternative instruction to achieve the same result?",
     "Can you speculate why the compiler typically chooses to use the xor option over this?"
    ],
-   "source": "[defuse.ca/online-x86-assembler.htm](https://defuse.ca/online-x86-assembler.htm)",
-   "notes": "Alternative: movq $0, %rcx. The encoding of xorq %rcx, %rcx might be shorter than for the movq $0, %rcx operation."
+   "source": "[defuse.ca/online-x86-assembler.htm](https://defuse.ca/online-x86-assembler.htm)"
   },
   {
    "layout": "menu",
@@ -845,8 +844,7 @@
    "code": "long obscureCounter(long x) {\n  do {\n    ???\n  } while (???);\n}\n\nobscureCounter(long):\n        pushq   %rbp\n        movq    %rsp, %rbp\n        movq    %rdi, -8(%rbp)\n.L3:\n        subq    $3, -8(%rbp)\n        cmpq    $0, -8(%rbp)\n        jle     .L2\n        jmp     .L3\n.L2:\n        nop",
    "points": [
     "Argument x goes into register %rdi"
-   ],
-   "notes": "do { x = x - 3; } while (x > 0);"
+   ]
   },
   {
    "layout": "code",
