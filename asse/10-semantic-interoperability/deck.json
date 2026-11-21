@@ -179,7 +179,7 @@
     {"k": "shape", "x": 24.964, "y": 41.159, "w": 16.166, "h": 2.272, "g": "rect", "fill": "#ff0066", "tx": {"p": [{"al": "l", "r": [{"t": "/status/power/consumption", "sz": 1.25, "c": "#ffffff"}]}], "a": "m", "i": [0.59, 0.375, 0.59, 0.375], "nw": 1}},
     {"k": "shape", "x": 24.964, "y": 44.424, "w": 9.33, "h": 2.272, "g": "rect", "fill": "#ff0066", "tx": {"p": [{"al": "l", "r": [{"t": "/status/timeleft", "sz": 1.25, "c": "#ffffff"}]}], "a": "m", "i": [0.59, 0.375, 0.59, 0.375], "nw": 1}},
     {"k": "shape", "x": 24.964, "y": 47.689, "w": 7.069, "h": 2.272, "g": "rect", "fill": "#ff0066", "tx": {"p": [{"al": "l", "r": [{"t": "/action/run", "sz": 1.25, "c": "#ffffff"}]}], "a": "m", "i": [0.59, 0.375, 0.59, 0.375], "nw": 1}},
-    {"k": "pic", "src": "img/63eaf0dea8.jpg", "alt": "A picture containing text, clock, device\n\nDescription automatically generated", "x": 23.111, "y": 15.882, "w": 15.344, "h": 15.344},
+    {"k": "pic", "src": "img/63eaf0dea8.jpg", "alt": "Plug-in power meter with a display showing 0.0, three buttons and a socket", "x": 23.111, "y": 15.882, "w": 15.344, "h": 15.344},
     {"k": "shape", "x": 23.742, "y": 20.822, "w": 4.019, "h": 2.145, "g": "rect", "fill": "#ff0066", "tx": {"p": [{"al": "l", "r": [{"t": "/relay", "sz": 1.146, "c": "#ffffff"}]}], "a": "m", "i": [0.59, 0.375, 0.59, 0.375], "nw": 1}},
     {"k": "shape", "x": 23.742, "y": 23.176, "w": 7.976, "h": 2.145, "g": "rect", "fill": "#ff0066", "tx": {"p": [{"al": "l", "r": [{"t": "/meter/power", "sz": 1.146, "c": "#ffffff"}]}], "a": "m", "i": [0.59, 0.375, 0.59, 0.375], "nw": 1}},
     {"k": "pic", "src": "img/d4fb6a9f1e.png", "alt": "Image result for gearwheels", "x": 42.509, "y": 31.784, "w": 4.672, "h": 5.298, "crop": [0.0, 0.0, 0.59096, 0.31816]},
@@ -1413,7 +1413,7 @@
     {"k": "shape", "x": 4.176, "y": 28.121, "w": 27.139, "h": 8.469, "s": 1, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "How do you tell a machine to grab bottles at place x and put them down at place y?", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 9.887, "y": 38.785, "w": 51.363, "h": 12.39, "s": 2, "g": "rect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "cherrybot = myIDLmagic(cherryAddress);\t// ", "sz": 1.458, "f": "mono", "c": "#ffffff"}, {"t": "Lecture 8", "sz": 1.458, "f": "mono", "c": "#ffffff", "href": "08#idl"}]}, {"al": "l", "r": [{"t": "", "sz": 1.458}]}, {"al": "l", "r": [{"t": "cherrybot.moveTo(x);", "sz": 1.458, "f": "mono", "c": "#ffffff"}]}, {"al": "l", "r": [{"t": "cherrybot.closeGripper();", "sz": 1.458, "f": "mono", "c": "#ffffff"}]}, {"al": "l", "r": [{"t": "cherrybot.moveTo(y)", "sz": 1.458, "f": "mono", "c": "#ffffff"}]}, {"al": "l", "r": [{"t": "cherrybot.openGripper();", "sz": 1.458, "f": "mono", "c": "#ffffff"}]}], "a": "t", "i": [0.886, 0.886, 0.886, 0.886]}},
     {"k": "shape", "x": 38.207, "y": 45.43, "w": 20.701, "h": 8.469, "s": 3, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Great! When could this become a problem?", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "pic", "src": "img/4c066a0d38.gif", "alt": "A person holding a microphone\n\nDescription automatically generated", "x": 68.685, "y": 25.672, "w": 19.847, "h": 27.785, "crop": [0.26296, 0.35555, 0.32787, 0.35803]}
+    {"k": "pic", "src": "img/4c066a0d38.gif", "alt": "Animated clip labelled Fact Hunter: brown glass bottles appear one after another on a dark machine", "x": 68.685, "y": 25.672, "w": 19.847, "h": 27.785, "crop": [0.26296, 0.35555, 0.32787, 0.35803]}
    ]
   },
   {
@@ -1426,9 +1426,9 @@
     {"k": "shape", "x": 52.143, "y": 18.238, "w": 13.456, "h": 5.172, "g": "roundRect", "adj": {"adj": 5848}, "fill": "#00802f", "tx": {"p": [{"al": "c", "r": [{"t": "Develop ", "sz": 1.458, "c": "#ffffff"}]}, {"al": "c", "r": [{"t": "new solutions", "sz": 1.458, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 66.301, "y": 18.238, "w": 13.456, "h": 5.172, "g": "roundRect", "adj": {"adj": 5848}, "fill": "#00802f", "tx": {"p": [{"al": "c", "r": [{"t": "Learn from experiences", "sz": 1.458, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 80.459, "y": 18.238, "w": 13.456, "h": 5.172, "g": "roundRect", "adj": {"adj": 5848}, "fill": "#00802f", "tx": {"p": [{"al": "c", "r": [{"t": "Communicate to", "sz": 1.458, "c": "#ffffff"}]}, {"al": "c", "r": [{"t": "collaborate", "sz": 1.458, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "pic", "src": "img/6ea7062774.gif", "alt": "A person in a white shirt using a drill to cut onions\n\nDescription automatically generated", "x": 14.472, "y": 25.672, "w": 30.241, "h": 27.785, "s": 1, "crop": [0.2814, 0.28586, 0.28139, 0.0]},
+    {"k": "pic", "src": "img/6ea7062774.gif", "alt": "Animated clip: a cook peels apples with a power drill, peels piling up on the table", "x": 14.472, "y": 25.672, "w": 30.241, "h": 27.785, "s": 1, "crop": [0.2814, 0.28586, 0.28139, 0.0]},
     {"k": "pic", "src": "img/4d792321cc.png", "alt": "Vs PNGs for Free Download", "x": 45.315, "y": 31.753, "w": 23.434, "h": 15.623},
-    {"k": "pic", "src": "img/4c066a0d38.gif", "alt": "A person holding a microphone\n\nDescription automatically generated", "x": 68.685, "y": 25.672, "w": 19.847, "h": 27.785, "crop": [0.26296, 0.35555, 0.32787, 0.35803]}
+    {"k": "pic", "src": "img/4c066a0d38.gif", "alt": "Animated clip labelled Fact Hunter: brown glass bottles appear one after another on a dark machine", "x": 68.685, "y": 25.672, "w": 19.847, "h": 27.785, "crop": [0.26296, 0.35555, 0.32787, 0.35803]}
    ]
   },
   {

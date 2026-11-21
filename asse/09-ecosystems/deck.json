@@ -317,7 +317,7 @@
    "layout": "canvas",
    "title": "What is **central** to making a (user) interface **useful**?",
    "items": [
-    {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "Until now, we considered individual requests and responses", "sz": 1.948}], "s": 1}, {"al": "l", "r": [{"t": "IDLs allow us to remove syntactic interface coupling. Through an IDL, the coupling is moved to a more abstract level", "sz": 1.948}], "s": 2}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "We now ask: „", "sz": 2.083}, {"t": "In an application, how may a client advance the application state", "sz": 2.083, "b": 1}, {"t": "?“ (see Webber, p.97)", "sz": 2.083}], "s": 3}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "Until now, we considered individual requests and responses", "sz": 1.948}], "s": 1}, {"al": "l", "r": [{"t": "IDLs allow us to remove syntactic interface coupling. Through an IDL, the coupling is moved to a more abstract level", "sz": 1.948}], "s": 2}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "We now ask: “", "sz": 2.083}, {"t": "In an application, how may a client advance the application state", "sz": 2.083, "b": 1}, {"t": "?” (see Webber, p.97)", "sz": 2.083}], "s": 3}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 8.054, "y": 29.345, "w": 34.743, "h": 10.567, "s": 4, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "What’s a telltale of bad design?", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 17.802, "y": 42.326, "w": 40.651, "h": 10.567, "s": 6, "g": "roundRect", "fill": "#73a5af", "ln": "#101a1c", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "If the client needs instructions / annotations to make use of an artifact!", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "pic", "src": "img/63f277e3c5.jpg", "alt": "The bad design of everyday things - Usability Geek", "x": 63.27, "y": 28.121, "w": 30.315, "h": 20.307, "s": 5, "crop": [0.0, 0.19468, 0.0, 0.2688], "shadow": true}
@@ -327,8 +327,8 @@
    "layout": "canvas",
    "title": "What is **central** to making a (user) interface **useful**?",
    "items": [
-    {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "Until now, we considered individual requests and responses", "sz": 1.948}]}, {"al": "l", "r": [{"t": "IDLs allow us to remove syntactic interface coupling. Through an IDL, the coupling is moved to a more abstract level", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "We now ask: „", "sz": 2.083}, {"t": "In an application, how may a client advance the application state", "sz": 2.083, "b": 1}, {"t": "?“ (see Webber, p.97)", "sz": 2.083}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "pic", "src": "img/f24e494d58.png", "alt": "Ein Bild, das Text, Screenshot, Tablet, Multimedia enthält.\n\nAutomatisch generierte Beschreibung", "x": 69.0, "y": 29.5, "w": 22.0, "h": 22.1, "crop": [0.13849, 0.01377, 0.18352, 0.07856]},
+    {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "Until now, we considered individual requests and responses", "sz": 1.948}]}, {"al": "l", "r": [{"t": "IDLs allow us to remove syntactic interface coupling. Through an IDL, the coupling is moved to a more abstract level", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "We now ask: “", "sz": 2.083}, {"t": "In an application, how may a client advance the application state", "sz": 2.083, "b": 1}, {"t": "?” (see Webber, p.97)", "sz": 2.083}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "pic", "src": "img/f24e494d58.png", "alt": "Yellow ticket machine at a post office: the touch screen shows one large yellow Post button with a drawn arrow pointing to it", "x": 69.0, "y": 29.5, "w": 22.0, "h": 22.1, "crop": [0.13849, 0.01377, 0.18352, 0.07856]},
     {"k": "shape", "x": 67.5, "y": 51.8, "w": 24.986, "h": 2.524, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "St. Gallen Main Post Office, July 2024", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 8.054, "y": 29.345, "w": 34.743, "h": 10.567, "s": 1, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "What makes user interfaces useful for humans in this sense?", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 30.375, "y": 41.193, "w": 25.926, "h": 10.567, "s": 2, "g": "roundRect", "fill": "#73a5af", "ln": "#101a1c", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "That they can ", "sz": 2.5, "c": "#ffffff"}, {"t": "derive a useful next action", "sz": 2.5, "b": 1, "c": "#ffffff"}, {"t": "!", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
@@ -413,11 +413,12 @@
    "items": [
     {"k": "pic", "src": "img/7298b961d3.png", "alt": "Photo of a double door with PULL signs on both leaves", "x": 6.977, "y": 13.076, "w": 28.467, "h": 30.149, "s": 1, "crop": [0.19872, 0.22049, 0.44438, 0.10752]},
     {"k": "shape", "x": 2.85, "y": 43.731, "w": 28.467, "h": 3.079, "s": 1, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "J. Schöning, HCI, University of St.Gallen, 2021", "sz": 0.938, "c": "#808080"}]}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
-    {"k": "pic", "src": "img/47b90c7634.jpg", "alt": "Ein Bild, das Text, drinnen enthält.\n\nAutomatisch generierte Beschreibung", "x": 65.755, "y": 12.18, "w": 31.372, "h": 23.529, "rot": 90.0, "s": 2, "shadow": true},
-    {"k": "pic", "src": "img/a6eb5160f5.jpg", "alt": "Ein Bild, das drinnen, grün enthält.\n\nAutomatisch generierte Beschreibung", "x": 35.461, "y": 21.717, "w": 34.199, "h": 25.649, "rot": 90.0, "s": 3, "shadow": true},
+    {"k": "pic", "src": "img/47b90c7634.jpg", "alt": "Glass door with a vertical metal handle and a small red sign with a white arrow beside it", "x": 65.755, "y": 12.18, "w": 31.372, "h": 23.529, "rot": 90.0, "s": 2, "shadow": true},
+    {"k": "pic", "src": "img/a6eb5160f5.jpg", "alt": "Green wall with a horizontal metal bar and a small green sign with a white arrow above it", "x": 35.461, "y": 21.717, "w": 34.199, "h": 25.649, "rot": 90.0, "s": 3, "shadow": true},
     {"k": "shape", "x": 65.914, "y": 41.322, "w": 25.649, "h": 2.774, "s": 2, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "At Siemens Neuperlach Süd, November 2021 ", "sz": 0.938, "c": "#808080"}]}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
     {"k": "pic", "src": "img/7a589171ee.png", "alt": "Web page of IntellIoT: powering the future of humanised IoT and AI across Europe", "x": 69.119, "y": 46.184, "w": 20.947, "h": 6.342, "s": 2, "crop": [0.08066, 0.16401, 0.77363, 0.75757]}
-   ]
+   ],
+   "source": "[IntellIoT](https://intelliot.eu/), [CORDIS: project 957218](https://cordis.europa.eu/project/id/957218)"
   },
   {
    "layout": "canvas",
@@ -438,8 +439,8 @@
    "layout": "canvas",
    "title": "Affordances are **relational** rather than absolute – they depend on the agent-environment context",
    "items": [
-    {"k": "pic", "src": "img/09bfcebbe2.jpg", "alt": "Ein Bild, das draußen, Schnee, Baum, Person enthält.\n\nAutomatisch generierte Beschreibung", "x": 51.611, "y": 18.242, "w": 40.886, "h": 30.665, "s": 2, "shadow": true},
-    {"k": "pic", "src": "img/d28bc111be.jpg", "alt": "Ein Bild, das draußen, Baum, Straße, Niederschlag enthält.\n\nAutomatisch generierte Beschreibung", "x": 6.705, "y": 20.726, "w": 40.886, "h": 30.665, "s": 1, "shadow": true}
+    {"k": "pic", "src": "img/09bfcebbe2.jpg", "alt": "Two people with backpacks climbing over a snow bank that blocks a footpath beside a road", "x": 51.611, "y": 18.242, "w": 40.886, "h": 30.665, "s": 2, "shadow": true},
+    {"k": "pic", "src": "img/d28bc111be.jpg", "alt": "A snow bank that blocks a footpath beside a road, with no one on it", "x": 6.705, "y": 20.726, "w": 40.886, "h": 30.665, "s": 1, "shadow": true}
    ],
    "id": "affordances"
   },
@@ -707,7 +708,13 @@
   {
    "layout": "transclude",
    "title": "Jump Links (Web) and Transclusion (Xanadu)",
-   "to": "07b#jump-vs-transclusion"
+   "to": "07b#jump-vs-transclusion",
+   "refs": [
+    {
+     "to": "07b#jump-vs-transclusion",
+     "kind": "recap"
+    }
+   ]
   },
   {
    "layout": "canvas",
@@ -1134,7 +1141,7 @@
    "source": "[SocietyByte 2021](https://www.societybyte.swiss/en/2021/01/07/part-1-power-to-the-people-re-decentralizing-the-web-for-good-this-time/), [The Economist 2008](https://www.economist.com/leaders/2008/03/19/break-down-these-walls), [Medium: How Solid is Tim’s plan to redecentralize the web?](https://medium.com/@shevski/how-solid-is-tims-plan-to-redecentralize-the-web-b163ba78e835)",
    "refs": [
     {
-     "to": "07b#xanadu",
+     "to": "07b#jump-vs-transclusion",
      "kind": "recap"
     },
     {
