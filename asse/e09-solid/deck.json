@@ -22,6 +22,56 @@
    ]
   },
   {
+   "layout": "section",
+   "title": "A Bit of Feedback",
+   "kicker": "Exercise Session 9"
+  },
+  {
+   "layout": "text",
+   "title": "Feedback",
+   "groups": [
+    {
+     "heading": "Reminder about Exercise 7, Task 3.2",
+     "paragraphs": [
+      "In the coming exercises, you will also compare [the protocols] by *measurement*, with respect to their **performance**. You will extend [the testing infrastructure] with every new protocol and use it in every following exercise, so design it with that in mind. […] **Metrics** by which you could compare the protocols include, for example:"
+     ],
+     "points": [
+      "**the latency from launching an auction until a bid arrives**",
+      "**the number of auctions or bids per second an auction house sustains**",
+      "**the messages and bytes exchanged per interaction**"
+     ]
+    }
+   ]
+  },
+  {
+   "layout": "text",
+   "title": "Feedback",
+   "groups": [
+    {
+     "heading": "Reminder about Exercise 7, Task 3.2",
+     "paragraphs": [
+      "In the coming exercises, you will also compare [the protocols] by *measurement*, with respect to their **performance**. You will extend [the testing infrastructure] with every new protocol and use it in every following exercise, so design it with that in mind. […] **Metrics** by which you could compare the protocols include, for example:"
+     ],
+     "points": [
+      "**the latency from launching an auction until a bid arrives**",
+      "**the number of auctions or bids per second an auction house sustains**",
+      "**the messages and bytes exchanged per interaction**"
+     ]
+    },
+    {
+     "heading": "Decision Making Process",
+     "points": [
+      "Focus on the why, not on rules"
+     ]
+    }
+   ]
+  },
+  {
+   "layout": "section",
+   "title": "About the Exercise",
+   "kicker": "Exercise Session 9"
+  },
+  {
    "layout": "image",
    "title": "One Task Through the Pods: Setup and Commission",
    "image": "https://solid.interactions.ics.unisg.ch/mcs-asse/slides/assets/sovereignty-deployment-step1.svg",
