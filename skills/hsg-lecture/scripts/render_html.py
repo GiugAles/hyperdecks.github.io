@@ -105,6 +105,9 @@ ul.dash ul li::before{content:"-";position:absolute;left:0}
 .box.red{background:#eb6969;border:.12U solid #2d0606;color:#fff;text-align:center}
 .group h3{font-size:2.4U;font-weight:400;line-height:1.15;color:var(--fg);margin-bottom:.5U}
 .group ul.dash{gap:.2U}
+.airy .groups{gap:5U}
+.airy .group h3{margin-bottom:1.8U}
+.airy .group ul.dash{gap:1.2U}
 .dense .group ul.dash>li,.dense .group p{font-size:var(--s-mid)}
 .groups{display:grid;gap:3U}
 .defs{display:grid;grid-template-columns:auto 1fr;gap:.45U 4U;font-size:var(--s-mid);line-height:1.25;color:var(--body)}
@@ -859,7 +862,8 @@ class Html:
     def code(self, code, style="outline", caption=None):
         small = " small" if len(code.split("\n")) > 13 or max(len(l) for l in code.split("\n")) > 52 else ""
         cap = f'<p class="codecap">{self.mark(caption)}</p>' if caption else ""
-        return f'<div><pre class="code {style}{small}">{esc(code)}</pre>{cap}</div>'
+        body = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", esc(code))    # **bold** inside a code block
+        return f'<div><pre class="code {style}{small}">{body}</pre>{cap}</div>'
 
     def head(self, s):
         h = f'<h2>{self.htitle(s["title"])}</h2>'

@@ -23,7 +23,7 @@
    "layout": "canvas",
    "title": "Review: Interaction Styles",
    "items": [
-    {"k": "shape", "x": 3.924, "y": 12.501, "w": 64.036, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "When designing systems, the very same discussion is encountered again and again: on which level to couple components, and how to make this coupling explicit", "sz": 1.948}], "pl": 2.812, "in": -2.812, "bu": "-"}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 2.812, "in": -2.812}, {"al": "l", "r": [{"t": "We looked at the history of (syntactic) interface definition languages, from RPC via CORBA to REST and gRPC. Beyond client-server, we considered interaction styles for data access and for publish/subscribe", "sz": 1.948}], "pl": 2.812, "in": -2.812, "bu": "-"}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 2.812, "in": -2.812}, {"al": "l", "r": [{"t": "There is no best solution, rather as an engineer of a distributed system you need to understand how you should couple components given the properties and goals of your design", "sz": 1.948}], "pl": 2.812, "in": -2.812, "bu": "-"}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 2.812, "in": -2.812}, {"al": "l", "r": [{"t": "Always think of the next version of your system. Determine what {interface, contract, pattern} will never change and use this insight as the basis to determine how to couple. Then, make sure that this actually never changes", "sz": 1.948}], "pl": 2.812, "in": -2.812, "bu": "-"}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 3.924, "y": 12.501, "w": 64.036, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "When designing systems, the very same discussion is encountered again and again: ", "sz": 1.948}, {"t": "on which level to couple components", "sz": 1.948, "b": 1}, {"t": ", and how to ", "sz": 1.948}, {"t": "make this coupling explicit", "sz": 1.948, "b": 1}], "pl": 2.812, "in": -2.812, "bu": "-"}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 2.812, "in": -2.812}, {"al": "l", "r": [{"t": "We looked at the history of (syntactic) ", "sz": 1.948}, {"t": "interface definition languages", "sz": 1.948, "b": 1}, {"t": ", from ", "sz": 1.948}, {"t": "RPC", "sz": 1.948, "b": 1}, {"t": " via ", "sz": 1.948}, {"t": "CORBA", "sz": 1.948, "b": 1}, {"t": " to ", "sz": 1.948}, {"t": "REST", "sz": 1.948, "b": 1}, {"t": " and ", "sz": 1.948}, {"t": "gRPC", "sz": 1.948, "b": 1}, {"t": ". Beyond client-server, we considered interaction styles for ", "sz": 1.948}, {"t": "data access", "sz": 1.948, "b": 1}, {"t": " and for ", "sz": 1.948}, {"t": "publish/subscribe", "sz": 1.948, "b": 1}], "pl": 2.812, "in": -2.812, "bu": "-"}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 2.812, "in": -2.812}, {"al": "l", "r": [{"t": "There is ", "sz": 1.948}, {"t": "no best solution", "sz": 1.948, "b": 1}, {"t": ", rather as an engineer of a distributed system you need to understand ", "sz": 1.948}, {"t": "how you should couple components", "sz": 1.948, "b": 1}, {"t": " given the properties and goals of your design", "sz": 1.948}], "pl": 2.812, "in": -2.812, "bu": "-"}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 2.812, "in": -2.812}, {"al": "l", "r": [{"t": "Always think of the ", "sz": 1.948}, {"t": "next version", "sz": 1.948, "b": 1}, {"t": " of your system. Determine what {interface, contract, pattern} will ", "sz": 1.948}, {"t": "never change", "sz": 1.948, "b": 1}, {"t": " and use this insight as the basis to determine how to couple. Then, make sure that this actually ", "sz": 1.948}, {"t": "never change", "sz": 1.948, "b": 1}, {"t": "s", "sz": 1.948}], "pl": 2.812, "in": -2.812, "bu": "-"}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "pic", "src": "img/cd5d0e9d3c.png", "alt": "Photo of a front-loading washing machine", "x": 81.222, "y": 5.743, "w": 12.237, "h": 16.174},
     {"k": "shape", "x": 79.912, "y": 17.245, "w": 8.406, "h": 4.726, "g": "rect", "fill": "#ffffff", "ln": "#000000", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "BOXED", "sz": 0.938, "b": 1, "c": "#000000"}, {"t": " Control Logic, Sensors, Actuators", "sz": 0.938, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "pic", "src": "img/cd5d0e9d3c.png", "alt": "Photo of a front-loading washing machine", "x": 72.384, "y": 26.741, "w": 12.003, "h": 15.864},
@@ -313,7 +313,7 @@
     {"k": "shape", "x": 78.903, "y": 43.546, "w": 14.045, "h": 1.793, "s": 11, "g": "straightConnector1", "ln": "#000000", "lw": 0.104, "tail": "triangle"},
     {"k": "shape", "x": 78.903, "y": 42.207, "w": 14.045, "h": 1.339, "fy": true, "s": 11, "g": "straightConnector1", "ln": "#000000", "lw": 0.104, "tail": "triangle"},
     {"k": "shape", "x": 42.698, "y": 35.322, "w": 27.487, "h": 2.524, "rot": 21.89, "s": 10, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "GET checkout?cartID=simon", "sz": 1.458, "b": 1, "c": "#000000", "f": "mono"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 1.337, "y": 42.6, "w": 37.0, "h": 9.844, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "In what way is the ", "sz": 2.083}, {"t": "client", "sz": 2.083, "b": 1}, {"t": " affected by", "sz": 2.083}], "s": 12}, {"al": "l", "r": [{"t": "\t", "sz": 2.083}, {"t": "…additional books being recommended to the user?", "sz": 1.667}], "s": 13}, {"al": "l", "r": [{"t": "\t…the bookstore’s domain name changing to “happystore.org”?", "sz": 1.667}], "s": 14}, {"al": "l", "r": [{"t": "\t…Twint being added as a payment type?", "sz": 1.667}], "s": 15}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 1.3, "y": 32.5, "w": 46, "h": 9, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "In what way is the ", "sz": 2.083}, {"t": "client", "sz": 2.083, "b": 1}, {"t": " affected by", "sz": 2.083}], "s": 12}, {"al": "l", "r": [{"t": "\t", "sz": 2.083}, {"t": "…additional books being recommended to the user?", "sz": 1.667}], "s": 13}, {"al": "l", "r": [{"t": "\t…the bookstore’s domain name changing to “happystore.org”?", "sz": 1.667}], "s": 14}, {"al": "l", "r": [{"t": "\t…Twint being added as a payment type?", "sz": 1.667}], "s": 15}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 78.903, "y": 43.546, "w": 14.045, "h": 5.08, "s": 16, "g": "straightConnector1", "ln": "#000000", "lw": 0.104, "dash": "dash", "tail": "triangle"}
    ]
   },
@@ -331,11 +331,11 @@
    "layout": "canvas",
    "title": "What is **central** to making a (user) interface **useful**?",
    "items": [
-    {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "Until now, we considered individual requests and responses", "sz": 1.948}]}, {"al": "l", "r": [{"t": "IDLs allow us to remove syntactic interface coupling. Through an IDL, the coupling is moved to a more abstract level", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "We now ask: “", "sz": 2.083}, {"t": "In an application, how may a client advance the application state", "sz": 2.083, "b": 1}, {"t": "?” (see Webber, p.97)", "sz": 2.083}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "pic", "src": "img/f24e494d58.png", "alt": "Yellow ticket machine at a post office: the touch screen shows one large yellow Post button with a drawn arrow pointing to it", "x": 69.0, "y": 29.5, "w": 22.0, "h": 22.1, "crop": [0.13849, 0.01377, 0.18352, 0.07856]},
-    {"k": "shape", "x": 67.5, "y": 51.8, "w": 24.986, "h": 2.524, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "St. Gallen Main Post Office, November 2026", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 8.054, "y": 29.345, "w": 34.743, "h": 10.567, "s": 1, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "What makes user interfaces useful for humans in this sense?", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 30.375, "y": 41.193, "w": 25.926, "h": 10.567, "s": 2, "g": "roundRect", "fill": "#73a5af", "ln": "#101a1c", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "That they can ", "sz": 2.5, "c": "#ffffff"}, {"t": "derive a useful next action", "sz": 2.5, "b": 1, "c": "#ffffff"}, {"t": "!", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
+    {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "Until now, we considered ", "sz": 1.948}, {"t": "individual", "sz": 1.948, "b": 1, "c": "#00802f"}, {"t": " requests and responses", "sz": 1.948}]}, {"al": "l", "r": [{"t": "IDLs allow us to remove syntactic interface coupling. Through an IDL, the coupling is moved to a more abstract level", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "We now ask: “", "sz": 2.083}, {"t": "In an application, how may a client advance the application state", "sz": 2.083, "b": 1}, {"t": "?” (see Webber, p.97)", "sz": 2.083}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "pic", "src": "img/f24e494d58.png", "alt": "Yellow ticket machine at a post office: the touch screen shows one large yellow Post button with a drawn arrow pointing to it", "x": 69.0, "y": 29.5, "w": 22.0, "h": 22.1, "crop": [0.13849, 0.01377, 0.18352, 0.07856], "s": 3},
+    {"k": "shape", "x": 67.5, "y": 51.8, "w": 24.986, "h": 2.524, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "St. Gallen Main Post Office, November 2026", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}, "s": 3},
+    {"k": "shape", "x": 8.1, "y": 30.8, "w": 34.743, "h": 9, "s": 1, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "What makes user interfaces useful for humans in this sense?", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 30.4, "y": 41.2, "w": 25.926, "h": 9.5, "s": 2, "g": "roundRect", "fill": "#73a5af", "ln": "#101a1c", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "That they can ", "sz": 2.5, "c": "#ffffff"}, {"t": "derive a useful next action", "sz": 2.5, "b": 1, "c": "#ffffff"}, {"t": "!", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ]
   },
   {
@@ -344,9 +344,9 @@
    "items": [
     {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "Interaction should be driven by ", "sz": 1.948}, {"t": "hypermedia", "sz": 1.948, "b": 1, "c": "#00802f"}, {"t": " to permit clients to ", "sz": 1.948}, {"t": "derive a useful next action", "sz": 1.948, "b": 1, "c": "#00802f"}, {"t": " from a response.", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "We say that “", "sz": 1.948}, {"t": "hypermedia is the engine of application state", "sz": 1.948, "b": 1, "c": "#00802f"}, {"t": "” (HATEOAS, REST UI Constraint #4)", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 56.478, "y": 41.099, "w": 30.78, "h": 8.268, "s": 2, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "This is our ", "sz": 2.5, "c": "#ffffff"}, {"t": "guiding question ", "sz": 2.5, "b": 1, "c": "#ffffff"}, {"t": "for this and next week!", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "pic", "src": "img/4d792321cc.png", "alt": "Vs PNGs for Free Download", "x": 34.201, "y": 22.24, "w": 23.434, "h": 15.623},
-    {"k": "shape", "x": 10.427, "y": 23.696, "w": 28.987, "h": 4.796, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "{ \"title\": \"Baba O’Riley\", \"artist\": { \"id\": 5521 } }", "sz": 1.667, "i": 1, "f": "mono"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 51.317, "y": 28.121, "w": 46.054, "h": 4.796, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "{ \"title\": \"Baba O’Riley\", \"artist\": { \"id\": \"http://example.org/ artists/5521\" } }", "sz": 1.667, "i": 1, "f": "mono"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "pic", "src": "img/4d792321cc.png", "alt": "Vs PNGs for Free Download", "x": 34.201, "y": 25.74, "w": 23.434, "h": 15.623},
+    {"k": "shape", "x": 10.427, "y": 27.196, "w": 28.987, "h": 4.796, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "{ \"title\": \"Baba O’Riley\", \"artist\": { \"id\": 5521 } }", "sz": 1.667, "i": 1, "f": "mono"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 51.317, "y": 31.621, "w": 46.054, "h": 4.796, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "{ \"title\": \"Baba O’Riley\", \"artist\": { \"id\": \"http://example.org/ artists/5521\" } }", "sz": 1.667, "i": 1, "f": "mono"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "pic", "src": "img/ca95916b8b.jpg", "alt": "PMW Combo Pack of 100 Blue and 100 Red Litmus Paper Ph Test Strip Price in  India - Buy PMW Combo Pack of 100 Blue and 100 Red Litmus Paper Ph Test", "x": 31.58, "y": 41.756, "w": 17.065, "h": 11.691, "s": 1},
     {"k": "shape", "x": 3.924, "y": 42.695, "w": 28.383, "h": 5.47, "s": 1, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Can the client derive a ", "sz": 1.875}, {"t": "useful next interaction ", "sz": 1.875, "b": 1}, {"t": "from the response?", "sz": 1.875}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}
    ],
@@ -362,7 +362,7 @@
    "title": "Decoupling and Guidance",
    "items": [
     {"k": "shape", "x": 3.924, "y": 12.501, "w": 91.572, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "How to create ", "sz": 2.083}, {"t": "decoupled yet interoperable ", "sz": 2.083, "b": 1}, {"t": "systems that guide their users?", "sz": 2.083}], "pl": 0.0, "in": 0.0, "s": 1}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "How can clients be guided to properly use services at ", "sz": 2.083}, {"t": "run time", "sz": 2.083, "b": 1}, {"t": ", but ", "sz": 2.083}, {"t": "without hard-coding ", "sz": 2.083, "b": 1}, {"t": "this guidance?", "sz": 2.083}], "s": 2}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "Humans excel in designing such systems in their everyday life!", "sz": 2.083}], "pl": 0.0, "in": 0.0, "s": 4}, {"al": "l", "r": [{"t": "You will apply some of these concepts to ", "sz": 1.875}, {"t": "decouple PITAS components", "sz": 1.875, "b": 1}, {"t": ".", "sz": 2.083}], "pl": 2.812, "in": -2.812, "bu": "-", "s": 5}, {"al": "l", "r": [{"t": "Strong ", "sz": 1.875}, {"t": "parallels to human-computer interaction", "sz": 1.875, "b": 1}, {"t": " ", "sz": 1.875}], "pl": 2.812, "in": -2.812, "bu": "-", "s": 6}, {"al": "l", "r": [{"t": "", "sz": 2.083}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 21.849, "y": 25.882, "w": 55.722, "h": 8.532, "s": 3, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "How can we provide information about possible execution flows of an application ", "sz": 2.5, "c": "#ffffff"}, {"t": "in-band", "sz": 2.5, "b": 1, "c": "#ffffff"}, {"t": "?", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
+    {"k": "shape", "x": 21.849, "y": 28.882, "w": 55.722, "h": 8.532, "s": 3, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "How can we provide information about possible execution flows of an application ", "sz": 2.5, "c": "#ffffff"}, {"t": "in-band", "sz": 2.5, "b": 1, "c": "#ffffff"}, {"t": "?", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ],
    "id": "decoupling-guidance"
   },
@@ -400,29 +400,28 @@
    "layout": "canvas",
    "title": "Classic Example: Doors",
    "items": [
-    {"k": "pic", "src": "img/fc63ec37bb.jpg", "alt": "What are affordances, and why do they matter? | Pixel Fridge", "x": -2.316, "y": 12.597, "w": 26.736, "h": 34.605, "s": 1, "crop": [0.34092, 0.07108, 0.34092, 0.18402]},
-    {"k": "pic", "src": "img/fc63ec37bb.jpg", "alt": "What are affordances, and why do they matter? | Pixel Fridge", "x": 41.384, "y": 12.773, "w": 27.398, "h": 34.605, "s": 5, "crop": [0.0, 0.07108, 0.67395, 0.18402]},
-    {"k": "pic", "src": "img/fc63ec37bb.jpg", "alt": "What are affordances, and why do they matter? | Pixel Fridge", "x": 18.81, "y": 12.283, "w": 26.736, "h": 34.605, "s": 3, "crop": [0.66434, 0.06066, 0.0175, 0.19443]},
-    {"k": "shape", "x": 47.853, "y": 46.79, "w": 12.824, "h": 2.272, "s": 6, "g": "rect", "tx": {"p": [{"al": "c", "r": [{"t": "«Turn!»", "sz": 1.875, "c": "#000000"}], "sb": 0.312}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
-    {"k": "shape", "x": 4.231, "y": 46.614, "w": 12.824, "h": 2.272, "s": 2, "g": "rect", "tx": {"p": [{"al": "c", "r": [{"t": "«Pull!»", "sz": 1.875, "c": "#000000"}], "sb": 0.312}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
-    {"k": "shape", "x": 26.097, "y": 46.843, "w": 12.824, "h": 2.272, "s": 4, "g": "rect", "tx": {"p": [{"al": "c", "r": [{"t": "«Push!»", "sz": 1.875, "c": "#000000"}], "sb": 0.312}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
-    {"k": "pic", "src": "img/03a7b6ea58.png", "alt": "Photo of an escape door with a horizontal push bar: push or pull, which side?", "x": 69.729, "y": 8.404, "w": 25.31, "h": 17.75, "s": 7, "crop": [0.24604, 0.3005, 0.29919, 0.1325]},
-    {"k": "pic", "src": "img/00e39cf097.png", "alt": "Photo of a better escape door whose push bar clearly suggests pressing to the right", "x": 67.897, "y": 27.321, "w": 29.901, "h": 23.032, "s": 8, "crop": [0.27556, 0.29, 0.28738, 0.11151]},
-    {"k": "shape", "x": 64.067, "y": 53.469, "w": 25.649, "h": 2.774, "s": 7, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "J. Schöning, HCI, University of St.Gallen", "sz": 0.938, "c": "#808080"}]}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}}
+    {"k": "pic", "src": "img/fc63ec37bb.jpg", "alt": "What are affordances, and why do they matter? | Pixel Fridge", "x": -1.5, "y": 12.5, "w": 22.7, "h": 29.4, "s": 1, "crop": [0.34092, 0.07108, 0.34092, 0.18402]},
+    {"k": "pic", "src": "img/fc63ec37bb.jpg", "alt": "What are affordances, and why do they matter? | Pixel Fridge", "x": 34.4, "y": 12.5, "w": 22.7, "h": 29.4, "s": 5, "crop": [0.0, 0.07108, 0.67395, 0.18402]},
+    {"k": "pic", "src": "img/fc63ec37bb.jpg", "alt": "What are affordances, and why do they matter? | Pixel Fridge", "x": 16.7, "y": 12.5, "w": 22.7, "h": 29.4, "s": 3, "crop": [0.66434, 0.06066, 0.0175, 0.19443]},
+    {"k": "shape", "x": 39.35, "y": 42.0, "w": 12.824, "h": 2.272, "s": 6, "g": "rect", "tx": {"p": [{"al": "c", "r": [{"t": "«Turn!»", "sz": 1.875, "c": "#000000"}], "sb": 0.312}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
+    {"k": "shape", "x": 3.4499999999999993, "y": 42.0, "w": 12.824, "h": 2.272, "s": 2, "g": "rect", "tx": {"p": [{"al": "c", "r": [{"t": "«Pull!»", "sz": 1.875, "c": "#000000"}], "sb": 0.312}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
+    {"k": "shape", "x": 21.65, "y": 42.0, "w": 12.824, "h": 2.272, "s": 4, "g": "rect", "tx": {"p": [{"al": "c", "r": [{"t": "«Push!»", "sz": 1.875, "c": "#000000"}], "sb": 0.312}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
+    {"k": "pic", "src": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Flamedoor.jpg", "alt": "A black double fire door with a thin crash bar on each leaf and EXIT and YANGIN CIKISI signs", "x": 59.5, "y": 11.0, "w": 11.7, "h": 28.0, "s": 7, "crop": [0.0, 0.0, 0.5, 0.0]},
+    {"k": "pic", "src": "https://inrorwxhqqmilr5p.ldycdn.com/cloud/lkBppKmiljSRolqrkqnojp/ansi-grade-1-panic-bar.png", "alt": "Close-up of a stainless steel panic bar across a glass emergency door", "x": 77.0, "y": 9.0, "w": 20.0, "h": 12.1, "s": 9},
+    {"k": "shape", "x": 55.0, "y": 39.6, "w": 21.0, "h": 4.6, "s": 8, "g": "rect", "tx": {"p": [{"al": "c", "r": [{"t": "Escape door:", "sz": 1.75, "b": 1}]}, {"al": "c", "r": [{"t": "Push or pull? Which side?", "sz": 1.75}]}], "a": "t", "i": [0, 0, 0, 0]}},
+    {"k": "shape", "x": 75.0, "y": 21.6, "w": 24.0, "h": 4.6, "s": 10, "g": "rect", "tx": {"p": [{"al": "c", "r": [{"t": "Better escape door:", "sz": 1.75, "b": 1}]}, {"al": "c", "r": [{"t": "“Press on the left” is clearly suggested.", "sz": 1.75}]}], "a": "t", "i": [0, 0, 0, 0]}},
+    {"k": "shape", "x": 60.0, "y": 53.1, "w": 29.0, "h": 1.8, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "Escape door photo: Bleatmidge, ", "sz": 0.9, "c": "#808080"}, {"t": "CC BY-SA 4.0", "sz": 0.9, "c": "#808080", "href": "https://commons.wikimedia.org/wiki/File:Flamedoor.jpg", "u": 1}, {"t": ", Wikimedia Commons", "sz": 0.9, "c": "#808080"}]}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}}
    ]
   },
   {
    "layout": "canvas",
    "title": "Classic Example: Doors",
    "items": [
-    {"k": "pic", "src": "img/7298b961d3.png", "alt": "Photo of a double door with PULL signs on both leaves", "x": 6.977, "y": 13.076, "w": 28.467, "h": 30.149, "s": 1, "crop": [0.19872, 0.22049, 0.44438, 0.10752]},
-    {"k": "shape", "x": 2.85, "y": 43.731, "w": 28.467, "h": 3.079, "s": 1, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "J. Schöning, HCI, University of St.Gallen", "sz": 0.938, "c": "#808080"}]}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
-    {"k": "pic", "src": "img/47b90c7634.jpg", "alt": "Glass door with a vertical metal handle and a small red sign with a white arrow beside it", "x": 66.5, "y": 12.2, "w": 31.0, "h": 23.25, "s": 2, "shadow": true},
-    {"k": "pic", "src": "img/a6eb5160f5.jpg", "alt": "Green wall with a horizontal metal bar and a small green sign with a white arrow above it", "x": 36.0, "y": 24.0, "w": 28.0, "h": 21.0, "s": 3, "shadow": true},
-    {"k": "shape", "x": 65.914, "y": 36.3, "w": 25.649, "h": 2.774, "s": 2, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "At Siemens Neuperlach Süd, November 2021 ", "sz": 0.938, "c": "#808080"}]}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
-    {"k": "pic", "src": "img/7a589171ee.png", "alt": "Web page of IntellIoT: powering the future of humanised IoT and AI across Europe", "x": 69.119, "y": 46.184, "w": 20.947, "h": 6.342, "s": 2, "crop": [0.08066, 0.16401, 0.77363, 0.75757]}
-   ],
-   "source": "[IntellIoT](https://intelliot.eu/), [CORDIS: project 957218](https://cordis.europa.eu/project/id/957218)"
+    {"k": "pic", "src": "img/47b90c7634.jpg", "alt": "Glass door with a vertical metal handle and a small red sign with a white arrow beside it", "x": 7, "y": 15.5, "w": 38, "h": 30.7, "s": 2, "shadow": true},
+    {"k": "shape", "x": 7, "y": 46.4, "w": 38, "h": 2.774, "s": 2, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "At Siemens Neuperlach Süd, November 2021 ", "sz": 0.938, "c": "#808080"}]}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
+    {"k": "pic", "src": "img/a6eb5160f5.jpg", "alt": "Green wall with a horizontal metal bar and a small green sign with a white arrow above it", "x": 54, "y": 15.5, "w": 38, "h": 30.7, "s": 3, "shadow": true},
+    {"k": "shape", "x": 54, "y": 46.4, "w": 38, "h": 2.774, "s": 3, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "At Siemens Neuperlach Süd, November 2021 ", "sz": 0.938, "c": "#808080"}]}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}}
+   ]
   },
   {
    "layout": "canvas",
@@ -528,8 +527,8 @@
     {"k": "shape", "x": 18.456, "y": 11.828, "w": 58.35, "h": 10.859, "g": "roundRect", "fill": "#e3edef", "ln": "#0a5f2d", "lw": 0.104},
     {"k": "shape", "x": 19.084, "y": 12.048, "w": 57.095, "h": 9.592, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "“When I say hypertext I mean the simultaneous presentation of information and controls such that the ", "sz": 1.875}, {"t": "information becomes the affordance", "sz": 1.875, "b": 1}, {"t": " through which ", "sz": 1.875}, {"t": "the user obtains choices ", "sz": 1.875, "b": 1}, {"t": "and ", "sz": 1.875}, {"t": "selects actions", "sz": 1.875, "b": 1}, {"t": ".” ", "sz": 1.875}]}, {"al": "r", "r": [{"t": "– Roy T. Fielding, ", "sz": 1.667}, {"t": "A Little REST and Relaxation", "sz": 1.667, "i": 1}, {"t": ", ApacheCon Europe, 2008", "sz": 1.667}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "pic", "src": "img/9be547d755.jpg", "alt": "roy_fielding_sq.jpg", "x": 6.663, "y": 11.758, "w": 11.107, "h": 11.219},
-    {"k": "pic", "src": "img/b72bb67fe9.png", "alt": "Image result for affordances example", "x": 9.55, "y": 27.835, "w": 12.567, "h": 25.26, "s": 3, "crop": [0.4902, 0.0, 0.0, 0.0]},
-    {"k": "pic", "src": "img/b72bb67fe9.png", "alt": "Image result for affordances example", "x": 24.917, "y": 27.835, "w": 12.36, "h": 25.26, "s": 2, "crop": [0.0, 0.0, 0.49863, 0.0]},
+    {"k": "pic", "src": "img/b72bb67fe9.png", "alt": "Image result for affordances example", "x": 9.55, "y": 27.835, "w": 12.567, "h": 25.26, "s": 2, "crop": [0.4902, 0.0, 0.0, 0.0]},
+    {"k": "pic", "src": "img/b72bb67fe9.png", "alt": "Image result for affordances example", "x": 24.917, "y": 27.835, "w": 12.36, "h": 25.26, "s": 3, "crop": [0.0, 0.0, 0.49863, 0.0]},
     {"k": "shape", "x": 5.597, "y": 24.763, "w": 37.676, "h": 3.029, "s": 1, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Affordances", "sz": 1.875, "b": 1}, {"t": " and ", "sz": 1.875}, {"t": "Misaffordances", "sz": 1.875, "b": 1}, {"t": " in everyday life", "sz": 1.875}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375], "nw": 1}},
     {"k": "shape", "x": 47.853, "y": 30.604, "w": 33.431, "h": 3.281, "s": 4, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Good and bad affordances on the Web", "sz": 2.083}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375], "nw": 1}},
     {"k": "pic", "src": "img/7c06fb17ed.png", "alt": "Computer mouse pointer free image download", "x": 71.311, "y": 43.93, "w": 3.352, "h": 3.352, "s": 7},
@@ -561,7 +560,7 @@
     {"k": "shape", "x": 3.5, "y": 17.5, "w": 24.5, "h": 9, "s": 1, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Mystery? Politics?", "sz": 1.875, "c": "#ffffff"}]}, {"al": "c", "r": [{"t": "Conspiracy theory?", "sz": 1.875, "c": "#ffffff", "b": 1}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 67.5, "y": 18.5, "w": 27, "h": 6, "s": 2, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "No! ", "sz": 1.875, "c": "#ffffff"}, {"t": "Programmer Choice…!", "sz": 1.875, "c": "#ffffff", "b": 1}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 67.5, "y": 27, "w": 29, "h": 14, "s": 3, "g": "roundRect", "fill": "#73a5af", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "An internal test locale: ", "sz": 1.458, "c": "#ffffff", "b": 1}, {"t": "“en-ss” is not a real language tag. The site keeps crawlers away from it so that test pages do not show up in search results.", "sz": 1.458, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 62, "y": 43, "w": 35, "h": 6, "s": 4, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Demo: ", "sz": 1.458, "c": "#000000"}, {"t": "a well-known post", "sz": 1.458, "c": "#00802f", "href": "https://x.com/carterjwm/status/849813577770778624", "u": 1}]}, {"al": "l", "r": [{"t": "Demo: ", "sz": 1.458, "c": "#000000"}, {"t": "the same post with ?lang=en-ss", "sz": 1.458, "c": "#00802f", "href": "https://x.com/carterjwm/status/849813577770778624?lang=en-ss", "u": 1}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}
+    {"k": "shape", "x": 67.5, "y": 43, "w": 29.5, "h": 6, "s": 4, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Demo: ", "sz": 1.458, "c": "#000000"}, {"t": "a well-known post", "sz": 1.458, "c": "#00802f", "href": "https://x.com/carterjwm/status/849813577770778624", "u": 1}]}, {"al": "l", "r": [{"t": "Demo: ", "sz": 1.458, "c": "#000000"}, {"t": "the same post with ?lang=en-ss", "sz": 1.458, "c": "#00802f", "href": "https://x.com/carterjwm/status/849813577770778624?lang=en-ss", "u": 1}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}
    ]
   },
   {
@@ -598,26 +597,14 @@
   },
   {
    "layout": "canvas",
-   "title": "The Hypermedia Way",
-   "items": [
-    {"k": "shape", "x": 3.924, "y": 12.501, "w": 41.598, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "On the Web, ", "sz": 1.875}, {"t": "contracts", "sz": 1.875, "b": 1}, {"t": " are composed of ", "sz": 1.875}, {"t": "protocols", "sz": 1.875, "b": 1}, {"t": " that refer to ", "sz": 1.875}, {"t": "media types", "sz": 1.875, "b": 1}]}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "Hyperlinks are provided by servers to inform clients about their ", "sz": 1.875}, {"t": "options", "sz": 1.875, "b": 1}, {"t": ". ", "sz": 1.875}]}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "HTTP constructs (methods, headers, status codes) specify ", "sz": 1.875}, {"t": "how", "sz": 1.875, "b": 1}, {"t": " to interact with a resource. ", "sz": 1.875}]}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "Media types help clients understand ", "sz": 1.875}, {"t": "what", "sz": 1.875, "b": 1}, {"t": " they can expect at the end of a hyperlink. ", "sz": 1.875}]}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "Link relations capture ", "sz": 1.875}, {"t": "why", "sz": 1.875, "b": 1}, {"t": " a client would want to follow a link given an agreed-upon domain model. Clients might agree about such ‘whys’ globally by agreeing on ", "sz": 1.875}, {"t": "common semantics", "sz": 1.875, "b": 1}, {"t": ".", "sz": 1.875}]}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 55.631, "y": 15.251, "w": 36.023, "h": 34.401, "s": 4, "g": "rect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "These are part of a Uniform Interface", "sz": 1.667, "c": "#ffffff"}]}, {"al": "c", "r": [{"t": "(HATEOAS, HTTP, Self-descriptive Messages)", "sz": 1.667, "c": "#ffffff"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 57.961, "y": 31.638, "w": 31.331, "h": 5.905, "s": 2, "g": "roundRect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "HATEOAS + Link Relation Types", "sz": 1.875, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 57.961, "y": 41.237, "w": 31.331, "h": 5.905, "s": 3, "g": "roundRect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Media Types + RDF Vocabularies", "sz": 1.875, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 57.961, "y": 22.078, "w": 31.331, "h": 5.905, "s": 1, "g": "roundRect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "HTTP Protocol Idioms", "sz": 1.875, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
-   ],
-   "source": "Webber, Parastatidis, Robinson: REST in Practice, 2010"
-  },
-  {
-   "layout": "canvas",
    "title": "Contracts on the Web",
    "items": [
-    {"k": "shape", "x": 3.924, "y": 12.501, "w": 51.968, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Contracts prescribe how parts of an application should interact. ", "sz": 2.083}], "s": 1}, {"al": "l", "r": [{"t": "", "sz": 2.083}]}, {"al": "l", "r": [{"t": "On the Web, we have ", "sz": 1.948}, {"t": "uniform building blocks ", "sz": 1.948, "b": 1}, {"t": "that can be combined into distributed applications, but we do ", "sz": 1.948}, {"t": "not have upfront agreement ", "sz": 1.948, "b": 1}, {"t": "about ", "sz": 1.948}, {"t": "all aspects ", "sz": 1.948, "b": 1}, {"t": "of the contracts. ", "sz": 1.948}], "s": 2}, {"al": "l", "r": [{"t": "", "sz": 2.083}]}, {"al": "l", "r": [{"t": "It is the developers’ job to:", "sz": 2.083}], "s": 4}, {"al": "l", "r": [{"t": "Know the ", "sz": 1.667}, {"t": "application domain", "sz": 1.667, "b": 1}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 5}, {"al": "l", "r": [{"t": "Use Protocols ", "sz": 1.667}, {"t": "according to their specification", "sz": 1.667, "b": 1}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 6}, {"al": "l", "r": [{"t": "Use Link Relation Types ", "sz": 1.667}, {"t": "according to their specification", "sz": 1.667, "b": 1}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 7}, {"al": "l", "r": [{"t": "Use Media Types ", "sz": 1.667}, {"t": "according to their specification", "sz": 1.667, "b": 1}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 8}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "Hypermedia then is the ", "sz": 1.948}, {"t": "run-time", "sz": 1.948, "b": 1}, {"t": " ", "sz": 1.948}, {"t": "glue", "sz": 1.948, "b": 1}, {"t": " between these building blocks", "sz": 1.948}], "s": 9}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 65.747, "y": 12.501, "w": 27.301, "h": 6.158, "s": 3, "g": "rect", "fill": "#eb6969", "ln": "#eb6969", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "This would severely undermine the Web’s ", "sz": 2.083, "c": "#ffffff"}, {"t": "openness", "sz": 2.083, "b": 1, "c": "#ffffff"}, {"t": "!", "sz": 2.083, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 55.631, "y": 17.3, "w": 36.023, "h": 32.4, "g": "rect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "These are part of a Uniform Interface", "sz": 1.667, "c": "#ffffff"}]}, {"al": "c", "r": [{"t": "(HATEOAS, HTTP, Self-descriptive Messages)", "sz": 1.667, "c": "#ffffff"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 3.924, "y": 12.501, "w": 51.968, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Contracts prescribe how parts of an application should interact. ", "sz": 2.083}], "s": 1}, {"al": "l", "r": [{"t": "", "sz": 2.083}]}, {"al": "l", "r": [{"t": "On the Web, we have ", "sz": 1.948}, {"t": "uniform building blocks ", "sz": 1.948, "b": 1}, {"t": "that can be combined into distributed applications, but we do ", "sz": 1.948}, {"t": "not have upfront agreement ", "sz": 1.948, "b": 1}, {"t": "about ", "sz": 1.948}, {"t": "all aspects ", "sz": 1.948, "b": 1}, {"t": "of the contracts. ", "sz": 1.948}], "s": 2}, {"al": "l", "r": [{"t": "", "sz": 2.083}]}, {"al": "l", "r": [{"t": "", "sz": 2.083}]}, {"al": "l", "r": [{"t": "", "sz": 2.083}]}, {"al": "l", "r": [{"t": "It is the developers’ job to:", "sz": 2.083}], "s": 4}, {"al": "l", "r": [{"t": "Know the ", "sz": 1.667}, {"t": "application domain", "sz": 1.667, "b": 1}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 5}, {"al": "l", "r": [{"t": "Use Protocols ", "sz": 1.667}, {"t": "according to their specification", "sz": 1.667, "b": 1}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 6}, {"al": "l", "r": [{"t": "Use Link Relation Types ", "sz": 1.667}, {"t": "according to their specification", "sz": 1.667, "b": 1}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 7}, {"al": "l", "r": [{"t": "Use Media Types ", "sz": 1.667}, {"t": "according to their specification", "sz": 1.667, "b": 1}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 8}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "Hypermedia then is the ", "sz": 1.948}, {"t": "run-time", "sz": 1.948, "b": 1}, {"t": " ", "sz": 1.948}, {"t": "glue", "sz": 1.948, "b": 1}, {"t": " between these building blocks", "sz": 1.948}], "s": 9}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 8.0, "y": 24.6, "w": 44.8, "h": 5.0, "s": 3, "g": "rect", "fill": "#eb6969", "ln": "#eb6969", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "This would severely undermine the Web’s ", "sz": 2.083, "c": "#ffffff"}, {"t": "openness", "sz": 2.083, "b": 1, "c": "#ffffff"}, {"t": "!", "sz": 2.083, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 57.961, "y": 31.638, "w": 31.331, "h": 5.905, "g": "roundRect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "HATEOAS + Link Relation Types", "sz": 1.875, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 57.961, "y": 41.237, "w": 31.331, "h": 5.905, "g": "roundRect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Media Types + RDF Vocabularies", "sz": 1.875, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 57.961, "y": 22.078, "w": 31.331, "h": 5.905, "g": "roundRect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "HTTP Protocol Idioms", "sz": 1.875, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 55.891, "y": 16.384, "w": 8.701, "h": 4.222, "fy": true, "g": "straightConnector1", "ln": "#00802f", "lw": 0.104, "tail": "triangle", "s": 3}
+    {"k": "shape", "x": 57.961, "y": 22.078, "w": 31.331, "h": 5.905, "g": "roundRect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "HTTP Protocol Idioms", "sz": 1.875, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ],
    "id": "contracts"
   },
@@ -711,7 +698,8 @@
      "kind": "recap"
     }
    ],
-   "cover": "Why do Back buttons exist in the first place?"
+   "cover": "Why do Back buttons exist in the first place?",
+   "refs_up": 2.6
   },
   {
    "layout": "canvas",
@@ -923,7 +911,7 @@
      "kind": "next"
     }
    ],
-   "refs_up": 2.6
+   "refs_up": 1.6
   },
   {
    "layout": "canvas",
@@ -952,7 +940,7 @@
     {"k": "shape", "x": 4.637, "y": 18.082, "w": 49.605, "h": 2.362, "rot": 180.0, "g": "rightArrow", "fill": "#e1d7c3", "ln": "#e1d7c3", "lw": 0.104},
     {"k": "shape", "x": 4.637, "y": 22.47, "w": 38.657, "h": 1.75, "g": "rect", "ln": "#ff0000", "lw": 0.365},
     {"k": "shape", "x": 4.528, "y": 13.46, "w": 33.435, "h": 1.75, "g": "rect", "ln": "#ff0000", "lw": 0.365},
-    {"k": "shape", "x": 57.649, "y": 8.444, "w": 40.146, "h": 24.001, "g": "rect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "{", "sz": 1.667, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "   \"name\":\"Star Trek IV\",", "sz": 1.667, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "   \"rating\":0.82,", "sz": 1.667, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "   \"director\":{", "sz": 1.667, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "    \"id\":\"www.rottentomatoes.com/", "sz": 1.667, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "\tcelebrity/leonard_nimoy\"", "sz": 1.667, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "   },", "sz": 1.667, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "   \"cast\":[", "sz": 1.667, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "\t(…)", "sz": 1.667, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "   ]", "sz": 1.667, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "}", "sz": 1.667, "c": "#222222", "f": "mono"}]}], "a": "t", "i": [0.886, 0.886, 0.886, 0.886]}},
+    {"k": "shape", "x": 57.649, "y": 8.444, "w": 40.146, "h": 24.001, "g": "rect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "{", "sz": 1.667, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "   \"name\":\"Star Trek IV\",", "sz": 1.667, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "   \"rating\":0.82,", "sz": 1.667, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "   \"director\":{", "sz": 1.667, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "      \"id\":\"www.rottentomatoes.com/", "sz": 1.667, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "        celebrity/leonard_nimoy\"", "sz": 1.667, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "   },", "sz": 1.667, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "   \"cast\":[", "sz": 1.667, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "      (…)", "sz": 1.667, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "   ]", "sz": 1.667, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "}", "sz": 1.667, "c": "#222222", "f": "mono"}]}], "a": "t", "i": [0.886, 0.886, 0.886, 0.886]}},
     {"k": "shape", "x": 47.951, "y": 2.208, "w": 24.491, "h": 3.26, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "HATEOAS + Link Relation Types", "sz": 1.458, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 73.344, "y": 2.208, "w": 24.491, "h": 3.26, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Media Types ", "sz": 1.458, "b": 1, "c": "#ffffff"}, {"t": "+ RDF Vocabularies", "sz": 1.458, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 29.331, "y": 2.208, "w": 17.718, "h": 3.26, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "HTTP Protocol Idioms", "sz": 1.458, "c": "#ffffff", "href": "09#http-idioms"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
@@ -996,7 +984,7 @@
     {"k": "shape", "x": 47.951, "y": 2.208, "w": 24.491, "h": 3.26, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "HATEOAS + Link Relation Types", "sz": 1.458, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 73.344, "y": 2.208, "w": 24.491, "h": 3.26, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Media Types + ", "sz": 1.458, "c": "#ffffff"}, {"t": "RDF Vocabularies", "sz": 1.458, "b": 1, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 29.331, "y": 2.208, "w": 17.718, "h": 3.26, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "HTTP Protocol Idioms", "sz": 1.458, "c": "#ffffff", "href": "09#http-idioms"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 7.172, "y": 44.8, "w": 50, "h": 5.4, "s": 3, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Anyone interested ", "sz": 2.5, "b": 1, "c": "#ffffff"}, {"t": "in searching out there?", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 7.172, "y": 44.8, "w": 50, "h": 5.4, "s": 3, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Anyone interested in ", "sz": 2.5, "c": "#ffffff"}, {"t": "searching", "sz": 2.5, "b": 1, "c": "#ffffff"}, {"t": " out there?", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "pic", "src": "img/d4e87f0cdf.jpg", "alt": "Google logo - Wikipedia", "x": 86.931, "y": 38.47, "w": 5.823, "h": 5.823},
     {"k": "pic", "src": "img/19506daaa3.png", "alt": "OpenAI Logo and symbol, meaning, history, PNG, brand", "x": 85.59, "y": 43.712, "w": 13.069, "h": 7.351}
    ],
@@ -1019,7 +1007,7 @@
     {"k": "shape", "x": 47.951, "y": 2.208, "w": 24.491, "h": 3.26, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "HATEOAS + Link Relation Types", "sz": 1.458, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 73.344, "y": 2.208, "w": 24.491, "h": 3.26, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Media Types + ", "sz": 1.458, "c": "#ffffff"}, {"t": "RDF Vocabularies", "sz": 1.458, "b": 1, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 29.331, "y": 2.208, "w": 17.718, "h": 3.26, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "HTTP Protocol Idioms", "sz": 1.458, "c": "#ffffff", "href": "09#http-idioms"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 45.5, "y": 46.0, "w": 51.0, "h": 5.4, "s": 4, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Well, we need something to discuss in the ", "sz": 1.875, "c": "#ffffff"}, {"t": "next lecture", "sz": 1.875, "c": "#ffffff", "u": 1, "b": 1, "href": "10#start"}, {"t": " as well ;-)", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
+    {"k": "shape", "x": 24.0, "y": 46.0, "w": 72.5, "h": 5.4, "s": 4, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Well, we need something to discuss in the ", "sz": 1.875, "c": "#ffffff"}, {"t": "next lecture", "sz": 1.875, "c": "#ffffff", "u": 1, "b": 1, "href": "10#start"}, {"t": " as well ;-)", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ],
    "refs": [
     {
@@ -1059,7 +1047,7 @@
    "layout": "code",
    "id": "link-location",
    "title": "Does the Link Care Where It Points?",
-   "code": "{\n  \"@context\": \"https://schema.org/\",\n  \"@type\": \"Movie\",\n  \"name\": \"Star Trek IV\",\n  \"director\": {\n    \"@id\": \"https://nimoy.example/profile#me\"\n  }\n}\n\nurl = movie[\"director\"][\"@id\"]\nperson = requests.get(url)  # a schema:Person",
+   "code": "{\n  \"@context\": \"https://schema.org/\",\n  \"@type\": \"Movie\",\n  \"name\": \"Star Trek IV\",\n  \"director\": {\n    \"@id\": \"https://**nimoy.example**/profile#me\"\n  }\n}\n\nurl = movie[\"director\"][\"@id\"]\nperson = requests.get(url)  # a schema:Person",
    "points": [
     "Before, the director's page was on **www.rottentomatoes.com**",
     "Now it is on **another server**, e.g. one the person chose",
@@ -1082,23 +1070,19 @@
    "airy": true
   },
   {
-   "layout": "section",
-   "title": "Decentralizing\nData with **Solid**",
-   "kicker": "From Guiding Clients to Separating Data from Applications"
-  },
-  {
    "layout": "quiz",
    "id": "your-rating",
    "title": "Where Does Your Rating Live?",
    "items": [
-    "You give Star Trek IV five stars and write a review: where is it stored?",
-    "Who decides who may read it, change it, or delete it?",
-    "Can another movie app show your review next to its own?",
-    "What happens to your reviews when you leave the platform?"
+    "You give Star Trek IV five stars and write a review: **where is it stored**?",
+    "**Who decides** who may read it, change it, or delete it?",
+    "Can **another movie app** show your review next to its own?",
+    "What happens to your reviews **when you leave the platform**?"
    ],
    "callout": {
     "text": "How can we decentralize data?",
-    "style": "red"
+    "style": "red",
+    "bottom": true
    }
   },
   {
@@ -1129,23 +1113,23 @@
     {"k": "shape", "x": 10, "y": 12.5, "w": 80, "h": 14, "g": "rect", "tx": {"p": [{"al": "c", "r": [{"t": "“…web applications where data storage, entity authentication, access control, and application provider are ", "sz": 2.9, "c": "#000000"}, {"t": "all loosely coupled", "sz": 2.9, "c": "#00802f", "b": 1}, {"t": "”", "sz": 2.9, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 10, "y": 26.6, "w": 80, "h": 2.6, "g": "rect", "tx": {"p": [{"al": "c", "r": [{"t": "Mission of the W3C Linked Web Storage Working Group", "sz": 1.5, "c": "#808080"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 5.0, "y": 31.6, "w": 48, "h": 3, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Benefit from decoupled data", "sz": 1.7, "c": "#00802f", "b": 1}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}, "s": 1},
-    {"k": "pic", "src": "img/logo-dff.svg", "alt": "Logo of the Digital Freedom Front: a shield with the letters DFF", "x": 5.5, "y": 35.2, "w": 8.2, "h": 8.2, "s": 1},
+    {"k": "pic", "src": "../07a-reloaded/img/role-dff.png", "alt": "Wordmark of dff", "x": 3.8999999999999995, "y": 38.53272895926138, "w": 11.4, "h": 1.5345420814772468, "s": 1},
     {"k": "shape", "x": 3.2, "y": 43.8, "w": 12.0, "h": 2.4, "g": "rect", "tx": {"p": [{"al": "c", "r": [{"t": "Digital Freedom Front", "sz": 1.05, "c": "#000000"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}, "s": 1},
     {"k": "pic", "src": "img/smiley.svg", "alt": "Smiling face", "x": 7.4, "y": 47.2, "w": 4.4, "h": 4.4, "s": 1},
-    {"k": "pic", "src": "img/logo-kestrel.svg", "alt": "Logo of the Kestrel Foundation: an orange disc with a stylised bird", "x": 17.7, "y": 35.2, "w": 8.2, "h": 8.2, "s": 1},
+    {"k": "pic", "src": "../07a-reloaded/img/role-kestrel.png", "alt": "Wordmark of kestrel", "x": 16.099999999999998, "y": 37.54368345128003, "w": 11.4, "h": 3.5126330974399376, "s": 1},
     {"k": "shape", "x": 15.4, "y": 43.8, "w": 12.0, "h": 2.4, "g": "rect", "tx": {"p": [{"al": "c", "r": [{"t": "Kestrel Foundation", "sz": 1.05, "c": "#000000"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}, "s": 1},
     {"k": "pic", "src": "img/smiley.svg", "alt": "Smiling face", "x": 19.6, "y": 47.2, "w": 4.4, "h": 4.4, "s": 1},
-    {"k": "pic", "src": "img/logo-commission.svg", "alt": "Logo of the Commission of the Continental Union: a blue field with a ring of stars", "x": 29.9, "y": 35.2, "w": 8.2, "h": 8.2, "s": 1},
+    {"k": "pic", "src": "../07a-reloaded/img/role-commission.png", "alt": "Wordmark of commission", "x": 28.3, "y": 37.82586206896551, "w": 11.4, "h": 2.9482758620689653, "s": 1},
     {"k": "shape", "x": 27.6, "y": 43.8, "w": 12.0, "h": 2.4, "g": "rect", "tx": {"p": [{"al": "c", "r": [{"t": "Continental Union", "sz": 1.05, "c": "#000000"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}, "s": 1},
     {"k": "pic", "src": "img/smiley.svg", "alt": "Smiling face", "x": 31.8, "y": 47.2, "w": 4.4, "h": 4.4, "s": 1},
-    {"k": "pic", "src": "img/logo-saentis.svg", "alt": "Logo of Säntis Industrie: a grey gear with the letter S", "x": 42.099999999999994, "y": 35.2, "w": 8.2, "h": 8.2, "s": 1},
+    {"k": "pic", "src": "../07a-reloaded/img/role-saentis.png", "alt": "Wordmark of saentis", "x": 40.49999999999999, "y": 37.362968515742125, "w": 11.4, "h": 3.8740629685157417, "s": 1},
     {"k": "shape", "x": 39.8, "y": 43.8, "w": 12.0, "h": 2.4, "g": "rect", "tx": {"p": [{"al": "c", "r": [{"t": "Säntis Industrie", "sz": 1.05, "c": "#000000"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}, "s": 1},
     {"k": "pic", "src": "img/smiley.svg", "alt": "Smiling face", "x": 44.0, "y": 47.2, "w": 4.4, "h": 4.4, "s": 1},
     {"k": "shape", "x": 63.5, "y": 31.6, "w": 30, "h": 3, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Prefer it tightly coupled", "sz": 1.7, "c": "#c0392b", "b": 1}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}, "s": 2},
-    {"k": "pic", "src": "img/logo-orinoco.svg", "alt": "Logo of Orinoco Web Services: a white cloud on a teal disc", "x": 64.0, "y": 35.2, "w": 8.2, "h": 8.2, "s": 2},
+    {"k": "pic", "src": "../07a-reloaded/img/role-orinoco.png", "alt": "Wordmark of orinoco", "x": 62.39999999999999, "y": 38.33255919210206, "w": 11.4, "h": 1.9348816157958755, "s": 2},
     {"k": "shape", "x": 61.7, "y": 43.8, "w": 12.0, "h": 2.4, "g": "rect", "tx": {"p": [{"al": "c", "r": [{"t": "Orinoco Web Services", "sz": 1.05, "c": "#000000"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}, "s": 2},
     {"k": "pic", "src": "img/sad.svg", "alt": "Sad face", "x": 65.9, "y": 47.2, "w": 4.4, "h": 4.4, "s": 2},
-    {"k": "pic", "src": "img/logo-mingle.svg", "alt": "Logo of Mingle Platforms: two chat bubbles on a pink disc", "x": 76.2, "y": 35.2, "w": 8.2, "h": 8.2, "s": 2},
+    {"k": "pic", "src": "../07a-reloaded/img/role-mingle.png", "alt": "Wordmark of mingle", "x": 76.55, "y": 37.52252335370776, "w": 7.5, "h": 3.554953292584477, "s": 2},
     {"k": "shape", "x": 73.9, "y": 43.8, "w": 12.0, "h": 2.4, "g": "rect", "tx": {"p": [{"al": "c", "r": [{"t": "Mingle Platforms", "sz": 1.05, "c": "#000000"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}, "s": 2},
     {"k": "pic", "src": "img/sad.svg", "alt": "Sad face", "x": 78.1, "y": 47.2, "w": 4.4, "h": 4.4, "s": 2}
    ]
@@ -1158,8 +1142,8 @@
     {"k": "shape", "x": 3.924, "y": 12.501, "w": 45.054, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "Idea: Decouple data storage from services and thereby ", "sz": 2.083}, {"t": "separate markets for data and services", "sz": 2.083, "b": 1, "c": "#222222"}], "pl": 0.0, "in": 0.0, "s": 1}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "Pick ", "sz": 1.667, "c": "#222222"}, {"t": "any provider ", "sz": 1.667, "b": 1, "c": "#222222"}, {"t": "(or your own Web server) to store your data in a personal data store, or in multiple stores", "sz": 1.667, "c": "#222222"}], "s": 4}, {"al": "l", "r": [{"t": "", "sz": 1.667}]}, {"al": "l", "r": [{"t": "Selectively", "sz": 1.667, "b": 1, "c": "#222222"}, {"t": " give (fine-granular) permission to services to ", "sz": 1.667, "c": "#222222"}, {"t": "access", "sz": 1.667, "b": 1, "c": "#222222"}, {"t": " your data (but not store it)", "sz": 1.667, "c": "#222222"}], "s": 5}, {"al": "l", "r": [{"t": "", "sz": 1.667}]}, {"al": "l", "r": [{"t": "Selectively", "sz": 1.667, "b": 1, "c": "#222222"}, {"t": " give (fine-granular) permission to services to ", "sz": 1.667, "c": "#222222"}, {"t": "write", "sz": 1.667, "b": 1, "c": "#222222"}, {"t": " to your personal data stores", "sz": 1.667, "c": "#222222"}], "s": 6}, {"al": "l", "r": [{"t": "", "sz": 1.667}]}, {"al": "l", "r": [{"t": "Change or revoke ", "sz": 1.667, "b": 1, "c": "#222222"}, {"t": "these permissions at any time", "sz": 1.667, "c": "#222222"}], "s": 7}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 0.0, "y": -1.136, "w": 0.001, "h": 2.272, "g": "rect", "fill": "#ffffff"},
     {"k": "pic", "src": "img/4efbe6b610.png", "alt": "Diagram comparing a single market of centralized apps with separate data and app markets, where data pods compete on storage and service quality", "x": 55.3, "y": 14.6, "w": 42.0, "h": 20.8, "s": 2, "crop": [0.01569, 0.3215, 0.38778, 0.1535], "shadow": true},
-    {"k": "shape", "x": 17.371, "y": 49.3, "w": 27, "h": 3.2, "s": 8, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Sounds ", "sz": 1.875, "c": "#ffffff"}, {"t": "a bit", "sz": 1.875, "c": "#ffffff", "i": 1}, {"t": " like ", "sz": 1.875, "c": "#ffffff"}, {"t": "transclusion", "sz": 1.875, "b": 1, "c": "#ffffff"}, {"t": "…", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 49.5, "y": 20.5, "w": 5.4, "h": 5.0, "s": 3, "g": "rightArrow", "fill": "#00802f", "ln": "#001307", "lw": 0.104}
+    {"k": "shape", "x": 44.0, "y": 45.2, "w": 27, "h": 3.2, "s": 8, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Sounds ", "sz": 1.875, "c": "#ffffff"}, {"t": "a bit", "sz": 1.875, "c": "#ffffff", "i": 1}, {"t": " like ", "sz": 1.875, "c": "#ffffff"}, {"t": "transclusion", "sz": 1.875, "b": 1, "c": "#ffffff"}, {"t": "…", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 82.3, "y": 37.0, "w": 5.4, "h": 5.0, "s": 3, "g": "rightArrow", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "rot": 270}
    ],
    "id": "personal-data",
    "source": "[SocietyByte 2021](https://www.societybyte.swiss/en/2021/01/07/part-1-power-to-the-people-re-decentralizing-the-web-for-good-this-time/), [The Economist 2008](https://www.economist.com/leaders/2008/03/19/break-down-these-walls), [Medium: How Solid is Tim’s plan to redecentralize the web?](https://medium.com/@shevski/how-solid-is-tims-plan-to-redecentralize-the-web-b163ba78e835)",
@@ -1224,33 +1208,16 @@
   },
   {
    "layout": "code",
-   "id": "webid",
-   "title": "WebID: A URI for Every Agent",
-   "code": "# GET https://solid.example.org/pitas-g3/profile/card\n@prefix foaf:  <http://xmlns.com/foaf/0.1/> .\n@prefix solid: <http://www.w3.org/ns/solid/terms#> .\n@prefix pim:   <http://www.w3.org/ns/pim/space#> .\n@prefix ldp:   <http://www.w3.org/ns/ldp#> .\n\n<#me> a foaf:Agent ;\n  foaf:name \"PITAS auction house of group 3\" ;\n  solid:oidcIssuer <https://solid.example.org/> ;\n  pim:storage <../> ;\n  solid:publicTypeIndex <../settings/publicTypeIndex.ttl> ;\n  ldp:inbox <../inbox/> .",
-   "points": [
-    "The WebID `…/card#me` names the agent; the document `…/card` describes it",
-    "Dereferencing the WebID tells a client who vouches for the agent (`solid:oidcIssuer`), where its pod is (`pim:storage`) and where to look for its data (`solid:publicTypeIndex`)",
-    "An agent can be a person, an organisation, or a piece of software: in PITAS, every participating entity"
-   ],
-   "caption": "The profile is RDF in Turtle; relative URIs like `<../>` are resolved against the document.",
-   "refs": [
-    {
-     "to": "08#uris",
-     "kind": "recap"
-    }
-   ]
-  },
-  {
-   "layout": "code",
    "id": "pod-tree",
    "title": "A Pod Is a Tree of Resources",
-   "code": "https://solid.example.org/pitas-g3/\n    profile/card#me               # WebID document\n    settings/publicTypeIndex.ttl  # what lives where\n    pitas/\n        auctions/                 # LDP container\n            a-001.ttl             # the auction record\n            a-001/\n                bids/             # append-only container\n                    b-8f2c.ttl\n        workers/                  # registered workers",
+   "code": "https://solid.example.org/pitas-g3/\n  profile/card#me               # WebID document\n  settings/publicTypeIndex.ttl  # what lives where\n  pitas/\n    auctions/                   # LDP container\n      a-001.ttl                 # auction record\n      a-001/\n        bids/                   # append-only\n          b-8f2c.ttl\n    workers/                    # registered workers",
    "points": [
-    "Containers end with `/` and list their members with `ldp:contains`",
-    "Resources are RDF documents (Turtle, JSON-LD) or any other file: pictures, PDFs",
-    "Every resource has its own URI, so data in one pod can link to data in any other pod"
+    "**Containers** end with `/` and list their members with `ldp:contains`",
+    "Resources are **RDF documents** (Turtle, JSON-LD) or any other file: pictures, PDFs",
+    "Every resource has **its own URI**, so data in one pod can **link to data in any other pod**"
    ],
-   "caption": "One possible layout of an auction house's pod, from the Assignment 9 sheet. The task force decides the real one."
+   "caption": "One possible layout of an auction house's pod, from the Assignment 9 sheet. The task force decides the real one.",
+   "airy": true
   },
   {
    "layout": "table",
@@ -1310,9 +1277,6 @@
    "layout": "code",
    "id": "wac",
    "title": "Who May Do What? Web Access Control",
-   "callout": {
-    "text": "Why may bidders append to the bids container, but not write to it?"
-   },
    "code": "# /pitas-g3/pitas/auctions/a-001/bids/.acl\n@prefix acl:  <http://www.w3.org/ns/auth/acl#> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\n<#submit> a acl:Authorization ;\n    acl:agentClass foaf:Agent ;\n    acl:accessTo   <./> ;\n    acl:default    <./> ;\n    acl:mode       acl:Append .\n\n<#house> a acl:Authorization ;\n    acl:agent    </pitas-g3/profile/card#me> ;\n    acl:accessTo <./> ;\n    acl:default  <./> ;\n    acl:mode     acl:Read, acl:Write, acl:Control .",
    "points": [
     "Modes: `Read`, `Write`, `Append` (add, **never remove**) and `Control` (**change the rules**)",
@@ -1361,52 +1325,10 @@
    ]
   },
   {
-   "layout": "text",
-   "id": "digital-sovereignty",
-   "title": "Digital Sovereignty: Whose Rules Apply to Your Data?",
-   "callout": {
-    "text": "Is sovereignty about where data sits, or about who can switch it off?"
-   },
-   "points": [
-    "**Jurisdiction follows the provider**, not the data center: the US CLOUD Act (2018) reaches data stored abroad",
-    "**Schrems II** (2020) struck down the EU-US Privacy Shield; its 2023 successor remains contested",
-    "Europe answers with law and infrastructure: **GDPR**, the **Data Act**, **Gaia-X**",
-    "**Dependency is leverage**: a few non-European hyperscalers run most of Europe's cloud"
-   ],
-   "airy": true
-  },
-  {
    "layout": "transclude",
    "title": "Performant, but Not Fault-Tolerant",
    "to": "08#outage",
    "static": true
-  },
-  {
-   "layout": "text",
-   "id": "sovereignty",
-   "title": "Data Sovereignty: Who Owns What?",
-   "callout": {
-    "text": "Who owns auctions, bids, and awards?"
-   },
-   "points": [
-    "Task data stays with the client: input and result live in the client's pod; no one else keeps a copy",
-    "Worker details stay with the worker: the house knows only the WebID",
-    "Persistence moves to pods: apps recover from them",
-    {
-     "text": "You work out the full rule set and decide who owns:",
-     "sub": [
-      "the auction: the house or the client?",
-      "a bid: the bidder or the house?",
-      "an award: the house or the winner?"
-     ]
-    }
-   ],
-   "refs": [
-    {
-     "to": "09#data-decentralization",
-     "kind": "recap"
-    }
-   ]
   },
   {
    "layout": "canvas",
@@ -1441,39 +1363,25 @@
    "source": "Zihlmann, Garcia, Mayer, Tamò-Larrieux: A right to repair privacy-invasive services: Is a new, more holistic European approach emerging? International Conference on Privacy-Friendly and Trustworthy Technology for Society, 2022"
   },
   {
-   "layout": "task",
-   "id": "solid-pod-task",
-   "title": "Get Your Pod",
-   "stamp": "Register your group's WebIDs and pods this week!",
-   "paragraphs": [
-    "We host a Community Solid Server for the PITAS ecosystem. Register the accounts, WebIDs, and pods your design needs.",
-    "Better still, run a second one on your group VM: `npx @solid/community-server`. The ecosystem must work with pods on more than one server. A server on your laptop is fine for development, but it is not part of the ecosystem."
+   "layout": "text",
+   "id": "digital-sovereignty",
+   "title": "Digital Sovereignty: Whose Rules Apply to Your Data?",
+   "callout": {
+    "text": "Is sovereignty about where data sits, or about who can switch it off?"
+   },
+   "points": [
+    "**Jurisdiction follows the provider**, not the data center: the [US CLOUD Act](https://www.congress.gov/bill/115th-congress/house-bill/4943) (2018) reaches data stored abroad",
+    "**[Schrems II](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62018CJ0311)** (2020) struck down the EU-US Privacy Shield; its 2023 successor remains contested",
+    "Europe answers with law and infrastructure: **[GDPR](https://eur-lex.europa.eu/eli/reg/2016/679/oj)**, the **[Data Act](https://eur-lex.europa.eu/eli/reg/2023/2854/oj)**, **[Gaia-X](https://gaia-x.eu)**",
+    "**Dependency is leverage**: a few non-European hyperscalers run most of Europe's cloud"
    ],
-   "url": "https://solid.interactions.ics.unisg.ch/",
-   "label": "solid.interactions.ics.unisg.ch"
+   "airy": true
   },
   {
    "layout": "section",
    "id": "sosy",
    "title": "Solid Symposium 2027\nin **St.Gallen**",
    "kicker": "SoSy 27, 10 to 12 May 2027"
-  },
-  {
-   "layout": "text",
-   "id": "sosy-announcement",
-   "title": "SoSy 27: The Solid Community Comes to St.Gallen",
-   "points": [
-    "The 5th Solid Symposium, the annual meeting of the Solid community since 2023",
-    "**Mon 10 May 2027**, Solid Open Day on digital sovereignty, open to the public: a student hack, an onboarding session for your first pod, an evening event in German",
-    "**Tue 11 and Wed 12 May 2027**, the symposium: keynotes, peer-reviewed papers, posters and demos, community sessions",
-    "At SQUARE on our campus, organised by the Future Society Hub, ICS-HSG, and ILE-HSG",
-    "[sosy2027.org](https://sosy2027.org/)"
-   ],
-   "aside": {
-    "image": "img/sosy-square-aerial.jpg",
-    "alt": "Aerial view of the SQUARE building on the HSG campus above the city of St. Gallen, with the Säntis massif on the horizon"
-   },
-   "source": "Picture: [sosy2027.org](https://sosy2027.org/)"
   },
   {
    "layout": "web",
@@ -1483,39 +1391,39 @@
   {
    "layout": "text",
    "id": "sosy-invitation",
-   "title": "Two Invitations: Join and Help!",
-   "callout": {
-    "text": "Who wants to join, and who wants to help?"
-   },
+   "title": "Join? Help?",
    "groups": [
     {
-     "heading": "1 Join",
+     "heading": "Join: build it, show it",
      "points": [
-      "Hack at the Solid Open Day on 10 May: your Assignment 9 work is a head start",
-      "Show your PITAS app as a poster or demo (submissions in February 2027)",
-      "Meet the Solid community: researchers, developers, practitioners"
+      "**Hack** at the Solid Open Day on 10 May: turn your Assignment 9 pod into a working app",
+      "**Demo** your PITAS app as a poster (submissions in February 2027)",
+      "**Meet** the people who build Solid"
      ]
     },
     {
-     "heading": "2 Help",
+     "heading": "Help: shape the event",
      "points": [
-      "Help us run the Open Day, the student hack, and the symposium",
+      "Help us run the Open Day, the hack, and the symposium",
       "Write to fuso@unisg.ch or talk to us after the lecture"
      ]
     }
-   ]
+   ],
+   "airy": true
   },
   {
    "layout": "questions",
    "title": "Any Questions / Comments / Doubts / Concerns?",
    "points": [
-    "Hypermedia lets clients find their next action at run time, as affordances do for people",
-    "Link relation types and media types tell a client why to follow a link and how to read the result",
-    "Solid separates data from apps: data lives in pods that its owners control",
-    "From a WebID, a client finds identity provider, storage, and type index",
-    "Access rules live in the pod, not in each app's code"
+    "**Hypermedia** lets clients find their **next action at run time**, as affordances do for people",
+    "**Link relation types** and **media types** tell a client **why** to follow a link and **how** to read the result",
+    "Solid **separates data from apps**: data lives in **pods** that its owners control",
+    "From a **WebID**, a client finds **identity provider**, **storage**, and **type index**",
+    "**Access rules live in the pod**, not in each app's code"
    ]
   }
  ],
- "ref_label": "Lecture 9"
+ "ref_label": "Lecture 9",
+ "pdf": "../ASSE-09-Ecosystems-2026-11-22.pdf",
+ "pdf_version": "22.11.2026"
 }

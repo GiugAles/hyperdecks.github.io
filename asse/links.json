@@ -340,11 +340,6 @@
   ],
   [
    "09",
-   "WebID: A URI",
-   "webid"
-  ],
-  [
-   "09",
    "A Pod Is a Tree",
    "pod-tree"
   ],
@@ -367,11 +362,6 @@
    "09",
    "Solid Notification",
    "solid-notifications"
-  ],
-  [
-   "09",
-   "Data Sovereignty",
-   "sovereignty"
   ],
   [
    "09",
@@ -926,26 +916,6 @@
    [
     [
      "09#hypermedia-way",
-     "recap"
-    ]
-   ]
-  ],
-  [
-   "09",
-   "Data Sovereignty",
-   [
-    [
-     "09#data-decentralization",
-     "recap"
-    ]
-   ]
-  ],
-  [
-   "09",
-   "WebID: A URI",
-   [
-    [
-     "08#uris",
      "recap"
     ]
    ]
