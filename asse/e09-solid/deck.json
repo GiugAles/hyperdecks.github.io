@@ -74,7 +74,7 @@
   {
    "layout": "image",
    "title": "About the Exercise: Setup and Commission",
-   "image": "https://solid.interactions.ics.unisg.ch/mcs-asse/slides/assets/sovereignty-deployment-step1.svg",
+   "image": "img/sovereignty-deployment-step1.svg",
    "shadow": false,
    "alt": "Deployment diagram with Client, ClientPod, Auctioneer, an EventQueue, an AuctionHousePods group with AuctioneerPod and BidderPod, a PITAS application with Bidder, pitas-jobs and pitas-scheduler, and pitas-worker-pool, and a Worker with WorkerPod. Steps 1 to 8 show, in green: the Worker registers its WebID with pitas-worker-pool, writes its details to WorkerPod, and the pool stores the WebID in BidderPod. The Client writes the task input to ClientPod and commissions the task with a link. The Auctioneer creates the auction in AuctioneerPod and pushes an auction event, which the EventQueue delivers to the Bidder.",
    "notes": "This flow is one example of how the sovereignty rules can work. Your implementation can differ from it."
@@ -82,7 +82,7 @@
   {
    "layout": "image",
    "title": "About the Exercise: Bidding and Award",
-   "image": "https://solid.interactions.ics.unisg.ch/mcs-asse/slides/assets/sovereignty-deployment-step2.svg",
+   "image": "img/sovereignty-deployment-step2.svg",
    "shadow": false,
    "alt": "Deployment diagram with Client, ClientPod, Auctioneer, an EventQueue, an AuctionHousePods group with AuctioneerPod and BidderPod, a PITAS application with Bidder, pitas-jobs and pitas-scheduler, and pitas-worker-pool, and a Worker with WorkerPod. Steps 1 to 8 show in black. Steps 9 to 16 show in green: the Bidder reads the auction, fetches the registered Worker WebIDs and the worker details from WorkerPod, evaluates the auction and appends a bid to AuctioneerPod. The Auctioneer reads the bids, evaluates them and writes the award.",
    "notes": "This flow is one example of how the sovereignty rules can work. Your implementation can differ from it."
@@ -90,7 +90,7 @@
   {
    "layout": "image",
    "title": "About the Exercise: Award and Execution",
-   "image": "https://solid.interactions.ics.unisg.ch/mcs-asse/slides/assets/sovereignty-deployment-step3.svg",
+   "image": "img/sovereignty-deployment-step3.svg",
    "shadow": false,
    "alt": "Deployment diagram with Client, ClientPod, Auctioneer, an EventQueue, an AuctionHousePods group with AuctioneerPod and BidderPod, a PITAS application with Bidder, pitas-jobs and pitas-scheduler, and pitas-worker-pool, and a Worker with WorkerPod. Steps 1 to 16 show in black. Steps 17 to 23 show in green: the Auctioneer pushes an award event, the EventQueue delivers it, the Bidder reads the award and hands the won job over to pitas-jobs, which dispatches it to the Worker. The Worker fetches the task input from ClientPod and executes it without keeping a copy.",
    "notes": "This flow is one example of how the sovereignty rules can work. Your implementation can differ from it."
@@ -98,7 +98,7 @@
   {
    "layout": "image",
    "title": "About the Exercise: Result Back to the Client",
-   "image": "https://solid.interactions.ics.unisg.ch/mcs-asse/slides/assets/sovereignty-deployment-step4.svg",
+   "image": "img/sovereignty-deployment-step4.svg",
    "shadow": false,
    "alt": "Deployment diagram with Client, ClientPod, Auctioneer, an EventQueue, an AuctionHousePods group with AuctioneerPod and BidderPod, a PITAS application with Bidder, pitas-jobs and pitas-scheduler, and pitas-worker-pool, and a Worker with WorkerPod. Steps 1 to 23 show in black. Steps 24 to 30 show in green: the Worker appends the result to ClientPod and reports execution done, the Bidder polls the job status and pushes a result event, the EventQueue delivers it to the Auctioneer, which notifies the Client with a link, and the Client reads the result from ClientPod.",
    "notes": "This flow is one example of how the sovereignty rules can work. Your implementation can differ from it."
