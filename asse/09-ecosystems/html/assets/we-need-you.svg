@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="Poster: We need you">
+  <rect width="600" height="600" rx="28" fill="#00802f"/>
+  <rect x="22" y="22" width="556" height="556" rx="18" fill="none" stroke="#fff" stroke-width="4" opacity=".6"/>
+  <text x="300" y="200" text-anchor="middle" font-family="Gillius ADF No2, Arial, sans-serif" font-weight="700" font-size="84" fill="#fff" letter-spacing="3">WE NEED</text>
+  <text x="300" y="380" text-anchor="middle" font-family="Gillius ADF No2, Arial, sans-serif" font-weight="700" font-size="190" fill="#ffd84d" letter-spacing="4">YOU</text>
+  <rect x="120" y="410" width="360" height="10" rx="5" fill="#ffd84d"/>
+</svg>

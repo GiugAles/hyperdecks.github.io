@@ -1409,7 +1409,12 @@
      ]
     }
    ],
-   "airy": true
+   "airy": true,
+   "aside": {
+    "image": "img/we-need-you.svg",
+    "alt": "A green poster in the style of a recruitment poster: We need you, with a pointing hand",
+    "shadow": false
+   }
   },
   {
    "layout": "questions",
