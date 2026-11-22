@@ -42,7 +42,7 @@ left to right direction
 !if $a > $LAST
 !return "#transparent"
 !elseif ($a >= $FIRST && $a <= $LAST) || ($b >= $FIRST && $b <= $LAST) || ($c >= $FIRST && $c <= $LAST)
-!return "#00802F"
+!return "#00802F,thickness=3"
 !else
 !return "#181818"
 !endif
