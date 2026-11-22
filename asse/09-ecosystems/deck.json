@@ -1394,10 +1394,9 @@
    "title": "Join? Help?",
    "groups": [
     {
-     "heading": "Join: build it, show it",
+     "heading": "Join: build it, meet us",
      "points": [
-      "**Hack** at the Solid Open Day on 10 May: turn your Assignment 9 pod into a working app",
-      "**Demo** your PITAS app as a poster (submissions in February 2027)",
+      "**Hack** at the Solid Open Day on 10 May",
       "**Meet** the people who build Solid"
      ]
     },
@@ -1405,7 +1404,7 @@
      "heading": "Help: shape the event",
      "points": [
       "Help us run the Open Day, the hack, and the symposium",
-      "Write to fuso@unisg.ch or talk to us after the lecture"
+      "Write to sosy@unisg.ch or talk to us after the lecture"
      ]
     }
    ],
@@ -1420,11 +1419,11 @@
    "layout": "questions",
    "title": "Any Questions / Comments / Doubts / Concerns?",
    "points": [
-    "**Hypermedia** lets clients find their **next action at run time**, as affordances do for people",
-    "**Link relation types** and **media types** tell a client **why** to follow a link and **how** to read the result",
-    "Solid **separates data from apps**: data lives in **pods** that its owners control",
-    "From a **WebID**, a client finds **identity provider**, **storage**, and **type index**",
-    "**Access rules live in the pod**, not in each app's code"
+    "**Decoupling** is a design choice: fix what never changes, couple only on that",
+    "**Affordances** guide people, **hypermedia** guides clients: the next action is found at run time",
+    "**Link relation types** and **media types** say why to follow a link and how to read the result",
+    "**Solid** decouples data from apps: **pods** that owners control, found from a **WebID**",
+    "**Digital sovereignty**: who can switch your data off, and whose rules apply?"
    ]
   }
  ],
