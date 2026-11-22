@@ -29,9 +29,9 @@ ASSETS = ROOT / "assets"
 GREEN, DARK_GREEN = "#00802F", "#0A5F2D"
 SALMON, TEAL, SAND, YELLOW = "#EB6969", "#73A5AF", "#E1D7C3", "#FFF04B"
 ROW_A, ROW_B = "#CBD8CD", "#E7EDE8"   # table rows: green at 20% and 10% on white
-BOX_STYLES = ("green", "outline", "teal")
+BOX_STYLES = ("green", "outline", "teal", "red")
 
-COMMON = {"layout", "title", "lead", "callout", "source", "source_at", "notes", "time", "id", "refs", "refs_at", "decor",
+COMMON = {"layout", "title", "lead", "callout", "source", "source_at", "notes", "time", "id", "refs", "refs_at", "refs_up", "airy", "decor",
           "transition"}   # transition: copied from PowerPoint
 NO_LEAD = {"title", "section", "task", "quote"}
 # layout: (required fields, optional fields)
@@ -51,7 +51,8 @@ LAYOUTS = {
     "people":    ({"title", "items"}, set()),
     "quote":     ({"title"}, {"attribution", "picture", "points"}),
     "syllabus":  ({"title", "items"}, {"current", "break_after", "assignments"}),
-    "transclude": ({"title", "to"}, set()),                # a slide of another deck, transcluded live when the page opens ("to" as in refs)
+    "web":       ({"title", "url"}, {"caption"}),                  # a live web page shown in a frame
+    "transclude": ({"title", "to"}, {"static", "cover"}),                # a slide of another deck, transcluded live when the page opens ("to" as in refs)
     "canvas":    ({"title"}, {"items", "bg", "ta"}),       # a slide copied from PowerPoint by pptx_canvas.py; the title may be ""
 }
 ITEM_KEYS = {
@@ -167,6 +168,8 @@ def check(deck, base):
         return errors, warnings
 
     def need_file(p, where):
+        if isinstance(p, str) and p.startswith(("http://", "https://")):
+            return                                       # referenced by address, not stored in the deck
         if not isinstance(p, str) or not (base / p).is_file():
             errors.append(f"{where}: file not found: {p}")
 
@@ -258,6 +261,8 @@ def check(deck, base):
                             errors.append(f"{w}, ref {i}: {e}")
         for m_ in INLINE_REF.finditer(words(s)):
             need_ref(m_.group(2), f"{w}, link [{m_.group(1)}]")
+        if lay == "web" and not str(s.get("url", "")).startswith(("http://", "https://")):
+            errors.append(f"{w}: 'url' must start with http:// or https://")
         if lay == "transclude":
             need_ref(s.get("to"), f"{w}, transclude")
         if lay == "syllabus":
@@ -297,10 +302,11 @@ def check(deck, base):
             warnings.append(f"{w}: text contains a dash used as punctuation; rewrite the sentence")
         if s.get("callout") is not None:
             c = s["callout"]
-            if isinstance(c, dict) and "wide" in c:
-                if not isinstance(c["wide"], bool):
-                    errors.append(f"{w}, callout: 'wide' must be true or false")
-                c = {k: v for k, v in c.items() if k != "wide"}
+            if isinstance(c, dict) and ("wide" in c or "bottom" in c):
+                for flag in ("wide", "bottom"):
+                    if flag in c and not isinstance(c[flag], bool):
+                        errors.append(f"{w}, callout: '{flag}' must be true or false")
+                c = {k: v for k, v in c.items() if k not in ("wide", "bottom")}
             need_box(c, f"{w}, callout")
 
         items = s.get("items")

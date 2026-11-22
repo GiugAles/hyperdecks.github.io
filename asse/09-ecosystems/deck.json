@@ -50,10 +50,10 @@
    "title": "Review: Principled Architectural Design",
    "items": [
     {"k": "pic", "src": "img/130cbf7593.jpg", "alt": "Colourful hand-lettered sign: required reading, with a drawing of a book", "x": 6.491, "y": 15.771, "w": 12.043, "h": 11.826, "crop": [0.0, 0.0, 0.0, 0.08171]},
-    {"k": "pic", "src": "img/b69247b58d.png", "alt": "Table from a paper: summary of the A+REST architectural style, with client, notifying origin server, watch and notify, and a global clock", "x": 5.388, "y": 32.588, "w": 38.083, "h": 16.578, "s": 1},
+    {"k": "pic", "src": "img/b69247b58d.png", "alt": "Table from a paper: summary of the A+REST architectural style, with client, notifying origin server, watch and notify, and a global clock", "x": 5.388, "y": 32.588, "w": 38.083, "h": 16.578},
     {"k": "shape", "x": 18.534, "y": 14.498, "w": 58.513, "h": 6.058, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Khare and Taylor (2004): ", "sz": 1.458}, {"t": "Extending the Representational State Transfer (REST) architectural style for decentralized systems", "sz": 1.458, "b": 1, "c": "#333333"}, {"t": ". IEEE International Conference on Software Engineering,  ", "sz": 1.458, "c": "#333333"}, {"t": "https://ieeexplore.ieee.org/document/1317465", "sz": 1.458, "href": "https://ieeexplore.ieee.org/document/1317465"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "pic", "src": "img/ec568a9e5a.png", "alt": "Sequence diagram of the Observer design pattern: registration followed by three notifications from subject to observer", "x": 73.585, "y": 27.008, "w": 24.793, "h": 21.571, "s": 3},
-    {"k": "pic", "src": "img/2a9d5c7425.png", "alt": "Text of the IETF RFC 7641, Observing Resources in the Constrained Application Protocol (CoAP)", "x": 46.317, "y": 22.327, "w": 27.836, "h": 18.991, "s": 2, "shadow": true}
+    {"k": "pic", "src": "img/ec568a9e5a.png", "alt": "Sequence diagram of the Observer design pattern: registration followed by three notifications from subject to observer", "x": 73.585, "y": 27.008, "w": 24.793, "h": 21.571},
+    {"k": "pic", "src": "img/2a9d5c7425.png", "alt": "Text of the IETF RFC 7641, Observing Resources in the Constrained Application Protocol (CoAP)", "x": 46.317, "y": 22.327, "w": 27.836, "h": 18.991, "shadow": true}
    ],
    "refs": [
     {
@@ -70,10 +70,11 @@
    "layout": "canvas",
    "title": "PlugFest Preview",
    "items": [
-    {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "Introduction to PlugFests (Matthias)", "sz": 1.948}], "pl": 3.75, "in": -3.75, "bu": "1.", "s": 1}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 3.75, "in": -3.75}, {"al": "l", "r": [{"t": "PlugFesting (according to a plan)", "sz": 1.948}], "pl": 3.75, "in": -3.75, "bu": "2.", "s": 2}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 3.75, "in": -3.75}, {"al": "l", "r": [{"t": "PlugFeasting (we’ll take care of food+drinks)", "sz": 1.948}], "pl": 3.75, "in": -3.75, "bu": "3.", "s": 3}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 3.75, "in": -3.75}, {"al": "l", "r": [{"t": "PlugSucceeding", "sz": 1.948}], "pl": 3.75, "in": -3.75, "bu": "4.", "s": 4}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 0.0, "in": 0.0}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "Introduction to PlugFests", "sz": 1.948}], "pl": 3.75, "in": -3.75, "bu": "1.", "s": 1}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 3.75, "in": -3.75}, {"al": "l", "r": [{"t": "PlugFesting (according to a plan)", "sz": 1.948}], "pl": 3.75, "in": -3.75, "bu": "2.", "s": 2}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 3.75, "in": -3.75}, {"al": "l", "r": [{"t": "PlugFeasting (we’ll take care of food+drinks)", "sz": 1.948}], "pl": 3.75, "in": -3.75, "bu": "3.", "s": 3}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 3.75, "in": -3.75}, {"al": "l", "r": [{"t": "PlugSucceeding", "sz": 1.948}], "pl": 3.75, "in": -3.75, "bu": "4.", "s": 4}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 1.948}], "pl": 0.0, "in": 0.0}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 47.342, "y": 8.357, "w": 41.358, "h": 10.011, "s": 5, "g": "roundRect", "fill": "#73a5af", "ln": "#101a1c", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "\"", "sz": 1.875, "c": "#ffffff"}, {"t": "be conservative in what you do, be liberal in what you accept from others", "sz": 1.875, "i": 1, "c": "#ffffff"}, {"t": "“", "sz": 1.875, "c": "#ffffff"}]}, {"al": "r", "r": [{"t": "- Postel’s Law", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 55.89, "y": 17.672, "w": 41.358, "h": 10.011, "s": 5, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Be conservative in what you send, be liberal in what you accept (e.g., for HTTP Header Fields)", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "pic", "src": "img/aae5dc1e47.png", "alt": "Chat message from a student: at least two groups can now communicate via WebSub, so we beat last year", "x": 12.454, "y": 34.717, "w": 55.321, "h": 11.096, "s": 4, "crop": [0.33463, 0.24801, 0.30509, 0.62353], "shadow": true}
+    {"k": "pic", "src": "img/aae5dc1e47.png", "alt": "Chat message from a student: at least two groups can now communicate via WebSub, so we beat last year", "x": 12.454, "y": 34.717, "w": 55.321, "h": 11.096, "s": 4, "crop": [0.33463, 0.24801, 0.30509, 0.62353], "shadow": true},
+    {"k": "shape", "x": 3.924, "y": 46.7, "w": 62, "h": 5.3, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Tuesday, 24.11.2026, 17:00", "sz": 2.2, "b": 1, "c": "#ffffff"}, {"t": "  |  Room 61-110 (Lab Room)", "sz": 2.2, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ],
    "id": "plugfest-preview",
    "refs": [
@@ -201,10 +202,10 @@
    "layout": "canvas",
    "title": "Ecosystems: Beyond individual requests!",
    "items": [
-    {"k": "shape", "x": 3.924, "y": 12.501, "w": 48.907, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "Until now, we considered individual requests and responses", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "Remember Cherrybot and Piebot (and the RPCbot, RMIbot, CORBAbot, CoHbot, gRPCbot, MQTTbot,…)?", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "How to create an application that moves the closer robot’s gripper to a target object at location l0?", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 59.585, "y": 3.814, "w": 19.464, "h": 15.349, "g": "rect", "fill": "#ffffff", "ln": "#00802f", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "Cherrybot", "sz": 2.083, "b": 1, "c": "#000000"}]}, {"al": "l", "r": [{"t": "", "sz": 1.458}]}, {"al": "l", "r": [{"t": "getPosition() ", "sz": 1.458, "f": "mono", "c": "#000000"}, {"t": "returns (x,y,z,dx,dy,dz)", "sz": 1.458, "c": "#000000"}]}, {"al": "l", "r": [{"t": "", "sz": 1.458}]}, {"al": "l", "r": [{"t": "moveToTarget(x,y,z,dx,dy,dz)", "sz": 1.0, "f": "mono", "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 3.924, "y": 12.501, "w": 55, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "Until now, we considered individual requests and responses", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "Remember Cherrybot and Piebot (and the RPCbot, RMIbot, CORBAbot, CoHbot, gRPCbot, MQTTbot,…)?", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "How to create an application that moves the gripper of the ", "sz": 1.948}, {"t": "robot that is closer to a target", "sz": 1.948, "b": 1}, {"t": " object at location loc0 to it?", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 59.585, "y": 7.314, "w": 19.464, "h": 15.349, "g": "rect", "fill": "#ffffff", "ln": "#00802f", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "Cherrybot", "sz": 2.083, "b": 1, "c": "#000000"}]}, {"al": "l", "r": [{"t": "", "sz": 1.458}]}, {"al": "l", "r": [{"t": "getPosition() ", "sz": 1.458, "f": "mono", "c": "#000000"}, {"t": "returns (x,y,z,dx,dy,dz)", "sz": 1.458, "c": "#000000"}]}, {"al": "l", "r": [{"t": "", "sz": 1.458}]}, {"al": "l", "r": [{"t": "moveToTarget(x,y,z,dx,dy,dz)", "sz": 1.0, "f": "mono", "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 73.366, "y": 16.922, "w": 19.464, "h": 15.349, "g": "rect", "fill": "#ffffff", "ln": "#00802f", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "Piebot", "sz": 2.083, "b": 1, "c": "#000000"}]}, {"al": "l", "r": [{"t": "", "sz": 1.667}]}, {"al": "l", "r": [{"t": "getPosition() ", "sz": 1.458, "f": "mono", "c": "#000000"}, {"t": "returns (x,y,z,dx,dy,dz)", "sz": 1.458, "c": "#000000"}]}, {"al": "l", "r": [{"t": "", "sz": 1.458}]}, {"al": "l", "r": [{"t": "moveToTarget(x,y,z,dx,dy,dz)", "sz": 1.0, "f": "mono", "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 31.537, "y": 35.876, "w": 56.74, "h": 15.924, "s": 1, "g": "rect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "cherrybot = myIDLmagic(cherryAddress);", "sz": 1.458, "f": "mono", "c": "#ffffff"}]}, {"al": "l", "r": [{"t": "piebot = myIDLmagic(pieAddress);", "sz": 1.458, "f": "mono", "c": "#ffffff"}]}, {"al": "l", "r": [{"t": "", "sz": 1.458}]}, {"al": "l", "r": [{"t": "chosenbot = piebot;", "sz": 1.458, "f": "mono", "c": "#ffffff"}]}, {"al": "l", "r": [{"t": "if (cherrybot.getPosition() – l0 < piebot.getPosition() – l0)", "sz": 1.458, "f": "mono", "c": "#ffffff"}]}, {"al": "l", "r": [{"t": "\tchosenbot = cherrybot;", "sz": 1.458, "f": "mono", "c": "#ffffff"}]}, {"al": "l", "r": [{"t": "", "sz": 1.458}]}, {"al": "l", "r": [{"t": "chosenbot.moveToTarget(l0)", "sz": 1.458, "f": "mono", "c": "#ffffff"}]}], "a": "t", "i": [0.886, 0.886, 0.886, 0.886]}},
+    {"k": "shape", "x": 31.537, "y": 35.876, "w": 56.74, "h": 15.924, "s": 1, "g": "rect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "cherrybot = myIDLmagic(cherryAddress);", "sz": 1.458, "f": "mono", "c": "#ffffff"}]}, {"al": "l", "r": [{"t": "piebot = myIDLmagic(pieAddress);", "sz": 1.458, "f": "mono", "c": "#ffffff"}]}, {"al": "l", "r": [{"t": "", "sz": 1.458}]}, {"al": "l", "r": [{"t": "chosenbot = piebot;", "sz": 1.458, "f": "mono", "c": "#ffffff"}]}, {"al": "l", "r": [{"t": "if (cherrybot.getPosition() – loc0 < piebot.getPosition() – loc0)", "sz": 1.458, "f": "mono", "c": "#ffffff"}]}, {"al": "l", "r": [{"t": "\tchosenbot = cherrybot;", "sz": 1.458, "f": "mono", "c": "#ffffff"}]}, {"al": "l", "r": [{"t": "", "sz": 1.458}]}, {"al": "l", "r": [{"t": "chosenbot.moveToTarget(loc0)", "sz": 1.458, "f": "mono", "c": "#ffffff"}]}], "a": "t", "i": [0.886, 0.886, 0.886, 0.886]}},
     {"k": "shape", "x": 69.442, "y": 33.44, "w": 23.142, "h": 6.422, "rot": 354.72, "s": 2, "g": "leftArrow", "fill": "#73a5af", "ln": "#101a1c", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Lecture 8", "sz": 1.875, "c": "#ffffff", "href": "08#start"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 20.134, "y": 39.233, "w": 16.337, "h": 9.624, "rot": 270.0, "s": 3, "g": "leftArrow", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Can we get rid of this flow hard-coding?", "sz": 1.458, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 3.773, "y": 37.232, "w": 20.917, "h": 3.303, "s": 4, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "What if a robot becomes unavailable or a better robot appears?", "sz": 1.25, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
@@ -224,8 +225,11 @@
    "title": "HCI: Knowledge in the World",
    "items": [
     {"k": "shape", "x": 3.924, "y": 12.5, "w": 92.228, "h": 9, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Human-computer interaction (HCI)", "sz": 1.948, "b": 1}, {"t": " studies what makes an interface usable.", "sz": 1.948}]}, {"al": "l", "r": [{"t": "Its core lesson: knowledge in the world beats knowledge in the head.", "sz": 1.948}]}, {"al": "l", "r": [{"t": "Ahead: what this means for clients of Web APIs.", "sz": 1.948}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 3.924, "y": 23.5, "w": 92.228, "h": 22.0, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "As Norman points out:", "sz": 1.948}]}, {"al": "l", "r": [{"t": " ", "sz": 1.948}]}, {"al": "l", "r": [{"t": "“Put the knowledge required to operate the technology in the world. Do not require that all the knowledge must be in the head. Allow for efficient operation when people have learned all the requirements, when they are experts who can perform without the knowledge in the world, but make it possible for non-experts to use the knowledge in the world. This will also help experts who need to perform a rare, infrequently performed operation or return to the technology after a prolonged absence.”", "sz": 1.948, "i": 1}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 3.346, "y": 47.5, "w": 44.239, "h": 1.893, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "D. Norman, The Design of Everyday Things", "sz": 0.938, "c": "#808080"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}
+    {"k": "shape", "x": 3.924, "y": 23.5, "w": 92.228, "h": 22.0, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "As Don Norman points out:", "sz": 1.948}]}, {"al": "l", "r": [{"t": " ", "sz": 1.948}]}, {"al": "l", "r": [{"t": "“", "sz": 1.948, "i": 1}, {"t": "Put the knowledge required to operate the technology in the world.", "sz": 1.948, "i": 1, "b": 1, "c": "#00802f"}, {"t": " ", "sz": 1.948, "i": 1}, {"t": "Do not require that all the knowledge must be in the head.", "sz": 1.948, "i": 1, "b": 1, "c": "#00802f"}, {"t": " Allow for efficient operation when people have learned all the requirements, when they are experts who can perform without the knowledge in the world, but ", "sz": 1.948, "i": 1}, {"t": "make it possible for non-experts to use the knowledge in the world", "sz": 1.948, "i": 1, "b": 1, "c": "#00802f"}, {"t": ". This will also help experts who need to perform a rare, infrequently performed operation or return to the technology after a prolonged absence.”", "sz": 1.948, "i": 1}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 3.346, "y": 47.5, "w": 44.239, "h": 1.893, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Don Norman, The Design of Everyday Things", "sz": 0.938, "c": "#808080"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "pic", "src": "https://johannesschoening.de/wp-content/uploads/2026/05/IMG_0871-300x300.jpg", "alt": "Portrait of Johannes Schöning", "x": 86, "y": 40.5, "w": 9, "h": 9},
+    {"k": "pic", "src": "https://covers.openlibrary.org/b/isbn/9780465050659-M.jpg", "alt": "Cover of the book The Design of Everyday Things by Don Norman, with a red teapot", "x": 84.5, "y": 5.5, "w": 11, "h": 16.9},
+    {"k": "shape", "x": 82, "y": 49.6, "w": 15, "h": 2, "g": "rect", "tx": {"p": [{"al": "c", "r": [{"t": "Johannes Schöning", "sz": 1.1, "c": "#808080"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}
    ]
   },
   {
@@ -303,13 +307,13 @@
     {"k": "shape", "x": 10.225, "y": 17.301, "w": 29.119, "h": 7.033, "s": 3, "e": 5, "g": "rect", "fill": "#ffffff", "ln": "#000000", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "“Recommended Books: ", "sz": 1.667, "c": "#000000"}, {"t": "Book1", "sz": 1.667, "u": 1, "c": "#0000ff"}]}, {"al": "l", "r": [{"t": "Books in your cart: None.", "sz": 1.667, "c": "#000000"}]}, {"al": "l", "r": [{"t": "Checkout not possible (no books).”", "sz": 1.667, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.59, 0.75, 0.375]}},
     {"k": "shape", "x": 76.011, "y": 19.607, "w": 21.823, "h": 5.013, "s": 5, "g": "rect", "fill": "#ffffff", "ln": "#000000", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "“This is Book1. It’s great!", "sz": 1.667, "c": "#000000"}]}, {"al": "l", "r": [{"t": "Add book to cart", "sz": 1.667, "u": 1, "c": "#0000ff"}, {"t": "”", "sz": 1.667, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.59, 0.75, 0.375]}},
     {"k": "shape", "x": 49.897, "y": 19.147, "w": 17.463, "h": 2.524, "s": 5, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "GET books/book1", "sz": 1.458, "b": 1, "c": "#000000", "f": "mono"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 45.339, "y": 10.998, "w": 25.402, "h": 2.524, "s": 7, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "POST carts/simon?book=Book1", "sz": 1.458, "b": 1, "c": "#000000", "f": "mono"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 45.339, "y": 9.498, "w": 25.402, "h": 2.524, "s": 7, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "POST carts/simon?book=Book1", "sz": 1.458, "b": 1, "c": "#000000", "f": "mono"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 11.702, "y": 17.404, "w": 26.167, "h": 7.033, "s": 8, "g": "rect", "fill": "#ffffff", "ln": "#000000", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "“Recommended Books: None", "sz": 1.667, "c": "#000000"}]}, {"al": "l", "r": [{"t": "Books in your cart: ", "sz": 1.667, "c": "#000000"}, {"t": "Book1", "sz": 1.667, "u": 1, "c": "#0000ff"}, {"t": ".", "sz": 1.667, "c": "#000000"}]}, {"al": "l", "r": [{"t": "Go to checkout", "sz": 1.667, "u": 1, "c": "#0000ff"}, {"t": ".”", "sz": 1.667, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.59, 0.75, 0.375]}},
     {"k": "shape", "x": 72.299, "y": 34.641, "w": 22.85, "h": 5.688, "s": 11, "g": "rect", "fill": "#ffffff", "ln": "#000000", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "“Select payment type: ", "sz": 1.875, "c": "#000000"}, {"t": "Credit Card", "sz": 1.875, "u": 1, "c": "#0000ff"}, {"t": ", ", "sz": 1.875, "c": "#000000"}, {"t": "Debit Card", "sz": 1.875, "u": 1, "c": "#0000ff"}, {"t": "”", "sz": 1.875, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.59, 0.75, 0.375]}},
     {"k": "shape", "x": 78.903, "y": 43.546, "w": 14.045, "h": 1.793, "s": 11, "g": "straightConnector1", "ln": "#000000", "lw": 0.104, "tail": "triangle"},
     {"k": "shape", "x": 78.903, "y": 42.207, "w": 14.045, "h": 1.339, "fy": true, "s": 11, "g": "straightConnector1", "ln": "#000000", "lw": 0.104, "tail": "triangle"},
     {"k": "shape", "x": 42.698, "y": 35.322, "w": 27.487, "h": 2.524, "rot": 21.89, "s": 10, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "GET checkout?cartID=simon", "sz": 1.458, "b": 1, "c": "#000000", "f": "mono"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 1.337, "y": 42.6, "w": 37.0, "h": 9.844, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "In what way is the ", "sz": 2.083}, {"t": "client", "sz": 2.083, "b": 1}, {"t": " affected by", "sz": 2.083}], "s": 12}, {"al": "l", "r": [{"t": "\t", "sz": 2.083}, {"t": "…additional books being recommended to the user?", "sz": 1.667}], "s": 13}, {"al": "l", "r": [{"t": "\t…the bookstore’s domain name changing to «happystore.org»?", "sz": 1.667}], "s": 14}, {"al": "l", "r": [{"t": "\t…Twint being added as a payment type?", "sz": 1.667}], "s": 15}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 1.337, "y": 42.6, "w": 37.0, "h": 9.844, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "In what way is the ", "sz": 2.083}, {"t": "client", "sz": 2.083, "b": 1}, {"t": " affected by", "sz": 2.083}], "s": 12}, {"al": "l", "r": [{"t": "\t", "sz": 2.083}, {"t": "…additional books being recommended to the user?", "sz": 1.667}], "s": 13}, {"al": "l", "r": [{"t": "\t…the bookstore’s domain name changing to “happystore.org”?", "sz": 1.667}], "s": 14}, {"al": "l", "r": [{"t": "\t…Twint being added as a payment type?", "sz": 1.667}], "s": 15}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 78.903, "y": 43.546, "w": 14.045, "h": 5.08, "s": 16, "g": "straightConnector1", "ln": "#000000", "lw": 0.104, "dash": "dash", "tail": "triangle"}
    ]
   },
@@ -317,9 +321,9 @@
    "layout": "canvas",
    "title": "What is **central** to making a (user) interface **useful**?",
    "items": [
-    {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "Until now, we considered individual requests and responses", "sz": 1.948}], "s": 1}, {"al": "l", "r": [{"t": "IDLs allow us to remove syntactic interface coupling. Through an IDL, the coupling is moved to a more abstract level", "sz": 1.948}], "s": 2}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "We now ask: “", "sz": 2.083}, {"t": "In an application, how may a client advance the application state", "sz": 2.083, "b": 1}, {"t": "?” (see Webber, p.97)", "sz": 2.083}], "s": 3}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 8.054, "y": 29.345, "w": 34.743, "h": 10.567, "s": 4, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "What’s a telltale of bad design?", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 17.802, "y": 42.326, "w": 40.651, "h": 10.567, "s": 6, "g": "roundRect", "fill": "#73a5af", "ln": "#101a1c", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "If the client needs instructions / annotations to make use of an artifact!", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "Until now, we considered ", "sz": 1.948}, {"t": "individual", "sz": 1.948, "b": 1, "c": "#00802f"}, {"t": " requests and responses", "sz": 1.948}], "s": 1}, {"al": "l", "r": [{"t": "IDLs allow us to remove syntactic interface coupling. Through an IDL, the coupling is moved to a more abstract level", "sz": 1.948}], "s": 2}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "We now ask: “", "sz": 2.083}, {"t": "In an application, how may a client advance the application state", "sz": 2.083, "b": 1}, {"t": "?” (see Webber, p.97)", "sz": 2.083}], "s": 3}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 8.054, "y": 30.4, "w": 34.743, "h": 6.6, "s": 4, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "What’s a telltale of bad design?", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 15.0, "y": 38.3, "w": 40.651, "h": 10.567, "s": 6, "g": "roundRect", "fill": "#73a5af", "ln": "#101a1c", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "If the client needs out-of-band instructions / annotations to make use of an artifact!", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "pic", "src": "img/63f277e3c5.jpg", "alt": "The bad design of everyday things - Usability Geek", "x": 63.27, "y": 28.121, "w": 30.315, "h": 20.307, "s": 5, "crop": [0.0, 0.19468, 0.0, 0.2688], "shadow": true}
    ]
   },
@@ -327,9 +331,9 @@
    "layout": "canvas",
    "title": "What is **central** to making a (user) interface **useful**?",
    "items": [
-    {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "Until now, we considered individual requests and responses", "sz": 1.948}]}, {"al": "l", "r": [{"t": "IDLs allow us to remove syntactic interface coupling. Through an IDL, the coupling is moved to a more abstract level", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "We now ask: “", "sz": 2.083}, {"t": "In an application, how may a client advance the application state", "sz": 2.083, "b": 1}, {"t": "?” (see Webber, p.97)", "sz": 2.083}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "Until now, we considered individual requests and responses", "sz": 1.948}]}, {"al": "l", "r": [{"t": "IDLs allow us to remove syntactic interface coupling. Through an IDL, the coupling is moved to a more abstract level", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "We now ask: “", "sz": 2.083}, {"t": "In an application, how may a client advance the application state", "sz": 2.083, "b": 1}, {"t": "?” (see Webber, p.97)", "sz": 2.083}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "pic", "src": "img/f24e494d58.png", "alt": "Yellow ticket machine at a post office: the touch screen shows one large yellow Post button with a drawn arrow pointing to it", "x": 69.0, "y": 29.5, "w": 22.0, "h": 22.1, "crop": [0.13849, 0.01377, 0.18352, 0.07856]},
-    {"k": "shape", "x": 67.5, "y": 51.8, "w": 24.986, "h": 2.524, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "St. Gallen Main Post Office, July 2024", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 67.5, "y": 51.8, "w": 24.986, "h": 2.524, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "St. Gallen Main Post Office, November 2026", "sz": 1.458}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 8.054, "y": 29.345, "w": 34.743, "h": 10.567, "s": 1, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "What makes user interfaces useful for humans in this sense?", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 30.375, "y": 41.193, "w": 25.926, "h": 10.567, "s": 2, "g": "roundRect", "fill": "#73a5af", "ln": "#101a1c", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "That they can ", "sz": 2.5, "c": "#ffffff"}, {"t": "derive a useful next action", "sz": 2.5, "b": 1, "c": "#ffffff"}, {"t": "!", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ]
@@ -338,7 +342,7 @@
    "layout": "canvas",
    "title": "Sounds Familiar?",
    "items": [
-    {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "Interaction should be driven by hypermedia to permit clients to derive a useful next action from a response. We say that “hypermedia is the engine of application state” (HATEOAS, REST UI Constraint #4)", "sz": 1.948, "b": 1}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "Interaction should be driven by ", "sz": 1.948}, {"t": "hypermedia", "sz": 1.948, "b": 1, "c": "#00802f"}, {"t": " to permit clients to ", "sz": 1.948}, {"t": "derive a useful next action", "sz": 1.948, "b": 1, "c": "#00802f"}, {"t": " from a response.", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "We say that “", "sz": 1.948}, {"t": "hypermedia is the engine of application state", "sz": 1.948, "b": 1, "c": "#00802f"}, {"t": "” (HATEOAS, REST UI Constraint #4)", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 56.478, "y": 41.099, "w": 30.78, "h": 8.268, "s": 2, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "This is our ", "sz": 2.5, "c": "#ffffff"}, {"t": "guiding question ", "sz": 2.5, "b": 1, "c": "#ffffff"}, {"t": "for this and next week!", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "pic", "src": "img/4d792321cc.png", "alt": "Vs PNGs for Free Download", "x": 34.201, "y": 22.24, "w": 23.434, "h": 15.623},
     {"k": "shape", "x": 10.427, "y": 23.696, "w": 28.987, "h": 4.796, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "{ \"title\": \"Baba O’Riley\", \"artist\": { \"id\": 5521 } }", "sz": 1.667, "i": 1, "f": "mono"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
@@ -357,7 +361,7 @@
    "layout": "canvas",
    "title": "Decoupling and Guidance",
    "items": [
-    {"k": "shape", "x": 3.924, "y": 12.501, "w": 91.572, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "How to create ", "sz": 2.083}, {"t": "decoupled yet interoperable ", "sz": 2.083, "b": 1}, {"t": "systems that guide their users?", "sz": 2.083}], "pl": 0.0, "in": 0.0, "s": 1}, {"al": "l", "r": [{"t": "How can clients be guided to properly use services at ", "sz": 2.083}, {"t": "run time", "sz": 2.083, "b": 1}, {"t": ", but ", "sz": 2.083}, {"t": "without hard-coding ", "sz": 2.083, "b": 1}, {"t": "this guidance?", "sz": 2.083}], "s": 2}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "Humans excel in designing such systems in their everyday life!", "sz": 2.083}], "pl": 0.0, "in": 0.0, "s": 4}, {"al": "l", "r": [{"t": "You will apply some of these concepts to ", "sz": 1.875}, {"t": "decouple PITAS components", "sz": 1.875, "b": 1}, {"t": ".", "sz": 2.083}], "pl": 2.812, "in": -2.812, "bu": "-", "s": 5}, {"al": "l", "r": [{"t": "Strong ", "sz": 1.875}, {"t": "parallels to human-computer interaction", "sz": 1.875, "b": 1}, {"t": " ", "sz": 1.875}], "pl": 2.812, "in": -2.812, "bu": "-", "s": 6}, {"al": "l", "r": [{"t": "", "sz": 2.083}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 3.924, "y": 12.501, "w": 91.572, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "How to create ", "sz": 2.083}, {"t": "decoupled yet interoperable ", "sz": 2.083, "b": 1}, {"t": "systems that guide their users?", "sz": 2.083}], "pl": 0.0, "in": 0.0, "s": 1}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "How can clients be guided to properly use services at ", "sz": 2.083}, {"t": "run time", "sz": 2.083, "b": 1}, {"t": ", but ", "sz": 2.083}, {"t": "without hard-coding ", "sz": 2.083, "b": 1}, {"t": "this guidance?", "sz": 2.083}], "s": 2}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "Humans excel in designing such systems in their everyday life!", "sz": 2.083}], "pl": 0.0, "in": 0.0, "s": 4}, {"al": "l", "r": [{"t": "You will apply some of these concepts to ", "sz": 1.875}, {"t": "decouple PITAS components", "sz": 1.875, "b": 1}, {"t": ".", "sz": 2.083}], "pl": 2.812, "in": -2.812, "bu": "-", "s": 5}, {"al": "l", "r": [{"t": "Strong ", "sz": 1.875}, {"t": "parallels to human-computer interaction", "sz": 1.875, "b": 1}, {"t": " ", "sz": 1.875}], "pl": 2.812, "in": -2.812, "bu": "-", "s": 6}, {"al": "l", "r": [{"t": "", "sz": 2.083}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 21.849, "y": 25.882, "w": 55.722, "h": 8.532, "s": 3, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "How can we provide information about possible execution flows of an application ", "sz": 2.5, "c": "#ffffff"}, {"t": "in-band", "sz": 2.5, "b": 1, "c": "#ffffff"}, {"t": "?", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ],
    "id": "decoupling-guidance"
@@ -372,8 +376,8 @@
     {"k": "shape", "x": 47.542, "y": 51.8, "w": 25.845, "h": 2.488, "s": 2, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "At the ice hockey rink, Herisau, Switzerland (February 2022)", "sz": 0.938, "c": "#808080"}]}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
     {"k": "pic", "src": "img/a177c5f9a0.png", "alt": "Close-up photo of a door with a sign reading Kein Ausgang next to an Ausgang sign", "x": 39.476, "y": 4.346, "w": 29.868, "h": 23.747, "s": 4, "crop": [0.13334, 0.39556, 0.56794, 0.18222], "shadow": true},
     {"k": "shape", "x": 5.264, "y": 42.33, "w": 32.068, "h": 7.069, "s": 6, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Important for ", "sz": 1.875}, {"t": "efficient", "sz": 1.875, "b": 1}, {"t": " interactions, especially in ", "sz": 1.875}, {"t": "unknown", "sz": 1.875, "b": 1}, {"t": " and ", "sz": 1.875}, {"t": "dynamic", "sz": 1.875, "b": 1}, {"t": " environments.", "sz": 1.875}], "sb": 0.312}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
-    {"k": "shape", "x": 5.936, "y": 8.45, "w": 21.53, "h": 7.77, "s": 1, "g": "rect", "fill": "#292929", "tx": {"p": [{"al": "l", "r": [{"t": "AM I ", "sz": 1.875, "c": "#ffffff"}, {"t": "SUPPOSED TO", "sz": 1.875, "b": 1, "c": "#ffffff"}, {"t": " GO RIGHT?", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 42.134, "y": 30.3, "w": 20.374, "h": 7.77, "s": 3, "g": "rect", "fill": "#292929", "tx": {"p": [{"al": "l", "r": [{"t": "AM I ", "sz": 1.875, "c": "#ffffff"}, {"t": "SUPPOSED TO ", "sz": 1.875, "b": 1, "c": "#ffffff"}, {"t": "EXIT HERE?", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 5.936, "y": 8.45, "w": 21.53, "h": 7.77, "s": 1, "g": "roundRect", "fill": "#eb6969", "tx": {"p": [{"al": "l", "r": [{"t": "AM I ", "sz": 1.875, "c": "#ffffff"}, {"t": "SUPPOSED TO", "sz": 1.875, "b": 1, "c": "#ffffff"}, {"t": " GO RIGHT?", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}, "ln": "#2d0606", "lw": 0.104},
+    {"k": "shape", "x": 42.134, "y": 30.3, "w": 20.374, "h": 7.77, "s": 3, "g": "roundRect", "fill": "#eb6969", "tx": {"p": [{"al": "l", "r": [{"t": "AM I ", "sz": 1.875, "c": "#ffffff"}, {"t": "SUPPOSED TO ", "sz": 1.875, "b": 1, "c": "#ffffff"}, {"t": "EXIT HERE?", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}, "ln": "#2d0606", "lw": 0.104},
     {"k": "pic", "src": "img/0973cc90b5.jpg", "alt": "The bad design of everyday things - Usability Geek", "x": 72.285, "y": 3.141, "w": 25.311, "h": 33.737, "s": 5, "shadow": true}
    ]
   },
@@ -383,12 +387,12 @@
    "items": [
     {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "People are (mostly) ", "sz": 1.948}, {"t": "explorers", "sz": 1.948, "b": 1}, {"t": " of their environments", "sz": 1.948}], "s": 1}, {"al": "l", "r": [{"t": "People need to be able to navigate in ", "sz": 1.948}, {"t": "unknown environments", "sz": 1.948, "b": 1}], "s": 2}, {"al": "l", "r": [{"t": "People need to be able to adapt to ", "sz": 1.948}, {"t": "changing environments", "sz": 1.948, "b": 1}], "s": 3}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "Don Norman introduced four fundamental concepts that enable this for people", "sz": 1.948}], "s": 6}, {"al": "l", "r": [{"t": "", "sz": 1.875}], "pl": 2.343, "in": -2.343}, {"al": "l", "r": [{"t": "Visibility and Affordances", "sz": 1.875, "b": 1}, {"t": ": Can user easily tell state and alternatives for action?", "sz": 1.875}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 7}, {"al": "l", "r": [{"t": "", "sz": 1.875}], "pl": 2.343, "in": -2.343}, {"al": "l", "r": [{"t": "Natural Mappings", "sz": 1.875, "b": 1}, {"t": ": Can user easily relate controls and effects?", "sz": 1.875}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 9}, {"al": "l", "r": [{"t": "", "sz": 1.875}], "pl": 2.343, "in": -2.343}, {"al": "l", "r": [{"t": "Conceptual Models", "sz": 1.875, "b": 1}, {"t": ": Can user predict how actions affect the system?", "sz": 1.875}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 11}, {"al": "l", "r": [{"t": "", "sz": 1.875}], "pl": 2.343, "in": -2.343}, {"al": "l", "r": [{"t": "Feedback and Feedforward", "sz": 1.875, "b": 1}, {"t": ": Does user receive feedback about results of actions?", "sz": 1.875}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 13}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "pic", "src": "img/efac028a53.png", "alt": "Diagram of Norman's seven stages of action: the gulf of execution on the left, the gulf of evaluation on the right, with the world in between", "x": 56.0, "y": 1.8, "w": 28.0, "h": 15.4, "s": 4, "crop": [0.18107, 0.34249, 0.22241, 0.07315]},
-    {"k": "shape", "x": 71.2, "y": 30.5, "w": 13.562, "h": 4.2, "s": 8, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "What can I do?", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 57.0, "y": 35.0, "w": 14.407, "h": 4.2, "s": 10, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "How to do that?", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 62.5, "y": 39.5, "w": 20.785, "h": 4.2, "s": 12, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "What effects will it have?", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 72.8, "y": 44.0, "w": 18.367, "h": 4.2, "s": 14, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "Was it useful for me?", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 72.5, "y": 31.3, "w": 13.562, "h": 4.2, "s": 8, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "What can I do?", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 58.3, "y": 35.8, "w": 14.407, "h": 4.2, "s": 10, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "How to do that?", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 63.8, "y": 40.3, "w": 23.5, "h": 4.2, "s": 12, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "What effects will it have?", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 74.1, "y": 44.8, "w": 18.367, "h": 4.2, "s": 14, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "Was it useful for me?", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "pic", "src": "img/7e2d85a7f0.png", "alt": "Slide Gulfs of Execution and Evaluation with a drawing of the physical system, goals, and the two gulfs", "x": 83.2, "y": 17.3, "w": 15.7, "h": 11.3, "s": 5, "crop": [0.10429, 0.20601, 0.4055, 0.164]},
-    {"k": "shape", "x": 79.2, "y": 28.7, "w": 19.691, "h": 1.66, "s": 5, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "J. Schöning, HCI, University of St.Gallen, 2021", "sz": 0.938, "c": "#808080"}]}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}}
+    {"k": "shape", "x": 79.2, "y": 28.7, "w": 19.691, "h": 1.66, "s": 5, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "J. Schöning, HCI, University of St.Gallen", "sz": 0.938, "c": "#808080"}]}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}}
    ],
    "id": "animals-way"
   },
@@ -404,7 +408,7 @@
     {"k": "shape", "x": 26.097, "y": 46.843, "w": 12.824, "h": 2.272, "s": 4, "g": "rect", "tx": {"p": [{"al": "c", "r": [{"t": "«Push!»", "sz": 1.875, "c": "#000000"}], "sb": 0.312}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
     {"k": "pic", "src": "img/03a7b6ea58.png", "alt": "Photo of an escape door with a horizontal push bar: push or pull, which side?", "x": 69.729, "y": 8.404, "w": 25.31, "h": 17.75, "s": 7, "crop": [0.24604, 0.3005, 0.29919, 0.1325]},
     {"k": "pic", "src": "img/00e39cf097.png", "alt": "Photo of a better escape door whose push bar clearly suggests pressing to the right", "x": 67.897, "y": 27.321, "w": 29.901, "h": 23.032, "s": 8, "crop": [0.27556, 0.29, 0.28738, 0.11151]},
-    {"k": "shape", "x": 64.067, "y": 53.469, "w": 25.649, "h": 2.774, "s": 7, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "J. Schöning, HCI, University of St.Gallen, 2021", "sz": 0.938, "c": "#808080"}]}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}}
+    {"k": "shape", "x": 64.067, "y": 53.469, "w": 25.649, "h": 2.774, "s": 7, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "J. Schöning, HCI, University of St.Gallen", "sz": 0.938, "c": "#808080"}]}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}}
    ]
   },
   {
@@ -412,10 +416,10 @@
    "title": "Classic Example: Doors",
    "items": [
     {"k": "pic", "src": "img/7298b961d3.png", "alt": "Photo of a double door with PULL signs on both leaves", "x": 6.977, "y": 13.076, "w": 28.467, "h": 30.149, "s": 1, "crop": [0.19872, 0.22049, 0.44438, 0.10752]},
-    {"k": "shape", "x": 2.85, "y": 43.731, "w": 28.467, "h": 3.079, "s": 1, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "J. Schöning, HCI, University of St.Gallen, 2021", "sz": 0.938, "c": "#808080"}]}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
-    {"k": "pic", "src": "img/47b90c7634.jpg", "alt": "Glass door with a vertical metal handle and a small red sign with a white arrow beside it", "x": 65.755, "y": 12.18, "w": 31.372, "h": 23.529, "rot": 90.0, "s": 2, "shadow": true},
-    {"k": "pic", "src": "img/a6eb5160f5.jpg", "alt": "Green wall with a horizontal metal bar and a small green sign with a white arrow above it", "x": 35.461, "y": 21.717, "w": 34.199, "h": 25.649, "rot": 90.0, "s": 3, "shadow": true},
-    {"k": "shape", "x": 65.914, "y": 41.322, "w": 25.649, "h": 2.774, "s": 2, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "At Siemens Neuperlach Süd, November 2021 ", "sz": 0.938, "c": "#808080"}]}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
+    {"k": "shape", "x": 2.85, "y": 43.731, "w": 28.467, "h": 3.079, "s": 1, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "J. Schöning, HCI, University of St.Gallen", "sz": 0.938, "c": "#808080"}]}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
+    {"k": "pic", "src": "img/47b90c7634.jpg", "alt": "Glass door with a vertical metal handle and a small red sign with a white arrow beside it", "x": 66.5, "y": 12.2, "w": 31.0, "h": 23.25, "s": 2, "shadow": true},
+    {"k": "pic", "src": "img/a6eb5160f5.jpg", "alt": "Green wall with a horizontal metal bar and a small green sign with a white arrow above it", "x": 36.0, "y": 24.0, "w": 28.0, "h": 21.0, "s": 3, "shadow": true},
+    {"k": "shape", "x": 65.914, "y": 36.3, "w": 25.649, "h": 2.774, "s": 2, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "At Siemens Neuperlach Süd, November 2021 ", "sz": 0.938, "c": "#808080"}]}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
     {"k": "pic", "src": "img/7a589171ee.png", "alt": "Web page of IntellIoT: powering the future of humanised IoT and AI across Europe", "x": 69.119, "y": 46.184, "w": 20.947, "h": 6.342, "s": 2, "crop": [0.08066, 0.16401, 0.77363, 0.75757]}
    ],
    "source": "[IntellIoT](https://intelliot.eu/), [CORDIS: project 957218](https://cordis.europa.eu/project/id/957218)"
@@ -425,7 +429,7 @@
    "title": "",
    "items": [
     {"k": "pic", "src": "img/375f143102.png", "alt": "Slide: How to reduce required knowledge in the head? Affordances, signifiers, constraints, natural mappings", "x": 3.222, "y": 3.909, "w": 86.451, "h": 47.18, "crop": [0.10429, 0.185, 0.14899, 0.0905]},
-    {"k": "shape", "x": 63.184, "y": 51.116, "w": 27.888, "h": 3.016, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "J. Schöning, HCI, University of St.Gallen, 2021", "sz": 0.938, "c": "#808080"}]}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
+    {"k": "shape", "x": 63.184, "y": 51.116, "w": 27.888, "h": 3.016, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "J. Schöning, HCI, University of St.Gallen", "sz": 0.938, "c": "#808080"}]}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
     {"k": "pic", "src": "img/9e024d7232.png", "alt": "Slide: Comparing knowledge in the head and in the world", "x": 39.301, "y": 22.761, "w": 56.151, "h": 28.075, "crop": [0.11037, 0.17891, 0.14711, 0.16107]},
     {"k": "shape", "x": 29.887, "y": 27.609, "w": 11.799, "h": 13.614, "s": 3, "g": "leftArrow", "fill": "#00802f", "ln": "#001307", "lw": 0.104},
     {"k": "shape", "x": 3.924, "y": 29.101, "w": 24.803, "h": 10.63, "s": 3, "g": "rect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "This sounds A LOT like our discussion about REST’s Uniform Interfaces", "sz": 2.083, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
@@ -439,8 +443,8 @@
    "layout": "canvas",
    "title": "Affordances are **relational** rather than absolute – they depend on the agent-environment context",
    "items": [
-    {"k": "pic", "src": "img/09bfcebbe2.jpg", "alt": "Two people with backpacks climbing over a snow bank that blocks a footpath beside a road", "x": 51.611, "y": 18.242, "w": 40.886, "h": 30.665, "s": 2, "shadow": true},
-    {"k": "pic", "src": "img/d28bc111be.jpg", "alt": "A snow bank that blocks a footpath beside a road, with no one on it", "x": 6.705, "y": 20.726, "w": 40.886, "h": 30.665, "s": 1, "shadow": true}
+    {"k": "pic", "src": "img/09bfcebbe2.jpg", "alt": "Two people with backpacks climbing over a snow bank that blocks a footpath beside a road", "x": 51.611, "y": 15.242, "w": 40.886, "h": 30.665, "s": 2, "shadow": true},
+    {"k": "pic", "src": "img/d28bc111be.jpg", "alt": "A snow bank that blocks a footpath beside a road, with no one on it", "x": 6.705, "y": 17.726, "w": 40.886, "h": 30.665, "s": 1, "shadow": true}
    ],
    "id": "affordances"
   },
@@ -449,10 +453,10 @@
    "title": "Natural Mappings and Conceptual Models",
    "items": [
     {"k": "pic", "src": "img/1b98dbb953.png", "alt": "Slide: Semantic constraints, using common knowledge about the world, with a toy figure example", "x": 2.097, "y": 11.694, "w": 51.195, "h": 23.819, "s": 1, "crop": [0.11222, 0.17451, 0.14361, 0.20997]},
-    {"k": "shape", "x": 28.331, "y": 36.121, "w": 24.961, "h": 1.782, "s": 1, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "J. Schöning, HCI, University of St.Gallen, 2021", "sz": 0.938, "c": "#808080"}]}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
+    {"k": "shape", "x": 28.331, "y": 36.121, "w": 24.961, "h": 1.782, "s": 1, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "J. Schöning, HCI, University of St.Gallen", "sz": 0.938, "c": "#808080"}]}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
     {"k": "pic", "src": "img/077eed95c3.png", "alt": "Slide: Cultural constraints, with a traffic light and an OK hand gesture", "x": 53.543, "y": 22.176, "w": 45.289, "h": 25.448, "s": 2, "crop": [0.1161, 0.19551, 0.26375, 0.185]},
-    {"k": "shape", "x": 74.212, "y": 48.006, "w": 23.766, "h": 1.697, "s": 2, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "J. Schöning, HCI, University of St.Gallen, 2021", "sz": 0.938, "c": "#808080"}]}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
-    {"k": "shape", "x": 5.796, "y": 41.06, "w": 36.796, "h": 9.591, "s": 3, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Just like for people, semantic and cultural constraints are ", "sz": 1.875, "c": "#ffffff"}, {"t": "tough to handle ", "sz": 1.875, "b": 1, "c": "#ffffff"}, {"t": "for machine clients… we’ll get to them next week ;-)", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
+    {"k": "shape", "x": 74.212, "y": 48.006, "w": 23.766, "h": 1.697, "s": 2, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "J. Schöning, HCI, University of St.Gallen", "sz": 0.938, "c": "#808080"}]}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
+    {"k": "shape", "x": 5.796, "y": 41.06, "w": 41, "h": 9.591, "s": 3, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Just like for people, semantic and cultural constraints are ", "sz": 1.875, "c": "#ffffff"}, {"t": "tough to handle ", "sz": 1.875, "b": 1, "c": "#ffffff"}, {"t": "for machine clients… we’ll get to them next week ;-)", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ]
   },
   {
@@ -471,7 +475,7 @@
    "title": "",
    "items": [
     {"k": "pic", "src": "img/74478a7b77.png", "alt": "Slide: Utility of affordances, with a red emergency stop handle", "x": 38.49, "y": 10.67, "w": 53.814, "h": 25.737, "s": 3, "crop": [0.122, 0.19551, 0.19878, 0.227], "shadow": true},
-    {"k": "shape", "x": 70.612, "y": 38.028, "w": 21.037, "h": 2.275, "s": 3, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "J. Schöning, HCI, University of St.Gallen, 2021", "sz": 0.938, "c": "#808080"}]}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
+    {"k": "shape", "x": 70.612, "y": 38.028, "w": 21.037, "h": 2.275, "s": 3, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "J. Schöning, HCI, University of St.Gallen", "sz": 0.938, "c": "#808080"}]}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
     {"k": "pic", "src": "img/3a27f9930a.png", "alt": "API", "x": 3.346, "y": 3.799, "w": 27.505, "h": 43.55, "s": 1, "crop": [0.0, 0.0, 0.0, 0.1525]},
     {"k": "pic", "src": "img/3a27f9930a.png", "alt": "API", "x": 35.312, "y": 41.66, "w": 39.681, "h": 11.378, "s": 2, "crop": [0.0, 0.84652, 0.0, 0.0]},
     {"k": "shape", "x": 68.11, "y": 4.946, "w": 29.614, "h": 14.968, "rot": 17.0, "s": 4, "g": "roundRect", "fill": "#eb6969", "ln": "#961414", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "People derive affordances from ", "sz": 2.083, "c": "#ffffff"}, {"t": "shapes, context, text,", "sz": 2.083, "b": 1, "c": "#ffffff"}, {"t": " etc.", "sz": 2.083, "c": "#ffffff"}]}, {"al": "c", "r": [{"t": "", "sz": 2.083}]}, {"al": "c", "r": [{"t": "Can we enable ", "sz": 2.083, "c": "#ffffff"}, {"t": "machines", "sz": 2.083, "b": 1, "c": "#ffffff"}, {"t": " to recognize and use affordances?", "sz": 2.083, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
@@ -486,7 +490,8 @@
      "to": "07b#hateoas",
      "kind": "recap"
     }
-   ]
+   ],
+   "static": true
   },
   {
    "layout": "canvas",
@@ -545,25 +550,26 @@
    "title": "Consider that clients may themselves modify hypermedia!",
    "items": [
     {"k": "pic", "src": "img/e93676179e.jpg", "alt": "How to objectively say a design in bad - Quora", "x": 35.943, "y": 18.464, "w": 41.401, "h": 31.09, "shadow": true},
-    {"k": "shape", "x": 15.877, "y": 40.835, "w": 22.966, "h": 5.273, "s": 1, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Remember that affordances are relational", "sz": 1.875, "c": "#ffffff", "href": "09#affordances"}, {"t": "…", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
+    {"k": "shape", "x": 15.877, "y": 40.835, "w": 22.966, "h": 5.273, "s": 1, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Remember that affordances are ", "sz": 1.875, "c": "#ffffff"}, {"t": "relational", "sz": 1.875, "b": 1, "c": "#ffe066"}, {"t": "…", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ]
   },
   {
    "layout": "canvas",
    "title": "",
    "items": [
-    {"k": "pic", "src": "img/ea48c3c5ba.png", "alt": "Screenshot of the robots.txt file of a social media site with Allow and Disallow rules", "x": 30.331, "y": 2.849, "w": 34.429, "h": 46.966}
+    {"k": "pic", "src": "img/ea48c3c5ba.png", "alt": "Screenshot of the robots.txt file of a social media site with Allow and Disallow rules", "x": 30.331, "y": 2.849, "w": 34.429, "h": 46.966},
+    {"k": "shape", "x": 3.5, "y": 17.5, "w": 24.5, "h": 9, "s": 1, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Mystery? Politics?", "sz": 1.875, "c": "#ffffff"}]}, {"al": "c", "r": [{"t": "Conspiracy theory?", "sz": 1.875, "c": "#ffffff", "b": 1}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 67.5, "y": 18.5, "w": 27, "h": 6, "s": 2, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "No! ", "sz": 1.875, "c": "#ffffff"}, {"t": "Programmer Choice…!", "sz": 1.875, "c": "#ffffff", "b": 1}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 67.5, "y": 27, "w": 29, "h": 14, "s": 3, "g": "roundRect", "fill": "#73a5af", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "An internal test locale: ", "sz": 1.458, "c": "#ffffff", "b": 1}, {"t": "“en-ss” is not a real language tag. The site keeps crawlers away from it so that test pages do not show up in search results.", "sz": 1.458, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 62, "y": 43, "w": 35, "h": 6, "s": 4, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Demo: ", "sz": 1.458, "c": "#000000"}, {"t": "a well-known post", "sz": 1.458, "c": "#00802f", "href": "https://x.com/carterjwm/status/849813577770778624", "u": 1}]}, {"al": "l", "r": [{"t": "Demo: ", "sz": 1.458, "c": "#000000"}, {"t": "the same post with ?lang=en-ss", "sz": 1.458, "c": "#00802f", "href": "https://x.com/carterjwm/status/849813577770778624?lang=en-ss", "u": 1}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}
    ]
   },
   {
    "layout": "canvas",
    "title": "The Hypermedia Way",
    "items": [
-    {"k": "shape", "x": 3.924, "y": 12.501, "w": 74.363, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Clients are (mostly) ", "sz": 1.948}, {"t": "explorers", "sz": 1.948, "b": 1}, {"t": " of their environments", "sz": 1.948}], "s": 1}, {"al": "l", "r": [{"t": "Clients need to be able to navigate in ", "sz": 1.948}, {"t": "unknown environments", "sz": 1.948, "b": 1}], "s": 2}, {"al": "l", "r": [{"t": "Clients need to be able to adapt to ", "sz": 1.948}, {"t": "changing environments", "sz": 1.948, "b": 1}], "s": 3}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "What are the fundamental concepts that enable this for clients on the Web? ", "sz": 1.948}], "s": 4}, {"al": "l", "r": [{"t": "", "sz": 1.667}], "pl": 2.812, "in": -2.812}, {"al": "l", "r": [{"t": "HATEOAS: ", "sz": 1.667, "b": 1}, {"t": "Permit clients to ", "sz": 1.667}, {"t": "receive local guidance ", "sz": 1.667, "b": 1}, {"t": "by servers", "sz": 1.667}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 5}, {"al": "l", "r": [{"t": "", "sz": 1.667}], "pl": 2.343, "in": -2.343}, {"al": "l", "r": [{"t": "HTTP Idioms: ", "sz": 1.667, "b": 1}, {"t": "Permit clients to ", "sz": 1.667}, {"t": "manipulate resources ", "sz": 1.667, "b": 1}, {"t": "in commonly understood ways (GET, DELETE, etc.)", "sz": 1.667}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 7}, {"al": "l", "r": [{"t": "", "sz": 1.667}], "pl": 2.343, "in": -2.343}, {"al": "l", "r": [{"t": "Media Types", "sz": 1.667, "b": 1}, {"t": ": Describe schemas, processing models, and link relation values for a ", "sz": 1.667}, {"t": "representation format", "sz": 1.667, "b": 1}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 9}, {"al": "l", "r": [{"t": "", "sz": 1.667}], "pl": 2.343, "in": -2.343}, {"al": "l", "r": [{"t": "Link Relations", "sz": 1.667, "b": 1}, {"t": ": Permit clients to understand ", "sz": 1.667}, {"t": "why", "sz": 1.667, "b": 1}, {"t": " they might want to activate a hypermedia control by indicating the role of the linked resource in the context of the current representation", "sz": 1.667}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 10}, {"al": "l", "r": [{"t": "", "sz": 1.667}], "pl": 2.343, "in": -2.343}, {"al": "l", "r": [{"t": "Semantic Application Model", "sz": 1.667, "b": 1}, {"t": ": Rules for achieving application goals based on ", "sz": 1.667}, {"t": "interactions", "sz": 1.667, "b": 1}, {"t": " with resource representations of different ", "sz": 1.667}, {"t": "media types ", "sz": 1.667, "b": 1}, {"t": "while using ", "sz": 1.667}, {"t": "link relations ", "sz": 1.667, "b": 1}, {"t": "to decide about which ", "sz": 1.667}, {"t": "hyperlinks", "sz": 1.667, "b": 1}, {"t": " to follow", "sz": 1.667}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 12}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 78.5, "y": 24.95, "w": 13.6, "h": 3.4, "s": 6, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "What can I do?", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 78.5, "y": 28.75, "w": 14.4, "h": 3.4, "s": 8, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "How to do that?", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 78.5, "y": 36.6, "w": 17.0, "h": 4.4, "s": 11, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "What effects will it have?", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 78.5, "y": 43.1, "w": 14.7, "h": 4.6, "s": 13, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "Together: Was it useful for me?", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
+    {"k": "shape", "x": 3.924, "y": 12.501, "w": 74.363, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Clients are (mostly) ", "sz": 1.948}, {"t": "explorers", "sz": 1.948, "b": 1}, {"t": " of their environments", "sz": 1.948}], "s": 1}, {"al": "l", "r": [{"t": "Clients need to be able to navigate in ", "sz": 1.948}, {"t": "unknown environments", "sz": 1.948, "b": 1}], "s": 2}, {"al": "l", "r": [{"t": "Clients need to be able to adapt to ", "sz": 1.948}, {"t": "changing environments", "sz": 1.948, "b": 1}], "s": 3}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 12, "y": 29, "w": 76, "h": 16, "s": 4, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "What are the fundamental concepts that enable this for clients on the Web?", "sz": 3.1, "c": "#ffffff"}]}], "a": "m", "i": [1.5, 0.75, 1.5, 0.75]}}
    ],
    "id": "hypermedia-way",
    "refs": [
@@ -577,12 +583,16 @@
    "layout": "canvas",
    "title": "The Hypermedia Way",
    "items": [
-    {"k": "shape", "x": 3.924, "y": 12.501, "w": 41.598, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "On the Web, ", "sz": 1.875}, {"t": "contracts", "sz": 1.875, "b": 1}, {"t": " are composed of ", "sz": 1.875}, {"t": "protocols", "sz": 1.875, "b": 1}, {"t": " that refer to ", "sz": 1.875}, {"t": "media types", "sz": 1.875, "b": 1}]}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "Hyperlinks are provided by servers to inform clients about their ", "sz": 1.875}, {"t": "options", "sz": 1.875, "b": 1}, {"t": ". ", "sz": 1.875}]}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "HTTP constructs (methods, headers, status codes) specify ", "sz": 1.875}, {"t": "how", "sz": 1.875, "b": 1}, {"t": " to interact with a resource. ", "sz": 1.875}]}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "Media types help clients understand ", "sz": 1.875}, {"t": "what", "sz": 1.875, "b": 1}, {"t": " they can expect at the end of a hyperlink. ", "sz": 1.875}]}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "Link relations capture ", "sz": 1.875}, {"t": "why", "sz": 1.875, "b": 1}, {"t": " a client would want to follow a link given an agreed-upon domain model. Clients might agree about such ‘whys’ globally by agreeing on ", "sz": 1.875}, {"t": "common semantics", "sz": 1.875, "b": 1}, {"t": ".", "sz": 1.875}]}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "pic", "src": "img/e1196d163a.png", "alt": "Diagram of the structure of a hypermedia contract: protocol, media types, formats, link relations, processing models, and entry-point URIs", "x": 62.9, "y": 8.911, "w": 36.0, "h": 26.7, "s": 1, "crop": [0.21651, 0.185, 0.25785, 0.12201]},
-    {"k": "shape", "x": 44.9, "y": 30.857, "w": 16.0, "h": 5.017, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "How to do that?", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 45.4, "y": 21.157, "w": 15.5, "h": 5.017, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "What can I do?", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 48.083, "y": 40.633, "w": 20.785, "h": 5.017, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "What effects will it have?", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 49.535, "y": 48.357, "w": 14.726, "h": 5.017, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "Together: Was it useful for me?", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
+    {"k": "shape", "x": 3.924, "y": 12.5, "w": 57.5, "h": 4.5, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "On the Web, ", "sz": 1.875}, {"t": "contracts", "sz": 1.875, "b": 1}, {"t": " are composed of ", "sz": 1.875}, {"t": "protocols", "sz": 1.875, "b": 1}, {"t": " that refer to ", "sz": 1.875}, {"t": "media types", "sz": 1.875, "b": 1}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "pic", "src": "img/e1196d163a.png", "alt": "Diagram of the structure of a hypermedia contract: protocol, media types, formats, link relations, processing models, and entry-point URIs", "x": 63.5, "y": 12.5, "w": 35.0, "h": 25.96, "crop": [0.21651, 0.185, 0.25785, 0.12201]},
+    {"k": "shape", "x": 3.924, "y": 20.5, "w": 25.5, "h": 6, "s": 1, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "What can I do?", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 31.0, "y": 19.5, "w": 30.5, "h": 8, "s": 1, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Hyperlinks", "sz": 1.667, "b": 1}, {"t": " provided by servers inform clients about their ", "sz": 1.667}, {"t": "options", "sz": 1.667, "b": 1}, {"t": ".", "sz": 1.667}]}], "a": "m", "i": [0.0, 0.0, 0.0, 0.0]}},
+    {"k": "shape", "x": 3.924, "y": 29.3, "w": 25.5, "h": 6, "s": 2, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "How to do that?", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 31.0, "y": 28.3, "w": 30.5, "h": 8, "s": 2, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "HTTP constructs", "sz": 1.667, "b": 1}, {"t": " (methods, headers, status codes) specify ", "sz": 1.667}, {"t": "how", "sz": 1.667, "b": 1}, {"t": " to interact with a resource.", "sz": 1.667}]}], "a": "m", "i": [0.0, 0.0, 0.0, 0.0]}},
+    {"k": "shape", "x": 3.924, "y": 38.1, "w": 25.5, "h": 6, "s": 3, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "What effects will it have?", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 31.0, "y": 37.1, "w": 30.5, "h": 8, "s": 3, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Media types", "sz": 1.667, "b": 1}, {"t": " help clients understand ", "sz": 1.667}, {"t": "what", "sz": 1.667, "b": 1}, {"t": " to expect at the end of a hyperlink.", "sz": 1.667}]}], "a": "m", "i": [0.0, 0.0, 0.0, 0.0]}},
+    {"k": "shape", "x": 3.924, "y": 46.4, "w": 25.5, "h": 6, "s": 4, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Was it useful for me?", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 31.0, "y": 45.4, "w": 30.5, "h": 9, "s": 4, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Link relations", "sz": 1.667, "b": 1}, {"t": " capture ", "sz": 1.667}, {"t": "why", "sz": 1.667, "b": 1}, {"t": " a client would want to follow a link, given an agreed-upon domain model. Agreeing on ", "sz": 1.667}, {"t": "common semantics", "sz": 1.667, "b": 1}, {"t": " makes these ‘whys’ global.", "sz": 1.667}]}], "a": "m", "i": [0.0, 0.0, 0.0, 0.0]}}
    ],
    "source": "Webber, Parastatidis, Robinson: REST in Practice, 2010"
   },
@@ -597,17 +607,6 @@
     {"k": "shape", "x": 57.961, "y": 22.078, "w": 31.331, "h": 5.905, "s": 1, "g": "roundRect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "HTTP Protocol Idioms", "sz": 1.875, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ],
    "source": "Webber, Parastatidis, Robinson: REST in Practice, 2010"
-  },
-  {
-   "layout": "transclude",
-   "title": "What Is in the Contract Between Communicating Entities?",
-   "to": "08#ladder",
-   "refs": [
-    {
-     "to": "08#ladder",
-     "kind": "recap"
-    }
-   ]
   },
   {
    "layout": "canvas",
@@ -632,18 +631,14 @@
     {"k": "shape", "x": 29.331, "y": 2.208, "w": 17.718, "h": 3.26, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "HTTP Protocol Idioms", "sz": 1.458, "b": 1, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 18.941, "y": 35.048, "w": 62.899, "h": 3.114, "s": 5, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "HTTP PUT /prices\t\t", "sz": 1.875, "f": "mono"}, {"t": "Replace ", "sz": 1.875}, {"t": "entire", "sz": 1.875, "b": 1}, {"t": " prices resource", "sz": 1.875}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 18.941, "y": 39.907, "w": 62.899, "h": 3.114, "s": 6, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "HTTP POST /\t\t\t", "sz": 1.875, "f": "mono"}, {"t": "(Re)create prices resource", "sz": 1.875}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 18.941, "y": 44.578, "w": 71.757, "h": 3.114, "s": 7, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "HTTP PATCH /prices\t\t", "sz": 1.875, "f": "mono"}, {"t": "Update prices resource", "sz": 1.875}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}
+    {"k": "shape", "x": 18.941, "y": 44.578, "w": 71.757, "h": 3.114, "s": 7, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "HTTP PATCH /prices\t\t", "sz": 1.875, "f": "mono", "href": "https://datatracker.ietf.org/doc/html/rfc5789"}, {"t": "Update prices resource", "sz": 1.875}, {"t": " (RFC 5789, 2010)", "sz": 1.458, "c": "#808080"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}}
    ],
    "id": "http-idioms",
-   "source": "[RFC 5789: PATCH Method for HTTP](https://datatracker.ietf.org/doc/html/rfc5789)",
+   "source": "[RFC 5789 (2010): PATCH Method for HTTP](https://datatracker.ietf.org/doc/html/rfc5789)",
    "refs": [
     {
      "to": "08#crud-over-http",
      "kind": "recap"
-    },
-    {
-     "to": "09#n3-patch",
-     "kind": "next"
     }
    ]
   },
@@ -661,7 +656,8 @@
     {"k": "shape", "x": 48.451, "y": 15.818, "w": 18.103, "h": 25.719, "fx": true, "fy": true, "s": 6, "g": "straightConnector1", "ln": "#00802f", "lw": 0.104, "tail": "triangle"},
     {"k": "shape", "x": 47.049, "y": 40.424, "w": 19.045, "h": 6.608, "fx": true, "fy": true, "s": 8, "g": "straightConnector1", "ln": "#00802f", "lw": 0.104, "tail": "triangle"},
     {"k": "shape", "x": 68.086, "y": 30.884, "w": 28.567, "h": 4.745, "s": 9, "g": "roundRect", "fill": "#ffffff", "ln": "#00802f", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "Hypermedia applications ", "sz": 1.667, "c": "#000000"}, {"t": "can change without breaking clients", "sz": 1.667, "b": 1, "c": "#000000"}, {"t": "!", "sz": 1.667, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "pic", "src": "img/e3d5582228.png", "alt": "Slide (4/4) Guidance through server-provided hyperlinks, with the six REST constraint boxes", "x": 59.148, "y": 7.47, "w": 37.003, "h": 20.385, "shadow": true}
+    {"k": "pic", "src": "img/e3d5582228.png", "alt": "Slide (4/4) Guidance through server-provided hyperlinks, with the six REST constraint boxes", "x": 59.148, "y": 7.47, "w": 37.003, "h": 20.385, "shadow": true},
+    {"k": "shape", "x": 3.924, "y": 44.6, "w": 56, "h": 7.6, "s": 10, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "Why is it so obvious? ", "sz": 1.5, "c": "#ffffff", "b": 1}, {"t": "Every link bundles both: its ", "sz": 1.5, "c": "#ffffff"}, {"t": "link relation", "sz": 1.5, "c": "#ffffff", "b": 1}, {"t": " says ", "sz": 1.5, "c": "#ffffff"}, {"t": "why", "sz": 1.5, "c": "#ffffff", "b": 1}, {"t": " to follow it, and the ", "sz": 1.5, "c": "#ffffff"}, {"t": "uniform interface", "sz": 1.5, "c": "#ffffff", "b": 1}, {"t": " says ", "sz": 1.5, "c": "#ffffff"}, {"t": "how", "sz": 1.5, "c": "#ffffff", "b": 1}, {"t": ": GET for a link, POST for a form. No site-specific knowledge needed.", "sz": 1.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ],
    "id": "link-relations"
   },
@@ -714,7 +710,8 @@
      "to": "07b#jump-vs-transclusion",
      "kind": "recap"
     }
-   ]
+   ],
+   "cover": "Why do Back buttons exist in the first place?"
   },
   {
    "layout": "canvas",
@@ -771,7 +768,7 @@
     {"k": "shape", "x": 4.528, "y": 8.634, "w": 49.605, "h": 2.362, "g": "rightArrow", "fill": "#e1d7c3", "ln": "#e1d7c3", "lw": 0.104},
     {"k": "shape", "x": 4.637, "y": 18.082, "w": 49.605, "h": 2.362, "rot": 180.0, "g": "rightArrow", "fill": "#e1d7c3", "ln": "#e1d7c3", "lw": 0.104},
     {"k": "shape", "x": 47.472, "y": 23.132, "w": 48.229, "h": 6.719, "s": 4, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "application/json is ", "sz": 1.875}, {"t": "no hypermedia type!", "sz": 1.875, "b": 1}]}, {"al": "r", "r": [{"t": "We’ll need to ", "sz": 1.875}, {"t": "code the mapping manually", "sz": 1.875, "b": 1}, {"t": ".", "sz": 1.875}]}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
-    {"k": "shape", "x": 59.787, "y": 7.839, "w": 35.914, "h": 13.147, "s": 2, "g": "rect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "{", "sz": 1.875, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "   \"name\":\"Star Trek IV\",", "sz": 1.875, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "   \"rating\":0.82,", "sz": 1.875, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "   \"link\":\"Leonard Nimoy\"", "sz": 1.875, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "}", "sz": 1.875, "c": "#222222", "f": "mono"}]}], "a": "t", "i": [0.886, 0.886, 0.886, 0.886]}},
+    {"k": "shape", "x": 59.787, "y": 7.839, "w": 35.914, "h": 13.147, "s": 2, "g": "rect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "{", "sz": 1.875, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "    \"name\": \"Star Trek IV\",", "sz": 1.875, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "    \"rating\": 0.82,", "sz": 1.875, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "    \"link\": \"Leonard Nimoy\"", "sz": 1.875, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "}", "sz": 1.875, "c": "#222222", "f": "mono"}]}], "a": "t", "i": [0.886, 0.886, 0.886, 0.886]}},
     {"k": "shape", "x": 4.637, "y": 31.735, "w": 73.106, "h": 12.39, "s": 5, "g": "rect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "template = www.rottentomatoes.com/celebrity/{firstname}_{surname}\t", "sz": 1.458, "c": "#222222", "f": "mono"}, {"t": "// URI Template", "sz": 1.458, "c": "#222222"}]}, {"al": "l", "r": [{"t": "", "sz": 1.458}]}, {"al": "l", "r": [{"t": "fn = jsonObject.link.split[0]", "sz": 1.458, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "sn = jsonObject.link.split[1]", "sz": 1.458, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "url = template.compile(firstname = fn, surname = sn)", "sz": 1.458, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "requests.get(url)", "sz": 1.458, "c": "#222222", "f": "mono"}]}], "a": "t", "i": [0.886, 0.886, 0.886, 0.886]}},
     {"k": "shape", "x": 4.349, "y": 45.247, "w": 49.605, "h": 2.362, "s": 6, "g": "rightArrow", "fill": "#e1d7c3", "ln": "#e1d7c3", "lw": 0.104},
     {"k": "shape", "x": 47.951, "y": 2.208, "w": 24.491, "h": 3.26, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "HATEOAS", "sz": 1.458, "b": 1, "c": "#ffffff"}, {"t": " + Link Relation Types", "sz": 1.458, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
@@ -788,7 +785,7 @@
     {"k": "shape", "x": 4.528, "y": 8.634, "w": 49.605, "h": 2.362, "g": "rightArrow", "fill": "#e1d7c3", "ln": "#e1d7c3", "lw": 0.104},
     {"k": "shape", "x": 4.637, "y": 18.082, "w": 49.605, "h": 2.362, "rot": 180.0, "g": "rightArrow", "fill": "#e1d7c3", "ln": "#e1d7c3", "lw": 0.104},
     {"k": "shape", "x": 46.844, "y": 27.249, "w": 48.229, "h": 6.719, "s": 3, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "application/json is ", "sz": 1.875}, {"t": "still no hypermedia type!", "sz": 1.875, "b": 1}]}, {"al": "r", "r": [{"t": "But much simpler mapping ", "sz": 1.875}]}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
-    {"k": "shape", "x": 59.651, "y": 10.996, "w": 34.78, "h": 14.157, "s": 2, "g": "rect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "{", "sz": 1.458, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "   \"name\":\"Star Trek IV\",", "sz": 1.458, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "   \"rating\":0.82,", "sz": 1.458, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "   \"link\":", "sz": 1.458, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "\t\"", "sz": 1.458, "c": "#222222", "f": "mono"}, {"t": "www.rottentomatoes.com/cele\tbrity/leonard_nimoy", "sz": 1.458, "f": "mono", "c": "#000000"}, {"t": "\"", "sz": 1.458, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "}", "sz": 1.458, "c": "#222222", "f": "mono"}]}], "a": "t", "i": [0.886, 0.886, 0.886, 0.886]}},
+    {"k": "shape", "x": 55.5, "y": 10.996, "w": 39.0, "h": 10.247, "s": 2, "g": "rect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "{", "sz": 1.103, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "    \"name\": \"Star Trek IV\",", "sz": 1.103, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "    \"rating\": 0.82,", "sz": 1.103, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "    \"link\":", "sz": 1.103, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "        \"www.rottentomatoes.com/celebrity/leonard_nimoy\"", "sz": 1.103, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "}", "sz": 1.103, "c": "#222222", "f": "mono"}]}], "a": "t", "i": [0.886, 0.886, 0.886, 0.886]}},
     {"k": "shape", "x": 14.722, "y": 34.21, "w": 24.355, "h": 5.322, "s": 4, "g": "rect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "url = jsonObject.link", "sz": 1.458, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "requests.get(url)", "sz": 1.458, "c": "#222222", "f": "mono"}]}], "a": "t", "i": [0.886, 0.886, 0.886, 0.886]}},
     {"k": "shape", "x": 4.528, "y": 42.598, "w": 49.605, "h": 2.362, "s": 5, "g": "rightArrow", "fill": "#e1d7c3", "ln": "#e1d7c3", "lw": 0.104},
     {"k": "shape", "x": 66.437, "y": 39.532, "w": 21.208, "h": 7.634, "s": 7, "g": "roundRect", "fill": "#eb6969", "ln": "#eb6969", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Do you see a ", "sz": 2.5, "c": "#ffffff"}, {"t": "problem", "sz": 2.5, "b": 1, "c": "#ffffff"}, {"t": "?", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
@@ -801,10 +798,10 @@
    "layout": "canvas",
    "title": "",
    "items": [
-    {"k": "shape", "x": 4.528, "y": 11.804, "w": 50.25, "h": 33.717, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "HTTP GET www.rottentomatoes.com/m/star_trek_iv_the_voyage_home", "sz": 1.25, "f": "mono"}]}, {"al": "l", "r": [{"t": "Accept: */*", "sz": 1.25, "c": "#212121", "f": "mono"}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "200 OK", "sz": 1.25, "f": "mono"}]}, {"al": "l", "r": [{"t": "Content-Type: application/json", "sz": 1.25, "c": "#212121", "f": "mono"}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "{\"name\":\"Star Trek IV\", \"rating\":0.82, \"link\": \"", "sz": 1.25, "c": "#222222", "f": "mono"}, {"t": "www.rottentomatoes.com/cele\tbrity/leonard_nimoy", "sz": 1.25, "f": "mono"}, {"t": "\", \"link\": \"", "sz": 1.25, "c": "#222222", "f": "mono"}, {"t": "www.rottentomatoes.com/celebrity/william_shatner", "sz": 1.25, "f": "mono"}, {"t": "\", \"link\": ", "sz": 1.25, "c": "#222222", "f": "mono"}, {"t": "www.rottentomatoes.com/celebrity/nichelle_nichols ", "sz": 1.25, "f": "mono"}, {"t": "}", "sz": 1.25, "c": "#222222", "f": "mono"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 4.528, "y": 11.804, "w": 50.25, "h": 33.717, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "HTTP GET www.rottentomatoes.com/m/star_trek_iv_the_voyage_home", "sz": 1.25, "f": "mono"}]}, {"al": "l", "r": [{"t": "Accept: */*", "sz": 1.25, "c": "#212121", "f": "mono"}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "200 OK", "sz": 1.25, "f": "mono"}]}, {"al": "l", "r": [{"t": "Content-Type: application/json", "sz": 1.25, "c": "#212121", "f": "mono"}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "{\"name\":\"Star Trek IV\", \"rating\":0.82, \"link\": \"", "sz": 1.25, "c": "#222222", "f": "mono"}, {"t": "www.rottentomatoes.com/celebrity/leonard_nimoy", "sz": 1.25, "f": "mono"}, {"t": "\", \"link\": \"", "sz": 1.25, "c": "#222222", "f": "mono"}, {"t": "www.rottentomatoes.com/celebrity/william_shatner", "sz": 1.25, "f": "mono"}, {"t": "\", \"link\": ", "sz": 1.25, "c": "#222222", "f": "mono"}, {"t": "www.rottentomatoes.com/celebrity/nichelle_nichols ", "sz": 1.25, "f": "mono"}, {"t": "}", "sz": 1.25, "c": "#222222", "f": "mono"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 4.528, "y": 8.634, "w": 49.605, "h": 2.362, "g": "rightArrow", "fill": "#e1d7c3", "ln": "#e1d7c3", "lw": 0.104},
     {"k": "shape", "x": 4.637, "y": 18.082, "w": 49.605, "h": 2.362, "rot": 180.0, "g": "rightArrow", "fill": "#e1d7c3", "ln": "#e1d7c3", "lw": 0.104},
-    {"k": "shape", "x": 61.872, "y": 7.819, "w": 34.78, "h": 24.758, "g": "rect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "{", "sz": 1.458, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "   \"name\":\"Star Trek IV\",", "sz": 1.458, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "   \"rating\":0.82,", "sz": 1.458, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "   \"link\":", "sz": 1.458, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "\t\"", "sz": 1.458, "c": "#222222", "f": "mono"}, {"t": "www.rottentomatoes.com/cele\tbrity/leonard_nimoy", "sz": 1.458, "f": "mono", "c": "#000000"}, {"t": "\",", "sz": 1.458, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "   \"link\":", "sz": 1.458, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "\t\"", "sz": 1.458, "c": "#222222", "f": "mono"}, {"t": "www.rottentomatoes.com/cele\tbrity/william_shatner", "sz": 1.458, "f": "mono", "c": "#000000"}, {"t": "\",", "sz": 1.458, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "   \"link\":", "sz": 1.458, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "\t\"", "sz": 1.458, "c": "#222222", "f": "mono"}, {"t": "www.rottentomatoes.com/cele\tbrity/nichelle_nichols", "sz": 1.458, "f": "mono", "c": "#000000"}, {"t": "\"", "sz": 1.458, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "}", "sz": 1.458, "c": "#222222", "f": "mono"}]}], "a": "t", "i": [0.886, 0.886, 0.886, 0.886]}},
+    {"k": "shape", "x": 55.5, "y": 7.819, "w": 41.3, "h": 15.593, "g": "rect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "{", "sz": 1.111, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "    \"name\": \"Star Trek IV\",", "sz": 1.111, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "    \"rating\": 0.82,", "sz": 1.111, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "    \"link\":", "sz": 1.111, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "        \"www.rottentomatoes.com/celebrity/leonard_nimoy\",", "sz": 1.111, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "    \"link\":", "sz": 1.111, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "        \"www.rottentomatoes.com/celebrity/william_shatner\",", "sz": 1.111, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "    \"link\":", "sz": 1.111, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "        \"www.rottentomatoes.com/celebrity/nichelle_nichols\"", "sz": 1.111, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "}", "sz": 1.111, "c": "#222222", "f": "mono"}]}], "a": "t", "i": [0.886, 0.886, 0.886, 0.886]}},
     {"k": "shape", "x": 55.273, "y": 39.383, "w": 19.718, "h": 9.041, "g": "roundRect", "fill": "#eb6969", "ln": "#eb6969", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Do you ", "sz": 2.5, "c": "#ffffff"}, {"t": "now", "sz": 2.5, "b": 1, "c": "#ffffff"}, {"t": " see a problem?", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 85.536, "y": 31.074, "w": 12.902, "h": 3.26, "g": "roundRect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Yes, this is valid JSON", "sz": 1.25, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 47.951, "y": 2.208, "w": 24.491, "h": 3.26, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "HATEOAS", "sz": 1.458, "b": 1, "c": "#ffffff"}, {"t": " + Link Relation Types", "sz": 1.458, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
@@ -816,10 +813,10 @@
    "layout": "canvas",
    "title": "",
    "items": [
-    {"k": "shape", "x": 4.528, "y": 11.804, "w": 50.744, "h": 30.847, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "HTTP GET www.rottentomatoes.com/m/star_trek_iv_the_voyage_home", "sz": 1.25, "f": "mono"}]}, {"al": "l", "r": [{"t": "Accept: */*", "sz": 1.25, "c": "#212121", "f": "mono"}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "200 OK", "sz": 1.25, "f": "mono"}]}, {"al": "l", "r": [{"t": "Content-Type: application/json", "sz": 1.25, "c": "#212121", "f": "mono"}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "{\"name\":\"Star Trek IV\", \"rating\":0.82, \"link\": \"", "sz": 1.25, "c": "#222222", "f": "mono"}, {"t": "www.rottentomatoes.com/cele\tbrity/leonard_nimoy", "sz": 1.25, "f": "mono"}, {"t": "\", \"link\": \"", "sz": 1.25, "c": "#222222", "f": "mono"}, {"t": "www.rottentomatoes.com/celebrity/william_shatner", "sz": 1.25, "f": "mono"}, {"t": "\", \"link\": ", "sz": 1.25, "c": "#222222", "f": "mono"}, {"t": "www.rottentomatoes.com/celebrity/nichelle_nichols ", "sz": 1.25, "f": "mono"}, {"t": "}", "sz": 1.25, "c": "#222222", "f": "mono"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 4.528, "y": 11.804, "w": 50.744, "h": 30.847, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "HTTP GET www.rottentomatoes.com/m/star_trek_iv_the_voyage_home", "sz": 1.25, "f": "mono"}]}, {"al": "l", "r": [{"t": "Accept: */*", "sz": 1.25, "c": "#212121", "f": "mono"}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "200 OK", "sz": 1.25, "f": "mono"}]}, {"al": "l", "r": [{"t": "Content-Type: application/json", "sz": 1.25, "c": "#212121", "f": "mono"}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "{\"name\":\"Star Trek IV\", \"rating\":0.82, \"link\": \"", "sz": 1.25, "c": "#222222", "f": "mono"}, {"t": "www.rottentomatoes.com/celebrity/leonard_nimoy", "sz": 1.25, "f": "mono"}, {"t": "\", \"link\": \"", "sz": 1.25, "c": "#222222", "f": "mono"}, {"t": "www.rottentomatoes.com/celebrity/william_shatner", "sz": 1.25, "f": "mono"}, {"t": "\", \"link\": ", "sz": 1.25, "c": "#222222", "f": "mono"}, {"t": "www.rottentomatoes.com/celebrity/nichelle_nichols ", "sz": 1.25, "f": "mono"}, {"t": "}", "sz": 1.25, "c": "#222222", "f": "mono"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 4.528, "y": 8.634, "w": 49.605, "h": 2.362, "g": "rightArrow", "fill": "#e1d7c3", "ln": "#e1d7c3", "lw": 0.104},
     {"k": "shape", "x": 4.637, "y": 18.082, "w": 49.605, "h": 2.362, "rot": 180.0, "g": "rightArrow", "fill": "#e1d7c3", "ln": "#e1d7c3", "lw": 0.104},
-    {"k": "shape", "x": 61.872, "y": 7.819, "w": 34.78, "h": 24.758, "g": "rect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "{", "sz": 1.458, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "   \"name\":\"Star Trek IV\",", "sz": 1.458, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "   \"rating\":0.82,", "sz": 1.458, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "   \"links\":", "sz": 1.458, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "     [", "sz": 1.458, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "\t\"", "sz": 1.458, "c": "#222222", "f": "mono"}, {"t": "www.rottentomatoes.com/cele\tbrity/leonard_nimoy", "sz": 1.458, "f": "mono", "c": "#000000"}, {"t": "\", \t\"", "sz": 1.458, "c": "#222222", "f": "mono"}, {"t": "www.rottentomatoes.com/cele\tbrity/william_shatner", "sz": 1.458, "f": "mono", "c": "#000000"}, {"t": "\",", "sz": 1.458, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "\t\"", "sz": 1.458, "c": "#222222", "f": "mono"}, {"t": "www.rottentomatoes.com/cele\tbrity/nichelle_nichols", "sz": 1.458, "f": "mono", "c": "#000000"}, {"t": "\"", "sz": 1.458, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "     ]", "sz": 1.458, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "}", "sz": 1.458, "c": "#222222", "f": "mono"}]}], "a": "t", "i": [0.886, 0.886, 0.886, 0.886]}},
+    {"k": "shape", "x": 55.5, "y": 7.819, "w": 41.3, "h": 14.271, "g": "rect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "{", "sz": 1.111, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "    \"name\": \"Star Trek IV\",", "sz": 1.111, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "    \"rating\": 0.82,", "sz": 1.111, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "    \"links\": [", "sz": 1.111, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "        \"www.rottentomatoes.com/celebrity/leonard_nimoy\",", "sz": 1.111, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "        \"www.rottentomatoes.com/celebrity/william_shatner\",", "sz": 1.111, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "        \"www.rottentomatoes.com/celebrity/nichelle_nichols\"", "sz": 1.111, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "    ]", "sz": 1.111, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "}", "sz": 1.111, "c": "#222222", "f": "mono"}]}], "a": "t", "i": [0.886, 0.886, 0.886, 0.886]}},
     {"k": "shape", "x": 47.951, "y": 2.208, "w": 24.491, "h": 3.26, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "HATEOAS", "sz": 1.458, "b": 1, "c": "#ffffff"}, {"t": " + Link Relation Types", "sz": 1.458, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 73.344, "y": 2.208, "w": 24.491, "h": 3.26, "g": "roundRect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Media Types + RDF Vocabularies", "sz": 1.458, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 29.331, "y": 2.208, "w": 17.718, "h": 3.26, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "HTTP Protocol Idioms", "sz": 1.458, "c": "#ffffff", "href": "09#http-idioms"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
@@ -835,9 +832,9 @@
     {"k": "shape", "x": 4.528, "y": 8.634, "w": 49.605, "h": 2.362, "g": "rightArrow", "fill": "#e1d7c3", "ln": "#e1d7c3", "lw": 0.104},
     {"k": "shape", "x": 4.637, "y": 18.082, "w": 49.605, "h": 2.362, "rot": 180.0, "g": "rightArrow", "fill": "#e1d7c3", "ln": "#e1d7c3", "lw": 0.104},
     {"k": "shape", "x": 40.609, "y": 33.795, "w": 57.186, "h": 6.719, "s": 3, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "application/json is ", "sz": 1.875}, {"t": "still no hypermedia type!", "sz": 1.875, "b": 1}]}, {"al": "r", "r": [{"t": "But now, clients can map their (application-specific) ", "sz": 1.875}, {"t": "why", "sz": 1.875, "b": 1}, {"t": " to a ", "sz": 1.875}, {"t": "how", "sz": 1.875, "b": 1}, {"t": "!", "sz": 1.875}]}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
-    {"k": "shape", "x": 57.649, "y": 8.444, "w": 40.146, "h": 24.001, "s": 2, "g": "rect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "{", "sz": 1.667, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "   \"name\":\"Star Trek IV\",", "sz": 1.667, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "   \"rating\":0.82,", "sz": 1.667, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "   \"director\":{", "sz": 1.667, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "    \"id\":\"www.rottentomatoes.com/", "sz": 1.667, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "\tcelebrity/leonard_nimoy\"", "sz": 1.667, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "   },", "sz": 1.667, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "   \"cast\":[", "sz": 1.667, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "\t(…)", "sz": 1.667, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "   ]", "sz": 1.667, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "}", "sz": 1.667, "c": "#222222", "f": "mono"}]}], "a": "t", "i": [0.886, 0.886, 0.886, 0.886]}},
-    {"k": "shape", "x": 7.359, "y": 40.661, "w": 34.656, "h": 12.401, "s": 4, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Our problem to distinguish between director and cast is ", "sz": 1.875, "c": "#ffffff"}, {"t": "solved", "sz": 1.875, "b": 1, "c": "#ffffff"}, {"t": ". However, putting a hypermedia control into the payload was only half the work.", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 44.408, "y": 40.737, "w": 46.305, "h": 12.401, "s": 5, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "We now need to make sure that new clients can ", "sz": 1.875, "c": "#ffffff"}, {"t": "understand", "sz": 1.875, "b": 1, "c": "#ffffff"}, {"t": " what following this hypermedia control implies. Therefore, we will make our payload type into a ", "sz": 1.875, "c": "#ffffff"}, {"t": "documented", "sz": 1.875, "b": 1, "c": "#ffffff"}, {"t": " ", "sz": 1.875, "c": "#ffffff"}, {"t": "hypermedia type next", "sz": 1.875, "b": 1, "c": "#ffffff"}, {"t": "!", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 55.5, "y": 8.444, "w": 42.0, "h": 16.928, "s": 2, "g": "rect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "{", "sz": 1.112, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "    \"name\": \"Star Trek IV\",", "sz": 1.112, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "    \"rating\": 0.82,", "sz": 1.112, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "    \"director\": {", "sz": 1.112, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "        \"id\":", "sz": 1.112, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "            \"www.rottentomatoes.com/celebrity/leonard_nimoy\"", "sz": 1.112, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "    },", "sz": 1.112, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "    \"cast\": [", "sz": 1.112, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "        (…)", "sz": 1.112, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "    ]", "sz": 1.112, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "}", "sz": 1.112, "c": "#222222", "f": "mono"}]}], "a": "t", "i": [0.886, 0.886, 0.886, 0.886]}},
+    {"k": "shape", "x": 7.359, "y": 40.9, "w": 34.656, "h": 11.0, "s": 4, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Our problem to distinguish between director and cast is ", "sz": 1.875, "c": "#ffffff"}, {"t": "solved", "sz": 1.875, "b": 1, "c": "#ffffff"}, {"t": ". However, putting a hypermedia control into the payload was only half the work.", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 44.408, "y": 40.9, "w": 46.305, "h": 11.0, "s": 5, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "We now need to make sure that new clients can ", "sz": 1.875, "c": "#ffffff"}, {"t": "understand", "sz": 1.875, "b": 1, "c": "#ffffff"}, {"t": " what following this hypermedia control implies. Therefore, we will make our payload type into a ", "sz": 1.875, "c": "#ffffff"}, {"t": "documented", "sz": 1.875, "b": 1, "c": "#ffffff"}, {"t": " ", "sz": 1.875, "c": "#ffffff"}, {"t": "hypermedia type next", "sz": 1.875, "b": 1, "c": "#ffffff"}, {"t": "!", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 47.951, "y": 2.208, "w": 24.491, "h": 3.26, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "HATEOAS + ", "sz": 1.458, "c": "#ffffff"}, {"t": "Link Relation Types", "sz": 1.458, "b": 1, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 73.344, "y": 2.208, "w": 24.491, "h": 3.26, "g": "roundRect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Media Types + RDF Vocabularies", "sz": 1.458, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 29.331, "y": 2.208, "w": 17.718, "h": 3.26, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "HTTP Protocol Idioms", "sz": 1.458, "c": "#ffffff", "href": "09#http-idioms"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
@@ -884,10 +881,10 @@
    "items": [
     {"k": "shape", "x": 3.924, "y": 12.501, "w": 49.097, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Link Relation Types permit clients to understand ", "sz": 1.875}, {"t": "why", "sz": 1.875, "b": 1}, {"t": " they might want to follow a link.", "sz": 1.875}], "s": 1}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "New protocols should ", "sz": 1.875}, {"t": "reuse", "sz": 1.875, "b": 1}, {"t": " link relations that are already defined (if the semantics match)", "sz": 1.875}], "s": 3}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "If they don’t, new protocols ", "sz": 1.875}, {"t": "may add new link relations ", "sz": 1.875, "b": 1}, {"t": "and may even ", "sz": 1.875}, {"t": "extend the idioms of the underlying protocol ", "sz": 1.875, "b": 1}, {"t": "(e.g., HTTP) in the context of these new link relations.", "sz": 1.875}], "s": 4}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "Registering Link Relation Types", "sz": 1.875}], "s": 5}, {"al": "l", "r": [{"t": "Many link relations are bound to ", "sz": 1.875}, {"t": "specific media types", "sz": 1.875, "b": 1}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 6}, {"al": "l", "r": [{"t": "And there are ", "sz": 1.875}, {"t": "independently defined ", "sz": 1.875, "b": 1}, {"t": "link relations (e.g., “hub”)", "sz": 1.875}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 8}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "pic", "src": "img/375f143102.png", "alt": "Slide: How to reduce required knowledge in the head? Affordances, signifiers, constraints, natural mappings", "x": 66.317, "y": 10.996, "w": 31.518, "h": 10.744, "s": 2, "crop": [0.10429, 0.185, 0.29794, 0.45275], "shadow": true},
-    {"k": "shape", "x": 69.947, "y": 22.816, "w": 27.888, "h": 3.016, "s": 2, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "J. Schöning, HCI, University of St.Gallen, 2021", "sz": 0.938, "c": "#808080"}]}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
+    {"k": "shape", "x": 69.947, "y": 22.816, "w": 27.888, "h": 3.016, "s": 2, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "J. Schöning, HCI, University of St.Gallen", "sz": 0.938, "c": "#808080"}]}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
     {"k": "shape", "x": 53.02, "y": 15.642, "w": 14.105, "h": 4.211, "fx": true, "fy": true, "s": 2, "g": "straightConnector1", "ln": "#00802f", "lw": 0.104, "tail": "triangle"},
     {"k": "shape", "x": 51.15, "y": 34.617, "w": 46.007, "h": 3.543, "s": 7, "g": "roundRect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Example Media Type: ", "sz": 1.875, "c": "#000000"}, {"t": "application/problem+json", "sz": 1.875, "f": "mono", "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 24.62, "y": 43.856, "w": 70.098, "h": 3.543, "s": 9, "g": "roundRect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "All defined link relations: ", "sz": 1.875, "c": "#000000"}, {"t": "https://www.iana.org/assignments/link-relations/link-relations.xhtml", "sz": 1.875, "c": "#000000", "href": "https://www.iana.org/assignments/link-relations/link-relations.xhtml"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 24.62, "y": 45.656, "w": 70.098, "h": 3.543, "s": 9, "g": "roundRect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "All defined link relations: ", "sz": 1.875, "c": "#000000"}, {"t": "https://www.iana.org/assignments/link-relations/link-relations.xhtml", "sz": 1.875, "c": "#000000", "href": "https://www.iana.org/assignments/link-relations/link-relations.xhtml"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 47.951, "y": 2.208, "w": 24.491, "h": 3.26, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "HATEOAS + ", "sz": 1.458, "c": "#ffffff"}, {"t": "Link Relation Types", "sz": 1.458, "b": 1, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 73.344, "y": 2.208, "w": 24.491, "h": 3.26, "g": "roundRect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Media Types + RDF Vocabularies", "sz": 1.458, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 29.331, "y": 2.208, "w": 17.718, "h": 3.26, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "HTTP Protocol Idioms", "sz": 1.458, "c": "#ffffff", "href": "09#http-idioms"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
@@ -897,7 +894,7 @@
    "layout": "canvas",
    "title": "",
    "items": [
-    {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "XHTML ", "sz": 1.948}, {"t": "is a hypermedia format ", "sz": 1.948, "b": 1}, {"t": "because its specification includes ", "sz": 1.948}, {"t": "<a href=“…”>, <link rel=“…” href=“…”>", "sz": 1.948, "f": "mono"}, {"t": ", and others. People simply use browsers that render these navigation affordances as ", "sz": 1.948}, {"t": "signifiers", "sz": 1.948, "u": 1, "c": "#7030a0"}, {"t": ".", "sz": 1.948}], "s": 1}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "The Web itself has ", "sz": 1.948}, {"t": "no idea about what ", "sz": 1.948, "b": 1}, {"t": "resource representations are exchanged between client and server, but REST’s Uniform Interface mandates that they ", "sz": 1.948}, {"t": "need to be self-descriptive ", "sz": 1.948, "b": 1}, {"t": "and ", "sz": 1.948}, {"t": "support HATEOAS", "sz": 1.948, "b": 1}, {"t": ".", "sz": 1.948}], "s": 2}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "Illustration: Is JSON a hypermedia format, and why does this matter?", "sz": 1.948, "b": 1}], "s": 3}, {"al": "l", "r": [{"t": "Plain JSON does not have hypermedia controls", "sz": 1.667}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 4}, {"al": "l", "r": [{"t": "Plain JSON does not provide any options of how a client might advance the application state", "sz": 1.667}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 5}, {"al": "l", "r": [{"t": "", "sz": 1.667}], "pl": 2.343, "in": -2.343}, {"al": "l", "r": [{"t": "Clients of plain JSON therefore will require ", "sz": 1.667}, {"t": "out-of-band guidance", "sz": 1.667, "b": 1}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 6}, {"al": "l", "r": [{"t": "", "sz": 1.667}], "pl": 2.343, "in": -2.343}, {"al": "l", "r": [{"t": "Programmers of these clients are likely to ", "sz": 1.667}, {"t": "hard-code this guidance ", "sz": 1.667, "b": 1}, {"t": "(URI templates, WSDL, WADL, etc.)", "sz": 1.667}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 7}, {"al": "l", "r": [{"t": "", "sz": 1.667}], "pl": 2.343, "in": -2.343}, {"al": "l", "r": [{"t": "When the service changes, these clients will ", "sz": 1.667}, {"t": "break", "sz": 1.667, "b": 1}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 8}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 3.924, "y": 12.501, "w": 92.228, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "XHTML ", "sz": 1.948}, {"t": "is a hypermedia format ", "sz": 1.948, "b": 1}, {"t": "because its specification includes ", "sz": 1.948}, {"t": "<a href=\"…\">, <link rel=\"…\" href=\"…\">", "sz": 1.948, "f": "mono"}, {"t": ", and others. People simply use browsers that render these navigation affordances as ", "sz": 1.948}, {"t": "signifiers", "sz": 1.948, "u": 1, "c": "#7030a0"}, {"t": ".", "sz": 1.948}], "s": 1}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "The Web itself has ", "sz": 1.948}, {"t": "no idea about what ", "sz": 1.948, "b": 1}, {"t": "resource representations are exchanged between client and server, but REST’s Uniform Interface mandates that they ", "sz": 1.948}, {"t": "need to be self-descriptive ", "sz": 1.948, "b": 1}, {"t": "and ", "sz": 1.948}, {"t": "support HATEOAS", "sz": 1.948, "b": 1}, {"t": ".", "sz": 1.948}], "s": 2}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "", "sz": 1.948}]}, {"al": "l", "r": [{"t": "Illustration: Is JSON a hypermedia format, and why does this matter?", "sz": 1.948, "b": 1}], "s": 3}, {"al": "l", "r": [{"t": "Plain JSON does not have hypermedia controls", "sz": 1.667}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 4}, {"al": "l", "r": [{"t": "Plain JSON does not provide any options of how a client might advance the application state", "sz": 1.667}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 5}, {"al": "l", "r": [{"t": "", "sz": 1.667}], "pl": 2.343, "in": -2.343}, {"al": "l", "r": [{"t": "Clients of plain JSON therefore will require ", "sz": 1.667}, {"t": "out-of-band guidance", "sz": 1.667, "b": 1}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 6}, {"al": "l", "r": [{"t": "", "sz": 1.667}], "pl": 2.343, "in": -2.343}, {"al": "l", "r": [{"t": "Programmers of these clients are likely to ", "sz": 1.667}, {"t": "hard-code this guidance ", "sz": 1.667, "b": 1}, {"t": "(URI templates, WSDL, WADL, etc.)", "sz": 1.667}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 7}, {"al": "l", "r": [{"t": "", "sz": 1.667}], "pl": 2.343, "in": -2.343}, {"al": "l", "r": [{"t": "When the service changes, these clients will ", "sz": 1.667}, {"t": "break", "sz": 1.667, "b": 1}], "pl": 2.343, "in": -2.343, "bu": "-", "s": 8}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}, {"al": "l", "r": [{"t": "", "sz": 1.875}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 47.951, "y": 2.208, "w": 24.491, "h": 3.26, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "HATEOAS + ", "sz": 1.458, "c": "#ffffff"}, {"t": "Link Relation Types", "sz": 1.458, "b": 1, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 73.344, "y": 2.208, "w": 24.491, "h": 3.26, "g": "roundRect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Media Types + RDF Vocabularies", "sz": 1.458, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 29.331, "y": 2.208, "w": 17.718, "h": 3.26, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "HTTP Protocol Idioms", "sz": 1.458, "c": "#ffffff", "href": "09#http-idioms"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
@@ -925,7 +922,8 @@
      "to": "10#shared-understanding",
      "kind": "next"
     }
-   ]
+   ],
+   "refs_up": 2.6
   },
   {
    "layout": "canvas",
@@ -934,12 +932,12 @@
     {"k": "shape", "x": 4.927, "y": 11.687, "w": 50.697, "h": 43.267, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "HTTP GET www.rottentomatoes.com/m/star_trek_iv_the_voyage_home", "sz": 1.25, "f": "mono"}], "s": 2}, {"al": "l", "r": [{"t": "Accept: application/vnd.rottentomatoes+json", "sz": 1.25, "c": "#212121", "f": "mono"}], "s": 3}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "200 OK", "sz": 1.25, "f": "mono"}], "s": 5}, {"al": "l", "r": [{"t": "Content-Type: application/vnd.rottentomatoes+json", "sz": 1.25, "c": "#212121", "f": "mono"}], "s": 6}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "{\"name\":\"Star Trek IV\",\"rating\":0.82,\"director\":{\"id\": \"www.rottentomatoes.com/celebrity/leonard_nimoy\"},\"cast\":[(…)]}", "sz": 1.25, "c": "#222222", "f": "mono"}], "s": 7}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "HTTP GET www.rottentomatoes.com/celebrity/leonard_nimoy", "sz": 1.25, "f": "mono"}], "s": 12}, {"al": "l", "r": [{"t": "Accept: */*", "sz": 1.25, "c": "#212121", "f": "mono"}], "s": 13}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}, {"al": "l", "r": [{"t": "", "sz": 1.25}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 4.528, "y": 8.634, "w": 49.605, "h": 2.362, "s": 1, "g": "rightArrow", "fill": "#e1d7c3", "ln": "#e1d7c3", "lw": 0.104},
     {"k": "shape", "x": 4.637, "y": 18.082, "w": 49.605, "h": 2.362, "rot": 180.0, "s": 4, "g": "rightArrow", "fill": "#e1d7c3", "ln": "#e1d7c3", "lw": 0.104},
-    {"k": "shape", "x": 57.649, "y": 35.199, "w": 40.398, "h": 6.719, "s": 14, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "application/vnd.rottentomatoes+json ", "sz": 1.875, "c": "#212121", "f": "mono"}, {"t": "is ", "sz": 1.875}, {"t": "a", "sz": 1.875, "b": 1}, {"t": " ", "sz": 1.875}, {"t": "hypermedia", "sz": 1.875, "b": 1}, {"t": " type! ", "sz": 1.875}]}, {"al": "r", "r": [{"t": "", "sz": 1.875}]}, {"al": "r", "r": [{"t": "", "sz": 1.875}]}, {"al": "r", "r": [{"t": "Ideally, it is ", "sz": 1.875}, {"t": "public", "sz": 1.875, "b": 1}, {"t": " and ", "sz": 1.875}, {"t": "specifies its relevant link relations", "sz": 1.875, "b": 1}, {"t": " to enable the mapping of ", "sz": 1.875}, {"t": "why", "sz": 1.875, "b": 1}, {"t": " to ", "sz": 1.875}, {"t": "how", "sz": 1.875, "b": 1}, {"t": "!", "sz": 1.875}]}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
+    {"k": "shape", "x": 57.649, "y": 35.199, "w": 40.398, "h": 6.719, "s": 14, "g": "rect", "tx": {"p": [{"al": "r", "r": [{"t": "application/vnd.rottentomatoes+json ", "sz": 1.875, "c": "#212121", "f": "mono"}, {"t": "is ", "sz": 1.875}, {"t": "a", "sz": 1.875, "b": 1}, {"t": " ", "sz": 1.875}, {"t": "hypermedia", "sz": 1.875, "b": 1}, {"t": " type! ", "sz": 1.875}]}, {"al": "r", "r": [{"t": "", "sz": 1.875}]}, {"al": "r", "r": [{"t": "", "sz": 1.875}]}, {"al": "r", "r": [{"t": "Ideally, it is ", "sz": 1.875}, {"t": "public", "sz": 1.875, "b": 1}, {"t": " and ", "sz": 1.875}, {"t": "specifies its relevant link relations", "sz": 1.875, "b": 1}, {"t": " to enable the mapping of ", "sz": 1.875}, {"t": "why", "sz": 1.875, "b": 1}, {"t": " to ", "sz": 1.875}, {"t": "how", "sz": 1.875, "b": 1}, {"t": "!", "sz": 1.875}]}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
     {"k": "shape", "x": 11.17, "y": 33.664, "w": 28.876, "h": 5.322, "s": 10, "g": "rect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "url = jsonObject.director.id", "sz": 1.458, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "requests.get(url)", "sz": 1.458, "c": "#222222", "f": "mono"}]}], "a": "t", "i": [0.886, 0.886, 0.886, 0.886]}},
     {"k": "shape", "x": 4.528, "y": 42.598, "w": 49.605, "h": 2.362, "s": 11, "g": "rightArrow", "fill": "#e1d7c3", "ln": "#e1d7c3", "lw": 0.104},
     {"k": "shape", "x": 4.637, "y": 22.47, "w": 38.657, "h": 1.75, "s": 9, "g": "rect", "ln": "#ff0000", "lw": 0.365},
     {"k": "shape", "x": 4.528, "y": 13.46, "w": 33.435, "h": 1.75, "s": 9, "g": "rect", "ln": "#ff0000", "lw": 0.365},
-    {"k": "shape", "x": 57.649, "y": 8.444, "w": 40.146, "h": 24.001, "s": 8, "g": "rect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "{", "sz": 1.667, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "   \"name\":\"Star Trek IV\",", "sz": 1.667, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "   \"rating\":0.82,", "sz": 1.667, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "   \"director\":{", "sz": 1.667, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "    \"id\":\"www.rottentomatoes.com/", "sz": 1.667, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "\tcelebrity/leonard_nimoy\"", "sz": 1.667, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "   },", "sz": 1.667, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "   \"cast\":[", "sz": 1.667, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "\t(…)", "sz": 1.667, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "   ]", "sz": 1.667, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "}", "sz": 1.667, "c": "#222222", "f": "mono"}]}], "a": "t", "i": [0.886, 0.886, 0.886, 0.886]}},
+    {"k": "shape", "x": 55.5, "y": 8.444, "w": 42.0, "h": 16.928, "s": 8, "g": "rect", "fill": "#ffffff", "ln": "#e1d7c3", "lw": 0.104, "tx": {"p": [{"al": "l", "r": [{"t": "{", "sz": 1.112, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "    \"name\": \"Star Trek IV\",", "sz": 1.112, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "    \"rating\": 0.82,", "sz": 1.112, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "    \"director\": {", "sz": 1.112, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "        \"id\":", "sz": 1.112, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "            \"www.rottentomatoes.com/celebrity/leonard_nimoy\"", "sz": 1.112, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "    },", "sz": 1.112, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "    \"cast\": [", "sz": 1.112, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "        (…)", "sz": 1.112, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "    ]", "sz": 1.112, "c": "#222222", "f": "mono"}]}, {"al": "l", "r": [{"t": "}", "sz": 1.112, "c": "#222222", "f": "mono"}]}], "a": "t", "i": [0.886, 0.886, 0.886, 0.886]}},
     {"k": "shape", "x": 47.951, "y": 2.208, "w": 24.491, "h": 3.26, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "HATEOAS + Link Relation Types", "sz": 1.458, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 73.344, "y": 2.208, "w": 24.491, "h": 3.26, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Media Types ", "sz": 1.458, "b": 1, "c": "#ffffff"}, {"t": "+ RDF Vocabularies", "sz": 1.458, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 29.331, "y": 2.208, "w": 17.718, "h": 3.26, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "HTTP Protocol Idioms", "sz": 1.458, "c": "#ffffff", "href": "09#http-idioms"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
@@ -993,14 +991,14 @@
     {"k": "pic", "src": "img/7555884fa5.png", "alt": "Diagram of a conceptual model of a refrigerator with two thermostats inferred from the system image, next to a photo of the fridge", "x": 12.907, "y": 15.678, "w": 34.121, "h": 21.923, "crop": [0.15557, 0.18887, 0.21103, 0.08766]},
     {"k": "pic", "src": "img/567c180f97.png", "alt": "Diagram of the correct conceptual model of a refrigerator with one thermostat and a shared cooling unit, next to a photo of the fridge", "x": 63.319, "y": 14.536, "w": 29.435, "h": 18.883, "crop": [0.14796, 0.17668, 0.19853, 0.07802]},
     {"k": "shape", "x": 53.811, "y": 24.005, "w": 5.316, "h": 4.854, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "vs.", "sz": 1.875}]}], "a": "t", "i": [0.0, 0.0, 0.0, 0.0]}},
-    {"k": "shape", "x": 40.903, "y": 28.153, "w": 53.854, "h": 9.448, "s": 1, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Ideally, all clients and servers would ", "sz": 2.5, "c": "#ffffff"}, {"t": "share", "sz": 2.5, "b": 1, "c": "#ffffff"}, {"t": " the same conceptual model from the get-go!", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 7.172, "y": 38.542, "w": 70.865, "h": 7.364, "s": 2, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "That would, for instance, permit ", "sz": 2.5, "c": "#ffffff"}, {"t": "more directed search", "sz": 2.5, "b": 1, "c": "#ffffff"}, {"t": "…", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 40.903, "y": 28.2, "w": 53.854, "h": 7.4, "s": 1, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Ideally, all clients and servers would ", "sz": 2.5, "c": "#ffffff"}, {"t": "share", "sz": 2.5, "b": 1, "c": "#ffffff"}, {"t": " the same conceptual model from the get-go!", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 7.172, "y": 37.5, "w": 70.865, "h": 5.4, "s": 2, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "That would, for instance, permit ", "sz": 2.5, "c": "#ffffff"}, {"t": "more directed search", "sz": 2.5, "b": 1, "c": "#ffffff"}, {"t": "…", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 47.951, "y": 2.208, "w": 24.491, "h": 3.26, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "HATEOAS + Link Relation Types", "sz": 1.458, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 73.344, "y": 2.208, "w": 24.491, "h": 3.26, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Media Types + ", "sz": 1.458, "c": "#ffffff"}, {"t": "RDF Vocabularies", "sz": 1.458, "b": 1, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 29.331, "y": 2.208, "w": 17.718, "h": 3.26, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "HTTP Protocol Idioms", "sz": 1.458, "c": "#ffffff", "href": "09#http-idioms"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 35.531, "y": 46.992, "w": 49.872, "h": 5.901, "s": 3, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Anyone interested ", "sz": 2.5, "b": 1, "c": "#ffffff"}, {"t": "in searching out there?", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "pic", "src": "img/d4e87f0cdf.jpg", "alt": "Google logo - Wikipedia", "x": 86.931, "y": 40.07, "w": 5.823, "h": 5.823},
-    {"k": "pic", "src": "img/19506daaa3.png", "alt": "OpenAI Logo and symbol, meaning, history, PNG, brand", "x": 85.59, "y": 45.312, "w": 13.069, "h": 7.351}
+    {"k": "shape", "x": 7.172, "y": 44.8, "w": 50, "h": 5.4, "s": 3, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Anyone interested ", "sz": 2.5, "b": 1, "c": "#ffffff"}, {"t": "in searching out there?", "sz": 2.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "pic", "src": "img/d4e87f0cdf.jpg", "alt": "Google logo - Wikipedia", "x": 86.931, "y": 38.47, "w": 5.823, "h": 5.823},
+    {"k": "pic", "src": "img/19506daaa3.png", "alt": "OpenAI Logo and symbol, meaning, history, PNG, brand", "x": 85.59, "y": 43.712, "w": 13.069, "h": 7.351}
    ],
    "id": "common-model",
    "refs": [
@@ -1017,10 +1015,11 @@
     {"k": "pic", "src": "img/85ac867a11.png", "alt": "Cast and crew list of Star Trek IV: The Voyage Home with portrait photos", "x": 6.891, "y": 11.586, "w": 38.385, "h": 41.338, "crop": [0.37597, 0.18501, 0.24013, 0.08]},
     {"k": "pic", "src": "img/018506453e.png", "alt": "HTML source of a movie page with a JSON-LD block using schema.org markup", "x": 5.216, "y": 10.215, "w": 88.876, "h": 25.393, "s": 1, "crop": [0.05113, 0.1535, 0.03932, 0.3845], "shadow": true},
     {"k": "shape", "x": 10.375, "y": 26.994, "w": 85.392, "h": 10.386, "s": 2, "g": "rect", "ln": "#ff0000", "lw": 0.547},
-    {"k": "shape", "x": 58.344, "y": 40.123, "w": 34.766, "h": 7.572, "s": 3, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "https://schema.org/Movie", "sz": 1.875, "href": "https://schema.org/Movie"}]}, {"al": "l", "r": [{"t": "https://schema.org/Person", "sz": 1.875, "href": "https://schema.org/Person"}]}, {"al": "l", "r": [{"t": "https://schema.org/sameAs", "sz": 1.875, "href": "https://schema.org/sameAs"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 58.344, "y": 37.4, "w": 34.766, "h": 7.572, "s": 3, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "https://schema.org/Movie", "sz": 1.875, "href": "https://schema.org/Movie"}]}, {"al": "l", "r": [{"t": "https://schema.org/Person", "sz": 1.875, "href": "https://schema.org/Person"}]}, {"al": "l", "r": [{"t": "https://schema.org/sameAs", "sz": 1.875, "href": "https://schema.org/sameAs"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 47.951, "y": 2.208, "w": 24.491, "h": 3.26, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "HATEOAS + Link Relation Types", "sz": 1.458, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 73.344, "y": 2.208, "w": 24.491, "h": 3.26, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Media Types + ", "sz": 1.458, "c": "#ffffff"}, {"t": "RDF Vocabularies", "sz": 1.458, "b": 1, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 29.331, "y": 2.208, "w": 17.718, "h": 3.26, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "HTTP Protocol Idioms", "sz": 1.458, "c": "#ffffff", "href": "09#http-idioms"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
+    {"k": "shape", "x": 29.331, "y": 2.208, "w": 17.718, "h": 3.26, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "HTTP Protocol Idioms", "sz": 1.458, "c": "#ffffff", "href": "09#http-idioms"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 45.5, "y": 46.0, "w": 51.0, "h": 5.4, "s": 4, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Well, we need something to discuss in the ", "sz": 1.875, "c": "#ffffff"}, {"t": "next lecture", "sz": 1.875, "c": "#ffffff", "u": 1, "b": 1, "href": "10#start"}, {"t": " as well ;-)", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}}
    ],
    "refs": [
     {
@@ -1034,10 +1033,10 @@
    "id": "decoupled-so-far",
    "title": "What Have We Decoupled So Far?",
    "points": [
-    "Lecture 7: client from server, through architectural constraints such as statelessness",
-    "Lecture 8: sender from receiver in time and space, through interaction styles",
-    "Today: client from the server's flow and URIs, through hypermedia and shared vocabularies",
-    "Still coupled on each server: application, data, identity, and access control"
+    "Lecture 7: **client from server**, through architectural constraints such as **statelessness**",
+    "Lecture 8: **sender from receiver** in time and space, through **interaction styles**",
+    "Today: **client from the server's flow and URIs**, through **hypermedia** and **shared vocabularies**",
+    "Still coupled on each server: **application, data, identity, and access control**"
    ],
    "aside": {
     "image": "img/coupled-server.svg",
@@ -1053,7 +1052,8 @@
      "to": "08#start",
      "kind": "recap"
     }
-   ]
+   ],
+   "airy": true
   },
   {
    "layout": "code",
@@ -1061,9 +1061,9 @@
    "title": "Does the Link Care Where It Points?",
    "code": "{\n  \"@context\": \"https://schema.org/\",\n  \"@type\": \"Movie\",\n  \"name\": \"Star Trek IV\",\n  \"director\": {\n    \"@id\": \"https://nimoy.example/profile#me\"\n  }\n}\n\nurl = movie[\"director\"][\"@id\"]\nperson = requests.get(url)  # a schema:Person",
    "points": [
-    "Before, the director's page was on www.rottentomatoes.com",
-    "Now it is on another server, e.g. one the person chose",
-    "The client code stays the same: follow the link, read the vocabulary"
+    "Before, the director's page was on **www.rottentomatoes.com**",
+    "Now it is on **another server**, e.g. one the person chose",
+    "The client code stays the same: **follow the link**, read the vocabulary"
    ],
    "callout": {
     "text": "Does the data have to live with the application that shows it?"
@@ -1078,7 +1078,8 @@
      "to": "09#common-model",
      "kind": "recap"
     }
-   ]
+   ],
+   "airy": true
   },
   {
    "layout": "section",
@@ -1094,7 +1095,11 @@
     "Who decides who may read it, change it, or delete it?",
     "Can another movie app show your review next to its own?",
     "What happens to your reviews when you leave the platform?"
-   ]
+   ],
+   "callout": {
+    "text": "How can we decentralize data?",
+    "style": "red"
+   }
   },
   {
    "layout": "canvas",
@@ -1110,20 +1115,39 @@
    "source": "[SocietyByte 2021](https://www.societybyte.swiss/en/2021/01/07/part-1-power-to-the-people-re-decentralizing-the-web-for-good-this-time/), [The Economist 2008](https://www.economist.com/leaders/2008/03/19/break-down-these-walls), [Medium: How Solid is Tim’s plan to redecentralize the web?](https://medium.com/@shevski/how-solid-is-tims-plan-to-redecentralize-the-web-b163ba78e835)"
   },
   {
-   "layout": "quote",
+   "layout": "canvas",
+   "title": "",
    "id": "lws-mission",
-   "title": "“…web applications where data storage, entity authentication, access control, and application provider are all loosely coupled”",
-   "attribution": "Mission of the W3C Linked Web Storage Working Group",
-   "points": [
-    "“…as opposed to the web of today where these are typically all tightly coupled and changing one requires changing all, sometimes at the price of all past data.”",
-    "Coupling again: the question of the last three lectures, now asked about data"
-   ],
    "source": "[W3C Linked Web Storage Working Group](https://www.w3.org/groups/wg/lws/), [charter](https://www.w3.org/2024/09/linked-web-storage-wg-charter.html)",
    "refs": [
     {
      "to": "09#decoupled-so-far",
      "kind": "recap"
     }
+   ],
+   "items": [
+    {"k": "shape", "x": 10, "y": 12.5, "w": 80, "h": 14, "g": "rect", "tx": {"p": [{"al": "c", "r": [{"t": "“…web applications where data storage, entity authentication, access control, and application provider are ", "sz": 2.9, "c": "#000000"}, {"t": "all loosely coupled", "sz": 2.9, "c": "#00802f", "b": 1}, {"t": "”", "sz": 2.9, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 10, "y": 26.6, "w": 80, "h": 2.6, "g": "rect", "tx": {"p": [{"al": "c", "r": [{"t": "Mission of the W3C Linked Web Storage Working Group", "sz": 1.5, "c": "#808080"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 5.0, "y": 31.6, "w": 48, "h": 3, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Benefit from decoupled data", "sz": 1.7, "c": "#00802f", "b": 1}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}, "s": 1},
+    {"k": "pic", "src": "img/logo-dff.svg", "alt": "Logo of the Digital Freedom Front: a shield with the letters DFF", "x": 5.5, "y": 35.2, "w": 8.2, "h": 8.2, "s": 1},
+    {"k": "shape", "x": 3.2, "y": 43.8, "w": 12.0, "h": 2.4, "g": "rect", "tx": {"p": [{"al": "c", "r": [{"t": "Digital Freedom Front", "sz": 1.05, "c": "#000000"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}, "s": 1},
+    {"k": "pic", "src": "img/smiley.svg", "alt": "Smiling face", "x": 7.4, "y": 47.2, "w": 4.4, "h": 4.4, "s": 1},
+    {"k": "pic", "src": "img/logo-kestrel.svg", "alt": "Logo of the Kestrel Foundation: an orange disc with a stylised bird", "x": 17.7, "y": 35.2, "w": 8.2, "h": 8.2, "s": 1},
+    {"k": "shape", "x": 15.4, "y": 43.8, "w": 12.0, "h": 2.4, "g": "rect", "tx": {"p": [{"al": "c", "r": [{"t": "Kestrel Foundation", "sz": 1.05, "c": "#000000"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}, "s": 1},
+    {"k": "pic", "src": "img/smiley.svg", "alt": "Smiling face", "x": 19.6, "y": 47.2, "w": 4.4, "h": 4.4, "s": 1},
+    {"k": "pic", "src": "img/logo-commission.svg", "alt": "Logo of the Commission of the Continental Union: a blue field with a ring of stars", "x": 29.9, "y": 35.2, "w": 8.2, "h": 8.2, "s": 1},
+    {"k": "shape", "x": 27.6, "y": 43.8, "w": 12.0, "h": 2.4, "g": "rect", "tx": {"p": [{"al": "c", "r": [{"t": "Continental Union", "sz": 1.05, "c": "#000000"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}, "s": 1},
+    {"k": "pic", "src": "img/smiley.svg", "alt": "Smiling face", "x": 31.8, "y": 47.2, "w": 4.4, "h": 4.4, "s": 1},
+    {"k": "pic", "src": "img/logo-saentis.svg", "alt": "Logo of Säntis Industrie: a grey gear with the letter S", "x": 42.099999999999994, "y": 35.2, "w": 8.2, "h": 8.2, "s": 1},
+    {"k": "shape", "x": 39.8, "y": 43.8, "w": 12.0, "h": 2.4, "g": "rect", "tx": {"p": [{"al": "c", "r": [{"t": "Säntis Industrie", "sz": 1.05, "c": "#000000"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}, "s": 1},
+    {"k": "pic", "src": "img/smiley.svg", "alt": "Smiling face", "x": 44.0, "y": 47.2, "w": 4.4, "h": 4.4, "s": 1},
+    {"k": "shape", "x": 63.5, "y": 31.6, "w": 30, "h": 3, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Prefer it tightly coupled", "sz": 1.7, "c": "#c0392b", "b": 1}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}, "s": 2},
+    {"k": "pic", "src": "img/logo-orinoco.svg", "alt": "Logo of Orinoco Web Services: a white cloud on a teal disc", "x": 64.0, "y": 35.2, "w": 8.2, "h": 8.2, "s": 2},
+    {"k": "shape", "x": 61.7, "y": 43.8, "w": 12.0, "h": 2.4, "g": "rect", "tx": {"p": [{"al": "c", "r": [{"t": "Orinoco Web Services", "sz": 1.05, "c": "#000000"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}, "s": 2},
+    {"k": "pic", "src": "img/sad.svg", "alt": "Sad face", "x": 65.9, "y": 47.2, "w": 4.4, "h": 4.4, "s": 2},
+    {"k": "pic", "src": "img/logo-mingle.svg", "alt": "Logo of Mingle Platforms: two chat bubbles on a pink disc", "x": 76.2, "y": 35.2, "w": 8.2, "h": 8.2, "s": 2},
+    {"k": "shape", "x": 73.9, "y": 43.8, "w": 12.0, "h": 2.4, "g": "rect", "tx": {"p": [{"al": "c", "r": [{"t": "Mingle Platforms", "sz": 1.05, "c": "#000000"}]}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}, "s": 2},
+    {"k": "pic", "src": "img/sad.svg", "alt": "Sad face", "x": 78.1, "y": 47.2, "w": 4.4, "h": 4.4, "s": 2}
    ]
   },
   {
@@ -1133,9 +1157,9 @@
     {"k": "pic", "src": "img/2b31d9e316.png", "alt": "Diagram of a social post whose parts are stored in different data pods: author profile, opinion, article, likes, and comments", "x": 57.846, "y": 20.694, "w": 38.252, "h": 24.003, "crop": [0.09162, 0.27925, 0.38215, 0.13373], "shadow": true, "e": 2},
     {"k": "shape", "x": 3.924, "y": 12.501, "w": 45.054, "h": 37.907, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "Idea: Decouple data storage from services and thereby ", "sz": 2.083}, {"t": "separate markets for data and services", "sz": 2.083, "b": 1, "c": "#222222"}], "pl": 0.0, "in": 0.0, "s": 1}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "", "sz": 2.083}], "pl": 0.0, "in": 0.0}, {"al": "l", "r": [{"t": "Pick ", "sz": 1.667, "c": "#222222"}, {"t": "any provider ", "sz": 1.667, "b": 1, "c": "#222222"}, {"t": "(or your own Web server) to store your data in a personal data store, or in multiple stores", "sz": 1.667, "c": "#222222"}], "s": 4}, {"al": "l", "r": [{"t": "", "sz": 1.667}]}, {"al": "l", "r": [{"t": "Selectively", "sz": 1.667, "b": 1, "c": "#222222"}, {"t": " give (fine-granular) permission to services to ", "sz": 1.667, "c": "#222222"}, {"t": "access", "sz": 1.667, "b": 1, "c": "#222222"}, {"t": " your data (but not store it)", "sz": 1.667, "c": "#222222"}], "s": 5}, {"al": "l", "r": [{"t": "", "sz": 1.667}]}, {"al": "l", "r": [{"t": "Selectively", "sz": 1.667, "b": 1, "c": "#222222"}, {"t": " give (fine-granular) permission to services to ", "sz": 1.667, "c": "#222222"}, {"t": "write", "sz": 1.667, "b": 1, "c": "#222222"}, {"t": " to your personal data stores", "sz": 1.667, "c": "#222222"}], "s": 6}, {"al": "l", "r": [{"t": "", "sz": 1.667}]}, {"al": "l", "r": [{"t": "Change or revoke ", "sz": 1.667, "b": 1, "c": "#222222"}, {"t": "these permissions at any time", "sz": 1.667, "c": "#222222"}], "s": 7}], "a": "t", "i": [0.75, 0.375, 0.75, 0.375]}},
     {"k": "shape", "x": 0.0, "y": -1.136, "w": 0.001, "h": 2.272, "g": "rect", "fill": "#ffffff"},
-    {"k": "pic", "src": "img/4efbe6b610.png", "alt": "Diagram comparing a single market of centralized apps with separate data and app markets, where data pods compete on storage and service quality", "x": 51.1, "y": 13.826, "w": 46.198, "h": 22.87, "s": 2, "crop": [0.01569, 0.3215, 0.38778, 0.1535], "shadow": true},
-    {"k": "shape", "x": 17.371, "y": 48.481, "w": 25.113, "h": 3.374, "s": 8, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Sounds like ", "sz": 1.875, "c": "#ffffff"}, {"t": "transclusion", "sz": 1.875, "b": 1, "c": "#ffffff"}, {"t": "…", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
-    {"k": "shape", "x": 55.109, "y": 19.831, "w": 20.637, "h": 9.941, "s": 3, "g": "rightArrow", "fill": "#00802f", "ln": "#001307", "lw": 0.104}
+    {"k": "pic", "src": "img/4efbe6b610.png", "alt": "Diagram comparing a single market of centralized apps with separate data and app markets, where data pods compete on storage and service quality", "x": 55.3, "y": 14.6, "w": 42.0, "h": 20.8, "s": 2, "crop": [0.01569, 0.3215, 0.38778, 0.1535], "shadow": true},
+    {"k": "shape", "x": 17.371, "y": 49.3, "w": 27, "h": 3.2, "s": 8, "g": "roundRect", "fill": "#00802f", "ln": "#001307", "lw": 0.104, "tx": {"p": [{"al": "c", "r": [{"t": "Sounds ", "sz": 1.875, "c": "#ffffff"}, {"t": "a bit", "sz": 1.875, "c": "#ffffff", "i": 1}, {"t": " like ", "sz": 1.875, "c": "#ffffff"}, {"t": "transclusion", "sz": 1.875, "b": 1, "c": "#ffffff"}, {"t": "…", "sz": 1.875, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}},
+    {"k": "shape", "x": 49.5, "y": 20.5, "w": 5.4, "h": 5.0, "s": 3, "g": "rightArrow", "fill": "#00802f", "ln": "#001307", "lw": 0.104}
    ],
    "id": "personal-data",
    "source": "[SocietyByte 2021](https://www.societybyte.swiss/en/2021/01/07/part-1-power-to-the-people-re-decentralizing-the-web-for-good-this-time/), [The Economist 2008](https://www.economist.com/leaders/2008/03/19/break-down-these-walls), [Medium: How Solid is Tim’s plan to redecentralize the web?](https://medium.com/@shevski/how-solid-is-tims-plan-to-redecentralize-the-web-b163ba78e835)",
@@ -1170,11 +1194,11 @@
    "id": "solid-intro",
    "title": "Solid: Social Linked Data",
    "points": [
-    "Launched in 2016 by Tim Berners-Lee at MIT, to separate data from the apps that use it",
-    "Built from Web standards: HTTP, URIs, RDF, Linked Data Platform, OpenID Connect",
-    "Specified by the W3C Solid Community Group: the Solid Protocol (0.11) and companion specifications for identity, access control, and notifications",
-    "Since 2024, the W3C Linked Web Storage Working Group turns it into a W3C standard",
-    "Servers: the open source Community Solid Server, which we use, and others"
+    "Launched in **2016** by **Tim Berners-Lee** at MIT, to **separate data from the apps** that use it",
+    "Built from **Web standards**: HTTP, URIs, RDF, Linked Data Platform, OpenID Connect",
+    "Specified by the **W3C Solid Community Group**: the **Solid Protocol** (0.11) and companion specifications for identity, access control, and notifications",
+    "Since **2024**, the **W3C Linked Web Storage Working Group** turns it into a **W3C standard**",
+    "Servers: the open source **Community Solid Server**, which we use, and others"
    ],
    "aside": {
     "image": "img/solid-logo.svg",
@@ -1284,57 +1308,6 @@
   },
   {
    "layout": "code",
-   "id": "solid-post",
-   "title": "Example: Publishing an Auction",
-   "code": "POST /pitas-g3/pitas/auctions/ HTTP/1.1\nHost: solid.example.org\nAuthorization: DPoP eyJhbGciOiJFUzI1NiIs…\nDPoP: eyJ0eXAiOiJkcG9wK2p3dCIs…\nContent-Type: text/turtle\n\n@prefix pitas: <https://pitas.example.org/ns#> .\n<#it> a pitas:Auction ;\n  pitas:task <https://solid.example.org/c7/tasks/t-17.ttl> ;\n  pitas:status pitas:Open .\n\nHTTP/1.1 201 Created\nLocation: /pitas-g3/pitas/auctions/3f9a2c",
-   "points": [
-    "`POST` to the container: the server mints the URI of the new resource and returns it in `Location`",
-    "The auction refers to the task in the client's pod by its URI: a link, not a copy",
-    "To choose the URI yourself, `PUT` to it, for example `…/auctions/a-001.ttl`",
-    "The two token headers say who is asking (Solid-OIDC, below)"
-   ]
-  },
-  {
-   "layout": "code",
-   "id": "n3-patch",
-   "title": "Changing Data: N3 Patch and ETags",
-   "code": "PATCH /pitas-g3/pitas/auctions/a-001.ttl HTTP/1.1\nContent-Type: text/n3\nIf-Match: \"1f3a-9c\"\n\n@prefix solid: <http://www.w3.org/ns/solid/terms#> .\n@prefix pitas: <https://pitas.example.org/ns#> .\n_:close a solid:InsertDeletePatch ;\n  solid:where   { <#it> pitas:status pitas:Open . } ;\n  solid:deletes { <#it> pitas:status pitas:Open . } ;\n  solid:inserts { <#it> pitas:status pitas:Closed . } .",
-   "points": [
-    "`solid:where` is a condition: if the auction is no longer open, the server answers `409 Conflict`",
-    "`If-Match` sends the ETag of the version you read: if someone changed the document since, `412 Precondition Failed`",
-    "No transactions across resources: changing two documents takes two requests, and either can fail"
-   ],
-   "refs": [
-    {
-     "to": "09#http-idioms",
-     "kind": "recap",
-     "label": "HTTP Protocol Idioms"
-    }
-   ]
-  },
-  {
-   "layout": "quiz",
-   "title": "Your Turn: Which Request?",
-   "items": [
-    "A bidder submits a sealed bid for a-001. Which method, to which URI, with which mode?",
-    "The house closes the auction, but only if it is still open. What does it send?",
-    "The winner writes its result into the client's pod. Which access mode does it need?",
-    "A client moves to another PITAS provider. What happens to its tasks?",
-    "Two PITAS apps read the same auction. What must they agree on?"
-   ]
-  },
-  {
-   "layout": "image",
-   "id": "solid-oidc",
-   "title": "Who Is Asking? Solid-OIDC",
-   "image": "img/solid-oidc.svg",
-   "shadow": false,
-   "alt": "Sequence diagram with four lifelines: PITAS app, identity provider, pod, WebID profile. 1 the app logs in as its WebID; 2 the identity provider returns a token that names the WebID, bound to the app's key with DPoP; 3 the app sends GET to the bids container with the token and a DPoP proof; 4 the pod dereferences the WebID and finds solid:oidcIssuer; 5 the pod checks the access rules; 6 it answers 200 OK, 401 Unauthorized, or 403 Forbidden",
-   "caption": "The pod trusts an identity provider only if the WebID profile names it. Your PITAS app logs in without a browser, with client credentials of the Community Solid Server.",
-   "source": "[Solid-OIDC](https://solidproject.org/TR/oidc)"
-  },
-  {
-   "layout": "code",
    "id": "wac",
    "title": "Who May Do What? Web Access Control",
    "callout": {
@@ -1342,21 +1315,20 @@
    },
    "code": "# /pitas-g3/pitas/auctions/a-001/bids/.acl\n@prefix acl:  <http://www.w3.org/ns/auth/acl#> .\n@prefix foaf: <http://xmlns.com/foaf/0.1/> .\n\n<#submit> a acl:Authorization ;\n    acl:agentClass foaf:Agent ;\n    acl:accessTo   <./> ;\n    acl:default    <./> ;\n    acl:mode       acl:Append .\n\n<#house> a acl:Authorization ;\n    acl:agent    </pitas-g3/profile/card#me> ;\n    acl:accessTo <./> ;\n    acl:default  <./> ;\n    acl:mode     acl:Read, acl:Write, acl:Control .",
    "points": [
-    "Modes: `Read`, `Write`, `Append` (add, never remove) and `Control` (change the rules)",
-    "`acl:accessTo` is the container itself, `acl:default` is inherited by everything in it",
-    "`acl:agent` names one WebID; `acl:agentClass foaf:Agent` is anyone",
-    "The pod enforces the sealed bid, not your code"
+    "Modes: `Read`, `Write`, `Append` (add, **never remove**) and `Control` (**change the rules**)",
+    "`acl:accessTo` is **the container itself**, `acl:default` is **inherited** by everything in it",
+    "`acl:agent` names **one WebID**; `acl:agentClass foaf:Agent` is **anyone**",
+    "**The pod enforces the sealed bid**, not your code"
    ],
    "source": "[Web Access Control](https://solidproject.org/TR/wac), [Access Control Policy](https://solidproject.org/TR/acp)"
   },
   {
    "layout": "image",
    "id": "type-index",
-   "title": "Finding Data: Follow Your Nose from the WebID",
+   "title": "Finding Data: **Follow Your Nose** from the WebID",
    "image": "img/solid-discovery.svg",
    "shadow": false,
    "alt": "Chain of five boxes connected by arrows: WebID …/profile/card#me, profile document with solid:publicTypeIndex, public type index with solid:forClass pitas:Auction and solid:instanceContainer, container …/pitas/auctions/ with ldp:contains, auction a-001.ttl. Below: the bidder knows only the auction house's WebID; each step is a GET and a link to follow; the only shared knowledge is HTTP, RDF, the Solid vocabulary, and the class pitas:Auction",
-   "caption": "Hypermedia for data at rest: this replaces the resource directory of Assignment 8 (Assignment 9, Task 4.2). A private type index, readable only by the owner, lists private data.",
    "refs": [
     {
      "to": "09#hypermedia-way",
@@ -1366,32 +1338,11 @@
   },
   {
    "layout": "code",
-   "id": "shapes",
-   "title": "Data at Rest Needs a Contract: Vocabulary and Shapes",
-   "code": "@prefix sh:     <http://www.w3.org/ns/shacl#> .\n@prefix schema: <https://schema.org/> .\n@prefix prov:   <http://www.w3.org/ns/prov#> .\n@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .\n@prefix pitas:  <https://pitas.example.org/ns#> .\n\npitas:BidShape a sh:NodeShape ;\n  sh:targetClass pitas:Bid ;\n  sh:property [ sh:path pitas:forAuction ;\n                sh:nodeKind sh:IRI ; sh:minCount 1 ] ;\n  sh:property [ sh:path schema:price ;\n                sh:datatype xsd:decimal ; sh:maxCount 1 ] ;\n  sh:property [ sh:path prov:wasAttributedTo ;\n                sh:nodeKind sh:IRI ; sh:minCount 1 ] .",
-   "points": [
-    "The API of Assignment 7 fixes messages in flight; pods hold data at rest that apps you never met will read",
-    "Reuse terms: schema.org for offers and prices, PROV-O for who produced what; mint `pitas:` terms only where nothing fits",
-    "A SHACL or ShEx shape lets an app validate data that it did not write"
-   ],
-   "caption": "An example shape for a bid, not the one your task force will agree on.",
-   "refs": [
-    {
-     "to": "09#common-model",
-     "kind": "recap"
-    },
-    {
-     "to": "10#shared-understanding",
-     "kind": "next"
-    }
-   ]
-  },
-  {
-   "layout": "code",
    "id": "solid-notifications",
-   "title": "Pods Can Tell You: Solid Notifications",
+   "title": "Solid Notification",
    "callout": {
-    "text": "Keep WebSub, or let the pods notify? (Assignment 9, Reflections)"
+    "text": "Keep WebSub, or let the pods notify? (Assignment 9, Reflections)",
+    "bottom": true
    },
    "points": [
     "A client subscribes to changes of a resource or a container, for example new bids",
@@ -1411,6 +1362,27 @@
   },
   {
    "layout": "text",
+   "id": "digital-sovereignty",
+   "title": "Digital Sovereignty: Whose Rules Apply to Your Data?",
+   "callout": {
+    "text": "Is sovereignty about where data sits, or about who can switch it off?"
+   },
+   "points": [
+    "**Jurisdiction follows the provider**, not the data center: the US CLOUD Act (2018) reaches data stored abroad",
+    "**Schrems II** (2020) struck down the EU-US Privacy Shield; its 2023 successor remains contested",
+    "Europe answers with law and infrastructure: **GDPR**, the **Data Act**, **Gaia-X**",
+    "**Dependency is leverage**: a few non-European hyperscalers run most of Europe's cloud"
+   ],
+   "airy": true
+  },
+  {
+   "layout": "transclude",
+   "title": "Performant, but Not Fault-Tolerant",
+   "to": "08#outage",
+   "static": true
+  },
+  {
+   "layout": "text",
    "id": "sovereignty",
    "title": "Data Sovereignty: Who Owns What?",
    "callout": {
@@ -1418,8 +1390,8 @@
    },
    "points": [
     "Task data stays with the client: input and result live in the client's pod; no one else keeps a copy",
-    "Worker details stay with the worker: the house knows only the WebID and resolves details at run time",
-    "Persistence moves to pods: your app recovers from the pods",
+    "Worker details stay with the worker: the house knows only the WebID",
+    "Persistence moves to pods: apps recover from them",
     {
      "text": "You work out the full rule set and decide who owns:",
      "sub": [
@@ -1437,33 +1409,23 @@
    ]
   },
   {
-   "layout": "image",
-   "id": "pitas-solid",
-   "title": "Solid in the PITAS Ecosystem",
-   "image": "img/pitas-solid.svg",
-   "shadow": false,
-   "alt": "Diagram of PITAS under the sovereignty rules: on the course server solid.interactions.ics.unisg.ch the client's pod (tasks/t-17.ttl with the task input, results/r-17.ttl, WebID) and the auction house's pod (workers/ with WebIDs only, auctions, bids, and awards marked with a question mark, WebID); on a group's own server the worker's pod (details.ttl with its task types, bids marked with a question mark, WebID). A dashed green arrow labelled worker details stay with worker from the auction house's workers/ to the worker's details. A grey arrow from the worker to the client's pod labelled Task data stays with the client: the worker reads the input and writes the result, and keeps no copy. Legend: pod of one entity, resolved by URI at run time and no copy, red items whose owner the group decides in Task 1",
-   "caption": "The pod, not your application, is authoritative: stop your app, delete its local state, restart, and it continues from the pods (Task 3.1)."
-  },
-  {
-   "layout": "text",
-   "id": "solid-critique",
+   "layout": "canvas",
    "title": "Critical View: Where Does Solid Hurt?",
-   "callout": {
-    "text": "Which non-functional properties does Solid improve, and which does it cost?"
-   },
-   "points": [
-    "Performance: following links means many small requests, across servers",
-    "Consistency: no transactions across resources and pods; partial failure is normal",
-    "Power: whoever hosts pods and identity providers gains a new central position",
-    "Usability: people must understand the access rules they set",
-    "Agreement: apps interoperate only if they share vocabularies and shapes"
-   ],
+   "id": "solid-critique",
    "refs": [
     {
      "to": "07b#principled-design",
      "kind": "recap"
     }
+   ],
+   "items": [
+    {"k": "shape", "x": 14, "y": 17, "w": 72, "h": 18, "g": "roundRect", "tx": {"p": [{"al": "c", "r": [{"t": "Which non-functional properties does Solid improve, and which does it cost?", "sz": 3.1, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}, "fill": "#00802f", "ln": "#001307", "lw": 0.104, "e": 1},
+    {"k": "shape", "x": 60.0, "y": 5.2, "w": 36.0, "h": 7.0, "g": "roundRect", "tx": {"p": [{"al": "c", "r": [{"t": "Which non-functional properties does Solid improve, and which does it cost?", "sz": 1.5, "c": "#ffffff"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}, "fill": "#00802f", "ln": "#001307", "lw": 0.104, "s": 1},
+    {"k": "shape", "x": 4, "y": 14.2, "w": 92, "h": 5.6, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Performance: ", "sz": 1.95, "c": "#00802f", "b": 1}, {"t": "following links means many small requests, across servers", "sz": 1.95, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}, "s": 1},
+    {"k": "shape", "x": 4, "y": 21.6, "w": 92, "h": 5.6, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Consistency: ", "sz": 1.95, "c": "#00802f", "b": 1}, {"t": "no transactions across resources and pods; partial failure is normal", "sz": 1.95, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}, "s": 2},
+    {"k": "shape", "x": 4, "y": 29.0, "w": 92, "h": 5.6, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Usability: ", "sz": 1.95, "c": "#00802f", "b": 1}, {"t": "people must understand the access rules they set", "sz": 1.95, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}, "s": 3},
+    {"k": "shape", "x": 4, "y": 36.400000000000006, "w": 92, "h": 5.6, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Agreement: ", "sz": 1.95, "c": "#00802f", "b": 1}, {"t": "apps interoperate only if they share vocabularies and shapes", "sz": 1.95, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}, "s": 4},
+    {"k": "shape", "x": 4, "y": 43.8, "w": 92, "h": 5.6, "g": "rect", "tx": {"p": [{"al": "l", "r": [{"t": "Power: ", "sz": 1.95, "c": "#00802f", "b": 1}, {"t": "whoever hosts pods and identity providers gains a new central position", "sz": 1.95, "c": "#000000"}]}], "a": "m", "i": [0.75, 0.375, 0.75, 0.375]}, "s": 5}
    ]
   },
   {
@@ -1477,49 +1439,6 @@
     {"k": "pic", "src": "img/40ce756d79.png", "alt": "Screenshot of a news report with Max Schrems: Max Schrems versus Facebook, the company must pay 36 million euros in fines", "x": 77.895, "y": 30.751, "w": 19.728, "h": 13.098, "s": 9, "crop": [0.35352, 0.66107, 0.36849, 0.08698]}
    ],
    "source": "Zihlmann, Garcia, Mayer, Tamò-Larrieux: A right to repair privacy-invasive services: Is a new, more holistic European approach emerging? International Conference on Privacy-Friendly and Trustworthy Technology for Society, 2022"
-  },
-  {
-   "layout": "table",
-   "id": "assignment-9",
-   "title": "Towards Assignment 9",
-   "columns": [
-    "Task",
-    "What you do",
-    "On the slides"
-   ],
-   "rows": [
-    [
-     "1 Data Sovereignty",
-     "the full set of sovereignty rules; who owns auctions, bids, and awards; entities, WebIDs, and pods; a system diagram",
-     "[Who owns what](09#sovereignty), [PITAS](09#pitas-solid)"
-    ],
-    [
-     "2 Shared Vocabulary",
-     "RDF terms, shapes, and pod layout, agreed in the task force",
-     "[Vocabulary and shapes](09#shapes)"
-    ],
-    [
-     "3 Implementation",
-     "3.1 move the data into pods; 3.2 integration test with another group",
-     "[LDP](09#ldp), [N3 Patch](09#n3-patch)"
-    ],
-    [
-     "4 WebIDs",
-     "4.1 Solid-OIDC, 4.2 discovery through the type index, 4.3 access control",
-     "[Solid-OIDC](09#solid-oidc), [Type index](09#type-index), [WAC](09#wac)"
-    ],
-    [
-     "5 Measurement",
-     "the measurement framework of Assignment 7, applied to your system",
-     ""
-    ],
-    [
-     "6 Reflections",
-     "what the separation cost and bought, from your role's view",
-     "[Critical view](09#solid-critique)"
-    ]
-   ],
-   "after": "Deadline: Sunday 29.11.2026, 23:59 CET. Hand in a release with your ADRs and WebIDs, and a PDF with Tasks 1, 2, 3.2, and 6."
   },
   {
    "layout": "task",
@@ -1555,6 +1474,11 @@
     "alt": "Aerial view of the SQUARE building on the HSG campus above the city of St. Gallen, with the Säntis massif on the horizon"
    },
    "source": "Picture: [sosy2027.org](https://sosy2027.org/)"
+  },
+  {
+   "layout": "web",
+   "title": "SoSy 27 Live: sosy2027.org",
+   "url": "https://sosy2027.org/"
   },
   {
    "layout": "text",

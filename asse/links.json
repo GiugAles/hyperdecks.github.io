@@ -355,21 +355,6 @@
   ],
   [
    "09",
-   "Example: Publishing an Auction",
-   "solid-post"
-  ],
-  [
-   "09",
-   "Changing Data: N3 Patch",
-   "n3-patch"
-  ],
-  [
-   "09",
-   "Who Is Asking",
-   "solid-oidc"
-  ],
-  [
-   "09",
    "Who May Do What",
    "wac"
   ],
@@ -380,23 +365,13 @@
   ],
   [
    "09",
-   "Data at Rest Needs a Contract",
-   "shapes"
-  ],
-  [
-   "09",
-   "Pods Can Tell You",
+   "Solid Notification",
    "solid-notifications"
   ],
   [
    "09",
    "Data Sovereignty",
    "sovereignty"
-  ],
-  [
-   "09",
-   "Solid in the PITAS Ecosystem",
-   "pitas-solid"
   ],
   [
    "09",
@@ -407,11 +382,6 @@
    "09",
    "Solid Symposium 2027",
    "sosy"
-  ],
-  [
-   "09",
-   "Towards Assignment 9",
-   "assignment-9"
   ],
   [
    "10",
@@ -982,25 +952,11 @@
   ],
   [
    "09",
-   "Pods Can Tell You",
+   "Solid Notification",
    [
     [
      "08#pubsub-web",
      "recap"
-    ]
-   ]
-  ],
-  [
-   "09",
-   "Data at Rest Needs a Contract",
-   [
-    [
-     "09#common-model",
-     "recap"
-    ],
-    [
-     "10#shared-understanding",
-     "next"
     ]
    ]
   ],
@@ -1279,10 +1235,6 @@
     [
      "08#crud-over-http",
      "recap"
-    ],
-    [
-     "09#n3-patch",
-     "next"
     ]
    ]
   ],
@@ -1312,31 +1264,10 @@
   ],
   [
    "09",
-   "Changing Data: N3 Patch",
-   [
-    [
-     "09#http-idioms",
-     "recap",
-     "HTTP Protocol Idioms"
-    ]
-   ]
-  ],
-  [
-   "09",
    "(4/4) Guidance",
    [
     [
      "07b#hateoas",
-     "recap"
-    ]
-   ]
-  ],
-  [
-   "09",
-   "What Is in the Contract",
-   [
-    [
-     "08#ladder",
      "recap"
     ]
    ]
@@ -1382,12 +1313,6 @@
    "Ecosystems: Beyond individual requests",
    "Lecture 8",
    "08#start"
-  ],
-  [
-   "09",
-   "Consider that clients may themselves modify hypermedia",
-   "Remember that affordances are relational",
-   "09#affordances"
   ],
   [
    "10",

@@ -63,6 +63,8 @@ ul.dash ul li{position:relative;padding-left:calc(1.8*var(--u));font-size:var(--
 ul.dash ul li::before{content:"-";position:absolute;left:0}
 .dense ul.dash>li,.dense .copy p{font-size:var(--s-mid)}
 .dense ul.dash{gap:calc(.6*var(--u))}
+.airy ul.dash{gap:calc(2*var(--u))}
+.box.red{background:#eb6969;border:calc(.12*var(--u)) solid #2d0606;color:#fff;text-align:center}
 .group h3{font-size:calc(2.4*var(--u));font-weight:400;line-height:1.15;color:var(--fg);margin-bottom:calc(.5*var(--u))}
 .group ul.dash{gap:calc(.2*var(--u))}
 .dense .group ul.dash>li,.dense .group p{font-size:var(--s-mid)}
@@ -91,6 +93,7 @@ ul.dash ul li::before{content:"-";position:absolute;left:0}
 .callout{flex:none;max-width:calc(34*var(--u));margin-bottom:calc(-1*var(--u))}
 .callout.wide{max-width:calc(48*var(--u))}
 .callout.box{font-size:var(--s-sub)}
+.callout.big{max-width:none;margin:auto 0 calc(1.5*var(--u));padding:calc(2*var(--u)) calc(3*var(--u));font-size:calc(var(--s-body)*1.35)}  /* a decision put at the bottom of the slide */
 
 pre.code{font-size:calc(1.3*var(--u));line-height:1.35;padding:calc(1.6*var(--u)) calc(2*var(--u));white-space:pre;overflow:hidden;tab-size:4}
 pre.code.small{font-size:calc(1.05*var(--u))}
@@ -228,6 +231,8 @@ h1{font-size:var(--s-h1);font-weight:300;line-height:1.08;letter-spacing:-.01em;
    the headline may use the full width, as the HSG font is a little wider than the Light of many source decks */
 .l-canvas h2{max-width:calc(92*var(--u));text-wrap:wrap}
 .l-canvas.ta-t .headrow{align-items:flex-start}  /* the PowerPoint title hangs from the top of its box */
+.cv.tcover{z-index:2}  /* a question laid over a transcluded slide until the first click */
+.webframe{width:100%;height:calc(36*var(--u));border:calc(.12*var(--u)) solid var(--green);background:#fff}
 .l-canvas .dfoot{z-index:0}  /* the footer line lies behind the objects, so a filled box covers it */
 .cv{position:absolute;inset:0;z-index:1}
 /* a transcluded slide: the origin line is a reference chip (.refs), the slide is the original's, drawn with this deck's footer and number */
@@ -569,6 +574,7 @@ function fitCanvas(s){const cv=s.querySelector('.cv');if(!fontsOk||!cv||!cv.clie
   fr.querySelectorAll('[style*="url("]').forEach(e=>{e.style.cssText=e.style.cssText.replace(/url\(["']?([^"')]+)["']?\)/g,(m,v)=>`url("${new URL(v,base).href}")`)});
   s.className=[...src.classList].filter(c=>c!=='active').concat('transcluded',s.classList.contains('active')?'active':[]).join(' ');
   s.dataset.steps=src.dataset.steps||'';if(!s.dataset.steps)delete s.dataset.steps;
+  if(s.dataset.static){if(s.querySelector('.tcover'))s.dataset.steps='1';else delete s.dataset.steps;fr.querySelectorAll('[data-s],[data-e],[data-an]').forEach(e=>{delete e.dataset.s;delete e.dataset.e;delete e.dataset.an})}
   if(src.style.background)s.style.background=src.style.background;
   delete s.dataset.fit;if(fontsOk)fitCanvas(s);
   if(s===slides[cur])show();
