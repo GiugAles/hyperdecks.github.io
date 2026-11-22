@@ -67,9 +67,12 @@ left to right direction
 ' Timing: only step 11 is placed by a rule. Step 10 could happen at any time
 ' (the Bidder may keep WebIDs); it comes before step 11 only because the
 ' WebID is needed to reach the pod.
-' Layout: Client and Auctioneer left, Bidder and Worker right, queue in
-' between. Arrows are written left to right (with <-- for the reverse flow)
-' to keep the columns; parallel messages share one arrow, numbers give the
+' Layout: Client and Auctioneer left, Bidder and Worker right, queue and
+' auction house pods in between (hidden arrows at the end pin the columns).
+' ClientPod and WorkerPod sit under Client and Worker: their own edges use
+' -right-> (down in this direction), and [norank] stops 11 and 22/24 from
+' pulling them away. Other arrows are written left to right (with <-- for
+' the reverse flow); parallel messages share one arrow, numbers give the
 ' order. Worker setup (1.-3.) comes before the task.
 
 ' --- Entities ---------------------------------------------------------------
@@ -87,8 +90,14 @@ database ClientPod
 ' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/270f04fab3f55f9debb8d1e8fdeeba597b9a23fd/main.tex#L242
 node Auctioneer
 
-' AuctionHousePods: grouped to show both as pods of PITAS applications; the
-' sheet does not mandate a shared server; it encourages several.
+' EventQueue: not mandated. It is the event plane from Exercise 8; the sheet
+' asks whether to keep it next to Solid (Task 5).
+' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/270f04fab3f55f9debb8d1e8fdeeba597b9a23fd/main.tex#L320
+queue EventQueue
+
+
+' AuctionHousePods: grouped to show both as pods of PITAS applications. Not
+' mandated: the sheet does not require a shared server; it encourages several.
 ' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/270f04fab3f55f9debb8d1e8fdeeba597b9a23fd/main.tex#L162
 rectangle AuctionHousePods {
   ' AuctioneerPod: mandated-by: the auction house publishes auctions "in its pod" (Task 3.2)
@@ -113,10 +122,7 @@ rectangle AuctionHousePods {
   database BidderPod
 }
 
-' EventQueue: not mandated. It is the event plane from Exercise 8; the sheet
-' asks whether to keep it next to Solid (Task 5).
-' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/270f04fab3f55f9debb8d1e8fdeeba597b9a23fd/main.tex#L320
-queue EventQueue
+
 
 ' Bidder: mandated-by: the bidder of the integration test. Its split into components is
 ' not mandated; it follows the groups' code.
@@ -143,7 +149,7 @@ database WorkerPod
 ' client can read the result (Task 3.2).
 ' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/270f04fab3f55f9debb8d1e8fdeeba597b9a23fd/main.tex#L174
 ' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/270f04fab3f55f9debb8d1e8fdeeba597b9a23fd/main.tex#L244
-Client -[$e(4,30)]-> ClientPod : $l(4, "4. write task input")\n$l(30, "30. read task result")
+Client -[$e(4,30)]right-> ClientPod : $l(4, "4. write task input")\n$l(30, "30. read task result")
 ' 5: mandated-by: Rule 1 for passing only a link (no intermediary stores
 ' the input); the commission itself is not mandated.
 ' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/270f04fab3f55f9debb8d1e8fdeeba597b9a23fd/main.tex#L174
@@ -196,7 +202,7 @@ BidderAH -[$e(10)]-> WorkerPool : $l(10, "10. fetch registered Worker WebIDs")
 ' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/270f04fab3f55f9debb8d1e8fdeeba597b9a23fd/main.tex#L176
 ' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/270f04fab3f55f9debb8d1e8fdeeba597b9a23fd/main.tex#L242
 ' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/270f04fab3f55f9debb8d1e8fdeeba597b9a23fd/main.tex#L280
-BidderAH -[$e(11)]-> WorkerPod : $l(11, "11. fetch worker details")
+WorkerPod <-[$e(11),norank]- BidderAH : $l(11, "11. fetch worker details")
 ' 12: mandated-by: the bidder decides to bid based on its workers' details (Task 3.2).
 ' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/270f04fab3f55f9debb8d1e8fdeeba597b9a23fd/main.tex#L242
 BidderAH -[$e(12)]-> BidderAH : $l(12, "12. evaluate auction")
@@ -214,10 +220,10 @@ WorkerPool <-[$e(1)]- Worker : $l(1, "1. register (WebID only)")
 ' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/270f04fab3f55f9debb8d1e8fdeeba597b9a23fd/main.tex#L178
 ' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/270f04fab3f55f9debb8d1e8fdeeba597b9a23fd/main.tex#L232
 ' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/270f04fab3f55f9debb8d1e8fdeeba597b9a23fd/main.tex#L234
-WorkerPool -[$e(3)]-> BidderPod : $l(3, "3. store Worker WebID")
+BidderPod <-[$e(3)]- WorkerPool : $l(3, "3. store Worker WebID")
 ' 2: mandated-by: Rule 2 keeps the worker details in the worker's pod.
 ' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/270f04fab3f55f9debb8d1e8fdeeba597b9a23fd/main.tex#L176
-Worker -[$e(2)]-> WorkerPod : $l(2, "2. write worker details")
+Worker -[$e(2)]right-> WorkerPod : $l(2, "2. write worker details")
 ' 21, 25: mandated-by: Rule 1 for passing links only (no copies); dispatch
 ' and report themselves are not mandated (groups' code).
 ' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/270f04fab3f55f9debb8d1e8fdeeba597b9a23fd/main.tex#L174
@@ -229,10 +235,16 @@ BidderJobs <-[$e(25)]- Worker : $l(25, "25. report execution done")
 ' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/270f04fab3f55f9debb8d1e8fdeeba597b9a23fd/main.tex#L174
 ' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/270f04fab3f55f9debb8d1e8fdeeba597b9a23fd/main.tex#L244
 ' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/270f04fab3f55f9debb8d1e8fdeeba597b9a23fd/main.tex#L279
-ClientPod <-[$e(22,24)]- Worker : $l(22, "22. fetch task input")\n$l(24, "24. append task result")
+ClientPod <-[$e(22,24),norank]- Worker : $l(22, "22. fetch task input")\n$l(24, "24. append task result")
 ' 23: mandated-by: neither the winner nor any intermediary keeps a copy (Rule 1, Task 3.2).
 ' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/270f04fab3f55f9debb8d1e8fdeeba597b9a23fd/main.tex#L174
 ' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/270f04fab3f55f9debb8d1e8fdeeba597b9a23fd/main.tex#L244
 Worker -[$e(23)]-> Worker : $l(23, "23. execute (no copy kept)")
+
+' Hidden arrows pin the columns: left apps, queue and pods, Bidder, Worker.
+Auctioneer -[hidden]-> AuctionHousePods
+Auctioneer -[hidden]-> EventQueue
+EventQueue -[hidden]-> BidderApp
+AuctionHousePods -[hidden]-> BidderApp
 
 @enduml
