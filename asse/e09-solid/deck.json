@@ -102,6 +102,22 @@
    "shadow": false,
    "alt": "Deployment diagram with Client, ClientPod, Auctioneer, an EventQueue, an AuctionHousePods group with AuctioneerPod and BidderPod, a PITAS application with Bidder, pitas-jobs and pitas-scheduler, and pitas-worker-pool, and a Worker with WorkerPod. Steps 1 to 23 show in black. Steps 24 to 30 show in green: the Worker appends the result to ClientPod and reports execution done, the Bidder polls the job status and pushes a result event, the EventQueue delivers it to the Auctioneer, which notifies the Client with a link, and the Client reads the result from ClientPod.",
    "notes": "This flow is one example of how the sovereignty rules can work. Your implementation can differ from it."
+  },
+  {
+   "layout": "text",
+   "title": "About the Exercise: Refactoring the Persistence Layer",
+   "points": [
+    "Moving the data into pods touches your persistence layer",
+    {
+     "text": "Expect coupling that was invisible before",
+     "sub": [
+      "Code that assumes transactional writes",
+      "Identifiers minted by a local database"
+     ]
+    },
+    "Ensure that your git history contains a commit for E5"
+   ],
+   "notes": "• Task 3.1: the refactoring very likely exposes coupling that was invisible before\n• Examples: code that assumed transactional writes, code that relied on identifiers minted by a local database\n• Hand-in: just a heads up; detailed info about final submission will follow"
   }
  ]
 }
