@@ -6,12 +6,19 @@ left to right direction
 ' edges and labels, so the nodes keep their position. Interactions of later
 ' steps are transparent, those of the current step are green. Without $STEP,
 ' all interactions show in black.
+' Step 0 shows only what the students know before Exercise 9: no pods and
+' no interactions (all transparent, so the layout matches the later steps).
 ' Steps: 1. setup and commission (1-8), 2. bidding and award (9-16),
 ' 3. award delivery and execution (17-23), 4. result back to the client (24-30).
 !$FIRST = 31
 !$LAST = 30
+!$POD = ""
 !if %variable_exists("$STEP")
-!if $STEP == 1
+!if $STEP == 0
+!$FIRST = 1
+!$LAST = 0
+!$POD = "#transparent;line:transparent;text:transparent"
+!elseif $STEP == 1
 !$FIRST = 1
 !$LAST = 8
 !elseif $STEP == 2
@@ -83,7 +90,7 @@ left to right direction
 ' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/a6cc1472a5d7f5a96cd5a1f38b2769a65e7f8d30/main.tex#L174
 ' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/a6cc1472a5d7f5a96cd5a1f38b2769a65e7f8d30/main.tex#L187
 actor Client
-database ClientPod
+database ClientPod $POD
 
 ' Auctioneer: mandated-by: the auction house that publishes the auction and reads all bids
 ' in the integration test.
@@ -100,7 +107,7 @@ queue EventQueue
 ' AuctionHousePods: grouped to show both as pods of PITAS applications. Not
 ' mandated: the sheet does not require a shared server; it encourages several.
 ' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/a6cc1472a5d7f5a96cd5a1f38b2769a65e7f8d30/main.tex#L162
-rectangle AuctionHousePods {
+rectangle AuctionHousePods $POD {
   ' AuctioneerPod: mandated-by: the auction house publishes auctions "in its pod" (Task 3.2)
   ' and has a bid container that only it may read (Task 4.3); Rule 3 moves
   ' persistence to pods, and after a wipe the application rebuilds open
@@ -112,7 +119,7 @@ rectangle AuctionHousePods {
   ' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/a6cc1472a5d7f5a96cd5a1f38b2769a65e7f8d30/main.tex#L277
   ' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/a6cc1472a5d7f5a96cd5a1f38b2769a65e7f8d30/main.tex#L234
   ' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/a6cc1472a5d7f5a96cd5a1f38b2769a65e7f8d30/main.tex#L188
-  database AuctioneerPod
+  database AuctioneerPod $POD
 
   ' BidderPod: mandated-by: Rule 3 moves persistence to pods; Task 3.1 names
   ' worker IDs as persistent data for pods, and after a wipe the application
@@ -120,7 +127,7 @@ rectangle AuctionHousePods {
   ' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/a6cc1472a5d7f5a96cd5a1f38b2769a65e7f8d30/main.tex#L178
   ' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/a6cc1472a5d7f5a96cd5a1f38b2769a65e7f8d30/main.tex#L232
   ' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/a6cc1472a5d7f5a96cd5a1f38b2769a65e7f8d30/main.tex#L234
-  database BidderPod
+  database BidderPod $POD
 }
 
 
@@ -143,7 +150,7 @@ node "PITAS application" as BidderApp {
 ' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/a6cc1472a5d7f5a96cd5a1f38b2769a65e7f8d30/main.tex#L176
 ' https://github.com/Interactions-HSG/ASSE-Exercise-9/blob/a6cc1472a5d7f5a96cd5a1f38b2769a65e7f8d30/main.tex#L187
 control Worker
-database WorkerPod
+database WorkerPod $POD
 
 ' --- Edges ------------------------------------------------------------------
 

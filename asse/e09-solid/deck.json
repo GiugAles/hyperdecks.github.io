@@ -73,6 +73,13 @@
   },
   {
    "layout": "image",
+   "title": "About the Exercise: What You Know So Far",
+   "image": "https://solid.interactions.ics.unisg.ch/mcs-asse/slides/assets/sovereignty-deployment-step0.svg",
+   "shadow": false,
+   "alt": "Deployment diagram with Client, Auctioneer, an EventQueue, a PITAS application with Bidder, pitas-jobs and pitas-scheduler, and pitas-worker-pool, and a Worker. No pods and no interactions are shown yet."
+  },
+  {
+   "layout": "image",
    "title": "About the Exercise: Setup and Commission",
    "image": "https://solid.interactions.ics.unisg.ch/mcs-asse/slides/assets/sovereignty-deployment-step1.svg",
    "shadow": false,
