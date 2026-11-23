@@ -6,6 +6,8 @@
   python render_html.py deck.json --shots DIR     # also screenshots for the check: one PNG per slide,
                                                   # a contact sheet and the phone view
   python render_html.py deck.json --shots DIR --slides 2,4-6   # only these slides (fast)
+  python render_html.py deck.json --notes --out DIR             # with speaker notes, for presenting (keep DIR
+                                                                # outside the repo: the published page has no notes)
 
 In a window of 1000px or wider it shows one 16:9 slide, centred. In a narrower window (phone) it still shows one
 slide at a time, filling the window with the content in one column; a slide taller than the window scrolls
@@ -81,6 +83,7 @@ h2{font-size:var(--s-h2);font-weight:400;line-height:1.08;letter-spacing:-.005em
 .lead+.main{padding-top:2.6U}
 .source{position:absolute;left:3.92U;bottom:2.1U;max-width:84U;font-size:var(--s-tiny);line-height:1.3;color:var(--quiet);z-index:2}
 .dfoot{position:absolute;left:3.92U;bottom:2.1U;font-size:var(--s-tiny);color:var(--quiet);z-index:2}
+.source.corner{left:auto;right:7.5U;bottom:.7U;max-width:62U;text-align:right}
 .source~.dfoot{display:none}
 /* the slide number in the green HSG tab, bottom right */
 .pn{position:absolute;right:3.94U;top:51.41U;width:2.33U;height:2.56U;z-index:3;display:grid;place-items:center;padding:.45U 0 0 .45U;
@@ -98,8 +101,13 @@ ul.dash ul li{position:relative;padding-left:1.8U;font-size:var(--s-sub);line-he
 ul.dash ul li::before{content:"-";position:absolute;left:0}
 .dense ul.dash>li,.dense .copy p{font-size:var(--s-mid)}
 .dense ul.dash{gap:.6U}
+.airy ul.dash{gap:2U}
+.box.red{background:#eb6969;border:.12U solid #2d0606;color:#fff;text-align:center}
 .group h3{font-size:2.4U;font-weight:400;line-height:1.15;color:var(--fg);margin-bottom:.5U}
 .group ul.dash{gap:.2U}
+.airy .groups{gap:5U}
+.airy .group h3{margin-bottom:1.8U}
+.airy .group ul.dash{gap:1.2U}
 .dense .group ul.dash>li,.dense .group p{font-size:var(--s-mid)}
 .groups{display:grid;gap:3U}
 .defs{display:grid;grid-template-columns:auto 1fr;gap:.45U 4U;font-size:var(--s-mid);line-height:1.25;color:var(--body)}
@@ -126,6 +134,7 @@ ul.dash ul li::before{content:"-";position:absolute;left:0}
 .callout{flex:none;max-width:34U;margin-bottom:-1U}
 .callout.wide{max-width:48U}
 .callout.box{font-size:var(--s-sub)}
+.callout.big{max-width:none;margin:auto 0 1.5U;padding:2U 3U;font-size:calc(var(--s-body)*1.35)}  /* a decision put at the bottom of the slide */
 
 pre.code{font-size:1.3U;line-height:1.35;padding:1.6U 2U;white-space:pre;overflow:hidden;tab-size:4}
 pre.code.small{font-size:1.05U}
@@ -142,6 +151,7 @@ table.t{width:100%;border-collapse:collapse;font-size:var(--s-mid);line-height:1
 .t th+th,.t td+td{border-left:.15U solid #fff}
 .t tr+tr td{border-top:.15U solid #fff}
 .t td:first-child{font-weight:700;color:var(--fg)}
+.t tr.light td{color:var(--quiet)}.t tr.light td:first-child{font-weight:400;color:var(--quiet)}
 .t.many{font-size:var(--s-sub)}
 .t.many td{padding:.45U 1U}
 
@@ -262,15 +272,19 @@ h1{font-size:var(--s-h1);font-weight:300;line-height:1.08;letter-spacing:-.01em;
    the headline may use the full width, as the HSG font is a little wider than the Light of many source decks */
 .l-canvas h2{max-width:92U;text-wrap:wrap}
 .l-canvas.ta-t .headrow{align-items:flex-start}  /* the PowerPoint title hangs from the top of its box */
+.cv.tcover{z-index:2}  /* a question laid over a transcluded slide until the first click */
+.webframe{width:100%;height:36U;border:.12U solid var(--green);background:#fff}
 .l-canvas .dfoot{z-index:0}  /* the footer line lies behind the objects, so a filled box covers it */
 .cv{position:absolute;inset:0;z-index:1}
+/* a transcluded slide: the origin line is a reference chip (.refs), the slide is the original's, drawn with this deck's footer and number */
+.tfall{margin-top:4U;font-size:var(--s-body)}
 .cv .it{position:absolute}
 .cv .off{visibility:hidden}
 .cv svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
 .cv .tx{position:absolute;inset:0;display:flex;flex-direction:column;color:var(--fg);line-height:1.2;font-weight:400}
 .cv .tx.m{justify-content:center}.cv .tx.b{justify-content:flex-end}
 .cv .tx.nw{white-space:nowrap}
-.cv .tx p{margin:0;min-height:1.2em}
+.cv .tx p{margin:0;min-height:1.2em;flex:none}
 .cv .tx .bu{display:inline-block}
 .cv .tx b{font-weight:700}
 .cv .tx .mono{font-family:"Courier New",Courier,"Liberation Mono",monospace;font-weight:400}
@@ -309,6 +323,7 @@ a.il:hover{background:var(--green);color:#fff!important}
 /* the controls: a pill that floats under the slide, as in the FuSo decks, in HSG green */
 .controls{position:fixed;left:0;right:0;bottom:0;height:var(--ctl);display:grid;place-items:center;z-index:7;pointer-events:none;
   color:#111;font-family:system-ui,sans-serif;font-size:13px;font-weight:600}
+:root:not(:fullscreen) .controls{background:var(--k-stage);pointer-events:auto}  /* a solid strip: nothing shows through beside the pill */
 .pill{pointer-events:auto;display:flex;align-items:center;height:44px;padding:0 6px;border-radius:22px;background:#fff;
   border:1px solid #ddd;box-shadow:0 4px 18px rgba(0,0,0,.1);transition:opacity .25s,transform .25s}
 .pill>div{display:flex;align-items:center;gap:2px}
@@ -399,6 +414,7 @@ body.show-notes .notes-view{display:block}
   .pn{position:absolute;top:auto;bottom:16px;right:16px;width:30px;height:33px;font-size:12px}
   .refs{position:static;flex-wrap:wrap;justify-content:flex-start;margin:0 0 14px;max-width:none}
   a.ref{height:auto;min-height:30px;padding:6px 12px;white-space:normal;line-height:1.2;border-radius:16px}
+  .l-embed .embed{position:static;display:block;width:100vw;height:56.25vw;margin:30px -20px 0;transform:none}
   .cv{position:relative;inset:auto;width:100vw;height:56.25vw;margin:30px -20px 0;--u:1vw;overflow:hidden}
   .slide.active .cv .off{visibility:visible}
   .pill{width:100%;height:100%;padding:3px 10px 0;border-radius:0;border:0;box-shadow:none;justify-content:space-between}
@@ -505,7 +521,7 @@ let idle;const pill=document.querySelector('.pill'),wake=()=>{body.classList.add
 by('fsBtn').onclick=()=>document.fullscreenElement?document.exitFullscreen():root.requestFullscreen();
 const grid=ov.querySelector('.ov-grid');
 slides.forEach((s,i)=>{const b=document.createElement('button'),sm=document.createElement('small');
- sm.textContent=(i+1)+(s.dataset.time?'  ·  '+s.dataset.time:'');b.append(sm,s.dataset.title);b.onclick=()=>go(i);grid.append(b)});
+ sm.textContent=(i+1)+(s.dataset.time?', '+s.dataset.time:'');b.append(sm,s.dataset.title);b.onclick=()=>go(i);grid.append(b)});
 function key(e){if(e.ctrlKey||e.metaKey||e.altKey)return;
  const inCtl=e.target instanceof Element&&e.target.closest('a,button');const k=e.key;
  if(['ArrowRight','PageDown'].includes(k)||(k===' '&&!inCtl)){e.preventDefault();next()}
@@ -535,6 +551,26 @@ function fitCanvas(s){const cv=s.querySelector('.cv');if(!fontsOk||!cv||!cv.clie
  for(const t of cv.querySelectorAll(':scope>.it>.tx:not(.v270):not(.v90)')){let f=1;
   while(leaves(t)&&f>.87){f-=.02;t.style.setProperty('--f',f.toFixed(2))}
   if(leaves(t))t.style.removeProperty('--f')}}
+// TRANSCLUDE: a slide with data-from/data-sid (layout "transclude") is not a copy. When the page opens it fetches the deck it
+// belongs to and takes the slide's content from there, so the original is the only place where it is stored and changes
+// to it show here at once. Pictures are addressed in the original's folder; steps and effects work as in the original.
+// The fallback text stays when the original cannot be fetched.
+{const cache={},get=u=>cache[u]||(cache[u]=fetch(u).then(r=>{if(!r.ok)throw 0;return r.text()}).then(h=>new DOMParser().parseFromString(h,'text/html')));
+ slides.filter(s=>s.dataset.from).forEach(async s=>{try{
+  const base=new URL(s.dataset.from,location.href),doc=await get(s.dataset.from);
+  const src=[...doc.querySelectorAll('section.slide')].find(x=>x.dataset.id===s.dataset.sid);if(!src)throw 0;
+  const fr=s.querySelector('.frame');fr.innerHTML=src.querySelector('.frame').innerHTML;
+  fr.querySelectorAll('[id]').forEach(e=>e.removeAttribute('id'));
+  fr.querySelectorAll('[src],[href],[poster]').forEach(e=>{for(const a of['src','href','poster']){const v=e.getAttribute(a);
+   if(v&&!v.startsWith('#'))e.setAttribute(a,new URL(v,base).href)}});
+  fr.querySelectorAll('[style*="url("]').forEach(e=>{e.style.cssText=e.style.cssText.replace(/url\(["']?([^"')]+)["']?\)/g,(m,v)=>`url("${new URL(v,base).href}")`)});
+  s.className=[...src.classList].filter(c=>c!=='active').concat('transcluded',s.classList.contains('active')?'active':[]).join(' ');
+  s.dataset.steps=src.dataset.steps||'';if(!s.dataset.steps)delete s.dataset.steps;
+  if(s.dataset.static){if(s.querySelector('.tcover'))s.dataset.steps='1';else delete s.dataset.steps;fr.querySelectorAll('[data-s],[data-e],[data-an]').forEach(e=>{delete e.dataset.s;delete e.dataset.e;delete e.dataset.an})}
+  if(src.style.background)s.style.background=src.style.background;
+  delete s.dataset.fit;if(fontsOk)fitCanvas(s);
+  if(s===slides[cur])show();
+ }catch(e){}})}
 Promise.all([...document.fonts].filter(f=>f.family.replace(/"/g,'')==='HSGSans').map(f=>f.load().catch(()=>0)))
  .then(()=>document.fonts.ready).then(()=>{fontsOk=true;slides.forEach(fitCanvas);root.dataset.fit=1});
 window.hsgDeck={go,next,prev,count:slides.length,place};(document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve()).then(place);go(cur,arrived)})();
@@ -709,10 +745,20 @@ def shape_paths(g, w, h, adj):
         return [f"M{_f(w)} 0C{_f(w * .4)} 0 {_f(w * .5)} {_f(h * .1)} {_f(w * .5)} {_f(h * .25)}V{_f(h * .4)}C{_f(w * .5)} {_f(h * .45)} {_f(w * .3)} {_f(h * .5)} 0 {_f(h * .5)}"
                 f"C{_f(w * .3)} {_f(h * .5)} {_f(w * .5)} {_f(h * .55)} {_f(w * .5)} {_f(h * .6)}V{_f(h * .75)}C{_f(w * .5)} {_f(h * .9)} {_f(w * .4)} {_f(h)} {_f(w)} {_f(h)}"]
     if g == "mathEqual":
-        t = h * .2
-        return [f"M0 {_f(h * .2)}H{_f(w)}V{_f(h * .2 + t)}H0Z", f"M0 {_f(h * .6)}H{_f(w)}V{_f(h * .6 + t)}H0Z"]
+        th, gap = h * A("adj1", 23520), h * A("adj2", 11760)
+        x0, x1 = w * (1 - .7349) / 2, w * (1 + .7349) / 2
+        y2, y3 = (h - gap) / 2, (h + gap) / 2
+        return [f"M{_f(x0)} {_f(y2 - th)}H{_f(x1)}V{_f(y2)}H{_f(x0)}Z", f"M{_f(x0)} {_f(y3)}H{_f(x1)}V{_f(y3 + th)}H{_f(x0)}Z"]
     if g == "arc":
-        return [f"M{_f(w / 2)} 0A{_f(w / 2)} {_f(h / 2)} 0 0 1 {_f(w)} {_f(h / 2)}"]
+        # elliptical arc from adj1 to adj2 (60000ths of a degree, clockwise, default the upper right quarter)
+        rx, ry = w / 2, h / 2
+        st, en = math.radians(adj.get("adj1", 16200000) / 60000), math.radians(adj.get("adj2", 0) / 60000)
+        par = lambda a: math.atan2(rx * math.sin(a), ry * math.cos(a))      # visual angle -> ellipse parameter
+        p0, p1 = par(st), par(en)
+        sweep = (en - st) % (2 * math.pi)
+        pt = lambda q: (rx + rx * math.cos(q), ry + ry * math.sin(q))
+        (x0, y0), (x1, y1) = pt(p0), pt(p1)
+        return [f"M{_f(x0)} {_f(y0)}A{_f(rx)} {_f(ry)} 0 {1 if sweep > math.pi else 0} 1 {_f(x1)} {_f(y1)}"]
     if g in ("line", "straightConnector1"):
         return [f"M0 0L{_f(w)} {_f(h)}"]
     if g == "curvedConnector2":
@@ -735,7 +781,9 @@ class Html:
         self.files = {}
 
     def asset(self, rel):
-        """Copy a deck image next to the page and return its relative URL."""
+        """Copy a deck image next to the page and return its relative URL; an http(s) address is referenced, not copied."""
+        if str(rel).startswith(("http://", "https://")):
+            return rel
         src = (self.base / rel).resolve()
         if src not in self.files:
             name = re.sub(r"[^A-Za-z0-9._-]", "-", src.name)
@@ -814,17 +862,20 @@ class Html:
     def code(self, code, style="outline", caption=None):
         small = " small" if len(code.split("\n")) > 13 or max(len(l) for l in code.split("\n")) > 52 else ""
         cap = f'<p class="codecap">{self.mark(caption)}</p>' if caption else ""
-        return f'<div><pre class="code {style}{small}">{esc(code)}</pre>{cap}</div>'
+        body = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", esc(code))    # **bold** inside a code block
+        return f'<div><pre class="code {style}{small}">{body}</pre>{cap}</div>'
 
     def head(self, s):
         h = f'<h2>{self.htitle(s["title"])}</h2>'
         wide = " wide" if s.get("callout", {}).get("wide") else ""
-        c = f'<aside class="callout box {s["callout"].get("style", "green")}{wide}">{self.mark(s["callout"]["text"])}</aside>' if s.get("callout") else ""
+        c = f'<aside class="callout box {s["callout"].get("style", "green")}{wide}">{self.mark(s["callout"]["text"])}</aside>' if s.get("callout") and not s["callout"].get("bottom") else ""
         lead = f'<p class="lead">{self.mark(s["lead"])}</p>' if s.get("lead") else ""
         return f'<div class="headrow"><div>{h}</div>{c}</div>{lead}'
 
     def main(self, s, inner, cls=""):
-        return f'{self.head(s)}<div class="main{cls}">{inner}</div>'
+        low = (f'<aside class="callout box big {s["callout"].get("style", "green")}">{self.mark(s["callout"]["text"])}</aside>'
+               if s.get("callout", {}).get("bottom") else "")
+        return f'{self.head(s)}<div class="main{cls}">{inner}</div>{low}'
 
     @staticmethod
     def density(*parts):
@@ -922,11 +973,18 @@ class Html:
         return self.main(s, f'<div class="split"><div>{copy}</div>{fig}</div>{after}')
 
     def l_table(self, s):
+        n = len(s["columns"])
         head = "".join(f"<th>{self.mark(c)}</th>" for c in s["columns"])
-        rows = "".join("<tr>" + "".join(f"<td>{self.mark(c)}</td>" for c in r) + "</tr>" for r in s["rows"])
+        cols = "<colgroup>" + "".join(f'<col style="width:{w}%">' for w in s["widths"]) + "</colgroup>" if s.get("widths") else ""
+        rows = ""
+        for r in s["rows"]:                            # a short row stretches its last cell; {"cells", "light"} sets a row in lighter type
+            cells, light = (r["cells"], r.get("light")) if isinstance(r, dict) else (r, False)
+            tds = "".join(f"<td{f' colspan={n - len(cells) + 1}' if i == len(cells) - 1 and len(cells) < n else ''}>{self.mark(c)}</td>"
+                          for i, c in enumerate(cells))
+            rows += f'<tr class="light">{tds}</tr>' if light else f"<tr>{tds}</tr>"
         many = " many" if len(s["rows"]) > 7 or len(s["columns"]) > 4 else ""
         after = f'<p class="after" style="padding-left:0">{self.mark(s["after"])}</p>' if s.get("after") else ""
-        return self.main(s, f'<div class="tablewrap"><table class="t{many}"><thead><tr>{head}</tr></thead><tbody>{rows}</tbody></table></div>{after}')
+        return self.main(s, f'<div class="tablewrap"><table class="t{many}">{cols}<thead><tr>{head}</tr></thead><tbody>{rows}</tbody></table></div>{after}')
 
     def l_code(self, s):
         code = self.code(s["code"], s.get("style", "outline"), s.get("caption"))
@@ -1070,7 +1128,7 @@ class Html:
             if g == "path":
                 paths = [(p["d"], p["fill"], p["stroke"]) for p in it["paths"]]
             else:
-                paths = [(d, k == 0, True) for k, d in enumerate(shape_paths(g, w, h, it.get("adj", {})))]
+                paths = [(d, k == 0 or g == "mathEqual", True) for k, d in enumerate(shape_paths(g, w, h, it.get("adj", {})))]
             col, lw = it.get("ln"), it.get("lw", .1)
             is_line = g in ("line", "straightConnector1", "curvedConnector2", "curvedConnector3", "bentConnector2", "bentConnector3", "arc")
             defs, marks = "", ""
@@ -1111,6 +1169,9 @@ class Html:
         if it.get("video"):
             src = (self.base / it["video"]).resolve()
             served = self.out / "media" / src.name      # the copy already published with the deck
+            published = self.base / "html" / "media" / src.name
+            if not src.exists() and not served.exists() and published.exists():   # rendering elsewhere (--out)
+                src = published
             if not src.exists() and not served.exists():
                 print(f"WARNING: video {it['video']} not found (neither {src} nor {served}); showing its poster only", file=sys.stderr)
             if src.exists() or served.exists():
@@ -1153,6 +1214,62 @@ class Html:
         head = f'<div class="headrow"><div><h2>{self.htitle(s["title"])}</h2></div></div>' if s.get("title") else ""
         return head + f'<div class="cv">{out}</div>'
 
+    def l_web(self, s):
+        """A live web page in a frame; it loads when the page does (lazily), and the chip says where it comes from."""
+        host = re.sub(r"^https?://(www\.)?", "", s["url"]).split("/")[0]
+        cap = f'<p class="codecap">{self.mark(s["caption"])}</p>' if s.get("caption") else ""
+        return (f'{self.head(s)}<div class="main"><iframe class="webframe" src="{esc(s["url"])}" loading="lazy" title="{esc(host)}" '
+                f'sandbox="allow-scripts allow-same-origin allow-popups allow-forms"></iframe>'
+                f'<p class="codecap">Shown live from <a href="{esc(s["url"])}" target="_blank" rel="noopener">{esc(host)}</a>, not copied.</p>{cap}</div>')
+
+    def l_transclude(self, s):
+        """A slide of another deck, transcluded in Ted Nelson's sense: stored once, in its own deck, and pulled in by reference
+        each time this page opens (see TRANSCLUDE in the script). What is rendered here is the fallback, shown until the
+        slide arrives and kept if it cannot (a page opened from disk, a deck that is offline)."""
+        folder, sid, tslide, tdeck = hd.resolve(s["to"], self.base)
+        where = tdeck.get("ref_label") or plain(tdeck["title"])
+        url = self.ref_url(s["to"])
+        n = tdeck["slides"].index(tslide) + 1
+        return (f'<div class="headrow"><div><h2>{self.htitle(s["title"])}</h2></div></div>'
+                f'<p class="tfall">This slide lives in {esc(where)} (slide {n}) and is transcluded here when the page opens. '
+                f'<a href="{esc(url)}">Open the original</a></p>')
+
+    def backlink_chips(self, s):
+        """Nelson's links run both ways: a slide that other decks transclude says where (one chip per use)."""
+        if not s.get("id"):
+            return ""
+        out = ""
+        for folder, path in hd.deck_folders(self.base).items():
+            deck = hd.load_deck(path)
+            for n, o in enumerate(deck["slides"], 1):
+                if o.get("layout") != "transclude":
+                    continue
+                try:
+                    f, sid, _, _ = hd.resolve(o["to"], path.parent)
+                except hd.DeckError:
+                    continue
+                if f != self.base.name or sid != s["id"]:
+                    continue
+                where = deck.get("ref_label") or plain(deck["title"])
+                ext = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>'
+                out += (f'<a class="ref" href="../../{folder}/html/index.html#/{n}" '
+                        f'title="Transcluded in {esc(where)}, slide {n}"><b>Transcluded in</b>'
+                        f'<span class="lab">{esc(where)}, slide {n}</span>{ext}</a>')
+        return out
+
+    def transclusion_attrs(self, s):
+        """Data attributes and the origin line of a transcluded slide."""
+        folder, sid, tslide, tdeck = hd.resolve(s["to"], self.base)
+        where = tdeck.get("ref_label") or plain(tdeck["title"])
+        url = self.ref_url(s["to"])
+        n = tdeck["slides"].index(tslide) + 1
+        attrs = f' data-from="{esc(url.split("#")[0])}" data-sid="{esc(sid)}"' + (' data-static="1"' if s.get("static") or s.get("cover") else "")
+        ext = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>'
+        note = (f'<a class="ref" href="{esc(url)}" '
+                f'title="Transcluded, not embedded: the original is {esc(where)}, slide {n}"><b>Transcluded, not embedded</b>'
+                f'<span class="lab">{esc(where)}, slide {n}</span>{ext}</a>')
+        return attrs, note
+
     def theme(self):
         """An optional theme: a CSS file named in the deck, set on top of the template; files it links with url() are copied."""
         if not self.deck.get("theme"):
@@ -1184,23 +1301,37 @@ class Html:
             extra = ""
             if lay not in ("title", "section"):
                 if s.get("source"):
-                    extra += f'<p class="source">{self.mark(s["source"])}</p>'
+                    corner = " corner" if s.get("source_at") == "corner" else ""     # tucked into the bottom right corner, next to the number
+                    extra += f'<p class="source{corner}">{self.mark(s["source"])}</p>'
                 if d.get("footer"):
                     extra += f'<p class="dfoot">{esc(d["footer"])}</p>'
                 extra += f'<span class="pn" aria-hidden="true">{TAB}{n}</span>'
-            if s.get("refs"):
+            chips = "".join(self.ref_chip(r) for r in s.get("refs", [])) + self.backlink_chips(s)
+            if lay == "transclude":
+                tattrs, tnote = self.transclusion_attrs(s)
+                chips = tnote + chips
+            if chips:
                 pos = " bottom" if s.get("refs_at") == "bottom" else ""
-                extra += (f'<nav class="refs{pos}" aria-label="Related slides, they open in a new tab">'
-                          + "".join(self.ref_chip(r) for r in s["refs"]) + "</nav>")
+                lift = f' style="bottom:calc(var(--u)*{2 + s["refs_up"]})"' if s.get("refs_up") else ""    # lift the chips off the footer line
+                extra += f'<nav class="refs{pos}"{lift} aria-label="Related slides, they open in a new tab">{chips}</nav>'
             notes = f'<template class="notes">{esc(s["notes"])}</template>' if s.get("notes") else ""
             t = f' data-time="{esc(str(s["time"]))}"' if s.get("time") else ""
             bare = " bare" if lay == "questions" and not s.get("points") else ""
             bare += " ta-t" if s.get("ta") == "t" else ""
+            bare += " airy" if s.get("airy") else ""
             steps = max([i.get("s", 0) for i in s.get("items", [])] + [p.get("s", 0) for i in s.get("items", [])
                         for p in (i.get("tx") or {}).get("p", [])] + [a["s"] for i in s.get("items", []) for a in i.get("an", [])]
                         + [0]) if lay == "canvas" else 0
             ds = (f' data-steps="{steps}"' if steps else "") + (f' data-id="{esc(s["id"])}"' if s.get("id") else "")
             ds += f" data-tr='{esc(json.dumps(s['transition']))}'" if s.get("transition") else ""
+            if lay == "transclude":
+                ds += tattrs
+                if s.get("cover"):
+                    ds += ' data-steps="1"'
+                    veil = {"k": "shape", "x": 0, "y": 0, "w": 100, "h": 51, "g": "rect", "fill": "#ffffff", "e": 1}
+                    ask = {"k": "shape", "x": 15, "y": 17, "w": 70, "h": 18, "e": 1, "g": "roundRect", "fill": "#eb6969", "ln": "#2d0606", "lw": 0.104,
+                           "tx": {"p": [{"al": "c", "r": [{"t": s["cover"], "sz": 3.1, "c": "#ffffff"}]}], "a": "m", "i": [1.5, 0.75, 1.5, 0.75]}}
+                    extra += '<div class="cv tcover">' + self.cv_shape(veil, 0) + self.cv_shape(ask, 0) + '</div>'
             ds += f' style="background:{esc(s["bg"])}"' if s.get("bg") else ""      # background copied from PowerPoint
             sections += (f'<section class="slide l-{lay}{bare}{" active" if n == 1 else ""}" id="s{n}" data-title="{esc(plain(s["title"]) or f"Slide {n}")}"{t}{ds} '
                          f'aria-label="Slide {n} of {n_all}"><div class="frame">{inner}</div>{extra}{notes}</section>\n')
@@ -1410,8 +1541,13 @@ def main():
     ap.add_argument("--out", help="output folder (default: html/ next to the deck)")
     ap.add_argument("--shots", help="folder for check screenshots (keep it outside the repo)")
     ap.add_argument("--slides", help="with --shots: only these slides, e.g. 2 or 2,4-6 (fast; no contact sheets)")
+    ap.add_argument("--notes", action="store_true",
+                    help="include the speaker notes (N key); without it the page has none, so it can be published")
     a = ap.parse_args()
     deck, base, warnings = hd.load(a.deck)
+    if not a.notes:
+        for s in deck["slides"]:
+            s.pop("notes", None)
     out = Path(a.out).resolve() if a.out else base / "html"
     index = Html(deck, base, out).write()
     print(f"Saved {index} ({len(deck['slides'])} slides)")

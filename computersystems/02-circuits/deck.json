@@ -252,7 +252,7 @@
    "image": "img/shannon-table.png",
    "alt": "Table titled Analogue Between the Calculus of Propositions and the Symbolic Relay Analysis, mapping circuit states to propositions",
    "shadow": false,
-   "source": "[The Atlantic](https://www.theatlantic.com/technology/archive/2017/03/aristotle-computer/518697/) · [Claude Shannon at MIT: The best master's thesis in history](https://www.youtube.com/watch?v=kP0zi5lX-Fo)"
+   "source": "[The Atlantic](https://www.theatlantic.com/technology/archive/2017/03/aristotle-computer/518697/); [Claude Shannon at MIT: The best master's thesis in history](https://www.youtube.com/watch?v=kP0zi5lX-Fo)"
   },
   {
    "layout": "text",
@@ -643,8 +643,7 @@
     "image": "img/4bit-adder.jpg",
     "alt": "A 4-bit adder: one half-adder and three full adders in a row",
     "shadow": false
-   },
-   "notes": "C1 = 0, C2 = 1, C3 = 1, C4 = 0; S0 = 0, S1 = 0, S2 = 0, S3 = 1. So 0010 + 0110 = 1000 (2 + 6 = 8)."
+   }
   },
   {
    "layout": "gallery",
@@ -746,7 +745,7 @@
    "title": "Another Adder…",
    "image": "img/knex-computer.png",
    "alt": "News article from heise online: a YouTuber builds a mechanical 8-bit computer from K'nex, with a photo of the colorful machine",
-   "source": "[Video](https://m.youtube.com/watch?v=Fxv3JoS1uY8) · [heise online](https://www.heise.de/news/Youtuber-baut-mechanischen-8-Bit-Computer-aus-K-nex-10495869.html)"
+   "source": "[Video](https://m.youtube.com/watch?v=Fxv3JoS1uY8); [heise online](https://www.heise.de/news/Youtuber-baut-mechanischen-8-Bit-Computer-aus-K-nex-10495869.html)"
   },
   {
    "layout": "image",

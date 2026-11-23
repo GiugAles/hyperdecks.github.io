@@ -25,7 +25,7 @@
   ],
   [
    "09",
-   "Decoupling and Interoperability#1",
+   "Decoupling#1",
    "start"
   ],
   [
@@ -90,6 +90,11 @@
   ],
   [
    "07b",
+   "Architectural Constraints on the Modern Web Architecture",
+   "rest-constraints"
+  ],
+  [
+   "07b",
    "Client-Server: Three High-level Options",
    "client-server"
   ],
@@ -145,11 +150,6 @@
   ],
   [
    "08",
-   "Let’s Talk NFPs",
-   "nfps"
-  ],
-  [
-   "08",
    "Smart Things and their Ecosystems#1",
    "smart-things"
   ],
@@ -195,12 +195,12 @@
   ],
   [
    "08",
-   "Example: CRUD-over-HTTP11-bot",
+   "Example: CRUD-over-HTTP/1.1 Bot",
    "crud-bot"
   ],
   [
    "08",
-   "Long-running Requests",
+   "How To: Long-Running Requests",
    "long-running"
   ],
   [
@@ -220,22 +220,17 @@
   ],
   [
    "08",
-   "Reminder on HTTP/1.1 vs. HTTP/2#1",
-   "http2"
-  ],
-  [
-   "08",
    "What about MCPbot",
    "mcp-bot"
   ],
   [
    "08",
-   "Towards the Exercise: Event-driven",
+   "=Towards the Exercise",
    "exercise-events"
   ],
   [
    "08",
-   "Publish/Subscribe on the Web",
+   "W3C WebSub: Publish/Subscribe on the Web",
    "pubsub-web"
   ],
   [
@@ -252,6 +247,11 @@
    "09",
    "Decoupling and Guidance",
    "decoupling-guidance"
+  ],
+  [
+   "09",
+   "HCI: The Animals",
+   "animals-way"
   ],
   [
    "09",
@@ -290,8 +290,28 @@
   ],
   [
    "09",
+   "~Our problem to distinguish between director and cast",
+   "director-link"
+  ],
+  [
+   "09",
    "The final step: A Common Conceptual Model",
    "common-model"
+  ],
+  [
+   "09",
+   "What Have We Decoupled So Far",
+   "decoupled-so-far"
+  ],
+  [
+   "09",
+   "Does the Link Care Where It Points",
+   "link-location"
+  ],
+  [
+   "09",
+   "Where Does Your Rating Live",
+   "your-rating"
   ],
   [
    "09",
@@ -315,13 +335,8 @@
   ],
   [
    "09",
-   "Solid: Pods, WebIDs and Apps",
+   "Solid: Pods, WebIDs, and Apps",
    "solid-pods"
-  ],
-  [
-   "09",
-   "WebID: A URI",
-   "webid"
   ],
   [
    "09",
@@ -335,21 +350,6 @@
   ],
   [
    "09",
-   "Example: Publishing an Auction",
-   "solid-post"
-  ],
-  [
-   "09",
-   "Changing Data: N3 Patch",
-   "n3-patch"
-  ],
-  [
-   "09",
-   "Who Is Asking",
-   "solid-oidc"
-  ],
-  [
-   "09",
    "Who May Do What",
    "wac"
   ],
@@ -360,23 +360,8 @@
   ],
   [
    "09",
-   "Data at Rest Needs a Contract",
-   "shapes"
-  ],
-  [
-   "09",
-   "Pods Can Tell You",
+   "Solid Notification",
    "solid-notifications"
-  ],
-  [
-   "09",
-   "Data Sovereignty",
-   "sovereignty"
-  ],
-  [
-   "09",
-   "Solid in the PITAS Ecosystem",
-   "pitas-solid"
   ],
   [
    "09",
@@ -387,11 +372,6 @@
    "09",
    "Solid Symposium 2027",
    "sosy"
-  ],
-  [
-   "09",
-   "Towards Assignment 9",
-   "assignment-9"
   ],
   [
    "10",
@@ -429,6 +409,11 @@
    "semantics-llms"
   ],
   [
+   "10",
+   "Towards the Exercise",
+   "exercise-10-11"
+  ],
+  [
    "11",
    "Programming on the Knowledge Level",
    "knowledge-level"
@@ -452,6 +437,186 @@
    "11",
    "The Constrained Application Protocol",
    "coap"
+  ],
+  [
+   "08",
+   "gRPC: RPC for the 2020s#2",
+   "http2"
+  ],
+  [
+   "11",
+   "Update 2026: Stateless MCP",
+   "mcp-stateless"
+  ],
+  [
+   "08",
+   "Review: Principled Architectural Design",
+   "review"
+  ],
+  [
+   "08",
+   "Performant, but Not Fault-Tolerant",
+   "outage"
+  ],
+  [
+   "08",
+   "=Syllabus",
+   "syllabus"
+  ],
+  [
+   "08",
+   "Lecture Learning Goals",
+   "goals"
+  ],
+  [
+   "08",
+   "Same Task, Different Protocols",
+   "instant-messaging"
+  ],
+  [
+   "08",
+   "Proprietary Binary Protocol",
+   "binary-protocol"
+  ],
+  [
+   "08",
+   "What do YOU prefer",
+   "client-developer"
+  ],
+  [
+   "08",
+   "What Is in the Contract",
+   "ladder"
+  ],
+  [
+   "08",
+   "One Task, Many Styles",
+   "bot-task"
+  ],
+  [
+   "08",
+   "Content Overview#1",
+   "overview-invoke"
+  ],
+  [
+   "08",
+   "Example: RPCbot",
+   "rpc-bot"
+  ],
+  [
+   "08",
+   "RPC + RMI#1",
+   "rpc-rmi"
+  ],
+  [
+   "08",
+   "=#1",
+   "delivery-semantics"
+  ],
+  [
+   "08",
+   "RPC + RMI#2",
+   "rpc-failures"
+  ],
+  [
+   "08",
+   "Example: CORBAbot",
+   "corba-bot"
+  ],
+  [
+   "08",
+   "Common ORB Architecture (CORBA)#2",
+   "corba-tradeoffs"
+  ],
+  [
+   "08",
+   "W3C / OASIS Web Services#2",
+   "webservices-stack"
+  ],
+  [
+   "08",
+   "W3C / OASIS Web Services#3",
+   "webservices-decline"
+  ],
+  [
+   "08",
+   "Symptomatic of badly done RPC",
+   "rpc-tunneling"
+  ],
+  [
+   "08",
+   "Reminder on HTTP/1.1 vs. HTTP/2#1",
+   "http2-reminder"
+  ],
+  [
+   "08",
+   "Reminder on HTTP/1.1 vs. HTTP/2#2",
+   "http2-reminder-2"
+  ],
+  [
+   "08",
+   "Content Overview#2",
+   "overview-data"
+  ],
+  [
+   "08",
+   "=Remote Data Access",
+   "data-access"
+  ],
+  [
+   "08",
+   "Remote Data Access: *QL",
+   "query-languages"
+  ],
+  [
+   "08",
+   "Remote Data Access: Linked Data",
+   "linked-data-fragments"
+  ],
+  [
+   "08",
+   "Content Overview#3",
+   "overview-events"
+  ],
+  [
+   "08",
+   "Publish-Subscribe",
+   "pubsub"
+  ],
+  [
+   "08",
+   "~Who knows",
+   "mqtt-intro"
+  ],
+  [
+   "08",
+   "Brokered Publish-Subscribe: MQTT",
+   "mqtt"
+  ],
+  [
+   "08",
+   "MQTT Bot",
+   "mqtt-bot"
+  ],
+  [
+   "08",
+   "=W3C WebSub",
+   "websub"
+  ],
+  [
+   "08",
+   "W3C WebSub Subscription Flow",
+   "websub-flow"
+  ],
+  [
+   "08",
+   "Interaction Styles Compared",
+   "compared"
+  ],
+  [
+   "08",
+   "Any Questions",
+   "questions"
   ]
  ],
  "refs": [
@@ -592,26 +757,6 @@
   ],
   [
    "08",
-   "Review: Principled Architectural Design#3",
-   [
-    [
-     "07b#rest-intro",
-     "recap"
-    ]
-   ]
-  ],
-  [
-   "08",
-   "Let’s Talk NFPs",
-   [
-    [
-     "07b#nfps",
-     "recap"
-    ]
-   ]
-  ],
-  [
-   "08",
    "Smart Things and their Ecosystems#1",
    [
     [
@@ -622,40 +767,14 @@
   ],
   [
    "08",
-   "Copied from last week",
-   [
-    [
-     "07b#client-server",
-     "recap"
-    ]
-   ]
-  ],
-  [
-   "08",
-   "Remember?",
-   [
-    [
-     "07b#evaluating-styles",
-     "recap"
-    ]
-   ]
-  ],
-  [
-   "08",
-   "Reminder on HTTP/1.1 vs. HTTP/2#1",
-   [
-    [
-     "07a#http-stack",
-     "recap"
-    ]
-   ]
-  ],
-  [
-   "08",
    "What about MCPbot",
    [
     [
      "11#mcp-overview",
+     "next"
+    ],
+    [
+     "11#mcp-stateless",
      "next"
     ]
    ]
@@ -667,100 +786,6 @@
     [
      "08#agenda",
      "recap"
-    ]
-   ]
-  ],
-  [
-   "09",
-   "Resource-oriented Architecture",
-   [
-    [
-     "08#roa",
-     "recap"
-    ]
-   ]
-  ],
-  [
-   "09",
-   "Example: CRUD-over-HTTP11-bot",
-   [
-    [
-     "08#crud-bot",
-     "recap"
-    ]
-   ]
-  ],
-  [
-   "09",
-   "Long-running Requests",
-   [
-    [
-     "08#long-running",
-     "recap"
-    ]
-   ]
-  ],
-  [
-   "09",
-   "URIs and Statelessness#1",
-   [
-    [
-     "08#uris",
-     "recap"
-    ]
-   ]
-  ],
-  [
-   "09",
-   "gRPC: RPC for the 2020s#1",
-   [
-    [
-     "08#grpc",
-     "recap"
-    ]
-   ]
-  ],
-  [
-   "09",
-   "Example: gRPCBot",
-   [
-    [
-     "08#grpc-bot",
-     "recap"
-    ]
-   ]
-  ],
-  [
-   "09",
-   "Remember?",
-   [
-    [
-     "07b#evaluating-styles",
-     "recap"
-    ]
-   ]
-  ],
-  [
-   "09",
-   "Reminder on HTTP/1.1 vs. HTTP/2#1",
-   [
-    [
-     "08#http2",
-     "recap"
-    ]
-   ]
-  ],
-  [
-   "09",
-   "What about MCPbot",
-   [
-    [
-     "08#mcp-bot",
-     "recap"
-    ],
-    [
-     "11#mcp-overview",
-     "next"
     ]
    ]
   ],
@@ -790,7 +815,7 @@
   ],
   [
    "09",
-   "URIs and Statelessness#2",
+   "URIs and Statelessness",
    [
     [
      "08#uris",
@@ -804,16 +829,6 @@
    [
     [
      "08#oop",
-     "recap"
-    ]
-   ]
-  ],
-  [
-   "09",
-   "REST APIs Must be Hypertext-Driven",
-   [
-    [
-     "07b#hateoas",
      "recap"
     ]
    ]
@@ -834,10 +849,49 @@
   ],
   [
    "09",
-   "Solid: Pods, WebIDs and Apps",
+   "Solid: Pods, WebIDs, and Apps",
    [
     [
      "09#personal-data",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "What Have We Decoupled So Far",
+   [
+    [
+     "07b#principled-design",
+     "recap"
+    ],
+    [
+     "08#start",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "Does the Link Care Where It Points",
+   [
+    [
+     "09#director-link",
+     "recap",
+     "JSON: Director and Cast"
+    ],
+    [
+     "09#common-model",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "~web applications where data storage",
+   [
+    [
+     "09#decoupled-so-far",
      "recap"
     ]
    ]
@@ -868,41 +922,11 @@
   ],
   [
    "09",
-   "Data Sovereignty",
-   [
-    [
-     "09#data-decentralization",
-     "recap"
-    ]
-   ]
-  ],
-  [
-   "09",
-   "WebID: A URI",
-   [
-    [
-     "08#uris",
-     "recap"
-    ]
-   ]
-  ],
-  [
-   "09",
-   "Pods Can Tell You",
+   "Solid Notification",
    [
     [
      "08#pubsub-web",
      "recap"
-    ]
-   ]
-  ],
-  [
-   "09",
-   "Data at Rest Needs a Contract",
-   [
-    [
-     "10#shared-understanding",
-     "next"
     ]
    ]
   ],
@@ -1092,6 +1116,139 @@
     [
      "07b#client-server",
      "recap"
+    ],
+    [
+     "10#exercise-10-11",
+     "next",
+     "Towards Exercise 10: SPARQL"
+    ]
+   ]
+  ],
+  [
+   "08",
+   "=What Is in the Contract Between Communicating Entities?",
+   [
+    [
+     "07a#multilevel",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "11",
+   "Update 2026: Stateless MCP",
+   [
+    [
+     "07b#stateless",
+     "recap"
+    ],
+    [
+     "08#mcp-bot",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "08",
+   "Reminder on HTTP/1.1 vs. HTTP/2#1",
+   [
+    [
+     "07a#http-stack",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "08",
+   "Towards the Exercise",
+   [
+    [
+     "e08#start",
+     "next"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "~https://schema.org/Movie",
+   [
+    [
+     "10#seen-by-now",
+     "next"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "Sounds Familiar",
+   [
+    [
+     "07b#hateoas",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "The Hypermedia Way#1",
+   [
+    [
+     "09#animals-way",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "~Specification of the underlying protocol",
+   [
+    [
+     "08#crud-over-http",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "The final step: A Common Conceptual Model",
+   [
+    [
+     "10#shared-understanding",
+     "next"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "Data Decentralization: Personal Data Storage#1",
+   [
+    [
+     "07b#jump-vs-transclusion",
+     "recap"
+    ],
+    [
+     "09#nelson",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "(4/4) Guidance",
+   [
+    [
+     "07b#hateoas",
+     "recap"
+    ]
+   ]
+  ],
+  [
+   "09",
+   "Jump Links (Web) and Transclusion",
+   [
+    [
+     "07b#jump-vs-transclusion",
+     "recap"
     ]
    ]
   ]
@@ -1111,9 +1268,9 @@
   ],
   [
    "08",
-   "Different Market – Same Narrative",
+   "Same Task, Different Protocols",
    "See Exercise 8",
-   "08#exercise-events"
+   "e08#start"
   ],
   [
    "08",
@@ -1122,22 +1279,10 @@
    "07b#uniform-interface"
   ],
   [
-   "08",
-   "Publish/Subscribe on the Web",
-   "Week 11",
-   "11#coap"
-  ],
-  [
    "09",
    "Ecosystems: Beyond individual requests",
    "Lecture 8",
    "08#start"
-  ],
-  [
-   "09",
-   "Consider that clients may themselves modify hypermedia",
-   "Remember that affordances are relational",
-   "09#affordances"
   ],
   [
    "10",
@@ -1156,12 +1301,6 @@
    "Branding Low-power Networking for the IoT",
    "PlugFest",
    "07a#plugfest"
-  ],
-  [
-   "09",
-   "~Show Galaxus",
-   "slide 9 of «Hypermedia APIs»",
-   "10#seen-by-now"
   ],
   [
    "07a",
@@ -1285,27 +1424,9 @@
   ],
   [
    "08",
-   "~https://github.com/modelcontextprotocol/modelcontextprotocol/pull/2575",
-   "https://github.com/modelcontextprotocol/modelcontextprotocol/pull/2575",
-   "https://github.com/modelcontextprotocol/modelcontextprotocol/pull/2575"
-  ],
-  [
-   "08",
-   "~http://www.vlib.us/web/worldwideweb3d.html",
-   "http://www.vlib.us/web/worldwideweb3d.html",
-   "http://www.vlib.us/web/worldwideweb3d.html"
-  ],
-  [
-   "08",
    "~https://www.computer.org/profiles/per-hansen",
    "https://www.computer.org/profiles/per-hansen",
    "https://www.computer.org/profiles/per-hansen"
-  ],
-  [
-   "08",
-   "~https://www.researchgate.net/figure/The-different-layers-of-the-Java-remote-method-invocation-RMI-architecture_fig6_3453277",
-   "https://www.researchgate.net/figure/The-different-layers-of-the-Java-remote-method-invocation-RMI-architecture_fig6_3453277",
-   "https://www.researchgate.net/figure/The-different-layers-of-the-Java-remote-method-invocation-RMI-architecture_fig6_3453277"
   ],
   [
    "08",
@@ -1351,27 +1472,15 @@
   ],
   [
    "08",
-   "~https://cloud.google.com/endpoints/docs/grpc/transcoding",
-   "https://cloud.google.com/endpoints/docs/grpc/transcoding",
-   "https://cloud.google.com/endpoints/docs/grpc/transcoding"
-  ],
-  [
-   "08",
-   "~https://freecontent.manning.com/animation-http-1-1-vs-http-2-vs-http-2-with-push/",
-   "https://freecontent.manning.com/animation-http-1-1-vs-http-2-vs-http-2-with-push/",
-   "https://web.archive.org/web/20251119132828/https://freecontent.manning.com/animation-http-1-1-vs-http-2-vs-http-2-with-push/"
-  ],
-  [
-   "08",
-   "~https://freecontent.manning.com/animation-http-1-1-vs-http-2-vs-http-2-with-push/#2",
-   "https://freecontent.manning.com/animation-http-1-1-vs-http-2-vs-http-2-with-push/",
-   "https://web.archive.org/web/20251119132828/https://freecontent.manning.com/animation-http-1-1-vs-http-2-vs-http-2-with-push/"
-  ],
-  [
-   "08",
-   "~https://www.w3.org/Protocols/rfc2616/rfc2616-sec8.html",
-   "https://www.w3.org/Protocols/rfc2616/rfc2616-sec8.html",
+   "~RFC 9112, §9.3.2",
+   "RFC 2616, §8.1.2.2",
    "https://www.w3.org/Protocols/rfc2616/rfc2616-sec8.html"
+  ],
+  [
+   "08",
+   "~RFC 9112, §9.3.2",
+   "RFC 9112, §9.3.2",
+   "https://www.rfc-editor.org/rfc/rfc9112#section-9.3.2"
   ],
   [
    "08",
@@ -1386,154 +1495,10 @@
    "https://www.hivemq.com/blog/mqtt-sn-smart-choice-for-iiot/"
   ],
   [
-   "08",
-   "~https://www.hivemq.com/blog/mqtt-essentials-part2-publish-subscribe/",
-   "https://www.hivemq.com/blog/mqtt-essentials-part2-publish-subscribe/",
-   "https://www.hivemq.com/blog/mqtt-essentials-part2-publish-subscribe/"
-  ],
-  [
-   "08",
-   "~https://connectedplaces.online/",
-   "https://connectedplaces.online/",
-   "https://connectedplaces.online/"
-  ],
-  [
-   "08",
-   "~https://fediversereport.com/all-posts-archive/6/",
-   "https://fediversereport.com/all-posts-archive/6/",
-   "https://fediversereport.com/all-posts-archive/6/"
-  ],
-  [
-   "08",
-   "~https://fedipact.online/",
-   "https://fedipact.online/",
-   "https://fedipact.online/"
-  ],
-  [
-   "08",
-   "~https://connectedplaces.online/reports/fediverse-report-122/",
-   "https://connectedplaces.online/reports/fediverse-report-122/",
-   "https://connectedplaces.online/reports/fediverse-report-122/"
-  ],
-  [
-   "08",
-   "~https://anew.social/",
-   "https://anew.social/",
-   "https://anew.social/"
-  ],
-  [
-   "08",
-   "~https://fed.brid.gy/",
-   "https://fed.brid.gy/",
-   "https://fed.brid.gy/"
-  ],
-  [
-   "08",
-   "~https://bounce.anew.social/",
-   "https://bounce.anew.social/",
-   "https://bounce.anew.social/"
-  ],
-  [
-   "08",
-   "~https://bonfirenetworks.org/",
-   "https://bonfirenetworks.org/",
-   "https://bonfirenetworks.org/"
-  ],
-  [
-   "08",
-   "~https://openscience.network/",
-   "https://openscience.network/",
-   "https://openscience.network/"
-  ],
-  [
-   "08",
-   "~https://about.surf.social/",
-   "https://about.surf.social/",
-   "https://about.surf.social/"
-  ],
-  [
-   "08",
-   "~https://openvibe.social/",
-   "https://openvibe.social/",
-   "https://openvibe.social/"
-  ],
-  [
-   "08",
-   "~https://techcrunch.com/2025/06/13/beyond-bluesky-these-are-the-apps-building-social-experiences-on-the-at-protocol/",
-   "https://techcrunch.com/2025/06/13/beyond-bluesky-these-are-the-apps-building-social-experiences-on-the-at-protocol/",
-   "https://techcrunch.com/2025/06/13/beyond-bluesky-these-are-the-apps-building-social-experiences-on-the-at-protocol/"
-  ],
-  [
-   "08",
-   "~https://connectedplaces.leaflet.pub/3m5gygipuxc2q",
-   "https://connectedplaces.leaflet.pub/3m5gygipuxc2q",
-   "https://connectedplaces.leaflet.pub/3m5gygipuxc2q"
-  ],
-  [
-   "08",
-   "~https://www.w3.org/TR/activitypub/",
-   "https://www.w3.org/TR/activitypub/",
-   "https://www.w3.org/TR/activitypub/"
-  ],
-  [
-   "09",
-   "~https://medium.com/@moulayjam/what-are-webhooks-and-how-to-use-them-in-ruby-on-rails-51ff87278160",
-   "https://medium.com/@moulayjam/what-are-webhooks-and-how-to-use-them-in-ruby-on-rails-51ff87278160",
-   "https://medium.com/@moulayjam/what-are-webhooks-and-how-to-use-them-in-ruby-on-rails-51ff87278160"
-  ],
-  [
-   "09",
-   "~https://developers.google.com/protocol-buffers/docs/proto3",
-   "https://developers.google.com/protocol-buffers/docs/proto3",
-   "https://developers.google.com/protocol-buffers/docs/proto3"
-  ],
-  [
-   "09",
-   "~https://stackoverflow.com/questions/31801257/why-required-and-optional-is-removed-in-protocol-buffers-3",
-   "https://stackoverflow.com/questions/31801257/why-required-and-optional-is-removed-in-protocol-buffers-3",
-   "https://stackoverflow.com/questions/31801257/why-required-and-optional-is-removed-in-protocol-buffers-3"
-  ],
-  [
-   "09",
-   "~https://cloud.google.com/endpoints/docs/grpc/transcoding",
-   "https://cloud.google.com/endpoints/docs/grpc/transcoding",
-   "https://cloud.google.com/endpoints/docs/grpc/transcoding"
-  ],
-  [
-   "09",
-   "~https://freecontent.manning.com/animation-http-1-1-vs-http-2-vs-http-2-with-push/",
-   "https://freecontent.manning.com/animation-http-1-1-vs-http-2-vs-http-2-with-push/",
-   "https://web.archive.org/web/20251119132828/https://freecontent.manning.com/animation-http-1-1-vs-http-2-vs-http-2-with-push/"
-  ],
-  [
-   "09",
-   "~https://freecontent.manning.com/animation-http-1-1-vs-http-2-vs-http-2-with-push/#2",
-   "https://freecontent.manning.com/animation-http-1-1-vs-http-2-vs-http-2-with-push/",
-   "https://web.archive.org/web/20251119132828/https://freecontent.manning.com/animation-http-1-1-vs-http-2-vs-http-2-with-push/"
-  ],
-  [
-   "09",
-   "~https://www.w3.org/Protocols/rfc2616/rfc2616-sec8.html",
-   "https://www.w3.org/Protocols/rfc2616/rfc2616-sec8.html",
-   "https://www.w3.org/Protocols/rfc2616/rfc2616-sec8.html"
-  ],
-  [
    "09",
    "~https://ieeexplore.ieee.org/document/1317465",
    "https://ieeexplore.ieee.org/document/1317465",
    "https://ieeexplore.ieee.org/document/1317465"
-  ],
-  [
-   "09",
-   "~https://intelliot.eu/",
-   "https://intelliot.eu/",
-   "https://intelliot.eu/"
-  ],
-  [
-   "09",
-   "~https://cordis.europa.eu/project/id/957218",
-   "https://cordis.europa.eu/project/id/957218",
-   "https://cordis.europa.eu/project/id/957218"
   ],
   [
    "09",
@@ -1561,42 +1526,6 @@
   ],
   [
    "09",
-   "~https://rubenverborgh.github.io/WebFundamentals/web-apis/#web-without-hypermedia",
-   "https://rubenverborgh.github.io/WebFundamentals/web-apis/#web-without-hypermedia",
-   "https://rubenverborgh.github.io/WebFundamentals/web-apis/#web-without-hypermedia"
-  ],
-  [
-   "09",
-   "~https://rubenverborgh.github.io/WebFundamentals/web-apis/#web-without-hypermedia#2",
-   "https://rubenverborgh.github.io/WebFundamentals/web-apis/#web-without-hypermedia",
-   "https://rubenverborgh.github.io/WebFundamentals/web-apis/#web-without-hypermedia"
-  ],
-  [
-   "09",
-   "~http://www.notpron.org/notpron/",
-   "http://www.notpron.org/notpron/",
-   "https://web.archive.org/web/20230928211533/https://notpron.org/notpron/"
-  ],
-  [
-   "09",
-   "~https://datatracker.ietf.org/doc/html/rfc5789",
-   "https://datatracker.ietf.org/doc/html/rfc5789",
-   "https://datatracker.ietf.org/doc/html/rfc5789"
-  ],
-  [
-   "09",
-   "~https://monoskop.org/images/7/73/Nelson_Ted_1965_A_File_Structure_for_the_Complex_the_Changing_and_the_Indeterminate.pdf",
-   "https://monoskop.org/images/7/73/Nelson_Ted_1965_A_File_Structure_for_the_Complex_the_Changing_and_the_Indeterminate.pdf",
-   "https://monoskop.org/images/7/73/Nelson_Ted_1965_A_File_Structure_for_the_Complex_the_Changing_and_the_Indeterminate.pdf"
-  ],
-  [
-   "09",
-   "~https://youtu.be/mmfjM-SGlGs?t=1890",
-   "https://youtu.be/mmfjM-SGlGs?t=1890",
-   "https://youtu.be/mmfjM-SGlGs?t=1890"
-  ],
-  [
-   "09",
    "~https://www.iana.org/assignments/link-relations/link-relations.xhtml",
    "https://www.iana.org/assignments/link-relations/link-relations.xhtml",
    "https://www.iana.org/assignments/link-relations/link-relations.xhtml"
@@ -1606,12 +1535,6 @@
    "~https://www.iana.org/assignments/link-relations/link-relations.xhtml#2",
    "https://www.iana.org/assignments/link-relations/link-relations.xhtml",
    "https://www.iana.org/assignments/link-relations/link-relations.xhtml"
-  ],
-  [
-   "09",
-   "~https://martinfowler.com/articles/richardsonMaturityModel.html",
-   "https://martinfowler.com/articles/richardsonMaturityModel.html",
-   "https://martinfowler.com/articles/richardsonMaturityModel.html"
   ],
   [
    "09",
@@ -1642,60 +1565,6 @@
    "~https://schema.org/sameAs",
    "https://schema.org/sameAs",
    "https://schema.org/sameAs"
-  ],
-  [
-   "09",
-   "~https://www.societybyte.swiss/en/2021/01/07/part-1-power-to-the-people-re-decentralizing-the-web-for-good-this-time/",
-   "https://www.societybyte.swiss/en/2021/01/07/part-1-power-to-the-people-re-decentralizing-the-web-for-good-this-time/",
-   "https://www.societybyte.swiss/en/2021/01/07/part-1-power-to-the-people-re-decentralizing-the-web-for-good-this-time/"
-  ],
-  [
-   "09",
-   "~https://www.economist.com/leaders/2008/03/19/break-down-these-walls",
-   "https://www.economist.com/leaders/2008/03/19/break-down-these-walls",
-   "https://www.economist.com/leaders/2008/03/19/break-down-these-walls"
-  ],
-  [
-   "09",
-   "~https://medium.com/@shevski/how-solid-is-tims-plan-to-redecentralize-the-web-b163ba78e835",
-   "https://medium.com/@shevski/how-solid-is-tims-plan-to-redecentralize-the-web-b163ba78e835",
-   "https://medium.com/@shevski/how-solid-is-tims-plan-to-redecentralize-the-web-b163ba78e835"
-  ],
-  [
-   "09",
-   "~https://www.societybyte.swiss/en/2021/01/07/part-1-power-to-the-people-re-decentralizing-the-web-for-good-this-time/#2",
-   "https://www.societybyte.swiss/en/2021/01/07/part-1-power-to-the-people-re-decentralizing-the-web-for-good-this-time/",
-   "https://www.societybyte.swiss/en/2021/01/07/part-1-power-to-the-people-re-decentralizing-the-web-for-good-this-time/"
-  ],
-  [
-   "09",
-   "~https://www.economist.com/leaders/2008/03/19/break-down-these-walls#2",
-   "https://www.economist.com/leaders/2008/03/19/break-down-these-walls",
-   "https://www.economist.com/leaders/2008/03/19/break-down-these-walls"
-  ],
-  [
-   "09",
-   "~https://medium.com/@shevski/how-solid-is-tims-plan-to-redecentralize-the-web-b163ba78e835#2",
-   "https://medium.com/@shevski/how-solid-is-tims-plan-to-redecentralize-the-web-b163ba78e835",
-   "https://medium.com/@shevski/how-solid-is-tims-plan-to-redecentralize-the-web-b163ba78e835"
-  ],
-  [
-   "09",
-   "~https://www.societybyte.swiss/en/2021/01/07/part-1-power-to-the-people-re-decentralizing-the-web-for-good-this-time/#3",
-   "https://www.societybyte.swiss/en/2021/01/07/part-1-power-to-the-people-re-decentralizing-the-web-for-good-this-time/",
-   "https://www.societybyte.swiss/en/2021/01/07/part-1-power-to-the-people-re-decentralizing-the-web-for-good-this-time/"
-  ],
-  [
-   "09",
-   "~https://www.economist.com/leaders/2008/03/19/break-down-these-walls#3",
-   "https://www.economist.com/leaders/2008/03/19/break-down-these-walls",
-   "https://www.economist.com/leaders/2008/03/19/break-down-these-walls"
-  ],
-  [
-   "09",
-   "~https://medium.com/@shevski/how-solid-is-tims-plan-to-redecentralize-the-web-b163ba78e835#3",
-   "https://medium.com/@shevski/how-solid-is-tims-plan-to-redecentralize-the-web-b163ba78e835",
-   "https://medium.com/@shevski/how-solid-is-tims-plan-to-redecentralize-the-web-b163ba78e835"
   ],
   [
    "10",
@@ -1834,12 +1703,36 @@
    "~https://www.electronicdesign.com/iot/engineering-essentials-iot-standards-and-frameworks",
    "https://www.electronicdesign.com/iot/engineering-essentials-iot-standards-and-frameworks",
    "https://www.electronicdesign.com/iot/engineering-essentials-iot-standards-and-frameworks"
+  ],
+  [
+   "08",
+   "Content Overview#3",
+   "Exercise 8",
+   "e08#start"
+  ],
+  [
+   "08",
+   "Reminder on HTTP/1.1 vs. HTTP/2#1",
+   "https://freecontent.manning.com/animation-http-1-1-vs-http-2-vs-http-2-with-push/",
+   "https://web.archive.org/web/20251119132828/https://freecontent.manning.com/animation-http-1-1-vs-http-2-vs-http-2-with-push/"
+  ],
+  [
+   "08",
+   "Reminder on HTTP/1.1 vs. HTTP/2#2",
+   "https://freecontent.manning.com/animation-http-1-1-vs-http-2-vs-http-2-with-push/",
+   "https://web.archive.org/web/20251119132828/https://freecontent.manning.com/animation-http-1-1-vs-http-2-vs-http-2-with-push/"
+  ],
+  [
+   "08",
+   "Lecture Learning Goals",
+   "Assignment 8",
+   "e08#start"
   ]
  ],
  "syllabus": {
   "Principled Architectural Design for Distributed Information Systems": "07b#start",
   "Interaction Styles": "08#start",
-  "Decoupling and Interoperability": "09#start",
+  "Decoupling": "09#start",
   "Hypermedia APIs": "10#start",
   "Interaction with AI Agents and with Physical Devices": "11#start"
  },

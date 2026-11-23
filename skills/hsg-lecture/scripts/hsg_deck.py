@@ -13,7 +13,8 @@ deck.json
 
 Every slide: "layout", "title", and optionally "lead" (one line under the headline), "callout" (a box beside
 the headline), "source" (small credit line), "notes" (speaker notes), "time" (pacing cue shown in the overview).
-Speaker notes can also live in speaker-notes.md next to the deck (see load_notes), which overrides "notes".
+Speaker notes live in speaker-notes.md next to the deck (see load_notes; ignored by git, so they are never
+published); "notes" in deck.json is still read but gets a warning. render_html.py leaves notes out unless --notes.
 The fields of each layout are listed in LAYOUTS below and explained in SKILL.md.
 
   python hsg_deck.py deck.json            # check a deck without rendering
@@ -28,9 +29,9 @@ ASSETS = ROOT / "assets"
 GREEN, DARK_GREEN = "#00802F", "#0A5F2D"
 SALMON, TEAL, SAND, YELLOW = "#EB6969", "#73A5AF", "#E1D7C3", "#FFF04B"
 ROW_A, ROW_B = "#CBD8CD", "#E7EDE8"   # table rows: green at 20% and 10% on white
-BOX_STYLES = ("green", "outline", "teal")
+BOX_STYLES = ("green", "outline", "teal", "red")
 
-COMMON = {"layout", "title", "lead", "callout", "source", "notes", "time", "id", "refs", "refs_at", "decor",
+COMMON = {"layout", "title", "lead", "callout", "source", "source_at", "notes", "time", "id", "refs", "refs_at", "refs_up", "airy", "decor",
           "transition"}   # transition: copied from PowerPoint
 NO_LEAD = {"title", "section", "task", "quote"}
 # layout: (required fields, optional fields)
@@ -41,7 +42,7 @@ LAYOUTS = {
     "text":      ({"title"}, {"paragraphs", "points", "defs", "groups", "tiles", "after", "aside"}),
     "study":     ({"title", "groups"}, {"aside"}),
     "questions": ({"title"}, {"heading", "points", "after"}),
-    "table":     ({"title", "columns", "rows"}, {"after"}),
+    "table":     ({"title", "columns", "rows"}, {"after", "widths"}),
     "code":      ({"title", "code"}, {"paragraphs", "points", "style", "caption"}),
     "quiz":      ({"title", "items"}, {"aside"}),
     "task":      ({"title", "stamp"}, {"paragraphs", "url", "label"}),
@@ -50,6 +51,8 @@ LAYOUTS = {
     "people":    ({"title", "items"}, set()),
     "quote":     ({"title"}, {"attribution", "picture", "points"}),
     "syllabus":  ({"title", "items"}, {"current", "break_after", "assignments"}),
+    "web":       ({"title", "url"}, {"caption"}),                  # a live web page shown in a frame
+    "transclude": ({"title", "to"}, {"static", "cover"}),                # a slide of another deck, transcluded live when the page opens ("to" as in refs)
     "canvas":    ({"title"}, {"items", "bg", "ta"}),       # a slide copied from PowerPoint by pptx_canvas.py; the title may be ""
 }
 ITEM_KEYS = {
@@ -131,6 +134,12 @@ def words(s):
     return ""
 
 
+def table_cells(row):
+    """The cells of a table row: a list of strings, or {"cells": [...], "light": true} for a row set in lighter type."""
+    cells = row.get("cells") if isinstance(row, dict) else row
+    return cells if isinstance(cells, list) else []
+
+
 def points_of(pts):
     """Points are strings or {"text", "sub": [strings]}; returns (top-level count, list of sub lists)."""
     return len(pts or []), [p.get("sub", []) for p in pts or [] if isinstance(p, dict)]
@@ -159,6 +168,8 @@ def check(deck, base):
         return errors, warnings
 
     def need_file(p, where):
+        if isinstance(p, str) and p.startswith(("http://", "https://")):
+            return                                       # referenced by address, not stored in the deck
         if not isinstance(p, str) or not (base / p).is_file():
             errors.append(f"{where}: file not found: {p}")
 
@@ -250,6 +261,10 @@ def check(deck, base):
                             errors.append(f"{w}, ref {i}: {e}")
         for m_ in INLINE_REF.finditer(words(s)):
             need_ref(m_.group(2), f"{w}, link [{m_.group(1)}]")
+        if lay == "web" and not str(s.get("url", "")).startswith(("http://", "https://")):
+            errors.append(f"{w}: 'url' must start with http:// or https://")
+        if lay == "transclude":
+            need_ref(s.get("to"), f"{w}, transclude")
         if lay == "syllabus":
             for i, it in enumerate(s.get("items", []), 1):
                 if isinstance(it, dict) and it.get("href"):
@@ -287,10 +302,11 @@ def check(deck, base):
             warnings.append(f"{w}: text contains a dash used as punctuation; rewrite the sentence")
         if s.get("callout") is not None:
             c = s["callout"]
-            if isinstance(c, dict) and "wide" in c:
-                if not isinstance(c["wide"], bool):
-                    errors.append(f"{w}, callout: 'wide' must be true or false")
-                c = {k: v for k, v in c.items() if k != "wide"}
+            if isinstance(c, dict) and ("wide" in c or "bottom" in c):
+                for flag in ("wide", "bottom"):
+                    if flag in c and not isinstance(c[flag], bool):
+                        errors.append(f"{w}, callout: '{flag}' must be true or false")
+                c = {k: v for k, v in c.items() if k not in ("wide", "bottom")}
             need_box(c, f"{w}, callout")
 
         items = s.get("items")
@@ -378,12 +394,17 @@ def check(deck, base):
             cols, rows = s.get("columns"), s.get("rows")
             if not (isinstance(cols, list) and 2 <= len(cols) <= 6):
                 errors.append(f"{w}: 'columns' must be a list of 2 to 6 headings")
-            elif not (isinstance(rows, list) and rows and all(isinstance(r, list) and len(r) == len(cols) for r in rows)):
-                errors.append(f"{w}: 'rows' must be a list of rows with {len(cols)} cells each")
+            elif not (isinstance(rows, list) and rows and all(1 <= len(table_cells(r)) <= len(cols) for r in rows)):
+                errors.append(f"{w}: 'rows' must be a list of rows with up to {len(cols)} cells each (a short row stretches its last cell)")
+            if "widths" in s and not (isinstance(cols, list) and isinstance(s["widths"], list) and len(s["widths"]) == len(cols)
+                                      and all(isinstance(x, (int, float)) and not isinstance(x, bool) and x > 0 for x in s["widths"])):
+                errors.append(f"{w}: 'widths' must be a list with one positive number (a percentage) per column")
             elif len(rows) > 10:
                 warnings.append(f"{w}: {len(rows)} rows; at most 10 fit, split the table")
         if lay == "task" and s.get("url") and not str(s["url"]).startswith(("http://", "https://")):
             errors.append(f"{w}: 'url' must start with http:// or https://")
+        if s.get("source_at") is not None and (s["source_at"] != "corner" or not s.get("source")):
+            errors.append(f"{w}: 'source_at' must be 'corner' and needs a 'source'")
         if lay == "image":
             need_picture({k: s[k] for k in ("image", "alt", "caption", "shadow") if k in s}, w)
         if lay in ("title", "quote") and s.get("picture"):
@@ -408,18 +429,24 @@ def load_notes(deck, md):
     notes of slide N and replace its "notes" in deck.json. Any other heading ends a slide's notes."""
     if not md.is_file():
         return []
-    warnings, n, body, found = [], None, [], {}
+    warnings, n, head, body, found = [], None, "", [], {}
     for line in md.read_text(encoding="utf-8").splitlines() + ["#"]:
         if line.startswith("#"):
             if n is not None:
-                found[n] = "\n".join(body).strip()
-            m = re.match(r"###\s+(\d+)\b", line)
-            n, body = (int(m.group(1)) if m else None), []
+                found[n] = (head, "\n".join(body).strip())
+            m = re.match(r"###\s+(\d+)\b\s*(.*)", line)
+            n, head, body = (int(m.group(1)) if m else None), (m.group(2).strip() if m else ""), []
         elif n is not None:
             body.append(line)
-    for n, text in found.items():
+    quotes = str.maketrans({"‘": "'", "’": "'", "“": '"', "”": '"', "„": '"'})
+    plain = lambda s: re.sub(r"[\s*]+", " ", (s or "").translate(quotes)).strip().lower()
+    for n, (head, text) in found.items():
         if 1 <= n <= len(deck["slides"]):
-            deck["slides"][n - 1]["notes"] = text
+            s = deck["slides"][n - 1]
+            if head and plain(head) != plain(s.get("title")):
+                warnings.append(f"{md.name}: '### {n} {head}' but slide {n} is '{s.get('title', '')}' "
+                                "(slides moved? renumber the headings)")
+            s["notes"] = text
         else:
             warnings.append(f"{md.name}: there is no slide {n}")
     return warnings
@@ -432,7 +459,10 @@ def load(path):
         deck = json.loads(path.read_text(encoding="utf-8"))
     except (OSError, ValueError) as e:
         sys.exit(f"Could not read {path}: {e}")
-    notes_warnings = load_notes(deck, path.parent / "speaker-notes.md")
+    in_deck = [str(i) for i, s in enumerate(deck.get("slides", []), 1) if isinstance(s, dict) and s.get("notes")]
+    notes_warnings = [f"speaker notes in deck.json (slides {', '.join(in_deck)}) are published with the repo: "
+                      "move them to speaker-notes.md"] if in_deck else []
+    notes_warnings += load_notes(deck, path.parent / "speaker-notes.md")
     errors, warnings = check(deck, path.parent)
     warnings += notes_warnings
     if errors:

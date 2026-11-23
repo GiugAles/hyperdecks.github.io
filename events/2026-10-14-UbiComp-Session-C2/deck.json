@@ -1,0 +1,49 @@
+{
+  "title": "UbiComp 2026 Session C2: Proactive AI assistants",
+  "lang": "en",
+  "footer": "UbiComp 2026 | Session C2 | Proactive AI assistants",
+  "slides": [
+    {
+      "layout": "table",
+      "title": "Welcome to Session C2: **Proactive AI assistants**",
+      "lead": "Talks: 10min; Q&A: 3min",
+      "callout": {
+        "style": "outline",
+        "wide": true,
+        "text": "Chair: **Simon Mayer**, University of St.Gallen\nStudent volunteer: **Molly Zhuangtong Huang**, University of Macau"
+      },
+      "columns": [
+        "Time",
+        "Talk",
+        "Speaker"
+      ],
+      "rows": [
+        [
+          "14:00",
+          "After Talking with 1,000 Personas: Learning Preference-Aligned Proactive Assistants from Large-Scale Simulated Persona Interactions",
+          "**Ziyi Xuan**, Lehigh University"
+        ],
+        [
+          "14:13",
+          "MemAura: Structured Context Memory for Personalized LLM Reasoning in Smart Environments",
+          "**Siyuan Liu**, Hong Kong University of Science and Technology (Guangzhou)"
+        ],
+        [
+          "14:26",
+          "JARVIS for HVAC: LLM-based Question-Answer Framework for Sensor-driven HVAC System Interaction",
+          "**Sungmin Lee**, KAIST and Yonsei University"
+        ],
+        [
+          "14:39",
+          "Enhancing Smartphone-based Inertial Indoor Tracking with Conversational User Input",
+          "**Smitha Sheshadri**, Singapore Management University"
+        ],
+        [
+          "14:52",
+          "Exploring LLMs for Generating Communicational Actions of External Interfaces on Autonomous Vehicles",
+          "**Xinyue Gui**, The University of Tokyo"
+        ]
+      ]
+    }
+  ]
+}

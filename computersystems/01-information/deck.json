@@ -17,8 +17,7 @@
     "Bachelor in Computer Science",
     "",
     "Computersysteme (1,904)"
-   ],
-   "notes": "Who? What? Why? How?"
+   ]
   },
   {
    "layout": "people",
@@ -174,8 +173,7 @@
     "image": "img/rock-paper-scissors.png",
     "alt": "Diagram of rock, paper and scissors hands in a circle with arrows: rock beats scissors, scissors beats paper, paper beats rock",
     "shadow": false
-   },
-   "notes": "Demo: the rock-paper-scissors AI."
+   }
   },
   {
    "layout": "quiz",
@@ -184,7 +182,6 @@
     "Our rock-paper-scissors AI has 108 weights (edges). How many does a typical “large” neural network (e.g., GPT-5) have today?",
     "If our model was a grain of rice (6 mm), how large would GPT-5 be?"
    ],
-   "notes": "Millions (small test applications) to billions (bachelor student projects) to trillions (GPT-5).",
    "aside": {
     "image": "img/rock-paper-scissors.png",
     "alt": "Diagram of rock, paper and scissors hands in a circle with arrows",
@@ -642,8 +639,7 @@
     "Example [x² ≥ 0], x = 3.1415: **9.86902**",
     "Example [x² ≥ 0], x = 30000: **900000000**",
     "Example [x² ≥ 0], x = 50000: **−1794967296**"
-   ],
-   "notes": "2^32 = 4'294'967'296 (show it on the calculator). 50000² = 2'500'000'000; 2'500'000'000 − 4'294'967'296 = −1'794'967'296."
+   ]
   },
   {
    "layout": "image",
@@ -834,8 +830,7 @@
     ]
    ],
    "after": "You'll understand better in a week, and much better in 6 weeks!",
-   "source": "Try it: [2's complement](https://www.exploringbinary.com/twos-complement-converter/) · [IEEE 754](https://www.h-schmidt.net/FloatConverter/IEEE754.html) · [binary to ASCII](https://mothereff.in/binary-ascii)",
-   "notes": "addq %rax,%rbx: “Add the two numbers stored at locations %rax and %rbx, and store the result in location %rbx.”"
+   "source": "Try it: [2's complement](https://www.exploringbinary.com/twos-complement-converter/); [IEEE 754](https://www.h-schmidt.net/FloatConverter/IEEE754.html); [binary to ASCII](https://mothereff.in/binary-ascii)"
   },
   {
    "layout": "text",
@@ -861,8 +856,7 @@
      "`11`",
      "Stamp"
     ]
-   ],
-   "notes": "00 10 01 11 00 01: clap, silence, shout, stamp, clap, shout."
+   ]
   },
   {
    "layout": "text",
@@ -1452,8 +1446,7 @@
     "What's (−7)/2? And (1001_{2} >> 1)?",
     "What's (+7)/2? And (0111_{2} >> 1)?"
    ],
-   "source": "Demo: [godbolt.org](https://godbolt.org/)",
-   "notes": "(−7)/2 = −3 in C, but 1001 >> 1 = 1100 = −4. (+7)/2 = 3 and 0111 >> 1 = 0011 = 3."
+   "source": "Demo: [godbolt.org](https://godbolt.org/)"
   },
   {
    "layout": "text",
@@ -1507,8 +1500,7 @@
     "What is the binary representation of the unsigned int 1?",
     "What is the binary representation of the int −1?",
     "In CS, all information = bits + context. But here, we change the context!"
-   ],
-   "notes": "In the comparison, minus_one is converted to unsigned: 0xFFFFFFFF = 4'294'967'295, so the program prints 1 < -1."
+   ]
   },
   {
    "layout": "code",

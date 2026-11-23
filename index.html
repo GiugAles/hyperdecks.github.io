@@ -26,7 +26,9 @@ header .wrap{position:relative;z-index:1;padding-top:32px;padding-bottom:132px}
 .kicker{margin-top:56px;font-size:20px;color:var(--fg)}
 h1{font-size:56px;font-weight:300;line-height:1.05;letter-spacing:-.01em;color:var(--fg);margin-top:8px}
 .intro{margin-top:20px;max-width:720px;color:var(--fg)}
-.wedge{position:absolute;right:0;bottom:0;width:46%;height:100px;background:var(--green);clip-path:polygon(100% 0,100% 100%,0 100%,6% 45%)}
+ul.intro{padding-left:1.2em}
+ul.intro li+li{margin-top:4px}
+.wedge{position:absolute;right:0;bottom:0;width:260px;height:112px;background:var(--green);clip-path:polygon(100% 0,100% 100%,3.65% 100%,0 52.9%)}
 .tagline{position:absolute;right:32px;bottom:22px;z-index:2;font-family:"Palatino Linotype",Palatino,"Book Antiqua",serif;font-size:15px;color:#fff}
 
 main{flex:1}
@@ -48,9 +50,18 @@ h2{font-size:32px;font-weight:300;line-height:1.1;color:var(--fg);margin-bottom:
 .card:hover .open{background:var(--dgreen)}
 .count{color:var(--quiet)}
 
+.events{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.ev{position:relative;border:1px solid var(--line);padding:14px 16px 16px;transition:border-color .15s,background .15s}
+.ev:hover,.ev:focus-within{border-color:var(--green);background:#f4f8f5}
+.ev h3{font-size:19px;font-weight:300;line-height:1.2;color:var(--fg);margin:2px 0 6px}
+.ev h3 a{color:inherit;text-decoration:none}
+.ev h3 a::after{content:"";position:absolute;inset:0}
+.ev p.desc{font-size:14px;color:var(--quiet)}
+.more{margin-top:14px;font-size:15px}
+h2.sub{font-size:24px;margin:48px 0 16px}
+
 footer{border-top:1px solid var(--line);font-size:14px;color:var(--quiet)}
 footer .wrap{padding-top:20px;padding-bottom:32px}
-footer .private{margin-top:12px;font-size:13px}
 
 @media (max-width:820px){
   body{font-size:17px}
@@ -59,9 +70,9 @@ footer .private{margin-top:12px;font-size:13px}
   .kicker{margin-top:36px}
   h1{font-size:40px}
   header .wrap{padding-bottom:96px}
-  .wedge{width:80%;height:72px}
+  .wedge{width:208px;height:90px}
   .tagline{right:16px;bottom:14px}
-  .decks{grid-template-columns:1fr}
+  .decks,.events{grid-template-columns:1fr}
   h2{font-size:26px}
 }
 </style>
@@ -72,7 +83,10 @@ footer .private{margin-top:12px;font-size:13px}
     <img class="logo" src="assets/hsg_logo.png" alt="University of St.Gallen">
     <p class="kicker">Institute of Computer Science</p>
     <h1>Hyperdecks</h1>
-    <p class="intro">Lecture slides of the <a href="https://interactions.ics.unisg.ch/">Chair for Interaction- and Communication-based Systems</a>, as online presentations that also work on a phone and print to PDF.</p>
+    <ul class="intro">
+      <li>Lecture slides of the <a href="https://interactions.ics.unisg.ch/">Chair for Interaction- and Communication-based Systems</a></li>
+      <li>Slides for events organized by the <a href="https://futuresociety.ch/">Future Society Hub</a> and the Chair</li>
+    </ul>
   </div>
   <div class="wedge" aria-hidden="true"></div>
   <p class="tagline">From insight to impact.</p>
@@ -85,7 +99,7 @@ footer .private{margin-top:12px;font-size:13px}
       <article class="card">
         <img src="assets/computersysteme.svg" alt="Course icon: bits flow through a logic gate into a processor chip">
         <div class="body">
-          <p class="meta">Bachelor in Computer Science · Autumn 2026</p>
+          <p class="meta">Bachelor in Computer Science, Autumn 2026</p>
           <h3><a href="computersystems/">Computersysteme (1,904)</a></h3>
           <p class="desc">How an algorithm in a high-level language becomes instructions that a processor executes: from bits to circuits, to a processor, to assembly language.</p>
           <p class="foot"><span class="open">Open course →</span><span class="count">4 lectures</span></p>
@@ -94,28 +108,38 @@ footer .private{margin-top:12px;font-size:13px}
       <article class="card">
         <img src="assets/asse.jpg" alt="Students around a white table, laying out jigsaw puzzle pieces in the shape of letters">
         <div class="body">
-          <p class="meta">Master in Computer Science · Autumn 2026</p>
+          <p class="meta">Master in Computer Science, Autumn 2026</p>
           <h3><a href="asse/">Advanced Software and Systems Engineering (7,856)</a></h3>
           <p class="desc">From software to systems: interactions between components, architectural constraints and the trade-offs they induce, from Lego bricks to the REST architectural style.</p>
           <p class="foot"><span class="open">Open course →</span><span class="count">6 lectures</span></p>
         </div>
       </article>
-      <article class="card">
-        <img src="assets/legalhackathons.png" alt="Green paragraph sign on black, the mark of the Legal Hackathon @ UNISG">
-        <div class="body">
-          <p class="meta">Event · 7 and 8 November 2026</p>
-          <h3><a href="legalhackathons/2026-opening-ceremony/html/">Legal Hackathon @ UNISG</a></h3>
-          <p class="desc">The first Legal Hackathon at the University of St.Gallen: law students, computer scientists, designers and entrepreneurs work together on real legal challenges.</p>
-          <p class="foot"><span class="open">Open slides →</span><span class="count">Opening Ceremony</span></p>
-        </div>
+    </div>
+
+    <h2 class="sub">Other Events</h2>
+    <div class="events">
+      <article class="ev">
+        <p class="meta">21.11.2026</p>
+        <h3><a href="events/2026-11-21-OpenDay-BCS-Intro/html/">Infotag Bachelor in Informatik: Wo Informatik auf Unternehmertum trifft</a></h3>
+        <p class="desc">Studying computer science at the University of St.Gallen, in German.</p>
+      </article>
+      <article class="ev">
+        <p class="meta">07.11.2026</p>
+        <h3><a href="events/2026-11-07-LegalHackathon-Opening-Ceremony/html/">Legal Hackathon @ UNISG: Opening Ceremony</a></h3>
+        <p class="desc">The first Legal Hackathon at the University of St.Gallen.</p>
+      </article>
+      <article class="ev">
+        <p class="meta">03.11.2026</p>
+        <h3><a href="events/2026-11-03-StGallen-Collegium-Solid/html/">St.Gallen Collegium: Solid and its Symposium</a></h3>
+        <p class="desc">Keeping your data under your control, with two examples.</p>
       </article>
     </div>
+    <p class="more"><a href="events/">All events →</a></p>
   </div>
 </main>
 
 <footer>
-  <div class="wrap"><a href="https://interactions.ics.unisg.ch/">Chair for Interaction- and Communication-based Systems</a> | Institute of Computer Science | University of St.Gallen
-    <p class="private"><a href="private/">Private slides</a></p></div>
+  <div class="wrap"><a href="https://interactions.ics.unisg.ch/">Chair for Interaction- and Communication-based Systems</a> | Institute of Computer Science | University of St.Gallen</div>
 </footer>
 </body>
 </html>

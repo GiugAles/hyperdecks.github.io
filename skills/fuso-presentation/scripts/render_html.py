@@ -463,7 +463,7 @@ let idle;const pill=document.querySelector('.pill'),wake=()=>{body.classList.add
 by('fsBtn').onclick=()=>document.fullscreenElement?document.exitFullscreen():root.requestFullscreen();
 const grid=ov.querySelector('.ov-grid');
 slides.forEach((s,i)=>{const b=document.createElement('button'),sm=document.createElement('small');
- sm.textContent=(i+1)+(s.dataset.time?'  ·  '+s.dataset.time:'');b.append(sm,s.dataset.title);b.onclick=()=>go(i,true);grid.append(b)});
+ sm.textContent=(i+1)+(s.dataset.time?', '+s.dataset.time:'');b.append(sm,s.dataset.title);b.onclick=()=>go(i,true);grid.append(b)});
 document.addEventListener('keydown',e=>{if(e.ctrlKey||e.metaKey||e.altKey)return;
  const inCtl=e.target instanceof Element&&e.target.closest('a,button');const k=e.key;
  if(['ArrowRight','PageDown'].includes(k)||(k===' '&&!inCtl)){e.preventDefault();go(cur+1)}

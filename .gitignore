@@ -2,4 +2,13 @@
 **/media/*
 !**/media/*.web.mp4
 /asse/*/media/
+/events/*/media/
+/computersystems/*/media/
 __pycache__/
+
+# speaker notes are never published: render with --notes --out <folder outside the repo> to present
+speaker-notes.md
+
+# source files of event talks (pptx with speaker notes, raw videos): the decks use the web versions
+/events/*.pptx
+/events/*.mp4

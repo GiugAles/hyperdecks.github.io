@@ -40,3 +40,7 @@ Run this on every headline, point, box and caption of the deck before rendering,
 * No dashes as punctuation in running text ("–", "—"); the template's own dash marks the points.
 * No emojis other than the lecturer's ";-)" and ":-)", no hashtags.
 * Links only where students need them (a tool, a source, the course page), written as `[label](https://...)`.
+* No dot separators ("·") between sources, links, names or dates in a slide, a source line or an index page. Separate sources with a semicolon, dates and labels with a comma, parts of a line with "|".
+* Typography is consistent in the whole deck: curly apostrophes ("It’s", never "It‘s" with the opening mark or a straight "'"), curly double quotes “…” in English text (not German „…“, not a straight " at one end and a curly one at the other), straight quotes only inside code. One space between sentences and words, no space before "!", "?", ";" or ":".
+* In Markdown emphasis the markers touch the words: `**for you** as`, never `**for you **as`.
+* After a text-only change, check the deck text for these (missing space after a comma, doubled spaces, unbalanced `**`, wrong quote marks) before rendering; imported PowerPoint text is the usual source.
