@@ -67,6 +67,12 @@
    ]
   },
   {
+   "layout": "image",
+   "title": "PlugFest: Testing E7 and E8",
+   "image": "https://solid.interactions.ics.unisg.ch/mcs-asse/slides/assets/plugfest_2026.jpg",
+   "alt": "Plugfest announcement: Tuesday, November 24, 17:00, Room 61-110 (Lab Room), pizza and drinks provided. A cartoon of people plugging laptops and servers together around an interop diagram. Plug together. Make it interoperable."
+  },
+  {
    "layout": "section",
    "title": "About the Exercise",
    "kicker": "Exercise Session 9"
